@@ -50,7 +50,32 @@ namespace SMESData
                 
             }
         }
+        public void getComboBoxData(string sql, ref ComboBox cmb)
+        {
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandText = sql;
+                SqlDataAdapter adapter = new SqlDataAdapter();
+                adapter.SelectCommand = cmd;
+                DataSet ds = new DataSet();
+                adapter.Fill(ds);
+                adapter.Dispose();
+                cmd.Dispose();
+                cmb.Items.Clear();
 
+                foreach (DataRow row in ds.Tables[0].Rows)
+                {
+                    cmb.Items.Add(row[0].ToString());
+                }
+            }
+            catch (Exception)
+            {
+            }
+            conn.Close();
+        }
         public bool sqlExecuteNonQuery(string sql)
         {
             try

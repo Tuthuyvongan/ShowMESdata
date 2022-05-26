@@ -14,70 +14,54 @@ namespace SMESData
     {
         public MainForm()
         {
-            InitializeComponent();
+            InitializeComponent();          
         }
         
 
         private void MainForm_Load(object sender, EventArgs e)
-        {
-            textBox1.Text = GetSOFTdata.getNGData().Rows[0].ItemArray[0].ToString();
-            renderBarchart();          
+        {                        
             // Date time format
+            //dtpChart.Value = DateTime.Today;
             dtpChart.CustomFormat = "yyyy-MM-dd";
-            dtpChart.Format = DateTimePickerFormat.Custom;                      
+            dtpChart.Format = DateTimePickerFormat.Custom;
+            renderBarchart();
         }
-        
+
         void renderBarchart()
         {
             double d;
             double temp;
+            string date = dtpChart.Text.ToString();
             //List data OP
             List<double> dataOP = new List<double>();
-            for (int i = 0; i < 7; i++)
-            {             
-                if (GetSOFTdata.getOPData().Rows[0].ItemArray[i].ToString() == "")
-                {
-                    dataOP.Add(0);
-                }    
-                else
-                {
-                    temp = double.Parse(GetSOFTdata.getOPData().Rows[0].ItemArray[i].ToString());
-                    d = temp % totalOP() * 100;
-                    dataOP.Add(d);
-                }    
-            }
-
-            //List data RW
-            List<double> dataRW = new List<double>();
-            for (int i = 0; i < 7; i++)
-            {
-                if (GetSOFTdata.getRWData().Rows[0].ItemArray[i].ToString() == "")
-                {
-                    dataRW.Add(0);
-                }
-                else
-                {
-                    temp = double.Parse(GetSOFTdata.getRWData().Rows[0].ItemArray[i].ToString());
-                    d = temp % totalRW() * 100;
-                    dataRW.Add(d);
-                }
-            }
-
-            //List data NG
             List<double> dataNG = new List<double>();
-            for (int i = 0; i < 7; i++)
+            List<double> dataRW = new List<double>();
+            int i = 0;
+            do
             {
-                if (GetSOFTdata.getNGData().Rows[0].ItemArray[i].ToString() == "")
-                {
-                    dataNG.Add(0);
-                }
+                //OP
+                temp = GetSOFTdata.getTotalRemark("L0" + (i + 1), "OP", date);
+                if (temp == 0)
+                    d = 0;
                 else
-                {
-                    temp = double.Parse(GetSOFTdata.getNGData().Rows[0].ItemArray[i].ToString());
-                    d = temp % totalNG() * 100;
-                    dataNG.Add(d);
-                }
-            }
+                    d = Math.Round(temp / GetSOFTdata.getTotal("L0" + (i + 1), date) * 100, 2);
+                dataOP.Add(d);
+                //RW
+                temp = GetSOFTdata.getTotalRemark("L0" + (i + 1), "RW", date);
+                if (temp == 0)
+                    d = 0;
+                else
+                    d = Math.Round(temp / GetSOFTdata.getTotal("L0" + (i + 1), date) * 100, 2);
+                dataRW.Add(d);
+                //NG
+                temp = GetSOFTdata.getTotalRemark("L0" + (i + 1), "NG", date);
+                if (temp == 0)
+                    d = 0;
+                else
+                    d = Math.Round(temp / GetSOFTdata.getTotal("L0" + (i + 1), date) * 100, 2);
+                dataNG.Add(d);
+                i++;
+            } while (i < 7);
             lineRWChart.Data = dataRW;
             lineOPChart.Data = dataOP;
             lineNGChart.Data = dataNG;
@@ -86,44 +70,10 @@ namespace SMESData
             lineNGChart.TargetCanvas = lineCanvas;
             lineCanvas.Labels = new string[] { "L01", "L02", "L03", "L04", "L05", "L06", "L07" };
         }
-        double totalOP()
-        {
-            double ttOP = 0;
-            for (int i = 0; i < GetSOFTdata.getTotalOP().Rows.Count; i++)
-            {
-                string[] dataIn = GetSOFTdata.getTotalOP().Rows[i].ItemArray[0].ToString().Split(';');
-                ttOP = ttOP + Double.Parse(dataIn[4]);
-                dataIn = null;
-            }            
-            return ttOP;
-        }
-        double totalRW()
-        {
-            double ttOP = 0;
-            for (int i = 0; i < GetSOFTdata.getTotalOP().Rows.Count; i++)
-            {
-                string[] dataIn = GetSOFTdata.getTotalOP().Rows[i].ItemArray[0].ToString().Split(';');
-                ttOP = ttOP + Double.Parse(dataIn[4]);
-                dataIn = null;
-            }
-            return ttOP;
-        }
-        double totalNG()
-        {
-            double ttOP = 0;
-            for (int i = 0; i < GetSOFTdata.getTotalOP().Rows.Count; i++)
-            {
-                string[] dataIn = GetSOFTdata.getTotalOP().Rows[i].ItemArray[0].ToString().Split(';');
-                ttOP = ttOP + Double.Parse(dataIn[4]);
-                dataIn = null;
-            }
-            return ttOP;
-        }
+        
         private void dtpChart_ValueChanged(object sender, EventArgs e)
-        {
-            
-            string date = dtpChart.Text.ToString();
-         
+        {           
+            renderBarchart();
         }
     }
 }

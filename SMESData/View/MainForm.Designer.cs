@@ -36,7 +36,6 @@ namespace SMESData
             this.lineCanvas = new Bunifu.Charts.WinForms.BunifuChartCanvas();
             this.lineRWChart = new Bunifu.Charts.WinForms.ChartTypes.BunifuBarChart(this.components);
             this.lineNGChart = new Bunifu.Charts.WinForms.ChartTypes.BunifuBarChart(this.components);
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // dtpChart
@@ -63,7 +62,7 @@ namespace SMESData
             this.dtpChart.Name = "dtpChart";
             this.dtpChart.Size = new System.Drawing.Size(137, 32);
             this.dtpChart.TabIndex = 3;
-            this.dtpChart.Value = new System.DateTime(2022, 5, 25, 14, 36, 0, 0);
+            this.dtpChart.Value = new System.DateTime(2022, 5, 26, 11, 50, 30, 0);
             this.dtpChart.ValueChanged += new System.EventHandler(this.dtpChart_ValueChanged);
             // 
             // lineOPChart
@@ -164,19 +163,11 @@ namespace SMESData
             this.lineNGChart.Label = "NO GOOD";
             this.lineNGChart.TargetCanvas = this.lineCanvas;
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(823, 27);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 7;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1174, 556);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.lineCanvas);
             this.Controls.Add(this.dtpChart);
             this.Name = "MainForm";
@@ -184,7 +175,6 @@ namespace SMESData
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -194,7 +184,6 @@ namespace SMESData
         private Bunifu.Charts.WinForms.BunifuChartCanvas lineCanvas;
         private Bunifu.Charts.WinForms.ChartTypes.BunifuBarChart lineRWChart;
         private Bunifu.Charts.WinForms.ChartTypes.BunifuBarChart lineNGChart;
-        private System.Windows.Forms.TextBox textBox1;
     }
 }
 
