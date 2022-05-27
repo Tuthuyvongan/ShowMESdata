@@ -41,36 +41,50 @@ namespace SMESData.View
             this.L06Chart = new Bunifu.Charts.WinForms.ChartTypes.BunifuPieChart(this.components);
             this.L07Chart = new Bunifu.Charts.WinForms.ChartTypes.BunifuPieChart(this.components);
             this.linePCanvas2 = new Bunifu.Charts.WinForms.BunifuChartCanvas();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.linePCanvas3 = new Bunifu.Charts.WinForms.BunifuChartCanvas();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.linePCanvas4 = new Bunifu.Charts.WinForms.BunifuChartCanvas();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.linePCanvas5 = new Bunifu.Charts.WinForms.BunifuChartCanvas();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.linePCanvas6 = new Bunifu.Charts.WinForms.BunifuChartCanvas();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.linePCanvas7 = new Bunifu.Charts.WinForms.BunifuChartCanvas();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // linePCanvas1
             // 
-            this.linePCanvas1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.linePCanvas1.AnimationDuration = 2000;
             this.linePCanvas1.AnimationType = Bunifu.Charts.WinForms.BunifuChartCanvas.AnimationOptions.easeOutQuart;
             this.linePCanvas1.BackColor = System.Drawing.Color.White;
             this.linePCanvas1.CanvasPadding = new System.Windows.Forms.Padding(0);
+            this.linePCanvas1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.linePCanvas1.Labels = new string[0];
             this.linePCanvas1.LegendAlignment = Bunifu.Charts.WinForms.BunifuChartCanvas.LegendAlignmentOptions.start;
-            this.linePCanvas1.LegendDisplay = true;
+            this.linePCanvas1.LegendDisplay = false;
             this.linePCanvas1.LegendFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linePCanvas1.LegendForeColor = System.Drawing.Color.Black;
             this.linePCanvas1.LegendFullWidth = false;
             this.linePCanvas1.LegendPosition = Bunifu.Charts.WinForms.BunifuChartCanvas.PositionOptions.bottom;
             this.linePCanvas1.LegendRevese = false;
             this.linePCanvas1.LegendRTL = false;
-            this.linePCanvas1.Location = new System.Drawing.Point(0, 41);
+            this.linePCanvas1.Location = new System.Drawing.Point(0, 0);
             this.linePCanvas1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.linePCanvas1.Name = "linePCanvas1";
-            this.linePCanvas1.Padding = new System.Windows.Forms.Padding(0, 0, 50, 50);
+            this.linePCanvas1.Padding = new System.Windows.Forms.Padding(0, 0, 100, 100);
             this.linePCanvas1.ShowXAxis = true;
             this.linePCanvas1.ShowYAxis = true;
-            this.linePCanvas1.Size = new System.Drawing.Size(256, 256);
+            this.linePCanvas1.Size = new System.Drawing.Size(330, 330);
             this.linePCanvas1.TabIndex = 6;
             this.linePCanvas1.Title = "";
             this.linePCanvas1.TitleLineHeight = 1.2D;
@@ -223,27 +237,27 @@ namespace SMESData.View
             // 
             // linePCanvas2
             // 
-            this.linePCanvas2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.linePCanvas2.AnimationDuration = 2000;
             this.linePCanvas2.AnimationType = Bunifu.Charts.WinForms.BunifuChartCanvas.AnimationOptions.easeOutQuart;
             this.linePCanvas2.BackColor = System.Drawing.Color.White;
             this.linePCanvas2.CanvasPadding = new System.Windows.Forms.Padding(0);
+            this.linePCanvas2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.linePCanvas2.Labels = new string[0];
             this.linePCanvas2.LegendAlignment = Bunifu.Charts.WinForms.BunifuChartCanvas.LegendAlignmentOptions.start;
-            this.linePCanvas2.LegendDisplay = true;
+            this.linePCanvas2.LegendDisplay = false;
             this.linePCanvas2.LegendFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linePCanvas2.LegendForeColor = System.Drawing.Color.Black;
             this.linePCanvas2.LegendFullWidth = false;
             this.linePCanvas2.LegendPosition = Bunifu.Charts.WinForms.BunifuChartCanvas.PositionOptions.bottom;
             this.linePCanvas2.LegendRevese = false;
             this.linePCanvas2.LegendRTL = false;
-            this.linePCanvas2.Location = new System.Drawing.Point(255, 41);
+            this.linePCanvas2.Location = new System.Drawing.Point(0, 0);
             this.linePCanvas2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.linePCanvas2.Name = "linePCanvas2";
-            this.linePCanvas2.Padding = new System.Windows.Forms.Padding(0, 0, 50, 50);
+            this.linePCanvas2.Padding = new System.Windows.Forms.Padding(0, 0, 100, 100);
             this.linePCanvas2.ShowXAxis = false;
             this.linePCanvas2.ShowYAxis = false;
-            this.linePCanvas2.Size = new System.Drawing.Size(256, 256);
+            this.linePCanvas2.Size = new System.Drawing.Size(330, 330);
             this.linePCanvas2.TabIndex = 8;
             this.linePCanvas2.Title = "";
             this.linePCanvas2.TitleLineHeight = 1.2D;
@@ -281,30 +295,54 @@ namespace SMESData.View
             this.linePCanvas2.YAxesZeroLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.linePCanvas2.YAxesZeroLineWidth = 1;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.linePCanvas1);
+            this.panel1.Location = new System.Drawing.Point(14, 94);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(330, 330);
+            this.panel1.TabIndex = 14;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.linePCanvas2);
+            this.panel2.Location = new System.Drawing.Point(607, 94);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(330, 330);
+            this.panel2.TabIndex = 15;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.linePCanvas3);
+            this.panel3.Location = new System.Drawing.Point(1200, 94);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(330, 330);
+            this.panel3.TabIndex = 16;
+            // 
             // linePCanvas3
             // 
-            this.linePCanvas3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.linePCanvas3.AnimationDuration = 2000;
             this.linePCanvas3.AnimationType = Bunifu.Charts.WinForms.BunifuChartCanvas.AnimationOptions.easeOutQuart;
             this.linePCanvas3.BackColor = System.Drawing.Color.White;
             this.linePCanvas3.CanvasPadding = new System.Windows.Forms.Padding(0);
+            this.linePCanvas3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.linePCanvas3.Labels = new string[0];
             this.linePCanvas3.LegendAlignment = Bunifu.Charts.WinForms.BunifuChartCanvas.LegendAlignmentOptions.start;
-            this.linePCanvas3.LegendDisplay = true;
+            this.linePCanvas3.LegendDisplay = false;
             this.linePCanvas3.LegendFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linePCanvas3.LegendForeColor = System.Drawing.Color.Black;
             this.linePCanvas3.LegendFullWidth = false;
             this.linePCanvas3.LegendPosition = Bunifu.Charts.WinForms.BunifuChartCanvas.PositionOptions.bottom;
             this.linePCanvas3.LegendRevese = false;
             this.linePCanvas3.LegendRTL = false;
-            this.linePCanvas3.Location = new System.Drawing.Point(510, 41);
+            this.linePCanvas3.Location = new System.Drawing.Point(0, 0);
             this.linePCanvas3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.linePCanvas3.Name = "linePCanvas3";
-            this.linePCanvas3.Padding = new System.Windows.Forms.Padding(0, 0, 50, 50);
+            this.linePCanvas3.Padding = new System.Windows.Forms.Padding(0, 0, 100, 100);
             this.linePCanvas3.ShowXAxis = false;
             this.linePCanvas3.ShowYAxis = false;
-            this.linePCanvas3.Size = new System.Drawing.Size(256, 256);
-            this.linePCanvas3.TabIndex = 9;
+            this.linePCanvas3.Size = new System.Drawing.Size(330, 330);
+            this.linePCanvas3.TabIndex = 10;
             this.linePCanvas3.Title = "";
             this.linePCanvas3.TitleLineHeight = 1.2D;
             this.linePCanvas3.TitlePadding = 10;
@@ -341,29 +379,37 @@ namespace SMESData.View
             this.linePCanvas3.YAxesZeroLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.linePCanvas3.YAxesZeroLineWidth = 1;
             // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.linePCanvas4);
+            this.panel4.Location = new System.Drawing.Point(14, 397);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(330, 330);
+            this.panel4.TabIndex = 17;
+            // 
             // linePCanvas4
             // 
-            this.linePCanvas4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.linePCanvas4.AnimationDuration = 2000;
             this.linePCanvas4.AnimationType = Bunifu.Charts.WinForms.BunifuChartCanvas.AnimationOptions.easeOutQuart;
             this.linePCanvas4.BackColor = System.Drawing.Color.White;
             this.linePCanvas4.CanvasPadding = new System.Windows.Forms.Padding(0);
+            this.linePCanvas4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.linePCanvas4.Labels = new string[0];
             this.linePCanvas4.LegendAlignment = Bunifu.Charts.WinForms.BunifuChartCanvas.LegendAlignmentOptions.start;
-            this.linePCanvas4.LegendDisplay = true;
+            this.linePCanvas4.LegendDisplay = false;
             this.linePCanvas4.LegendFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linePCanvas4.LegendForeColor = System.Drawing.Color.Black;
             this.linePCanvas4.LegendFullWidth = false;
             this.linePCanvas4.LegendPosition = Bunifu.Charts.WinForms.BunifuChartCanvas.PositionOptions.bottom;
             this.linePCanvas4.LegendRevese = false;
             this.linePCanvas4.LegendRTL = false;
-            this.linePCanvas4.Location = new System.Drawing.Point(765, 41);
+            this.linePCanvas4.Location = new System.Drawing.Point(0, 0);
             this.linePCanvas4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.linePCanvas4.Name = "linePCanvas4";
-            this.linePCanvas4.Padding = new System.Windows.Forms.Padding(0, 0, 50, 50);
+            this.linePCanvas4.Padding = new System.Windows.Forms.Padding(0, 0, 100, 100);
             this.linePCanvas4.ShowXAxis = false;
             this.linePCanvas4.ShowYAxis = false;
-            this.linePCanvas4.Size = new System.Drawing.Size(256, 256);
+            this.linePCanvas4.Size = new System.Drawing.Size(330, 330);
             this.linePCanvas4.TabIndex = 10;
             this.linePCanvas4.Title = "";
             this.linePCanvas4.TitleLineHeight = 1.2D;
@@ -401,29 +447,37 @@ namespace SMESData.View
             this.linePCanvas4.YAxesZeroLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.linePCanvas4.YAxesZeroLineWidth = 1;
             // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.linePCanvas5);
+            this.panel5.Location = new System.Drawing.Point(607, 397);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(330, 330);
+            this.panel5.TabIndex = 17;
+            // 
             // linePCanvas5
             // 
-            this.linePCanvas5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.linePCanvas5.AnimationDuration = 2000;
             this.linePCanvas5.AnimationType = Bunifu.Charts.WinForms.BunifuChartCanvas.AnimationOptions.easeOutQuart;
             this.linePCanvas5.BackColor = System.Drawing.Color.White;
             this.linePCanvas5.CanvasPadding = new System.Windows.Forms.Padding(0);
+            this.linePCanvas5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.linePCanvas5.Labels = new string[0];
             this.linePCanvas5.LegendAlignment = Bunifu.Charts.WinForms.BunifuChartCanvas.LegendAlignmentOptions.start;
-            this.linePCanvas5.LegendDisplay = true;
+            this.linePCanvas5.LegendDisplay = false;
             this.linePCanvas5.LegendFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linePCanvas5.LegendForeColor = System.Drawing.Color.Black;
             this.linePCanvas5.LegendFullWidth = false;
             this.linePCanvas5.LegendPosition = Bunifu.Charts.WinForms.BunifuChartCanvas.PositionOptions.bottom;
             this.linePCanvas5.LegendRevese = false;
             this.linePCanvas5.LegendRTL = false;
-            this.linePCanvas5.Location = new System.Drawing.Point(147, 300);
+            this.linePCanvas5.Location = new System.Drawing.Point(0, 0);
             this.linePCanvas5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.linePCanvas5.Name = "linePCanvas5";
-            this.linePCanvas5.Padding = new System.Windows.Forms.Padding(0, 0, 50, 50);
+            this.linePCanvas5.Padding = new System.Windows.Forms.Padding(0, 0, 100, 100);
             this.linePCanvas5.ShowXAxis = false;
             this.linePCanvas5.ShowYAxis = false;
-            this.linePCanvas5.Size = new System.Drawing.Size(256, 256);
+            this.linePCanvas5.Size = new System.Drawing.Size(330, 330);
             this.linePCanvas5.TabIndex = 11;
             this.linePCanvas5.Title = "";
             this.linePCanvas5.TitleLineHeight = 1.2D;
@@ -461,29 +515,37 @@ namespace SMESData.View
             this.linePCanvas5.YAxesZeroLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.linePCanvas5.YAxesZeroLineWidth = 1;
             // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.linePCanvas6);
+            this.panel6.Location = new System.Drawing.Point(1200, 397);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(330, 330);
+            this.panel6.TabIndex = 18;
+            // 
             // linePCanvas6
             // 
-            this.linePCanvas6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.linePCanvas6.AnimationDuration = 2000;
             this.linePCanvas6.AnimationType = Bunifu.Charts.WinForms.BunifuChartCanvas.AnimationOptions.easeOutQuart;
             this.linePCanvas6.BackColor = System.Drawing.Color.White;
             this.linePCanvas6.CanvasPadding = new System.Windows.Forms.Padding(0);
+            this.linePCanvas6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.linePCanvas6.Labels = new string[0];
             this.linePCanvas6.LegendAlignment = Bunifu.Charts.WinForms.BunifuChartCanvas.LegendAlignmentOptions.start;
-            this.linePCanvas6.LegendDisplay = true;
+            this.linePCanvas6.LegendDisplay = false;
             this.linePCanvas6.LegendFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linePCanvas6.LegendForeColor = System.Drawing.Color.Black;
             this.linePCanvas6.LegendFullWidth = false;
             this.linePCanvas6.LegendPosition = Bunifu.Charts.WinForms.BunifuChartCanvas.PositionOptions.bottom;
             this.linePCanvas6.LegendRevese = false;
             this.linePCanvas6.LegendRTL = false;
-            this.linePCanvas6.Location = new System.Drawing.Point(402, 300);
+            this.linePCanvas6.Location = new System.Drawing.Point(0, 0);
             this.linePCanvas6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.linePCanvas6.Name = "linePCanvas6";
-            this.linePCanvas6.Padding = new System.Windows.Forms.Padding(0, 0, 50, 50);
+            this.linePCanvas6.Padding = new System.Windows.Forms.Padding(0, 0, 100, 100);
             this.linePCanvas6.ShowXAxis = false;
             this.linePCanvas6.ShowYAxis = false;
-            this.linePCanvas6.Size = new System.Drawing.Size(256, 256);
+            this.linePCanvas6.Size = new System.Drawing.Size(330, 330);
             this.linePCanvas6.TabIndex = 12;
             this.linePCanvas6.Title = "";
             this.linePCanvas6.TitleLineHeight = 1.2D;
@@ -521,29 +583,37 @@ namespace SMESData.View
             this.linePCanvas6.YAxesZeroLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.linePCanvas6.YAxesZeroLineWidth = 1;
             // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.linePCanvas7);
+            this.panel7.Location = new System.Drawing.Point(607, 703);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(330, 330);
+            this.panel7.TabIndex = 19;
+            // 
             // linePCanvas7
             // 
-            this.linePCanvas7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.linePCanvas7.AnimationDuration = 2000;
             this.linePCanvas7.AnimationType = Bunifu.Charts.WinForms.BunifuChartCanvas.AnimationOptions.easeOutQuart;
             this.linePCanvas7.BackColor = System.Drawing.Color.White;
             this.linePCanvas7.CanvasPadding = new System.Windows.Forms.Padding(0);
+            this.linePCanvas7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.linePCanvas7.Labels = new string[0];
             this.linePCanvas7.LegendAlignment = Bunifu.Charts.WinForms.BunifuChartCanvas.LegendAlignmentOptions.start;
-            this.linePCanvas7.LegendDisplay = true;
+            this.linePCanvas7.LegendDisplay = false;
             this.linePCanvas7.LegendFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linePCanvas7.LegendForeColor = System.Drawing.Color.Black;
             this.linePCanvas7.LegendFullWidth = false;
             this.linePCanvas7.LegendPosition = Bunifu.Charts.WinForms.BunifuChartCanvas.PositionOptions.bottom;
             this.linePCanvas7.LegendRevese = false;
             this.linePCanvas7.LegendRTL = false;
-            this.linePCanvas7.Location = new System.Drawing.Point(656, 300);
+            this.linePCanvas7.Location = new System.Drawing.Point(0, 0);
             this.linePCanvas7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.linePCanvas7.Name = "linePCanvas7";
-            this.linePCanvas7.Padding = new System.Windows.Forms.Padding(0, 0, 50, 50);
+            this.linePCanvas7.Padding = new System.Windows.Forms.Padding(0, 0, 100, 100);
             this.linePCanvas7.ShowXAxis = false;
             this.linePCanvas7.ShowYAxis = false;
-            this.linePCanvas7.Size = new System.Drawing.Size(256, 256);
+            this.linePCanvas7.Size = new System.Drawing.Size(330, 330);
             this.linePCanvas7.TabIndex = 13;
             this.linePCanvas7.Title = "";
             this.linePCanvas7.TitleLineHeight = 1.2D;
@@ -586,17 +656,24 @@ namespace SMESData.View
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.linePCanvas7);
-            this.Controls.Add(this.linePCanvas6);
-            this.Controls.Add(this.linePCanvas5);
-            this.Controls.Add(this.linePCanvas4);
-            this.Controls.Add(this.linePCanvas3);
-            this.Controls.Add(this.linePCanvas2);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel7);
+            this.Controls.Add(this.panel6);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.dtpChart);
-            this.Controls.Add(this.linePCanvas1);
             this.Name = "UC_MQC_PieChart";
-            this.Size = new System.Drawing.Size(1025, 560);
+            this.Size = new System.Drawing.Size(1807, 1033);
             this.Load += new System.EventHandler(this.UC_MQC_PieChart_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -613,6 +690,13 @@ namespace SMESData.View
         private Bunifu.Charts.WinForms.ChartTypes.BunifuPieChart L06Chart;
         private Bunifu.Charts.WinForms.ChartTypes.BunifuPieChart L07Chart;
         private Bunifu.Charts.WinForms.BunifuChartCanvas linePCanvas2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel7;
         private Bunifu.Charts.WinForms.BunifuChartCanvas linePCanvas3;
         private Bunifu.Charts.WinForms.BunifuChartCanvas linePCanvas4;
         private Bunifu.Charts.WinForms.BunifuChartCanvas linePCanvas5;

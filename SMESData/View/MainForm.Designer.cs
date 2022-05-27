@@ -30,8 +30,8 @@ namespace SMESData
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges9 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges10 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.pnMain = new Bunifu.UI.WinForms.BunifuPanel();
             this.pnMenu = new Bunifu.UI.WinForms.BunifuPanel();
             this.btPQC = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
@@ -53,7 +53,7 @@ namespace SMESData
             this.pnMain.Location = new System.Drawing.Point(95, 0);
             this.pnMain.Name = "pnMain";
             this.pnMain.ShowBorders = true;
-            this.pnMain.Size = new System.Drawing.Size(1025, 560);
+            this.pnMain.Size = new System.Drawing.Size(1807, 1033);
             this.pnMain.TabIndex = 10;
             // 
             // pnMenu
@@ -71,7 +71,7 @@ namespace SMESData
             this.pnMenu.Location = new System.Drawing.Point(0, 0);
             this.pnMenu.Name = "pnMenu";
             this.pnMenu.ShowBorders = true;
-            this.pnMenu.Size = new System.Drawing.Size(95, 560);
+            this.pnMenu.Size = new System.Drawing.Size(95, 1033);
             this.pnMenu.TabIndex = 9;
             // 
             // btPQC
@@ -93,11 +93,11 @@ namespace SMESData
             this.btPQC.ColorContrastOnClick = 45;
             this.btPQC.ColorContrastOnHover = 45;
             this.btPQC.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges9.BottomLeft = true;
-            borderEdges9.BottomRight = true;
-            borderEdges9.TopLeft = true;
-            borderEdges9.TopRight = true;
-            this.btPQC.CustomizableEdges = borderEdges9;
+            borderEdges5.BottomLeft = true;
+            borderEdges5.BottomRight = true;
+            borderEdges5.TopLeft = true;
+            borderEdges5.TopRight = true;
+            this.btPQC.CustomizableEdges = borderEdges5;
             this.btPQC.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btPQC.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btPQC.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -184,11 +184,11 @@ namespace SMESData
             this.btMQC.ColorContrastOnClick = 45;
             this.btMQC.ColorContrastOnHover = 45;
             this.btMQC.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges10.BottomLeft = true;
-            borderEdges10.BottomRight = true;
-            borderEdges10.TopLeft = true;
-            borderEdges10.TopRight = true;
-            this.btMQC.CustomizableEdges = borderEdges10;
+            borderEdges6.BottomLeft = true;
+            borderEdges6.BottomRight = true;
+            borderEdges6.TopLeft = true;
+            borderEdges6.TopRight = true;
+            this.btMQC.CustomizableEdges = borderEdges6;
             this.btMQC.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btMQC.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btMQC.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -273,13 +273,14 @@ namespace SMESData
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1120, 560);
+            this.ClientSize = new System.Drawing.Size(1902, 1033);
             this.Controls.Add(this.pnMain);
             this.Controls.Add(this.pnMenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Chart";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.pnMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
