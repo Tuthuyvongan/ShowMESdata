@@ -173,6 +173,94 @@ namespace SMESData.View
                 lbRW3.Font = new Font("Times New Roman", 10, FontStyle.Bold);
                 lbNG3.Font = new Font("Times New Roman", 10, FontStyle.Bold);
             }
+
+            if (dataL04[0] == 0 && dataL04[1] == 0 && dataL04[2] == 0)
+            {
+                lbOP4.Visible = false;
+                lbRW4.Visible = false;
+                lbNG4.Visible = false;
+            }
+            else
+            {
+                lbOP4.Visible = true;
+                lbRW4.Visible = true;
+                lbNG4.Visible = true;
+                lbOP4.BackColor = Color.DodgerBlue;
+                lbRW4.BackColor = Color.Orange;
+                lbNG4.BackColor = Color.Red;
+                lbOP4.Text = "OUTPUT: " + dataL04[0].ToString() + "%";
+                lbRW4.Text = "REWORK: " + dataL04[1].ToString() + "%";
+                lbNG4.Text = "NO GOOD: " + dataL04[2].ToString() + "%";
+                lbOP4.Font = new Font("Times New Roman", 10, FontStyle.Regular);
+                lbRW4.Font = new Font("Times New Roman", 10, FontStyle.Regular);
+                lbNG4.Font = new Font("Times New Roman", 10, FontStyle.Regular);
+            }
+
+            if (dataL05[0] == 0 && dataL05[1] == 0 && dataL05[2] == 0)
+            {
+                lbOP5.Visible = false;
+                lbRW5.Visible = false;
+                lbNG5.Visible = false;
+            }
+            else
+            {
+                lbOP5.Visible = true;
+                lbRW5.Visible = true;
+                lbNG5.Visible = true;
+                lbOP5.BackColor = Color.DodgerBlue;
+                lbRW5.BackColor = Color.Orange;
+                lbNG5.BackColor = Color.Red;
+                lbOP5.Text = "OUTPUT: " + dataL05[0].ToString() + "%";
+                lbRW5.Text = "REWORK: " + dataL05[1].ToString() + "%";
+                lbNG5.Text = "NO GOOD: " + dataL05[2].ToString() + "%";
+                lbOP5.Font = new Font("Times New Roman", 10, FontStyle.Regular);
+                lbRW5.Font = new Font("Times New Roman", 10, FontStyle.Regular);
+                lbNG5.Font = new Font("Times New Roman", 10, FontStyle.Regular);
+            }
+
+            if (dataL06[0] == 0 && dataL06[1] == 0 && dataL06[2] == 0)
+            {
+                lbOP6.Visible = false;
+                lbRW6.Visible = false;
+                lbNG6.Visible = false;
+            }
+            else
+            {
+                lbOP6.Visible = true;
+                lbRW6.Visible = true;
+                lbNG6.Visible = true;
+                lbOP6.BackColor = Color.DodgerBlue;
+                lbRW6.BackColor = Color.Orange;
+                lbNG6.BackColor = Color.Red;
+                lbOP6.Text = "OUTPUT: " + dataL06[0].ToString() + "%";
+                lbRW6.Text = "REWORK: " + dataL06[1].ToString() + "%";
+                lbNG6.Text = "NO GOOD: " + dataL06[2].ToString() + "%";
+                lbOP6.Font = new Font("Times New Roman", 10, FontStyle.Regular);
+                lbRW6.Font = new Font("Times New Roman", 10, FontStyle.Regular);
+                lbNG6.Font = new Font("Times New Roman", 10, FontStyle.Regular);
+            }
+
+            if (dataL07[0] == 0 && dataL07[1] == 0 && dataL07[2] == 0)
+            {
+                lbOP7.Visible = false;
+                lbRW7.Visible = false;
+                lbNG7.Visible = false;
+            }
+            else
+            {
+                lbOP7.Visible = true;
+                lbRW7.Visible = true;
+                lbNG7.Visible = true;
+                lbOP7.BackColor = Color.DodgerBlue;
+                lbRW7.BackColor = Color.Orange;
+                lbNG7.BackColor = Color.Red;
+                lbOP7.Text = "OUTPUT: " + dataL07[0].ToString() + "%";
+                lbRW7.Text = "REWORK: " + dataL07[1].ToString() + "%";
+                lbNG7.Text = "NO GOOD: " + dataL07[2].ToString() + "%";
+                lbOP7.Font = new Font("Times New Roman", 10, FontStyle.Regular);
+                lbRW7.Font = new Font("Times New Roman", 10, FontStyle.Regular);
+                lbNG7.Font = new Font("Times New Roman", 10, FontStyle.Regular);
+            }
             //Target Canvas
             L01Chart.TargetCanvas = linePCanvas1;
             L02Chart.TargetCanvas = linePCanvas2;

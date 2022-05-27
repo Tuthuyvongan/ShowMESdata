@@ -57,23 +57,23 @@ namespace SMESData.View
             this.panel4 = new System.Windows.Forms.Panel();
             this.linePCanvas4 = new Bunifu.Charts.WinForms.BunifuChartCanvas();
             this.lbOP4 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuLabel7 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lbNG4 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lbRW4 = new Bunifu.UI.WinForms.BunifuLabel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.linePCanvas5 = new Bunifu.Charts.WinForms.BunifuChartCanvas();
             this.lbOP5 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuLabel11 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuLabel10 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lbRW5 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lbNG5 = new Bunifu.UI.WinForms.BunifuLabel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.linePCanvas6 = new Bunifu.Charts.WinForms.BunifuChartCanvas();
             this.lbOP6 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuLabel14 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuLabel13 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lbRW6 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lbNG6 = new Bunifu.UI.WinForms.BunifuLabel();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lbOP7 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lbNG7 = new Bunifu.UI.WinForms.BunifuLabel();
             this.linePCanvas7 = new Bunifu.Charts.WinForms.BunifuChartCanvas();
-            this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lbRW7 = new Bunifu.UI.WinForms.BunifuLabel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -92,7 +92,7 @@ namespace SMESData.View
             this.linePCanvas1.Labels = new string[0];
             this.linePCanvas1.LegendAlignment = Bunifu.Charts.WinForms.BunifuChartCanvas.LegendAlignmentOptions.start;
             this.linePCanvas1.LegendDisplay = false;
-            this.linePCanvas1.LegendFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linePCanvas1.LegendFont = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linePCanvas1.LegendForeColor = System.Drawing.Color.Black;
             this.linePCanvas1.LegendFullWidth = false;
             this.linePCanvas1.LegendPosition = Bunifu.Charts.WinForms.BunifuChartCanvas.PositionOptions.bottom;
@@ -111,7 +111,7 @@ namespace SMESData.View
             this.linePCanvas1.TitlePadding = 10;
             this.linePCanvas1.TitlePosition = Bunifu.Charts.WinForms.BunifuChartCanvas.PositionOptions.bottom;
             this.linePCanvas1.TooltipBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.linePCanvas1.TooltipFont = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linePCanvas1.TooltipFont = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linePCanvas1.TooltipForeColor = System.Drawing.Color.WhiteSmoke;
             this.linePCanvas1.TooltipMode = Bunifu.Charts.WinForms.BunifuChartCanvas.TooltipModeOptions.nearest;
             this.linePCanvas1.TooltipsEnabled = true;
@@ -147,7 +147,7 @@ namespace SMESData.View
             this.dtpChart.BackColor = System.Drawing.Color.Transparent;
             this.dtpChart.BorderColor = System.Drawing.Color.Silver;
             this.dtpChart.BorderRadius = 1;
-            this.dtpChart.CalendarFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpChart.CalendarFont = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpChart.Color = System.Drawing.Color.Silver;
             this.dtpChart.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin;
             this.dtpChart.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
@@ -263,7 +263,7 @@ namespace SMESData.View
             this.linePCanvas2.Labels = new string[0];
             this.linePCanvas2.LegendAlignment = Bunifu.Charts.WinForms.BunifuChartCanvas.LegendAlignmentOptions.center;
             this.linePCanvas2.LegendDisplay = false;
-            this.linePCanvas2.LegendFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linePCanvas2.LegendFont = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linePCanvas2.LegendForeColor = System.Drawing.Color.Black;
             this.linePCanvas2.LegendFullWidth = false;
             this.linePCanvas2.LegendPosition = Bunifu.Charts.WinForms.BunifuChartCanvas.PositionOptions.bottom;
@@ -282,7 +282,7 @@ namespace SMESData.View
             this.linePCanvas2.TitlePadding = 10;
             this.linePCanvas2.TitlePosition = Bunifu.Charts.WinForms.BunifuChartCanvas.PositionOptions.bottom;
             this.linePCanvas2.TooltipBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.linePCanvas2.TooltipFont = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold);
+            this.linePCanvas2.TooltipFont = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
             this.linePCanvas2.TooltipForeColor = System.Drawing.Color.WhiteSmoke;
             this.linePCanvas2.TooltipMode = Bunifu.Charts.WinForms.BunifuChartCanvas.TooltipModeOptions.nearest;
             this.linePCanvas2.TooltipsEnabled = true;
@@ -316,7 +316,7 @@ namespace SMESData.View
             // panel1
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.lbNG1);
             this.panel1.Controls.Add(this.lbRW1);
             this.panel1.Controls.Add(this.lbOP1);
@@ -376,7 +376,7 @@ namespace SMESData.View
             // panel2
             // 
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.Controls.Add(this.linePCanvas2);
             this.panel2.Controls.Add(this.lbOP2);
             this.panel2.Controls.Add(this.lbRW2);
@@ -434,7 +434,7 @@ namespace SMESData.View
             // panel3
             // 
             this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel3.Controls.Add(this.linePCanvas3);
             this.panel3.Controls.Add(this.lbOP3);
             this.panel3.Controls.Add(this.lbRW3);
@@ -455,7 +455,7 @@ namespace SMESData.View
             this.linePCanvas3.Labels = new string[0];
             this.linePCanvas3.LegendAlignment = Bunifu.Charts.WinForms.BunifuChartCanvas.LegendAlignmentOptions.start;
             this.linePCanvas3.LegendDisplay = false;
-            this.linePCanvas3.LegendFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linePCanvas3.LegendFont = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linePCanvas3.LegendForeColor = System.Drawing.Color.Black;
             this.linePCanvas3.LegendFullWidth = false;
             this.linePCanvas3.LegendPosition = Bunifu.Charts.WinForms.BunifuChartCanvas.PositionOptions.bottom;
@@ -474,7 +474,7 @@ namespace SMESData.View
             this.linePCanvas3.TitlePadding = 10;
             this.linePCanvas3.TitlePosition = Bunifu.Charts.WinForms.BunifuChartCanvas.PositionOptions.bottom;
             this.linePCanvas3.TooltipBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.linePCanvas3.TooltipFont = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold);
+            this.linePCanvas3.TooltipFont = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
             this.linePCanvas3.TooltipForeColor = System.Drawing.Color.WhiteSmoke;
             this.linePCanvas3.TooltipMode = Bunifu.Charts.WinForms.BunifuChartCanvas.TooltipModeOptions.nearest;
             this.linePCanvas3.TooltipsEnabled = true;
@@ -511,7 +511,7 @@ namespace SMESData.View
             this.lbOP3.AutoEllipsis = false;
             this.lbOP3.CursorType = null;
             this.lbOP3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lbOP3.Location = new System.Drawing.Point(310, 55);
+            this.lbOP3.Location = new System.Drawing.Point(321, 55);
             this.lbOP3.Name = "lbOP3";
             this.lbOP3.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbOP3.Size = new System.Drawing.Size(86, 20);
@@ -526,7 +526,7 @@ namespace SMESData.View
             this.lbRW3.AutoEllipsis = false;
             this.lbRW3.CursorType = null;
             this.lbRW3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lbRW3.Location = new System.Drawing.Point(310, 93);
+            this.lbRW3.Location = new System.Drawing.Point(321, 93);
             this.lbRW3.Name = "lbRW3";
             this.lbRW3.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbRW3.Size = new System.Drawing.Size(86, 20);
@@ -541,7 +541,7 @@ namespace SMESData.View
             this.lbNG3.AutoEllipsis = false;
             this.lbNG3.CursorType = null;
             this.lbNG3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lbNG3.Location = new System.Drawing.Point(310, 131);
+            this.lbNG3.Location = new System.Drawing.Point(321, 131);
             this.lbNG3.Name = "lbNG3";
             this.lbNG3.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbNG3.Size = new System.Drawing.Size(86, 20);
@@ -553,10 +553,10 @@ namespace SMESData.View
             // panel4
             // 
             this.panel4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel4.Controls.Add(this.linePCanvas4);
             this.panel4.Controls.Add(this.lbOP4);
-            this.panel4.Controls.Add(this.bunifuLabel7);
+            this.panel4.Controls.Add(this.lbNG4);
             this.panel4.Controls.Add(this.lbRW4);
             this.panel4.Location = new System.Drawing.Point(13, 344);
             this.panel4.Name = "panel4";
@@ -572,7 +572,7 @@ namespace SMESData.View
             this.linePCanvas4.Labels = new string[0];
             this.linePCanvas4.LegendAlignment = Bunifu.Charts.WinForms.BunifuChartCanvas.LegendAlignmentOptions.start;
             this.linePCanvas4.LegendDisplay = false;
-            this.linePCanvas4.LegendFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linePCanvas4.LegendFont = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linePCanvas4.LegendForeColor = System.Drawing.Color.Black;
             this.linePCanvas4.LegendFullWidth = false;
             this.linePCanvas4.LegendPosition = Bunifu.Charts.WinForms.BunifuChartCanvas.PositionOptions.bottom;
@@ -591,7 +591,7 @@ namespace SMESData.View
             this.linePCanvas4.TitlePadding = 10;
             this.linePCanvas4.TitlePosition = Bunifu.Charts.WinForms.BunifuChartCanvas.PositionOptions.bottom;
             this.linePCanvas4.TooltipBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.linePCanvas4.TooltipFont = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold);
+            this.linePCanvas4.TooltipFont = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
             this.linePCanvas4.TooltipForeColor = System.Drawing.Color.WhiteSmoke;
             this.linePCanvas4.TooltipMode = Bunifu.Charts.WinForms.BunifuChartCanvas.TooltipModeOptions.nearest;
             this.linePCanvas4.TooltipsEnabled = true;
@@ -637,20 +637,20 @@ namespace SMESData.View
             this.lbOP4.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lbOP4.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // bunifuLabel7
+            // lbNG4
             // 
-            this.bunifuLabel7.AllowParentOverrides = false;
-            this.bunifuLabel7.AutoEllipsis = false;
-            this.bunifuLabel7.CursorType = null;
-            this.bunifuLabel7.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bunifuLabel7.Location = new System.Drawing.Point(321, 131);
-            this.bunifuLabel7.Name = "bunifuLabel7";
-            this.bunifuLabel7.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel7.Size = new System.Drawing.Size(86, 20);
-            this.bunifuLabel7.TabIndex = 18;
-            this.bunifuLabel7.Text = "bunifuLabel3";
-            this.bunifuLabel7.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel7.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.lbNG4.AllowParentOverrides = false;
+            this.lbNG4.AutoEllipsis = false;
+            this.lbNG4.CursorType = null;
+            this.lbNG4.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lbNG4.Location = new System.Drawing.Point(321, 131);
+            this.lbNG4.Name = "lbNG4";
+            this.lbNG4.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbNG4.Size = new System.Drawing.Size(86, 20);
+            this.lbNG4.TabIndex = 18;
+            this.lbNG4.Text = "bunifuLabel3";
+            this.lbNG4.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbNG4.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // lbRW4
             // 
@@ -670,11 +670,11 @@ namespace SMESData.View
             // panel5
             // 
             this.panel5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel5.Controls.Add(this.linePCanvas5);
             this.panel5.Controls.Add(this.lbOP5);
-            this.panel5.Controls.Add(this.bunifuLabel11);
-            this.panel5.Controls.Add(this.bunifuLabel10);
+            this.panel5.Controls.Add(this.lbRW5);
+            this.panel5.Controls.Add(this.lbNG5);
             this.panel5.Location = new System.Drawing.Point(501, 344);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(470, 320);
@@ -689,7 +689,7 @@ namespace SMESData.View
             this.linePCanvas5.Labels = new string[0];
             this.linePCanvas5.LegendAlignment = Bunifu.Charts.WinForms.BunifuChartCanvas.LegendAlignmentOptions.start;
             this.linePCanvas5.LegendDisplay = false;
-            this.linePCanvas5.LegendFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linePCanvas5.LegendFont = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linePCanvas5.LegendForeColor = System.Drawing.Color.Black;
             this.linePCanvas5.LegendFullWidth = false;
             this.linePCanvas5.LegendPosition = Bunifu.Charts.WinForms.BunifuChartCanvas.PositionOptions.bottom;
@@ -708,7 +708,7 @@ namespace SMESData.View
             this.linePCanvas5.TitlePadding = 10;
             this.linePCanvas5.TitlePosition = Bunifu.Charts.WinForms.BunifuChartCanvas.PositionOptions.bottom;
             this.linePCanvas5.TooltipBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.linePCanvas5.TooltipFont = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold);
+            this.linePCanvas5.TooltipFont = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
             this.linePCanvas5.TooltipForeColor = System.Drawing.Color.WhiteSmoke;
             this.linePCanvas5.TooltipMode = Bunifu.Charts.WinForms.BunifuChartCanvas.TooltipModeOptions.nearest;
             this.linePCanvas5.TooltipsEnabled = true;
@@ -754,44 +754,44 @@ namespace SMESData.View
             this.lbOP5.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lbOP5.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // bunifuLabel11
+            // lbRW5
             // 
-            this.bunifuLabel11.AllowParentOverrides = false;
-            this.bunifuLabel11.AutoEllipsis = false;
-            this.bunifuLabel11.CursorType = null;
-            this.bunifuLabel11.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bunifuLabel11.Location = new System.Drawing.Point(321, 93);
-            this.bunifuLabel11.Name = "bunifuLabel11";
-            this.bunifuLabel11.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel11.Size = new System.Drawing.Size(86, 20);
-            this.bunifuLabel11.TabIndex = 20;
-            this.bunifuLabel11.Text = "bunifuLabel2";
-            this.bunifuLabel11.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel11.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.lbRW5.AllowParentOverrides = false;
+            this.lbRW5.AutoEllipsis = false;
+            this.lbRW5.CursorType = null;
+            this.lbRW5.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lbRW5.Location = new System.Drawing.Point(321, 93);
+            this.lbRW5.Name = "lbRW5";
+            this.lbRW5.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbRW5.Size = new System.Drawing.Size(86, 20);
+            this.lbRW5.TabIndex = 20;
+            this.lbRW5.Text = "bunifuLabel2";
+            this.lbRW5.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbRW5.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // bunifuLabel10
+            // lbNG5
             // 
-            this.bunifuLabel10.AllowParentOverrides = false;
-            this.bunifuLabel10.AutoEllipsis = false;
-            this.bunifuLabel10.CursorType = null;
-            this.bunifuLabel10.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bunifuLabel10.Location = new System.Drawing.Point(321, 131);
-            this.bunifuLabel10.Name = "bunifuLabel10";
-            this.bunifuLabel10.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel10.Size = new System.Drawing.Size(86, 20);
-            this.bunifuLabel10.TabIndex = 21;
-            this.bunifuLabel10.Text = "bunifuLabel3";
-            this.bunifuLabel10.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel10.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.lbNG5.AllowParentOverrides = false;
+            this.lbNG5.AutoEllipsis = false;
+            this.lbNG5.CursorType = null;
+            this.lbNG5.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lbNG5.Location = new System.Drawing.Point(321, 131);
+            this.lbNG5.Name = "lbNG5";
+            this.lbNG5.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbNG5.Size = new System.Drawing.Size(86, 20);
+            this.lbNG5.TabIndex = 21;
+            this.lbNG5.Text = "bunifuLabel3";
+            this.lbNG5.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbNG5.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // panel6
             // 
             this.panel6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel6.Controls.Add(this.linePCanvas6);
             this.panel6.Controls.Add(this.lbOP6);
-            this.panel6.Controls.Add(this.bunifuLabel14);
-            this.panel6.Controls.Add(this.bunifuLabel13);
+            this.panel6.Controls.Add(this.lbRW6);
+            this.panel6.Controls.Add(this.lbNG6);
             this.panel6.Location = new System.Drawing.Point(990, 344);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(470, 320);
@@ -806,7 +806,7 @@ namespace SMESData.View
             this.linePCanvas6.Labels = new string[0];
             this.linePCanvas6.LegendAlignment = Bunifu.Charts.WinForms.BunifuChartCanvas.LegendAlignmentOptions.start;
             this.linePCanvas6.LegendDisplay = false;
-            this.linePCanvas6.LegendFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linePCanvas6.LegendFont = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linePCanvas6.LegendForeColor = System.Drawing.Color.Black;
             this.linePCanvas6.LegendFullWidth = false;
             this.linePCanvas6.LegendPosition = Bunifu.Charts.WinForms.BunifuChartCanvas.PositionOptions.bottom;
@@ -825,7 +825,7 @@ namespace SMESData.View
             this.linePCanvas6.TitlePadding = 10;
             this.linePCanvas6.TitlePosition = Bunifu.Charts.WinForms.BunifuChartCanvas.PositionOptions.bottom;
             this.linePCanvas6.TooltipBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.linePCanvas6.TooltipFont = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold);
+            this.linePCanvas6.TooltipFont = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
             this.linePCanvas6.TooltipForeColor = System.Drawing.Color.WhiteSmoke;
             this.linePCanvas6.TooltipMode = Bunifu.Charts.WinForms.BunifuChartCanvas.TooltipModeOptions.nearest;
             this.linePCanvas6.TooltipsEnabled = true;
@@ -862,7 +862,7 @@ namespace SMESData.View
             this.lbOP6.AutoEllipsis = false;
             this.lbOP6.CursorType = null;
             this.lbOP6.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lbOP6.Location = new System.Drawing.Point(310, 55);
+            this.lbOP6.Location = new System.Drawing.Point(321, 55);
             this.lbOP6.Name = "lbOP6";
             this.lbOP6.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbOP6.Size = new System.Drawing.Size(86, 20);
@@ -871,78 +871,78 @@ namespace SMESData.View
             this.lbOP6.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lbOP6.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // bunifuLabel14
+            // lbRW6
             // 
-            this.bunifuLabel14.AllowParentOverrides = false;
-            this.bunifuLabel14.AutoEllipsis = false;
-            this.bunifuLabel14.CursorType = null;
-            this.bunifuLabel14.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bunifuLabel14.Location = new System.Drawing.Point(310, 93);
-            this.bunifuLabel14.Name = "bunifuLabel14";
-            this.bunifuLabel14.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel14.Size = new System.Drawing.Size(86, 20);
-            this.bunifuLabel14.TabIndex = 23;
-            this.bunifuLabel14.Text = "bunifuLabel2";
-            this.bunifuLabel14.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel14.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.lbRW6.AllowParentOverrides = false;
+            this.lbRW6.AutoEllipsis = false;
+            this.lbRW6.CursorType = null;
+            this.lbRW6.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lbRW6.Location = new System.Drawing.Point(321, 93);
+            this.lbRW6.Name = "lbRW6";
+            this.lbRW6.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbRW6.Size = new System.Drawing.Size(86, 20);
+            this.lbRW6.TabIndex = 23;
+            this.lbRW6.Text = "bunifuLabel2";
+            this.lbRW6.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbRW6.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // bunifuLabel13
+            // lbNG6
             // 
-            this.bunifuLabel13.AllowParentOverrides = false;
-            this.bunifuLabel13.AutoEllipsis = false;
-            this.bunifuLabel13.CursorType = null;
-            this.bunifuLabel13.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bunifuLabel13.Location = new System.Drawing.Point(310, 131);
-            this.bunifuLabel13.Name = "bunifuLabel13";
-            this.bunifuLabel13.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel13.Size = new System.Drawing.Size(86, 20);
-            this.bunifuLabel13.TabIndex = 24;
-            this.bunifuLabel13.Text = "bunifuLabel3";
-            this.bunifuLabel13.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel13.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.lbNG6.AllowParentOverrides = false;
+            this.lbNG6.AutoEllipsis = false;
+            this.lbNG6.CursorType = null;
+            this.lbNG6.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lbNG6.Location = new System.Drawing.Point(321, 131);
+            this.lbNG6.Name = "lbNG6";
+            this.lbNG6.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbNG6.Size = new System.Drawing.Size(86, 20);
+            this.lbNG6.TabIndex = 24;
+            this.lbNG6.Text = "bunifuLabel3";
+            this.lbNG6.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbNG6.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // panel7
             // 
             this.panel7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel7.Controls.Add(this.bunifuLabel1);
-            this.panel7.Controls.Add(this.bunifuLabel2);
+            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel7.Controls.Add(this.lbOP7);
+            this.panel7.Controls.Add(this.lbNG7);
             this.panel7.Controls.Add(this.linePCanvas7);
-            this.panel7.Controls.Add(this.bunifuLabel3);
+            this.panel7.Controls.Add(this.lbRW7);
             this.panel7.Location = new System.Drawing.Point(13, 685);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(470, 320);
             this.panel7.TabIndex = 19;
             // 
-            // bunifuLabel1
+            // lbOP7
             // 
-            this.bunifuLabel1.AllowParentOverrides = false;
-            this.bunifuLabel1.AutoEllipsis = false;
-            this.bunifuLabel1.CursorType = null;
-            this.bunifuLabel1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bunifuLabel1.Location = new System.Drawing.Point(321, 56);
-            this.bunifuLabel1.Name = "bunifuLabel1";
-            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(86, 20);
-            this.bunifuLabel1.TabIndex = 19;
-            this.bunifuLabel1.Text = "bunifuLabel1";
-            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.lbOP7.AllowParentOverrides = false;
+            this.lbOP7.AutoEllipsis = false;
+            this.lbOP7.CursorType = null;
+            this.lbOP7.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lbOP7.Location = new System.Drawing.Point(321, 56);
+            this.lbOP7.Name = "lbOP7";
+            this.lbOP7.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbOP7.Size = new System.Drawing.Size(86, 20);
+            this.lbOP7.TabIndex = 19;
+            this.lbOP7.Text = "bunifuLabel1";
+            this.lbOP7.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbOP7.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // bunifuLabel2
+            // lbNG7
             // 
-            this.bunifuLabel2.AllowParentOverrides = false;
-            this.bunifuLabel2.AutoEllipsis = false;
-            this.bunifuLabel2.CursorType = null;
-            this.bunifuLabel2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bunifuLabel2.Location = new System.Drawing.Point(321, 132);
-            this.bunifuLabel2.Name = "bunifuLabel2";
-            this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel2.Size = new System.Drawing.Size(86, 20);
-            this.bunifuLabel2.TabIndex = 21;
-            this.bunifuLabel2.Text = "bunifuLabel3";
-            this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.lbNG7.AllowParentOverrides = false;
+            this.lbNG7.AutoEllipsis = false;
+            this.lbNG7.CursorType = null;
+            this.lbNG7.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lbNG7.Location = new System.Drawing.Point(321, 132);
+            this.lbNG7.Name = "lbNG7";
+            this.lbNG7.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbNG7.Size = new System.Drawing.Size(86, 20);
+            this.lbNG7.TabIndex = 21;
+            this.lbNG7.Text = "bunifuLabel3";
+            this.lbNG7.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbNG7.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // linePCanvas7
             // 
@@ -953,7 +953,7 @@ namespace SMESData.View
             this.linePCanvas7.Labels = new string[0];
             this.linePCanvas7.LegendAlignment = Bunifu.Charts.WinForms.BunifuChartCanvas.LegendAlignmentOptions.start;
             this.linePCanvas7.LegendDisplay = false;
-            this.linePCanvas7.LegendFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linePCanvas7.LegendFont = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linePCanvas7.LegendForeColor = System.Drawing.Color.Black;
             this.linePCanvas7.LegendFullWidth = false;
             this.linePCanvas7.LegendPosition = Bunifu.Charts.WinForms.BunifuChartCanvas.PositionOptions.bottom;
@@ -972,7 +972,7 @@ namespace SMESData.View
             this.linePCanvas7.TitlePadding = 10;
             this.linePCanvas7.TitlePosition = Bunifu.Charts.WinForms.BunifuChartCanvas.PositionOptions.bottom;
             this.linePCanvas7.TooltipBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.linePCanvas7.TooltipFont = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold);
+            this.linePCanvas7.TooltipFont = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
             this.linePCanvas7.TooltipForeColor = System.Drawing.Color.WhiteSmoke;
             this.linePCanvas7.TooltipMode = Bunifu.Charts.WinForms.BunifuChartCanvas.TooltipModeOptions.nearest;
             this.linePCanvas7.TooltipsEnabled = true;
@@ -1003,20 +1003,20 @@ namespace SMESData.View
             this.linePCanvas7.YAxesZeroLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.linePCanvas7.YAxesZeroLineWidth = 1;
             // 
-            // bunifuLabel3
+            // lbRW7
             // 
-            this.bunifuLabel3.AllowParentOverrides = false;
-            this.bunifuLabel3.AutoEllipsis = false;
-            this.bunifuLabel3.CursorType = null;
-            this.bunifuLabel3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bunifuLabel3.Location = new System.Drawing.Point(321, 94);
-            this.bunifuLabel3.Name = "bunifuLabel3";
-            this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel3.Size = new System.Drawing.Size(86, 20);
-            this.bunifuLabel3.TabIndex = 20;
-            this.bunifuLabel3.Text = "bunifuLabel2";
-            this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel3.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.lbRW7.AllowParentOverrides = false;
+            this.lbRW7.AutoEllipsis = false;
+            this.lbRW7.CursorType = null;
+            this.lbRW7.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lbRW7.Location = new System.Drawing.Point(321, 94);
+            this.lbRW7.Name = "lbRW7";
+            this.lbRW7.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbRW7.Size = new System.Drawing.Size(86, 20);
+            this.lbRW7.TabIndex = 20;
+            this.lbRW7.Text = "bunifuLabel2";
+            this.lbRW7.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbRW7.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // UC_MQC_PieChart
             // 
@@ -1081,21 +1081,21 @@ namespace SMESData.View
         private Bunifu.UI.WinForms.BunifuLabel lbNG3;
         private Bunifu.UI.WinForms.BunifuLabel lbRW3;
         private Bunifu.UI.WinForms.BunifuLabel lbOP3;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel7;
+        private Bunifu.UI.WinForms.BunifuLabel lbNG4;
         private Bunifu.UI.WinForms.BunifuLabel lbRW4;
         private Bunifu.UI.WinForms.BunifuLabel lbOP4;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel10;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel11;
+        private Bunifu.UI.WinForms.BunifuLabel lbNG5;
+        private Bunifu.UI.WinForms.BunifuLabel lbRW5;
         private Bunifu.UI.WinForms.BunifuLabel lbOP5;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel13;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel14;
+        private Bunifu.UI.WinForms.BunifuLabel lbNG6;
+        private Bunifu.UI.WinForms.BunifuLabel lbRW6;
         private Bunifu.UI.WinForms.BunifuLabel lbOP6;
         private Bunifu.UI.WinForms.BunifuLabel lbRW2;
         private Bunifu.UI.WinForms.BunifuLabel lbNG1;
         private Bunifu.UI.WinForms.BunifuLabel lbRW1;
         private Bunifu.UI.WinForms.BunifuLabel lbOP1;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel2;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel3;
+        private Bunifu.UI.WinForms.BunifuLabel lbOP7;
+        private Bunifu.UI.WinForms.BunifuLabel lbNG7;
+        private Bunifu.UI.WinForms.BunifuLabel lbRW7;
     }
 }

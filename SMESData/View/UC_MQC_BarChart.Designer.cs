@@ -144,7 +144,7 @@ namespace SMESData.View
             this.dtpChart.BackColor = System.Drawing.Color.Transparent;
             this.dtpChart.BorderColor = System.Drawing.Color.Silver;
             this.dtpChart.BorderRadius = 1;
-            this.dtpChart.CalendarFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpChart.CalendarFont = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpChart.Color = System.Drawing.Color.Silver;
             this.dtpChart.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin;
             this.dtpChart.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
