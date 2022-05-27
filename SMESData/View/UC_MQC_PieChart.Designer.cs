@@ -85,6 +85,8 @@ namespace SMESData.View
             // 
             // linePCanvas1
             // 
+            this.linePCanvas1.AccessibleRole = System.Windows.Forms.AccessibleRole.Chart;
+            this.linePCanvas1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.linePCanvas1.AnimationDuration = 2000;
             this.linePCanvas1.AnimationType = Bunifu.Charts.WinForms.BunifuChartCanvas.AnimationOptions.easeOutQuart;
             this.linePCanvas1.BackColor = System.Drawing.Color.White;
@@ -101,10 +103,10 @@ namespace SMESData.View
             this.linePCanvas1.Location = new System.Drawing.Point(4, 4);
             this.linePCanvas1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.linePCanvas1.Name = "linePCanvas1";
-            this.linePCanvas1.Padding = new System.Windows.Forms.Padding(0, 0, 100, 100);
+            this.linePCanvas1.Padding = new System.Windows.Forms.Padding(0, 0, 100, 120);
             this.linePCanvas1.ShowXAxis = true;
             this.linePCanvas1.ShowYAxis = true;
-            this.linePCanvas1.Size = new System.Drawing.Size(310, 310);
+            this.linePCanvas1.Size = new System.Drawing.Size(340, 310);
             this.linePCanvas1.TabIndex = 6;
             this.linePCanvas1.Title = "";
             this.linePCanvas1.TitleLineHeight = 2D;
@@ -162,7 +164,7 @@ namespace SMESData.View
             this.dtpChart.IconColor = System.Drawing.Color.DodgerBlue;
             this.dtpChart.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.dtpChart.LeftTextMargin = 5;
-            this.dtpChart.Location = new System.Drawing.Point(1525, 9);
+            this.dtpChart.Location = new System.Drawing.Point(1614, 10);
             this.dtpChart.MinimumSize = new System.Drawing.Size(4, 32);
             this.dtpChart.Name = "dtpChart";
             this.dtpChart.Size = new System.Drawing.Size(190, 34);
@@ -256,10 +258,13 @@ namespace SMESData.View
             // 
             // linePCanvas2
             // 
+            this.linePCanvas2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.linePCanvas2.AnimationDuration = 2000;
             this.linePCanvas2.AnimationType = Bunifu.Charts.WinForms.BunifuChartCanvas.AnimationOptions.easeOutQuart;
+            this.linePCanvas2.AutoSize = true;
             this.linePCanvas2.BackColor = System.Drawing.Color.White;
             this.linePCanvas2.CanvasPadding = new System.Windows.Forms.Padding(4);
+            this.linePCanvas2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linePCanvas2.Labels = new string[0];
             this.linePCanvas2.LegendAlignment = Bunifu.Charts.WinForms.BunifuChartCanvas.LegendAlignmentOptions.center;
             this.linePCanvas2.LegendDisplay = false;
@@ -269,20 +274,20 @@ namespace SMESData.View
             this.linePCanvas2.LegendPosition = Bunifu.Charts.WinForms.BunifuChartCanvas.PositionOptions.bottom;
             this.linePCanvas2.LegendRevese = false;
             this.linePCanvas2.LegendRTL = false;
-            this.linePCanvas2.Location = new System.Drawing.Point(4, 5);
-            this.linePCanvas2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.linePCanvas2.Location = new System.Drawing.Point(4, 4);
+            this.linePCanvas2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 10);
             this.linePCanvas2.Name = "linePCanvas2";
             this.linePCanvas2.Padding = new System.Windows.Forms.Padding(0, 0, 100, 100);
             this.linePCanvas2.ShowXAxis = false;
             this.linePCanvas2.ShowYAxis = false;
-            this.linePCanvas2.Size = new System.Drawing.Size(310, 309);
+            this.linePCanvas2.Size = new System.Drawing.Size(340, 310);
             this.linePCanvas2.TabIndex = 8;
             this.linePCanvas2.Title = "";
             this.linePCanvas2.TitleLineHeight = 2D;
             this.linePCanvas2.TitlePadding = 10;
             this.linePCanvas2.TitlePosition = Bunifu.Charts.WinForms.BunifuChartCanvas.PositionOptions.bottom;
             this.linePCanvas2.TooltipBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.linePCanvas2.TooltipFont = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
+            this.linePCanvas2.TooltipFont = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linePCanvas2.TooltipForeColor = System.Drawing.Color.WhiteSmoke;
             this.linePCanvas2.TooltipMode = Bunifu.Charts.WinForms.BunifuChartCanvas.TooltipModeOptions.nearest;
             this.linePCanvas2.TooltipsEnabled = true;
@@ -323,7 +328,7 @@ namespace SMESData.View
             this.panel1.Controls.Add(this.linePCanvas1);
             this.panel1.Location = new System.Drawing.Point(13, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(470, 320);
+            this.panel1.Size = new System.Drawing.Size(500, 320);
             this.panel1.TabIndex = 14;
             // 
             // lbNG1
@@ -332,7 +337,7 @@ namespace SMESData.View
             this.lbNG1.AutoEllipsis = false;
             this.lbNG1.CursorType = null;
             this.lbNG1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lbNG1.Location = new System.Drawing.Point(321, 131);
+            this.lbNG1.Location = new System.Drawing.Point(354, 131);
             this.lbNG1.Name = "lbNG1";
             this.lbNG1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbNG1.Size = new System.Drawing.Size(86, 20);
@@ -348,7 +353,7 @@ namespace SMESData.View
             this.lbRW1.Cursor = System.Windows.Forms.Cursors.Default;
             this.lbRW1.CursorType = System.Windows.Forms.Cursors.Default;
             this.lbRW1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lbRW1.Location = new System.Drawing.Point(321, 93);
+            this.lbRW1.Location = new System.Drawing.Point(354, 93);
             this.lbRW1.Name = "lbRW1";
             this.lbRW1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbRW1.Size = new System.Drawing.Size(86, 20);
@@ -364,7 +369,7 @@ namespace SMESData.View
             this.lbOP1.Cursor = System.Windows.Forms.Cursors.Default;
             this.lbOP1.CursorType = System.Windows.Forms.Cursors.Default;
             this.lbOP1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lbOP1.Location = new System.Drawing.Point(321, 55);
+            this.lbOP1.Location = new System.Drawing.Point(354, 55);
             this.lbOP1.Name = "lbOP1";
             this.lbOP1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbOP1.Size = new System.Drawing.Size(86, 20);
@@ -381,9 +386,9 @@ namespace SMESData.View
             this.panel2.Controls.Add(this.lbOP2);
             this.panel2.Controls.Add(this.lbRW2);
             this.panel2.Controls.Add(this.lbNG2);
-            this.panel2.Location = new System.Drawing.Point(501, 3);
+            this.panel2.Location = new System.Drawing.Point(548, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(470, 320);
+            this.panel2.Size = new System.Drawing.Size(500, 320);
             this.panel2.TabIndex = 15;
             // 
             // lbOP2
@@ -392,7 +397,7 @@ namespace SMESData.View
             this.lbOP2.AutoEllipsis = false;
             this.lbOP2.CursorType = null;
             this.lbOP2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lbOP2.Location = new System.Drawing.Point(321, 55);
+            this.lbOP2.Location = new System.Drawing.Point(352, 55);
             this.lbOP2.Name = "lbOP2";
             this.lbOP2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbOP2.Size = new System.Drawing.Size(86, 20);
@@ -407,7 +412,7 @@ namespace SMESData.View
             this.lbRW2.AutoEllipsis = false;
             this.lbRW2.CursorType = null;
             this.lbRW2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lbRW2.Location = new System.Drawing.Point(321, 93);
+            this.lbRW2.Location = new System.Drawing.Point(352, 93);
             this.lbRW2.Name = "lbRW2";
             this.lbRW2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbRW2.Size = new System.Drawing.Size(86, 20);
@@ -422,7 +427,7 @@ namespace SMESData.View
             this.lbNG2.AutoEllipsis = false;
             this.lbNG2.CursorType = null;
             this.lbNG2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lbNG2.Location = new System.Drawing.Point(321, 131);
+            this.lbNG2.Location = new System.Drawing.Point(352, 131);
             this.lbNG2.Name = "lbNG2";
             this.lbNG2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbNG2.Size = new System.Drawing.Size(86, 20);
@@ -439,16 +444,16 @@ namespace SMESData.View
             this.panel3.Controls.Add(this.lbOP3);
             this.panel3.Controls.Add(this.lbRW3);
             this.panel3.Controls.Add(this.lbNG3);
-            this.panel3.Location = new System.Drawing.Point(990, 3);
+            this.panel3.Location = new System.Drawing.Point(1084, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(470, 320);
+            this.panel3.Size = new System.Drawing.Size(500, 320);
             this.panel3.TabIndex = 16;
             // 
             // linePCanvas3
             // 
+            this.linePCanvas3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.linePCanvas3.AnimationDuration = 2000;
             this.linePCanvas3.AnimationType = Bunifu.Charts.WinForms.BunifuChartCanvas.AnimationOptions.easeOutQuart;
-            this.linePCanvas3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.linePCanvas3.BackColor = System.Drawing.Color.White;
             this.linePCanvas3.CanvasPadding = new System.Windows.Forms.Padding(0);
             this.linePCanvas3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
@@ -467,7 +472,7 @@ namespace SMESData.View
             this.linePCanvas3.Padding = new System.Windows.Forms.Padding(0, 0, 100, 100);
             this.linePCanvas3.ShowXAxis = false;
             this.linePCanvas3.ShowYAxis = false;
-            this.linePCanvas3.Size = new System.Drawing.Size(310, 310);
+            this.linePCanvas3.Size = new System.Drawing.Size(340, 310);
             this.linePCanvas3.TabIndex = 10;
             this.linePCanvas3.Title = "";
             this.linePCanvas3.TitleLineHeight = 2D;
@@ -511,7 +516,7 @@ namespace SMESData.View
             this.lbOP3.AutoEllipsis = false;
             this.lbOP3.CursorType = null;
             this.lbOP3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lbOP3.Location = new System.Drawing.Point(321, 55);
+            this.lbOP3.Location = new System.Drawing.Point(354, 55);
             this.lbOP3.Name = "lbOP3";
             this.lbOP3.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbOP3.Size = new System.Drawing.Size(86, 20);
@@ -526,7 +531,7 @@ namespace SMESData.View
             this.lbRW3.AutoEllipsis = false;
             this.lbRW3.CursorType = null;
             this.lbRW3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lbRW3.Location = new System.Drawing.Point(321, 93);
+            this.lbRW3.Location = new System.Drawing.Point(354, 93);
             this.lbRW3.Name = "lbRW3";
             this.lbRW3.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbRW3.Size = new System.Drawing.Size(86, 20);
@@ -541,7 +546,7 @@ namespace SMESData.View
             this.lbNG3.AutoEllipsis = false;
             this.lbNG3.CursorType = null;
             this.lbNG3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lbNG3.Location = new System.Drawing.Point(321, 131);
+            this.lbNG3.Location = new System.Drawing.Point(354, 131);
             this.lbNG3.Name = "lbNG3";
             this.lbNG3.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbNG3.Size = new System.Drawing.Size(86, 20);
@@ -560,11 +565,12 @@ namespace SMESData.View
             this.panel4.Controls.Add(this.lbRW4);
             this.panel4.Location = new System.Drawing.Point(13, 344);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(470, 320);
+            this.panel4.Size = new System.Drawing.Size(500, 320);
             this.panel4.TabIndex = 17;
             // 
             // linePCanvas4
             // 
+            this.linePCanvas4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.linePCanvas4.AnimationDuration = 2000;
             this.linePCanvas4.AnimationType = Bunifu.Charts.WinForms.BunifuChartCanvas.AnimationOptions.easeOutQuart;
             this.linePCanvas4.BackColor = System.Drawing.Color.White;
@@ -584,7 +590,7 @@ namespace SMESData.View
             this.linePCanvas4.Padding = new System.Windows.Forms.Padding(0, 0, 100, 100);
             this.linePCanvas4.ShowXAxis = false;
             this.linePCanvas4.ShowYAxis = false;
-            this.linePCanvas4.Size = new System.Drawing.Size(310, 310);
+            this.linePCanvas4.Size = new System.Drawing.Size(340, 310);
             this.linePCanvas4.TabIndex = 10;
             this.linePCanvas4.Title = "";
             this.linePCanvas4.TitleLineHeight = 2D;
@@ -628,7 +634,7 @@ namespace SMESData.View
             this.lbOP4.AutoEllipsis = false;
             this.lbOP4.CursorType = null;
             this.lbOP4.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lbOP4.Location = new System.Drawing.Point(321, 55);
+            this.lbOP4.Location = new System.Drawing.Point(354, 55);
             this.lbOP4.Name = "lbOP4";
             this.lbOP4.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbOP4.Size = new System.Drawing.Size(86, 20);
@@ -643,7 +649,7 @@ namespace SMESData.View
             this.lbNG4.AutoEllipsis = false;
             this.lbNG4.CursorType = null;
             this.lbNG4.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lbNG4.Location = new System.Drawing.Point(321, 131);
+            this.lbNG4.Location = new System.Drawing.Point(354, 131);
             this.lbNG4.Name = "lbNG4";
             this.lbNG4.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbNG4.Size = new System.Drawing.Size(86, 20);
@@ -658,7 +664,7 @@ namespace SMESData.View
             this.lbRW4.AutoEllipsis = false;
             this.lbRW4.CursorType = null;
             this.lbRW4.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lbRW4.Location = new System.Drawing.Point(321, 93);
+            this.lbRW4.Location = new System.Drawing.Point(354, 93);
             this.lbRW4.Name = "lbRW4";
             this.lbRW4.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbRW4.Size = new System.Drawing.Size(86, 20);
@@ -675,13 +681,14 @@ namespace SMESData.View
             this.panel5.Controls.Add(this.lbOP5);
             this.panel5.Controls.Add(this.lbRW5);
             this.panel5.Controls.Add(this.lbNG5);
-            this.panel5.Location = new System.Drawing.Point(501, 344);
+            this.panel5.Location = new System.Drawing.Point(548, 344);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(470, 320);
+            this.panel5.Size = new System.Drawing.Size(500, 320);
             this.panel5.TabIndex = 17;
             // 
             // linePCanvas5
             // 
+            this.linePCanvas5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.linePCanvas5.AnimationDuration = 2000;
             this.linePCanvas5.AnimationType = Bunifu.Charts.WinForms.BunifuChartCanvas.AnimationOptions.easeOutQuart;
             this.linePCanvas5.BackColor = System.Drawing.Color.White;
@@ -695,14 +702,14 @@ namespace SMESData.View
             this.linePCanvas5.LegendPosition = Bunifu.Charts.WinForms.BunifuChartCanvas.PositionOptions.bottom;
             this.linePCanvas5.LegendRevese = false;
             this.linePCanvas5.LegendRTL = false;
-            this.linePCanvas5.Location = new System.Drawing.Point(4, 5);
+            this.linePCanvas5.Location = new System.Drawing.Point(4, 4);
             this.linePCanvas5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.linePCanvas5.Name = "linePCanvas5";
             this.linePCanvas5.Padding = new System.Windows.Forms.Padding(0, 0, 100, 100);
             this.linePCanvas5.ShowXAxis = false;
             this.linePCanvas5.ShowYAxis = false;
-            this.linePCanvas5.Size = new System.Drawing.Size(310, 310);
-            this.linePCanvas5.TabIndex = 11;
+            this.linePCanvas5.Size = new System.Drawing.Size(340, 310);
+            this.linePCanvas5.TabIndex = 8;
             this.linePCanvas5.Title = "";
             this.linePCanvas5.TitleLineHeight = 2D;
             this.linePCanvas5.TitlePadding = 10;
@@ -745,7 +752,7 @@ namespace SMESData.View
             this.lbOP5.AutoEllipsis = false;
             this.lbOP5.CursorType = null;
             this.lbOP5.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lbOP5.Location = new System.Drawing.Point(321, 55);
+            this.lbOP5.Location = new System.Drawing.Point(352, 55);
             this.lbOP5.Name = "lbOP5";
             this.lbOP5.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbOP5.Size = new System.Drawing.Size(86, 20);
@@ -760,7 +767,7 @@ namespace SMESData.View
             this.lbRW5.AutoEllipsis = false;
             this.lbRW5.CursorType = null;
             this.lbRW5.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lbRW5.Location = new System.Drawing.Point(321, 93);
+            this.lbRW5.Location = new System.Drawing.Point(352, 93);
             this.lbRW5.Name = "lbRW5";
             this.lbRW5.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbRW5.Size = new System.Drawing.Size(86, 20);
@@ -775,7 +782,7 @@ namespace SMESData.View
             this.lbNG5.AutoEllipsis = false;
             this.lbNG5.CursorType = null;
             this.lbNG5.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lbNG5.Location = new System.Drawing.Point(321, 131);
+            this.lbNG5.Location = new System.Drawing.Point(352, 131);
             this.lbNG5.Name = "lbNG5";
             this.lbNG5.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbNG5.Size = new System.Drawing.Size(86, 20);
@@ -792,13 +799,14 @@ namespace SMESData.View
             this.panel6.Controls.Add(this.lbOP6);
             this.panel6.Controls.Add(this.lbRW6);
             this.panel6.Controls.Add(this.lbNG6);
-            this.panel6.Location = new System.Drawing.Point(990, 344);
+            this.panel6.Location = new System.Drawing.Point(1084, 344);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(470, 320);
+            this.panel6.Size = new System.Drawing.Size(500, 320);
             this.panel6.TabIndex = 18;
             // 
             // linePCanvas6
             // 
+            this.linePCanvas6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.linePCanvas6.AnimationDuration = 2000;
             this.linePCanvas6.AnimationType = Bunifu.Charts.WinForms.BunifuChartCanvas.AnimationOptions.easeOutQuart;
             this.linePCanvas6.BackColor = System.Drawing.Color.White;
@@ -812,13 +820,13 @@ namespace SMESData.View
             this.linePCanvas6.LegendPosition = Bunifu.Charts.WinForms.BunifuChartCanvas.PositionOptions.bottom;
             this.linePCanvas6.LegendRevese = false;
             this.linePCanvas6.LegendRTL = false;
-            this.linePCanvas6.Location = new System.Drawing.Point(5, 4);
+            this.linePCanvas6.Location = new System.Drawing.Point(4, 4);
             this.linePCanvas6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.linePCanvas6.Name = "linePCanvas6";
             this.linePCanvas6.Padding = new System.Windows.Forms.Padding(0, 0, 100, 100);
             this.linePCanvas6.ShowXAxis = false;
             this.linePCanvas6.ShowYAxis = false;
-            this.linePCanvas6.Size = new System.Drawing.Size(310, 310);
+            this.linePCanvas6.Size = new System.Drawing.Size(340, 310);
             this.linePCanvas6.TabIndex = 12;
             this.linePCanvas6.Title = "";
             this.linePCanvas6.TitleLineHeight = 2D;
@@ -862,7 +870,7 @@ namespace SMESData.View
             this.lbOP6.AutoEllipsis = false;
             this.lbOP6.CursorType = null;
             this.lbOP6.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lbOP6.Location = new System.Drawing.Point(321, 55);
+            this.lbOP6.Location = new System.Drawing.Point(354, 55);
             this.lbOP6.Name = "lbOP6";
             this.lbOP6.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbOP6.Size = new System.Drawing.Size(86, 20);
@@ -877,7 +885,7 @@ namespace SMESData.View
             this.lbRW6.AutoEllipsis = false;
             this.lbRW6.CursorType = null;
             this.lbRW6.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lbRW6.Location = new System.Drawing.Point(321, 93);
+            this.lbRW6.Location = new System.Drawing.Point(354, 93);
             this.lbRW6.Name = "lbRW6";
             this.lbRW6.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbRW6.Size = new System.Drawing.Size(86, 20);
@@ -892,7 +900,7 @@ namespace SMESData.View
             this.lbNG6.AutoEllipsis = false;
             this.lbNG6.CursorType = null;
             this.lbNG6.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lbNG6.Location = new System.Drawing.Point(321, 131);
+            this.lbNG6.Location = new System.Drawing.Point(354, 131);
             this.lbNG6.Name = "lbNG6";
             this.lbNG6.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbNG6.Size = new System.Drawing.Size(86, 20);
@@ -911,7 +919,7 @@ namespace SMESData.View
             this.panel7.Controls.Add(this.lbRW7);
             this.panel7.Location = new System.Drawing.Point(13, 685);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(470, 320);
+            this.panel7.Size = new System.Drawing.Size(500, 320);
             this.panel7.TabIndex = 19;
             // 
             // lbOP7
@@ -920,7 +928,7 @@ namespace SMESData.View
             this.lbOP7.AutoEllipsis = false;
             this.lbOP7.CursorType = null;
             this.lbOP7.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lbOP7.Location = new System.Drawing.Point(321, 56);
+            this.lbOP7.Location = new System.Drawing.Point(354, 53);
             this.lbOP7.Name = "lbOP7";
             this.lbOP7.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbOP7.Size = new System.Drawing.Size(86, 20);
@@ -935,7 +943,7 @@ namespace SMESData.View
             this.lbNG7.AutoEllipsis = false;
             this.lbNG7.CursorType = null;
             this.lbNG7.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lbNG7.Location = new System.Drawing.Point(321, 132);
+            this.lbNG7.Location = new System.Drawing.Point(354, 129);
             this.lbNG7.Name = "lbNG7";
             this.lbNG7.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbNG7.Size = new System.Drawing.Size(86, 20);
@@ -946,6 +954,7 @@ namespace SMESData.View
             // 
             // linePCanvas7
             // 
+            this.linePCanvas7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.linePCanvas7.AnimationDuration = 2000;
             this.linePCanvas7.AnimationType = Bunifu.Charts.WinForms.BunifuChartCanvas.AnimationOptions.easeOutQuart;
             this.linePCanvas7.BackColor = System.Drawing.Color.White;
@@ -959,13 +968,13 @@ namespace SMESData.View
             this.linePCanvas7.LegendPosition = Bunifu.Charts.WinForms.BunifuChartCanvas.PositionOptions.bottom;
             this.linePCanvas7.LegendRevese = false;
             this.linePCanvas7.LegendRTL = false;
-            this.linePCanvas7.Location = new System.Drawing.Point(7, 4);
+            this.linePCanvas7.Location = new System.Drawing.Point(4, 4);
             this.linePCanvas7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.linePCanvas7.Name = "linePCanvas7";
             this.linePCanvas7.Padding = new System.Windows.Forms.Padding(0, 0, 100, 100);
             this.linePCanvas7.ShowXAxis = false;
             this.linePCanvas7.ShowYAxis = false;
-            this.linePCanvas7.Size = new System.Drawing.Size(310, 310);
+            this.linePCanvas7.Size = new System.Drawing.Size(340, 310);
             this.linePCanvas7.TabIndex = 13;
             this.linePCanvas7.Title = "";
             this.linePCanvas7.TitleLineHeight = 2D;
@@ -1009,7 +1018,7 @@ namespace SMESData.View
             this.lbRW7.AutoEllipsis = false;
             this.lbRW7.CursorType = null;
             this.lbRW7.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lbRW7.Location = new System.Drawing.Point(321, 94);
+            this.lbRW7.Location = new System.Drawing.Point(354, 91);
             this.lbRW7.Name = "lbRW7";
             this.lbRW7.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbRW7.Size = new System.Drawing.Size(86, 20);
