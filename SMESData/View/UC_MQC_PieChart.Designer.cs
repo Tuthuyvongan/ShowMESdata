@@ -297,6 +297,7 @@ namespace SMESData.View
             // 
             // panel1
             // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.Controls.Add(this.linePCanvas1);
             this.panel1.Location = new System.Drawing.Point(220, 22);
             this.panel1.Name = "panel1";
@@ -305,6 +306,7 @@ namespace SMESData.View
             // 
             // panel2
             // 
+            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel2.Controls.Add(this.linePCanvas2);
             this.panel2.Location = new System.Drawing.Point(690, 22);
             this.panel2.Name = "panel2";
@@ -313,6 +315,7 @@ namespace SMESData.View
             // 
             // panel3
             // 
+            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel3.Controls.Add(this.linePCanvas3);
             this.panel3.Location = new System.Drawing.Point(1165, 22);
             this.panel3.Name = "panel3";
@@ -381,6 +384,7 @@ namespace SMESData.View
             // 
             // panel4
             // 
+            this.panel4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel4.Controls.Add(this.linePCanvas4);
             this.panel4.Location = new System.Drawing.Point(220, 358);
             this.panel4.Name = "panel4";
@@ -449,6 +453,7 @@ namespace SMESData.View
             // 
             // panel5
             // 
+            this.panel5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel5.Controls.Add(this.linePCanvas5);
             this.panel5.Location = new System.Drawing.Point(690, 358);
             this.panel5.Name = "panel5";
@@ -517,6 +522,7 @@ namespace SMESData.View
             // 
             // panel6
             // 
+            this.panel6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel6.Controls.Add(this.linePCanvas6);
             this.panel6.Location = new System.Drawing.Point(1165, 358);
             this.panel6.Name = "panel6";
@@ -585,6 +591,7 @@ namespace SMESData.View
             // 
             // panel7
             // 
+            this.panel7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel7.Controls.Add(this.linePCanvas7);
             this.panel7.Location = new System.Drawing.Point(690, 694);
             this.panel7.Name = "panel7";
