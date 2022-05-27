@@ -62,7 +62,7 @@ namespace SMESData.View
             this.lineBCCanvas.Padding = new System.Windows.Forms.Padding(0, 0, 290, 100);
             this.lineBCCanvas.ShowXAxis = true;
             this.lineBCCanvas.ShowYAxis = true;
-            this.lineBCCanvas.Size = new System.Drawing.Size(1025, 519);
+            this.lineBCCanvas.Size = new System.Drawing.Size(1807, 992);
             this.lineBCCanvas.TabIndex = 5;
             this.lineBCCanvas.Title = "";
             this.lineBCCanvas.TitleLineHeight = 1.2D;
@@ -176,7 +176,7 @@ namespace SMESData.View
             this.Controls.Add(this.dtpChart);
             this.Controls.Add(this.lineBCCanvas);
             this.Name = "UC_MQC_BarChart";
-            this.Size = new System.Drawing.Size(1025, 560);
+            this.Size = new System.Drawing.Size(1807, 1033);
             this.Load += new System.EventHandler(this.UC_MQC_Load);
             this.ResumeLayout(false);
 

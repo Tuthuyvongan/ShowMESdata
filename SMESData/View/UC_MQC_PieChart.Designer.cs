@@ -72,7 +72,7 @@ namespace SMESData.View
             this.linePCanvas1.Labels = new string[0];
             this.linePCanvas1.LegendAlignment = Bunifu.Charts.WinForms.BunifuChartCanvas.LegendAlignmentOptions.start;
             this.linePCanvas1.LegendDisplay = false;
-            this.linePCanvas1.LegendFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linePCanvas1.LegendFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linePCanvas1.LegendForeColor = System.Drawing.Color.Black;
             this.linePCanvas1.LegendFullWidth = false;
             this.linePCanvas1.LegendPosition = Bunifu.Charts.WinForms.BunifuChartCanvas.PositionOptions.bottom;
@@ -87,11 +87,11 @@ namespace SMESData.View
             this.linePCanvas1.Size = new System.Drawing.Size(330, 330);
             this.linePCanvas1.TabIndex = 6;
             this.linePCanvas1.Title = "";
-            this.linePCanvas1.TitleLineHeight = 1.2D;
+            this.linePCanvas1.TitleLineHeight = 2D;
             this.linePCanvas1.TitlePadding = 10;
-            this.linePCanvas1.TitlePosition = Bunifu.Charts.WinForms.BunifuChartCanvas.PositionOptions.top;
+            this.linePCanvas1.TitlePosition = Bunifu.Charts.WinForms.BunifuChartCanvas.PositionOptions.bottom;
             this.linePCanvas1.TooltipBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.linePCanvas1.TooltipFont = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.linePCanvas1.TooltipFont = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linePCanvas1.TooltipForeColor = System.Drawing.Color.WhiteSmoke;
             this.linePCanvas1.TooltipMode = Bunifu.Charts.WinForms.BunifuChartCanvas.TooltipModeOptions.nearest;
             this.linePCanvas1.TooltipsEnabled = true;
@@ -245,7 +245,7 @@ namespace SMESData.View
             this.linePCanvas2.Labels = new string[0];
             this.linePCanvas2.LegendAlignment = Bunifu.Charts.WinForms.BunifuChartCanvas.LegendAlignmentOptions.start;
             this.linePCanvas2.LegendDisplay = false;
-            this.linePCanvas2.LegendFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linePCanvas2.LegendFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linePCanvas2.LegendForeColor = System.Drawing.Color.Black;
             this.linePCanvas2.LegendFullWidth = false;
             this.linePCanvas2.LegendPosition = Bunifu.Charts.WinForms.BunifuChartCanvas.PositionOptions.bottom;
@@ -260,11 +260,11 @@ namespace SMESData.View
             this.linePCanvas2.Size = new System.Drawing.Size(330, 330);
             this.linePCanvas2.TabIndex = 8;
             this.linePCanvas2.Title = "";
-            this.linePCanvas2.TitleLineHeight = 1.2D;
+            this.linePCanvas2.TitleLineHeight = 2D;
             this.linePCanvas2.TitlePadding = 10;
-            this.linePCanvas2.TitlePosition = Bunifu.Charts.WinForms.BunifuChartCanvas.PositionOptions.top;
+            this.linePCanvas2.TitlePosition = Bunifu.Charts.WinForms.BunifuChartCanvas.PositionOptions.bottom;
             this.linePCanvas2.TooltipBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.linePCanvas2.TooltipFont = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.linePCanvas2.TooltipFont = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold);
             this.linePCanvas2.TooltipForeColor = System.Drawing.Color.WhiteSmoke;
             this.linePCanvas2.TooltipMode = Bunifu.Charts.WinForms.BunifuChartCanvas.TooltipModeOptions.nearest;
             this.linePCanvas2.TooltipsEnabled = true;
@@ -298,7 +298,7 @@ namespace SMESData.View
             // panel1
             // 
             this.panel1.Controls.Add(this.linePCanvas1);
-            this.panel1.Location = new System.Drawing.Point(14, 94);
+            this.panel1.Location = new System.Drawing.Point(220, 22);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(330, 330);
             this.panel1.TabIndex = 14;
@@ -306,7 +306,7 @@ namespace SMESData.View
             // panel2
             // 
             this.panel2.Controls.Add(this.linePCanvas2);
-            this.panel2.Location = new System.Drawing.Point(607, 94);
+            this.panel2.Location = new System.Drawing.Point(690, 22);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(330, 330);
             this.panel2.TabIndex = 15;
@@ -314,7 +314,7 @@ namespace SMESData.View
             // panel3
             // 
             this.panel3.Controls.Add(this.linePCanvas3);
-            this.panel3.Location = new System.Drawing.Point(1200, 94);
+            this.panel3.Location = new System.Drawing.Point(1165, 22);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(330, 330);
             this.panel3.TabIndex = 16;
@@ -329,7 +329,7 @@ namespace SMESData.View
             this.linePCanvas3.Labels = new string[0];
             this.linePCanvas3.LegendAlignment = Bunifu.Charts.WinForms.BunifuChartCanvas.LegendAlignmentOptions.start;
             this.linePCanvas3.LegendDisplay = false;
-            this.linePCanvas3.LegendFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linePCanvas3.LegendFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linePCanvas3.LegendForeColor = System.Drawing.Color.Black;
             this.linePCanvas3.LegendFullWidth = false;
             this.linePCanvas3.LegendPosition = Bunifu.Charts.WinForms.BunifuChartCanvas.PositionOptions.bottom;
@@ -344,11 +344,11 @@ namespace SMESData.View
             this.linePCanvas3.Size = new System.Drawing.Size(330, 330);
             this.linePCanvas3.TabIndex = 10;
             this.linePCanvas3.Title = "";
-            this.linePCanvas3.TitleLineHeight = 1.2D;
+            this.linePCanvas3.TitleLineHeight = 2D;
             this.linePCanvas3.TitlePadding = 10;
-            this.linePCanvas3.TitlePosition = Bunifu.Charts.WinForms.BunifuChartCanvas.PositionOptions.top;
+            this.linePCanvas3.TitlePosition = Bunifu.Charts.WinForms.BunifuChartCanvas.PositionOptions.bottom;
             this.linePCanvas3.TooltipBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.linePCanvas3.TooltipFont = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.linePCanvas3.TooltipFont = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold);
             this.linePCanvas3.TooltipForeColor = System.Drawing.Color.WhiteSmoke;
             this.linePCanvas3.TooltipMode = Bunifu.Charts.WinForms.BunifuChartCanvas.TooltipModeOptions.nearest;
             this.linePCanvas3.TooltipsEnabled = true;
@@ -382,7 +382,7 @@ namespace SMESData.View
             // panel4
             // 
             this.panel4.Controls.Add(this.linePCanvas4);
-            this.panel4.Location = new System.Drawing.Point(14, 397);
+            this.panel4.Location = new System.Drawing.Point(220, 358);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(330, 330);
             this.panel4.TabIndex = 17;
@@ -397,7 +397,7 @@ namespace SMESData.View
             this.linePCanvas4.Labels = new string[0];
             this.linePCanvas4.LegendAlignment = Bunifu.Charts.WinForms.BunifuChartCanvas.LegendAlignmentOptions.start;
             this.linePCanvas4.LegendDisplay = false;
-            this.linePCanvas4.LegendFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linePCanvas4.LegendFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linePCanvas4.LegendForeColor = System.Drawing.Color.Black;
             this.linePCanvas4.LegendFullWidth = false;
             this.linePCanvas4.LegendPosition = Bunifu.Charts.WinForms.BunifuChartCanvas.PositionOptions.bottom;
@@ -412,11 +412,11 @@ namespace SMESData.View
             this.linePCanvas4.Size = new System.Drawing.Size(330, 330);
             this.linePCanvas4.TabIndex = 10;
             this.linePCanvas4.Title = "";
-            this.linePCanvas4.TitleLineHeight = 1.2D;
+            this.linePCanvas4.TitleLineHeight = 2D;
             this.linePCanvas4.TitlePadding = 10;
-            this.linePCanvas4.TitlePosition = Bunifu.Charts.WinForms.BunifuChartCanvas.PositionOptions.top;
+            this.linePCanvas4.TitlePosition = Bunifu.Charts.WinForms.BunifuChartCanvas.PositionOptions.bottom;
             this.linePCanvas4.TooltipBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.linePCanvas4.TooltipFont = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.linePCanvas4.TooltipFont = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold);
             this.linePCanvas4.TooltipForeColor = System.Drawing.Color.WhiteSmoke;
             this.linePCanvas4.TooltipMode = Bunifu.Charts.WinForms.BunifuChartCanvas.TooltipModeOptions.nearest;
             this.linePCanvas4.TooltipsEnabled = true;
@@ -450,7 +450,7 @@ namespace SMESData.View
             // panel5
             // 
             this.panel5.Controls.Add(this.linePCanvas5);
-            this.panel5.Location = new System.Drawing.Point(607, 397);
+            this.panel5.Location = new System.Drawing.Point(690, 358);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(330, 330);
             this.panel5.TabIndex = 17;
@@ -465,7 +465,7 @@ namespace SMESData.View
             this.linePCanvas5.Labels = new string[0];
             this.linePCanvas5.LegendAlignment = Bunifu.Charts.WinForms.BunifuChartCanvas.LegendAlignmentOptions.start;
             this.linePCanvas5.LegendDisplay = false;
-            this.linePCanvas5.LegendFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linePCanvas5.LegendFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linePCanvas5.LegendForeColor = System.Drawing.Color.Black;
             this.linePCanvas5.LegendFullWidth = false;
             this.linePCanvas5.LegendPosition = Bunifu.Charts.WinForms.BunifuChartCanvas.PositionOptions.bottom;
@@ -480,11 +480,11 @@ namespace SMESData.View
             this.linePCanvas5.Size = new System.Drawing.Size(330, 330);
             this.linePCanvas5.TabIndex = 11;
             this.linePCanvas5.Title = "";
-            this.linePCanvas5.TitleLineHeight = 1.2D;
+            this.linePCanvas5.TitleLineHeight = 2D;
             this.linePCanvas5.TitlePadding = 10;
-            this.linePCanvas5.TitlePosition = Bunifu.Charts.WinForms.BunifuChartCanvas.PositionOptions.top;
+            this.linePCanvas5.TitlePosition = Bunifu.Charts.WinForms.BunifuChartCanvas.PositionOptions.bottom;
             this.linePCanvas5.TooltipBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.linePCanvas5.TooltipFont = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.linePCanvas5.TooltipFont = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold);
             this.linePCanvas5.TooltipForeColor = System.Drawing.Color.WhiteSmoke;
             this.linePCanvas5.TooltipMode = Bunifu.Charts.WinForms.BunifuChartCanvas.TooltipModeOptions.nearest;
             this.linePCanvas5.TooltipsEnabled = true;
@@ -518,7 +518,7 @@ namespace SMESData.View
             // panel6
             // 
             this.panel6.Controls.Add(this.linePCanvas6);
-            this.panel6.Location = new System.Drawing.Point(1200, 397);
+            this.panel6.Location = new System.Drawing.Point(1165, 358);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(330, 330);
             this.panel6.TabIndex = 18;
@@ -533,7 +533,7 @@ namespace SMESData.View
             this.linePCanvas6.Labels = new string[0];
             this.linePCanvas6.LegendAlignment = Bunifu.Charts.WinForms.BunifuChartCanvas.LegendAlignmentOptions.start;
             this.linePCanvas6.LegendDisplay = false;
-            this.linePCanvas6.LegendFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linePCanvas6.LegendFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linePCanvas6.LegendForeColor = System.Drawing.Color.Black;
             this.linePCanvas6.LegendFullWidth = false;
             this.linePCanvas6.LegendPosition = Bunifu.Charts.WinForms.BunifuChartCanvas.PositionOptions.bottom;
@@ -548,11 +548,11 @@ namespace SMESData.View
             this.linePCanvas6.Size = new System.Drawing.Size(330, 330);
             this.linePCanvas6.TabIndex = 12;
             this.linePCanvas6.Title = "";
-            this.linePCanvas6.TitleLineHeight = 1.2D;
+            this.linePCanvas6.TitleLineHeight = 2D;
             this.linePCanvas6.TitlePadding = 10;
-            this.linePCanvas6.TitlePosition = Bunifu.Charts.WinForms.BunifuChartCanvas.PositionOptions.top;
+            this.linePCanvas6.TitlePosition = Bunifu.Charts.WinForms.BunifuChartCanvas.PositionOptions.bottom;
             this.linePCanvas6.TooltipBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.linePCanvas6.TooltipFont = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.linePCanvas6.TooltipFont = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold);
             this.linePCanvas6.TooltipForeColor = System.Drawing.Color.WhiteSmoke;
             this.linePCanvas6.TooltipMode = Bunifu.Charts.WinForms.BunifuChartCanvas.TooltipModeOptions.nearest;
             this.linePCanvas6.TooltipsEnabled = true;
@@ -586,7 +586,7 @@ namespace SMESData.View
             // panel7
             // 
             this.panel7.Controls.Add(this.linePCanvas7);
-            this.panel7.Location = new System.Drawing.Point(607, 703);
+            this.panel7.Location = new System.Drawing.Point(690, 694);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(330, 330);
             this.panel7.TabIndex = 19;
@@ -601,7 +601,7 @@ namespace SMESData.View
             this.linePCanvas7.Labels = new string[0];
             this.linePCanvas7.LegendAlignment = Bunifu.Charts.WinForms.BunifuChartCanvas.LegendAlignmentOptions.start;
             this.linePCanvas7.LegendDisplay = false;
-            this.linePCanvas7.LegendFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linePCanvas7.LegendFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linePCanvas7.LegendForeColor = System.Drawing.Color.Black;
             this.linePCanvas7.LegendFullWidth = false;
             this.linePCanvas7.LegendPosition = Bunifu.Charts.WinForms.BunifuChartCanvas.PositionOptions.bottom;
@@ -616,11 +616,11 @@ namespace SMESData.View
             this.linePCanvas7.Size = new System.Drawing.Size(330, 330);
             this.linePCanvas7.TabIndex = 13;
             this.linePCanvas7.Title = "";
-            this.linePCanvas7.TitleLineHeight = 1.2D;
+            this.linePCanvas7.TitleLineHeight = 2D;
             this.linePCanvas7.TitlePadding = 10;
-            this.linePCanvas7.TitlePosition = Bunifu.Charts.WinForms.BunifuChartCanvas.PositionOptions.top;
+            this.linePCanvas7.TitlePosition = Bunifu.Charts.WinForms.BunifuChartCanvas.PositionOptions.bottom;
             this.linePCanvas7.TooltipBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.linePCanvas7.TooltipFont = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.linePCanvas7.TooltipFont = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold);
             this.linePCanvas7.TooltipForeColor = System.Drawing.Color.WhiteSmoke;
             this.linePCanvas7.TooltipMode = Bunifu.Charts.WinForms.BunifuChartCanvas.TooltipModeOptions.nearest;
             this.linePCanvas7.TooltipsEnabled = true;

@@ -100,6 +100,7 @@ namespace SMESData.View
         }
         public void renderPiechart()
         {
+            
             //Add data
             lineData();
             L01Chart.Data = dataL01;
