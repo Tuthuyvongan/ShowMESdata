@@ -295,6 +295,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="View\UC_MQC_BarChart.resx">
       <DependentUpon>UC_MQC_BarChart.cs</DependentUpon>
@@ -317,6 +318,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\close.png" />
     <Content Include="Resources\combo-256.ico" />
     <Content Include="Resources\logo.png" />
   </ItemGroup>

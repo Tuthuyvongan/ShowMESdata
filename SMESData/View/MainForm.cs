@@ -41,5 +41,11 @@ namespace SMESData
         {          
             addUserControl(uc_MQC_BarChart);
         }
+
+        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        {
+            Dispose();
+            Application.Exit();
+        }
     }
 }
