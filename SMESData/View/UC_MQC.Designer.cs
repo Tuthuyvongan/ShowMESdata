@@ -62,7 +62,7 @@ namespace SMESData.View
             this.lineCanvas.Padding = new System.Windows.Forms.Padding(0, 0, 290, 100);
             this.lineCanvas.ShowXAxis = true;
             this.lineCanvas.ShowYAxis = true;
-            this.lineCanvas.Size = new System.Drawing.Size(1120, 448);
+            this.lineCanvas.Size = new System.Drawing.Size(1025, 519);
             this.lineCanvas.TabIndex = 5;
             this.lineCanvas.Title = "";
             this.lineCanvas.TitleLineHeight = 1.2D;
@@ -160,7 +160,7 @@ namespace SMESData.View
             this.dtpChart.IconColor = System.Drawing.Color.DodgerBlue;
             this.dtpChart.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.dtpChart.LeftTextMargin = 5;
-            this.dtpChart.Location = new System.Drawing.Point(930, 0);
+            this.dtpChart.Location = new System.Drawing.Point(835, 0);
             this.dtpChart.MinimumSize = new System.Drawing.Size(4, 32);
             this.dtpChart.Name = "dtpChart";
             this.dtpChart.Size = new System.Drawing.Size(190, 34);
@@ -176,7 +176,7 @@ namespace SMESData.View
             this.Controls.Add(this.dtpChart);
             this.Controls.Add(this.lineCanvas);
             this.Name = "UC_MQC";
-            this.Size = new System.Drawing.Size(1120, 489);
+            this.Size = new System.Drawing.Size(1025, 560);
             this.Load += new System.EventHandler(this.UC_MQC_Load);
             this.ResumeLayout(false);
 

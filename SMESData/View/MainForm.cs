@@ -30,17 +30,15 @@ namespace SMESData
             pnMain.Controls.Add(userControl);
             userControl.BringToFront();
         }
-        
-
-        private void btPQC_Click_1(object sender, EventArgs e)
-        {
-            addUserControl(uc_MQC);
-
-        }
-
+       
         private void btMQC_Click(object sender, EventArgs e)
         {
             addUserControl(uc_MQC);
+        }
+
+        private void btPQC_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
