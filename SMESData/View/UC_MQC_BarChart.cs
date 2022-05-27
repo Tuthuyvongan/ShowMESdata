@@ -63,14 +63,27 @@ namespace SMESData.View
         }
         public void renderBarchart()
         {
+            //Add data
             lineData();
             lineRWChart.Data = dataRW;
             lineOPChart.Data = dataOP;
             lineNGChart.Data = dataNG;
-            lineOPChart.TargetCanvas = lineCanvas;
-            lineRWChart.TargetCanvas = lineCanvas;
-            lineNGChart.TargetCanvas = lineCanvas;
-            lineCanvas.Labels = new string[] { "L01", "L02", "L03", "L04", "L05", "L06", "L07" };
+            //Target Canvas 
+            lineOPChart.TargetCanvas = lineBCCanvas;
+            lineRWChart.TargetCanvas = lineBCCanvas;
+            lineNGChart.TargetCanvas = lineBCCanvas;
+
+            lineBCCanvas.Labels = new string[] { "L01", "L02", "L03", "L04", "L05", "L06", "L07" };
+            //List Colors
+            List<Color> bgColorsOP = new List<Color>();
+            List<Color> bgColorsRW = new List<Color>();
+            List<Color> bgColorsNG = new List<Color>();
+            bgColorsOP.Add(Color.DodgerBlue);
+            bgColorsRW.Add(Color.Orange);
+            bgColorsNG.Add(Color.Red);
+            lineOPChart.BackgroundColor = bgColorsOP;
+            lineRWChart.BackgroundColor = bgColorsRW;
+            lineNGChart.BackgroundColor = bgColorsNG;
         }
 
         private void dtpChart_ValueChanged(object sender, EventArgs e)

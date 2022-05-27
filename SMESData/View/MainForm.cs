@@ -18,6 +18,7 @@ namespace SMESData
             InitializeComponent();          
         }
         UC_MQC_BarChart uc_MQC_BarChart = new UC_MQC_BarChart();
+        UC_MQC_PieChart uc_MQC_PieChart = new UC_MQC_PieChart();
 
         private void MainForm_Load(object sender, EventArgs e)
         {
@@ -38,7 +39,7 @@ namespace SMESData
 
         private void btPQC_Click(object sender, EventArgs e)
         {
-
+            addUserControl(uc_MQC_PieChart);
         }
     }
 }

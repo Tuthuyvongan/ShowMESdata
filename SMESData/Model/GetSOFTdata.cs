@@ -11,13 +11,13 @@ namespace SMESData
     class GetSOFTdata
 
     {        
-        public static double getTotal(string line, string date) // get all order to data grid view
+        public static double getTotal(string line, string date)
         {
             sqlSOFTCon sqlSOFTCon = new sqlSOFTCon();
             StringBuilder sqlGetData = new StringBuilder();
             ComboBox cbx = new ComboBox();
-            double S = 0;
-            string[] qty;            
+            double s = 0;
+            string[] temp;            
             sqlGetData.Append("select distinct serno ");
             sqlGetData.Append("from m_ERPMQC_REALTIME ");
             sqlGetData.Append("where line = '" + line + "' ");
@@ -25,34 +25,34 @@ namespace SMESData
             sqlSOFTCon.getComboBoxData(sqlGetData.ToString(), ref cbx);
             for (int i = 0; i < cbx.Items.Count; i++)
             {
-                qty = cbx.Items[i].ToString().Split(';');
-                if (qty[4] == "" )
+                temp = cbx.Items[i].ToString().Split(';');
+                if (temp[4] == "" )
                 {
-                    S = 1;
+                    s = 1;
                 }
                 else
                 {
-                    S += double.Parse(qty[4]);
+                    s += double.Parse(temp[4]);
                 }
             }
-            return S;
+            return s;
         }
-        public static double getTotalRemark(string line, string remark, string date) // get all order to data grid view
+        public static double getTotalRemark(string line, string remark, string date)
         {
             sqlSOFTCon sqlSOFTCon = new sqlSOFTCon();
             StringBuilder sqlGetData = new StringBuilder();
-            double S;
-            string qty;
+            double s;
+            string temp;
             sqlGetData.Append("select SUM(CASE WHEN line = '" + line + "' and remark = '" + remark + "' and inspectdate = '" + date + "' THEN Cast(data as numeric(10,0)) END) ");            
             sqlGetData.Append("from m_ERPMQC_REALTIME");
-            qty = sqlSOFTCon.sqlExecuteScalarString(sqlGetData.ToString());
-            if (qty == string.Empty)
+            temp = sqlSOFTCon.sqlExecuteScalarString(sqlGetData.ToString());
+            if (temp == string.Empty)
             {
-                S = 0;
+                s = 0;
             }
             else
-                S = double.Parse(qty);
-            return S;
-        }
+                s = double.Parse(temp);
+            return s;
+        }       
     }
 }

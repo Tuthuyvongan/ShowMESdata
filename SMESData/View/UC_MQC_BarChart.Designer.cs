@@ -31,74 +31,74 @@ namespace SMESData.View
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_MQC_BarChart));
-            this.lineCanvas = new Bunifu.Charts.WinForms.BunifuChartCanvas();
+            this.lineBCCanvas = new Bunifu.Charts.WinForms.BunifuChartCanvas();
             this.lineOPChart = new Bunifu.Charts.WinForms.ChartTypes.BunifuBarChart(this.components);
             this.lineRWChart = new Bunifu.Charts.WinForms.ChartTypes.BunifuBarChart(this.components);
             this.lineNGChart = new Bunifu.Charts.WinForms.ChartTypes.BunifuBarChart(this.components);
             this.dtpChart = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.SuspendLayout();
             // 
-            // lineCanvas
+            // lineBCCanvas
             // 
-            this.lineCanvas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lineBCCanvas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lineCanvas.AnimationDuration = 2000;
-            this.lineCanvas.AnimationType = Bunifu.Charts.WinForms.BunifuChartCanvas.AnimationOptions.easeOutQuart;
-            this.lineCanvas.BackColor = System.Drawing.Color.White;
-            this.lineCanvas.CanvasPadding = new System.Windows.Forms.Padding(0);
-            this.lineCanvas.Labels = new string[0];
-            this.lineCanvas.LegendAlignment = Bunifu.Charts.WinForms.BunifuChartCanvas.LegendAlignmentOptions.start;
-            this.lineCanvas.LegendDisplay = true;
-            this.lineCanvas.LegendFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lineCanvas.LegendForeColor = System.Drawing.Color.Black;
-            this.lineCanvas.LegendFullWidth = false;
-            this.lineCanvas.LegendPosition = Bunifu.Charts.WinForms.BunifuChartCanvas.PositionOptions.bottom;
-            this.lineCanvas.LegendRevese = false;
-            this.lineCanvas.LegendRTL = false;
-            this.lineCanvas.Location = new System.Drawing.Point(0, 41);
-            this.lineCanvas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.lineCanvas.Name = "lineCanvas";
-            this.lineCanvas.Padding = new System.Windows.Forms.Padding(0, 0, 290, 100);
-            this.lineCanvas.ShowXAxis = true;
-            this.lineCanvas.ShowYAxis = true;
-            this.lineCanvas.Size = new System.Drawing.Size(1025, 519);
-            this.lineCanvas.TabIndex = 5;
-            this.lineCanvas.Title = "";
-            this.lineCanvas.TitleLineHeight = 1.2D;
-            this.lineCanvas.TitlePadding = 10;
-            this.lineCanvas.TitlePosition = Bunifu.Charts.WinForms.BunifuChartCanvas.PositionOptions.top;
-            this.lineCanvas.TooltipBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lineCanvas.TooltipFont = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lineCanvas.TooltipForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lineCanvas.TooltipMode = Bunifu.Charts.WinForms.BunifuChartCanvas.TooltipModeOptions.nearest;
-            this.lineCanvas.TooltipsEnabled = true;
-            this.lineCanvas.XAxesBeginAtZero = true;
-            this.lineCanvas.XAxesDrawTicks = true;
-            this.lineCanvas.XAxesFont = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lineCanvas.XAxesForeColor = System.Drawing.SystemColors.ControlText;
-            this.lineCanvas.XAxesGridColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lineCanvas.XAxesGridLines = true;
-            this.lineCanvas.XAxesLabel = "";
-            this.lineCanvas.XAxesLabelFont = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lineCanvas.XAxesLabelForeColor = System.Drawing.SystemColors.ControlText;
-            this.lineCanvas.XAxesLineWidth = 1;
-            this.lineCanvas.XAxesStacked = false;
-            this.lineCanvas.XAxesZeroLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lineCanvas.XAxesZeroLineWidth = 1;
-            this.lineCanvas.YAxesBeginAtZero = true;
-            this.lineCanvas.YAxesDrawTicks = true;
-            this.lineCanvas.YAxesFont = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lineCanvas.YAxesForeColor = System.Drawing.SystemColors.ControlText;
-            this.lineCanvas.YAxesGridColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lineCanvas.YAxesGridLines = true;
-            this.lineCanvas.YAxesLabel = "";
-            this.lineCanvas.YAxesLabelFont = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lineCanvas.YAxesLabelForeColor = System.Drawing.SystemColors.ControlText;
-            this.lineCanvas.YAxesLineWidth = 1;
-            this.lineCanvas.YAxesStacked = false;
-            this.lineCanvas.YAxesZeroLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lineCanvas.YAxesZeroLineWidth = 1;
+            this.lineBCCanvas.AnimationDuration = 2000;
+            this.lineBCCanvas.AnimationType = Bunifu.Charts.WinForms.BunifuChartCanvas.AnimationOptions.easeOutQuart;
+            this.lineBCCanvas.BackColor = System.Drawing.Color.White;
+            this.lineBCCanvas.CanvasPadding = new System.Windows.Forms.Padding(0);
+            this.lineBCCanvas.Labels = new string[0];
+            this.lineBCCanvas.LegendAlignment = Bunifu.Charts.WinForms.BunifuChartCanvas.LegendAlignmentOptions.start;
+            this.lineBCCanvas.LegendDisplay = true;
+            this.lineBCCanvas.LegendFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lineBCCanvas.LegendForeColor = System.Drawing.Color.Black;
+            this.lineBCCanvas.LegendFullWidth = false;
+            this.lineBCCanvas.LegendPosition = Bunifu.Charts.WinForms.BunifuChartCanvas.PositionOptions.bottom;
+            this.lineBCCanvas.LegendRevese = false;
+            this.lineBCCanvas.LegendRTL = false;
+            this.lineBCCanvas.Location = new System.Drawing.Point(0, 41);
+            this.lineBCCanvas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lineBCCanvas.Name = "lineBCCanvas";
+            this.lineBCCanvas.Padding = new System.Windows.Forms.Padding(0, 0, 290, 100);
+            this.lineBCCanvas.ShowXAxis = true;
+            this.lineBCCanvas.ShowYAxis = true;
+            this.lineBCCanvas.Size = new System.Drawing.Size(1025, 519);
+            this.lineBCCanvas.TabIndex = 5;
+            this.lineBCCanvas.Title = "";
+            this.lineBCCanvas.TitleLineHeight = 1.2D;
+            this.lineBCCanvas.TitlePadding = 10;
+            this.lineBCCanvas.TitlePosition = Bunifu.Charts.WinForms.BunifuChartCanvas.PositionOptions.top;
+            this.lineBCCanvas.TooltipBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lineBCCanvas.TooltipFont = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lineBCCanvas.TooltipForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lineBCCanvas.TooltipMode = Bunifu.Charts.WinForms.BunifuChartCanvas.TooltipModeOptions.nearest;
+            this.lineBCCanvas.TooltipsEnabled = true;
+            this.lineBCCanvas.XAxesBeginAtZero = true;
+            this.lineBCCanvas.XAxesDrawTicks = true;
+            this.lineBCCanvas.XAxesFont = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lineBCCanvas.XAxesForeColor = System.Drawing.SystemColors.ControlText;
+            this.lineBCCanvas.XAxesGridColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lineBCCanvas.XAxesGridLines = true;
+            this.lineBCCanvas.XAxesLabel = "";
+            this.lineBCCanvas.XAxesLabelFont = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lineBCCanvas.XAxesLabelForeColor = System.Drawing.SystemColors.ControlText;
+            this.lineBCCanvas.XAxesLineWidth = 1;
+            this.lineBCCanvas.XAxesStacked = false;
+            this.lineBCCanvas.XAxesZeroLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lineBCCanvas.XAxesZeroLineWidth = 1;
+            this.lineBCCanvas.YAxesBeginAtZero = true;
+            this.lineBCCanvas.YAxesDrawTicks = true;
+            this.lineBCCanvas.YAxesFont = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lineBCCanvas.YAxesForeColor = System.Drawing.SystemColors.ControlText;
+            this.lineBCCanvas.YAxesGridColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lineBCCanvas.YAxesGridLines = true;
+            this.lineBCCanvas.YAxesLabel = "";
+            this.lineBCCanvas.YAxesLabelFont = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lineBCCanvas.YAxesLabelForeColor = System.Drawing.SystemColors.ControlText;
+            this.lineBCCanvas.YAxesLineWidth = 1;
+            this.lineBCCanvas.YAxesStacked = false;
+            this.lineBCCanvas.YAxesZeroLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lineBCCanvas.YAxesZeroLineWidth = 1;
             // 
             // lineOPChart
             // 
@@ -174,7 +174,7 @@ namespace SMESData.View
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.dtpChart);
-            this.Controls.Add(this.lineCanvas);
+            this.Controls.Add(this.lineBCCanvas);
             this.Name = "UC_MQC_BarChart";
             this.Size = new System.Drawing.Size(1025, 560);
             this.Load += new System.EventHandler(this.UC_MQC_Load);
@@ -184,7 +184,7 @@ namespace SMESData.View
 
         #endregion
 
-        private Bunifu.Charts.WinForms.BunifuChartCanvas lineCanvas;
+        private Bunifu.Charts.WinForms.BunifuChartCanvas lineBCCanvas;
         private Bunifu.Charts.WinForms.ChartTypes.BunifuBarChart lineOPChart;
         private Bunifu.Charts.WinForms.ChartTypes.BunifuBarChart lineRWChart;
         private Bunifu.Charts.WinForms.ChartTypes.BunifuBarChart lineNGChart;
