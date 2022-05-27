@@ -50,9 +50,7 @@ namespace SMESData.View
             // 
             // linePCanvas1
             // 
-            this.linePCanvas1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.linePCanvas1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.linePCanvas1.AnimationDuration = 2000;
             this.linePCanvas1.AnimationType = Bunifu.Charts.WinForms.BunifuChartCanvas.AnimationOptions.easeOutQuart;
             this.linePCanvas1.BackColor = System.Drawing.Color.White;
@@ -121,7 +119,7 @@ namespace SMESData.View
             this.dtpChart.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
             this.dtpChart.DisabledColor = System.Drawing.Color.Gray;
             this.dtpChart.DisplayWeekNumbers = false;
-            this.dtpChart.Dock = System.Windows.Forms.DockStyle.Right;
+            this.dtpChart.Dock = System.Windows.Forms.DockStyle.Left;
             this.dtpChart.DPHeight = 0;
             this.dtpChart.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
             this.dtpChart.FillDatePicker = false;
@@ -131,12 +129,12 @@ namespace SMESData.View
             this.dtpChart.IconColor = System.Drawing.Color.DodgerBlue;
             this.dtpChart.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.dtpChart.LeftTextMargin = 5;
-            this.dtpChart.Location = new System.Drawing.Point(835, 0);
+            this.dtpChart.Location = new System.Drawing.Point(0, 0);
             this.dtpChart.MinimumSize = new System.Drawing.Size(4, 32);
             this.dtpChart.Name = "dtpChart";
             this.dtpChart.Size = new System.Drawing.Size(190, 34);
             this.dtpChart.TabIndex = 7;
-            this.dtpChart.Value = new System.DateTime(2022, 5, 26, 11, 50, 30, 0);
+            this.dtpChart.Value = new System.DateTime(2022, 5, 26, 11, 50, 0, 0);
             this.dtpChart.ValueChanged += new System.EventHandler(this.dtpChart_ValueChanged);
             // 
             // L01Chart
@@ -225,9 +223,7 @@ namespace SMESData.View
             // 
             // linePCanvas2
             // 
-            this.linePCanvas2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.linePCanvas2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.linePCanvas2.AnimationDuration = 2000;
             this.linePCanvas2.AnimationType = Bunifu.Charts.WinForms.BunifuChartCanvas.AnimationOptions.easeOutQuart;
             this.linePCanvas2.BackColor = System.Drawing.Color.White;
@@ -287,9 +283,7 @@ namespace SMESData.View
             // 
             // linePCanvas3
             // 
-            this.linePCanvas3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.linePCanvas3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.linePCanvas3.AnimationDuration = 2000;
             this.linePCanvas3.AnimationType = Bunifu.Charts.WinForms.BunifuChartCanvas.AnimationOptions.easeOutQuart;
             this.linePCanvas3.BackColor = System.Drawing.Color.White;
@@ -349,9 +343,7 @@ namespace SMESData.View
             // 
             // linePCanvas4
             // 
-            this.linePCanvas4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.linePCanvas4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.linePCanvas4.AnimationDuration = 2000;
             this.linePCanvas4.AnimationType = Bunifu.Charts.WinForms.BunifuChartCanvas.AnimationOptions.easeOutQuart;
             this.linePCanvas4.BackColor = System.Drawing.Color.White;
@@ -411,9 +403,7 @@ namespace SMESData.View
             // 
             // linePCanvas5
             // 
-            this.linePCanvas5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.linePCanvas5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.linePCanvas5.AnimationDuration = 2000;
             this.linePCanvas5.AnimationType = Bunifu.Charts.WinForms.BunifuChartCanvas.AnimationOptions.easeOutQuart;
             this.linePCanvas5.BackColor = System.Drawing.Color.White;
@@ -473,9 +463,7 @@ namespace SMESData.View
             // 
             // linePCanvas6
             // 
-            this.linePCanvas6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.linePCanvas6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.linePCanvas6.AnimationDuration = 2000;
             this.linePCanvas6.AnimationType = Bunifu.Charts.WinForms.BunifuChartCanvas.AnimationOptions.easeOutQuart;
             this.linePCanvas6.BackColor = System.Drawing.Color.White;
@@ -535,9 +523,7 @@ namespace SMESData.View
             // 
             // linePCanvas7
             // 
-            this.linePCanvas7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.linePCanvas7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.linePCanvas7.AnimationDuration = 2000;
             this.linePCanvas7.AnimationType = Bunifu.Charts.WinForms.BunifuChartCanvas.AnimationOptions.easeOutQuart;
             this.linePCanvas7.BackColor = System.Drawing.Color.White;

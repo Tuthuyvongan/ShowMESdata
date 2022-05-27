@@ -150,7 +150,7 @@ namespace SMESData.View
             this.dtpChart.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
             this.dtpChart.DisabledColor = System.Drawing.Color.Gray;
             this.dtpChart.DisplayWeekNumbers = false;
-            this.dtpChart.Dock = System.Windows.Forms.DockStyle.Right;
+            this.dtpChart.Dock = System.Windows.Forms.DockStyle.Left;
             this.dtpChart.DPHeight = 0;
             this.dtpChart.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
             this.dtpChart.FillDatePicker = false;
@@ -160,7 +160,7 @@ namespace SMESData.View
             this.dtpChart.IconColor = System.Drawing.Color.DodgerBlue;
             this.dtpChart.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.dtpChart.LeftTextMargin = 5;
-            this.dtpChart.Location = new System.Drawing.Point(835, 0);
+            this.dtpChart.Location = new System.Drawing.Point(0, 0);
             this.dtpChart.MinimumSize = new System.Drawing.Size(4, 32);
             this.dtpChart.Name = "dtpChart";
             this.dtpChart.Size = new System.Drawing.Size(190, 34);

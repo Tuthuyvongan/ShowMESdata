@@ -39,8 +39,7 @@ namespace SMESData.View
             string [] remark = { "OP", "RW", "NG" };
             double d;
             double temp;
-            int i = 0;
-            do
+            for (int i = 0; i < 3; i++)
             {
                 //L01
                 temp = GetSOFTdata.getTotalRemark("L01", remark[i], date);
@@ -97,8 +96,7 @@ namespace SMESData.View
                 else
                     d = Math.Round(temp / GetSOFTdata.getTotal("L07", date) * 100, 2);
                 dataL07.Add(d);
-                i++;
-            } while (i < 3);
+            }                                         
         }
         public void renderPiechart()
         {
@@ -173,15 +171,9 @@ namespace SMESData.View
             linePCanvas7.Title = "L07";
             //List Colors
             List<Color> bgColors = new List<Color>();
-            for (int i = 0; i < 3; i++)
-            {
-                if(linePCanvas1.Labels[i] == "OUTPUT")
-                    bgColors.Add(Color.DodgerBlue);
-                if (linePCanvas1.Labels[i] == "REWORK")
-                    bgColors.Add(Color.Orange);
-                else
-                    bgColors.Add(Color.Red);
-            }
+            bgColors.Add(Color.DodgerBlue);
+            bgColors.Add(Color.Orange);
+            bgColors.Add(Color.Red);           
             L01Chart.BackgroundColor = bgColors;
             L02Chart.BackgroundColor = bgColors;
             L03Chart.BackgroundColor = bgColors;

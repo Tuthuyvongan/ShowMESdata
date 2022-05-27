@@ -34,8 +34,7 @@ namespace SMESData.View
             string date = dtpChart.Text.ToString();
             double d;
             double temp;
-            int i = 0;
-            do
+            for (int i = 0; i < 7; i++)
             {
                 //OP
                 temp = GetSOFTdata.getTotalRemark("L0" + (i + 1), "OP", date);
@@ -58,8 +57,8 @@ namespace SMESData.View
                 else
                     d = Math.Round(temp / GetSOFTdata.getTotal("L0" + (i + 1), date) * 100, 2);
                 dataNG.Add(d);
-                i++;
-            } while (i < 7);
+            }                
+                
         }
         public void renderBarchart()
         {
