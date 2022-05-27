@@ -317,8 +317,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\combo-256.ico" />
     <Content Include="Resources\logo.png" />
-    <Content Include="Resources\logo_A-07-removebg-preview.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
