@@ -1,7 +1,7 @@
 ﻿
 namespace SMESData.View
 {
-    partial class UC_MQC
+    partial class UC_MQC_BarChart
     {
         /// <summary> 
         /// Required designer variable.
@@ -30,7 +30,7 @@ namespace SMESData.View
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_MQC));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_MQC_BarChart));
             this.lineCanvas = new Bunifu.Charts.WinForms.BunifuChartCanvas();
             this.lineOPChart = new Bunifu.Charts.WinForms.ChartTypes.BunifuBarChart(this.components);
             this.lineRWChart = new Bunifu.Charts.WinForms.ChartTypes.BunifuBarChart(this.components);
@@ -168,14 +168,14 @@ namespace SMESData.View
             this.dtpChart.Value = new System.DateTime(2022, 5, 26, 11, 50, 30, 0);
             this.dtpChart.ValueChanged += new System.EventHandler(this.dtpChart_ValueChanged);
             // 
-            // UC_MQC
+            // UC_MQC_BarChart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.dtpChart);
             this.Controls.Add(this.lineCanvas);
-            this.Name = "UC_MQC";
+            this.Name = "UC_MQC_BarChart";
             this.Size = new System.Drawing.Size(1025, 560);
             this.Load += new System.EventHandler(this.UC_MQC_Load);
             this.ResumeLayout(false);

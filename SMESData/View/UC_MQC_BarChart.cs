@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SMESData.View
 {
-    public partial class UC_MQC : UserControl
+    public partial class UC_MQC_BarChart : UserControl
     {
-        public UC_MQC()
+        public UC_MQC_BarChart()
         {
             InitializeComponent();
         }
