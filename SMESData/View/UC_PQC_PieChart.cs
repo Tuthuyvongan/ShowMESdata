@@ -23,7 +23,12 @@ namespace SMESData.View
             // Date time format
             dtpChart.CustomFormat = "yyyy-MM-dd";
             dtpChart.Format = DateTimePickerFormat.Custom;
+            dtpChart.Enabled = false;
             renderPiechart();
+            //Timer          
+            timer1.Start();
+            startTime = DateTime.Now;
+            btStart.Enabled = false;
         }
         //List data
         List<double> dataL01 = new List<double>();
@@ -33,6 +38,9 @@ namespace SMESData.View
         List<double> dataL05 = new List<double>();
         List<double> dataL06 = new List<double>();
         List<double> dataL07 = new List<double>();
+        //
+        private int secondsToWait = 10;
+        private DateTime startTime;
 
         public void lineData()
         {
@@ -347,5 +355,58 @@ namespace SMESData.View
         {
             Application.Run(new MessageWaitForm());
         }
+        public void UpdateTime()
+        {
+            timer1.Start();
+            startTime = DateTime.Now;
+            lblTime.Visible = true;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (MainForm.PQC == true)
+            {
+                int elapsedSeconds = (int)(DateTime.Now - startTime).TotalSeconds;
+                int remainingSeconds = secondsToWait - elapsedSeconds;
+                lblTime.Text = "Chart update in: " + remainingSeconds.ToString() + "s";
+                if (remainingSeconds < 0)
+                {
+                    Thread t = new Thread(new ThreadStart(splash));
+                    t.Start();
+                    lblTime.Visible = false;
+                    dataL01.Clear();
+                    dataL02.Clear();
+                    dataL03.Clear();
+                    dataL04.Clear();
+                    dataL05.Clear();
+                    dataL06.Clear();
+                    dataL07.Clear();
+                    renderPiechart();
+                    t.Abort();
+                    timer1.Stop();
+                    UpdateTime();
+                }
+            }   
+            else
+                timer1.Stop();
+        }
+
+        private void btStart_Click(object sender, EventArgs e)
+        {
+            btStart.Enabled = false;           
+            btStop.Enabled = true;
+            dtpChart.Enabled = false;
+            UpdateTime();       
+        }
+
+        private void btStop_Click(object sender, EventArgs e)
+        {
+            btStart.Enabled = true;
+            btStop.Enabled = false;
+            timer1.Stop();
+            dtpChart.Enabled = true;
+            lblTime.Text = "Auto update" + "\r\n" + "chart is stopping";
+        }
+               
     }
 }

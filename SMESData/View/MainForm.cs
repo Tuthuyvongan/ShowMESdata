@@ -18,9 +18,12 @@ namespace SMESData
         {
             InitializeComponent();          
         }
+
         //UC_MQC_BarChart uc_MQC_BarChart = new UC_MQC_BarChart();
         UC_MQC_PieChart uc_MQC_PieChart = new UC_MQC_PieChart();
         UC_PQC_PieChart uc_PQC_PieChart = new UC_PQC_PieChart();
+        public static bool MQC;
+        public static bool PQC;
 
         private void MainForm_Load(object sender, EventArgs e)
         {
@@ -34,21 +37,27 @@ namespace SMESData
             userControl.BringToFront();
         }
        
-        private void btMQC_Click(object sender, EventArgs e)
+        public void btMQC_Click(object sender, EventArgs e)
         {
+            MQC = true;
+            PQC = false;
             Thread t = new Thread(new ThreadStart(splash));
             t.Start();
             addUserControl(uc_MQC_PieChart);
+            uc_MQC_PieChart.UpdateTime();
             btMQC.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
             btPQC.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Idle;
             t.Abort();
         }
 
-        private void btPQC_Click(object sender, EventArgs e)
+        public void btPQC_Click(object sender, EventArgs e)
         {
+            PQC = true;
+            MQC = false;
             Thread t = new Thread(new ThreadStart(splash));
             t.Start();
             addUserControl(uc_PQC_PieChart);
+            uc_PQC_PieChart.UpdateTime();
             btPQC.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
             btMQC.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Idle;
             t.Abort();
@@ -63,5 +72,6 @@ namespace SMESData
         {
             Application.Run(new MessageWaitForm());
         }
+        
     }
 }
