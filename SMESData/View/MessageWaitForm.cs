@@ -21,6 +21,7 @@ namespace SMESData.View
         {
             progressBar1.Value = 0;
             progressBar1.TransitionValue(100, 6000);
-        }      
+        }
+   
     }
 }

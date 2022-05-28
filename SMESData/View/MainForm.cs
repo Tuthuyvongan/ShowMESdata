@@ -35,11 +35,15 @@ namespace SMESData
         private void btMQC_Click(object sender, EventArgs e)
         {
             addUserControl(uc_MQC_PieChart);
+            btMQC.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
+            btPQC.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Idle;
         }
 
         private void btPQC_Click(object sender, EventArgs e)
         {          
             addUserControl(uc_MQC_BarChart);
+            btPQC.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
+            btMQC.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Idle;
         }
 
         private void bunifuImageButton1_Click(object sender, EventArgs e)

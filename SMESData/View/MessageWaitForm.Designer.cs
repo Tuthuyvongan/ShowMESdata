@@ -41,7 +41,7 @@ namespace SMESData.View
             this.lbWait.Cursor = System.Windows.Forms.Cursors.Default;
             this.lbWait.CursorType = System.Windows.Forms.Cursors.Default;
             this.lbWait.Font = new System.Drawing.Font("Times New Roman", 14.25F);
-            this.lbWait.Location = new System.Drawing.Point(36, 46);
+            this.lbWait.Location = new System.Drawing.Point(74, 73);
             this.lbWait.Name = "lbWait";
             this.lbWait.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbWait.Size = new System.Drawing.Size(274, 21);
@@ -61,7 +61,7 @@ namespace SMESData.View
             this.progressBar1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(223)))), ((int)(((byte)(223)))));
             this.progressBar1.BorderRadius = 9;
             this.progressBar1.BorderThickness = 1;
-            this.progressBar1.Location = new System.Drawing.Point(25, 20);
+            this.progressBar1.Location = new System.Drawing.Point(53, 31);
             this.progressBar1.Maximum = 100;
             this.progressBar1.MaximumValue = 100;
             this.progressBar1.Minimum = 0;
@@ -71,7 +71,7 @@ namespace SMESData.View
             this.progressBar1.ProgressBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(223)))), ((int)(((byte)(223)))));
             this.progressBar1.ProgressColorLeft = System.Drawing.Color.DodgerBlue;
             this.progressBar1.ProgressColorRight = System.Drawing.Color.Lime;
-            this.progressBar1.Size = new System.Drawing.Size(300, 20);
+            this.progressBar1.Size = new System.Drawing.Size(320, 25);
             this.progressBar1.TabIndex = 1;
             this.progressBar1.Value = 0;
             this.progressBar1.ValueByTransition = 0;
@@ -81,7 +81,7 @@ namespace SMESData.View
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(359, 91);
+            this.ClientSize = new System.Drawing.Size(436, 127);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.lbWait);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

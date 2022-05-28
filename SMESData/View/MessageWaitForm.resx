@@ -123,13 +123,14 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="progressBar1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAASwAAAAUCAYAAAA3IwABAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEcSURBVHhe7dyxbQJBFIThK4MSCB1SAhExTbgAd+GITpzS
-        Ah3sFWAsyw5ICPCcNNLjTi++fZb+kT4dYmfT0SUwEELIv8w4jsfW2kXPBwCsbdofOenzxrOUR6WzSj/P
-        lwGgk6s26eB5mkcHr/KbXAKALrRJX3puPVMRHbRlGQB60zR9eKYiWREAetNg3TxTkawIABV4piJZCQAq
-        8ExFshIAVOCZimQlAKjAMxXJSgBQgWcqkpUAoALPVCQrAUAFnqlIVgKACjxTkawEABV4piL68nNZAoDe
-        Wmt3z1Rk+r1OVgaAnrRNF89URAcvOrguywDQizbpW8+9Z2oeHby5kF4GgLV4i949T3lU2E2vYM8XAWBN
-        2qDp766SN6th+AMsExmxlAEHfAAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAAUAAAAAZCAYAAABAZvchAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAE6SURBVHhe7d2xTQNREARQl0EJhISUQERMExRAF0R0QkoL
+        7uCuAIwQBCQEsCettLa1DXj1Rno6y39+OrrI3omISGRd14dlWfbx/AO4dNuehZf4fJUz1ydKb1H6Or4M
+        MMQhNu4+5+40cfAYvptLACPExn3E8zpnrxIHy3kZYJqYutecvUpXBJgmBvAnZ6/SFQEmytmrdCWAiXL2
+        Kl0JYKKcvUpXApgoZ6/SlQAmytmrdCWAiXL2Kl0JYKKcvUpXApgoZ6/SlQAmytmrdCWAiXL2Kl0JYKKc
+        vUpXApgoZ6/SlQAmytmrdCWAiXL2KvHl+3kJYJplWX5z9irbjwR2ZYBJYuv2OXuVOLiJg8N5GWCK2LjP
+        eN7l7J0mDp6y0F4GuFS5bc85d32icLu9Ih5fBLhksWnbfx41b3673T9Xvr2mjQWyqwAAAABJRU5ErkJg
+        gg==
 </value>
   </data>
 </root>
