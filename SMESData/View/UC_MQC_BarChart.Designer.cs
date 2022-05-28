@@ -164,7 +164,7 @@ namespace SMESData.View
             this.dtpChart.Name = "dtpChart";
             this.dtpChart.Size = new System.Drawing.Size(144, 32);
             this.dtpChart.TabIndex = 6;
-            this.dtpChart.Value = new System.DateTime(2022, 5, 26, 11, 50, 30, 0);
+            this.dtpChart.Value = new System.DateTime(2022, 5, 28, 0, 0, 0, 0);
             this.dtpChart.ValueChanged += new System.EventHandler(this.dtpChart_ValueChanged);
             // 
             // UC_MQC_BarChart

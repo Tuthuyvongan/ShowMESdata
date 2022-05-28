@@ -22,7 +22,7 @@ namespace SMESData
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            addUserControl(uc_MQC_PieChart);
+            //addUserControl(uc_MQC_PieChart);
         }
         public void addUserControl(UserControl userControl)
         {

@@ -110,7 +110,7 @@ namespace SMESData.View
             L05Chart.Data = dataL05;
             L06Chart.Data = dataL06;
             L07Chart.Data = dataL07;
-            //Add legends            
+            //Add legends L01           
             if (dataL01[0] == 0 && dataL01[1] == 0 && dataL01[2] == 0)
             {
                 lbOP1.Visible = false;
@@ -129,7 +129,7 @@ namespace SMESData.View
                 lbRW1.Text = "REWORK: " + dataL02[1].ToString() + "%";
                 lbNG1.Text = "NO GOOD: " + dataL02[2].ToString() + "%";
             }
-
+            //Add legends L02
             if (dataL02[0] == 0 && dataL02[1] == 0 && dataL02[2] == 0)
             {
                 lbOP2.Visible = false;
@@ -151,7 +151,7 @@ namespace SMESData.View
                 lbRW2.Font = new Font("Times New Roman", 10, FontStyle.Bold);
                 lbNG2.Font = new Font("Times New Roman", 10, FontStyle.Bold);
             }
-
+            //Add legends L03
             if (dataL03[0] == 0 && dataL03[1] == 0 && dataL03[2] == 0)
             {
                 lbOP3.Visible = false;
@@ -173,7 +173,7 @@ namespace SMESData.View
                 lbRW3.Font = new Font("Times New Roman", 10, FontStyle.Bold);
                 lbNG3.Font = new Font("Times New Roman", 10, FontStyle.Bold);
             }
-
+            //Add legends L04
             if (dataL04[0] == 0 && dataL04[1] == 0 && dataL04[2] == 0)
             {
                 lbOP4.Visible = false;
@@ -195,7 +195,7 @@ namespace SMESData.View
                 lbRW4.Font = new Font("Times New Roman", 10, FontStyle.Bold);
                 lbNG4.Font = new Font("Times New Roman", 10, FontStyle.Bold);
             }
-
+            //Add legends L05
             if (dataL05[0] == 0 && dataL05[1] == 0 && dataL05[2] == 0)
             {
                 lbOP5.Visible = false;
@@ -217,7 +217,7 @@ namespace SMESData.View
                 lbRW5.Font = new Font("Times New Roman", 10, FontStyle.Bold);
                 lbNG5.Font = new Font("Times New Roman", 10, FontStyle.Bold);
             }
-
+            //Add legends L06
             if (dataL06[0] == 0 && dataL06[1] == 0 && dataL06[2] == 0)
             {
                 lbOP6.Visible = false;
@@ -239,7 +239,7 @@ namespace SMESData.View
                 lbRW6.Font = new Font("Times New Roman", 10, FontStyle.Bold);
                 lbNG6.Font = new Font("Times New Roman", 10, FontStyle.Bold);
             }
-
+            //Add legends L07
             if (dataL07[0] == 0 && dataL07[1] == 0 && dataL07[2] == 0)
             {
                 lbOP7.Visible = false;
@@ -313,7 +313,6 @@ namespace SMESData.View
             linePCanvas5.Labels = remark;
             linePCanvas6.Labels = remark;
             linePCanvas7.Labels = remark;
-            
             //List Colors
             List<Color> bgColors = new List<Color>();
             bgColors.Add(Color.DodgerBlue);

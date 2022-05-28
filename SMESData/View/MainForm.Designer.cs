@@ -51,11 +51,11 @@ namespace SMESData
             this.pnMain.BorderRadius = 0;
             this.pnMain.BorderThickness = 0;
             this.pnMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnMain.Location = new System.Drawing.Point(139, 0);
-            this.pnMain.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnMain.Location = new System.Drawing.Point(180, 0);
+            this.pnMain.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnMain.Name = "pnMain";
             this.pnMain.ShowBorders = true;
-            this.pnMain.Size = new System.Drawing.Size(1287, 804);
+            this.pnMain.Size = new System.Drawing.Size(1740, 1080);
             this.pnMain.TabIndex = 10;
             // 
             // pnMenu
@@ -72,10 +72,10 @@ namespace SMESData
             this.pnMenu.Controls.Add(this.pbLogo);
             this.pnMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnMenu.Location = new System.Drawing.Point(0, 0);
-            this.pnMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnMenu.Name = "pnMenu";
             this.pnMenu.ShowBorders = true;
-            this.pnMenu.Size = new System.Drawing.Size(139, 804);
+            this.pnMenu.Size = new System.Drawing.Size(180, 1080);
             this.pnMenu.TabIndex = 9;
             // 
             // bunifuImageButton1
@@ -95,18 +95,18 @@ namespace SMESData
             this.bunifuImageButton1.ImageActive = null;
             this.bunifuImageButton1.ImageLocation = null;
             this.bunifuImageButton1.ImageMargin = 20;
-            this.bunifuImageButton1.ImageSize = new System.Drawing.Size(45, 45);
-            this.bunifuImageButton1.ImageZoomSize = new System.Drawing.Size(65, 65);
+            this.bunifuImageButton1.ImageSize = new System.Drawing.Size(80, 80);
+            this.bunifuImageButton1.ImageZoomSize = new System.Drawing.Size(100, 100);
             this.bunifuImageButton1.InitialImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.InitialImage")));
-            this.bunifuImageButton1.Location = new System.Drawing.Point(34, 728);
-            this.bunifuImageButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuImageButton1.Location = new System.Drawing.Point(40, 951);
+            this.bunifuImageButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bunifuImageButton1.Name = "bunifuImageButton1";
             this.bunifuImageButton1.Rotation = 0;
             this.bunifuImageButton1.ShowActiveImage = true;
             this.bunifuImageButton1.ShowCursorChanges = true;
             this.bunifuImageButton1.ShowImageBorders = true;
             this.bunifuImageButton1.ShowSizeMarkers = false;
-            this.bunifuImageButton1.Size = new System.Drawing.Size(65, 65);
+            this.bunifuImageButton1.Size = new System.Drawing.Size(100, 100);
             this.bunifuImageButton1.TabIndex = 6;
             this.bunifuImageButton1.ToolTipText = "";
             this.bunifuImageButton1.WaitOnLoad = false;
@@ -161,8 +161,8 @@ namespace SMESData
             this.btPQC.IdleIconLeftImage = null;
             this.btPQC.IdleIconRightImage = null;
             this.btPQC.IndicateFocus = false;
-            this.btPQC.Location = new System.Drawing.Point(0, 207);
-            this.btPQC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btPQC.Location = new System.Drawing.Point(0, 255);
+            this.btPQC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btPQC.Name = "btPQC";
             this.btPQC.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btPQC.OnDisabledState.BorderRadius = 1;
@@ -196,7 +196,7 @@ namespace SMESData
             this.btPQC.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btPQC.OnPressedState.IconLeftImage = null;
             this.btPQC.OnPressedState.IconRightImage = null;
-            this.btPQC.Size = new System.Drawing.Size(139, 73);
+            this.btPQC.Size = new System.Drawing.Size(185, 90);
             this.btPQC.TabIndex = 5;
             this.btPQC.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btPQC.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -252,8 +252,8 @@ namespace SMESData
             this.btMQC.IdleIconLeftImage = null;
             this.btMQC.IdleIconRightImage = null;
             this.btMQC.IndicateFocus = false;
-            this.btMQC.Location = new System.Drawing.Point(0, 112);
-            this.btMQC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btMQC.Location = new System.Drawing.Point(0, 138);
+            this.btMQC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btMQC.Name = "btMQC";
             this.btMQC.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btMQC.OnDisabledState.BorderRadius = 1;
@@ -287,7 +287,7 @@ namespace SMESData
             this.btMQC.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btMQC.OnPressedState.IconLeftImage = null;
             this.btMQC.OnPressedState.IconRightImage = null;
-            this.btMQC.Size = new System.Drawing.Size(139, 73);
+            this.btMQC.Size = new System.Drawing.Size(185, 90);
             this.btMQC.TabIndex = 3;
             this.btMQC.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btMQC.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -302,24 +302,24 @@ namespace SMESData
             this.pbLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pbLogo.Image = ((System.Drawing.Image)(resources.GetObject("pbLogo.Image")));
             this.pbLogo.Location = new System.Drawing.Point(0, 0);
-            this.pbLogo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbLogo.Name = "pbLogo";
-            this.pbLogo.Size = new System.Drawing.Size(139, 107);
+            this.pbLogo.Size = new System.Drawing.Size(180, 132);
             this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbLogo.TabIndex = 0;
             this.pbLogo.TabStop = false;
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1426, 804);
+            this.ClientSize = new System.Drawing.Size(1920, 1080);
             this.Controls.Add(this.pnMain);
             this.Controls.Add(this.pnMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MainForm";
             this.Text = "Chart";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
