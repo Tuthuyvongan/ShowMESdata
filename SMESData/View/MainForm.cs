@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -35,22 +36,32 @@ namespace SMESData
        
         private void btMQC_Click(object sender, EventArgs e)
         {
+            Thread t = new Thread(new ThreadStart(splash));
+            t.Start();
             addUserControl(uc_MQC_PieChart);
             btMQC.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
             btPQC.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Idle;
+            t.Abort();
         }
 
         private void btPQC_Click(object sender, EventArgs e)
-        {          
+        {
+            Thread t = new Thread(new ThreadStart(splash));
+            t.Start();
             addUserControl(uc_PQC_PieChart);
             btPQC.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
             btMQC.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Idle;
+            t.Abort();
         }
 
-        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        private void btClose_Click(object sender, EventArgs e)
         {
             Dispose();
             Application.Exit();
+        }
+        public void splash()
+        {
+            Application.Run(new MessageWaitForm());
         }
     }
 }

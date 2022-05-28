@@ -70,7 +70,7 @@ namespace SMESData.View
             this.progressBar1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             this.progressBar1.ProgressBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(223)))), ((int)(((byte)(223)))));
             this.progressBar1.ProgressColorLeft = System.Drawing.Color.DodgerBlue;
-            this.progressBar1.ProgressColorRight = System.Drawing.Color.Lime;
+            this.progressBar1.ProgressColorRight = System.Drawing.Color.LimeGreen;
             this.progressBar1.Size = new System.Drawing.Size(320, 25);
             this.progressBar1.TabIndex = 1;
             this.progressBar1.Value = 0;

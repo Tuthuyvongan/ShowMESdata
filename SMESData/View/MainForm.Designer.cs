@@ -34,7 +34,7 @@ namespace SMESData
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.pnMain = new Bunifu.UI.WinForms.BunifuPanel();
             this.pnMenu = new Bunifu.UI.WinForms.BunifuPanel();
-            this.bunifuImageButton1 = new Bunifu.UI.WinForms.BunifuImageButton();
+            this.btClose = new Bunifu.UI.WinForms.BunifuImageButton();
             this.btPQC = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.btMQC = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.pbLogo = new System.Windows.Forms.PictureBox();
@@ -66,7 +66,7 @@ namespace SMESData
             this.pnMenu.BorderColor = System.Drawing.Color.Transparent;
             this.pnMenu.BorderRadius = 0;
             this.pnMenu.BorderThickness = 0;
-            this.pnMenu.Controls.Add(this.bunifuImageButton1);
+            this.pnMenu.Controls.Add(this.btClose);
             this.pnMenu.Controls.Add(this.btPQC);
             this.pnMenu.Controls.Add(this.btMQC);
             this.pnMenu.Controls.Add(this.pbLogo);
@@ -78,41 +78,41 @@ namespace SMESData
             this.pnMenu.Size = new System.Drawing.Size(135, 804);
             this.pnMenu.TabIndex = 9;
             // 
-            // bunifuImageButton1
+            // btClose
             // 
-            this.bunifuImageButton1.ActiveImage = null;
-            this.bunifuImageButton1.AllowAnimations = true;
-            this.bunifuImageButton1.AllowBuffering = false;
-            this.bunifuImageButton1.AllowToggling = false;
-            this.bunifuImageButton1.AllowZooming = true;
-            this.bunifuImageButton1.AllowZoomingOnFocus = false;
-            this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuImageButton1.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.bunifuImageButton1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.ErrorImage")));
-            this.bunifuImageButton1.FadeWhenInactive = false;
-            this.bunifuImageButton1.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
-            this.bunifuImageButton1.Image = global::SMESData.Properties.Resources.close;
-            this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.ImageLocation = null;
-            this.bunifuImageButton1.ImageMargin = 20;
-            this.bunifuImageButton1.ImageSize = new System.Drawing.Size(55, 61);
-            this.bunifuImageButton1.ImageZoomSize = new System.Drawing.Size(75, 81);
-            this.bunifuImageButton1.InitialImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.InitialImage")));
-            this.bunifuImageButton1.Location = new System.Drawing.Point(30, 773);
-            this.bunifuImageButton1.Margin = new System.Windows.Forms.Padding(2);
-            this.bunifuImageButton1.Name = "bunifuImageButton1";
-            this.bunifuImageButton1.Rotation = 0;
-            this.bunifuImageButton1.ShowActiveImage = true;
-            this.bunifuImageButton1.ShowCursorChanges = true;
-            this.bunifuImageButton1.ShowImageBorders = true;
-            this.bunifuImageButton1.ShowSizeMarkers = false;
-            this.bunifuImageButton1.Size = new System.Drawing.Size(75, 81);
-            this.bunifuImageButton1.TabIndex = 6;
-            this.bunifuImageButton1.ToolTipText = "";
-            this.bunifuImageButton1.WaitOnLoad = false;
-            this.bunifuImageButton1.Zoom = 20;
-            this.bunifuImageButton1.ZoomSpeed = 10;
-            this.bunifuImageButton1.Click += new System.EventHandler(this.bunifuImageButton1_Click);
+            this.btClose.ActiveImage = null;
+            this.btClose.AllowAnimations = true;
+            this.btClose.AllowBuffering = false;
+            this.btClose.AllowToggling = false;
+            this.btClose.AllowZooming = true;
+            this.btClose.AllowZoomingOnFocus = false;
+            this.btClose.BackColor = System.Drawing.Color.Transparent;
+            this.btClose.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btClose.ErrorImage = ((System.Drawing.Image)(resources.GetObject("btClose.ErrorImage")));
+            this.btClose.FadeWhenInactive = false;
+            this.btClose.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            this.btClose.Image = global::SMESData.Properties.Resources.close;
+            this.btClose.ImageActive = null;
+            this.btClose.ImageLocation = null;
+            this.btClose.ImageMargin = 20;
+            this.btClose.ImageSize = new System.Drawing.Size(55, 61);
+            this.btClose.ImageZoomSize = new System.Drawing.Size(75, 81);
+            this.btClose.InitialImage = ((System.Drawing.Image)(resources.GetObject("btClose.InitialImage")));
+            this.btClose.Location = new System.Drawing.Point(30, 773);
+            this.btClose.Margin = new System.Windows.Forms.Padding(2);
+            this.btClose.Name = "btClose";
+            this.btClose.Rotation = 0;
+            this.btClose.ShowActiveImage = true;
+            this.btClose.ShowCursorChanges = true;
+            this.btClose.ShowImageBorders = true;
+            this.btClose.ShowSizeMarkers = false;
+            this.btClose.Size = new System.Drawing.Size(75, 81);
+            this.btClose.TabIndex = 6;
+            this.btClose.ToolTipText = "";
+            this.btClose.WaitOnLoad = false;
+            this.btClose.Zoom = 20;
+            this.btClose.ZoomSpeed = 10;
+            this.btClose.Click += new System.EventHandler(this.btClose_Click);
             // 
             // btPQC
             // 
@@ -337,7 +337,7 @@ namespace SMESData
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btPQC;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btMQC;
         private System.Windows.Forms.PictureBox pbLogo;
-        private Bunifu.UI.WinForms.BunifuImageButton bunifuImageButton1;
+        private Bunifu.UI.WinForms.BunifuImageButton btClose;
     }
 }
 
