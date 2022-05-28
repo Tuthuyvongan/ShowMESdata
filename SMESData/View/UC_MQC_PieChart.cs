@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -14,7 +16,7 @@ namespace SMESData.View
     {
         public UC_MQC_PieChart()
         {
-            InitializeComponent();
+            InitializeComponent();            
         }
 
         private void UC_MQC_PieChart_Load(object sender, EventArgs e)
@@ -96,11 +98,10 @@ namespace SMESData.View
                 else
                     d = Math.Round(temp / GetSOFTdata.getTotal("L07", date) * 100, 2);
                 dataL07.Add(d);
-            }                                         
+            }            
         }
         public void renderPiechart()
-        {
-            
+        {            
             //Add data
             lineData();
             L01Chart.Data = dataL01;
@@ -325,10 +326,14 @@ namespace SMESData.View
             L05Chart.BackgroundColor = bgColors;
             L06Chart.BackgroundColor = bgColors;
             L07Chart.BackgroundColor = bgColors;
+            dtpChart.Visible = true;
         }
 
         private void dtpChart_ValueChanged(object sender, EventArgs e)
         {
+            Thread t = new Thread(new ThreadStart(splash));
+            t.Start();
+            dtpChart.Visible = false;
             dataL01.Clear();
             dataL02.Clear();
             dataL03.Clear();
@@ -337,8 +342,11 @@ namespace SMESData.View
             dataL06.Clear();
             dataL07.Clear();
             renderPiechart();
+            t.Abort();
         }
-
-      
+        public void splash()
+        {
+            Application.Run(new MessageWaitForm());
+        }
     }
 }

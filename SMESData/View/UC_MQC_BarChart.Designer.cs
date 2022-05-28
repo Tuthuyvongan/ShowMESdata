@@ -56,11 +56,11 @@ namespace SMESData.View
             this.lineBCCanvas.LegendPosition = Bunifu.Charts.WinForms.BunifuChartCanvas.PositionOptions.bottom;
             this.lineBCCanvas.LegendRevese = false;
             this.lineBCCanvas.LegendRTL = false;
-            this.lineBCCanvas.Location = new System.Drawing.Point(0, 33);
+            this.lineBCCanvas.Location = new System.Drawing.Point(0, 37);
             this.lineBCCanvas.Name = "lineBCCanvas";
             this.lineBCCanvas.ShowXAxis = true;
             this.lineBCCanvas.ShowYAxis = true;
-            this.lineBCCanvas.Size = new System.Drawing.Size(1355, 806);
+            this.lineBCCanvas.Size = new System.Drawing.Size(1440, 767);
             this.lineBCCanvas.TabIndex = 5;
             this.lineBCCanvas.Title = "";
             this.lineBCCanvas.TitleLineHeight = 1.2D;
@@ -176,7 +176,7 @@ namespace SMESData.View
             this.Controls.Add(this.lineBCCanvas);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UC_MQC_BarChart";
-            this.Size = new System.Drawing.Size(1355, 839);
+            this.Size = new System.Drawing.Size(1440, 804);
             this.Load += new System.EventHandler(this.UC_MQC_Load);
             this.ResumeLayout(false);
 
