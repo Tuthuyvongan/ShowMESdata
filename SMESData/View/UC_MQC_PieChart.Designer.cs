@@ -42,45 +42,45 @@ namespace SMESData.View
             this.L07Chart = new Bunifu.Charts.WinForms.ChartTypes.BunifuPieChart(this.components);
             this.linePCanvas2 = new Bunifu.Charts.WinForms.BunifuChartCanvas();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lb1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lbNG1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lbRW1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lbOP1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lb2 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lbOP2 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lbRW2 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lbNG2 = new Bunifu.UI.WinForms.BunifuLabel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.lb3 = new Bunifu.UI.WinForms.BunifuLabel();
             this.linePCanvas3 = new Bunifu.Charts.WinForms.BunifuChartCanvas();
             this.lbOP3 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lbRW3 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lbNG3 = new Bunifu.UI.WinForms.BunifuLabel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.lb4 = new Bunifu.UI.WinForms.BunifuLabel();
             this.linePCanvas4 = new Bunifu.Charts.WinForms.BunifuChartCanvas();
             this.lbOP4 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lbNG4 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lbRW4 = new Bunifu.UI.WinForms.BunifuLabel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.lb5 = new Bunifu.UI.WinForms.BunifuLabel();
             this.linePCanvas5 = new Bunifu.Charts.WinForms.BunifuChartCanvas();
             this.lbOP5 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lbRW5 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lbNG5 = new Bunifu.UI.WinForms.BunifuLabel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.lb6 = new Bunifu.UI.WinForms.BunifuLabel();
             this.linePCanvas6 = new Bunifu.Charts.WinForms.BunifuChartCanvas();
             this.lbOP6 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lbRW6 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lbNG6 = new Bunifu.UI.WinForms.BunifuLabel();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.lb7 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lbOP7 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lbNG7 = new Bunifu.UI.WinForms.BunifuLabel();
             this.linePCanvas7 = new Bunifu.Charts.WinForms.BunifuChartCanvas();
             this.lbRW7 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.lb1 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.lb2 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.lb3 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.lb6 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.lb5 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.lb4 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.lb7 = new Bunifu.UI.WinForms.BunifuLabel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -112,7 +112,7 @@ namespace SMESData.View
             this.linePCanvas1.Name = "linePCanvas1";
             this.linePCanvas1.ShowXAxis = true;
             this.linePCanvas1.ShowYAxis = true;
-            this.linePCanvas1.Size = new System.Drawing.Size(255, 252);
+            this.linePCanvas1.Size = new System.Drawing.Size(255, 271);
             this.linePCanvas1.TabIndex = 6;
             this.linePCanvas1.Title = "";
             this.linePCanvas1.TitleLineHeight = 2D;
@@ -170,7 +170,7 @@ namespace SMESData.View
             this.dtpChart.IconColor = System.Drawing.Color.DodgerBlue;
             this.dtpChart.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.dtpChart.LeftTextMargin = 5;
-            this.dtpChart.Location = new System.Drawing.Point(1253, 21);
+            this.dtpChart.Location = new System.Drawing.Point(1253, 23);
             this.dtpChart.Margin = new System.Windows.Forms.Padding(2);
             this.dtpChart.MinimumSize = new System.Drawing.Size(4, 32);
             this.dtpChart.Name = "dtpChart";
@@ -285,7 +285,7 @@ namespace SMESData.View
             this.linePCanvas2.Name = "linePCanvas2";
             this.linePCanvas2.ShowXAxis = false;
             this.linePCanvas2.ShowYAxis = false;
-            this.linePCanvas2.Size = new System.Drawing.Size(255, 252);
+            this.linePCanvas2.Size = new System.Drawing.Size(255, 271);
             this.linePCanvas2.TabIndex = 8;
             this.linePCanvas2.Title = "";
             this.linePCanvas2.TitleLineHeight = 2D;
@@ -332,11 +332,27 @@ namespace SMESData.View
             this.panel1.Controls.Add(this.lbRW1);
             this.panel1.Controls.Add(this.lbOP1);
             this.panel1.Controls.Add(this.linePCanvas1);
-            this.panel1.Location = new System.Drawing.Point(52, 21);
+            this.panel1.Location = new System.Drawing.Point(52, 23);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(376, 261);
+            this.panel1.Size = new System.Drawing.Size(376, 281);
             this.panel1.TabIndex = 14;
+            // 
+            // lb1
+            // 
+            this.lb1.AllowParentOverrides = false;
+            this.lb1.AutoEllipsis = false;
+            this.lb1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lb1.CursorType = System.Windows.Forms.Cursors.Default;
+            this.lb1.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb1.Location = new System.Drawing.Point(266, 211);
+            this.lb1.Name = "lb1";
+            this.lb1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lb1.Size = new System.Drawing.Size(46, 31);
+            this.lb1.TabIndex = 13;
+            this.lb1.Text = "L01";
+            this.lb1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lb1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // lbNG1
             // 
@@ -344,7 +360,7 @@ namespace SMESData.View
             this.lbNG1.AutoEllipsis = false;
             this.lbNG1.CursorType = null;
             this.lbNG1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lbNG1.Location = new System.Drawing.Point(266, 106);
+            this.lbNG1.Location = new System.Drawing.Point(266, 114);
             this.lbNG1.Margin = new System.Windows.Forms.Padding(2);
             this.lbNG1.Name = "lbNG1";
             this.lbNG1.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -361,7 +377,7 @@ namespace SMESData.View
             this.lbRW1.Cursor = System.Windows.Forms.Cursors.Default;
             this.lbRW1.CursorType = System.Windows.Forms.Cursors.Default;
             this.lbRW1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lbRW1.Location = new System.Drawing.Point(266, 76);
+            this.lbRW1.Location = new System.Drawing.Point(266, 82);
             this.lbRW1.Margin = new System.Windows.Forms.Padding(2);
             this.lbRW1.Name = "lbRW1";
             this.lbRW1.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -378,7 +394,7 @@ namespace SMESData.View
             this.lbOP1.Cursor = System.Windows.Forms.Cursors.Default;
             this.lbOP1.CursorType = System.Windows.Forms.Cursors.Default;
             this.lbOP1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lbOP1.Location = new System.Drawing.Point(266, 45);
+            this.lbOP1.Location = new System.Drawing.Point(266, 48);
             this.lbOP1.Margin = new System.Windows.Forms.Padding(2);
             this.lbOP1.Name = "lbOP1";
             this.lbOP1.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -397,11 +413,26 @@ namespace SMESData.View
             this.panel2.Controls.Add(this.lbOP2);
             this.panel2.Controls.Add(this.lbRW2);
             this.panel2.Controls.Add(this.lbNG2);
-            this.panel2.Location = new System.Drawing.Point(454, 21);
+            this.panel2.Location = new System.Drawing.Point(454, 23);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(376, 261);
+            this.panel2.Size = new System.Drawing.Size(376, 281);
             this.panel2.TabIndex = 15;
+            // 
+            // lb2
+            // 
+            this.lb2.AllowParentOverrides = false;
+            this.lb2.AutoEllipsis = false;
+            this.lb2.CursorType = null;
+            this.lb2.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb2.Location = new System.Drawing.Point(264, 211);
+            this.lb2.Name = "lb2";
+            this.lb2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lb2.Size = new System.Drawing.Size(46, 31);
+            this.lb2.TabIndex = 14;
+            this.lb2.Text = "L02";
+            this.lb2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lb2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // lbOP2
             // 
@@ -409,7 +440,7 @@ namespace SMESData.View
             this.lbOP2.AutoEllipsis = false;
             this.lbOP2.CursorType = null;
             this.lbOP2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lbOP2.Location = new System.Drawing.Point(264, 45);
+            this.lbOP2.Location = new System.Drawing.Point(264, 48);
             this.lbOP2.Margin = new System.Windows.Forms.Padding(2);
             this.lbOP2.Name = "lbOP2";
             this.lbOP2.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -425,7 +456,7 @@ namespace SMESData.View
             this.lbRW2.AutoEllipsis = false;
             this.lbRW2.CursorType = null;
             this.lbRW2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lbRW2.Location = new System.Drawing.Point(264, 76);
+            this.lbRW2.Location = new System.Drawing.Point(264, 82);
             this.lbRW2.Margin = new System.Windows.Forms.Padding(2);
             this.lbRW2.Name = "lbRW2";
             this.lbRW2.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -441,7 +472,7 @@ namespace SMESData.View
             this.lbNG2.AutoEllipsis = false;
             this.lbNG2.CursorType = null;
             this.lbNG2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lbNG2.Location = new System.Drawing.Point(264, 106);
+            this.lbNG2.Location = new System.Drawing.Point(264, 114);
             this.lbNG2.Margin = new System.Windows.Forms.Padding(2);
             this.lbNG2.Name = "lbNG2";
             this.lbNG2.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -460,11 +491,26 @@ namespace SMESData.View
             this.panel3.Controls.Add(this.lbOP3);
             this.panel3.Controls.Add(this.lbRW3);
             this.panel3.Controls.Add(this.lbNG3);
-            this.panel3.Location = new System.Drawing.Point(856, 21);
+            this.panel3.Location = new System.Drawing.Point(856, 23);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(376, 261);
+            this.panel3.Size = new System.Drawing.Size(376, 281);
             this.panel3.TabIndex = 16;
+            // 
+            // lb3
+            // 
+            this.lb3.AllowParentOverrides = false;
+            this.lb3.AutoEllipsis = false;
+            this.lb3.CursorType = null;
+            this.lb3.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb3.Location = new System.Drawing.Point(263, 211);
+            this.lb3.Name = "lb3";
+            this.lb3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lb3.Size = new System.Drawing.Size(46, 31);
+            this.lb3.TabIndex = 15;
+            this.lb3.Text = "L03";
+            this.lb3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lb3.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // linePCanvas3
             // 
@@ -488,7 +534,7 @@ namespace SMESData.View
             this.linePCanvas3.Name = "linePCanvas3";
             this.linePCanvas3.ShowXAxis = false;
             this.linePCanvas3.ShowYAxis = false;
-            this.linePCanvas3.Size = new System.Drawing.Size(255, 252);
+            this.linePCanvas3.Size = new System.Drawing.Size(255, 271);
             this.linePCanvas3.TabIndex = 6;
             this.linePCanvas3.Title = "";
             this.linePCanvas3.TitleLineHeight = 2D;
@@ -532,7 +578,7 @@ namespace SMESData.View
             this.lbOP3.AutoEllipsis = false;
             this.lbOP3.CursorType = null;
             this.lbOP3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lbOP3.Location = new System.Drawing.Point(263, 45);
+            this.lbOP3.Location = new System.Drawing.Point(263, 48);
             this.lbOP3.Margin = new System.Windows.Forms.Padding(2);
             this.lbOP3.Name = "lbOP3";
             this.lbOP3.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -548,7 +594,7 @@ namespace SMESData.View
             this.lbRW3.AutoEllipsis = false;
             this.lbRW3.CursorType = null;
             this.lbRW3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lbRW3.Location = new System.Drawing.Point(263, 76);
+            this.lbRW3.Location = new System.Drawing.Point(263, 82);
             this.lbRW3.Margin = new System.Windows.Forms.Padding(2);
             this.lbRW3.Name = "lbRW3";
             this.lbRW3.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -564,7 +610,7 @@ namespace SMESData.View
             this.lbNG3.AutoEllipsis = false;
             this.lbNG3.CursorType = null;
             this.lbNG3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lbNG3.Location = new System.Drawing.Point(263, 106);
+            this.lbNG3.Location = new System.Drawing.Point(263, 114);
             this.lbNG3.Margin = new System.Windows.Forms.Padding(2);
             this.lbNG3.Name = "lbNG3";
             this.lbNG3.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -583,11 +629,26 @@ namespace SMESData.View
             this.panel4.Controls.Add(this.lbOP4);
             this.panel4.Controls.Add(this.lbNG4);
             this.panel4.Controls.Add(this.lbRW4);
-            this.panel4.Location = new System.Drawing.Point(52, 300);
+            this.panel4.Location = new System.Drawing.Point(52, 323);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(376, 261);
+            this.panel4.Size = new System.Drawing.Size(376, 281);
             this.panel4.TabIndex = 17;
+            // 
+            // lb4
+            // 
+            this.lb4.AllowParentOverrides = false;
+            this.lb4.AutoEllipsis = false;
+            this.lb4.CursorType = null;
+            this.lb4.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb4.Location = new System.Drawing.Point(266, 214);
+            this.lb4.Name = "lb4";
+            this.lb4.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lb4.Size = new System.Drawing.Size(46, 31);
+            this.lb4.TabIndex = 26;
+            this.lb4.Text = "L04";
+            this.lb4.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lb4.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // linePCanvas4
             // 
@@ -610,7 +671,7 @@ namespace SMESData.View
             this.linePCanvas4.Name = "linePCanvas4";
             this.linePCanvas4.ShowXAxis = false;
             this.linePCanvas4.ShowYAxis = false;
-            this.linePCanvas4.Size = new System.Drawing.Size(255, 252);
+            this.linePCanvas4.Size = new System.Drawing.Size(255, 271);
             this.linePCanvas4.TabIndex = 6;
             this.linePCanvas4.Title = "";
             this.linePCanvas4.TitleLineHeight = 2D;
@@ -654,7 +715,7 @@ namespace SMESData.View
             this.lbOP4.AutoEllipsis = false;
             this.lbOP4.CursorType = null;
             this.lbOP4.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lbOP4.Location = new System.Drawing.Point(266, 45);
+            this.lbOP4.Location = new System.Drawing.Point(266, 48);
             this.lbOP4.Margin = new System.Windows.Forms.Padding(2);
             this.lbOP4.Name = "lbOP4";
             this.lbOP4.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -670,7 +731,7 @@ namespace SMESData.View
             this.lbNG4.AutoEllipsis = false;
             this.lbNG4.CursorType = null;
             this.lbNG4.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lbNG4.Location = new System.Drawing.Point(266, 106);
+            this.lbNG4.Location = new System.Drawing.Point(266, 114);
             this.lbNG4.Margin = new System.Windows.Forms.Padding(2);
             this.lbNG4.Name = "lbNG4";
             this.lbNG4.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -686,7 +747,7 @@ namespace SMESData.View
             this.lbRW4.AutoEllipsis = false;
             this.lbRW4.CursorType = null;
             this.lbRW4.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lbRW4.Location = new System.Drawing.Point(266, 76);
+            this.lbRW4.Location = new System.Drawing.Point(266, 82);
             this.lbRW4.Margin = new System.Windows.Forms.Padding(2);
             this.lbRW4.Name = "lbRW4";
             this.lbRW4.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -705,11 +766,26 @@ namespace SMESData.View
             this.panel5.Controls.Add(this.lbOP5);
             this.panel5.Controls.Add(this.lbRW5);
             this.panel5.Controls.Add(this.lbNG5);
-            this.panel5.Location = new System.Drawing.Point(454, 300);
+            this.panel5.Location = new System.Drawing.Point(454, 323);
             this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(376, 261);
+            this.panel5.Size = new System.Drawing.Size(376, 281);
             this.panel5.TabIndex = 17;
+            // 
+            // lb5
+            // 
+            this.lb5.AllowParentOverrides = false;
+            this.lb5.AutoEllipsis = false;
+            this.lb5.CursorType = null;
+            this.lb5.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb5.Location = new System.Drawing.Point(264, 214);
+            this.lb5.Name = "lb5";
+            this.lb5.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lb5.Size = new System.Drawing.Size(46, 31);
+            this.lb5.TabIndex = 25;
+            this.lb5.Text = "L05";
+            this.lb5.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lb5.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // linePCanvas5
             // 
@@ -732,7 +808,7 @@ namespace SMESData.View
             this.linePCanvas5.Name = "linePCanvas5";
             this.linePCanvas5.ShowXAxis = false;
             this.linePCanvas5.ShowYAxis = false;
-            this.linePCanvas5.Size = new System.Drawing.Size(255, 252);
+            this.linePCanvas5.Size = new System.Drawing.Size(255, 271);
             this.linePCanvas5.TabIndex = 6;
             this.linePCanvas5.Title = "";
             this.linePCanvas5.TitleLineHeight = 2D;
@@ -776,7 +852,7 @@ namespace SMESData.View
             this.lbOP5.AutoEllipsis = false;
             this.lbOP5.CursorType = null;
             this.lbOP5.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lbOP5.Location = new System.Drawing.Point(264, 45);
+            this.lbOP5.Location = new System.Drawing.Point(264, 48);
             this.lbOP5.Margin = new System.Windows.Forms.Padding(2);
             this.lbOP5.Name = "lbOP5";
             this.lbOP5.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -792,7 +868,7 @@ namespace SMESData.View
             this.lbRW5.AutoEllipsis = false;
             this.lbRW5.CursorType = null;
             this.lbRW5.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lbRW5.Location = new System.Drawing.Point(264, 76);
+            this.lbRW5.Location = new System.Drawing.Point(264, 82);
             this.lbRW5.Margin = new System.Windows.Forms.Padding(2);
             this.lbRW5.Name = "lbRW5";
             this.lbRW5.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -808,7 +884,7 @@ namespace SMESData.View
             this.lbNG5.AutoEllipsis = false;
             this.lbNG5.CursorType = null;
             this.lbNG5.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lbNG5.Location = new System.Drawing.Point(264, 106);
+            this.lbNG5.Location = new System.Drawing.Point(264, 114);
             this.lbNG5.Margin = new System.Windows.Forms.Padding(2);
             this.lbNG5.Name = "lbNG5";
             this.lbNG5.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -827,11 +903,26 @@ namespace SMESData.View
             this.panel6.Controls.Add(this.lbOP6);
             this.panel6.Controls.Add(this.lbRW6);
             this.panel6.Controls.Add(this.lbNG6);
-            this.panel6.Location = new System.Drawing.Point(856, 300);
+            this.panel6.Location = new System.Drawing.Point(856, 323);
             this.panel6.Margin = new System.Windows.Forms.Padding(2);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(376, 261);
+            this.panel6.Size = new System.Drawing.Size(376, 281);
             this.panel6.TabIndex = 18;
+            // 
+            // lb6
+            // 
+            this.lb6.AllowParentOverrides = false;
+            this.lb6.AutoEllipsis = false;
+            this.lb6.CursorType = null;
+            this.lb6.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb6.Location = new System.Drawing.Point(263, 214);
+            this.lb6.Name = "lb6";
+            this.lb6.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lb6.Size = new System.Drawing.Size(46, 31);
+            this.lb6.TabIndex = 16;
+            this.lb6.Text = "L06";
+            this.lb6.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lb6.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // linePCanvas6
             // 
@@ -854,7 +945,7 @@ namespace SMESData.View
             this.linePCanvas6.Name = "linePCanvas6";
             this.linePCanvas6.ShowXAxis = false;
             this.linePCanvas6.ShowYAxis = false;
-            this.linePCanvas6.Size = new System.Drawing.Size(255, 252);
+            this.linePCanvas6.Size = new System.Drawing.Size(255, 271);
             this.linePCanvas6.TabIndex = 6;
             this.linePCanvas6.Title = "";
             this.linePCanvas6.TitleLineHeight = 2D;
@@ -898,7 +989,7 @@ namespace SMESData.View
             this.lbOP6.AutoEllipsis = false;
             this.lbOP6.CursorType = null;
             this.lbOP6.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lbOP6.Location = new System.Drawing.Point(263, 45);
+            this.lbOP6.Location = new System.Drawing.Point(263, 48);
             this.lbOP6.Margin = new System.Windows.Forms.Padding(2);
             this.lbOP6.Name = "lbOP6";
             this.lbOP6.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -914,7 +1005,7 @@ namespace SMESData.View
             this.lbRW6.AutoEllipsis = false;
             this.lbRW6.CursorType = null;
             this.lbRW6.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lbRW6.Location = new System.Drawing.Point(263, 76);
+            this.lbRW6.Location = new System.Drawing.Point(263, 82);
             this.lbRW6.Margin = new System.Windows.Forms.Padding(2);
             this.lbRW6.Name = "lbRW6";
             this.lbRW6.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -930,7 +1021,7 @@ namespace SMESData.View
             this.lbNG6.AutoEllipsis = false;
             this.lbNG6.CursorType = null;
             this.lbNG6.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lbNG6.Location = new System.Drawing.Point(263, 106);
+            this.lbNG6.Location = new System.Drawing.Point(263, 114);
             this.lbNG6.Margin = new System.Windows.Forms.Padding(2);
             this.lbNG6.Name = "lbNG6";
             this.lbNG6.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -949,11 +1040,26 @@ namespace SMESData.View
             this.panel7.Controls.Add(this.lbNG7);
             this.panel7.Controls.Add(this.linePCanvas7);
             this.panel7.Controls.Add(this.lbRW7);
-            this.panel7.Location = new System.Drawing.Point(52, 577);
+            this.panel7.Location = new System.Drawing.Point(52, 621);
             this.panel7.Margin = new System.Windows.Forms.Padding(2);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(376, 261);
+            this.panel7.Size = new System.Drawing.Size(376, 281);
             this.panel7.TabIndex = 19;
+            // 
+            // lb7
+            // 
+            this.lb7.AllowParentOverrides = false;
+            this.lb7.AutoEllipsis = false;
+            this.lb7.CursorType = null;
+            this.lb7.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb7.Location = new System.Drawing.Point(266, 216);
+            this.lb7.Name = "lb7";
+            this.lb7.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lb7.Size = new System.Drawing.Size(46, 31);
+            this.lb7.TabIndex = 27;
+            this.lb7.Text = "L07";
+            this.lb7.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lb7.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // lbOP7
             // 
@@ -961,7 +1067,7 @@ namespace SMESData.View
             this.lbOP7.AutoEllipsis = false;
             this.lbOP7.CursorType = null;
             this.lbOP7.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lbOP7.Location = new System.Drawing.Point(266, 43);
+            this.lbOP7.Location = new System.Drawing.Point(266, 46);
             this.lbOP7.Margin = new System.Windows.Forms.Padding(2);
             this.lbOP7.Name = "lbOP7";
             this.lbOP7.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -977,7 +1083,7 @@ namespace SMESData.View
             this.lbNG7.AutoEllipsis = false;
             this.lbNG7.CursorType = null;
             this.lbNG7.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lbNG7.Location = new System.Drawing.Point(266, 105);
+            this.lbNG7.Location = new System.Drawing.Point(266, 113);
             this.lbNG7.Margin = new System.Windows.Forms.Padding(2);
             this.lbNG7.Name = "lbNG7";
             this.lbNG7.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -1008,7 +1114,7 @@ namespace SMESData.View
             this.linePCanvas7.Name = "linePCanvas7";
             this.linePCanvas7.ShowXAxis = false;
             this.linePCanvas7.ShowYAxis = false;
-            this.linePCanvas7.Size = new System.Drawing.Size(255, 252);
+            this.linePCanvas7.Size = new System.Drawing.Size(255, 271);
             this.linePCanvas7.TabIndex = 6;
             this.linePCanvas7.Title = "";
             this.linePCanvas7.TitleLineHeight = 2D;
@@ -1052,7 +1158,7 @@ namespace SMESData.View
             this.lbRW7.AutoEllipsis = false;
             this.lbRW7.CursorType = null;
             this.lbRW7.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lbRW7.Location = new System.Drawing.Point(266, 74);
+            this.lbRW7.Location = new System.Drawing.Point(266, 80);
             this.lbRW7.Margin = new System.Windows.Forms.Padding(2);
             this.lbRW7.Name = "lbRW7";
             this.lbRW7.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -1062,114 +1168,9 @@ namespace SMESData.View
             this.lbRW7.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lbRW7.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // lb1
-            // 
-            this.lb1.AllowParentOverrides = false;
-            this.lb1.AutoEllipsis = false;
-            this.lb1.CursorType = System.Windows.Forms.Cursors.Default;
-            this.lb1.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb1.Location = new System.Drawing.Point(266, 196);
-            this.lb1.Name = "lb1";
-            this.lb1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lb1.Size = new System.Drawing.Size(46, 31);
-            this.lb1.TabIndex = 13;
-            this.lb1.Text = "L01";
-            this.lb1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lb1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // lb2
-            // 
-            this.lb2.AllowParentOverrides = false;
-            this.lb2.AutoEllipsis = false;
-            this.lb2.CursorType = null;
-            this.lb2.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb2.Location = new System.Drawing.Point(264, 196);
-            this.lb2.Name = "lb2";
-            this.lb2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lb2.Size = new System.Drawing.Size(46, 31);
-            this.lb2.TabIndex = 14;
-            this.lb2.Text = "L02";
-            this.lb2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lb2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // lb3
-            // 
-            this.lb3.AllowParentOverrides = false;
-            this.lb3.AutoEllipsis = false;
-            this.lb3.CursorType = null;
-            this.lb3.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb3.Location = new System.Drawing.Point(263, 196);
-            this.lb3.Name = "lb3";
-            this.lb3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lb3.Size = new System.Drawing.Size(46, 31);
-            this.lb3.TabIndex = 15;
-            this.lb3.Text = "L03";
-            this.lb3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lb3.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // lb6
-            // 
-            this.lb6.AllowParentOverrides = false;
-            this.lb6.AutoEllipsis = false;
-            this.lb6.CursorType = null;
-            this.lb6.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb6.Location = new System.Drawing.Point(263, 199);
-            this.lb6.Name = "lb6";
-            this.lb6.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lb6.Size = new System.Drawing.Size(46, 31);
-            this.lb6.TabIndex = 16;
-            this.lb6.Text = "L06";
-            this.lb6.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lb6.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // lb5
-            // 
-            this.lb5.AllowParentOverrides = false;
-            this.lb5.AutoEllipsis = false;
-            this.lb5.CursorType = null;
-            this.lb5.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb5.Location = new System.Drawing.Point(264, 199);
-            this.lb5.Name = "lb5";
-            this.lb5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lb5.Size = new System.Drawing.Size(46, 31);
-            this.lb5.TabIndex = 25;
-            this.lb5.Text = "L05";
-            this.lb5.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lb5.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // lb4
-            // 
-            this.lb4.AllowParentOverrides = false;
-            this.lb4.AutoEllipsis = false;
-            this.lb4.CursorType = null;
-            this.lb4.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb4.Location = new System.Drawing.Point(266, 199);
-            this.lb4.Name = "lb4";
-            this.lb4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lb4.Size = new System.Drawing.Size(46, 31);
-            this.lb4.TabIndex = 26;
-            this.lb4.Text = "L04";
-            this.lb4.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lb4.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // lb7
-            // 
-            this.lb7.AllowParentOverrides = false;
-            this.lb7.AutoEllipsis = false;
-            this.lb7.CursorType = null;
-            this.lb7.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb7.Location = new System.Drawing.Point(266, 201);
-            this.lb7.Name = "lb7";
-            this.lb7.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lb7.Size = new System.Drawing.Size(46, 31);
-            this.lb7.TabIndex = 27;
-            this.lb7.Text = "L07";
-            this.lb7.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lb7.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
             // UC_MQC_PieChart
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.panel7);
@@ -1180,9 +1181,10 @@ namespace SMESData.View
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dtpChart);
+            this.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UC_MQC_PieChart";
-            this.Size = new System.Drawing.Size(1440, 878);
+            this.Size = new System.Drawing.Size(1440, 946);
             this.Load += new System.EventHandler(this.UC_MQC_PieChart_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

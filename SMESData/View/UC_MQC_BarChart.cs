@@ -41,21 +41,21 @@ namespace SMESData.View
                 if (temp == 0)
                     d = 0;
                 else
-                    d = Math.Round(temp / GetSOFTdata.getTotal("L0" + (i + 1), date) * 100, 2);
+                    d = Math.Round(temp / GetSOFTdata.getTotalMQC("L0" + (i + 1), date) * 100, 2);
                 dataOP.Add(d);
                 //RW
                 temp = GetSOFTdata.getTotalRemark("L0" + (i + 1), "RW", date);
                 if (temp == 0)
                     d = 0;
                 else
-                    d = Math.Round(temp / GetSOFTdata.getTotal("L0" + (i + 1), date) * 100, 2);
+                    d = Math.Round(temp / GetSOFTdata.getTotalMQC("L0" + (i + 1), date) * 100, 2);
                 dataRW.Add(d);
                 //NG
                 temp = GetSOFTdata.getTotalRemark("L0" + (i + 1), "NG", date);
                 if (temp == 0)
                     d = 0;
                 else
-                    d = Math.Round(temp / GetSOFTdata.getTotal("L0" + (i + 1), date) * 100, 2);
+                    d = Math.Round(temp / GetSOFTdata.getTotalMQC("L0" + (i + 1), date) * 100, 2);
                 dataNG.Add(d);
             }                
                 

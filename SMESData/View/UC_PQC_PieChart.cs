@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,14 +11,14 @@ using System.Windows.Forms;
 
 namespace SMESData.View
 {
-    public partial class UC_MQC_PieChart : UserControl
+    public partial class UC_PQC_PieChart : UserControl
     {
-        public UC_MQC_PieChart()
+        public UC_PQC_PieChart()
         {
-            InitializeComponent();            
+            InitializeComponent();
         }
 
-        private void UC_MQC_PieChart_Load(object sender, EventArgs e)
+        private void UC_PQC_PieChart_Load(object sender, EventArgs e)
         {
             // Date time format
             dtpChart.CustomFormat = "yyyy-MM-dd";
@@ -38,70 +37,70 @@ namespace SMESData.View
         public void lineData()
         {
             string date = dtpChart.Text.ToString();
-            string [] remark = { "OP", "RW", "NG" };
+            string[] remark = { "OP", "RW", "NG" };
             double d;
             double temp;
             for (int i = 0; i < 3; i++)
             {
                 //L01
-                temp = GetSOFTdata.getTotalRemark("L01", remark[i], date);
+                temp = GetSOFTdata.getTotalAttributeType("L01", remark[i], date);
                 if (temp == 0 || temp is double.NaN)
                     d = 0;
                 else
-                    d = Math.Round(temp / GetSOFTdata.getTotalMQC("L01", date) * 100, 2);
+                    d = Math.Round(temp / GetSOFTdata.getTotalPQC("L01", date) * 100, 2);
                 dataL01.Add(d);
 
                 //L02
-                temp = GetSOFTdata.getTotalRemark("L02", remark[i], date);
+                temp = GetSOFTdata.getTotalAttributeType("L02", remark[i], date);
                 if (temp == 0 || temp is double.NaN)
                     d = 0;
                 else
-                    d = Math.Round(temp / GetSOFTdata.getTotalMQC("L02", date) * 100, 2);
+                    d = Math.Round(temp / GetSOFTdata.getTotalPQC("L02", date) * 100, 2);
                 dataL02.Add(d);
 
                 //L03
-                temp = GetSOFTdata.getTotalRemark("L03", remark[i], date);
+                temp = GetSOFTdata.getTotalAttributeType("L03", remark[i], date);
                 if (temp == 0 || temp is double.NaN)
                     d = 0;
                 else
-                    d = Math.Round(temp / GetSOFTdata.getTotalMQC("L03", date) * 100, 2);
+                    d = Math.Round(temp / GetSOFTdata.getTotalPQC("L03", date) * 100, 2);
                 dataL03.Add(d);
 
                 //L04
-                temp = GetSOFTdata.getTotalRemark("L04", remark[i], date);
+                temp = GetSOFTdata.getTotalAttributeType("L04", remark[i], date);
                 if (temp == 0 || temp is double.NaN)
                     d = 0;
                 else
-                    d = Math.Round(temp / GetSOFTdata.getTotalMQC("L04", date) * 100, 2);
+                    d = Math.Round(temp / GetSOFTdata.getTotalPQC("L04", date) * 100, 2);
                 dataL04.Add(d);
 
                 //L05
-                temp = GetSOFTdata.getTotalRemark("L05", remark[i], date);
+                temp = GetSOFTdata.getTotalAttributeType("L05", remark[i], date);
                 if (temp == 0 || temp is double.NaN)
                     d = 0;
                 else
-                    d = Math.Round(temp / GetSOFTdata.getTotalMQC("L05", date) * 100, 2);
+                    d = Math.Round(temp / GetSOFTdata.getTotalPQC("L05", date) * 100, 2);
                 dataL05.Add(d);
 
                 //L06
-                temp = GetSOFTdata.getTotalRemark("L06", remark[i], date);
+                temp = GetSOFTdata.getTotalAttributeType("L06", remark[i], date);
                 if (temp == 0 || temp is double.NaN)
                     d = 0;
                 else
-                    d = Math.Round(temp / GetSOFTdata.getTotalMQC("L06", date) * 100, 2);
+                    d = Math.Round(temp / GetSOFTdata.getTotalPQC("L06", date) * 100, 2);
                 dataL06.Add(d);
 
                 //L07
-                temp = GetSOFTdata.getTotalRemark("L07", remark[i], date);
+                temp = GetSOFTdata.getTotalAttributeType("L07", remark[i], date);
                 if (temp == 0 || temp is double.NaN)
                     d = 0;
                 else
-                    d = Math.Round(temp / GetSOFTdata.getTotalMQC("L07", date) * 100, 2);
+                    d = Math.Round(temp / GetSOFTdata.getTotalPQC("L07", date) * 100, 2);
                 dataL07.Add(d);
-            }            
+            }
         }
         public void renderPiechart()
-        {            
+        {
             //Add data
             lineData();
             L01Chart.Data = dataL01;
@@ -318,7 +317,7 @@ namespace SMESData.View
             List<Color> bgColors = new List<Color>();
             bgColors.Add(Color.DodgerBlue);
             bgColors.Add(Color.Orange);
-            bgColors.Add(Color.Red);           
+            bgColors.Add(Color.Red);
             L01Chart.BackgroundColor = bgColors;
             L02Chart.BackgroundColor = bgColors;
             L03Chart.BackgroundColor = bgColors;

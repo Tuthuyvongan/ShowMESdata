@@ -288,6 +288,12 @@
     <Compile Include="View\UC_MQC_PieChart.Designer.cs">
       <DependentUpon>UC_MQC_PieChart.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\UC_PQC_PieChart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UC_PQC_PieChart.Designer.cs">
+      <DependentUpon>UC_PQC_PieChart.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="View\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -311,6 +317,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\UC_MQC_PieChart.resx">
       <DependentUpon>UC_MQC_PieChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UC_PQC_PieChart.resx">
+      <DependentUpon>UC_PQC_PieChart.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
