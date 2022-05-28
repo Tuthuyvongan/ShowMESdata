@@ -147,9 +147,9 @@ namespace SMESData.View
                 lbOP2.Text = "OUTPUT: " + dataL02[0].ToString() + "%";
                 lbRW2.Text = "REWORK: " + dataL02[1].ToString() + "%";
                 lbNG2.Text = "NO GOOD: " + dataL02[2].ToString() + "%";
-                lbOP2.Font = new Font("Times New Roman", 10, FontStyle.Regular);
-                lbRW2.Font = new Font("Times New Roman", 10, FontStyle.Regular);
-                lbNG2.Font = new Font("Times New Roman", 10, FontStyle.Regular);
+                lbOP2.Font = new Font("Times New Roman", 10, FontStyle.Bold);
+                lbRW2.Font = new Font("Times New Roman", 10, FontStyle.Bold);
+                lbNG2.Font = new Font("Times New Roman", 10, FontStyle.Bold);
             }
 
             if (dataL03[0] == 0 && dataL03[1] == 0 && dataL03[2] == 0)
@@ -191,9 +191,9 @@ namespace SMESData.View
                 lbOP4.Text = "OUTPUT: " + dataL04[0].ToString() + "%";
                 lbRW4.Text = "REWORK: " + dataL04[1].ToString() + "%";
                 lbNG4.Text = "NO GOOD: " + dataL04[2].ToString() + "%";
-                lbOP4.Font = new Font("Times New Roman", 10, FontStyle.Regular);
-                lbRW4.Font = new Font("Times New Roman", 10, FontStyle.Regular);
-                lbNG4.Font = new Font("Times New Roman", 10, FontStyle.Regular);
+                lbOP4.Font = new Font("Times New Roman", 10, FontStyle.Bold);
+                lbRW4.Font = new Font("Times New Roman", 10, FontStyle.Bold);
+                lbNG4.Font = new Font("Times New Roman", 10, FontStyle.Bold);
             }
 
             if (dataL05[0] == 0 && dataL05[1] == 0 && dataL05[2] == 0)
@@ -213,9 +213,9 @@ namespace SMESData.View
                 lbOP5.Text = "OUTPUT: " + dataL05[0].ToString() + "%";
                 lbRW5.Text = "REWORK: " + dataL05[1].ToString() + "%";
                 lbNG5.Text = "NO GOOD: " + dataL05[2].ToString() + "%";
-                lbOP5.Font = new Font("Times New Roman", 10, FontStyle.Regular);
-                lbRW5.Font = new Font("Times New Roman", 10, FontStyle.Regular);
-                lbNG5.Font = new Font("Times New Roman", 10, FontStyle.Regular);
+                lbOP5.Font = new Font("Times New Roman", 10, FontStyle.Bold);
+                lbRW5.Font = new Font("Times New Roman", 10, FontStyle.Bold);
+                lbNG5.Font = new Font("Times New Roman", 10, FontStyle.Bold);
             }
 
             if (dataL06[0] == 0 && dataL06[1] == 0 && dataL06[2] == 0)
@@ -235,9 +235,9 @@ namespace SMESData.View
                 lbOP6.Text = "OUTPUT: " + dataL06[0].ToString() + "%";
                 lbRW6.Text = "REWORK: " + dataL06[1].ToString() + "%";
                 lbNG6.Text = "NO GOOD: " + dataL06[2].ToString() + "%";
-                lbOP6.Font = new Font("Times New Roman", 10, FontStyle.Regular);
-                lbRW6.Font = new Font("Times New Roman", 10, FontStyle.Regular);
-                lbNG6.Font = new Font("Times New Roman", 10, FontStyle.Regular);
+                lbOP6.Font = new Font("Times New Roman", 10, FontStyle.Bold);
+                lbRW6.Font = new Font("Times New Roman", 10, FontStyle.Bold);
+                lbNG6.Font = new Font("Times New Roman", 10, FontStyle.Bold);
             }
 
             if (dataL07[0] == 0 && dataL07[1] == 0 && dataL07[2] == 0)
@@ -257,9 +257,9 @@ namespace SMESData.View
                 lbOP7.Text = "OUTPUT: " + dataL07[0].ToString() + "%";
                 lbRW7.Text = "REWORK: " + dataL07[1].ToString() + "%";
                 lbNG7.Text = "NO GOOD: " + dataL07[2].ToString() + "%";
-                lbOP7.Font = new Font("Times New Roman", 10, FontStyle.Regular);
-                lbRW7.Font = new Font("Times New Roman", 10, FontStyle.Regular);
-                lbNG7.Font = new Font("Times New Roman", 10, FontStyle.Regular);
+                lbOP7.Font = new Font("Times New Roman", 10, FontStyle.Bold);
+                lbRW7.Font = new Font("Times New Roman", 10, FontStyle.Bold);
+                lbNG7.Font = new Font("Times New Roman", 10, FontStyle.Bold);
             }
             //Target Canvas
             L01Chart.TargetCanvas = linePCanvas1;
@@ -313,7 +313,7 @@ namespace SMESData.View
             linePCanvas5.Labels = remark;
             linePCanvas6.Labels = remark;
             linePCanvas7.Labels = remark;
-           
+            
             //List Colors
             List<Color> bgColors = new List<Color>();
             bgColors.Add(Color.DodgerBlue);
