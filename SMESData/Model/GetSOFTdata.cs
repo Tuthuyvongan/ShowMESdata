@@ -26,15 +26,13 @@ namespace SMESData
             for (int i = 0; i < cbx.Items.Count; i++)
             {
                 temp = cbx.Items[i].ToString().Split(';');
-                if (temp[4] == "" )
-                {
-                    s = 1;
-                }
-                else
+                if (temp.Length > 4)
                 {
                     s += double.Parse(temp[4]);
                 }
             }
+            if (s == 0)
+                s = 1;
             return s;
         }
         public static double getTotalRemark(string line, string remark, string date)
@@ -46,7 +44,7 @@ namespace SMESData
             sqlGetData.Append("select SUM(CASE WHEN line = '" + line + "' and remark = '" + remark + "' and inspectdate = '" + date + "' THEN Cast(data as numeric(10,0)) END) ");            
             sqlGetData.Append("from m_ERPMQC_REALTIME");
             temp = sqlSOFTCon.sqlExecuteScalarString(sqlGetData.ToString());
-            if (temp == string.Empty)
+            if (temp == string.Empty || temp == "" || temp == null)
             {
                 s = 0;
             }
@@ -69,33 +67,42 @@ namespace SMESData
             for (int i = 0; i < cbx.Items.Count; i++)
             {
                 temp = cbx.Items[i].ToString().Split(';');
-                if (temp[4] == "")
-                {
-                    s = 1;
-                }
-                else
+                if (temp.Length > 4)
                 {
                     s += double.Parse(temp[4]);
-                }
+                }    
             }
+            if (s == 0)
+                s = 1;
             return s;
         }
         public static double getTotalAttributeType(string line, string type, string date)
         {
             sqlSOFTCon sqlSOFTCon = new sqlSOFTCon();
             StringBuilder sqlGetData = new StringBuilder();
-            double s;
+            ComboBox cbx = new ComboBox();
+            double s = 0;
             string temp;
             sqlGetData.Append("select SUM(CASE WHEN Line = '" + line + "' and AttributeType = '" + type + "' and InspectDateTime like '%" + date + "%' THEN Cast(Quantity as numeric(10,0)) END) ");
-            sqlGetData.Append("from ProcessHistory.PQCMesData");
-            temp = sqlSOFTCon.sqlExecuteScalarString(sqlGetData.ToString());
-            if (temp == string.Empty)
+            sqlGetData.Append("from ProcessHistory.PQCMesData ");
+            sqlGetData.Append("UNION ALL ");
+            sqlGetData.Append("select SUM(CASE WHEN Line = '" + line + "' and AttributeType = '" + type + "' and InspectDateTime like '%" + date + "%' THEN Cast(Quantity as numeric(10,0)) END) ");
+            sqlGetData.Append("from ProcessHistory.PQCMesDataBackup");
+            sqlSOFTCon.getComboBoxData(sqlGetData.ToString(), ref cbx);
+            for (int i = 0; i < cbx.Items.Count; i++)
             {
-                s = 0;
+                temp = cbx.Items[i].ToString();
+                if (temp == string.Empty || temp == "" || temp == null)
+                {
+                    s = s + 0;
+                }
+                else
+                {
+                    s += double.Parse(temp);
+                }    
+                    
             }
-            else
-                s = double.Parse(temp);
             return s;
-        }
+        }        
     }
 }
