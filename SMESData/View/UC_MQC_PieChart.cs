@@ -351,6 +351,7 @@ namespace SMESData.View
             dataL06.Clear();
             dataL07.Clear();
             renderPiechart();
+            Thread.Sleep(500);
             t.Abort();
         }
         public void splash()
@@ -384,6 +385,7 @@ namespace SMESData.View
                     dataL06.Clear();
                     dataL07.Clear();
                     renderPiechart();
+                    Thread.Sleep(500);
                     t.Abort();
                     timer1.Stop();
                     UpdateTime();
