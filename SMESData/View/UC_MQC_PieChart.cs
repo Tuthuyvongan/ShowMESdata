@@ -30,6 +30,7 @@ namespace SMESData.View
             timer1.Start();
             startTime = DateTime.Now;
             btStart.Enabled = false;
+            pnTimeControl.Enabled = false;
         }
         //List data
         List<double> dataL01 = new List<double>();

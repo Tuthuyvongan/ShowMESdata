@@ -29,6 +29,7 @@ namespace SMESData.View
             timer1.Start();
             startTime = DateTime.Now;
             btStart.Enabled = false;
+            pnTimeControl.Enabled = false;
         }
         //List data
         List<double> dataL01 = new List<double>();
@@ -39,7 +40,7 @@ namespace SMESData.View
         List<double> dataL06 = new List<double>();
         List<double> dataL07 = new List<double>();
         //
-        private int secondsToWait = 10;
+        public int secondsToWait = 10;
         private DateTime startTime;
 
         public void lineData()

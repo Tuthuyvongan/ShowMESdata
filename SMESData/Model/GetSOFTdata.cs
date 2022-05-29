@@ -62,6 +62,11 @@ namespace SMESData
             sqlGetData.Append("select distinct POCode ");
             sqlGetData.Append("from ProcessHistory.PQCMesData ");
             sqlGetData.Append("where Line = '" + line + "' ");
+            sqlGetData.Append("and InspectDateTime like '%" + date + "%' ");
+            sqlGetData.Append("UNION ALL ");
+            sqlGetData.Append("select distinct POCode ");
+            sqlGetData.Append("from ProcessHistory.PQCMesDataBackup ");
+            sqlGetData.Append("where Line = '" + line + "' ");
             sqlGetData.Append("and InspectDateTime like '%" + date + "%'");
             sqlSOFTCon.getComboBoxData(sqlGetData.ToString(), ref cbx);
             for (int i = 0; i < cbx.Items.Count; i++)
