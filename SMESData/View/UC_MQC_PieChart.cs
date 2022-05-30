@@ -22,17 +22,19 @@ namespace SMESData.View
         private void UC_MQC_PieChart_Load(object sender, EventArgs e)
         {
             // Date time format
-            dtpChart.CustomFormat = "yyyy-MM-dd";
-            dtpChart.Format = DateTimePickerFormat.Custom;
-            dtpChart.Enabled = false;
-            renderPiechart();
+            dtpChart.Value = DateTime.Today;
+            dtpChart.CustomFormat = "dd-MM-yyyy";
+            dtpChart.Format = DateTimePickerFormat.Custom;           
+            dtpChart.Enabled = false;            
+            dtpChart.ValueChanged += new EventHandler(dtpChart_ValueChanged);
+            renderPiechart();            
             //
             lblTime.Font = new Font("Times New Roman", 14, FontStyle.Bold);
             //Timer          
             timer1.Start();
             startTime = DateTime.Now;
             btStart.Enabled = false;
-            pnTimeControl.Enabled = false;           
+            pnTimeControl.Enabled = false;
         }
         //List data
         List<double> dataL01 = new List<double>();
@@ -48,7 +50,7 @@ namespace SMESData.View
 
         public void lineData()
         {
-            string date = dtpChart.Text.ToString();
+            string date = dtpChart.Value.ToString("yyyy-MM-dd");
             string [] remark = { "OP", "RW", "NG" };
             double d;
             double temp;
@@ -137,9 +139,12 @@ namespace SMESData.View
                 lbOP1.BackColor = Color.DodgerBlue;
                 lbRW1.BackColor = Color.Orange;
                 lbNG1.BackColor = Color.Red;
-                lbOP1.Text = "OUTPUT: " + dataL02[0].ToString() + "%";
-                lbRW1.Text = "REWORK: " + dataL02[1].ToString() + "%";
-                lbNG1.Text = "NO GOOD: " + dataL02[2].ToString() + "%";
+                lbOP1.Text = "OUTPUT: " + dataL01[0].ToString() + "%";
+                lbRW1.Text = "REWORK: " + dataL01[1].ToString() + "%";
+                lbNG1.Text = "NO GOOD: " + dataL01[2].ToString() + "%";
+                lbOP1.Font = new Font("Times New Roman", 10, FontStyle.Bold);
+                lbRW1.Font = new Font("Times New Roman", 10, FontStyle.Bold);
+                lbNG1.Font = new Font("Times New Roman", 10, FontStyle.Bold);
             }
             //Add legends L02
             if (dataL02[0] == 0 && dataL02[1] == 0 && dataL02[2] == 0)
@@ -343,7 +348,7 @@ namespace SMESData.View
         private void dtpChart_ValueChanged(object sender, EventArgs e)
         {
             Thread t = new Thread(new ThreadStart(splash));
-            t.Start();           
+            t.Start();
             dtpChart.Visible = false;
             dataL01.Clear();
             dataL02.Clear();

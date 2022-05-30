@@ -1183,8 +1183,7 @@ namespace SMESData.View
             this.dtpChart.Name = "dtpChart";
             this.dtpChart.Size = new System.Drawing.Size(150, 32);
             this.dtpChart.TabIndex = 20;
-            this.dtpChart.Value = new System.DateTime(2022, 5, 28, 0, 0, 0, 0);
-            this.dtpChart.ValueChanged += new System.EventHandler(this.dtpChart_ValueChanged);
+            this.dtpChart.Value = new System.DateTime(2022, 5, 30, 11, 53, 29, 0);
             // 
             // timer1
             // 

@@ -62,12 +62,12 @@ namespace SMESData
             sqlGetData.Append("select distinct POCode ");
             sqlGetData.Append("from ProcessHistory.PQCMesData ");
             sqlGetData.Append("where Line = '" + line + "' ");
-            sqlGetData.Append("and InspectDateTime like '%" + date + "%' ");
-            sqlGetData.Append("UNION ALL ");
-            sqlGetData.Append("select distinct POCode ");
-            sqlGetData.Append("from ProcessHistory.PQCMesDataBackup ");
-            sqlGetData.Append("where Line = '" + line + "' ");
             sqlGetData.Append("and InspectDateTime like '%" + date + "%'");
+            //sqlGetData.Append("UNION ALL ");
+            //sqlGetData.Append("select distinct POCode ");
+            //sqlGetData.Append("from ProcessHistory.PQCMesDataBackup ");
+            //sqlGetData.Append("where Line = '" + line + "' ");
+            //sqlGetData.Append("and InspectDateTime like '%" + date + "%'");
             sqlSOFTCon.getComboBoxData(sqlGetData.ToString(), ref cbx);
             for (int i = 0; i < cbx.Items.Count; i++)
             {
@@ -81,33 +81,50 @@ namespace SMESData
                 s = 1;
             return s;
         }
+        //public static double getTotalAttributeType(string line, string type, string date)
+        //{
+        //    sqlSOFTCon sqlSOFTCon = new sqlSOFTCon();
+        //    StringBuilder sqlGetData = new StringBuilder();
+        //    ComboBox cbx = new ComboBox();
+        //    double s = 0;
+        //    string temp;
+        //    sqlGetData.Append("select SUM(CASE WHEN Line = '" + line + "' and AttributeType = '" + type + "' and InspectDateTime like '%" + date + "%' THEN Cast(Quantity as numeric(10,0)) END) ");
+        //    sqlGetData.Append("from ProcessHistory.PQCMesData");
+        //    //sqlGetData.Append("UNION ALL ");
+        //    //sqlGetData.Append("select SUM(CASE WHEN Line = '" + line + "' and AttributeType = '" + type + "' and InspectDateTime like '%" + date + "%' THEN Cast(Quantity as numeric(10,0)) END) ");
+        //    //sqlGetData.Append("from ProcessHistory.PQCMesDataBackup");
+        //    sqlSOFTCon.getComboBoxData(sqlGetData.ToString(), ref cbx);
+        //    for (int i = 0; i < cbx.Items.Count; i++)
+        //    {
+        //        temp = cbx.Items[i].ToString();
+        //        if (temp == string.Empty || temp == "" || temp == null)
+        //        {
+        //            s = s + 0;
+        //        }
+        //        else
+        //        {
+        //            s += double.Parse(temp);
+        //        }    
+                    
+        //    }
+        //    return s;
+        //}
         public static double getTotalAttributeType(string line, string type, string date)
         {
             sqlSOFTCon sqlSOFTCon = new sqlSOFTCon();
             StringBuilder sqlGetData = new StringBuilder();
-            ComboBox cbx = new ComboBox();
-            double s = 0;
+            double s;
             string temp;
             sqlGetData.Append("select SUM(CASE WHEN Line = '" + line + "' and AttributeType = '" + type + "' and InspectDateTime like '%" + date + "%' THEN Cast(Quantity as numeric(10,0)) END) ");
-            sqlGetData.Append("from ProcessHistory.PQCMesData ");
-            sqlGetData.Append("UNION ALL ");
-            sqlGetData.Append("select SUM(CASE WHEN Line = '" + line + "' and AttributeType = '" + type + "' and InspectDateTime like '%" + date + "%' THEN Cast(Quantity as numeric(10,0)) END) ");
-            sqlGetData.Append("from ProcessHistory.PQCMesDataBackup");
-            sqlSOFTCon.getComboBoxData(sqlGetData.ToString(), ref cbx);
-            for (int i = 0; i < cbx.Items.Count; i++)
+            sqlGetData.Append("from ProcessHistory.PQCMesData");
+            temp = sqlSOFTCon.sqlExecuteScalarString(sqlGetData.ToString());
+            if (temp == string.Empty || temp == "" || temp == null)
             {
-                temp = cbx.Items[i].ToString();
-                if (temp == string.Empty || temp == "" || temp == null)
-                {
-                    s = s + 0;
-                }
-                else
-                {
-                    s += double.Parse(temp);
-                }    
-                    
+                s = 0;
             }
+            else
+                s = double.Parse(temp);
             return s;
-        }        
+        }
     }
 }
