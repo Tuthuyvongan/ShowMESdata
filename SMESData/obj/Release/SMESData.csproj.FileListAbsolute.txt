@@ -112,7 +112,6 @@ C:\Users\admin\Documents\GitHub\ShowMESdata\SMESData\bin\Release\System.Memory.x
 C:\Users\admin\Documents\GitHub\ShowMESdata\SMESData\bin\Release\System.Numerics.Vectors.xml
 C:\Users\admin\Documents\GitHub\ShowMESdata\SMESData\bin\Release\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\admin\Documents\GitHub\ShowMESdata\SMESData\bin\Release\System.Threading.Tasks.Extensions.xml
-C:\Users\admin\Documents\GitHub\ShowMESdata\SMESData\obj\Release\SMESData.csproj.AssemblyReference.cache
 C:\Users\admin\Documents\GitHub\ShowMESdata\SMESData\obj\Release\SMESData.MainForm.resources
 C:\Users\admin\Documents\GitHub\ShowMESdata\SMESData\obj\Release\SMESData.Properties.Resources.resources
 C:\Users\admin\Documents\GitHub\ShowMESdata\SMESData\obj\Release\SMESData.View.MessageWaitForm.resources

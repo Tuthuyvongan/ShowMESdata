@@ -16,7 +16,7 @@ namespace SMESData.View
     {
         public UC_MQC_PieChart()
         {
-            InitializeComponent();           
+            InitializeComponent();
         }
 
         private void UC_MQC_PieChart_Load(object sender, EventArgs e)
@@ -361,7 +361,11 @@ namespace SMESData.View
             Application.Run(new MessageWaitForm());
         }
         public void UpdateTime()
-        {           
+        {
+            btStart.Enabled = false;
+            btStop.Enabled = true;
+            dtpChart.Enabled = false;
+            pnTimeControl.Enabled = false;
             timer1.Start();
             startTime = DateTime.Now;
             lblTime.Visible = true;
@@ -411,11 +415,7 @@ namespace SMESData.View
                 timer1.Stop();
         }      
         private void btStart_Click(object sender, EventArgs e)
-        {
-            btStart.Enabled = false;
-            btStop.Enabled = true;
-            dtpChart.Enabled = false;
-            pnTimeControl.Enabled = false;
+        {           
             UpdateTime();
         }
         private void btStop_Click(object sender, EventArgs e)

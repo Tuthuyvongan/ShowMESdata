@@ -362,6 +362,10 @@ namespace SMESData.View
         }
         public void UpdateTime()
         {
+            btStart.Enabled = false;
+            btStop.Enabled = true;
+            dtpChart.Enabled = false;
+            pnTimeControl.Enabled = false;
             timer1.Start();
             startTime = DateTime.Now;
             lblTime.Visible = true;
@@ -412,10 +416,6 @@ namespace SMESData.View
         }
         private void btStart_Click(object sender, EventArgs e)
         {
-            btStart.Enabled = false;           
-            btStop.Enabled = true;
-            dtpChart.Enabled = false;
-            pnTimeControl.Enabled = false;
             UpdateTime();       
         }
         private void btStop_Click(object sender, EventArgs e)
