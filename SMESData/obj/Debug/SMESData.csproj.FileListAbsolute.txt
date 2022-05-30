@@ -69,7 +69,6 @@ C:\Users\admin\Documents\GitHub\ShowMESdata\SMESData\bin\Debug\Bunifu.UI.WinForm
 C:\Users\admin\Documents\GitHub\ShowMESdata\SMESData\bin\Debug\Bunifu.UI.WinForms.BunifuToolTip.xml
 C:\Users\admin\Documents\GitHub\ShowMESdata\SMESData\bin\Debug\Bunifu.UI.WinForms.BunifuTransition.xml
 C:\Users\admin\Documents\GitHub\ShowMESdata\SMESData\bin\Debug\Bunifu.UI.WinForms.BunifuUserControl.xml
-C:\Users\admin\Documents\GitHub\ShowMESdata\SMESData\obj\Debug\SMESData.csproj.AssemblyReference.cache
 C:\Users\admin\Documents\GitHub\ShowMESdata\SMESData\obj\Debug\SMESData.MainForm.resources
 C:\Users\admin\Documents\GitHub\ShowMESdata\SMESData\obj\Debug\SMESData.Properties.Resources.resources
 C:\Users\admin\Documents\GitHub\ShowMESdata\SMESData\obj\Debug\SMESData.csproj.GenerateResource.cache

@@ -31,8 +31,8 @@ namespace SMESData.View
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_MQC_PieChart));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges21 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges22 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.linePCanvas1 = new Bunifu.Charts.WinForms.BunifuChartCanvas();
             this.dtpChart = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.L01Chart = new Bunifu.Charts.WinForms.ChartTypes.BunifuPieChart(this.components);
@@ -126,7 +126,7 @@ namespace SMESData.View
             this.linePCanvas1.LegendRevese = false;
             this.linePCanvas1.LegendRTL = false;
             this.linePCanvas1.Location = new System.Drawing.Point(7, 3);
-            this.linePCanvas1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.linePCanvas1.Margin = new System.Windows.Forms.Padding(4);
             this.linePCanvas1.Name = "linePCanvas1";
             this.linePCanvas1.ShowXAxis = true;
             this.linePCanvas1.ShowYAxis = true;
@@ -192,7 +192,7 @@ namespace SMESData.View
             this.dtpChart.Margin = new System.Windows.Forms.Padding(2);
             this.dtpChart.MinimumSize = new System.Drawing.Size(4, 32);
             this.dtpChart.Name = "dtpChart";
-            this.dtpChart.Size = new System.Drawing.Size(150, 34);
+            this.dtpChart.Size = new System.Drawing.Size(150, 32);
             this.dtpChart.TabIndex = 7;
             this.dtpChart.Value = new System.DateTime(2022, 5, 28, 0, 0, 0, 0);
             this.dtpChart.ValueChanged += new System.EventHandler(this.dtpChart_ValueChanged);
@@ -299,7 +299,7 @@ namespace SMESData.View
             this.linePCanvas2.LegendRevese = false;
             this.linePCanvas2.LegendRTL = false;
             this.linePCanvas2.Location = new System.Drawing.Point(7, 3);
-            this.linePCanvas2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.linePCanvas2.Margin = new System.Windows.Forms.Padding(4);
             this.linePCanvas2.Name = "linePCanvas2";
             this.linePCanvas2.ShowXAxis = false;
             this.linePCanvas2.ShowYAxis = false;
@@ -366,7 +366,7 @@ namespace SMESData.View
             this.lb1.Location = new System.Drawing.Point(266, 211);
             this.lb1.Name = "lb1";
             this.lb1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lb1.Size = new System.Drawing.Size(57, 38);
+            this.lb1.Size = new System.Drawing.Size(46, 31);
             this.lb1.TabIndex = 13;
             this.lb1.Text = "L01";
             this.lb1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -382,7 +382,7 @@ namespace SMESData.View
             this.lbNG1.Margin = new System.Windows.Forms.Padding(2);
             this.lbNG1.Name = "lbNG1";
             this.lbNG1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbNG1.Size = new System.Drawing.Size(86, 20);
+            this.lbNG1.Size = new System.Drawing.Size(69, 15);
             this.lbNG1.TabIndex = 12;
             this.lbNG1.Text = "bunifuLabel3";
             this.lbNG1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -399,7 +399,7 @@ namespace SMESData.View
             this.lbRW1.Margin = new System.Windows.Forms.Padding(2);
             this.lbRW1.Name = "lbRW1";
             this.lbRW1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbRW1.Size = new System.Drawing.Size(86, 20);
+            this.lbRW1.Size = new System.Drawing.Size(69, 15);
             this.lbRW1.TabIndex = 11;
             this.lbRW1.Text = "bunifuLabel2";
             this.lbRW1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -416,7 +416,7 @@ namespace SMESData.View
             this.lbOP1.Margin = new System.Windows.Forms.Padding(2);
             this.lbOP1.Name = "lbOP1";
             this.lbOP1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbOP1.Size = new System.Drawing.Size(86, 20);
+            this.lbOP1.Size = new System.Drawing.Size(69, 15);
             this.lbOP1.TabIndex = 10;
             this.lbOP1.Text = "bunifuLabel1";
             this.lbOP1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -446,7 +446,7 @@ namespace SMESData.View
             this.lb2.Location = new System.Drawing.Point(264, 211);
             this.lb2.Name = "lb2";
             this.lb2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lb2.Size = new System.Drawing.Size(57, 38);
+            this.lb2.Size = new System.Drawing.Size(46, 31);
             this.lb2.TabIndex = 14;
             this.lb2.Text = "L02";
             this.lb2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -462,7 +462,7 @@ namespace SMESData.View
             this.lbOP2.Margin = new System.Windows.Forms.Padding(2);
             this.lbOP2.Name = "lbOP2";
             this.lbOP2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbOP2.Size = new System.Drawing.Size(86, 20);
+            this.lbOP2.Size = new System.Drawing.Size(69, 15);
             this.lbOP2.TabIndex = 10;
             this.lbOP2.Text = "bunifuLabel1";
             this.lbOP2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -478,7 +478,7 @@ namespace SMESData.View
             this.lbRW2.Margin = new System.Windows.Forms.Padding(2);
             this.lbRW2.Name = "lbRW2";
             this.lbRW2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbRW2.Size = new System.Drawing.Size(86, 20);
+            this.lbRW2.Size = new System.Drawing.Size(69, 15);
             this.lbRW2.TabIndex = 11;
             this.lbRW2.Text = "bunifuLabel2";
             this.lbRW2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -494,7 +494,7 @@ namespace SMESData.View
             this.lbNG2.Margin = new System.Windows.Forms.Padding(2);
             this.lbNG2.Name = "lbNG2";
             this.lbNG2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbNG2.Size = new System.Drawing.Size(86, 20);
+            this.lbNG2.Size = new System.Drawing.Size(69, 15);
             this.lbNG2.TabIndex = 12;
             this.lbNG2.Text = "bunifuLabel3";
             this.lbNG2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -524,7 +524,7 @@ namespace SMESData.View
             this.lb3.Location = new System.Drawing.Point(263, 211);
             this.lb3.Name = "lb3";
             this.lb3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lb3.Size = new System.Drawing.Size(57, 38);
+            this.lb3.Size = new System.Drawing.Size(46, 31);
             this.lb3.TabIndex = 15;
             this.lb3.Text = "L03";
             this.lb3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -548,7 +548,7 @@ namespace SMESData.View
             this.linePCanvas3.LegendRevese = false;
             this.linePCanvas3.LegendRTL = false;
             this.linePCanvas3.Location = new System.Drawing.Point(7, 4);
-            this.linePCanvas3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.linePCanvas3.Margin = new System.Windows.Forms.Padding(4);
             this.linePCanvas3.Name = "linePCanvas3";
             this.linePCanvas3.ShowXAxis = false;
             this.linePCanvas3.ShowYAxis = false;
@@ -600,7 +600,7 @@ namespace SMESData.View
             this.lbOP3.Margin = new System.Windows.Forms.Padding(2);
             this.lbOP3.Name = "lbOP3";
             this.lbOP3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbOP3.Size = new System.Drawing.Size(86, 20);
+            this.lbOP3.Size = new System.Drawing.Size(69, 15);
             this.lbOP3.TabIndex = 13;
             this.lbOP3.Text = "bunifuLabel1";
             this.lbOP3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -616,7 +616,7 @@ namespace SMESData.View
             this.lbRW3.Margin = new System.Windows.Forms.Padding(2);
             this.lbRW3.Name = "lbRW3";
             this.lbRW3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbRW3.Size = new System.Drawing.Size(86, 20);
+            this.lbRW3.Size = new System.Drawing.Size(69, 15);
             this.lbRW3.TabIndex = 14;
             this.lbRW3.Text = "bunifuLabel2";
             this.lbRW3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -632,7 +632,7 @@ namespace SMESData.View
             this.lbNG3.Margin = new System.Windows.Forms.Padding(2);
             this.lbNG3.Name = "lbNG3";
             this.lbNG3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbNG3.Size = new System.Drawing.Size(86, 20);
+            this.lbNG3.Size = new System.Drawing.Size(69, 15);
             this.lbNG3.TabIndex = 15;
             this.lbNG3.Text = "bunifuLabel3";
             this.lbNG3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -662,7 +662,7 @@ namespace SMESData.View
             this.lb4.Location = new System.Drawing.Point(266, 214);
             this.lb4.Name = "lb4";
             this.lb4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lb4.Size = new System.Drawing.Size(57, 38);
+            this.lb4.Size = new System.Drawing.Size(46, 31);
             this.lb4.TabIndex = 26;
             this.lb4.Text = "L04";
             this.lb4.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -685,7 +685,7 @@ namespace SMESData.View
             this.linePCanvas4.LegendRevese = false;
             this.linePCanvas4.LegendRTL = false;
             this.linePCanvas4.Location = new System.Drawing.Point(7, 3);
-            this.linePCanvas4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.linePCanvas4.Margin = new System.Windows.Forms.Padding(4);
             this.linePCanvas4.Name = "linePCanvas4";
             this.linePCanvas4.ShowXAxis = false;
             this.linePCanvas4.ShowYAxis = false;
@@ -737,7 +737,7 @@ namespace SMESData.View
             this.lbOP4.Margin = new System.Windows.Forms.Padding(2);
             this.lbOP4.Name = "lbOP4";
             this.lbOP4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbOP4.Size = new System.Drawing.Size(86, 20);
+            this.lbOP4.Size = new System.Drawing.Size(69, 15);
             this.lbOP4.TabIndex = 16;
             this.lbOP4.Text = "bunifuLabel1";
             this.lbOP4.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -753,7 +753,7 @@ namespace SMESData.View
             this.lbNG4.Margin = new System.Windows.Forms.Padding(2);
             this.lbNG4.Name = "lbNG4";
             this.lbNG4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbNG4.Size = new System.Drawing.Size(86, 20);
+            this.lbNG4.Size = new System.Drawing.Size(69, 15);
             this.lbNG4.TabIndex = 18;
             this.lbNG4.Text = "bunifuLabel3";
             this.lbNG4.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -769,7 +769,7 @@ namespace SMESData.View
             this.lbRW4.Margin = new System.Windows.Forms.Padding(2);
             this.lbRW4.Name = "lbRW4";
             this.lbRW4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbRW4.Size = new System.Drawing.Size(86, 20);
+            this.lbRW4.Size = new System.Drawing.Size(69, 15);
             this.lbRW4.TabIndex = 17;
             this.lbRW4.Text = "bunifuLabel2";
             this.lbRW4.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -799,7 +799,7 @@ namespace SMESData.View
             this.lb5.Location = new System.Drawing.Point(264, 214);
             this.lb5.Name = "lb5";
             this.lb5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lb5.Size = new System.Drawing.Size(57, 38);
+            this.lb5.Size = new System.Drawing.Size(46, 31);
             this.lb5.TabIndex = 25;
             this.lb5.Text = "L05";
             this.lb5.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -822,7 +822,7 @@ namespace SMESData.View
             this.linePCanvas5.LegendRevese = false;
             this.linePCanvas5.LegendRTL = false;
             this.linePCanvas5.Location = new System.Drawing.Point(7, 3);
-            this.linePCanvas5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.linePCanvas5.Margin = new System.Windows.Forms.Padding(4);
             this.linePCanvas5.Name = "linePCanvas5";
             this.linePCanvas5.ShowXAxis = false;
             this.linePCanvas5.ShowYAxis = false;
@@ -874,7 +874,7 @@ namespace SMESData.View
             this.lbOP5.Margin = new System.Windows.Forms.Padding(2);
             this.lbOP5.Name = "lbOP5";
             this.lbOP5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbOP5.Size = new System.Drawing.Size(86, 20);
+            this.lbOP5.Size = new System.Drawing.Size(69, 15);
             this.lbOP5.TabIndex = 19;
             this.lbOP5.Text = "bunifuLabel1";
             this.lbOP5.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -890,7 +890,7 @@ namespace SMESData.View
             this.lbRW5.Margin = new System.Windows.Forms.Padding(2);
             this.lbRW5.Name = "lbRW5";
             this.lbRW5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbRW5.Size = new System.Drawing.Size(86, 20);
+            this.lbRW5.Size = new System.Drawing.Size(69, 15);
             this.lbRW5.TabIndex = 20;
             this.lbRW5.Text = "bunifuLabel2";
             this.lbRW5.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -906,7 +906,7 @@ namespace SMESData.View
             this.lbNG5.Margin = new System.Windows.Forms.Padding(2);
             this.lbNG5.Name = "lbNG5";
             this.lbNG5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbNG5.Size = new System.Drawing.Size(86, 20);
+            this.lbNG5.Size = new System.Drawing.Size(69, 15);
             this.lbNG5.TabIndex = 21;
             this.lbNG5.Text = "bunifuLabel3";
             this.lbNG5.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -936,7 +936,7 @@ namespace SMESData.View
             this.lb6.Location = new System.Drawing.Point(263, 214);
             this.lb6.Name = "lb6";
             this.lb6.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lb6.Size = new System.Drawing.Size(57, 38);
+            this.lb6.Size = new System.Drawing.Size(46, 31);
             this.lb6.TabIndex = 16;
             this.lb6.Text = "L06";
             this.lb6.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -959,7 +959,7 @@ namespace SMESData.View
             this.linePCanvas6.LegendRevese = false;
             this.linePCanvas6.LegendRTL = false;
             this.linePCanvas6.Location = new System.Drawing.Point(7, 3);
-            this.linePCanvas6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.linePCanvas6.Margin = new System.Windows.Forms.Padding(4);
             this.linePCanvas6.Name = "linePCanvas6";
             this.linePCanvas6.ShowXAxis = false;
             this.linePCanvas6.ShowYAxis = false;
@@ -1011,7 +1011,7 @@ namespace SMESData.View
             this.lbOP6.Margin = new System.Windows.Forms.Padding(2);
             this.lbOP6.Name = "lbOP6";
             this.lbOP6.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbOP6.Size = new System.Drawing.Size(86, 20);
+            this.lbOP6.Size = new System.Drawing.Size(69, 15);
             this.lbOP6.TabIndex = 22;
             this.lbOP6.Text = "bunifuLabel1";
             this.lbOP6.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -1027,7 +1027,7 @@ namespace SMESData.View
             this.lbRW6.Margin = new System.Windows.Forms.Padding(2);
             this.lbRW6.Name = "lbRW6";
             this.lbRW6.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbRW6.Size = new System.Drawing.Size(86, 20);
+            this.lbRW6.Size = new System.Drawing.Size(69, 15);
             this.lbRW6.TabIndex = 23;
             this.lbRW6.Text = "bunifuLabel2";
             this.lbRW6.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -1043,7 +1043,7 @@ namespace SMESData.View
             this.lbNG6.Margin = new System.Windows.Forms.Padding(2);
             this.lbNG6.Name = "lbNG6";
             this.lbNG6.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbNG6.Size = new System.Drawing.Size(86, 20);
+            this.lbNG6.Size = new System.Drawing.Size(69, 15);
             this.lbNG6.TabIndex = 24;
             this.lbNG6.Text = "bunifuLabel3";
             this.lbNG6.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -1073,7 +1073,7 @@ namespace SMESData.View
             this.lb7.Location = new System.Drawing.Point(266, 216);
             this.lb7.Name = "lb7";
             this.lb7.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lb7.Size = new System.Drawing.Size(57, 38);
+            this.lb7.Size = new System.Drawing.Size(46, 31);
             this.lb7.TabIndex = 27;
             this.lb7.Text = "L07";
             this.lb7.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -1089,7 +1089,7 @@ namespace SMESData.View
             this.lbOP7.Margin = new System.Windows.Forms.Padding(2);
             this.lbOP7.Name = "lbOP7";
             this.lbOP7.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbOP7.Size = new System.Drawing.Size(86, 20);
+            this.lbOP7.Size = new System.Drawing.Size(69, 15);
             this.lbOP7.TabIndex = 19;
             this.lbOP7.Text = "bunifuLabel1";
             this.lbOP7.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -1105,7 +1105,7 @@ namespace SMESData.View
             this.lbNG7.Margin = new System.Windows.Forms.Padding(2);
             this.lbNG7.Name = "lbNG7";
             this.lbNG7.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbNG7.Size = new System.Drawing.Size(86, 20);
+            this.lbNG7.Size = new System.Drawing.Size(69, 15);
             this.lbNG7.TabIndex = 21;
             this.lbNG7.Text = "bunifuLabel3";
             this.lbNG7.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -1128,7 +1128,7 @@ namespace SMESData.View
             this.linePCanvas7.LegendRevese = false;
             this.linePCanvas7.LegendRTL = false;
             this.linePCanvas7.Location = new System.Drawing.Point(7, 3);
-            this.linePCanvas7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.linePCanvas7.Margin = new System.Windows.Forms.Padding(4);
             this.linePCanvas7.Name = "linePCanvas7";
             this.linePCanvas7.ShowXAxis = false;
             this.linePCanvas7.ShowYAxis = false;
@@ -1180,7 +1180,7 @@ namespace SMESData.View
             this.lbRW7.Margin = new System.Windows.Forms.Padding(2);
             this.lbRW7.Name = "lbRW7";
             this.lbRW7.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbRW7.Size = new System.Drawing.Size(86, 20);
+            this.lbRW7.Size = new System.Drawing.Size(69, 15);
             this.lbRW7.TabIndex = 20;
             this.lbRW7.Text = "bunifuLabel2";
             this.lbRW7.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -1200,7 +1200,7 @@ namespace SMESData.View
             this.lblTime.Location = new System.Drawing.Point(1253, 73);
             this.lblTime.Name = "lblTime";
             this.lblTime.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblTime.Size = new System.Drawing.Size(18, 25);
+            this.lblTime.Size = new System.Drawing.Size(15, 20);
             this.lblTime.TabIndex = 20;
             this.lblTime.Text = "...";
             this.lblTime.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
@@ -1225,11 +1225,11 @@ namespace SMESData.View
             this.btStop.ColorContrastOnClick = 45;
             this.btStop.ColorContrastOnHover = 45;
             this.btStop.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges21.BottomLeft = true;
-            borderEdges21.BottomRight = true;
-            borderEdges21.TopLeft = true;
-            borderEdges21.TopRight = true;
-            this.btStop.CustomizableEdges = borderEdges21;
+            borderEdges3.BottomLeft = true;
+            borderEdges3.BottomRight = true;
+            borderEdges3.TopLeft = true;
+            borderEdges3.TopRight = true;
+            this.btStop.CustomizableEdges = borderEdges3;
             this.btStop.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btStop.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btStop.DisabledFillColor = System.Drawing.Color.Empty;
@@ -1317,11 +1317,11 @@ namespace SMESData.View
             this.btStart.ColorContrastOnClick = 45;
             this.btStart.ColorContrastOnHover = 45;
             this.btStart.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges22.BottomLeft = true;
-            borderEdges22.BottomRight = true;
-            borderEdges22.TopLeft = true;
-            borderEdges22.TopRight = true;
-            this.btStart.CustomizableEdges = borderEdges22;
+            borderEdges4.BottomLeft = true;
+            borderEdges4.BottomRight = true;
+            borderEdges4.TopLeft = true;
+            borderEdges4.TopRight = true;
+            this.btStart.CustomizableEdges = borderEdges4;
             this.btStart.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btStart.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btStart.DisabledFillColor = System.Drawing.Color.Empty;
@@ -1422,16 +1422,13 @@ namespace SMESData.View
             // lbBox
             // 
             this.lbBox.AllowParentOverrides = false;
-            this.lbBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbBox.AutoEllipsis = true;
             this.lbBox.CursorType = null;
             this.lbBox.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbBox.Location = new System.Drawing.Point(10, 12);
+            this.lbBox.Location = new System.Drawing.Point(24, 15);
             this.lbBox.Name = "lbBox";
             this.lbBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbBox.Size = new System.Drawing.Size(141, 52);
+            this.lbBox.Size = new System.Drawing.Size(114, 44);
             this.lbBox.TabIndex = 6;
             this.lbBox.Text = "Choose Chart \r\nUpdate Time \r\n";
             this.lbBox.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
@@ -1447,7 +1444,7 @@ namespace SMESData.View
             this.lbS.Location = new System.Drawing.Point(83, 172);
             this.lbS.Name = "lbS";
             this.lbS.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbS.Size = new System.Drawing.Size(68, 23);
+            this.lbS.Size = new System.Drawing.Size(55, 19);
             this.lbS.TabIndex = 5;
             this.lbS.Text = "Seconds";
             this.lbS.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -1463,7 +1460,7 @@ namespace SMESData.View
             this.lbM.Location = new System.Drawing.Point(83, 129);
             this.lbM.Name = "lbM";
             this.lbM.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbM.Size = new System.Drawing.Size(68, 23);
+            this.lbM.Size = new System.Drawing.Size(56, 19);
             this.lbM.TabIndex = 4;
             this.lbM.Text = "Minutes";
             this.lbM.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -1479,7 +1476,7 @@ namespace SMESData.View
             this.lbH.Location = new System.Drawing.Point(83, 83);
             this.lbH.Name = "lbH";
             this.lbH.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbH.Size = new System.Drawing.Size(51, 23);
+            this.lbH.Size = new System.Drawing.Size(41, 19);
             this.lbH.TabIndex = 3;
             this.lbH.Text = "Hours";
             this.lbH.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -1491,7 +1488,7 @@ namespace SMESData.View
             this.nbS.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nbS.Location = new System.Drawing.Point(19, 165);
             this.nbS.Name = "nbS";
-            this.nbS.Size = new System.Drawing.Size(58, 30);
+            this.nbS.Size = new System.Drawing.Size(58, 26);
             this.nbS.TabIndex = 2;
             this.nbS.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.nbS.UpDownAlign = System.Windows.Forms.LeftRightAlignment.Left;
@@ -1503,7 +1500,7 @@ namespace SMESData.View
             this.nbM.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nbM.Location = new System.Drawing.Point(19, 122);
             this.nbM.Name = "nbM";
-            this.nbM.Size = new System.Drawing.Size(58, 30);
+            this.nbM.Size = new System.Drawing.Size(58, 26);
             this.nbM.TabIndex = 1;
             this.nbM.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.nbM.UpDownAlign = System.Windows.Forms.LeftRightAlignment.Left;
@@ -1515,7 +1512,7 @@ namespace SMESData.View
             this.nbH.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nbH.Location = new System.Drawing.Point(19, 80);
             this.nbH.Name = "nbH";
-            this.nbH.Size = new System.Drawing.Size(58, 30);
+            this.nbH.Size = new System.Drawing.Size(58, 26);
             this.nbH.TabIndex = 0;
             this.nbH.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.nbH.UpDownAlign = System.Windows.Forms.LeftRightAlignment.Left;
@@ -1523,7 +1520,7 @@ namespace SMESData.View
             // 
             // UC_MQC_PieChart
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.pnTimeControl);
