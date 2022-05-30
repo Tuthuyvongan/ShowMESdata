@@ -367,6 +367,7 @@ namespace SMESData.View
         }
         public void UpdateTime()
         {
+            dtpChart.Value = DateTime.Today;
             btStart.Enabled = false;
             btStop.Enabled = true;
             dtpChart.Enabled = false;
