@@ -2170,12 +2170,6 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_EAAD04F1FE6E1C11B4BB69E6618A4E4A"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_A12840A6EEC64127A21A30BAB7393EFC"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -3271,6 +3265,12 @@
         "OwnerKey" = "8:_0016383C94EDB8F0E3C6DEE293FE9940"
         "MsmSig" = "8:_UNDEFINED"
         }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_EAAD04F1FE6E1C11B4BB69E6618A4E4A"
+        "MsmSig" = "8:_UNDEFINED"
+        }
     }
     "Configurations"
     {
@@ -3289,6 +3289,22 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
+            }
         }
         "Release"
         {
@@ -3305,6 +3321,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -9115,7 +9139,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Setup"
         "ProductCode" = "8:{D8F94AE9-438F-460A-AAD9-FCE55A462568}"
-        "PackageCode" = "8:{E97116C2-793B-4DAB-A53D-8242724F6A46}"
+        "PackageCode" = "8:{F70F93BC-672B-47A8-9F6C-5B2684DADAC6}"
         "UpgradeCode" = "8:{CF832587-9211-4101-8DD2-6AA547741F62}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -9245,6 +9269,20 @@
             "Transitive" = "11:FALSE"
             "Target" = "8:_A12840A6EEC64127A21A30BAB7393EFC"
             "Folder" = "8:_A0D99873F98E440184B99847EE644109"
+            "WorkingFolder" = "8:_78EDE2E608F44568BFDDD09EDE7B0A53"
+            "Icon" = "8:_086C18151CCF4AAF86B32DB4730A41FB"
+            "Feature" = "8:"
+            }
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_E67BDED43A664BA3BE8E2A990115D32C"
+            {
+            "Name" = "8:SMESData"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_A12840A6EEC64127A21A30BAB7393EFC"
+            "Folder" = "8:_78EDE2E608F44568BFDDD09EDE7B0A53"
             "WorkingFolder" = "8:_78EDE2E608F44568BFDDD09EDE7B0A53"
             "Icon" = "8:_086C18151CCF4AAF86B32DB4730A41FB"
             "Feature" = "8:"
