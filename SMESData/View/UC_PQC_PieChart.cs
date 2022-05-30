@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -25,11 +26,13 @@ namespace SMESData.View
             dtpChart.Format = DateTimePickerFormat.Custom;
             dtpChart.Enabled = false;
             renderPiechart();
+            //
+            lblTime.Font = new Font("Times New Roman", 14, FontStyle.Bold);
             //Timer          
             timer1.Start();
             startTime = DateTime.Now;
             btStart.Enabled = false;
-            pnTimeControl.Enabled = false;
+            pnTimeControl.Enabled = false;          
         }
         //List data
         List<double> dataL01 = new List<double>();
@@ -40,19 +43,19 @@ namespace SMESData.View
         List<double> dataL06 = new List<double>();
         List<double> dataL07 = new List<double>();
         //
-        public int secondsToWait = 10;
+        public int secondsToWait = 30;
         private DateTime startTime;
 
         public void lineData()
         {
             string date = dtpChart.Text.ToString();
-            string[] remark = { "OP", "RW", "NG" };
+            string[] type = { "OP", "RW", "NG" };
             double d;
             double temp;
             for (int i = 0; i < 3; i++)
             {
                 //L01
-                temp = GetSOFTdata.getTotalAttributeType("L01", remark[i], date);
+                temp = GetSOFTdata.getTotalAttributeType("L01", type[i], date);
                 if (temp == 0 || temp is double.NaN)
                     d = 0;
                 else
@@ -60,7 +63,7 @@ namespace SMESData.View
                 dataL01.Add(d);
 
                 //L02
-                temp = GetSOFTdata.getTotalAttributeType("L02", remark[i], date);
+                temp = GetSOFTdata.getTotalAttributeType("L02", type[i], date);
                 if (temp == 0 || temp is double.NaN)
                     d = 0;
                 else
@@ -68,7 +71,7 @@ namespace SMESData.View
                 dataL02.Add(d);
 
                 //L03
-                temp = GetSOFTdata.getTotalAttributeType("L03", remark[i], date);
+                temp = GetSOFTdata.getTotalAttributeType("L03", type[i], date);
                 if (temp == 0 || temp is double.NaN)
                     d = 0;
                 else
@@ -76,7 +79,7 @@ namespace SMESData.View
                 dataL03.Add(d);
 
                 //L04
-                temp = GetSOFTdata.getTotalAttributeType("L04", remark[i], date);
+                temp = GetSOFTdata.getTotalAttributeType("L04", type[i], date);
                 if (temp == 0 || temp is double.NaN)
                     d = 0;
                 else
@@ -84,7 +87,7 @@ namespace SMESData.View
                 dataL04.Add(d);
 
                 //L05
-                temp = GetSOFTdata.getTotalAttributeType("L05", remark[i], date);
+                temp = GetSOFTdata.getTotalAttributeType("L05", type[i], date);
                 if (temp == 0 || temp is double.NaN)
                     d = 0;
                 else
@@ -92,7 +95,7 @@ namespace SMESData.View
                 dataL05.Add(d);
 
                 //L06
-                temp = GetSOFTdata.getTotalAttributeType("L06", remark[i], date);
+                temp = GetSOFTdata.getTotalAttributeType("L06", type[i], date);
                 if (temp == 0 || temp is double.NaN)
                     d = 0;
                 else
@@ -100,7 +103,7 @@ namespace SMESData.View
                 dataL06.Add(d);
 
                 //L07
-                temp = GetSOFTdata.getTotalAttributeType("L07", remark[i], date);
+                temp = GetSOFTdata.getTotalAttributeType("L07", type[i], date);
                 if (temp == 0 || temp is double.NaN)
                     d = 0;
                 else
@@ -314,14 +317,14 @@ namespace SMESData.View
             linePCanvas7.ShowXAxis = false;
             linePCanvas7.ShowYAxis = false;
             //Canvas labels
-            string[] remark = { "OUTPUT", "REWORK", "NO GOOD" };
-            linePCanvas1.Labels = remark;
-            linePCanvas2.Labels = remark;
-            linePCanvas3.Labels = remark;
-            linePCanvas4.Labels = remark;
-            linePCanvas5.Labels = remark;
-            linePCanvas6.Labels = remark;
-            linePCanvas7.Labels = remark;
+            string[] type = { "OUTPUT", "REWORK", "NO GOOD" };
+            linePCanvas1.Labels = type;
+            linePCanvas2.Labels = type;
+            linePCanvas3.Labels = type;
+            linePCanvas4.Labels = type;
+            linePCanvas5.Labels = type;
+            linePCanvas6.Labels = type;
+            linePCanvas7.Labels = type;
             //List Colors
             List<Color> bgColors = new List<Color>();
             bgColors.Add(Color.DodgerBlue);
@@ -363,14 +366,28 @@ namespace SMESData.View
             startTime = DateTime.Now;
             lblTime.Visible = true;
         }
-
+        public void ChangeUpdateTime()
+        {
+            int h = Int32.Parse(nbH.Value.ToString());
+            int m = Int32.Parse(nbM.Value.ToString());
+            int s = Int32.Parse(nbS.Value.ToString());            
+            if (h == 0 && m == 0 && s == 0)
+                secondsToWait = 30;
+            else
+                secondsToWait = h * 3600 + m * 60 + s;
+        }
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (MainForm.PQC == true)
             {
                 int elapsedSeconds = (int)(DateTime.Now - startTime).TotalSeconds;
                 int remainingSeconds = secondsToWait - elapsedSeconds;
-                lblTime.Text = "Chart update in: " + remainingSeconds.ToString() + "s";
+                TimeSpan ts = TimeSpan.FromSeconds(remainingSeconds);
+                string time = string.Format("{0:D2}:{1:D2}:{2:D2}",
+                                ts.Hours,
+                                ts.Minutes,
+                                ts.Seconds);
+                lblTime.Text = "Chart update in: " + "\r\n" + time.ToString();
                 if (remainingSeconds < 0)
                 {
                     Thread t = new Thread(new ThreadStart(splash));
@@ -393,23 +410,37 @@ namespace SMESData.View
             else
                 timer1.Stop();
         }
-
         private void btStart_Click(object sender, EventArgs e)
         {
             btStart.Enabled = false;           
             btStop.Enabled = true;
             dtpChart.Enabled = false;
+            pnTimeControl.Enabled = false;
             UpdateTime();       
         }
-
         private void btStop_Click(object sender, EventArgs e)
         {
             btStart.Enabled = true;
             btStop.Enabled = false;
-            timer1.Stop();
             dtpChart.Enabled = true;
+            pnTimeControl.Enabled = true;
+            timer1.Stop();
             lblTime.Text = "Auto update" + "\r\n" + "chart is stopping";
         }
-               
+
+        private void nbH_ValueChanged(object sender, EventArgs e)
+        {
+            ChangeUpdateTime();
+        }
+
+        private void nbM_ValueChanged(object sender, EventArgs e)
+        {
+            ChangeUpdateTime();
+        }
+
+        private void nbS_ValueChanged(object sender, EventArgs e)
+        {
+            ChangeUpdateTime();
+        }
     }
 }

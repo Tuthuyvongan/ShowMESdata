@@ -26,11 +26,13 @@ namespace SMESData.View
             dtpChart.Format = DateTimePickerFormat.Custom;
             dtpChart.Enabled = false;
             renderPiechart();
+            //
+            lblTime.Font = new Font("Times New Roman", 14, FontStyle.Bold);
             //Timer          
             timer1.Start();
             startTime = DateTime.Now;
             btStart.Enabled = false;
-            pnTimeControl.Enabled = false;
+            pnTimeControl.Enabled = false;           
         }
         //List data
         List<double> dataL01 = new List<double>();
@@ -41,7 +43,7 @@ namespace SMESData.View
         List<double> dataL06 = new List<double>();
         List<double> dataL07 = new List<double>();
         //
-        public int secondsToWait = 10;
+        public int secondsToWait = 30;
         private DateTime startTime;
 
         public void lineData()
@@ -359,19 +361,33 @@ namespace SMESData.View
             Application.Run(new MessageWaitForm());
         }
         public void UpdateTime()
-        {
+        {           
             timer1.Start();
             startTime = DateTime.Now;
             lblTime.Visible = true;
         }
-            
+        public void ChangeUpdateTime()
+        {
+            int h = Int32.Parse(nbH.Value.ToString());
+            int m = Int32.Parse(nbM.Value.ToString());
+            int s = Int32.Parse(nbS.Value.ToString());           
+            if (h == 0 && m == 0 && s == 0)
+                secondsToWait = 30;
+            else
+                secondsToWait = h * 3600 + m * 60 + s;
+        }           
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (MainForm.MQC == true)
-            {
+            {               
                 int elapsedSeconds = (int)(DateTime.Now - startTime).TotalSeconds;
                 int remainingSeconds = secondsToWait - elapsedSeconds;
-                lblTime.Text = "Chart update in: " + remainingSeconds.ToString() + "s";
+                TimeSpan ts = TimeSpan.FromSeconds(remainingSeconds);
+                string time = string.Format("{0:D2}:{1:D2}:{2:D2}",
+                                ts.Hours,
+                                ts.Minutes,
+                                ts.Seconds);
+                lblTime.Text = "Chart update in: " + "\r\n" + time.ToString();
                 if (remainingSeconds < 0)
                 {
                     Thread t = new Thread(new ThreadStart(splash));
@@ -393,22 +409,38 @@ namespace SMESData.View
             }
             else
                 timer1.Stop();
-        }
-      
+        }      
         private void btStart_Click(object sender, EventArgs e)
         {
             btStart.Enabled = false;
             btStop.Enabled = true;
             dtpChart.Enabled = false;
+            pnTimeControl.Enabled = false;
             UpdateTime();
         }
         private void btStop_Click(object sender, EventArgs e)
         {
             btStart.Enabled = true;
             btStop.Enabled = false;
-            timer1.Stop();
             dtpChart.Enabled = true;
+            pnTimeControl.Enabled = true;
+            timer1.Stop();           
             lblTime.Text = "Auto update" + "\r\n" + "chart is stopping";
+        }
+
+        private void nbH_ValueChanged(object sender, EventArgs e)
+        {
+            ChangeUpdateTime();
+        }
+
+        private void nbM_ValueChanged(object sender, EventArgs e)
+        {
+            ChangeUpdateTime();
+        }
+
+        private void nbS_ValueChanged(object sender, EventArgs e)
+        {
+            ChangeUpdateTime();
         }
     }
 }
