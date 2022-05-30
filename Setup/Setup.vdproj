@@ -9137,9 +9137,9 @@
         "Product"
         {
         "Name" = "8:Microsoft Visual Studio"
-        "ProductName" = "8:Setup"
+        "ProductName" = "8:SMESC"
         "ProductCode" = "8:{D8F94AE9-438F-460A-AAD9-FCE55A462568}"
-        "PackageCode" = "8:{C7F54CDE-58A9-4EEA-A09B-8F2083A3F691}"
+        "PackageCode" = "8:{96B2B586-418E-4138-99D8-BF4159BEACF9}"
         "UpgradeCode" = "8:{CF832587-9211-4101-8DD2-6AA547741F62}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -9688,7 +9688,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_A12840A6EEC64127A21A30BAB7393EFC"
             {
-            "SourcePath" = "8:..\\SMESData\\obj\\Debug\\SMESData.exe"
+            "SourcePath" = "8:"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_78EDE2E608F44568BFDDD09EDE7B0A53"
