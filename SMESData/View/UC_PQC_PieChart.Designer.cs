@@ -132,9 +132,9 @@ namespace SMESData.View
             this.lb4.Location = new System.Drawing.Point(266, 214);
             this.lb4.Name = "lb4";
             this.lb4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lb4.Size = new System.Drawing.Size(46, 31);
+            this.lb4.Size = new System.Drawing.Size(88, 31);
             this.lb4.TabIndex = 26;
-            this.lb4.Text = "L04";
+            this.lb4.Text = "Line 04";
             this.lb4.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lb4.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -254,9 +254,9 @@ namespace SMESData.View
             this.lb3.Location = new System.Drawing.Point(263, 211);
             this.lb3.Name = "lb3";
             this.lb3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lb3.Size = new System.Drawing.Size(46, 31);
+            this.lb3.Size = new System.Drawing.Size(88, 31);
             this.lb3.TabIndex = 15;
-            this.lb3.Text = "L03";
+            this.lb3.Text = "Line 03";
             this.lb3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lb3.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -277,7 +277,7 @@ namespace SMESData.View
             this.linePCanvas3.LegendPosition = Bunifu.Charts.WinForms.BunifuChartCanvas.PositionOptions.bottom;
             this.linePCanvas3.LegendRevese = false;
             this.linePCanvas3.LegendRTL = false;
-            this.linePCanvas3.Location = new System.Drawing.Point(7, 4);
+            this.linePCanvas3.Location = new System.Drawing.Point(7, 3);
             this.linePCanvas3.Margin = new System.Windows.Forms.Padding(4);
             this.linePCanvas3.Name = "linePCanvas3";
             this.linePCanvas3.ShowXAxis = false;
@@ -360,9 +360,9 @@ namespace SMESData.View
             this.lb5.Location = new System.Drawing.Point(264, 214);
             this.lb5.Name = "lb5";
             this.lb5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lb5.Size = new System.Drawing.Size(46, 31);
+            this.lb5.Size = new System.Drawing.Size(88, 31);
             this.lb5.TabIndex = 25;
-            this.lb5.Text = "L05";
+            this.lb5.Text = "Line 05";
             this.lb5.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lb5.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -497,9 +497,9 @@ namespace SMESData.View
             this.lb6.Location = new System.Drawing.Point(263, 214);
             this.lb6.Name = "lb6";
             this.lb6.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lb6.Size = new System.Drawing.Size(46, 31);
+            this.lb6.Size = new System.Drawing.Size(88, 31);
             this.lb6.TabIndex = 16;
-            this.lb6.Text = "L06";
+            this.lb6.Text = "Line 06";
             this.lb6.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lb6.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -634,9 +634,9 @@ namespace SMESData.View
             this.lb7.Location = new System.Drawing.Point(266, 216);
             this.lb7.Name = "lb7";
             this.lb7.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lb7.Size = new System.Drawing.Size(46, 31);
+            this.lb7.Size = new System.Drawing.Size(88, 31);
             this.lb7.TabIndex = 27;
-            this.lb7.Text = "L07";
+            this.lb7.Text = "Line 07";
             this.lb7.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lb7.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -986,9 +986,9 @@ namespace SMESData.View
             this.lb2.Location = new System.Drawing.Point(264, 211);
             this.lb2.Name = "lb2";
             this.lb2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lb2.Size = new System.Drawing.Size(46, 31);
+            this.lb2.Size = new System.Drawing.Size(88, 31);
             this.lb2.TabIndex = 14;
-            this.lb2.Text = "L02";
+            this.lb2.Text = "Line 02";
             this.lb2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lb2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -1101,9 +1101,9 @@ namespace SMESData.View
             this.lb1.Location = new System.Drawing.Point(266, 211);
             this.lb1.Name = "lb1";
             this.lb1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lb1.Size = new System.Drawing.Size(46, 31);
+            this.lb1.Size = new System.Drawing.Size(88, 31);
             this.lb1.TabIndex = 13;
-            this.lb1.Text = "L01";
+            this.lb1.Text = "Line 01";
             this.lb1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lb1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 

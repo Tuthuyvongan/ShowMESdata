@@ -31,8 +31,8 @@ namespace SMESData.View
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_MQC_PieChart));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges9 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges10 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.linePCanvas1 = new Bunifu.Charts.WinForms.BunifuChartCanvas();
             this.dtpChart = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.L01Chart = new Bunifu.Charts.WinForms.ChartTypes.BunifuPieChart(this.components);
@@ -354,7 +354,6 @@ namespace SMESData.View
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(385, 281);
             this.panel1.TabIndex = 14;
-
             // 
             // lb1
             // 
@@ -363,12 +362,12 @@ namespace SMESData.View
             this.lb1.Cursor = System.Windows.Forms.Cursors.Default;
             this.lb1.CursorType = System.Windows.Forms.Cursors.Default;
             this.lb1.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb1.Location = new System.Drawing.Point(266, 211);
+            this.lb1.Location = new System.Drawing.Point(266, 227);
             this.lb1.Name = "lb1";
             this.lb1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lb1.Size = new System.Drawing.Size(46, 31);
+            this.lb1.Size = new System.Drawing.Size(88, 31);
             this.lb1.TabIndex = 13;
-            this.lb1.Text = "L01";
+            this.lb1.Text = "Line 01";
             this.lb1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lb1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -443,12 +442,12 @@ namespace SMESData.View
             this.lb2.AutoEllipsis = false;
             this.lb2.CursorType = null;
             this.lb2.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb2.Location = new System.Drawing.Point(264, 211);
+            this.lb2.Location = new System.Drawing.Point(264, 227);
             this.lb2.Name = "lb2";
             this.lb2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lb2.Size = new System.Drawing.Size(46, 31);
+            this.lb2.Size = new System.Drawing.Size(88, 31);
             this.lb2.TabIndex = 14;
-            this.lb2.Text = "L02";
+            this.lb2.Text = "Line 02";
             this.lb2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lb2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -521,12 +520,12 @@ namespace SMESData.View
             this.lb3.AutoEllipsis = false;
             this.lb3.CursorType = null;
             this.lb3.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb3.Location = new System.Drawing.Point(263, 211);
+            this.lb3.Location = new System.Drawing.Point(263, 227);
             this.lb3.Name = "lb3";
             this.lb3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lb3.Size = new System.Drawing.Size(46, 31);
+            this.lb3.Size = new System.Drawing.Size(88, 31);
             this.lb3.TabIndex = 15;
-            this.lb3.Text = "L03";
+            this.lb3.Text = "Line 03";
             this.lb3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lb3.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -547,7 +546,7 @@ namespace SMESData.View
             this.linePCanvas3.LegendPosition = Bunifu.Charts.WinForms.BunifuChartCanvas.PositionOptions.bottom;
             this.linePCanvas3.LegendRevese = false;
             this.linePCanvas3.LegendRTL = false;
-            this.linePCanvas3.Location = new System.Drawing.Point(7, 4);
+            this.linePCanvas3.Location = new System.Drawing.Point(7, 3);
             this.linePCanvas3.Margin = new System.Windows.Forms.Padding(4);
             this.linePCanvas3.Name = "linePCanvas3";
             this.linePCanvas3.ShowXAxis = false;
@@ -662,9 +661,9 @@ namespace SMESData.View
             this.lb4.Location = new System.Drawing.Point(266, 214);
             this.lb4.Name = "lb4";
             this.lb4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lb4.Size = new System.Drawing.Size(46, 31);
+            this.lb4.Size = new System.Drawing.Size(88, 31);
             this.lb4.TabIndex = 26;
-            this.lb4.Text = "L04";
+            this.lb4.Text = "Line 04";
             this.lb4.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lb4.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -799,9 +798,9 @@ namespace SMESData.View
             this.lb5.Location = new System.Drawing.Point(264, 214);
             this.lb5.Name = "lb5";
             this.lb5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lb5.Size = new System.Drawing.Size(46, 31);
+            this.lb5.Size = new System.Drawing.Size(88, 31);
             this.lb5.TabIndex = 25;
-            this.lb5.Text = "L05";
+            this.lb5.Text = "Line 05";
             this.lb5.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lb5.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -936,9 +935,9 @@ namespace SMESData.View
             this.lb6.Location = new System.Drawing.Point(263, 214);
             this.lb6.Name = "lb6";
             this.lb6.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lb6.Size = new System.Drawing.Size(46, 31);
+            this.lb6.Size = new System.Drawing.Size(88, 31);
             this.lb6.TabIndex = 16;
-            this.lb6.Text = "L06";
+            this.lb6.Text = "Line 06";
             this.lb6.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lb6.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -1073,9 +1072,9 @@ namespace SMESData.View
             this.lb7.Location = new System.Drawing.Point(266, 216);
             this.lb7.Name = "lb7";
             this.lb7.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lb7.Size = new System.Drawing.Size(46, 31);
+            this.lb7.Size = new System.Drawing.Size(88, 31);
             this.lb7.TabIndex = 27;
-            this.lb7.Text = "L07";
+            this.lb7.Text = "Line 07";
             this.lb7.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lb7.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -1225,11 +1224,11 @@ namespace SMESData.View
             this.btStop.ColorContrastOnClick = 45;
             this.btStop.ColorContrastOnHover = 45;
             this.btStop.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges5.BottomLeft = true;
-            borderEdges5.BottomRight = true;
-            borderEdges5.TopLeft = true;
-            borderEdges5.TopRight = true;
-            this.btStop.CustomizableEdges = borderEdges5;
+            borderEdges9.BottomLeft = true;
+            borderEdges9.BottomRight = true;
+            borderEdges9.TopLeft = true;
+            borderEdges9.TopRight = true;
+            this.btStop.CustomizableEdges = borderEdges9;
             this.btStop.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btStop.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btStop.DisabledFillColor = System.Drawing.Color.Empty;
@@ -1317,11 +1316,11 @@ namespace SMESData.View
             this.btStart.ColorContrastOnClick = 45;
             this.btStart.ColorContrastOnHover = 45;
             this.btStart.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges6.BottomLeft = true;
-            borderEdges6.BottomRight = true;
-            borderEdges6.TopLeft = true;
-            borderEdges6.TopRight = true;
-            this.btStart.CustomizableEdges = borderEdges6;
+            borderEdges10.BottomLeft = true;
+            borderEdges10.BottomRight = true;
+            borderEdges10.TopLeft = true;
+            borderEdges10.TopRight = true;
+            this.btStart.CustomizableEdges = borderEdges10;
             this.btStart.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btStart.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btStart.DisabledFillColor = System.Drawing.Color.Empty;
