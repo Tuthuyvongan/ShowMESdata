@@ -45,7 +45,7 @@ namespace SMESData.View
         List<double> dataL06 = new List<double>();
         List<double> dataL07 = new List<double>();
         //
-        public int secondsToWait = 30;
+        public int secondsToWait = 300;
         private DateTime startTime;
 
         public void lineData()
@@ -130,9 +130,13 @@ namespace SMESData.View
                 lbOP1.Visible = false;
                 lbRW1.Visible = false;
                 lbNG1.Visible = false;
+                lbWar1.Visible = true;
+                lbWar1.Text = "No Data";
+                lbWar1.Font = new Font("Times New Roman", 24, FontStyle.Bold);
             }
             else
             {
+                lbWar1.Visible = false;
                 lbOP1.Visible = true;
                 lbRW1.Visible = true;
                 lbNG1.Visible = true;
@@ -152,9 +156,13 @@ namespace SMESData.View
                 lbOP2.Visible = false;
                 lbRW2.Visible = false;
                 lbNG2.Visible = false;
+                lbWar2.Visible = true;
+                lbWar2.Text = "No Data";
+                lbWar2.Font = new Font("Times New Roman", 24, FontStyle.Bold);
             }
             else
             {
+                lbWar2.Visible = false;
                 lbOP2.Visible = true;
                 lbRW2.Visible = true;
                 lbNG2.Visible = true;
@@ -174,9 +182,13 @@ namespace SMESData.View
                 lbOP3.Visible = false;
                 lbRW3.Visible = false;
                 lbNG3.Visible = false;
+                lbWar3.Visible = true;
+                lbWar3.Text = "No Data";
+                lbWar3.Font = new Font("Times New Roman", 24, FontStyle.Bold);
             }
             else
             {
+                lbWar3.Visible = false;
                 lbOP3.Visible = true;
                 lbRW3.Visible = true;
                 lbNG3.Visible = true;
@@ -196,9 +208,13 @@ namespace SMESData.View
                 lbOP4.Visible = false;
                 lbRW4.Visible = false;
                 lbNG4.Visible = false;
+                lbWar4.Visible = true;
+                lbWar4.Text = "No Data";
+                lbWar4.Font = new Font("Times New Roman", 24, FontStyle.Bold);
             }
             else
             {
+                lbWar4.Visible = false;
                 lbOP4.Visible = true;
                 lbRW4.Visible = true;
                 lbNG4.Visible = true;
@@ -218,9 +234,13 @@ namespace SMESData.View
                 lbOP5.Visible = false;
                 lbRW5.Visible = false;
                 lbNG5.Visible = false;
+                lbWar5.Visible = true;
+                lbWar5.Text = "No Data";
+                lbWar5.Font = new Font("Times New Roman", 24, FontStyle.Bold);
             }
             else
             {
+                lbWar5.Visible = false;
                 lbOP5.Visible = true;
                 lbRW5.Visible = true;
                 lbNG5.Visible = true;
@@ -240,9 +260,13 @@ namespace SMESData.View
                 lbOP6.Visible = false;
                 lbRW6.Visible = false;
                 lbNG6.Visible = false;
+                lbWar6.Visible = true;
+                lbWar6.Text = "No Data";
+                lbWar6.Font = new Font("Times New Roman", 24, FontStyle.Bold);
             }
             else
             {
+                lbWar6.Visible = false;
                 lbOP6.Visible = true;
                 lbRW6.Visible = true;
                 lbNG6.Visible = true;
@@ -262,9 +286,13 @@ namespace SMESData.View
                 lbOP7.Visible = false;
                 lbRW7.Visible = false;
                 lbNG7.Visible = false;
+                lbWar7.Visible = true;
+                lbWar7.Text = "No Data";
+                lbWar7.Font = new Font("Times New Roman", 24, FontStyle.Bold);
             }
             else
             {
+                lbWar7.Visible = false;
                 lbOP7.Visible = true;
                 lbRW7.Visible = true;
                 lbNG7.Visible = true;

@@ -30,9 +30,9 @@ namespace SMESData.View
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_PQC_PieChart));
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_PQC_PieChart));
             this.panel4 = new System.Windows.Forms.Panel();
             this.lb4 = new Bunifu.UI.WinForms.BunifuLabel();
             this.linePCanvas4 = new Bunifu.Charts.WinForms.BunifuChartCanvas();
@@ -95,6 +95,13 @@ namespace SMESData.View
             this.nbS = new System.Windows.Forms.NumericUpDown();
             this.nbM = new System.Windows.Forms.NumericUpDown();
             this.nbH = new System.Windows.Forms.NumericUpDown();
+            this.lbWar1 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lbWar2 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lbWar3 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lbWar6 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lbWar5 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lbWar4 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lbWar7 = new Bunifu.UI.WinForms.BunifuLabel();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -112,6 +119,7 @@ namespace SMESData.View
             // 
             this.panel4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel4.Controls.Add(this.lbWar4);
             this.panel4.Controls.Add(this.lb4);
             this.panel4.Controls.Add(this.linePCanvas4);
             this.panel4.Controls.Add(this.lbOP4);
@@ -340,6 +348,7 @@ namespace SMESData.View
             // 
             this.panel5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel5.Controls.Add(this.lbWar5);
             this.panel5.Controls.Add(this.lb5);
             this.panel5.Controls.Add(this.linePCanvas5);
             this.panel5.Controls.Add(this.lbOP5);
@@ -477,6 +486,7 @@ namespace SMESData.View
             // 
             this.panel6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel6.Controls.Add(this.lbWar6);
             this.panel6.Controls.Add(this.lb6);
             this.panel6.Controls.Add(this.linePCanvas6);
             this.panel6.Controls.Add(this.lbOP6);
@@ -614,6 +624,7 @@ namespace SMESData.View
             // 
             this.panel7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel7.Controls.Add(this.lbWar7);
             this.panel7.Controls.Add(this.lb7);
             this.panel7.Controls.Add(this.lbOP7);
             this.panel7.Controls.Add(this.lbNG7);
@@ -827,6 +838,7 @@ namespace SMESData.View
             // 
             this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel3.Controls.Add(this.lbWar3);
             this.panel3.Controls.Add(this.lb3);
             this.panel3.Controls.Add(this.linePCanvas3);
             this.panel3.Controls.Add(this.lbOP3);
@@ -966,6 +978,7 @@ namespace SMESData.View
             // 
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Controls.Add(this.lbWar2);
             this.panel2.Controls.Add(this.lb2);
             this.panel2.Controls.Add(this.linePCanvas2);
             this.panel2.Controls.Add(this.lbOP2);
@@ -1080,6 +1093,7 @@ namespace SMESData.View
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.lbWar1);
             this.panel1.Controls.Add(this.lb1);
             this.panel1.Controls.Add(this.lbNG1);
             this.panel1.Controls.Add(this.lbRW1);
@@ -1517,6 +1531,118 @@ namespace SMESData.View
             this.nbH.UpDownAlign = System.Windows.Forms.LeftRightAlignment.Left;
             this.nbH.ValueChanged += new System.EventHandler(this.nbH_ValueChanged);
             // 
+            // lbWar1
+            // 
+            this.lbWar1.AllowParentOverrides = false;
+            this.lbWar1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbWar1.AutoEllipsis = false;
+            this.lbWar1.CursorType = System.Windows.Forms.Cursors.Default;
+            this.lbWar1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbWar1.Location = new System.Drawing.Point(100, 120);
+            this.lbWar1.Name = "lbWar1";
+            this.lbWar1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbWar1.Size = new System.Drawing.Size(155, 37);
+            this.lbWar1.TabIndex = 27;
+            this.lbWar1.Text = "bunifuLabel1";
+            this.lbWar1.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
+            this.lbWar1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // lbWar2
+            // 
+            this.lbWar2.AllowParentOverrides = false;
+            this.lbWar2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbWar2.AutoEllipsis = false;
+            this.lbWar2.CursorType = null;
+            this.lbWar2.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbWar2.Location = new System.Drawing.Point(100, 120);
+            this.lbWar2.Name = "lbWar2";
+            this.lbWar2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbWar2.Size = new System.Drawing.Size(155, 37);
+            this.lbWar2.TabIndex = 28;
+            this.lbWar2.Text = "bunifuLabel1";
+            this.lbWar2.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
+            this.lbWar2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // lbWar3
+            // 
+            this.lbWar3.AllowParentOverrides = false;
+            this.lbWar3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbWar3.AutoEllipsis = false;
+            this.lbWar3.CursorType = null;
+            this.lbWar3.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbWar3.Location = new System.Drawing.Point(100, 120);
+            this.lbWar3.Name = "lbWar3";
+            this.lbWar3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbWar3.Size = new System.Drawing.Size(155, 37);
+            this.lbWar3.TabIndex = 29;
+            this.lbWar3.Text = "bunifuLabel1";
+            this.lbWar3.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
+            this.lbWar3.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // lbWar6
+            // 
+            this.lbWar6.AllowParentOverrides = false;
+            this.lbWar6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbWar6.AutoEllipsis = false;
+            this.lbWar6.CursorType = null;
+            this.lbWar6.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbWar6.Location = new System.Drawing.Point(100, 120);
+            this.lbWar6.Name = "lbWar6";
+            this.lbWar6.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbWar6.Size = new System.Drawing.Size(155, 37);
+            this.lbWar6.TabIndex = 30;
+            this.lbWar6.Text = "bunifuLabel1";
+            this.lbWar6.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
+            this.lbWar6.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // lbWar5
+            // 
+            this.lbWar5.AllowParentOverrides = false;
+            this.lbWar5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbWar5.AutoEllipsis = false;
+            this.lbWar5.CursorType = null;
+            this.lbWar5.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbWar5.Location = new System.Drawing.Point(100, 120);
+            this.lbWar5.Name = "lbWar5";
+            this.lbWar5.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbWar5.Size = new System.Drawing.Size(155, 37);
+            this.lbWar5.TabIndex = 31;
+            this.lbWar5.Text = "bunifuLabel1";
+            this.lbWar5.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
+            this.lbWar5.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // lbWar4
+            // 
+            this.lbWar4.AllowParentOverrides = false;
+            this.lbWar4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbWar4.AutoEllipsis = false;
+            this.lbWar4.CursorType = null;
+            this.lbWar4.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbWar4.Location = new System.Drawing.Point(100, 120);
+            this.lbWar4.Name = "lbWar4";
+            this.lbWar4.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbWar4.Size = new System.Drawing.Size(155, 37);
+            this.lbWar4.TabIndex = 32;
+            this.lbWar4.Text = "bunifuLabel1";
+            this.lbWar4.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
+            this.lbWar4.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // lbWar7
+            // 
+            this.lbWar7.AllowParentOverrides = false;
+            this.lbWar7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbWar7.AutoEllipsis = false;
+            this.lbWar7.CursorType = null;
+            this.lbWar7.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbWar7.Location = new System.Drawing.Point(100, 120);
+            this.lbWar7.Name = "lbWar7";
+            this.lbWar7.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbWar7.Size = new System.Drawing.Size(155, 37);
+            this.lbWar7.TabIndex = 33;
+            this.lbWar7.Text = "bunifuLabel1";
+            this.lbWar7.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
+            this.lbWar7.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
             // UC_PQC_PieChart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
@@ -1627,5 +1753,12 @@ namespace SMESData.View
         private System.Windows.Forms.NumericUpDown nbS;
         private System.Windows.Forms.NumericUpDown nbM;
         private System.Windows.Forms.NumericUpDown nbH;
+        private Bunifu.UI.WinForms.BunifuLabel lbWar1;
+        private Bunifu.UI.WinForms.BunifuLabel lbWar4;
+        private Bunifu.UI.WinForms.BunifuLabel lbWar5;
+        private Bunifu.UI.WinForms.BunifuLabel lbWar6;
+        private Bunifu.UI.WinForms.BunifuLabel lbWar7;
+        private Bunifu.UI.WinForms.BunifuLabel lbWar3;
+        private Bunifu.UI.WinForms.BunifuLabel lbWar2;
     }
 }
