@@ -132,7 +132,7 @@ namespace SMESData.View
                 lbNG1.Visible = false;
                 lbWar1.Visible = true;
                 lbWar1.Text = "No Data";
-                lbWar1.Font = new Font("Times New Roman", 24, FontStyle.Bold);
+                lbWar1.Font = new Font("Times New Roman", 28, FontStyle.Bold);
             }
             else
             {
@@ -158,7 +158,7 @@ namespace SMESData.View
                 lbNG2.Visible = false;
                 lbWar2.Visible = true;
                 lbWar2.Text = "No Data";
-                lbWar2.Font = new Font("Times New Roman", 24, FontStyle.Bold);
+                lbWar2.Font = new Font("Times New Roman", 28, FontStyle.Bold);
             }
             else
             {
@@ -184,7 +184,7 @@ namespace SMESData.View
                 lbNG3.Visible = false;
                 lbWar3.Visible = true;
                 lbWar3.Text = "No Data";
-                lbWar3.Font = new Font("Times New Roman", 24, FontStyle.Bold);
+                lbWar3.Font = new Font("Times New Roman", 28, FontStyle.Bold);
             }
             else
             {
@@ -210,7 +210,7 @@ namespace SMESData.View
                 lbNG4.Visible = false;
                 lbWar4.Visible = true;
                 lbWar4.Text = "No Data";
-                lbWar4.Font = new Font("Times New Roman", 24, FontStyle.Bold);
+                lbWar4.Font = new Font("Times New Roman", 28, FontStyle.Bold);
             }
             else
             {
@@ -236,7 +236,7 @@ namespace SMESData.View
                 lbNG5.Visible = false;
                 lbWar5.Visible = true;
                 lbWar5.Text = "No Data";
-                lbWar5.Font = new Font("Times New Roman", 24, FontStyle.Bold);
+                lbWar5.Font = new Font("Times New Roman", 28, FontStyle.Bold);
             }
             else
             {
@@ -262,7 +262,7 @@ namespace SMESData.View
                 lbNG6.Visible = false;
                 lbWar6.Visible = true;
                 lbWar6.Text = "No Data";
-                lbWar6.Font = new Font("Times New Roman", 24, FontStyle.Bold);
+                lbWar6.Font = new Font("Times New Roman", 28, FontStyle.Bold);
             }
             else
             {
@@ -288,7 +288,7 @@ namespace SMESData.View
                 lbNG7.Visible = false;
                 lbWar7.Visible = true;
                 lbWar7.Text = "No Data";
-                lbWar7.Font = new Font("Times New Roman", 24, FontStyle.Bold);
+                lbWar7.Font = new Font("Times New Roman", 28, FontStyle.Bold);
             }
             else
             {
