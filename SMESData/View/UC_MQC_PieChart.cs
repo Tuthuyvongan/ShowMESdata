@@ -376,8 +376,7 @@ namespace SMESData.View
         private void dtpChart_ValueChanged(object sender, EventArgs e)
         {
             Thread t = new Thread(new ThreadStart(splash));
-            t.Start();
-            Thread.Sleep(500);
+            t.Start();            
             dtpChart.Visible = false;
             dataL01.Clear();
             dataL02.Clear();
@@ -386,7 +385,8 @@ namespace SMESData.View
             dataL05.Clear();
             dataL06.Clear();
             dataL07.Clear();
-            renderPiechart();            
+            renderPiechart();
+            Thread.Sleep(1000);
             t.Abort();
         }
         public void splash()
@@ -430,7 +430,6 @@ namespace SMESData.View
                 {
                     Thread t = new Thread(new ThreadStart(splash));
                     t.Start();
-                    Thread.Sleep(500);
                     lblTime.Visible = false;
                     dataL01.Clear();
                     dataL02.Clear();
@@ -439,7 +438,8 @@ namespace SMESData.View
                     dataL05.Clear();
                     dataL06.Clear();
                     dataL07.Clear();
-                    renderPiechart();                    
+                    renderPiechart();
+                    Thread.Sleep(1000);
                     t.Abort();
                     timer1.Stop();
                     UpdateTime();
