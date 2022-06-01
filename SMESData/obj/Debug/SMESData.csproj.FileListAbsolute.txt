@@ -124,3 +124,4 @@ C:\Users\admin\Documents\GitHub\ShowMESdata\SMESData\obj\Debug\SMESData.View.UC_
 C:\Users\admin\Documents\GitHub\ShowMESdata\SMESData\obj\Debug\SMESData.View.MessageWaitForm.resources
 C:\Users\admin\Documents\GitHub\ShowMESdata\SMESData\obj\Debug\SMESData.View.UC_PQC_PieChart.resources
 C:\Users\admin\Documents\GitHub\ShowMESdata\SMESData\bin\Debug\XanderUI.dll
+C:\Users\admin\Documents\GitHub\ShowMESdata\SMESData\obj\Debug\SMESData.csproj.AssemblyReference.cache
