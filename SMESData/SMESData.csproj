@@ -284,6 +284,12 @@
     <Compile Include="View\MessageWaitForm.Designer.cs">
       <DependentUpon>MessageWaitForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\UC_Product_Info.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UC_Product_Info.Designer.cs">
+      <DependentUpon>UC_Product_Info.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\UC_MQC_BarChart.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -319,6 +325,9 @@
     </Compile>
     <EmbeddedResource Include="View\MessageWaitForm.resx">
       <DependentUpon>MessageWaitForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UC_Product_Info.resx">
+      <DependentUpon>UC_Product_Info.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UC_MQC_BarChart.resx">
       <DependentUpon>UC_MQC_BarChart.cs</DependentUpon>

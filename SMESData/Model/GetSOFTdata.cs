@@ -62,12 +62,7 @@ namespace SMESData
             sqlGetData.Append("select distinct POCode ");
             sqlGetData.Append("from ProcessHistory.PQCMesData ");
             sqlGetData.Append("where Line = '" + line + "' ");
-            sqlGetData.Append("and InspectDateTime like '%" + date + "%'");
-            //sqlGetData.Append("UNION ALL ");
-            //sqlGetData.Append("select distinct POCode ");
-            //sqlGetData.Append("from ProcessHistory.PQCMesDataBackup ");
-            //sqlGetData.Append("where Line = '" + line + "' ");
-            //sqlGetData.Append("and InspectDateTime like '%" + date + "%'");
+            sqlGetData.Append("and InspectDateTime like '%" + date + "%'");           
             sqlSOFTCon.getComboBoxData(sqlGetData.ToString(), ref cbx);
             for (int i = 0; i < cbx.Items.Count; i++)
             {
@@ -80,35 +75,7 @@ namespace SMESData
             if (s == 0)
                 s = 1;
             return s;
-        }
-        //public static double getTotalAttributeType(string line, string type, string date)
-        //{
-        //    sqlSOFTCon sqlSOFTCon = new sqlSOFTCon();
-        //    StringBuilder sqlGetData = new StringBuilder();
-        //    ComboBox cbx = new ComboBox();
-        //    double s = 0;
-        //    string temp;
-        //    sqlGetData.Append("select SUM(CASE WHEN Line = '" + line + "' and AttributeType = '" + type + "' and InspectDateTime like '%" + date + "%' THEN Cast(Quantity as numeric(10,0)) END) ");
-        //    sqlGetData.Append("from ProcessHistory.PQCMesData");
-        //    //sqlGetData.Append("UNION ALL ");
-        //    //sqlGetData.Append("select SUM(CASE WHEN Line = '" + line + "' and AttributeType = '" + type + "' and InspectDateTime like '%" + date + "%' THEN Cast(Quantity as numeric(10,0)) END) ");
-        //    //sqlGetData.Append("from ProcessHistory.PQCMesDataBackup");
-        //    sqlSOFTCon.getComboBoxData(sqlGetData.ToString(), ref cbx);
-        //    for (int i = 0; i < cbx.Items.Count; i++)
-        //    {
-        //        temp = cbx.Items[i].ToString();
-        //        if (temp == string.Empty || temp == "" || temp == null)
-        //        {
-        //            s = s + 0;
-        //        }
-        //        else
-        //        {
-        //            s += double.Parse(temp);
-        //        }    
-                    
-        //    }
-        //    return s;
-        //}
+        }        
         public static double getTotalAttributeType(string line, string type, string date)
         {
             sqlSOFTCon sqlSOFTCon = new sqlSOFTCon();
@@ -125,6 +92,33 @@ namespace SMESData
             else
                 s = double.Parse(temp);
             return s;
+        }
+
+        public static DataTable getProductData()
+        {
+            DataTable dt = new DataTable();
+            sqlSOFTCon sqlSOFTCon = new sqlSOFTCon();
+            StringBuilder sqlGetData = new StringBuilder();
+            sqlGetData.Append("select distinct m.model, m.inspectdate, m.OUTPUT, m.RE_WORK, m.NO_GOOD, ");
+            sqlGetData.Append("line = STUFF((SELECT distinct(';' + l.line) ");
+            sqlGetData.Append("FROM m_ERPMQC_REALTIME as l ");
+            sqlGetData.Append("where l.inspectdate = m.inspectdate and l.model = m.model ");
+            sqlGetData.Append("FOR XML PATH(''), TYPE).value('.', 'NVARCHAR(MAX)'), 1, 1, ''), ");
+            sqlGetData.Append("total = m.OUTPUT + m.RE_WORK + m.NO_GOOD, ");
+            sqlGetData.Append("cast(m.NO_GOOD / (m.OUTPUT + m.RE_WORK + m.NO_GOOD) * 100 as decimal(10,1)) as NG_rate_realtime, ");
+            sqlGetData.Append("'1,5' as NG_rate_allowable ");
+            sqlGetData.Append("FROM m_ERPMQC_REALTIME as a ");
+            sqlGetData.Append("join(SELECT model,  inspectdate, ");
+            sqlGetData.Append("COALESCE(SUM(CASE WHEN remark = 'OP' THEN Cast(data as numeric(10,0)) END), 0) AS OUTPUT, ");
+            sqlGetData.Append("COALESCE(SUM(CASE WHEN remark = 'RW' THEN Cast(data as numeric(10,0)) END), 0) AS RE_WORK, ");
+            sqlGetData.Append("COALESCE(SUM(CASE WHEN remark = 'NG' THEN Cast(data as numeric(10,0)) END), 0) AS NO_GOOD ");
+            sqlGetData.Append("FROM m_ERPMQC_REALTIME ");
+            sqlGetData.Append("WHERE inspectdate >= '2022-06-02' ");
+            sqlGetData.Append("group by model, inspectdate) as m ");
+            sqlGetData.Append("on a.inspectdate = m.inspectdate and a.model = m.model ");
+            sqlGetData.Append("ORDER BY inspectdate desc");
+            sqlSOFTCon.sqlDataAdapterFillDatatable(sqlGetData.ToString(), ref dt);
+            return dt;
         }
     }
 }

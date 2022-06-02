@@ -22,13 +22,14 @@ namespace SMESData
         //UC_MQC_BarChart uc_MQC_BarChart = new UC_MQC_BarChart();
         UC_MQC_PieChart uc_MQC_PieChart = new UC_MQC_PieChart();
         UC_PQC_PieChart uc_PQC_PieChart = new UC_PQC_PieChart();
+        UC_Product_Info uc_PI = new UC_Product_Info();
         public static bool MQC;
         public static bool PQC;
         
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            //addUserControl(uc_MQC_PieChart);
+            addUserControl(uc_PI);
         }
         public void addUserControl(UserControl userControl)
         {
