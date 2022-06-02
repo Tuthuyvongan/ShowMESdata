@@ -23,9 +23,80 @@ namespace SMESData.View
             dtgv_MQC_PD.DataSource = GetSOFTdata.getProductData();
         }
 
+        //List data
+        List<double> dataMQC = new List<double>();
+        double op, rw, ng, total;
+
         private void dtgv_MQC_PD_CellClick(object sender, DataGridViewCellEventArgs e)
+        {            
+            if (e.RowIndex != -1)
+            {
+                dataMQC.Clear();
+                lbModel.Text = dtgv_MQC_PD.Rows[e.RowIndex].Cells[0].Value.ToString();
+                op = double.Parse(dtgv_MQC_PD.Rows[e.RowIndex].Cells[2].Value.ToString());
+                rw = double.Parse(dtgv_MQC_PD.Rows[e.RowIndex].Cells[3].Value.ToString());
+                ng = double.Parse(dtgv_MQC_PD.Rows[e.RowIndex].Cells[4].Value.ToString());
+                total = double.Parse(dtgv_MQC_PD.Rows[e.RowIndex].Cells[6].Value.ToString());
+                renderPiechart();
+            }                         
+        }
+        public void lineData()
         {
-            lbModel.Text = dtgv_MQC_PD.SelectedCells[0].Value.ToString();
+            double d1 = Math.Round(op / total * 100, 1);
+            double d2 = Math.Round(rw / total * 100, 1);
+            double d3 = Math.Round(ng / total * 100, 1);
+            dataMQC.Add(d1);
+            dataMQC.Add(d2);
+            dataMQC.Add(d3);
+        }
+        public void renderPiechart()
+        {
+            //Add data
+            lineData();
+            MQCChart.Data = dataMQC;
+            //PQCChart.Data = dataPQC;
+            //Add legends MQC           
+            if (dataMQC[0] == 0 && dataMQC[1] == 0 && dataMQC[2] == 0)
+            {
+                lbOP1.Visible = false;
+                lbRW1.Visible = false;
+                lbNG1.Visible = false;
+                lbWar1.Visible = true;
+                lbWar1.Text = "No Data";
+                lbWar1.Font = new Font("Times New Roman", 28, FontStyle.Bold);
+            }
+            else
+            {
+                lbWar1.Visible = false;
+                lbOP1.Visible = true;
+                lbRW1.Visible = true;
+                lbNG1.Visible = true;
+                lbOP1.BackColor = Color.DodgerBlue;
+                lbRW1.BackColor = Color.Orange;
+                lbNG1.BackColor = Color.Red;
+                lbOP1.Text = "OUTPUT: " + dataMQC[0].ToString() + "%";
+                lbRW1.Text = "REWORK: " + dataMQC[1].ToString() + "%";
+                lbNG1.Text = "NO GOOD: " + dataMQC[2].ToString() + "%";
+                lbOP1.Font = new Font("Times New Roman", 10, FontStyle.Bold);
+                lbRW1.Font = new Font("Times New Roman", 10, FontStyle.Bold);
+                lbNG1.Font = new Font("Times New Roman", 10, FontStyle.Bold);
+            }                  
+            //Target Canvas
+            MQCChart.TargetCanvas = linePCanvas1;            
+            //Hide x y Canvas1
+            linePCanvas1.XAxesGridLines = false;
+            linePCanvas1.YAxesGridLines = false;
+            linePCanvas1.ShowXAxis = false;
+            linePCanvas1.ShowYAxis = false;            
+            //Canvas labels
+            string[] remark = { "OUTPUT", "REWORK", "NO GOOD" };
+            linePCanvas1.Labels = remark;
+            //List Colors
+            List<Color> bgColors = new List<Color>();
+            bgColors.Add(Color.DodgerBlue);
+            bgColors.Add(Color.Orange);
+            bgColors.Add(Color.Red);
+            MQCChart.BackgroundColor = bgColors;
         }
     }
 }

@@ -29,25 +29,19 @@ namespace SMESData.View
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Product_Info));
             this.dtgv_MQC_PD = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dtgv_PQC_PD = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuLabel4 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuLabel5 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuChartCanvas1 = new Bunifu.Charts.WinForms.BunifuChartCanvas();
             this.lbMQC = new Bunifu.UI.WinForms.BunifuLabel();
             this.lbNG1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lbRW1 = new Bunifu.UI.WinForms.BunifuLabel();
@@ -55,12 +49,13 @@ namespace SMESData.View
             this.linePCanvas1 = new Bunifu.Charts.WinForms.BunifuChartCanvas();
             this.lbWar1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lbModel = new Bunifu.UI.WinForms.BunifuLabel();
+            this.MQCChart = new Bunifu.Charts.WinForms.ChartTypes.BunifuPieChart(this.components);
+            this.PQCChart = new Bunifu.Charts.WinForms.ChartTypes.BunifuPieChart(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_MQC_PD)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_PQC_PD)).BeginInit();
             this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // dtgv_MQC_PD
@@ -70,23 +65,23 @@ namespace SMESData.View
             this.dtgv_MQC_PD.AllowUserToDeleteRows = false;
             this.dtgv_MQC_PD.AllowUserToResizeColumns = false;
             this.dtgv_MQC_PD.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.dtgv_MQC_PD.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle31.ForeColor = System.Drawing.Color.Black;
+            this.dtgv_MQC_PD.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle31;
             this.dtgv_MQC_PD.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtgv_MQC_PD.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgv_MQC_PD.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dtgv_MQC_PD.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
             this.dtgv_MQC_PD.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
             this.dtgv_MQC_PD.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgv_MQC_PD.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle32.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle32.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle32.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgv_MQC_PD.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle32;
             this.dtgv_MQC_PD.ColumnHeadersHeight = 40;
             this.dtgv_MQC_PD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dtgv_MQC_PD.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
@@ -107,14 +102,14 @@ namespace SMESData.View
             this.dtgv_MQC_PD.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.dtgv_MQC_PD.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
             this.dtgv_MQC_PD.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgv_MQC_PD.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle33.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle33.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle33.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle33.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle33.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgv_MQC_PD.DefaultCellStyle = dataGridViewCellStyle33;
             this.dtgv_MQC_PD.EnableHeadersVisualStyles = false;
             this.dtgv_MQC_PD.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.dtgv_MQC_PD.HeaderBackColor = System.Drawing.Color.DodgerBlue;
@@ -150,7 +145,6 @@ namespace SMESData.View
             // 
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.dtgv_PQC_PD);
             this.panel2.Location = new System.Drawing.Point(15, 452);
             this.panel2.Name = "panel2";
@@ -164,23 +158,23 @@ namespace SMESData.View
             this.dtgv_PQC_PD.AllowUserToDeleteRows = false;
             this.dtgv_PQC_PD.AllowUserToResizeColumns = false;
             this.dtgv_PQC_PD.AllowUserToResizeRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            this.dtgv_PQC_PD.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle34.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle34.ForeColor = System.Drawing.Color.Black;
+            this.dtgv_PQC_PD.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle34;
             this.dtgv_PQC_PD.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtgv_PQC_PD.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgv_PQC_PD.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dtgv_PQC_PD.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
             this.dtgv_PQC_PD.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
             this.dtgv_PQC_PD.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgv_PQC_PD.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle35.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle35.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle35.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle35.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle35.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle35.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgv_PQC_PD.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle35;
             this.dtgv_PQC_PD.ColumnHeadersHeight = 40;
             this.dtgv_PQC_PD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dtgv_PQC_PD.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
@@ -201,14 +195,14 @@ namespace SMESData.View
             this.dtgv_PQC_PD.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.dtgv_PQC_PD.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
             this.dtgv_PQC_PD.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgv_PQC_PD.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle36.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle36.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle36.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle36.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle36.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle36.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgv_PQC_PD.DefaultCellStyle = dataGridViewCellStyle36;
             this.dtgv_PQC_PD.EnableHeadersVisualStyles = false;
             this.dtgv_PQC_PD.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.dtgv_PQC_PD.HeaderBackColor = System.Drawing.Color.DodgerBlue;
@@ -245,164 +239,6 @@ namespace SMESData.View
             this.panel3.Size = new System.Drawing.Size(385, 332);
             this.panel3.TabIndex = 18;
             // 
-            // panel4
-            // 
-            this.panel4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel4.Controls.Add(this.bunifuLabel1);
-            this.panel4.Controls.Add(this.bunifuLabel2);
-            this.panel4.Controls.Add(this.bunifuLabel3);
-            this.panel4.Controls.Add(this.bunifuLabel4);
-            this.panel4.Controls.Add(this.bunifuLabel5);
-            this.panel4.Controls.Add(this.bunifuChartCanvas1);
-            this.panel4.Location = new System.Drawing.Point(1007, 158);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(385, 281);
-            this.panel4.TabIndex = 34;
-            // 
-            // bunifuLabel1
-            // 
-            this.bunifuLabel1.AllowParentOverrides = false;
-            this.bunifuLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bunifuLabel1.AutoEllipsis = false;
-            this.bunifuLabel1.CursorType = null;
-            this.bunifuLabel1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel1.Location = new System.Drawing.Point(100, 120);
-            this.bunifuLabel1.Name = "bunifuLabel1";
-            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(155, 37);
-            this.bunifuLabel1.TabIndex = 33;
-            this.bunifuLabel1.Text = "bunifuLabel1";
-            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
-            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // bunifuLabel2
-            // 
-            this.bunifuLabel2.AllowParentOverrides = false;
-            this.bunifuLabel2.AutoEllipsis = false;
-            this.bunifuLabel2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel2.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel2.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel2.Location = new System.Drawing.Point(266, 227);
-            this.bunifuLabel2.Name = "bunifuLabel2";
-            this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel2.Size = new System.Drawing.Size(88, 31);
-            this.bunifuLabel2.TabIndex = 13;
-            this.bunifuLabel2.Text = "Line 01";
-            this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // bunifuLabel3
-            // 
-            this.bunifuLabel3.AllowParentOverrides = false;
-            this.bunifuLabel3.AutoEllipsis = false;
-            this.bunifuLabel3.CursorType = null;
-            this.bunifuLabel3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bunifuLabel3.Location = new System.Drawing.Point(266, 114);
-            this.bunifuLabel3.Margin = new System.Windows.Forms.Padding(2);
-            this.bunifuLabel3.Name = "bunifuLabel3";
-            this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel3.Size = new System.Drawing.Size(69, 15);
-            this.bunifuLabel3.TabIndex = 12;
-            this.bunifuLabel3.Text = "bunifuLabel3";
-            this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel3.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // bunifuLabel4
-            // 
-            this.bunifuLabel4.AllowParentOverrides = false;
-            this.bunifuLabel4.AutoEllipsis = false;
-            this.bunifuLabel4.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel4.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel4.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bunifuLabel4.Location = new System.Drawing.Point(266, 82);
-            this.bunifuLabel4.Margin = new System.Windows.Forms.Padding(2);
-            this.bunifuLabel4.Name = "bunifuLabel4";
-            this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel4.Size = new System.Drawing.Size(69, 15);
-            this.bunifuLabel4.TabIndex = 11;
-            this.bunifuLabel4.Text = "bunifuLabel2";
-            this.bunifuLabel4.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel4.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // bunifuLabel5
-            // 
-            this.bunifuLabel5.AllowParentOverrides = false;
-            this.bunifuLabel5.AutoEllipsis = false;
-            this.bunifuLabel5.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel5.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel5.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bunifuLabel5.Location = new System.Drawing.Point(266, 48);
-            this.bunifuLabel5.Margin = new System.Windows.Forms.Padding(2);
-            this.bunifuLabel5.Name = "bunifuLabel5";
-            this.bunifuLabel5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel5.Size = new System.Drawing.Size(69, 15);
-            this.bunifuLabel5.TabIndex = 10;
-            this.bunifuLabel5.Text = "bunifuLabel1";
-            this.bunifuLabel5.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel5.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // bunifuChartCanvas1
-            // 
-            this.bunifuChartCanvas1.AccessibleRole = System.Windows.Forms.AccessibleRole.Chart;
-            this.bunifuChartCanvas1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bunifuChartCanvas1.AnimationDuration = 2000;
-            this.bunifuChartCanvas1.AnimationType = Bunifu.Charts.WinForms.BunifuChartCanvas.AnimationOptions.easeOutQuart;
-            this.bunifuChartCanvas1.BackColor = System.Drawing.Color.White;
-            this.bunifuChartCanvas1.CanvasPadding = new System.Windows.Forms.Padding(6);
-            this.bunifuChartCanvas1.Labels = new string[0];
-            this.bunifuChartCanvas1.LegendAlignment = Bunifu.Charts.WinForms.BunifuChartCanvas.LegendAlignmentOptions.start;
-            this.bunifuChartCanvas1.LegendDisplay = false;
-            this.bunifuChartCanvas1.LegendFont = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuChartCanvas1.LegendForeColor = System.Drawing.Color.Black;
-            this.bunifuChartCanvas1.LegendFullWidth = false;
-            this.bunifuChartCanvas1.LegendPosition = Bunifu.Charts.WinForms.BunifuChartCanvas.PositionOptions.bottom;
-            this.bunifuChartCanvas1.LegendRevese = false;
-            this.bunifuChartCanvas1.LegendRTL = false;
-            this.bunifuChartCanvas1.Location = new System.Drawing.Point(7, 3);
-            this.bunifuChartCanvas1.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuChartCanvas1.Name = "bunifuChartCanvas1";
-            this.bunifuChartCanvas1.ShowXAxis = true;
-            this.bunifuChartCanvas1.ShowYAxis = true;
-            this.bunifuChartCanvas1.Size = new System.Drawing.Size(255, 271);
-            this.bunifuChartCanvas1.TabIndex = 6;
-            this.bunifuChartCanvas1.Title = "";
-            this.bunifuChartCanvas1.TitleLineHeight = 2D;
-            this.bunifuChartCanvas1.TitlePadding = 10;
-            this.bunifuChartCanvas1.TitlePosition = Bunifu.Charts.WinForms.BunifuChartCanvas.PositionOptions.bottom;
-            this.bunifuChartCanvas1.TooltipBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.bunifuChartCanvas1.TooltipFont = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuChartCanvas1.TooltipForeColor = System.Drawing.Color.WhiteSmoke;
-            this.bunifuChartCanvas1.TooltipMode = Bunifu.Charts.WinForms.BunifuChartCanvas.TooltipModeOptions.nearest;
-            this.bunifuChartCanvas1.TooltipsEnabled = true;
-            this.bunifuChartCanvas1.XAxesBeginAtZero = true;
-            this.bunifuChartCanvas1.XAxesDrawTicks = true;
-            this.bunifuChartCanvas1.XAxesFont = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.bunifuChartCanvas1.XAxesForeColor = System.Drawing.SystemColors.ControlText;
-            this.bunifuChartCanvas1.XAxesGridColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.bunifuChartCanvas1.XAxesGridLines = true;
-            this.bunifuChartCanvas1.XAxesLabel = "";
-            this.bunifuChartCanvas1.XAxesLabelFont = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.bunifuChartCanvas1.XAxesLabelForeColor = System.Drawing.SystemColors.ControlText;
-            this.bunifuChartCanvas1.XAxesLineWidth = 1;
-            this.bunifuChartCanvas1.XAxesStacked = false;
-            this.bunifuChartCanvas1.XAxesZeroLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.bunifuChartCanvas1.XAxesZeroLineWidth = 1;
-            this.bunifuChartCanvas1.YAxesBeginAtZero = true;
-            this.bunifuChartCanvas1.YAxesDrawTicks = true;
-            this.bunifuChartCanvas1.YAxesFont = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.bunifuChartCanvas1.YAxesForeColor = System.Drawing.SystemColors.ControlText;
-            this.bunifuChartCanvas1.YAxesGridColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.bunifuChartCanvas1.YAxesGridLines = true;
-            this.bunifuChartCanvas1.YAxesLabel = "";
-            this.bunifuChartCanvas1.YAxesLabelFont = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.bunifuChartCanvas1.YAxesLabelForeColor = System.Drawing.SystemColors.ControlText;
-            this.bunifuChartCanvas1.YAxesLineWidth = 1;
-            this.bunifuChartCanvas1.YAxesStacked = false;
-            this.bunifuChartCanvas1.YAxesZeroLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.bunifuChartCanvas1.YAxesZeroLineWidth = 1;
-            // 
             // lbMQC
             // 
             this.lbMQC.AllowParentOverrides = false;
@@ -425,7 +261,7 @@ namespace SMESData.View
             this.lbNG1.AutoEllipsis = false;
             this.lbNG1.CursorType = null;
             this.lbNG1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lbNG1.Location = new System.Drawing.Point(295, 156);
+            this.lbNG1.Location = new System.Drawing.Point(265, 163);
             this.lbNG1.Margin = new System.Windows.Forms.Padding(2);
             this.lbNG1.Name = "lbNG1";
             this.lbNG1.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -442,7 +278,7 @@ namespace SMESData.View
             this.lbRW1.Cursor = System.Windows.Forms.Cursors.Default;
             this.lbRW1.CursorType = System.Windows.Forms.Cursors.Default;
             this.lbRW1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lbRW1.Location = new System.Drawing.Point(295, 124);
+            this.lbRW1.Location = new System.Drawing.Point(265, 131);
             this.lbRW1.Margin = new System.Windows.Forms.Padding(2);
             this.lbRW1.Name = "lbRW1";
             this.lbRW1.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -459,7 +295,7 @@ namespace SMESData.View
             this.lbOP1.Cursor = System.Windows.Forms.Cursors.Default;
             this.lbOP1.CursorType = System.Windows.Forms.Cursors.Default;
             this.lbOP1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lbOP1.Location = new System.Drawing.Point(295, 90);
+            this.lbOP1.Location = new System.Drawing.Point(265, 97);
             this.lbOP1.Margin = new System.Windows.Forms.Padding(2);
             this.lbOP1.Name = "lbOP1";
             this.lbOP1.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -561,6 +397,30 @@ namespace SMESData.View
             this.lbModel.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lbModel.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
+            // MQCChart
+            // 
+            this.MQCChart.BackgroundColor = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("MQCChart.BackgroundColor")));
+            this.MQCChart.BorderColor = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("MQCChart.BorderColor")));
+            this.MQCChart.BorderWidth = 0;
+            this.MQCChart.Data = ((System.Collections.Generic.List<double>)(resources.GetObject("MQCChart.Data")));
+            this.MQCChart.HoverBackgroundColor = System.Drawing.Color.Empty;
+            this.MQCChart.HoverBorderColor = System.Drawing.Color.Empty;
+            this.MQCChart.HoverBorderWidth = 0;
+            this.MQCChart.Label = "Label here";
+            this.MQCChart.TargetCanvas = null;
+            // 
+            // PQCChart
+            // 
+            this.PQCChart.BackgroundColor = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("PQCChart.BackgroundColor")));
+            this.PQCChart.BorderColor = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("PQCChart.BorderColor")));
+            this.PQCChart.BorderWidth = 0;
+            this.PQCChart.Data = ((System.Collections.Generic.List<double>)(resources.GetObject("PQCChart.Data")));
+            this.PQCChart.HoverBackgroundColor = System.Drawing.Color.Empty;
+            this.PQCChart.HoverBorderColor = System.Drawing.Color.Empty;
+            this.PQCChart.HoverBorderWidth = 0;
+            this.PQCChart.Label = "Label here";
+            this.PQCChart.TargetCanvas = null;
+            // 
             // UC_Product_Info
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
@@ -579,8 +439,6 @@ namespace SMESData.View
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_PQC_PD)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -592,13 +450,6 @@ namespace SMESData.View
         private System.Windows.Forms.Panel panel2;
         private Bunifu.UI.WinForms.BunifuDataGridView dtgv_PQC_PD;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel4;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel2;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel3;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel4;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel5;
-        private Bunifu.Charts.WinForms.BunifuChartCanvas bunifuChartCanvas1;
         private Bunifu.UI.WinForms.BunifuLabel lbMQC;
         private Bunifu.UI.WinForms.BunifuLabel lbNG1;
         private Bunifu.UI.WinForms.BunifuLabel lbRW1;
@@ -606,5 +457,7 @@ namespace SMESData.View
         private Bunifu.Charts.WinForms.BunifuChartCanvas linePCanvas1;
         private Bunifu.UI.WinForms.BunifuLabel lbWar1;
         private Bunifu.UI.WinForms.BunifuLabel lbModel;
+        private Bunifu.Charts.WinForms.ChartTypes.BunifuPieChart MQCChart;
+        private Bunifu.Charts.WinForms.ChartTypes.BunifuPieChart PQCChart;
     }
 }
