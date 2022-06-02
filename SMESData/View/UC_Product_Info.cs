@@ -19,7 +19,7 @@ namespace SMESData.View
 
         private void UC_Product_Info_Load(object sender, EventArgs e)
         {
-            //dtgv_MQC_PD.DataSource = GetSOFTdata.getProductData();
+            dtgv_MQC_PD.DataSource = GetSOFTdata.getProductData();
         }
     }
 }
