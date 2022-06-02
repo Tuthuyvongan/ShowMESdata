@@ -19,7 +19,13 @@ namespace SMESData.View
 
         private void UC_Product_Info_Load(object sender, EventArgs e)
         {
+            lbWar1.Enabled = false;
             dtgv_MQC_PD.DataSource = GetSOFTdata.getProductData();
+        }
+
+        private void dtgv_MQC_PD_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            lbModel.Text = dtgv_MQC_PD.SelectedCells[0].Value.ToString();
         }
     }
 }
