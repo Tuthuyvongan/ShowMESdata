@@ -1,5 +1,5 @@
 ﻿
-namespace SMESData.View
+namespace SMESData
 {
     partial class UC_MQC_BarChart
     {

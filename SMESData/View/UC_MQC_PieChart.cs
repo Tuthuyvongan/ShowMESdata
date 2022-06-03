@@ -10,7 +10,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SMESData.View
+namespace SMESData
 {
     public partial class UC_MQC_PieChart : UserControl
     {

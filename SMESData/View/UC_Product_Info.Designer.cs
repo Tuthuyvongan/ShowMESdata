@@ -1,5 +1,5 @@
 ﻿
-namespace SMESData.View
+namespace SMESData
 {
     partial class UC_Product_Info
     {
@@ -30,32 +30,33 @@ namespace SMESData.View
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Product_Info));
             this.dtgv_MQC_PD = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.dtgv_PQC_PD = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.lbModel = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lbWar1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lbMQC = new Bunifu.UI.WinForms.BunifuLabel();
             this.lbNG1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lbRW1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lbOP1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.linePCanvas1 = new Bunifu.Charts.WinForms.BunifuChartCanvas();
-            this.lbWar1 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.lbModel = new Bunifu.UI.WinForms.BunifuLabel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.dtgv_PQC_PD = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.MQCChart = new Bunifu.Charts.WinForms.ChartTypes.BunifuPieChart(this.components);
             this.PQCChart = new Bunifu.Charts.WinForms.ChartTypes.BunifuPieChart(this.components);
+            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_MQC_PD)).BeginInit();
             this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_PQC_PD)).BeginInit();
-            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // dtgv_MQC_PD
@@ -65,23 +66,23 @@ namespace SMESData.View
             this.dtgv_MQC_PD.AllowUserToDeleteRows = false;
             this.dtgv_MQC_PD.AllowUserToResizeColumns = false;
             this.dtgv_MQC_PD.AllowUserToResizeRows = false;
-            dataGridViewCellStyle31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle31.ForeColor = System.Drawing.Color.Black;
-            this.dtgv_MQC_PD.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle31;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.dtgv_MQC_PD.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgv_MQC_PD.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtgv_MQC_PD.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgv_MQC_PD.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dtgv_MQC_PD.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
             this.dtgv_MQC_PD.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
             this.dtgv_MQC_PD.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle32.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle32.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle32.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgv_MQC_PD.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle32;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgv_MQC_PD.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dtgv_MQC_PD.ColumnHeadersHeight = 40;
             this.dtgv_MQC_PD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dtgv_MQC_PD.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
@@ -102,14 +103,14 @@ namespace SMESData.View
             this.dtgv_MQC_PD.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.dtgv_MQC_PD.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
             this.dtgv_MQC_PD.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle33.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle33.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle33.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle33.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle33.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgv_MQC_PD.DefaultCellStyle = dataGridViewCellStyle33;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgv_MQC_PD.DefaultCellStyle = dataGridViewCellStyle3;
             this.dtgv_MQC_PD.EnableHeadersVisualStyles = false;
             this.dtgv_MQC_PD.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.dtgv_MQC_PD.HeaderBackColor = System.Drawing.Color.DodgerBlue;
@@ -141,91 +142,11 @@ namespace SMESData.View
             this.panel1.Size = new System.Drawing.Size(1412, 452);
             this.panel1.TabIndex = 18;
             // 
-            // panel2
-            // 
-            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel2.Controls.Add(this.dtgv_PQC_PD);
-            this.panel2.Location = new System.Drawing.Point(15, 452);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1412, 452);
-            this.panel2.TabIndex = 19;
-            // 
-            // dtgv_PQC_PD
-            // 
-            this.dtgv_PQC_PD.AllowCustomTheming = true;
-            this.dtgv_PQC_PD.AllowUserToAddRows = false;
-            this.dtgv_PQC_PD.AllowUserToDeleteRows = false;
-            this.dtgv_PQC_PD.AllowUserToResizeColumns = false;
-            this.dtgv_PQC_PD.AllowUserToResizeRows = false;
-            dataGridViewCellStyle34.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle34.ForeColor = System.Drawing.Color.Black;
-            this.dtgv_PQC_PD.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle34;
-            this.dtgv_PQC_PD.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dtgv_PQC_PD.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dtgv_PQC_PD.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dtgv_PQC_PD.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
-            this.dtgv_PQC_PD.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
-            this.dtgv_PQC_PD.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle35.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle35.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle35.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle35.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle35.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle35.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgv_PQC_PD.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle35;
-            this.dtgv_PQC_PD.ColumnHeadersHeight = 40;
-            this.dtgv_PQC_PD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dtgv_PQC_PD.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            this.dtgv_PQC_PD.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtgv_PQC_PD.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.dtgv_PQC_PD.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.dtgv_PQC_PD.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.dtgv_PQC_PD.CurrentTheme.BackColor = System.Drawing.Color.White;
-            this.dtgv_PQC_PD.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
-            this.dtgv_PQC_PD.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
-            this.dtgv_PQC_PD.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtgv_PQC_PD.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dtgv_PQC_PD.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            this.dtgv_PQC_PD.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
-            this.dtgv_PQC_PD.CurrentTheme.Name = null;
-            this.dtgv_PQC_PD.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.dtgv_PQC_PD.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtgv_PQC_PD.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.dtgv_PQC_PD.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.dtgv_PQC_PD.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle36.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle36.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle36.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle36.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle36.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle36.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgv_PQC_PD.DefaultCellStyle = dataGridViewCellStyle36;
-            this.dtgv_PQC_PD.EnableHeadersVisualStyles = false;
-            this.dtgv_PQC_PD.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
-            this.dtgv_PQC_PD.HeaderBackColor = System.Drawing.Color.DodgerBlue;
-            this.dtgv_PQC_PD.HeaderBgColor = System.Drawing.Color.Empty;
-            this.dtgv_PQC_PD.HeaderForeColor = System.Drawing.Color.White;
-            this.dtgv_PQC_PD.Location = new System.Drawing.Point(23, 55);
-            this.dtgv_PQC_PD.Margin = new System.Windows.Forms.Padding(2);
-            this.dtgv_PQC_PD.MultiSelect = false;
-            this.dtgv_PQC_PD.Name = "dtgv_PQC_PD";
-            this.dtgv_PQC_PD.ReadOnly = true;
-            this.dtgv_PQC_PD.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            this.dtgv_PQC_PD.RowHeadersVisible = false;
-            this.dtgv_PQC_PD.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dtgv_PQC_PD.RowTemplate.Height = 40;
-            this.dtgv_PQC_PD.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dtgv_PQC_PD.Size = new System.Drawing.Size(980, 384);
-            this.dtgv_PQC_PD.TabIndex = 17;
-            this.dtgv_PQC_PD.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
-            // 
             // panel3
             // 
             this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel3.Controls.Add(this.bunifuLabel1);
             this.panel3.Controls.Add(this.lbModel);
             this.panel3.Controls.Add(this.lbWar1);
             this.panel3.Controls.Add(this.lbMQC);
@@ -239,6 +160,38 @@ namespace SMESData.View
             this.panel3.Size = new System.Drawing.Size(385, 332);
             this.panel3.TabIndex = 18;
             // 
+            // lbModel
+            // 
+            this.lbModel.AllowParentOverrides = false;
+            this.lbModel.AutoEllipsis = false;
+            this.lbModel.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lbModel.CursorType = System.Windows.Forms.Cursors.Default;
+            this.lbModel.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbModel.Location = new System.Drawing.Point(171, 23);
+            this.lbModel.Name = "lbModel";
+            this.lbModel.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbModel.Size = new System.Drawing.Size(127, 22);
+            this.lbModel.TabIndex = 41;
+            this.lbModel.Text = "BFFSTR3027P";
+            this.lbModel.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbModel.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // lbWar1
+            // 
+            this.lbWar1.AllowParentOverrides = false;
+            this.lbWar1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbWar1.AutoEllipsis = false;
+            this.lbWar1.CursorType = null;
+            this.lbWar1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbWar1.Location = new System.Drawing.Point(100, 120);
+            this.lbWar1.Name = "lbWar1";
+            this.lbWar1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbWar1.Size = new System.Drawing.Size(155, 37);
+            this.lbWar1.TabIndex = 40;
+            this.lbWar1.Text = "bunifuLabel1";
+            this.lbWar1.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
+            this.lbWar1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
             // lbMQC
             // 
             this.lbMQC.AllowParentOverrides = false;
@@ -246,7 +199,7 @@ namespace SMESData.View
             this.lbMQC.Cursor = System.Windows.Forms.Cursors.Default;
             this.lbMQC.CursorType = System.Windows.Forms.Cursors.Default;
             this.lbMQC.Font = new System.Drawing.Font("Times New Roman", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbMQC.Location = new System.Drawing.Point(3, 3);
+            this.lbMQC.Location = new System.Drawing.Point(286, 283);
             this.lbMQC.Name = "lbMQC";
             this.lbMQC.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbMQC.Size = new System.Drawing.Size(92, 42);
@@ -365,37 +318,86 @@ namespace SMESData.View
             this.linePCanvas1.YAxesZeroLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.linePCanvas1.YAxesZeroLineWidth = 1;
             // 
-            // lbWar1
+            // panel2
             // 
-            this.lbWar1.AllowParentOverrides = false;
-            this.lbWar1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbWar1.AutoEllipsis = false;
-            this.lbWar1.CursorType = null;
-            this.lbWar1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbWar1.Location = new System.Drawing.Point(100, 120);
-            this.lbWar1.Name = "lbWar1";
-            this.lbWar1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbWar1.Size = new System.Drawing.Size(155, 37);
-            this.lbWar1.TabIndex = 40;
-            this.lbWar1.Text = "bunifuLabel1";
-            this.lbWar1.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
-            this.lbWar1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Controls.Add(this.dtgv_PQC_PD);
+            this.panel2.Location = new System.Drawing.Point(15, 452);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1412, 452);
+            this.panel2.TabIndex = 19;
             // 
-            // lbModel
+            // dtgv_PQC_PD
             // 
-            this.lbModel.AllowParentOverrides = false;
-            this.lbModel.AutoEllipsis = false;
-            this.lbModel.Cursor = System.Windows.Forms.Cursors.Default;
-            this.lbModel.CursorType = System.Windows.Forms.Cursors.Default;
-            this.lbModel.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbModel.Location = new System.Drawing.Point(171, 23);
-            this.lbModel.Name = "lbModel";
-            this.lbModel.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbModel.Size = new System.Drawing.Size(127, 22);
-            this.lbModel.TabIndex = 41;
-            this.lbModel.Text = "BFFSTR3027P";
-            this.lbModel.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lbModel.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.dtgv_PQC_PD.AllowCustomTheming = true;
+            this.dtgv_PQC_PD.AllowUserToAddRows = false;
+            this.dtgv_PQC_PD.AllowUserToDeleteRows = false;
+            this.dtgv_PQC_PD.AllowUserToResizeColumns = false;
+            this.dtgv_PQC_PD.AllowUserToResizeRows = false;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            this.dtgv_PQC_PD.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dtgv_PQC_PD.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dtgv_PQC_PD.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgv_PQC_PD.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dtgv_PQC_PD.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
+            this.dtgv_PQC_PD.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
+            this.dtgv_PQC_PD.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgv_PQC_PD.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dtgv_PQC_PD.ColumnHeadersHeight = 40;
+            this.dtgv_PQC_PD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dtgv_PQC_PD.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            this.dtgv_PQC_PD.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtgv_PQC_PD.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.dtgv_PQC_PD.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.dtgv_PQC_PD.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.dtgv_PQC_PD.CurrentTheme.BackColor = System.Drawing.Color.White;
+            this.dtgv_PQC_PD.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.dtgv_PQC_PD.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
+            this.dtgv_PQC_PD.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtgv_PQC_PD.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dtgv_PQC_PD.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            this.dtgv_PQC_PD.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.dtgv_PQC_PD.CurrentTheme.Name = null;
+            this.dtgv_PQC_PD.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dtgv_PQC_PD.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtgv_PQC_PD.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.dtgv_PQC_PD.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.dtgv_PQC_PD.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgv_PQC_PD.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dtgv_PQC_PD.EnableHeadersVisualStyles = false;
+            this.dtgv_PQC_PD.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.dtgv_PQC_PD.HeaderBackColor = System.Drawing.Color.DodgerBlue;
+            this.dtgv_PQC_PD.HeaderBgColor = System.Drawing.Color.Empty;
+            this.dtgv_PQC_PD.HeaderForeColor = System.Drawing.Color.White;
+            this.dtgv_PQC_PD.Location = new System.Drawing.Point(23, 55);
+            this.dtgv_PQC_PD.Margin = new System.Windows.Forms.Padding(2);
+            this.dtgv_PQC_PD.MultiSelect = false;
+            this.dtgv_PQC_PD.Name = "dtgv_PQC_PD";
+            this.dtgv_PQC_PD.ReadOnly = true;
+            this.dtgv_PQC_PD.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            this.dtgv_PQC_PD.RowHeadersVisible = false;
+            this.dtgv_PQC_PD.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dtgv_PQC_PD.RowTemplate.Height = 40;
+            this.dtgv_PQC_PD.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dtgv_PQC_PD.Size = new System.Drawing.Size(980, 384);
+            this.dtgv_PQC_PD.TabIndex = 17;
+            this.dtgv_PQC_PD.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
             // MQCChart
             // 
@@ -421,6 +423,22 @@ namespace SMESData.View
             this.PQCChart.Label = "Label here";
             this.PQCChart.TargetCanvas = null;
             // 
+            // bunifuLabel1
+            // 
+            this.bunifuLabel1.AllowParentOverrides = false;
+            this.bunifuLabel1.AutoEllipsis = false;
+            this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuLabel1.Location = new System.Drawing.Point(103, 23);
+            this.bunifuLabel1.Name = "bunifuLabel1";
+            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel1.Size = new System.Drawing.Size(62, 22);
+            this.bunifuLabel1.TabIndex = 42;
+            this.bunifuLabel1.Text = "Model :";
+            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
             // UC_Product_Info
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
@@ -435,10 +453,10 @@ namespace SMESData.View
             this.Load += new System.EventHandler(this.UC_Product_Info_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_MQC_PD)).EndInit();
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtgv_PQC_PD)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgv_PQC_PD)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -459,5 +477,6 @@ namespace SMESData.View
         private Bunifu.UI.WinForms.BunifuLabel lbModel;
         private Bunifu.Charts.WinForms.ChartTypes.BunifuPieChart MQCChart;
         private Bunifu.Charts.WinForms.ChartTypes.BunifuPieChart PQCChart;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
     }
 }

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SMESData.View
+namespace SMESData
 {
     public partial class MessageWaitForm : Form
     {
@@ -20,8 +20,21 @@ namespace SMESData.View
         private void MessageWaitForm_Load(object sender, EventArgs e)
         {
             progressBar1.Value = 0;
-            progressBar1.TransitionValue(100, 6000);
         }
-   
+
+        public void UpdateProgress(int progress, string announce)
+        {
+            lbWait.BeginInvoke(
+                new Action(() =>
+                {
+                    lbWait.Text = announce + progress + "%";
+                }));
+            progressBar1.BeginInvoke(
+                new Action(() =>
+                {
+                    progressBar1.Value = progress;
+                }
+            ));
+        }
     }
 }

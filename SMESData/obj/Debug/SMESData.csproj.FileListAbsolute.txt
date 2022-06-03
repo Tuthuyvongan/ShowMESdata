@@ -119,10 +119,10 @@ C:\Users\admin\Documents\GitHub\ShowMESdata\SMESData\bin\Debug\System.Memory.xml
 C:\Users\admin\Documents\GitHub\ShowMESdata\SMESData\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\admin\Documents\GitHub\ShowMESdata\SMESData\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\admin\Documents\GitHub\ShowMESdata\SMESData\bin\Debug\System.Threading.Tasks.Extensions.xml
-C:\Users\admin\Documents\GitHub\ShowMESdata\SMESData\obj\Debug\SMESData.View.UC_MQC_BarChart.resources
-C:\Users\admin\Documents\GitHub\ShowMESdata\SMESData\obj\Debug\SMESData.View.UC_MQC_PieChart.resources
-C:\Users\admin\Documents\GitHub\ShowMESdata\SMESData\obj\Debug\SMESData.View.MessageWaitForm.resources
-C:\Users\admin\Documents\GitHub\ShowMESdata\SMESData\obj\Debug\SMESData.View.UC_PQC_PieChart.resources
 C:\Users\admin\Documents\GitHub\ShowMESdata\SMESData\bin\Debug\XanderUI.dll
 C:\Users\admin\Documents\GitHub\ShowMESdata\SMESData\obj\Debug\SMESData.csproj.AssemblyReference.cache
-C:\Users\admin\Documents\GitHub\ShowMESdata\SMESData\obj\Debug\SMESData.View.UC_Product_Info.resources
+C:\Users\admin\Documents\GitHub\ShowMESdata\SMESData\obj\Debug\SMESData.MessageWaitForm.resources
+C:\Users\admin\Documents\GitHub\ShowMESdata\SMESData\obj\Debug\SMESData.UC_Product_Info.resources
+C:\Users\admin\Documents\GitHub\ShowMESdata\SMESData\obj\Debug\SMESData.UC_MQC_BarChart.resources
+C:\Users\admin\Documents\GitHub\ShowMESdata\SMESData\obj\Debug\SMESData.UC_MQC_PieChart.resources
+C:\Users\admin\Documents\GitHub\ShowMESdata\SMESData\obj\Debug\SMESData.UC_PQC_PieChart.resources

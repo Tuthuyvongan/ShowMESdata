@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SMESData.View
+namespace SMESData
 {
     public partial class UC_Product_Info : UserControl
     {
@@ -20,9 +20,9 @@ namespace SMESData.View
         private void UC_Product_Info_Load(object sender, EventArgs e)
         {
             dtgv_MQC_PD.DataSource = GetSOFTdata.getProductData();
-            SaveData.op = double.Parse(dtgv_MQC_PD.Rows[0].Cells[2].Value.ToString());
-            SaveData.rw = double.Parse(dtgv_MQC_PD.Rows[0].Cells[3].Value.ToString());
-            SaveData.ng = double.Parse(dtgv_MQC_PD.Rows[0].Cells[4].Value.ToString());
+            SaveData.op = double.Parse(dtgv_MQC_PD.Rows[0].Cells[3].Value.ToString());
+            SaveData.rw = double.Parse(dtgv_MQC_PD.Rows[0].Cells[4].Value.ToString());
+            SaveData.ng = double.Parse(dtgv_MQC_PD.Rows[0].Cells[5].Value.ToString());
             SaveData.total = double.Parse(dtgv_MQC_PD.Rows[0].Cells[6].Value.ToString());
         }
 
@@ -35,9 +35,9 @@ namespace SMESData.View
             {
                 dataMQC.Clear();
                 lbModel.Text = dtgv_MQC_PD.Rows[e.RowIndex].Cells[0].Value.ToString();
-                SaveData.op = double.Parse(dtgv_MQC_PD.Rows[e.RowIndex].Cells[2].Value.ToString());
-                SaveData.rw = double.Parse(dtgv_MQC_PD.Rows[e.RowIndex].Cells[3].Value.ToString());
-                SaveData.ng = double.Parse(dtgv_MQC_PD.Rows[e.RowIndex].Cells[4].Value.ToString());
+                SaveData.op = double.Parse(dtgv_MQC_PD.Rows[e.RowIndex].Cells[3].Value.ToString());
+                SaveData.rw = double.Parse(dtgv_MQC_PD.Rows[e.RowIndex].Cells[4].Value.ToString());
+                SaveData.ng = double.Parse(dtgv_MQC_PD.Rows[e.RowIndex].Cells[5].Value.ToString());
                 SaveData.total = double.Parse(dtgv_MQC_PD.Rows[e.RowIndex].Cells[6].Value.ToString());
                 renderPiechart();
             }                         
