@@ -270,6 +270,7 @@
     <Compile Include="Controller\SQLClass\DatabaseUtils.cs" />
     <Compile Include="Controller\SQLClass\sqlSOFTCon.cs" />
     <Compile Include="Model\GetSOFTdata.cs" />
+    <Compile Include="Model\SaveData.cs" />
     <Compile Include="View\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -19,13 +19,15 @@ namespace SMESData.View
 
         private void UC_Product_Info_Load(object sender, EventArgs e)
         {
-            lbWar1.Enabled = false;
             dtgv_MQC_PD.DataSource = GetSOFTdata.getProductData();
+            SaveData.op = double.Parse(dtgv_MQC_PD.Rows[0].Cells[2].Value.ToString());
+            SaveData.rw = double.Parse(dtgv_MQC_PD.Rows[0].Cells[3].Value.ToString());
+            SaveData.ng = double.Parse(dtgv_MQC_PD.Rows[0].Cells[4].Value.ToString());
+            SaveData.total = double.Parse(dtgv_MQC_PD.Rows[0].Cells[6].Value.ToString());
         }
 
         //List data
         List<double> dataMQC = new List<double>();
-        double op, rw, ng, total;
 
         private void dtgv_MQC_PD_CellClick(object sender, DataGridViewCellEventArgs e)
         {            
@@ -33,18 +35,18 @@ namespace SMESData.View
             {
                 dataMQC.Clear();
                 lbModel.Text = dtgv_MQC_PD.Rows[e.RowIndex].Cells[0].Value.ToString();
-                op = double.Parse(dtgv_MQC_PD.Rows[e.RowIndex].Cells[2].Value.ToString());
-                rw = double.Parse(dtgv_MQC_PD.Rows[e.RowIndex].Cells[3].Value.ToString());
-                ng = double.Parse(dtgv_MQC_PD.Rows[e.RowIndex].Cells[4].Value.ToString());
-                total = double.Parse(dtgv_MQC_PD.Rows[e.RowIndex].Cells[6].Value.ToString());
+                SaveData.op = double.Parse(dtgv_MQC_PD.Rows[e.RowIndex].Cells[2].Value.ToString());
+                SaveData.rw = double.Parse(dtgv_MQC_PD.Rows[e.RowIndex].Cells[3].Value.ToString());
+                SaveData.ng = double.Parse(dtgv_MQC_PD.Rows[e.RowIndex].Cells[4].Value.ToString());
+                SaveData.total = double.Parse(dtgv_MQC_PD.Rows[e.RowIndex].Cells[6].Value.ToString());
                 renderPiechart();
             }                         
         }
         public void lineData()
         {
-            double d1 = Math.Round(op / total * 100, 1);
-            double d2 = Math.Round(rw / total * 100, 1);
-            double d3 = Math.Round(ng / total * 100, 1);
+            double d1 = Math.Round(SaveData.op / SaveData.total * 100, 1);
+            double d2 = Math.Round(SaveData.rw / SaveData.total * 100, 1);
+            double d3 = Math.Round(SaveData.ng / SaveData.total * 100, 1);
             dataMQC.Add(d1);
             dataMQC.Add(d2);
             dataMQC.Add(d3);
