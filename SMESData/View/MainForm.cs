@@ -29,16 +29,22 @@ namespace SMESData
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            btMQCPD.PerformClick();
-            btMQCPD.Focus();
             uc_MQC_PieChart.OnUpdateStatus += customControl_OnUpdateStatus;
+            btMQCPD.PerformClick();
+            btMQCPD.Focus();            
         }
         private void customControl_OnUpdateStatus(object sender, EventArgs e)
         {
-            btMQCPD.PerformClick();
+            PD = true;
+            MQC = false;
+            PQC = false;
+            addUserControl(uc_PI);
+            uc_PI.UpdateTime();
+            btMQCPD.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
+            btPQC.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Idle;
+            btMQC.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Idle;
             btMQCPD.Focus();
             uc_PI.UpdateDTGV();
-            uc_PI.ChangeData();
         }
         public void addUserControl(UserControl userControl)
         {

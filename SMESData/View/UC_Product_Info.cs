@@ -27,25 +27,7 @@ namespace SMESData
             dtpChart.ValueChanged += new EventHandler(dtpChart_ValueChanged);
             //Update datagridview
             UpdateDTGV();
-            //
-            SaveData.Model = dtgv_MQC_PD.Rows[0].Cells[0].Value.ToString();
-            SaveData.line = dtgv_MQC_PD.Rows[0].Cells[2].Value.ToString();
-            SaveData.op = double.Parse(dtgv_MQC_PD.Rows[0].Cells[3].Value.ToString());
-            SaveData.rw = double.Parse(dtgv_MQC_PD.Rows[0].Cells[4].Value.ToString());
-            SaveData.ng = double.Parse(dtgv_MQC_PD.Rows[0].Cells[5].Value.ToString());
-            SaveData.total = double.Parse(dtgv_MQC_PD.Rows[0].Cells[6].Value.ToString());
-            SaveData.NGrealtime = double.Parse(dtgv_MQC_PD.Rows[0].Cells[7].Value.ToString());
-            SaveData.NGallow = double.Parse(dtgv_MQC_PD.Rows[0].Cells[8].Value.ToString());
-            lbModel.Text = SaveData.Model;
-            tbLine.Text = SaveData.line;
-            lbOP.Text = SaveData.op.ToString();
-            lbRW.Text = SaveData.rw.ToString();
-            lbNG.Text = SaveData.ng.ToString();
-            lbTt.Text = SaveData.total.ToString();
-            lbNGR.Text = SaveData.NGrealtime.ToString() + "%";
-            tbNGA.Text = SaveData.NGallow.ToString() + "%";
-            renderPiechart();
-            //
+            ChangeData();
             lblTime.Font = new Font("Times New Roman", 14, FontStyle.Bold);
             //Timer          
             timer1.Start();
