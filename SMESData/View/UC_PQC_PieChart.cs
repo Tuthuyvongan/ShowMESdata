@@ -46,7 +46,7 @@ namespace SMESData
         List<double> dataL07 = new List<double>();
         //
         public int secondsToWait = 300;
-        private DateTime startTime;
+        private DateTime startTime;        
 
         public void lineData()
         {
@@ -116,7 +116,7 @@ namespace SMESData
                                 d = Math.Round(temp / GetSOFTdata.getTotalPQC("L07", date) * 100, 2);
                             dataL07.Add(d);
                             Thread.Sleep(50);
-                            msf.UpdateProgress(100 * i / 3, "Application is running, please wait ... ");
+                            msf.UpdateProgress(100 * (i + 1) / 3, "Application is running, please wait ... ");
                         }
                         msf.BeginInvoke(new Action(() => msf.Close()));
                     }
@@ -381,13 +381,11 @@ namespace SMESData
             L05Chart.BackgroundColor = bgColors;
             L06Chart.BackgroundColor = bgColors;
             L07Chart.BackgroundColor = bgColors;
-            dtpChart.Visible = true;
+            dtpChart.Visible = true;          
         }
 
         private void dtpChart_ValueChanged(object sender, EventArgs e)
-        {
-            Thread t = new Thread(new ThreadStart(splash));
-            t.Start();
+        {           
             dtpChart.Visible = false;
             dataL01.Clear();
             dataL02.Clear();
@@ -397,8 +395,6 @@ namespace SMESData
             dataL06.Clear();
             dataL07.Clear();
             renderPiechart();
-            Thread.Sleep(1000);
-            t.Abort();
         }
         public void splash()
         {
@@ -438,9 +434,7 @@ namespace SMESData
                                 ts.Seconds);
                 lblTime.Text = "Chart update in: " + "\r\n" + time.ToString();
                 if (remainingSeconds < 0)
-                {
-                    Thread t = new Thread(new ThreadStart(splash));
-                    t.Start();                   
+                {                                      
                     lblTime.Visible = false;
                     dataL01.Clear();
                     dataL02.Clear();
@@ -450,8 +444,6 @@ namespace SMESData
                     dataL06.Clear();
                     dataL07.Clear();
                     renderPiechart();
-                    Thread.Sleep(1000);
-                    t.Abort();
                     timer1.Stop();
                     UpdateTime();
                 }

@@ -27,7 +27,7 @@ namespace SMESData
             dtpChart.Format = DateTimePickerFormat.Custom;           
             dtpChart.Enabled = false;            
             dtpChart.ValueChanged += new EventHandler(dtpChart_ValueChanged);
-            renderPiechart();            
+            renderPiechart();
             //
             lblTime.Font = new Font("Times New Roman", 14, FontStyle.Bold);
             //Timer          
@@ -47,7 +47,7 @@ namespace SMESData
         //
         public int secondsToWait = 300;
         private DateTime startTime;
-
+       
         public void lineData()
         {
             string date = dtpChart.Value.ToString("yyyy-MM-dd");
@@ -116,8 +116,8 @@ namespace SMESData
                                 d = Math.Round(temp / GetSOFTdata.getTotalMQC("L07", date) * 100, 2);
                             dataL07.Add(d);
                             Thread.Sleep(50);
-                            msf.UpdateProgress(100 * i / 3, "Application is running, please wait ... ");
-                        }
+                            msf.UpdateProgress(100 * (i+1) / 3, "Application is running, please wait ... ");
+                        }                       
                         msf.BeginInvoke(new Action(() => msf.Close()));
                     }
                 ));
@@ -125,7 +125,7 @@ namespace SMESData
             msf.ShowDialog();
         }
         public void renderPiechart()
-        {            
+        {
             //Add data
             lineData();
             L01Chart.Data = dataL01;
@@ -381,7 +381,7 @@ namespace SMESData
             L05Chart.BackgroundColor = bgColors;
             L06Chart.BackgroundColor = bgColors;
             L07Chart.BackgroundColor = bgColors;
-            dtpChart.Visible = true;           
+            dtpChart.Visible = true;          
         }
 
         private void dtpChart_ValueChanged(object sender, EventArgs e)
@@ -394,7 +394,7 @@ namespace SMESData
             dataL05.Clear();
             dataL06.Clear();
             dataL07.Clear();
-            renderPiechart();            
+            renderPiechart();
         }
         public void splash()
         {
@@ -443,7 +443,7 @@ namespace SMESData
                     dataL05.Clear();
                     dataL06.Clear();
                     dataL07.Clear();
-                    renderPiechart();                   
+                    renderPiechart();
                     timer1.Stop();
                     UpdateTime();
                 }

@@ -79,9 +79,9 @@ namespace SMESData
                 lbOP1.Text = "OUTPUT: " + dataMQC[0].ToString() + "%";
                 lbRW1.Text = "REWORK: " + dataMQC[1].ToString() + "%";
                 lbNG1.Text = "NO GOOD: " + dataMQC[2].ToString() + "%";
-                lbOP1.Font = new Font("Times New Roman", 10, FontStyle.Bold);
-                lbRW1.Font = new Font("Times New Roman", 10, FontStyle.Bold);
-                lbNG1.Font = new Font("Times New Roman", 10, FontStyle.Bold);
+                lbOP1.Font = new Font("Times New Roman", 12, FontStyle.Bold);
+                lbRW1.Font = new Font("Times New Roman", 12, FontStyle.Bold);
+                lbNG1.Font = new Font("Times New Roman", 12, FontStyle.Bold);
             }                  
             //Target Canvas
             MQCChart.TargetCanvas = linePCanvas1;            
