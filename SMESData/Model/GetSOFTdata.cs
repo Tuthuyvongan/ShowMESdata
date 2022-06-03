@@ -94,7 +94,7 @@ namespace SMESData
             return s;
         }
 
-        public static DataTable getProductData()
+        public static DataTable getProductData(string date)
         {
             DataTable dt = new DataTable();
             sqlSOFTCon sqlSOFTCon = new sqlSOFTCon();
@@ -111,7 +111,7 @@ namespace SMESData
             sqlGetData.Append("COALESCE(SUM(CASE WHEN remark = 'RW' THEN Cast(data as numeric(10,0)) END), 0) AS REWORK, ");
             sqlGetData.Append("COALESCE(SUM(CASE WHEN remark = 'NG' THEN Cast(data as numeric(10,0)) END), 0) AS NOGOOD ");
             sqlGetData.Append("FROM m_ERPMQC_REALTIME ");
-            sqlGetData.Append("WHERE inspectdate = '2022-06-03' ");
+            sqlGetData.Append("WHERE inspectdate = '" + date + "' ");
             sqlGetData.Append("group by model, inspectdate, line) as m ");
             sqlGetData.Append("on a.inspectdate = m.inspectdate and a.model = m.model and a.line = m.line ");
             sqlGetData.Append("order by Model, Date desc");

@@ -18,16 +18,35 @@ namespace SMESData
         }
 
         private void UC_Product_Info_Load(object sender, EventArgs e)
-        {
-            dtgv_MQC_PD.DataSource = GetSOFTdata.getProductData();
-            //SaveData.op = double.Parse(dtgv_MQC_PD.Rows[0].Cells[3].Value.ToString());
-            //SaveData.rw = double.Parse(dtgv_MQC_PD.Rows[0].Cells[4].Value.ToString());
-            //SaveData.ng = double.Parse(dtgv_MQC_PD.Rows[0].Cells[5].Value.ToString());
-            //SaveData.total = double.Parse(dtgv_MQC_PD.Rows[0].Cells[6].Value.ToString());
+        {            
+            // Date time format
+            dtpChart.Value = DateTime.Today;
+            dtpChart.CustomFormat = "dd-MM-yyyy";
+            dtpChart.Format = DateTimePickerFormat.Custom;
+            dtpChart.Enabled = false;
+            dtpChart.ValueChanged += new EventHandler(dtpChart_ValueChanged);
+            //Update datagridview
+            UpdateDTGV();
+            //
+            SaveData.op = double.Parse(dtgv_MQC_PD.Rows[0].Cells[3].Value.ToString());
+            SaveData.rw = double.Parse(dtgv_MQC_PD.Rows[0].Cells[4].Value.ToString());
+            SaveData.ng = double.Parse(dtgv_MQC_PD.Rows[0].Cells[5].Value.ToString());
+            SaveData.total = double.Parse(dtgv_MQC_PD.Rows[0].Cells[6].Value.ToString());
+            renderPiechart();
+            //
+            lblTime.Font = new Font("Times New Roman", 14, FontStyle.Bold);
+            //Timer          
+            timer1.Start();
+            startTime = DateTime.Now;
+            btStart.Enabled = false;
+            pnTimeControl.Enabled = false;
         }
 
         //List data
         List<double> dataMQC = new List<double>();
+        //
+        public int secondsToWait = 300;
+        private DateTime startTime;
 
         private void dtgv_MQC_PD_CellClick(object sender, DataGridViewCellEventArgs e)
         {            
@@ -43,7 +62,7 @@ namespace SMESData
             }                         
         }
         public void lineData()
-        {
+        {            
             double d1 = Math.Round(SaveData.op / SaveData.total * 100, 1);
             double d2 = Math.Round(SaveData.rw / SaveData.total * 100, 1);
             double d3 = Math.Round(SaveData.ng / SaveData.total * 100, 1);
@@ -99,6 +118,92 @@ namespace SMESData
             bgColors.Add(Color.Orange);
             bgColors.Add(Color.Red);
             MQCChart.BackgroundColor = bgColors;
+        }
+        public void UpdateDTGV()
+        {            
+            string date = dtpChart.Value.ToString("yyyy-MM-dd");            
+            dtgv_MQC_PD.DataSource = GetSOFTdata.getProductData(date);
+            dtgv_MQC_PD.Refresh();
+            dtpChart.Visible = true;
+        }
+        private void dtpChart_ValueChanged(object sender, EventArgs e)
+        {
+            dtpChart.Visible = false;
+            dataMQC.Clear();
+            UpdateDTGV();
+        }
+        public void UpdateTime()
+        {
+            dtpChart.Value = DateTime.Today;
+            btStart.Enabled = false;
+            btStop.Enabled = true;
+            dtpChart.Enabled = false;
+            pnTimeControl.Enabled = false;
+            timer1.Start();
+            startTime = DateTime.Now;
+            lblTime.Visible = true;
+        }
+        public void ChangeUpdateTime()
+        {
+            int h = Int32.Parse(nbH.Value.ToString());
+            int m = Int32.Parse(nbM.Value.ToString());
+            int s = Int32.Parse(nbS.Value.ToString());
+            if (h == 0 && m == 0 && s == 0)
+                secondsToWait = 30;
+            else
+                secondsToWait = h * 3600 + m * 60 + s;
+        }
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (MainForm.MQC == true)
+            {
+                int elapsedSeconds = (int)(DateTime.Now - startTime).TotalSeconds;
+                int remainingSeconds = secondsToWait - elapsedSeconds;
+                TimeSpan ts = TimeSpan.FromSeconds(remainingSeconds);
+                string time = string.Format("{0:D2}:{1:D2}:{2:D2}",
+                                ts.Hours,
+                                ts.Minutes,
+                                ts.Seconds);
+                lblTime.Text = "Chart update in: " + "\r\n" + time.ToString();
+                if (remainingSeconds < 0)
+                {
+                    lblTime.Visible = false;
+                    dataMQC.Clear();
+                    UpdateDTGV();
+                    timer1.Stop();
+                    UpdateTime();
+                }
+            }
+            else
+                timer1.Stop();
+        }
+        private void btStart_Click(object sender, EventArgs e)
+        {
+            UpdateTime();
+        }
+        private void btStop_Click(object sender, EventArgs e)
+        {
+            btStart.Enabled = true;
+            btStop.Enabled = false;
+            dtpChart.Enabled = true;
+            pnTimeControl.Enabled = true;
+            timer1.Stop();
+            lblTime.Text = "Auto update" + "\r\n" + "chart is stopping";
+        }
+
+        private void nbH_ValueChanged(object sender, EventArgs e)
+        {
+            ChangeUpdateTime();
+        }
+
+        private void nbM_ValueChanged(object sender, EventArgs e)
+        {
+            ChangeUpdateTime();
+        }
+
+        private void nbS_ValueChanged(object sender, EventArgs e)
+        {
+            ChangeUpdateTime();
         }
     }
 }

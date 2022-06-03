@@ -395,11 +395,7 @@ namespace SMESData
             dataL06.Clear();
             dataL07.Clear();
             renderPiechart();
-        }
-        public void splash()
-        {
-            Application.Run(new MessageWaitForm());
-        }
+        }        
         public void UpdateTime()
         {
             dtpChart.Value = DateTime.Today;

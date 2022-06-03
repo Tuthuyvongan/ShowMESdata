@@ -176,7 +176,7 @@ namespace SMESData
             this.pnTimeControl.Controls.Add(this.nbH);
             this.pnTimeControl.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
             this.pnTimeControl.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
-            this.pnTimeControl.Location = new System.Drawing.Point(1225, 212);
+            this.pnTimeControl.Location = new System.Drawing.Point(1063, 225);
             this.pnTimeControl.Name = "pnTimeControl";
             this.pnTimeControl.PanelColor = System.Drawing.Color.White;
             this.pnTimeControl.PanelColor2 = System.Drawing.Color.White;
@@ -262,6 +262,7 @@ namespace SMESData
             this.nbS.TabIndex = 2;
             this.nbS.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.nbS.UpDownAlign = System.Windows.Forms.LeftRightAlignment.Left;
+            this.nbS.ValueChanged += new System.EventHandler(this.nbS_ValueChanged);
             // 
             // nbM
             // 
@@ -273,6 +274,7 @@ namespace SMESData
             this.nbM.TabIndex = 1;
             this.nbM.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.nbM.UpDownAlign = System.Windows.Forms.LeftRightAlignment.Left;
+            this.nbM.ValueChanged += new System.EventHandler(this.nbM_ValueChanged);
             // 
             // nbH
             // 
@@ -284,6 +286,7 @@ namespace SMESData
             this.nbH.TabIndex = 0;
             this.nbH.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.nbH.UpDownAlign = System.Windows.Forms.LeftRightAlignment.Left;
+            this.nbH.ValueChanged += new System.EventHandler(this.nbH_ValueChanged);
             // 
             // btStart
             // 
@@ -334,7 +337,7 @@ namespace SMESData
             this.btStart.IdleIconLeftImage = null;
             this.btStart.IdleIconRightImage = null;
             this.btStart.IndicateFocus = false;
-            this.btStart.Location = new System.Drawing.Point(1244, 126);
+            this.btStart.Location = new System.Drawing.Point(1249, 340);
             this.btStart.Name = "btStart";
             this.btStart.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btStart.OnDisabledState.BorderRadius = 1;
@@ -375,6 +378,7 @@ namespace SMESData
             this.btStart.TextMarginLeft = 0;
             this.btStart.TextPadding = new System.Windows.Forms.Padding(0);
             this.btStart.UseDefaultRadiusAndThickness = true;
+            this.btStart.Click += new System.EventHandler(this.btStart_Click);
             // 
             // btStop
             // 
@@ -425,7 +429,7 @@ namespace SMESData
             this.btStop.IdleIconLeftImage = null;
             this.btStop.IdleIconRightImage = null;
             this.btStop.IndicateFocus = false;
-            this.btStop.Location = new System.Drawing.Point(1074, 126);
+            this.btStop.Location = new System.Drawing.Point(1249, 247);
             this.btStop.Name = "btStop";
             this.btStop.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btStop.OnDisabledState.BorderRadius = 1;
@@ -466,6 +470,7 @@ namespace SMESData
             this.btStop.TextMarginLeft = 0;
             this.btStop.TextPadding = new System.Windows.Forms.Padding(0);
             this.btStop.UseDefaultRadiusAndThickness = true;
+            this.btStop.Click += new System.EventHandler(this.btStop_Click);
             // 
             // lblTime
             // 
@@ -474,7 +479,7 @@ namespace SMESData
             this.lblTime.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblTime.CursorType = System.Windows.Forms.Cursors.Default;
             this.lblTime.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
-            this.lblTime.Location = new System.Drawing.Point(1249, 62);
+            this.lblTime.Location = new System.Drawing.Point(1213, 62);
             this.lblTime.Name = "lblTime";
             this.lblTime.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblTime.Size = new System.Drawing.Size(15, 20);
@@ -510,6 +515,7 @@ namespace SMESData
             this.dtpChart.Size = new System.Drawing.Size(150, 32);
             this.dtpChart.TabIndex = 33;
             this.dtpChart.Value = new System.DateTime(2022, 5, 29, 0, 0, 0, 0);
+            this.dtpChart.ValueChanged += new System.EventHandler(this.dtpChart_ValueChanged);
             // 
             // panel3
             // 
@@ -736,6 +742,10 @@ namespace SMESData
             this.PQCChart.HoverBorderWidth = 0;
             this.PQCChart.Label = "Label here";
             this.PQCChart.TargetCanvas = null;
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // UC_Product_Info
             // 
