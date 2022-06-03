@@ -105,7 +105,7 @@ namespace SMESData
             sqlGetData.Append("cast(m.NOGOOD / (m.OUTPUT + m.REWORK + m.NOGOOD) * 100 as decimal(10,1)) as '%NG_realtime', ");
             sqlGetData.Append("CASE WHEN r.rate IS NULL THEN '1.5' ELSE r.rate END as '%NG_allow' ");
             sqlGetData.Append("FROM m_ERPMQC_REALTIME as a ");
-            sqlGetData.Append("LEFT JOIN m_MQC_NGRATE as r on a.inspectdate = r.inspectdate and a.model = r.model ");
+            sqlGetData.Append("LEFT JOIN m_MQC_NGRATE as r on a.inspectdate = r.inspectdate and a.model = r.model and a.line = r.line ");
             sqlGetData.Append("join(SELECT model,  inspectdate, line, ");
             sqlGetData.Append("COALESCE(SUM(CASE WHEN remark = 'OP' THEN Cast(data as numeric(10,0)) END), 0) AS OUTPUT, ");
             sqlGetData.Append("COALESCE(SUM(CASE WHEN remark = 'RW' THEN Cast(data as numeric(10,0)) END), 0) AS REWORK, ");
@@ -113,7 +113,7 @@ namespace SMESData
             sqlGetData.Append("FROM m_ERPMQC_REALTIME ");
             sqlGetData.Append("WHERE inspectdate = '2022-06-03' ");
             sqlGetData.Append("group by model, inspectdate, line) as m ");
-            sqlGetData.Append("on a.inspectdate = m.inspectdate and a.model = m.model ");
+            sqlGetData.Append("on a.inspectdate = m.inspectdate and a.model = m.model and a.line = m.line ");
             sqlGetData.Append("order by Model, Date desc");
             sqlSOFTCon.sqlDataAdapterFillDatatable(sqlGetData.ToString(), ref dt);
             return dt;
