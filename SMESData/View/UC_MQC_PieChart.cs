@@ -16,7 +16,7 @@ namespace SMESData
     {
         public UC_MQC_PieChart()
         {
-            InitializeComponent();
+            InitializeComponent();            
         }
 
         private void UC_MQC_PieChart_Load(object sender, EventArgs e)
@@ -24,8 +24,8 @@ namespace SMESData
             // Date time format
             dtpChart.Value = DateTime.Today;
             dtpChart.CustomFormat = "dd-MM-yyyy";
-            dtpChart.Format = DateTimePickerFormat.Custom;           
-            dtpChart.Enabled = false;            
+            dtpChart.Format = DateTimePickerFormat.Custom;
+            dtpChart.Enabled = false;
             dtpChart.ValueChanged += new EventHandler(dtpChart_ValueChanged);
             renderPiechart();
             //
@@ -476,6 +476,72 @@ namespace SMESData
             ChangeUpdateTime();
         }
 
-        
+        public delegate void StatusUpdateHandler(object sender, EventArgs e);
+        public event StatusUpdateHandler OnUpdateStatus;
+
+        private void UpdateStatus()
+        {
+            //Create arguments.  You should also have custom one, or else return EventArgs.Empty();
+            EventArgs args = new EventArgs();
+
+            //Call any listeners
+            OnUpdateStatus?.Invoke(this, args);
+
+        }
+        private void btL1_Click(object sender, EventArgs e)
+        {
+           
+            SaveData.MQCClick = true;
+            SaveData.line = "L01";
+            UpdateStatus();
+        }
+
+        private void btL2_Click(object sender, EventArgs e)
+        {
+            
+            SaveData.MQCClick = true;
+            SaveData.line = "L02";
+            UpdateStatus();
+        }
+
+        private void btL3_Click(object sender, EventArgs e)
+        {
+            
+            SaveData.MQCClick = true;
+            SaveData.line = "L03";
+            UpdateStatus();
+        }
+
+        private void btL4_Click(object sender, EventArgs e)
+        {
+           
+            SaveData.MQCClick = true;
+            SaveData.line = "L04";
+            UpdateStatus();
+        }
+
+        private void btL5_Click(object sender, EventArgs e)
+        {
+            
+            SaveData.MQCClick = true;
+            SaveData.line = "L05";
+            UpdateStatus();
+        }
+
+        private void btL6_Click(object sender, EventArgs e)
+        {
+            
+            SaveData.MQCClick = true;
+            SaveData.line = "L06";
+            UpdateStatus();
+        }
+
+        private void btL7_Click(object sender, EventArgs e)
+        {
+           
+            SaveData.MQCClick = true;
+            SaveData.line = "L07";
+            UpdateStatus();
+        }
     }
 }

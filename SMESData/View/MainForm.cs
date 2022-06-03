@@ -19,7 +19,6 @@ namespace SMESData
             InitializeComponent();          
         }
 
-        //UC_MQC_BarChart uc_MQC_BarChart = new UC_MQC_BarChart();
         UC_MQC_PieChart uc_MQC_PieChart = new UC_MQC_PieChart();
         UC_PQC_PieChart uc_PQC_PieChart = new UC_PQC_PieChart();
         UC_Product_Info uc_PI = new UC_Product_Info();
@@ -30,7 +29,16 @@ namespace SMESData
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            btMQCPD_Click(sender, e);
+            btMQCPD.PerformClick();
+            btMQCPD.Focus();
+            uc_MQC_PieChart.OnUpdateStatus += customControl_OnUpdateStatus;
+        }
+        private void customControl_OnUpdateStatus(object sender, EventArgs e)
+        {
+            btMQCPD.PerformClick();
+            btMQCPD.Focus();
+            uc_PI.UpdateDTGV();
+            uc_PI.ChangeData();
         }
         public void addUserControl(UserControl userControl)
         {
@@ -39,8 +47,8 @@ namespace SMESData
             pnMain.Controls.Add(userControl);
             userControl.BringToFront();
         }
-       
-        public void btMQC_Click(object sender, EventArgs e)
+     
+        private void btMQC_Click(object sender, EventArgs e)
         {
             MQC = true;
             PQC = false;
@@ -52,7 +60,7 @@ namespace SMESData
             btMQCPD.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Idle;
         }
 
-        public void btPQC_Click(object sender, EventArgs e)
+        private void btPQC_Click(object sender, EventArgs e)
         {
             PQC = true;
             MQC = false;
@@ -76,16 +84,13 @@ namespace SMESData
             btMQC.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Idle;
         }
 
-            private void btClose_Click(object sender, EventArgs e)
+        private void btClose_Click(object sender, EventArgs e)
         {
             Dispose();
             Application.Exit();
         }
-        public void splash()
-        {
-            Application.Run(new MessageWaitForm());
-        }
-
         
+
+
     }
 }

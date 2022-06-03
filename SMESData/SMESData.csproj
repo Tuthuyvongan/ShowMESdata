@@ -355,6 +355,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\close.png" />
+    <None Include="Resources\bar-graph.png" />
+    <None Include="Resources\analytics.png" />
     <Content Include="Resources\combo-256.ico" />
     <Content Include="Resources\logo.png" />
   </ItemGroup>

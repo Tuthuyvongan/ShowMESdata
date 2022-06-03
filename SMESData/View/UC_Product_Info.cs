@@ -18,7 +18,7 @@ namespace SMESData
         }
 
         private void UC_Product_Info_Load(object sender, EventArgs e)
-        {            
+        {
             // Date time format
             dtpChart.Value = DateTime.Today;
             dtpChart.CustomFormat = "dd-MM-yyyy";
@@ -28,10 +28,22 @@ namespace SMESData
             //Update datagridview
             UpdateDTGV();
             //
+            SaveData.Model = dtgv_MQC_PD.Rows[0].Cells[0].Value.ToString();
+            SaveData.line = dtgv_MQC_PD.Rows[0].Cells[2].Value.ToString();
             SaveData.op = double.Parse(dtgv_MQC_PD.Rows[0].Cells[3].Value.ToString());
             SaveData.rw = double.Parse(dtgv_MQC_PD.Rows[0].Cells[4].Value.ToString());
             SaveData.ng = double.Parse(dtgv_MQC_PD.Rows[0].Cells[5].Value.ToString());
             SaveData.total = double.Parse(dtgv_MQC_PD.Rows[0].Cells[6].Value.ToString());
+            SaveData.NGrealtime = double.Parse(dtgv_MQC_PD.Rows[0].Cells[7].Value.ToString());
+            SaveData.NGallow = double.Parse(dtgv_MQC_PD.Rows[0].Cells[8].Value.ToString());
+            lbModel.Text = SaveData.Model;
+            tbLine.Text = SaveData.line;
+            lbOP.Text = SaveData.op.ToString();
+            lbRW.Text = SaveData.rw.ToString();
+            lbNG.Text = SaveData.ng.ToString();
+            lbTt.Text = SaveData.total.ToString();
+            lbNGR.Text = SaveData.NGrealtime.ToString() + "%";
+            tbNGA.Text = SaveData.NGallow.ToString() + "%";
             renderPiechart();
             //
             lblTime.Font = new Font("Times New Roman", 14, FontStyle.Bold);
@@ -49,34 +61,44 @@ namespace SMESData
         private DateTime startTime;
 
         private void dtgv_MQC_PD_CellClick(object sender, DataGridViewCellEventArgs e)
-        {            
+        {
             if (e.RowIndex != -1)
             {
                 dataMQC.Clear();
-                lbModel.Text = dtgv_MQC_PD.Rows[e.RowIndex].Cells[0].Value.ToString();
+                SaveData.Model = dtgv_MQC_PD.Rows[e.RowIndex].Cells[0].Value.ToString();
+                SaveData.line = dtgv_MQC_PD.Rows[e.RowIndex].Cells[2].Value.ToString();
                 SaveData.op = double.Parse(dtgv_MQC_PD.Rows[e.RowIndex].Cells[3].Value.ToString());
                 SaveData.rw = double.Parse(dtgv_MQC_PD.Rows[e.RowIndex].Cells[4].Value.ToString());
                 SaveData.ng = double.Parse(dtgv_MQC_PD.Rows[e.RowIndex].Cells[5].Value.ToString());
                 SaveData.total = double.Parse(dtgv_MQC_PD.Rows[e.RowIndex].Cells[6].Value.ToString());
+                SaveData.NGrealtime = double.Parse(dtgv_MQC_PD.Rows[e.RowIndex].Cells[7].Value.ToString());
+                SaveData.NGallow = double.Parse(dtgv_MQC_PD.Rows[e.RowIndex].Cells[8].Value.ToString());
+                lbModel.Text = SaveData.Model;
+                tbLine.Text = SaveData.line;
+                lbOP.Text = SaveData.op.ToString();
+                lbRW.Text = SaveData.rw.ToString();
+                lbNG.Text = SaveData.ng.ToString();
+                lbTt.Text = SaveData.total.ToString();
+                lbNGR.Text = SaveData.NGrealtime.ToString() + "%";
+                tbNGA.Text = SaveData.NGallow.ToString() + "%";
                 renderPiechart();
-            }                         
+            }
         }
         public void lineData()
-        {            
+        {
             double OP = Math.Round(SaveData.op / SaveData.total * 100, 1);
             double RW = Math.Round(SaveData.rw / SaveData.total * 100, 1);
             double NG = Math.Round(SaveData.ng / SaveData.total * 100, 1);
             dataMQC.Add(OP);
             dataMQC.Add(RW);
             dataMQC.Add(NG);
-            
+
         }
         public void renderPiechart()
         {
             //Add data
             lineData();
             MQCChart.Data = dataMQC;
-            //PQCChart.Data = dataPQC;
             //Add legends MQC           
             if (dataMQC[0] == 0 && dataMQC[1] == 0 && dataMQC[2] == 0)
             {
@@ -102,14 +124,14 @@ namespace SMESData
                 lbOP1.Font = new Font("Times New Roman", 12, FontStyle.Bold);
                 lbRW1.Font = new Font("Times New Roman", 12, FontStyle.Bold);
                 lbNG1.Font = new Font("Times New Roman", 12, FontStyle.Bold);
-            }                  
+            }
             //Target Canvas
-            MQCChart.TargetCanvas = linePCanvas1;            
+            MQCChart.TargetCanvas = linePCanvas1;
             //Hide x y Canvas1
             linePCanvas1.XAxesGridLines = false;
             linePCanvas1.YAxesGridLines = false;
             linePCanvas1.ShowXAxis = false;
-            linePCanvas1.ShowYAxis = false;            
+            linePCanvas1.ShowYAxis = false;
             //Canvas labels
             string[] remark = { "OUTPUT", "REWORK", "NO GOOD" };
             linePCanvas1.Labels = remark;
@@ -121,16 +143,37 @@ namespace SMESData
             MQCChart.BackgroundColor = bgColors;
         }
         public void UpdateDTGV()
-        {            
-            string date = dtpChart.Value.ToString("yyyy-MM-dd");            
-            dtgv_MQC_PD.DataSource = GetSOFTdata.getProductData(date);
+        {
+            dataMQC.Clear();
+            string date = dtpChart.Value.ToString("yyyy-MM-dd");
+            string line = SaveData.line;
+            dtgv_MQC_PD.DataSource = GetSOFTdata.getProductData(date, line);
             dtgv_MQC_PD.Refresh();
             dtpChart.Visible = true;
+        }
+        public void ChangeData()
+        {
+            SaveData.Model = dtgv_MQC_PD.Rows[0].Cells[0].Value.ToString();
+            SaveData.line = dtgv_MQC_PD.Rows[0].Cells[2].Value.ToString();
+            SaveData.op = double.Parse(dtgv_MQC_PD.Rows[0].Cells[3].Value.ToString());
+            SaveData.rw = double.Parse(dtgv_MQC_PD.Rows[0].Cells[4].Value.ToString());
+            SaveData.ng = double.Parse(dtgv_MQC_PD.Rows[0].Cells[5].Value.ToString());
+            SaveData.total = double.Parse(dtgv_MQC_PD.Rows[0].Cells[6].Value.ToString());
+            SaveData.NGrealtime = double.Parse(dtgv_MQC_PD.Rows[0].Cells[7].Value.ToString());
+            SaveData.NGallow = double.Parse(dtgv_MQC_PD.Rows[0].Cells[8].Value.ToString());
+            lbModel.Text = SaveData.Model;
+            tbLine.Text = SaveData.line;
+            lbOP.Text = SaveData.op.ToString();
+            lbRW.Text = SaveData.rw.ToString();
+            lbNG.Text = SaveData.ng.ToString();
+            lbTt.Text = SaveData.total.ToString();
+            lbNGR.Text = SaveData.NGrealtime.ToString() + "%";
+            tbNGA.Text = SaveData.NGallow.ToString() + "%";
+            renderPiechart();
         }
         private void dtpChart_ValueChanged(object sender, EventArgs e)
         {
             dtpChart.Visible = false;
-            dataMQC.Clear();
             UpdateDTGV();
         }
         public void UpdateTime()
@@ -169,7 +212,6 @@ namespace SMESData
                 if (remainingSeconds < 0)
                 {
                     lblTime.Visible = false;
-                    dataMQC.Clear();
                     UpdateDTGV();
                     timer1.Stop();
                     UpdateTime();

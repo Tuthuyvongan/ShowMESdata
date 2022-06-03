@@ -13,6 +13,9 @@ namespace SMESData
         public static double rw { get; set; }       
         public static double ng { get; set; }     
         public static string line { get; set; }
-        public static bool lineClick { get; set; }
+        public static double NGrealtime { get; set; }
+        public static double NGallow { get; set; }
+        public static string Model { get; set; }
+        public static bool MQCClick { get; set; }
     }
 }

@@ -31,10 +31,9 @@ namespace SMESData
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_MQC_PieChart));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges15 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges16 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.linePCanvas1 = new Bunifu.Charts.WinForms.BunifuChartCanvas();
-            this.dtpChart = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.L01Chart = new Bunifu.Charts.WinForms.ChartTypes.BunifuPieChart(this.components);
             this.L02Chart = new Bunifu.Charts.WinForms.ChartTypes.BunifuPieChart(this.components);
             this.L03Chart = new Bunifu.Charts.WinForms.ChartTypes.BunifuPieChart(this.components);
@@ -44,40 +43,54 @@ namespace SMESData
             this.L07Chart = new Bunifu.Charts.WinForms.ChartTypes.BunifuPieChart(this.components);
             this.linePCanvas2 = new Bunifu.Charts.WinForms.BunifuChartCanvas();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btL1 = new Bunifu.UI.WinForms.BunifuImageButton();
+            this.lbWar1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lb1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lbNG1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lbRW1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lbOP1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btL2 = new Bunifu.UI.WinForms.BunifuImageButton();
+            this.lbWar2 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lb2 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lbOP2 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lbRW2 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lbNG2 = new Bunifu.UI.WinForms.BunifuLabel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btL3 = new Bunifu.UI.WinForms.BunifuImageButton();
+            this.lbWar3 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lb3 = new Bunifu.UI.WinForms.BunifuLabel();
             this.linePCanvas3 = new Bunifu.Charts.WinForms.BunifuChartCanvas();
             this.lbOP3 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lbRW3 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lbNG3 = new Bunifu.UI.WinForms.BunifuLabel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btL4 = new Bunifu.UI.WinForms.BunifuImageButton();
+            this.lbWar4 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lb4 = new Bunifu.UI.WinForms.BunifuLabel();
             this.linePCanvas4 = new Bunifu.Charts.WinForms.BunifuChartCanvas();
             this.lbOP4 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lbNG4 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lbRW4 = new Bunifu.UI.WinForms.BunifuLabel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.btL5 = new Bunifu.UI.WinForms.BunifuImageButton();
+            this.lbWar5 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lb5 = new Bunifu.UI.WinForms.BunifuLabel();
             this.linePCanvas5 = new Bunifu.Charts.WinForms.BunifuChartCanvas();
             this.lbOP5 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lbRW5 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lbNG5 = new Bunifu.UI.WinForms.BunifuLabel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.btL6 = new Bunifu.UI.WinForms.BunifuImageButton();
+            this.lbWar6 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lb6 = new Bunifu.UI.WinForms.BunifuLabel();
             this.linePCanvas6 = new Bunifu.Charts.WinForms.BunifuChartCanvas();
             this.lbOP6 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lbRW6 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lbNG6 = new Bunifu.UI.WinForms.BunifuLabel();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.btL7 = new Bunifu.UI.WinForms.BunifuImageButton();
+            this.lbWar7 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lb7 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lbOP7 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lbNG7 = new Bunifu.UI.WinForms.BunifuLabel();
@@ -85,8 +98,6 @@ namespace SMESData
             this.lbRW7 = new Bunifu.UI.WinForms.BunifuLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.lblTime = new Bunifu.UI.WinForms.BunifuLabel();
-            this.btStop = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.btStart = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.pnTimeControl = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.lbBox = new Bunifu.UI.WinForms.BunifuLabel();
             this.lbS = new Bunifu.UI.WinForms.BunifuLabel();
@@ -95,13 +106,9 @@ namespace SMESData
             this.nbS = new System.Windows.Forms.NumericUpDown();
             this.nbM = new System.Windows.Forms.NumericUpDown();
             this.nbH = new System.Windows.Forms.NumericUpDown();
-            this.lbWar1 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.lbWar2 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.lbWar3 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.lbWar6 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.lbWar5 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.lbWar4 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.lbWar7 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.btStart = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.btStop = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.dtpChart = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -174,34 +181,6 @@ namespace SMESData
             this.linePCanvas1.YAxesStacked = false;
             this.linePCanvas1.YAxesZeroLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.linePCanvas1.YAxesZeroLineWidth = 1;
-            // 
-            // dtpChart
-            // 
-            this.dtpChart.BackColor = System.Drawing.Color.Transparent;
-            this.dtpChart.BorderColor = System.Drawing.Color.Silver;
-            this.dtpChart.BorderRadius = 1;
-            this.dtpChart.CalendarFont = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpChart.Color = System.Drawing.Color.Silver;
-            this.dtpChart.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin;
-            this.dtpChart.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
-            this.dtpChart.DisabledColor = System.Drawing.Color.Gray;
-            this.dtpChart.DisplayWeekNumbers = false;
-            this.dtpChart.DPHeight = 0;
-            this.dtpChart.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.dtpChart.FillDatePicker = false;
-            this.dtpChart.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.dtpChart.ForeColor = System.Drawing.Color.Black;
-            this.dtpChart.Icon = ((System.Drawing.Image)(resources.GetObject("dtpChart.Icon")));
-            this.dtpChart.IconColor = System.Drawing.Color.DodgerBlue;
-            this.dtpChart.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
-            this.dtpChart.LeftTextMargin = 5;
-            this.dtpChart.Location = new System.Drawing.Point(1253, 23);
-            this.dtpChart.Margin = new System.Windows.Forms.Padding(2);
-            this.dtpChart.MinimumSize = new System.Drawing.Size(4, 32);
-            this.dtpChart.Name = "dtpChart";
-            this.dtpChart.Size = new System.Drawing.Size(150, 32);
-            this.dtpChart.TabIndex = 7;
-            this.dtpChart.Value = new System.DateTime(2022, 5, 29, 0, 0, 0, 0);
             // 
             // L01Chart
             // 
@@ -351,6 +330,7 @@ namespace SMESData
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.btL1);
             this.panel1.Controls.Add(this.lbWar1);
             this.panel1.Controls.Add(this.lb1);
             this.panel1.Controls.Add(this.lbNG1);
@@ -362,6 +342,57 @@ namespace SMESData
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(385, 281);
             this.panel1.TabIndex = 14;
+            // 
+            // btL1
+            // 
+            this.btL1.ActiveImage = null;
+            this.btL1.AllowAnimations = true;
+            this.btL1.AllowBuffering = false;
+            this.btL1.AllowToggling = false;
+            this.btL1.AllowZooming = true;
+            this.btL1.AllowZoomingOnFocus = false;
+            this.btL1.BackColor = System.Drawing.Color.Transparent;
+            this.btL1.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btL1.ErrorImage = global::SMESData.Properties.Resources.close;
+            this.btL1.FadeWhenInactive = false;
+            this.btL1.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            this.btL1.Image = global::SMESData.Properties.Resources.analytics;
+            this.btL1.ImageActive = null;
+            this.btL1.ImageLocation = null;
+            this.btL1.ImageMargin = 20;
+            this.btL1.ImageSize = new System.Drawing.Size(50, 50);
+            this.btL1.ImageZoomSize = new System.Drawing.Size(70, 70);
+            this.btL1.InitialImage = ((System.Drawing.Image)(resources.GetObject("btL1.InitialImage")));
+            this.btL1.Location = new System.Drawing.Point(274, 150);
+            this.btL1.Name = "btL1";
+            this.btL1.Rotation = 0;
+            this.btL1.ShowActiveImage = true;
+            this.btL1.ShowCursorChanges = true;
+            this.btL1.ShowImageBorders = true;
+            this.btL1.ShowSizeMarkers = false;
+            this.btL1.Size = new System.Drawing.Size(70, 70);
+            this.btL1.TabIndex = 34;
+            this.btL1.ToolTipText = "";
+            this.btL1.WaitOnLoad = false;
+            this.btL1.Zoom = 20;
+            this.btL1.ZoomSpeed = 10;
+            this.btL1.Click += new System.EventHandler(this.btL1_Click);
+            // 
+            // lbWar1
+            // 
+            this.lbWar1.AllowParentOverrides = false;
+            this.lbWar1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbWar1.AutoEllipsis = false;
+            this.lbWar1.CursorType = null;
+            this.lbWar1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbWar1.Location = new System.Drawing.Point(100, 120);
+            this.lbWar1.Name = "lbWar1";
+            this.lbWar1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbWar1.Size = new System.Drawing.Size(12, 37);
+            this.lbWar1.TabIndex = 33;
+            this.lbWar1.Text = "..";
+            this.lbWar1.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
+            this.lbWar1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // lb1
             // 
@@ -389,9 +420,9 @@ namespace SMESData
             this.lbNG1.Margin = new System.Windows.Forms.Padding(2);
             this.lbNG1.Name = "lbNG1";
             this.lbNG1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbNG1.Size = new System.Drawing.Size(69, 15);
+            this.lbNG1.Size = new System.Drawing.Size(6, 15);
             this.lbNG1.TabIndex = 12;
-            this.lbNG1.Text = "bunifuLabel3";
+            this.lbNG1.Text = "..";
             this.lbNG1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lbNG1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -406,9 +437,9 @@ namespace SMESData
             this.lbRW1.Margin = new System.Windows.Forms.Padding(2);
             this.lbRW1.Name = "lbRW1";
             this.lbRW1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbRW1.Size = new System.Drawing.Size(69, 15);
+            this.lbRW1.Size = new System.Drawing.Size(6, 15);
             this.lbRW1.TabIndex = 11;
-            this.lbRW1.Text = "bunifuLabel2";
+            this.lbRW1.Text = "..";
             this.lbRW1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lbRW1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -423,9 +454,9 @@ namespace SMESData
             this.lbOP1.Margin = new System.Windows.Forms.Padding(2);
             this.lbOP1.Name = "lbOP1";
             this.lbOP1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbOP1.Size = new System.Drawing.Size(69, 15);
+            this.lbOP1.Size = new System.Drawing.Size(6, 15);
             this.lbOP1.TabIndex = 10;
-            this.lbOP1.Text = "bunifuLabel1";
+            this.lbOP1.Text = "..";
             this.lbOP1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lbOP1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -433,6 +464,7 @@ namespace SMESData
             // 
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Controls.Add(this.btL2);
             this.panel2.Controls.Add(this.lbWar2);
             this.panel2.Controls.Add(this.lb2);
             this.panel2.Controls.Add(this.linePCanvas2);
@@ -444,6 +476,57 @@ namespace SMESData
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(385, 281);
             this.panel2.TabIndex = 15;
+            // 
+            // btL2
+            // 
+            this.btL2.ActiveImage = null;
+            this.btL2.AllowAnimations = true;
+            this.btL2.AllowBuffering = false;
+            this.btL2.AllowToggling = false;
+            this.btL2.AllowZooming = true;
+            this.btL2.AllowZoomingOnFocus = false;
+            this.btL2.BackColor = System.Drawing.Color.Transparent;
+            this.btL2.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btL2.ErrorImage = global::SMESData.Properties.Resources.close;
+            this.btL2.FadeWhenInactive = false;
+            this.btL2.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            this.btL2.Image = global::SMESData.Properties.Resources.analytics;
+            this.btL2.ImageActive = null;
+            this.btL2.ImageLocation = null;
+            this.btL2.ImageMargin = 20;
+            this.btL2.ImageSize = new System.Drawing.Size(50, 50);
+            this.btL2.ImageZoomSize = new System.Drawing.Size(70, 70);
+            this.btL2.InitialImage = ((System.Drawing.Image)(resources.GetObject("btL2.InitialImage")));
+            this.btL2.Location = new System.Drawing.Point(274, 150);
+            this.btL2.Name = "btL2";
+            this.btL2.Rotation = 0;
+            this.btL2.ShowActiveImage = true;
+            this.btL2.ShowCursorChanges = true;
+            this.btL2.ShowImageBorders = true;
+            this.btL2.ShowSizeMarkers = false;
+            this.btL2.Size = new System.Drawing.Size(70, 70);
+            this.btL2.TabIndex = 35;
+            this.btL2.ToolTipText = "";
+            this.btL2.WaitOnLoad = false;
+            this.btL2.Zoom = 20;
+            this.btL2.ZoomSpeed = 10;
+            this.btL2.Click += new System.EventHandler(this.btL2_Click);
+            // 
+            // lbWar2
+            // 
+            this.lbWar2.AllowParentOverrides = false;
+            this.lbWar2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbWar2.AutoEllipsis = false;
+            this.lbWar2.CursorType = null;
+            this.lbWar2.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbWar2.Location = new System.Drawing.Point(100, 120);
+            this.lbWar2.Name = "lbWar2";
+            this.lbWar2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbWar2.Size = new System.Drawing.Size(12, 37);
+            this.lbWar2.TabIndex = 34;
+            this.lbWar2.Text = "..";
+            this.lbWar2.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
+            this.lbWar2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // lb2
             // 
@@ -470,9 +553,9 @@ namespace SMESData
             this.lbOP2.Margin = new System.Windows.Forms.Padding(2);
             this.lbOP2.Name = "lbOP2";
             this.lbOP2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbOP2.Size = new System.Drawing.Size(69, 15);
+            this.lbOP2.Size = new System.Drawing.Size(6, 15);
             this.lbOP2.TabIndex = 10;
-            this.lbOP2.Text = "bunifuLabel1";
+            this.lbOP2.Text = "..";
             this.lbOP2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lbOP2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -486,9 +569,9 @@ namespace SMESData
             this.lbRW2.Margin = new System.Windows.Forms.Padding(2);
             this.lbRW2.Name = "lbRW2";
             this.lbRW2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbRW2.Size = new System.Drawing.Size(69, 15);
+            this.lbRW2.Size = new System.Drawing.Size(6, 15);
             this.lbRW2.TabIndex = 11;
-            this.lbRW2.Text = "bunifuLabel2";
+            this.lbRW2.Text = "..";
             this.lbRW2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lbRW2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -502,9 +585,9 @@ namespace SMESData
             this.lbNG2.Margin = new System.Windows.Forms.Padding(2);
             this.lbNG2.Name = "lbNG2";
             this.lbNG2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbNG2.Size = new System.Drawing.Size(69, 15);
+            this.lbNG2.Size = new System.Drawing.Size(6, 15);
             this.lbNG2.TabIndex = 12;
-            this.lbNG2.Text = "bunifuLabel3";
+            this.lbNG2.Text = "..";
             this.lbNG2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lbNG2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -512,6 +595,7 @@ namespace SMESData
             // 
             this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel3.Controls.Add(this.btL3);
             this.panel3.Controls.Add(this.lbWar3);
             this.panel3.Controls.Add(this.lb3);
             this.panel3.Controls.Add(this.linePCanvas3);
@@ -523,6 +607,57 @@ namespace SMESData
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(385, 281);
             this.panel3.TabIndex = 16;
+            // 
+            // btL3
+            // 
+            this.btL3.ActiveImage = null;
+            this.btL3.AllowAnimations = true;
+            this.btL3.AllowBuffering = false;
+            this.btL3.AllowToggling = false;
+            this.btL3.AllowZooming = true;
+            this.btL3.AllowZoomingOnFocus = false;
+            this.btL3.BackColor = System.Drawing.Color.Transparent;
+            this.btL3.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btL3.ErrorImage = global::SMESData.Properties.Resources.close;
+            this.btL3.FadeWhenInactive = false;
+            this.btL3.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            this.btL3.Image = global::SMESData.Properties.Resources.analytics;
+            this.btL3.ImageActive = null;
+            this.btL3.ImageLocation = null;
+            this.btL3.ImageMargin = 20;
+            this.btL3.ImageSize = new System.Drawing.Size(50, 50);
+            this.btL3.ImageZoomSize = new System.Drawing.Size(70, 70);
+            this.btL3.InitialImage = ((System.Drawing.Image)(resources.GetObject("btL3.InitialImage")));
+            this.btL3.Location = new System.Drawing.Point(274, 150);
+            this.btL3.Name = "btL3";
+            this.btL3.Rotation = 0;
+            this.btL3.ShowActiveImage = true;
+            this.btL3.ShowCursorChanges = true;
+            this.btL3.ShowImageBorders = true;
+            this.btL3.ShowSizeMarkers = false;
+            this.btL3.Size = new System.Drawing.Size(70, 70);
+            this.btL3.TabIndex = 36;
+            this.btL3.ToolTipText = "";
+            this.btL3.WaitOnLoad = false;
+            this.btL3.Zoom = 20;
+            this.btL3.ZoomSpeed = 10;
+            this.btL3.Click += new System.EventHandler(this.btL3_Click);
+            // 
+            // lbWar3
+            // 
+            this.lbWar3.AllowParentOverrides = false;
+            this.lbWar3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbWar3.AutoEllipsis = false;
+            this.lbWar3.CursorType = null;
+            this.lbWar3.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbWar3.Location = new System.Drawing.Point(100, 120);
+            this.lbWar3.Name = "lbWar3";
+            this.lbWar3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbWar3.Size = new System.Drawing.Size(12, 37);
+            this.lbWar3.TabIndex = 35;
+            this.lbWar3.Text = "..";
+            this.lbWar3.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
+            this.lbWar3.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // lb3
             // 
@@ -609,9 +744,9 @@ namespace SMESData
             this.lbOP3.Margin = new System.Windows.Forms.Padding(2);
             this.lbOP3.Name = "lbOP3";
             this.lbOP3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbOP3.Size = new System.Drawing.Size(69, 15);
+            this.lbOP3.Size = new System.Drawing.Size(6, 15);
             this.lbOP3.TabIndex = 13;
-            this.lbOP3.Text = "bunifuLabel1";
+            this.lbOP3.Text = "..";
             this.lbOP3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lbOP3.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -625,9 +760,9 @@ namespace SMESData
             this.lbRW3.Margin = new System.Windows.Forms.Padding(2);
             this.lbRW3.Name = "lbRW3";
             this.lbRW3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbRW3.Size = new System.Drawing.Size(69, 15);
+            this.lbRW3.Size = new System.Drawing.Size(6, 15);
             this.lbRW3.TabIndex = 14;
-            this.lbRW3.Text = "bunifuLabel2";
+            this.lbRW3.Text = "..";
             this.lbRW3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lbRW3.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -641,9 +776,9 @@ namespace SMESData
             this.lbNG3.Margin = new System.Windows.Forms.Padding(2);
             this.lbNG3.Name = "lbNG3";
             this.lbNG3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbNG3.Size = new System.Drawing.Size(69, 15);
+            this.lbNG3.Size = new System.Drawing.Size(6, 15);
             this.lbNG3.TabIndex = 15;
-            this.lbNG3.Text = "bunifuLabel3";
+            this.lbNG3.Text = "..";
             this.lbNG3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lbNG3.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -651,6 +786,7 @@ namespace SMESData
             // 
             this.panel4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel4.Controls.Add(this.btL4);
             this.panel4.Controls.Add(this.lbWar4);
             this.panel4.Controls.Add(this.lb4);
             this.panel4.Controls.Add(this.linePCanvas4);
@@ -663,13 +799,64 @@ namespace SMESData
             this.panel4.Size = new System.Drawing.Size(385, 281);
             this.panel4.TabIndex = 17;
             // 
+            // btL4
+            // 
+            this.btL4.ActiveImage = null;
+            this.btL4.AllowAnimations = true;
+            this.btL4.AllowBuffering = false;
+            this.btL4.AllowToggling = false;
+            this.btL4.AllowZooming = true;
+            this.btL4.AllowZoomingOnFocus = false;
+            this.btL4.BackColor = System.Drawing.Color.Transparent;
+            this.btL4.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btL4.ErrorImage = global::SMESData.Properties.Resources.close;
+            this.btL4.FadeWhenInactive = false;
+            this.btL4.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            this.btL4.Image = global::SMESData.Properties.Resources.analytics;
+            this.btL4.ImageActive = null;
+            this.btL4.ImageLocation = null;
+            this.btL4.ImageMargin = 20;
+            this.btL4.ImageSize = new System.Drawing.Size(50, 50);
+            this.btL4.ImageZoomSize = new System.Drawing.Size(70, 70);
+            this.btL4.InitialImage = ((System.Drawing.Image)(resources.GetObject("btL4.InitialImage")));
+            this.btL4.Location = new System.Drawing.Point(274, 150);
+            this.btL4.Name = "btL4";
+            this.btL4.Rotation = 0;
+            this.btL4.ShowActiveImage = true;
+            this.btL4.ShowCursorChanges = true;
+            this.btL4.ShowImageBorders = true;
+            this.btL4.ShowSizeMarkers = false;
+            this.btL4.Size = new System.Drawing.Size(70, 70);
+            this.btL4.TabIndex = 39;
+            this.btL4.ToolTipText = "";
+            this.btL4.WaitOnLoad = false;
+            this.btL4.Zoom = 20;
+            this.btL4.ZoomSpeed = 10;
+            this.btL4.Click += new System.EventHandler(this.btL4_Click);
+            // 
+            // lbWar4
+            // 
+            this.lbWar4.AllowParentOverrides = false;
+            this.lbWar4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbWar4.AutoEllipsis = false;
+            this.lbWar4.CursorType = null;
+            this.lbWar4.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbWar4.Location = new System.Drawing.Point(100, 120);
+            this.lbWar4.Name = "lbWar4";
+            this.lbWar4.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbWar4.Size = new System.Drawing.Size(12, 37);
+            this.lbWar4.TabIndex = 38;
+            this.lbWar4.Text = "..";
+            this.lbWar4.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
+            this.lbWar4.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
             // lb4
             // 
             this.lb4.AllowParentOverrides = false;
             this.lb4.AutoEllipsis = false;
             this.lb4.CursorType = null;
             this.lb4.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb4.Location = new System.Drawing.Point(266, 214);
+            this.lb4.Location = new System.Drawing.Point(266, 227);
             this.lb4.Name = "lb4";
             this.lb4.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lb4.Size = new System.Drawing.Size(88, 31);
@@ -747,9 +934,9 @@ namespace SMESData
             this.lbOP4.Margin = new System.Windows.Forms.Padding(2);
             this.lbOP4.Name = "lbOP4";
             this.lbOP4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbOP4.Size = new System.Drawing.Size(69, 15);
+            this.lbOP4.Size = new System.Drawing.Size(6, 15);
             this.lbOP4.TabIndex = 16;
-            this.lbOP4.Text = "bunifuLabel1";
+            this.lbOP4.Text = "..";
             this.lbOP4.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lbOP4.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -763,9 +950,9 @@ namespace SMESData
             this.lbNG4.Margin = new System.Windows.Forms.Padding(2);
             this.lbNG4.Name = "lbNG4";
             this.lbNG4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbNG4.Size = new System.Drawing.Size(69, 15);
+            this.lbNG4.Size = new System.Drawing.Size(6, 15);
             this.lbNG4.TabIndex = 18;
-            this.lbNG4.Text = "bunifuLabel3";
+            this.lbNG4.Text = "..";
             this.lbNG4.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lbNG4.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -779,9 +966,9 @@ namespace SMESData
             this.lbRW4.Margin = new System.Windows.Forms.Padding(2);
             this.lbRW4.Name = "lbRW4";
             this.lbRW4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbRW4.Size = new System.Drawing.Size(69, 15);
+            this.lbRW4.Size = new System.Drawing.Size(6, 15);
             this.lbRW4.TabIndex = 17;
-            this.lbRW4.Text = "bunifuLabel2";
+            this.lbRW4.Text = "..";
             this.lbRW4.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lbRW4.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -789,6 +976,7 @@ namespace SMESData
             // 
             this.panel5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel5.Controls.Add(this.btL5);
             this.panel5.Controls.Add(this.lbWar5);
             this.panel5.Controls.Add(this.lb5);
             this.panel5.Controls.Add(this.linePCanvas5);
@@ -801,13 +989,64 @@ namespace SMESData
             this.panel5.Size = new System.Drawing.Size(385, 281);
             this.panel5.TabIndex = 17;
             // 
+            // btL5
+            // 
+            this.btL5.ActiveImage = null;
+            this.btL5.AllowAnimations = true;
+            this.btL5.AllowBuffering = false;
+            this.btL5.AllowToggling = false;
+            this.btL5.AllowZooming = true;
+            this.btL5.AllowZoomingOnFocus = false;
+            this.btL5.BackColor = System.Drawing.Color.Transparent;
+            this.btL5.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btL5.ErrorImage = global::SMESData.Properties.Resources.close;
+            this.btL5.FadeWhenInactive = false;
+            this.btL5.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            this.btL5.Image = global::SMESData.Properties.Resources.analytics;
+            this.btL5.ImageActive = null;
+            this.btL5.ImageLocation = null;
+            this.btL5.ImageMargin = 20;
+            this.btL5.ImageSize = new System.Drawing.Size(50, 50);
+            this.btL5.ImageZoomSize = new System.Drawing.Size(70, 70);
+            this.btL5.InitialImage = ((System.Drawing.Image)(resources.GetObject("btL5.InitialImage")));
+            this.btL5.Location = new System.Drawing.Point(274, 150);
+            this.btL5.Name = "btL5";
+            this.btL5.Rotation = 0;
+            this.btL5.ShowActiveImage = true;
+            this.btL5.ShowCursorChanges = true;
+            this.btL5.ShowImageBorders = true;
+            this.btL5.ShowSizeMarkers = false;
+            this.btL5.Size = new System.Drawing.Size(70, 70);
+            this.btL5.TabIndex = 38;
+            this.btL5.ToolTipText = "";
+            this.btL5.WaitOnLoad = false;
+            this.btL5.Zoom = 20;
+            this.btL5.ZoomSpeed = 10;
+            this.btL5.Click += new System.EventHandler(this.btL5_Click);
+            // 
+            // lbWar5
+            // 
+            this.lbWar5.AllowParentOverrides = false;
+            this.lbWar5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbWar5.AutoEllipsis = false;
+            this.lbWar5.CursorType = null;
+            this.lbWar5.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbWar5.Location = new System.Drawing.Point(100, 120);
+            this.lbWar5.Name = "lbWar5";
+            this.lbWar5.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbWar5.Size = new System.Drawing.Size(12, 37);
+            this.lbWar5.TabIndex = 37;
+            this.lbWar5.Text = "..";
+            this.lbWar5.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
+            this.lbWar5.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
             // lb5
             // 
             this.lb5.AllowParentOverrides = false;
             this.lb5.AutoEllipsis = false;
             this.lb5.CursorType = null;
             this.lb5.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb5.Location = new System.Drawing.Point(264, 214);
+            this.lb5.Location = new System.Drawing.Point(264, 227);
             this.lb5.Name = "lb5";
             this.lb5.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lb5.Size = new System.Drawing.Size(88, 31);
@@ -885,9 +1124,9 @@ namespace SMESData
             this.lbOP5.Margin = new System.Windows.Forms.Padding(2);
             this.lbOP5.Name = "lbOP5";
             this.lbOP5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbOP5.Size = new System.Drawing.Size(69, 15);
+            this.lbOP5.Size = new System.Drawing.Size(6, 15);
             this.lbOP5.TabIndex = 19;
-            this.lbOP5.Text = "bunifuLabel1";
+            this.lbOP5.Text = "..";
             this.lbOP5.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lbOP5.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -901,9 +1140,9 @@ namespace SMESData
             this.lbRW5.Margin = new System.Windows.Forms.Padding(2);
             this.lbRW5.Name = "lbRW5";
             this.lbRW5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbRW5.Size = new System.Drawing.Size(69, 15);
+            this.lbRW5.Size = new System.Drawing.Size(6, 15);
             this.lbRW5.TabIndex = 20;
-            this.lbRW5.Text = "bunifuLabel2";
+            this.lbRW5.Text = "..";
             this.lbRW5.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lbRW5.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -917,9 +1156,9 @@ namespace SMESData
             this.lbNG5.Margin = new System.Windows.Forms.Padding(2);
             this.lbNG5.Name = "lbNG5";
             this.lbNG5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbNG5.Size = new System.Drawing.Size(69, 15);
+            this.lbNG5.Size = new System.Drawing.Size(6, 15);
             this.lbNG5.TabIndex = 21;
-            this.lbNG5.Text = "bunifuLabel3";
+            this.lbNG5.Text = "..";
             this.lbNG5.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lbNG5.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -927,6 +1166,7 @@ namespace SMESData
             // 
             this.panel6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel6.Controls.Add(this.btL6);
             this.panel6.Controls.Add(this.lbWar6);
             this.panel6.Controls.Add(this.lb6);
             this.panel6.Controls.Add(this.linePCanvas6);
@@ -939,13 +1179,64 @@ namespace SMESData
             this.panel6.Size = new System.Drawing.Size(385, 281);
             this.panel6.TabIndex = 18;
             // 
+            // btL6
+            // 
+            this.btL6.ActiveImage = null;
+            this.btL6.AllowAnimations = true;
+            this.btL6.AllowBuffering = false;
+            this.btL6.AllowToggling = false;
+            this.btL6.AllowZooming = true;
+            this.btL6.AllowZoomingOnFocus = false;
+            this.btL6.BackColor = System.Drawing.Color.Transparent;
+            this.btL6.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btL6.ErrorImage = global::SMESData.Properties.Resources.close;
+            this.btL6.FadeWhenInactive = false;
+            this.btL6.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            this.btL6.Image = global::SMESData.Properties.Resources.analytics;
+            this.btL6.ImageActive = null;
+            this.btL6.ImageLocation = null;
+            this.btL6.ImageMargin = 20;
+            this.btL6.ImageSize = new System.Drawing.Size(50, 50);
+            this.btL6.ImageZoomSize = new System.Drawing.Size(70, 70);
+            this.btL6.InitialImage = ((System.Drawing.Image)(resources.GetObject("btL6.InitialImage")));
+            this.btL6.Location = new System.Drawing.Point(274, 150);
+            this.btL6.Name = "btL6";
+            this.btL6.Rotation = 0;
+            this.btL6.ShowActiveImage = true;
+            this.btL6.ShowCursorChanges = true;
+            this.btL6.ShowImageBorders = true;
+            this.btL6.ShowSizeMarkers = false;
+            this.btL6.Size = new System.Drawing.Size(70, 70);
+            this.btL6.TabIndex = 37;
+            this.btL6.ToolTipText = "";
+            this.btL6.WaitOnLoad = false;
+            this.btL6.Zoom = 20;
+            this.btL6.ZoomSpeed = 10;
+            this.btL6.Click += new System.EventHandler(this.btL6_Click);
+            // 
+            // lbWar6
+            // 
+            this.lbWar6.AllowParentOverrides = false;
+            this.lbWar6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbWar6.AutoEllipsis = false;
+            this.lbWar6.CursorType = null;
+            this.lbWar6.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbWar6.Location = new System.Drawing.Point(100, 120);
+            this.lbWar6.Name = "lbWar6";
+            this.lbWar6.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbWar6.Size = new System.Drawing.Size(12, 37);
+            this.lbWar6.TabIndex = 36;
+            this.lbWar6.Text = "..";
+            this.lbWar6.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
+            this.lbWar6.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
             // lb6
             // 
             this.lb6.AllowParentOverrides = false;
             this.lb6.AutoEllipsis = false;
             this.lb6.CursorType = null;
             this.lb6.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb6.Location = new System.Drawing.Point(263, 214);
+            this.lb6.Location = new System.Drawing.Point(264, 227);
             this.lb6.Name = "lb6";
             this.lb6.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lb6.Size = new System.Drawing.Size(88, 31);
@@ -1023,9 +1314,9 @@ namespace SMESData
             this.lbOP6.Margin = new System.Windows.Forms.Padding(2);
             this.lbOP6.Name = "lbOP6";
             this.lbOP6.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbOP6.Size = new System.Drawing.Size(69, 15);
+            this.lbOP6.Size = new System.Drawing.Size(6, 15);
             this.lbOP6.TabIndex = 22;
-            this.lbOP6.Text = "bunifuLabel1";
+            this.lbOP6.Text = "..";
             this.lbOP6.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lbOP6.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -1039,9 +1330,9 @@ namespace SMESData
             this.lbRW6.Margin = new System.Windows.Forms.Padding(2);
             this.lbRW6.Name = "lbRW6";
             this.lbRW6.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbRW6.Size = new System.Drawing.Size(69, 15);
+            this.lbRW6.Size = new System.Drawing.Size(6, 15);
             this.lbRW6.TabIndex = 23;
-            this.lbRW6.Text = "bunifuLabel2";
+            this.lbRW6.Text = "..";
             this.lbRW6.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lbRW6.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -1055,9 +1346,9 @@ namespace SMESData
             this.lbNG6.Margin = new System.Windows.Forms.Padding(2);
             this.lbNG6.Name = "lbNG6";
             this.lbNG6.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbNG6.Size = new System.Drawing.Size(69, 15);
+            this.lbNG6.Size = new System.Drawing.Size(6, 15);
             this.lbNG6.TabIndex = 24;
-            this.lbNG6.Text = "bunifuLabel3";
+            this.lbNG6.Text = "..";
             this.lbNG6.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lbNG6.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -1065,6 +1356,7 @@ namespace SMESData
             // 
             this.panel7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel7.Controls.Add(this.btL7);
             this.panel7.Controls.Add(this.lbWar7);
             this.panel7.Controls.Add(this.lb7);
             this.panel7.Controls.Add(this.lbOP7);
@@ -1077,13 +1369,64 @@ namespace SMESData
             this.panel7.Size = new System.Drawing.Size(385, 281);
             this.panel7.TabIndex = 19;
             // 
+            // btL7
+            // 
+            this.btL7.ActiveImage = null;
+            this.btL7.AllowAnimations = true;
+            this.btL7.AllowBuffering = false;
+            this.btL7.AllowToggling = false;
+            this.btL7.AllowZooming = true;
+            this.btL7.AllowZoomingOnFocus = false;
+            this.btL7.BackColor = System.Drawing.Color.Transparent;
+            this.btL7.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btL7.ErrorImage = global::SMESData.Properties.Resources.close;
+            this.btL7.FadeWhenInactive = false;
+            this.btL7.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            this.btL7.Image = global::SMESData.Properties.Resources.analytics;
+            this.btL7.ImageActive = null;
+            this.btL7.ImageLocation = null;
+            this.btL7.ImageMargin = 20;
+            this.btL7.ImageSize = new System.Drawing.Size(50, 50);
+            this.btL7.ImageZoomSize = new System.Drawing.Size(70, 70);
+            this.btL7.InitialImage = ((System.Drawing.Image)(resources.GetObject("btL7.InitialImage")));
+            this.btL7.Location = new System.Drawing.Point(274, 150);
+            this.btL7.Name = "btL7";
+            this.btL7.Rotation = 0;
+            this.btL7.ShowActiveImage = true;
+            this.btL7.ShowCursorChanges = true;
+            this.btL7.ShowImageBorders = true;
+            this.btL7.ShowSizeMarkers = false;
+            this.btL7.Size = new System.Drawing.Size(70, 70);
+            this.btL7.TabIndex = 40;
+            this.btL7.ToolTipText = "";
+            this.btL7.WaitOnLoad = false;
+            this.btL7.Zoom = 20;
+            this.btL7.ZoomSpeed = 10;
+            this.btL7.Click += new System.EventHandler(this.btL7_Click);
+            // 
+            // lbWar7
+            // 
+            this.lbWar7.AllowParentOverrides = false;
+            this.lbWar7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbWar7.AutoEllipsis = false;
+            this.lbWar7.CursorType = null;
+            this.lbWar7.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbWar7.Location = new System.Drawing.Point(100, 120);
+            this.lbWar7.Name = "lbWar7";
+            this.lbWar7.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbWar7.Size = new System.Drawing.Size(12, 37);
+            this.lbWar7.TabIndex = 35;
+            this.lbWar7.Text = "..";
+            this.lbWar7.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
+            this.lbWar7.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
             // lb7
             // 
             this.lb7.AllowParentOverrides = false;
             this.lb7.AutoEllipsis = false;
             this.lb7.CursorType = null;
             this.lb7.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb7.Location = new System.Drawing.Point(266, 216);
+            this.lb7.Location = new System.Drawing.Point(264, 227);
             this.lb7.Name = "lb7";
             this.lb7.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lb7.Size = new System.Drawing.Size(88, 31);
@@ -1102,9 +1445,9 @@ namespace SMESData
             this.lbOP7.Margin = new System.Windows.Forms.Padding(2);
             this.lbOP7.Name = "lbOP7";
             this.lbOP7.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbOP7.Size = new System.Drawing.Size(69, 15);
+            this.lbOP7.Size = new System.Drawing.Size(6, 15);
             this.lbOP7.TabIndex = 19;
-            this.lbOP7.Text = "bunifuLabel1";
+            this.lbOP7.Text = "..";
             this.lbOP7.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lbOP7.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -1118,9 +1461,9 @@ namespace SMESData
             this.lbNG7.Margin = new System.Windows.Forms.Padding(2);
             this.lbNG7.Name = "lbNG7";
             this.lbNG7.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbNG7.Size = new System.Drawing.Size(69, 15);
+            this.lbNG7.Size = new System.Drawing.Size(6, 15);
             this.lbNG7.TabIndex = 21;
-            this.lbNG7.Text = "bunifuLabel3";
+            this.lbNG7.Text = "..";
             this.lbNG7.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lbNG7.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -1193,9 +1536,9 @@ namespace SMESData
             this.lbRW7.Margin = new System.Windows.Forms.Padding(2);
             this.lbRW7.Name = "lbRW7";
             this.lbRW7.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbRW7.Size = new System.Drawing.Size(69, 15);
+            this.lbRW7.Size = new System.Drawing.Size(6, 15);
             this.lbRW7.TabIndex = 20;
-            this.lbRW7.Text = "bunifuLabel2";
+            this.lbRW7.Text = "..";
             this.lbRW7.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lbRW7.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -1218,190 +1561,6 @@ namespace SMESData
             this.lblTime.Text = "...";
             this.lblTime.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
             this.lblTime.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // btStop
-            // 
-            this.btStop.AllowAnimations = true;
-            this.btStop.AllowMouseEffects = true;
-            this.btStop.AllowToggling = false;
-            this.btStop.AnimationSpeed = 200;
-            this.btStop.AutoGenerateColors = false;
-            this.btStop.AutoRoundBorders = false;
-            this.btStop.AutoSizeLeftIcon = true;
-            this.btStop.AutoSizeRightIcon = true;
-            this.btStop.BackColor = System.Drawing.Color.Transparent;
-            this.btStop.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
-            this.btStop.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btStop.BackgroundImage")));
-            this.btStop.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btStop.ButtonText = "Stop Auto \r\nUpdate Chart";
-            this.btStop.ButtonTextMarginLeft = 0;
-            this.btStop.ColorContrastOnClick = 45;
-            this.btStop.ColorContrastOnHover = 45;
-            this.btStop.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.btStop.CustomizableEdges = borderEdges1;
-            this.btStop.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btStop.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btStop.DisabledFillColor = System.Drawing.Color.Empty;
-            this.btStop.DisabledForecolor = System.Drawing.Color.Empty;
-            this.btStop.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.btStop.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btStop.ForeColor = System.Drawing.Color.White;
-            this.btStop.IconLeft = null;
-            this.btStop.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btStop.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.btStop.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
-            this.btStop.IconMarginLeft = 11;
-            this.btStop.IconPadding = 10;
-            this.btStop.IconRight = null;
-            this.btStop.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btStop.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.btStop.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
-            this.btStop.IconSize = 25;
-            this.btStop.IdleBorderColor = System.Drawing.Color.Empty;
-            this.btStop.IdleBorderRadius = 0;
-            this.btStop.IdleBorderThickness = 0;
-            this.btStop.IdleFillColor = System.Drawing.Color.Empty;
-            this.btStop.IdleIconLeftImage = null;
-            this.btStop.IdleIconRightImage = null;
-            this.btStop.IndicateFocus = false;
-            this.btStop.Location = new System.Drawing.Point(1253, 127);
-            this.btStop.Name = "btStop";
-            this.btStop.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btStop.OnDisabledState.BorderRadius = 1;
-            this.btStop.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btStop.OnDisabledState.BorderThickness = 1;
-            this.btStop.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btStop.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btStop.OnDisabledState.IconLeftImage = null;
-            this.btStop.OnDisabledState.IconRightImage = null;
-            this.btStop.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(151)))), ((int)(((byte)(0)))));
-            this.btStop.onHoverState.BorderRadius = 1;
-            this.btStop.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btStop.onHoverState.BorderThickness = 1;
-            this.btStop.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(151)))), ((int)(((byte)(0)))));
-            this.btStop.onHoverState.ForeColor = System.Drawing.Color.White;
-            this.btStop.onHoverState.IconLeftImage = null;
-            this.btStop.onHoverState.IconRightImage = null;
-            this.btStop.OnIdleState.BorderColor = System.Drawing.Color.Orange;
-            this.btStop.OnIdleState.BorderRadius = 1;
-            this.btStop.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btStop.OnIdleState.BorderThickness = 1;
-            this.btStop.OnIdleState.FillColor = System.Drawing.Color.Orange;
-            this.btStop.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.btStop.OnIdleState.IconLeftImage = null;
-            this.btStop.OnIdleState.IconRightImage = null;
-            this.btStop.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btStop.OnPressedState.BorderRadius = 1;
-            this.btStop.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btStop.OnPressedState.BorderThickness = 1;
-            this.btStop.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btStop.OnPressedState.ForeColor = System.Drawing.Color.White;
-            this.btStop.OnPressedState.IconLeftImage = null;
-            this.btStop.OnPressedState.IconRightImage = null;
-            this.btStop.Size = new System.Drawing.Size(138, 68);
-            this.btStop.TabIndex = 21;
-            this.btStop.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btStop.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btStop.TextMarginLeft = 0;
-            this.btStop.TextPadding = new System.Windows.Forms.Padding(0);
-            this.btStop.UseDefaultRadiusAndThickness = true;
-            this.btStop.Click += new System.EventHandler(this.btStop_Click);
-            // 
-            // btStart
-            // 
-            this.btStart.AllowAnimations = true;
-            this.btStart.AllowMouseEffects = true;
-            this.btStart.AllowToggling = false;
-            this.btStart.AnimationSpeed = 200;
-            this.btStart.AutoGenerateColors = false;
-            this.btStart.AutoRoundBorders = false;
-            this.btStart.AutoSizeLeftIcon = true;
-            this.btStart.AutoSizeRightIcon = true;
-            this.btStart.BackColor = System.Drawing.Color.Transparent;
-            this.btStart.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
-            this.btStart.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btStart.BackgroundImage")));
-            this.btStart.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btStart.ButtonText = "Start Auto \r\nUpdate Chart";
-            this.btStart.ButtonTextMarginLeft = 0;
-            this.btStart.ColorContrastOnClick = 45;
-            this.btStart.ColorContrastOnHover = 45;
-            this.btStart.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.btStart.CustomizableEdges = borderEdges2;
-            this.btStart.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btStart.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btStart.DisabledFillColor = System.Drawing.Color.Empty;
-            this.btStart.DisabledForecolor = System.Drawing.Color.Empty;
-            this.btStart.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.btStart.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btStart.ForeColor = System.Drawing.Color.White;
-            this.btStart.IconLeft = null;
-            this.btStart.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btStart.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.btStart.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
-            this.btStart.IconMarginLeft = 11;
-            this.btStart.IconPadding = 10;
-            this.btStart.IconRight = null;
-            this.btStart.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btStart.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.btStart.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
-            this.btStart.IconSize = 25;
-            this.btStart.IdleBorderColor = System.Drawing.Color.Empty;
-            this.btStart.IdleBorderRadius = 0;
-            this.btStart.IdleBorderThickness = 0;
-            this.btStart.IdleFillColor = System.Drawing.Color.Empty;
-            this.btStart.IdleIconLeftImage = null;
-            this.btStart.IdleIconRightImage = null;
-            this.btStart.IndicateFocus = false;
-            this.btStart.Location = new System.Drawing.Point(1253, 236);
-            this.btStart.Name = "btStart";
-            this.btStart.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btStart.OnDisabledState.BorderRadius = 1;
-            this.btStart.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btStart.OnDisabledState.BorderThickness = 1;
-            this.btStart.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btStart.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btStart.OnDisabledState.IconLeftImage = null;
-            this.btStart.OnDisabledState.IconRightImage = null;
-            this.btStart.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(150)))), ((int)(((byte)(255)))));
-            this.btStart.onHoverState.BorderRadius = 1;
-            this.btStart.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btStart.onHoverState.BorderThickness = 1;
-            this.btStart.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(150)))), ((int)(((byte)(255)))));
-            this.btStart.onHoverState.ForeColor = System.Drawing.Color.White;
-            this.btStart.onHoverState.IconLeftImage = null;
-            this.btStart.onHoverState.IconRightImage = null;
-            this.btStart.OnIdleState.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.btStart.OnIdleState.BorderRadius = 1;
-            this.btStart.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btStart.OnIdleState.BorderThickness = 1;
-            this.btStart.OnIdleState.FillColor = System.Drawing.Color.DodgerBlue;
-            this.btStart.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.btStart.OnIdleState.IconLeftImage = null;
-            this.btStart.OnIdleState.IconRightImage = null;
-            this.btStart.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btStart.OnPressedState.BorderRadius = 1;
-            this.btStart.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btStart.OnPressedState.BorderThickness = 1;
-            this.btStart.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btStart.OnPressedState.ForeColor = System.Drawing.Color.White;
-            this.btStart.OnPressedState.IconLeftImage = null;
-            this.btStart.OnPressedState.IconRightImage = null;
-            this.btStart.Size = new System.Drawing.Size(138, 68);
-            this.btStart.TabIndex = 22;
-            this.btStart.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btStart.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btStart.TextMarginLeft = 0;
-            this.btStart.TextPadding = new System.Windows.Forms.Padding(0);
-            this.btStart.UseDefaultRadiusAndThickness = true;
-            this.btStart.Click += new System.EventHandler(this.btStart_Click);
             // 
             // pnTimeControl
             // 
@@ -1531,117 +1690,217 @@ namespace SMESData
             this.nbH.UpDownAlign = System.Windows.Forms.LeftRightAlignment.Left;
             this.nbH.ValueChanged += new System.EventHandler(this.nbH_ValueChanged);
             // 
-            // lbWar1
+            // btStart
             // 
-            this.lbWar1.AllowParentOverrides = false;
-            this.lbWar1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbWar1.AutoEllipsis = false;
-            this.lbWar1.CursorType = null;
-            this.lbWar1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbWar1.Location = new System.Drawing.Point(100, 120);
-            this.lbWar1.Name = "lbWar1";
-            this.lbWar1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbWar1.Size = new System.Drawing.Size(155, 37);
-            this.lbWar1.TabIndex = 33;
-            this.lbWar1.Text = "bunifuLabel1";
-            this.lbWar1.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
-            this.lbWar1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.btStart.AllowAnimations = true;
+            this.btStart.AllowMouseEffects = true;
+            this.btStart.AllowToggling = false;
+            this.btStart.AnimationSpeed = 200;
+            this.btStart.AutoGenerateColors = false;
+            this.btStart.AutoRoundBorders = false;
+            this.btStart.AutoSizeLeftIcon = true;
+            this.btStart.AutoSizeRightIcon = true;
+            this.btStart.BackColor = System.Drawing.Color.Transparent;
+            this.btStart.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
+            this.btStart.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btStart.BackgroundImage")));
+            this.btStart.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btStart.ButtonText = "Start Auto \r\nUpdate Chart";
+            this.btStart.ButtonTextMarginLeft = 0;
+            this.btStart.ColorContrastOnClick = 45;
+            this.btStart.ColorContrastOnHover = 45;
+            this.btStart.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges15.BottomLeft = true;
+            borderEdges15.BottomRight = true;
+            borderEdges15.TopLeft = true;
+            borderEdges15.TopRight = true;
+            this.btStart.CustomizableEdges = borderEdges15;
+            this.btStart.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btStart.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btStart.DisabledFillColor = System.Drawing.Color.Empty;
+            this.btStart.DisabledForecolor = System.Drawing.Color.Empty;
+            this.btStart.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.btStart.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btStart.ForeColor = System.Drawing.Color.White;
+            this.btStart.IconLeft = null;
+            this.btStart.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btStart.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btStart.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.btStart.IconMarginLeft = 11;
+            this.btStart.IconPadding = 10;
+            this.btStart.IconRight = null;
+            this.btStart.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btStart.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btStart.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.btStart.IconSize = 25;
+            this.btStart.IdleBorderColor = System.Drawing.Color.Empty;
+            this.btStart.IdleBorderRadius = 0;
+            this.btStart.IdleBorderThickness = 0;
+            this.btStart.IdleFillColor = System.Drawing.Color.Empty;
+            this.btStart.IdleIconLeftImage = null;
+            this.btStart.IdleIconRightImage = null;
+            this.btStart.IndicateFocus = false;
+            this.btStart.Location = new System.Drawing.Point(1253, 236);
+            this.btStart.Name = "btStart";
+            this.btStart.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btStart.OnDisabledState.BorderRadius = 1;
+            this.btStart.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btStart.OnDisabledState.BorderThickness = 1;
+            this.btStart.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btStart.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btStart.OnDisabledState.IconLeftImage = null;
+            this.btStart.OnDisabledState.IconRightImage = null;
+            this.btStart.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(150)))), ((int)(((byte)(255)))));
+            this.btStart.onHoverState.BorderRadius = 1;
+            this.btStart.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btStart.onHoverState.BorderThickness = 1;
+            this.btStart.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(150)))), ((int)(((byte)(255)))));
+            this.btStart.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.btStart.onHoverState.IconLeftImage = null;
+            this.btStart.onHoverState.IconRightImage = null;
+            this.btStart.OnIdleState.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.btStart.OnIdleState.BorderRadius = 1;
+            this.btStart.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btStart.OnIdleState.BorderThickness = 1;
+            this.btStart.OnIdleState.FillColor = System.Drawing.Color.DodgerBlue;
+            this.btStart.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.btStart.OnIdleState.IconLeftImage = null;
+            this.btStart.OnIdleState.IconRightImage = null;
+            this.btStart.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btStart.OnPressedState.BorderRadius = 1;
+            this.btStart.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btStart.OnPressedState.BorderThickness = 1;
+            this.btStart.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btStart.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.btStart.OnPressedState.IconLeftImage = null;
+            this.btStart.OnPressedState.IconRightImage = null;
+            this.btStart.Size = new System.Drawing.Size(138, 68);
+            this.btStart.TabIndex = 22;
+            this.btStart.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btStart.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btStart.TextMarginLeft = 0;
+            this.btStart.TextPadding = new System.Windows.Forms.Padding(0);
+            this.btStart.UseDefaultRadiusAndThickness = true;
+            this.btStart.Click += new System.EventHandler(this.btStart_Click);
             // 
-            // lbWar2
+            // btStop
             // 
-            this.lbWar2.AllowParentOverrides = false;
-            this.lbWar2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbWar2.AutoEllipsis = false;
-            this.lbWar2.CursorType = null;
-            this.lbWar2.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbWar2.Location = new System.Drawing.Point(100, 120);
-            this.lbWar2.Name = "lbWar2";
-            this.lbWar2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbWar2.Size = new System.Drawing.Size(155, 37);
-            this.lbWar2.TabIndex = 34;
-            this.lbWar2.Text = "bunifuLabel1";
-            this.lbWar2.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
-            this.lbWar2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.btStop.AllowAnimations = true;
+            this.btStop.AllowMouseEffects = true;
+            this.btStop.AllowToggling = false;
+            this.btStop.AnimationSpeed = 200;
+            this.btStop.AutoGenerateColors = false;
+            this.btStop.AutoRoundBorders = false;
+            this.btStop.AutoSizeLeftIcon = true;
+            this.btStop.AutoSizeRightIcon = true;
+            this.btStop.BackColor = System.Drawing.Color.Transparent;
+            this.btStop.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
+            this.btStop.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btStop.BackgroundImage")));
+            this.btStop.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btStop.ButtonText = "Stop Auto \r\nUpdate Chart";
+            this.btStop.ButtonTextMarginLeft = 0;
+            this.btStop.ColorContrastOnClick = 45;
+            this.btStop.ColorContrastOnHover = 45;
+            this.btStop.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges16.BottomLeft = true;
+            borderEdges16.BottomRight = true;
+            borderEdges16.TopLeft = true;
+            borderEdges16.TopRight = true;
+            this.btStop.CustomizableEdges = borderEdges16;
+            this.btStop.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btStop.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btStop.DisabledFillColor = System.Drawing.Color.Empty;
+            this.btStop.DisabledForecolor = System.Drawing.Color.Empty;
+            this.btStop.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.btStop.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btStop.ForeColor = System.Drawing.Color.White;
+            this.btStop.IconLeft = null;
+            this.btStop.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btStop.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btStop.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.btStop.IconMarginLeft = 11;
+            this.btStop.IconPadding = 10;
+            this.btStop.IconRight = null;
+            this.btStop.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btStop.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btStop.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.btStop.IconSize = 25;
+            this.btStop.IdleBorderColor = System.Drawing.Color.Empty;
+            this.btStop.IdleBorderRadius = 0;
+            this.btStop.IdleBorderThickness = 0;
+            this.btStop.IdleFillColor = System.Drawing.Color.Empty;
+            this.btStop.IdleIconLeftImage = null;
+            this.btStop.IdleIconRightImage = null;
+            this.btStop.IndicateFocus = false;
+            this.btStop.Location = new System.Drawing.Point(1253, 127);
+            this.btStop.Name = "btStop";
+            this.btStop.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btStop.OnDisabledState.BorderRadius = 1;
+            this.btStop.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btStop.OnDisabledState.BorderThickness = 1;
+            this.btStop.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btStop.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btStop.OnDisabledState.IconLeftImage = null;
+            this.btStop.OnDisabledState.IconRightImage = null;
+            this.btStop.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(151)))), ((int)(((byte)(0)))));
+            this.btStop.onHoverState.BorderRadius = 1;
+            this.btStop.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btStop.onHoverState.BorderThickness = 1;
+            this.btStop.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(151)))), ((int)(((byte)(0)))));
+            this.btStop.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.btStop.onHoverState.IconLeftImage = null;
+            this.btStop.onHoverState.IconRightImage = null;
+            this.btStop.OnIdleState.BorderColor = System.Drawing.Color.Orange;
+            this.btStop.OnIdleState.BorderRadius = 1;
+            this.btStop.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btStop.OnIdleState.BorderThickness = 1;
+            this.btStop.OnIdleState.FillColor = System.Drawing.Color.Orange;
+            this.btStop.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.btStop.OnIdleState.IconLeftImage = null;
+            this.btStop.OnIdleState.IconRightImage = null;
+            this.btStop.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btStop.OnPressedState.BorderRadius = 1;
+            this.btStop.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btStop.OnPressedState.BorderThickness = 1;
+            this.btStop.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btStop.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.btStop.OnPressedState.IconLeftImage = null;
+            this.btStop.OnPressedState.IconRightImage = null;
+            this.btStop.Size = new System.Drawing.Size(138, 68);
+            this.btStop.TabIndex = 21;
+            this.btStop.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btStop.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btStop.TextMarginLeft = 0;
+            this.btStop.TextPadding = new System.Windows.Forms.Padding(0);
+            this.btStop.UseDefaultRadiusAndThickness = true;
+            this.btStop.Click += new System.EventHandler(this.btStop_Click);
             // 
-            // lbWar3
+            // dtpChart
             // 
-            this.lbWar3.AllowParentOverrides = false;
-            this.lbWar3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbWar3.AutoEllipsis = false;
-            this.lbWar3.CursorType = null;
-            this.lbWar3.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbWar3.Location = new System.Drawing.Point(100, 120);
-            this.lbWar3.Name = "lbWar3";
-            this.lbWar3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbWar3.Size = new System.Drawing.Size(155, 37);
-            this.lbWar3.TabIndex = 35;
-            this.lbWar3.Text = "bunifuLabel1";
-            this.lbWar3.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
-            this.lbWar3.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // lbWar6
-            // 
-            this.lbWar6.AllowParentOverrides = false;
-            this.lbWar6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbWar6.AutoEllipsis = false;
-            this.lbWar6.CursorType = null;
-            this.lbWar6.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbWar6.Location = new System.Drawing.Point(100, 120);
-            this.lbWar6.Name = "lbWar6";
-            this.lbWar6.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbWar6.Size = new System.Drawing.Size(155, 37);
-            this.lbWar6.TabIndex = 36;
-            this.lbWar6.Text = "bunifuLabel1";
-            this.lbWar6.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
-            this.lbWar6.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // lbWar5
-            // 
-            this.lbWar5.AllowParentOverrides = false;
-            this.lbWar5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbWar5.AutoEllipsis = false;
-            this.lbWar5.CursorType = null;
-            this.lbWar5.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbWar5.Location = new System.Drawing.Point(100, 120);
-            this.lbWar5.Name = "lbWar5";
-            this.lbWar5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbWar5.Size = new System.Drawing.Size(155, 37);
-            this.lbWar5.TabIndex = 37;
-            this.lbWar5.Text = "bunifuLabel1";
-            this.lbWar5.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
-            this.lbWar5.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // lbWar4
-            // 
-            this.lbWar4.AllowParentOverrides = false;
-            this.lbWar4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbWar4.AutoEllipsis = false;
-            this.lbWar4.CursorType = null;
-            this.lbWar4.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbWar4.Location = new System.Drawing.Point(100, 120);
-            this.lbWar4.Name = "lbWar4";
-            this.lbWar4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbWar4.Size = new System.Drawing.Size(155, 37);
-            this.lbWar4.TabIndex = 38;
-            this.lbWar4.Text = "bunifuLabel1";
-            this.lbWar4.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
-            this.lbWar4.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // lbWar7
-            // 
-            this.lbWar7.AllowParentOverrides = false;
-            this.lbWar7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbWar7.AutoEllipsis = false;
-            this.lbWar7.CursorType = null;
-            this.lbWar7.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbWar7.Location = new System.Drawing.Point(100, 120);
-            this.lbWar7.Name = "lbWar7";
-            this.lbWar7.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbWar7.Size = new System.Drawing.Size(155, 37);
-            this.lbWar7.TabIndex = 35;
-            this.lbWar7.Text = "bunifuLabel1";
-            this.lbWar7.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
-            this.lbWar7.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.dtpChart.BackColor = System.Drawing.Color.Transparent;
+            this.dtpChart.BorderColor = System.Drawing.Color.Silver;
+            this.dtpChart.BorderRadius = 1;
+            this.dtpChart.CalendarFont = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpChart.Color = System.Drawing.Color.Silver;
+            this.dtpChart.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin;
+            this.dtpChart.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
+            this.dtpChart.DisabledColor = System.Drawing.Color.Gray;
+            this.dtpChart.DisplayWeekNumbers = false;
+            this.dtpChart.DPHeight = 0;
+            this.dtpChart.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.dtpChart.FillDatePicker = false;
+            this.dtpChart.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.dtpChart.ForeColor = System.Drawing.Color.Black;
+            this.dtpChart.Icon = ((System.Drawing.Image)(resources.GetObject("dtpChart.Icon")));
+            this.dtpChart.IconColor = System.Drawing.Color.DodgerBlue;
+            this.dtpChart.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
+            this.dtpChart.LeftTextMargin = 5;
+            this.dtpChart.Location = new System.Drawing.Point(1253, 23);
+            this.dtpChart.Margin = new System.Windows.Forms.Padding(2);
+            this.dtpChart.MinimumSize = new System.Drawing.Size(4, 32);
+            this.dtpChart.Name = "dtpChart";
+            this.dtpChart.Size = new System.Drawing.Size(150, 32);
+            this.dtpChart.TabIndex = 7;
+            this.dtpChart.Value = new System.DateTime(2022, 5, 29, 0, 0, 0, 0);
             // 
             // UC_MQC_PieChart
             // 
@@ -1760,5 +2019,12 @@ namespace SMESData
         private Bunifu.UI.WinForms.BunifuLabel lbWar5;
         private Bunifu.UI.WinForms.BunifuLabel lbWar4;
         private Bunifu.UI.WinForms.BunifuLabel lbWar7;
+        private Bunifu.UI.WinForms.BunifuImageButton btL1;
+        private Bunifu.UI.WinForms.BunifuImageButton btL2;
+        private Bunifu.UI.WinForms.BunifuImageButton btL3;
+        private Bunifu.UI.WinForms.BunifuImageButton btL4;
+        private Bunifu.UI.WinForms.BunifuImageButton btL5;
+        private Bunifu.UI.WinForms.BunifuImageButton btL6;
+        private Bunifu.UI.WinForms.BunifuImageButton btL7;
     }
 }
