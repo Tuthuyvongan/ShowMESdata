@@ -42,12 +42,8 @@ namespace SMESData
         public void btMQC_Click(object sender, EventArgs e)
         {
             MQC = true;
-            PQC = false;
-            Thread t = new Thread(new ThreadStart(splash));
-            t.Start();
-            addUserControl(uc_MQC_PieChart);
-            Thread.Sleep(1000);
-            t.Abort();
+            PQC = false;            
+            addUserControl(uc_MQC_PieChart);            
             uc_MQC_PieChart.UpdateTime();
             btMQC.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
             btPQC.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Idle;           
@@ -56,12 +52,8 @@ namespace SMESData
         public void btPQC_Click(object sender, EventArgs e)
         {
             PQC = true;
-            MQC = false;
-            Thread t = new Thread(new ThreadStart(splash));
-            t.Start();          
-            addUserControl(uc_PQC_PieChart);
-            Thread.Sleep(1000);
-            t.Abort();
+            MQC = false;                  
+            addUserControl(uc_PQC_PieChart);           
             uc_PQC_PieChart.UpdateTime();
             btPQC.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
             btMQC.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Idle;

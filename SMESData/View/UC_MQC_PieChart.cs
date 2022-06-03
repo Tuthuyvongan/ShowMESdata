@@ -54,64 +54,75 @@ namespace SMESData
             string [] remark = { "OP", "RW", "NG" };
             double d;
             double temp;
-            for (int i = 0; i < 3; i++)
-            {
-                //L01
-                temp = GetSOFTdata.getTotalRemark("L01", remark[i], date);
-                if (temp == 0 || temp is double.NaN)
-                    d = 0;
-                else
-                    d = Math.Round(temp / GetSOFTdata.getTotalMQC("L01", date) * 100, 2);
-                dataL01.Add(d);
+            MessageWaitForm msf = new MessageWaitForm();
+            Thread backgroundThreadFetchData = new Thread(
+                    new ThreadStart(() =>
+                    {
+                        for (int i = 0; i < 3; i++)
+                        {
+                            //L01
+                            temp = GetSOFTdata.getTotalRemark("L01", remark[i], date);
+                            if (temp == 0 || temp is double.NaN)
+                                d = 0;
+                            else
+                                d = Math.Round(temp / GetSOFTdata.getTotalMQC("L01", date) * 100, 2);
+                            dataL01.Add(d);
 
-                //L02
-                temp = GetSOFTdata.getTotalRemark("L02", remark[i], date);
-                if (temp == 0 || temp is double.NaN)
-                    d = 0;
-                else
-                    d = Math.Round(temp / GetSOFTdata.getTotalMQC("L02", date) * 100, 2);
-                dataL02.Add(d);
+                            //L02
+                            temp = GetSOFTdata.getTotalRemark("L02", remark[i], date);
+                            if (temp == 0 || temp is double.NaN)
+                                d = 0;
+                            else
+                                d = Math.Round(temp / GetSOFTdata.getTotalMQC("L02", date) * 100, 2);
+                            dataL02.Add(d);
 
-                //L03
-                temp = GetSOFTdata.getTotalRemark("L03", remark[i], date);
-                if (temp == 0 || temp is double.NaN)
-                    d = 0;
-                else
-                    d = Math.Round(temp / GetSOFTdata.getTotalMQC("L03", date) * 100, 2);
-                dataL03.Add(d);
+                            //L03
+                            temp = GetSOFTdata.getTotalRemark("L03", remark[i], date);
+                            if (temp == 0 || temp is double.NaN)
+                                d = 0;
+                            else
+                                d = Math.Round(temp / GetSOFTdata.getTotalMQC("L03", date) * 100, 2);
+                            dataL03.Add(d);
 
-                //L04
-                temp = GetSOFTdata.getTotalRemark("L04", remark[i], date);
-                if (temp == 0 || temp is double.NaN)
-                    d = 0;
-                else
-                    d = Math.Round(temp / GetSOFTdata.getTotalMQC("L04", date) * 100, 2);
-                dataL04.Add(d);
+                            //L04
+                            temp = GetSOFTdata.getTotalRemark("L04", remark[i], date);
+                            if (temp == 0 || temp is double.NaN)
+                                d = 0;
+                            else
+                                d = Math.Round(temp / GetSOFTdata.getTotalMQC("L04", date) * 100, 2);
+                            dataL04.Add(d);
 
-                //L05
-                temp = GetSOFTdata.getTotalRemark("L05", remark[i], date);
-                if (temp == 0 || temp is double.NaN)
-                    d = 0;
-                else
-                    d = Math.Round(temp / GetSOFTdata.getTotalMQC("L05", date) * 100, 2);
-                dataL05.Add(d);
+                            //L05
+                            temp = GetSOFTdata.getTotalRemark("L05", remark[i], date);
+                            if (temp == 0 || temp is double.NaN)
+                                d = 0;
+                            else
+                                d = Math.Round(temp / GetSOFTdata.getTotalMQC("L05", date) * 100, 2);
+                            dataL05.Add(d);
 
-                //L06
-                temp = GetSOFTdata.getTotalRemark("L06", remark[i], date);
-                if (temp == 0 || temp is double.NaN)
-                    d = 0;
-                else
-                    d = Math.Round(temp / GetSOFTdata.getTotalMQC("L06", date) * 100, 2);
-                dataL06.Add(d);
+                            //L06
+                            temp = GetSOFTdata.getTotalRemark("L06", remark[i], date);
+                            if (temp == 0 || temp is double.NaN)
+                                d = 0;
+                            else
+                                d = Math.Round(temp / GetSOFTdata.getTotalMQC("L06", date) * 100, 2);
+                            dataL06.Add(d);
 
-                //L07
-                temp = GetSOFTdata.getTotalRemark("L07", remark[i], date);
-                if (temp == 0 || temp is double.NaN)
-                    d = 0;
-                else
-                    d = Math.Round(temp / GetSOFTdata.getTotalMQC("L07", date) * 100, 2);
-                dataL07.Add(d);
-            }            
+                            //L07
+                            temp = GetSOFTdata.getTotalRemark("L07", remark[i], date);
+                            if (temp == 0 || temp is double.NaN)
+                                d = 0;
+                            else
+                                d = Math.Round(temp / GetSOFTdata.getTotalMQC("L07", date) * 100, 2);
+                            dataL07.Add(d);
+                            Thread.Sleep(50);
+                            msf.UpdateProgress(100 * i / 3, "Application is running, please wait ... ");
+                        }
+                        msf.BeginInvoke(new Action(() => msf.Close()));
+                    }
+                ));
+            backgroundThreadFetchData.Start();
+            msf.ShowDialog();
         }
         public void renderPiechart()
         {            
@@ -374,9 +385,7 @@ namespace SMESData
         }
 
         private void dtpChart_ValueChanged(object sender, EventArgs e)
-        {
-            Thread t = new Thread(new ThreadStart(splash));
-            t.Start();            
+        {                 
             dtpChart.Visible = false;
             dataL01.Clear();
             dataL02.Clear();
@@ -385,9 +394,7 @@ namespace SMESData
             dataL05.Clear();
             dataL06.Clear();
             dataL07.Clear();
-            renderPiechart();
-            Thread.Sleep(1000);
-            t.Abort();
+            renderPiechart();            
         }
         public void splash()
         {
@@ -427,9 +434,7 @@ namespace SMESData
                                 ts.Seconds);
                 lblTime.Text = "Chart update in: " + "\r\n" + time.ToString();
                 if (remainingSeconds < 0)
-                {
-                    Thread t = new Thread(new ThreadStart(splash));
-                    t.Start();
+                {                    
                     lblTime.Visible = false;
                     dataL01.Clear();
                     dataL02.Clear();
@@ -438,9 +443,7 @@ namespace SMESData
                     dataL05.Clear();
                     dataL06.Clear();
                     dataL07.Clear();
-                    renderPiechart();
-                    Thread.Sleep(1000);
-                    t.Abort();
+                    renderPiechart();                   
                     timer1.Stop();
                     UpdateTime();
                 }

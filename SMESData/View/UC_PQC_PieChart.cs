@@ -54,64 +54,75 @@ namespace SMESData
             string[] type = { "OP", "RW", "NG" };
             double d;
             double temp;
-            for (int i = 0; i < 3; i++)
-            {
-                //L01
-                temp = GetSOFTdata.getTotalAttributeType("L01", type[i], date);
-                if (temp == 0 || temp is double.NaN)
-                    d = 0;
-                else
-                    d = Math.Round(temp / GetSOFTdata.getTotalPQC("L01", date) * 100, 2);
-                dataL01.Add(d);
+            MessageWaitForm msf = new MessageWaitForm();
+            Thread backgroundThreadFetchData = new Thread(
+                    new ThreadStart(() =>
+                    {
+                        for (int i = 0; i < 3; i++)
+                        {
+                            //L01
+                            temp = GetSOFTdata.getTotalAttributeType("L01", type[i], date);
+                            if (temp == 0 || temp is double.NaN)
+                                d = 0;
+                            else
+                                d = Math.Round(temp / GetSOFTdata.getTotalPQC("L01", date) * 100, 2);
+                            dataL01.Add(d);
 
-                //L02
-                temp = GetSOFTdata.getTotalAttributeType("L02", type[i], date);
-                if (temp == 0 || temp is double.NaN)
-                    d = 0;
-                else
-                    d = Math.Round(temp / GetSOFTdata.getTotalPQC("L02", date) * 100, 2);
-                dataL02.Add(d);
+                            //L02
+                            temp = GetSOFTdata.getTotalAttributeType("L02", type[i], date);
+                            if (temp == 0 || temp is double.NaN)
+                                d = 0;
+                            else
+                                d = Math.Round(temp / GetSOFTdata.getTotalPQC("L02", date) * 100, 2);
+                            dataL02.Add(d);
 
-                //L03
-                temp = GetSOFTdata.getTotalAttributeType("L03", type[i], date);
-                if (temp == 0 || temp is double.NaN)
-                    d = 0;
-                else
-                    d = Math.Round(temp / GetSOFTdata.getTotalPQC("L03", date) * 100, 2);
-                dataL03.Add(d);
+                            //L03
+                            temp = GetSOFTdata.getTotalAttributeType("L03", type[i], date);
+                            if (temp == 0 || temp is double.NaN)
+                                d = 0;
+                            else
+                                d = Math.Round(temp / GetSOFTdata.getTotalPQC("L03", date) * 100, 2);
+                            dataL03.Add(d);
 
-                //L04
-                temp = GetSOFTdata.getTotalAttributeType("L04", type[i], date);
-                if (temp == 0 || temp is double.NaN)
-                    d = 0;
-                else
-                    d = Math.Round(temp / GetSOFTdata.getTotalPQC("L04", date) * 100, 2);
-                dataL04.Add(d);
+                            //L04
+                            temp = GetSOFTdata.getTotalAttributeType("L04", type[i], date);
+                            if (temp == 0 || temp is double.NaN)
+                                d = 0;
+                            else
+                                d = Math.Round(temp / GetSOFTdata.getTotalPQC("L04", date) * 100, 2);
+                            dataL04.Add(d);
 
-                //L05
-                temp = GetSOFTdata.getTotalAttributeType("L05", type[i], date);
-                if (temp == 0 || temp is double.NaN)
-                    d = 0;
-                else
-                    d = Math.Round(temp / GetSOFTdata.getTotalPQC("L05", date) * 100, 2);
-                dataL05.Add(d);
+                            //L05
+                            temp = GetSOFTdata.getTotalAttributeType("L05", type[i], date);
+                            if (temp == 0 || temp is double.NaN)
+                                d = 0;
+                            else
+                                d = Math.Round(temp / GetSOFTdata.getTotalPQC("L05", date) * 100, 2);
+                            dataL05.Add(d);
 
-                //L06
-                temp = GetSOFTdata.getTotalAttributeType("L06", type[i], date);
-                if (temp == 0 || temp is double.NaN)
-                    d = 0;
-                else
-                    d = Math.Round(temp / GetSOFTdata.getTotalPQC("L06", date) * 100, 2);
-                dataL06.Add(d);
+                            //L06
+                            temp = GetSOFTdata.getTotalAttributeType("L06", type[i], date);
+                            if (temp == 0 || temp is double.NaN)
+                                d = 0;
+                            else
+                                d = Math.Round(temp / GetSOFTdata.getTotalPQC("L06", date) * 100, 2);
+                            dataL06.Add(d);
 
-                //L07
-                temp = GetSOFTdata.getTotalAttributeType("L07", type[i], date);
-                if (temp == 0 || temp is double.NaN)
-                    d = 0;
-                else
-                    d = Math.Round(temp / GetSOFTdata.getTotalPQC("L07", date) * 100, 2);
-                dataL07.Add(d);
-            }
+                            //L07
+                            temp = GetSOFTdata.getTotalAttributeType("L07", type[i], date);
+                            if (temp == 0 || temp is double.NaN)
+                                d = 0;
+                            else
+                                d = Math.Round(temp / GetSOFTdata.getTotalPQC("L07", date) * 100, 2);
+                            dataL07.Add(d);
+                            Thread.Sleep(50);
+                            msf.UpdateProgress(100 * i / 3, "Application is running, please wait ... ");
+                        }
+                        msf.BeginInvoke(new Action(() => msf.Close()));
+                    }
+                ));
+            backgroundThreadFetchData.Start();
+            msf.ShowDialog();
         }
         public void renderPiechart()
         {

@@ -17,11 +17,6 @@ namespace SMESData
             InitializeComponent();
         }
 
-        private void MessageWaitForm_Load(object sender, EventArgs e)
-        {
-            progressBar1.Value = 0;
-        }
-
         public void UpdateProgress(int progress, string announce)
         {
             lbWait.BeginInvoke(

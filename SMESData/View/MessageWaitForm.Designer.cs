@@ -88,7 +88,6 @@ namespace SMESData
             this.Name = "MessageWaitForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MessageWaitForm";
-            this.Load += new System.EventHandler(this.MessageWaitForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
