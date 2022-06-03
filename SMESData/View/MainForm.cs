@@ -25,13 +25,12 @@ namespace SMESData
         UC_Product_Info uc_PI = new UC_Product_Info();
         public static bool MQC;
         public static bool PQC;
-        public static bool MQCPD;
+        public static bool PD;
 
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            MQCPD = true;
-            addUserControl(uc_PI);
+            btMQCPD_Click(sender, e);
         }
         public void addUserControl(UserControl userControl)
         {
@@ -44,24 +43,40 @@ namespace SMESData
         public void btMQC_Click(object sender, EventArgs e)
         {
             MQC = true;
-            PQC = false;            
+            PQC = false;
+            PD = false;
             addUserControl(uc_MQC_PieChart);            
             uc_MQC_PieChart.UpdateTime();
             btMQC.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
-            btPQC.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Idle;           
+            btPQC.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Idle;
+            btMQCPD.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Idle;
         }
 
         public void btPQC_Click(object sender, EventArgs e)
         {
             PQC = true;
-            MQC = false;                  
+            MQC = false;
+            PD = false;
             addUserControl(uc_PQC_PieChart);           
             uc_PQC_PieChart.UpdateTime();
             btPQC.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
             btMQC.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Idle;
+            btMQCPD.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Idle;
         }
 
-        private void btClose_Click(object sender, EventArgs e)
+        private void btMQCPD_Click(object sender, EventArgs e)
+        {
+            PD = true;
+            MQC = false;
+            PQC = false;
+            addUserControl(uc_PI);
+            uc_PI.UpdateTime();
+            btMQCPD.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
+            btPQC.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Idle;
+            btMQC.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Idle;
+        }
+
+            private void btClose_Click(object sender, EventArgs e)
         {
             Dispose();
             Application.Exit();
@@ -70,6 +85,7 @@ namespace SMESData
         {
             Application.Run(new MessageWaitForm());
         }
+
         
     }
 }

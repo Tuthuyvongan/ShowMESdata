@@ -63,12 +63,13 @@ namespace SMESData
         }
         public void lineData()
         {            
-            double d1 = Math.Round(SaveData.op / SaveData.total * 100, 1);
-            double d2 = Math.Round(SaveData.rw / SaveData.total * 100, 1);
-            double d3 = Math.Round(SaveData.ng / SaveData.total * 100, 1);
-            dataMQC.Add(d1);
-            dataMQC.Add(d2);
-            dataMQC.Add(d3);
+            double OP = Math.Round(SaveData.op / SaveData.total * 100, 1);
+            double RW = Math.Round(SaveData.rw / SaveData.total * 100, 1);
+            double NG = Math.Round(SaveData.ng / SaveData.total * 100, 1);
+            dataMQC.Add(OP);
+            dataMQC.Add(RW);
+            dataMQC.Add(NG);
+            
         }
         public void renderPiechart()
         {
@@ -155,7 +156,7 @@ namespace SMESData
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (MainForm.MQCPD == true)
+            if (MainForm.PD == true)
             {
                 int elapsedSeconds = (int)(DateTime.Now - startTime).TotalSeconds;
                 int remainingSeconds = secondsToWait - elapsedSeconds;
@@ -164,7 +165,7 @@ namespace SMESData
                                 ts.Hours,
                                 ts.Minutes,
                                 ts.Seconds);
-                lblTime.Text = "Chart update in: " + "\r\n" + time.ToString();
+                lblTime.Text = "Data update in: " + "\r\n" + time.ToString();
                 if (remainingSeconds < 0)
                 {
                     lblTime.Visible = false;
@@ -188,7 +189,7 @@ namespace SMESData
             dtpChart.Enabled = true;
             pnTimeControl.Enabled = true;
             timer1.Stop();
-            lblTime.Text = "Auto update" + "\r\n" + "chart is stopping";
+            lblTime.Text = "Auto update" + "\r\n" + "data is stopping";
         }
 
         private void nbH_ValueChanged(object sender, EventArgs e)
