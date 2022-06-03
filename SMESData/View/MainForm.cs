@@ -44,7 +44,7 @@ namespace SMESData
             btPQC.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Idle;
             btMQC.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Idle;
             btMQCPD.Focus();
-            uc_PI.UpdateDTGV();
+            uc_PI.UpdateDTGVByLine();
         }
         public void addUserControl(UserControl userControl)
         {

@@ -17,5 +17,6 @@ namespace SMESData
         public static double NGallow { get; set; }
         public static string Model { get; set; }
         public static bool MQCClick { get; set; }
+        public static bool PQCClick { get; set; }
     }
 }

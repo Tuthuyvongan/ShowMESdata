@@ -128,10 +128,19 @@ namespace SMESData
         {
             dataMQC.Clear();
             string date = dtpChart.Value.ToString("yyyy-MM-dd");
-            string line = SaveData.line;
+            string line = "";
             dtgv_MQC_PD.DataSource = GetSOFTdata.getProductData(date, line);
             dtgv_MQC_PD.Refresh();
             dtpChart.Visible = true;
+        }
+        public void UpdateDTGVByLine()
+        {
+            dataMQC.Clear();
+            string date = dtpChart.Value.ToString("yyyy-MM-dd");
+            string line = SaveData.line;
+            dtgv_MQC_PD.DataSource = GetSOFTdata.getProductData(date, line);
+            dtgv_MQC_PD.Refresh();
+            ChangeData();
         }
         public void ChangeData()
         {
@@ -175,7 +184,7 @@ namespace SMESData
             int m = Int32.Parse(nbM.Value.ToString());
             int s = Int32.Parse(nbS.Value.ToString());
             if (h == 0 && m == 0 && s == 0)
-                secondsToWait = 30;
+                secondsToWait = 300;
             else
                 secondsToWait = h * 3600 + m * 60 + s;
         }
@@ -229,6 +238,12 @@ namespace SMESData
         private void nbS_ValueChanged(object sender, EventArgs e)
         {
             ChangeUpdateTime();
+        }
+
+        private void btMQCD_Click(object sender, EventArgs e)
+        {
+            lbQC.Text = "MQC";
+            UpdateDTGV();
         }
     }
 }

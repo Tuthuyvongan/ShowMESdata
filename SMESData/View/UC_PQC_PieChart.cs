@@ -413,7 +413,7 @@ namespace SMESData
             int m = Int32.Parse(nbM.Value.ToString());
             int s = Int32.Parse(nbS.Value.ToString());            
             if (h == 0 && m == 0 && s == 0)
-                secondsToWait = 30;
+                secondsToWait = 300;
             else
                 secondsToWait = h * 3600 + m * 60 + s;
         }
