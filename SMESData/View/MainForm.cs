@@ -25,10 +25,12 @@ namespace SMESData
         UC_Product_Info uc_PI = new UC_Product_Info();
         public static bool MQC;
         public static bool PQC;
-        
+        public static bool MQCPD;
+
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            MQCPD = true;
             addUserControl(uc_PI);
         }
         public void addUserControl(UserControl userControl)

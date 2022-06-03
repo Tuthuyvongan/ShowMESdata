@@ -155,7 +155,7 @@ namespace SMESData
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (MainForm.MQC == true)
+            if (MainForm.MQCPD == true)
             {
                 int elapsedSeconds = (int)(DateTime.Now - startTime).TotalSeconds;
                 int remainingSeconds = secondsToWait - elapsedSeconds;

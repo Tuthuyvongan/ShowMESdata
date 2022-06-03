@@ -101,7 +101,7 @@ namespace SMESData
             MessageWaitForm msf = new MessageWaitForm();
             StringBuilder sqlGetData = new StringBuilder();
             sqlGetData.Append("select distinct m.model as Model, m.inspectdate as Date, m.line as Line, m.OUTPUT, m.REWORK, m.NOGOOD, ");
-            sqlGetData.Append("total = m.OUTPUT + m.REWORK + m.NOGOOD, ");
+            sqlGetData.Append("Total = m.OUTPUT + m.REWORK + m.NOGOOD, ");
             sqlGetData.Append("cast(m.NOGOOD / (m.OUTPUT + m.REWORK + m.NOGOOD) * 100 as decimal(10,1)) as '%NG_realtime', ");
             sqlGetData.Append("CASE WHEN r.rate IS NULL THEN '1.5' ELSE r.rate END as '%NG_allow' ");
             sqlGetData.Append("FROM m_ERPMQC_REALTIME as a ");
