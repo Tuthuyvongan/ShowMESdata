@@ -100,6 +100,20 @@ namespace SMESData
             sqlSOFTCon sqlSOFTCon = new sqlSOFTCon();
             MessageWaitForm msf = new MessageWaitForm();
             StringBuilder sqlGetData = new StringBuilder();
+            DataColumn[] tableColumns = new DataColumn[]
+            {
+                new DataColumn()
+                {
+                    ColumnName="Model",
+                    DataType=typeof(string),
+                },
+                new DataColumn()
+                {
+                    ColumnName="Date",
+                    DataType=typeof(string),
+                },                         
+            };
+            dt.Columns.AddRange(tableColumns);
             sqlGetData.Append("select distinct m.model as Model, m.inspectdate as Date, m.line as Line, m.OUTPUT, m.REWORK, m.NOGOOD, ");
             sqlGetData.Append("Total = m.OUTPUT + m.REWORK + m.NOGOOD, ");
             sqlGetData.Append("cast(m.NOGOOD / (m.OUTPUT + m.REWORK + m.NOGOOD) * 100 as decimal(10,1)) as '%NG_realtime', ");
@@ -115,7 +129,12 @@ namespace SMESData
             sqlGetData.Append("group by model, inspectdate, line) as m ");
             sqlGetData.Append("on a.inspectdate = m.inspectdate and a.model = m.model and a.line = m.line ");
             sqlGetData.Append("order by Model, Date desc");
-            sqlSOFTCon.sqlDataAdapterFillDatatable(sqlGetData.ToString(), ref dt);
+            sqlSOFTCon.sqlDataAdapterFillDatatable(sqlGetData.ToString(), ref dt);           
+            for (int i = 0; i < dt.Rows.Count; i ++)
+            {
+                string DtIn = Convert.ToDateTime(dt.Rows[i]["Date"]).ToString("dd-MM-yyyy");
+                dt.Rows[i]["Date"] = DtIn;
+            }
             return dt;
         }
     }
