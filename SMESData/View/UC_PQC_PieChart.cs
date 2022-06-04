@@ -438,9 +438,9 @@ namespace SMESData
                     dataL04.Clear();
                     dataL05.Clear();
                     dataL06.Clear();
-                    dataL07.Clear();
-                    renderPiechart();
+                    dataL07.Clear();                   
                     timer1.Stop();
+                    renderPiechart();
                     UpdateTime();
                 }
             }   

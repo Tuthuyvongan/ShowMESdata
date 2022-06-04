@@ -291,12 +291,6 @@
     <Compile Include="View\UC_Product_Info.Designer.cs">
       <DependentUpon>UC_Product_Info.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\UC_MQC_BarChart.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="View\UC_MQC_BarChart.Designer.cs">
-      <DependentUpon>UC_MQC_BarChart.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\UC_MQC_PieChart.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -329,9 +323,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\UC_Product_Info.resx">
       <DependentUpon>UC_Product_Info.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\UC_MQC_BarChart.resx">
-      <DependentUpon>UC_MQC_BarChart.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UC_MQC_PieChart.resx">
       <DependentUpon>UC_MQC_PieChart.cs</DependentUpon>

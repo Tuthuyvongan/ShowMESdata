@@ -47,7 +47,7 @@ namespace SMESData
         //
         public int secondsToWait = 300;
         private DateTime startTime;
-       
+
         public void lineData()
         {
             string date = dtpChart.Value.ToString("yyyy-MM-dd");
@@ -116,8 +116,8 @@ namespace SMESData
                                 d = Math.Round(temp / GetSOFTdata.getTotalMQC("L07", date) * 100, 2);
                             dataL07.Add(d);
                             Thread.Sleep(50);
-                            msf.UpdateProgress(100 * (i+1) / 3, "Application is running, please wait ... ");
-                        }                       
+                            msf.UpdateProgress(100 * (i + 1) / 3, "Application is running, please wait ... ");
+                        }
                         msf.BeginInvoke(new Action(() => msf.Close()));
                     }
                 ));
@@ -453,8 +453,8 @@ namespace SMESData
                     dataL05.Clear();
                     dataL06.Clear();
                     dataL07.Clear();
-                    renderPiechart();
                     timer1.Stop();
+                    renderPiechart();
                     UpdateTime();
                 }
             }

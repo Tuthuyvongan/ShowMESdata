@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -16,7 +17,7 @@ namespace SMESData
         {
             InitializeComponent();
         }
-        DataTable dt = GetSOFTdata.getProductData(DateTime.Today.ToString("yyyy-MM-dd"), "");
+        
         private void UC_Product_Info_Load(object sender, EventArgs e)
         {
             // Date time format
@@ -25,19 +26,19 @@ namespace SMESData
             dtpChart.Format = DateTimePickerFormat.Custom;
             dtpChart.Enabled = false;
             dtpChart.ValueChanged += new EventHandler(dtpChart_ValueChanged);
-            //Update datagridview        
-            dtgv_MQC_PD.DataSource = dt;           
-            ChangeData();
+            //Update datagridview
+            SaveData.MQCClick = false;
+            lbQC.Text = "MQC";
+            UpdateDTGV();
+            //Setting
             lblTime.Font = new Font("Times New Roman", 14, FontStyle.Bold);
             //Timer          
-            timer1.Start();
-            startTime = DateTime.Now;
-            btStart.Enabled = false;
             pnTimeControl.Enabled = false;
         }
 
         //List data
         List<double> dataMQC = new List<double>();
+        DataTable dt = GetSOFTdata.getProductData(DateTime.Today.ToString("yyyy-MM-dd"), "");
         //
         public int secondsToWait = 300;
         private DateTime startTime;
@@ -146,18 +147,28 @@ namespace SMESData
         }
         public void ChangeColor()
         {
-            for (int i = 0; i < dtgv_MQC_PD.Rows.Count; i++)
-            {
-                if (double.Parse(dtgv_MQC_PD.Rows[i].Cells[7].Value.ToString()) > double.Parse(dtgv_MQC_PD.Rows[i].Cells[8].Value.ToString()))
-                {
-                    for (int j = 0; j < dtgv_MQC_PD.Columns.Count; j++)
+            MessageWaitForm msf = new MessageWaitForm();
+            Thread backgroundThreadFetchData = new Thread(
+                    new ThreadStart(() =>
                     {
-                        dtgv_MQC_PD[j, i].Style.BackColor = Color.Red;
-                        dtgv_MQC_PD[j, i].Style.ForeColor = Color.White;
-                        dtgv_MQC_PD[j, i].Style.SelectionBackColor = Color.FromArgb(220, 20, 60);
-                    }
-                }
-            }
+                        for (int i = 0; i < dtgv_MQC_PD.Rows.Count; i++)
+                        {
+                            if (double.Parse(dtgv_MQC_PD.Rows[i].Cells[7].Value.ToString()) > double.Parse(dtgv_MQC_PD.Rows[i].Cells[8].Value.ToString()))
+                            {
+                                for (int j = 0; j < dtgv_MQC_PD.Columns.Count; j++)
+                                {
+                                    dtgv_MQC_PD[j, i].Style.BackColor = Color.Red;
+                                    dtgv_MQC_PD[j, i].Style.ForeColor = Color.White;
+                                    dtgv_MQC_PD[j, i].Style.SelectionBackColor = Color.FromArgb(220, 20, 60);
+                                }
+                            }
+                            Thread.Sleep(100);
+                            msf.UpdateProgress(100 * (i + 1) / dtgv_MQC_PD.Rows.Count, "Application is running, please wait ... ");
+                        }
+                        msf.BeginInvoke(new Action(() => msf.Close()));
+                    }));
+            backgroundThreadFetchData.Start();
+            msf.ShowDialog();  
         }
         public void ChangeData()
         {
@@ -178,8 +189,7 @@ namespace SMESData
             lbTt.Text = SaveData.total.ToString();
             lbNGR.Text = SaveData.NGrealtime.ToString() + "%";
             tbNGA.Text = SaveData.NGallow.ToString() + "%";
-            renderPiechart();
-            
+            renderPiechart();    
         }
         private void dtpChart_ValueChanged(object sender, EventArgs e)
         {
@@ -222,9 +232,8 @@ namespace SMESData
                 if (remainingSeconds < 0)
                 {
                     lblTime.Visible = false;
-                    DataTable dt = GetSOFTdata.getProductData(DateTime.Today.ToString("yyyy-MM-dd"), "");
-                    UpdateDTGV();
                     timer1.Stop();
+                    UpdateDTGV();                   
                     UpdateTime();
                 }
             }
@@ -260,16 +269,17 @@ namespace SMESData
             ChangeUpdateTime();
         }
 
-        private void btMQCD_Click(object sender, EventArgs e)
-        {
-            lbQC.Text = "MQC";
-            UpdateDTGV();
-        }
+        
         private void search_Click(object sender, EventArgs e)
         {
             string model = tbSearch.Text.Trim();
             string date = dtpChart.Value.ToString("yyyy-MM-dd");
-            string line = SaveData.line;
+            string line;
+            if (SaveData.MQCClick == true)
+            {
+                line = SaveData.line;
+            }
+                line = "";
             DataRow[] results = GetSOFTdata.getProductData(date, line).Select("Model LIKE '%" + model + "%'");
             if (results.Length > 0)
             {
@@ -289,6 +299,17 @@ namespace SMESData
         {
             if (tbSearch.Text == "" || tbSearch.Text == null || tbSearch.Text == string.Empty)
                 dtgv_MQC_PD.DataSource = dt;
-        }  
+        }
+        private void btMQCD_Click(object sender, EventArgs e)
+        {
+            SaveData.MQCClick = false;
+            lbQC.Text = "MQC";
+            UpdateDTGV();
+        }
+        private void btPQCD_Click(object sender, EventArgs e)
+        {
+            SaveData.MQCClick = false;
+            lbQC.Text = "PQC";
+        }
     }
 }

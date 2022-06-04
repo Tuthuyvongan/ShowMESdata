@@ -16,7 +16,7 @@ namespace SMESData
     {
         public MainForm()
         {
-            InitializeComponent();          
+            InitializeComponent();           
         }
 
         UC_MQC_PieChart uc_MQC_PieChart = new UC_MQC_PieChart();
@@ -31,7 +31,7 @@ namespace SMESData
         {
             uc_MQC_PieChart.OnUpdateStatus += customControl_OnUpdateStatus;
             btMQCPD.PerformClick();
-            btMQCPD.Focus();            
+            btMQCPD.Focus();
         }
         private void customControl_OnUpdateStatus(object sender, EventArgs e)
         {
