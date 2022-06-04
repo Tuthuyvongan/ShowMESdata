@@ -27,8 +27,10 @@ namespace SMESData
             dtpChart.Enabled = false;
             dtpChart.ValueChanged += new EventHandler(dtpChart_ValueChanged);
             //Update datagridview
-            btMQCD.PerformClick();
-            btMQCD.Focus();
+            SaveData.MQCClick = false;
+            SaveData.PQCClick = false;
+            lbQC.Text = "MQC";
+            UpdateDTGV();
             //Setting
             lblTime.Font = new Font("Times New Roman", 14, FontStyle.Bold);
             //Timer          
@@ -37,6 +39,7 @@ namespace SMESData
 
         //List data
         List<double> dataMQC = new List<double>();
+        List<double> dataPQC = new List<double>();
         DataTable dt = GetSOFTdata.getProductData(DateTime.Today.ToString("yyyy-MM-dd"), "");
         //
         public int secondsToWait = 300;
@@ -56,7 +59,7 @@ namespace SMESData
                 SaveData.NGrealtime = double.Parse(dtgv_MQC_PD.Rows[e.RowIndex].Cells[7].Value.ToString());
                 SaveData.NGallow = double.Parse(dtgv_MQC_PD.Rows[e.RowIndex].Cells[8].Value.ToString());
                 lbModel.Text = SaveData.Model;
-                tbLine.Text = SaveData.line;
+                lbLine.Text = SaveData.line;
                 lbOP.Text = SaveData.op.ToString();
                 lbRW.Text = SaveData.rw.ToString();
                 lbNG.Text = SaveData.ng.ToString();
@@ -81,6 +84,7 @@ namespace SMESData
             //Add data
             lineData();
             MQCChart.Data = dataMQC;
+            PQCChart.Data = dataPQC;
             //Add legends MQC           
             if (dataMQC[0] == 0 && dataMQC[1] == 0 && dataMQC[2] == 0)
             {
@@ -181,7 +185,7 @@ namespace SMESData
             SaveData.NGrealtime = double.Parse(dtgv_MQC_PD.Rows[0].Cells[7].Value.ToString());
             SaveData.NGallow = double.Parse(dtgv_MQC_PD.Rows[0].Cells[8].Value.ToString());
             lbModel.Text = SaveData.Model;
-            tbLine.Text = SaveData.line;
+            lbLine.Text = SaveData.line;
             lbOP.Text = SaveData.op.ToString();
             lbRW.Text = SaveData.rw.ToString();
             lbNG.Text = SaveData.ng.ToString();
@@ -205,6 +209,8 @@ namespace SMESData
             timer1.Start();
             startTime = DateTime.Now;
             lblTime.Visible = true;
+            SaveData.MQCClick = false;
+            SaveData.PQCClick = false;
         }
         public void ChangeUpdateTime()
         {
@@ -278,6 +284,7 @@ namespace SMESData
             {
                 line = SaveData.line;
             }
+            else
                 line = "";
             DataRow[] results = GetSOFTdata.getProductData(date, line).Select("Model LIKE '%" + model + "%'");
             if (results.Length > 0)
@@ -302,12 +309,18 @@ namespace SMESData
         private void btMQCD_Click(object sender, EventArgs e)
         {
             SaveData.MQCClick = false;
+            SaveData.PQCClick = false;
+            SaveData.MQC = true;
+            SaveData.PQC = false;
             lbQC.Text = "MQC";
             UpdateDTGV();
         }
         private void btPQCD_Click(object sender, EventArgs e)
         {
             SaveData.MQCClick = false;
+            SaveData.PQCClick = false;
+            SaveData.MQC = false;
+            SaveData.PQC = true;
             lbQC.Text = "PQC";
         }
     }

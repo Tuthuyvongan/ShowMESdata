@@ -18,5 +18,7 @@ namespace SMESData
         public static string Model { get; set; }
         public static bool MQCClick { get; set; }
         public static bool PQCClick { get; set; }
+        public static bool MQC { get; set; }
+        public static bool PQC { get; set; }
     }
 }

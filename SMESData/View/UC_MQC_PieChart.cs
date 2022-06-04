@@ -505,6 +505,7 @@ namespace SMESData
         {
            
             SaveData.MQCClick = true;
+            SaveData.PQCClick = false;
             SaveData.line = "L01";
             UpdateStatus();
         }
@@ -513,6 +514,7 @@ namespace SMESData
         {
             
             SaveData.MQCClick = true;
+            SaveData.PQCClick = false;
             SaveData.line = "L02";
             UpdateStatus();
         }
@@ -521,6 +523,7 @@ namespace SMESData
         {
             
             SaveData.MQCClick = true;
+            SaveData.PQCClick = false;
             SaveData.line = "L03";
             UpdateStatus();
         }
@@ -529,6 +532,7 @@ namespace SMESData
         {
            
             SaveData.MQCClick = true;
+            SaveData.PQCClick = false;
             SaveData.line = "L04";
             UpdateStatus();
         }
@@ -537,6 +541,7 @@ namespace SMESData
         {
             
             SaveData.MQCClick = true;
+            SaveData.PQCClick = false;
             SaveData.line = "L05";
             UpdateStatus();
         }
@@ -545,6 +550,7 @@ namespace SMESData
         {
             
             SaveData.MQCClick = true;
+            SaveData.PQCClick = false;
             SaveData.line = "L06";
             UpdateStatus();
         }
@@ -553,6 +559,7 @@ namespace SMESData
         {
            
             SaveData.MQCClick = true;
+            SaveData.PQCClick = false;
             SaveData.line = "L07";
             UpdateStatus();
         }

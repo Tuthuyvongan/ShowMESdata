@@ -34,6 +34,7 @@ namespace SMESData
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btL4 = new Bunifu.UI.WinForms.BunifuImageButton();
             this.lbWar4 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lb4 = new Bunifu.UI.WinForms.BunifuLabel();
             this.linePCanvas4 = new Bunifu.Charts.WinForms.BunifuChartCanvas();
@@ -44,6 +45,7 @@ namespace SMESData
             this.linePCanvas3 = new Bunifu.Charts.WinForms.BunifuChartCanvas();
             this.lbOP3 = new Bunifu.UI.WinForms.BunifuLabel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.btL5 = new Bunifu.UI.WinForms.BunifuImageButton();
             this.lbWar5 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lb5 = new Bunifu.UI.WinForms.BunifuLabel();
             this.linePCanvas5 = new Bunifu.Charts.WinForms.BunifuChartCanvas();
@@ -51,6 +53,7 @@ namespace SMESData
             this.lbRW5 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lbNG5 = new Bunifu.UI.WinForms.BunifuLabel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.btL6 = new Bunifu.UI.WinForms.BunifuImageButton();
             this.lbWar6 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lb6 = new Bunifu.UI.WinForms.BunifuLabel();
             this.linePCanvas6 = new Bunifu.Charts.WinForms.BunifuChartCanvas();
@@ -58,6 +61,7 @@ namespace SMESData
             this.lbRW6 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lbNG6 = new Bunifu.UI.WinForms.BunifuLabel();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.btL7 = new Bunifu.UI.WinForms.BunifuImageButton();
             this.lbWar7 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lb7 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lbOP7 = new Bunifu.UI.WinForms.BunifuLabel();
@@ -67,6 +71,7 @@ namespace SMESData
             this.lbRW3 = new Bunifu.UI.WinForms.BunifuLabel();
             this.linePCanvas1 = new Bunifu.Charts.WinForms.BunifuChartCanvas();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btL3 = new Bunifu.UI.WinForms.BunifuImageButton();
             this.lbWar3 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lbNG3 = new Bunifu.UI.WinForms.BunifuLabel();
             this.L01Chart = new Bunifu.Charts.WinForms.ChartTypes.BunifuPieChart(this.components);
@@ -75,6 +80,7 @@ namespace SMESData
             this.L03Chart = new Bunifu.Charts.WinForms.ChartTypes.BunifuPieChart(this.components);
             this.L04Chart = new Bunifu.Charts.WinForms.ChartTypes.BunifuPieChart(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btL2 = new Bunifu.UI.WinForms.BunifuImageButton();
             this.lbWar2 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lb2 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lbOP2 = new Bunifu.UI.WinForms.BunifuLabel();
@@ -84,6 +90,7 @@ namespace SMESData
             this.L06Chart = new Bunifu.Charts.WinForms.ChartTypes.BunifuPieChart(this.components);
             this.L07Chart = new Bunifu.Charts.WinForms.ChartTypes.BunifuPieChart(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btL1 = new Bunifu.UI.WinForms.BunifuImageButton();
             this.lbWar1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lb1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lbNG1 = new Bunifu.UI.WinForms.BunifuLabel();
@@ -119,6 +126,7 @@ namespace SMESData
             // 
             this.panel4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel4.Controls.Add(this.btL4);
             this.panel4.Controls.Add(this.lbWar4);
             this.panel4.Controls.Add(this.lb4);
             this.panel4.Controls.Add(this.linePCanvas4);
@@ -130,6 +138,40 @@ namespace SMESData
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(385, 281);
             this.panel4.TabIndex = 24;
+            // 
+            // btL4
+            // 
+            this.btL4.ActiveImage = null;
+            this.btL4.AllowAnimations = true;
+            this.btL4.AllowBuffering = false;
+            this.btL4.AllowToggling = false;
+            this.btL4.AllowZooming = true;
+            this.btL4.AllowZoomingOnFocus = false;
+            this.btL4.BackColor = System.Drawing.Color.Transparent;
+            this.btL4.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btL4.ErrorImage = global::SMESData.Properties.Resources.close;
+            this.btL4.FadeWhenInactive = false;
+            this.btL4.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            this.btL4.Image = global::SMESData.Properties.Resources.analytics;
+            this.btL4.ImageActive = null;
+            this.btL4.ImageLocation = null;
+            this.btL4.ImageMargin = 20;
+            this.btL4.ImageSize = new System.Drawing.Size(50, 50);
+            this.btL4.ImageZoomSize = new System.Drawing.Size(70, 70);
+            this.btL4.InitialImage = ((System.Drawing.Image)(resources.GetObject("btL4.InitialImage")));
+            this.btL4.Location = new System.Drawing.Point(274, 150);
+            this.btL4.Name = "btL4";
+            this.btL4.Rotation = 0;
+            this.btL4.ShowActiveImage = true;
+            this.btL4.ShowCursorChanges = true;
+            this.btL4.ShowImageBorders = true;
+            this.btL4.ShowSizeMarkers = false;
+            this.btL4.Size = new System.Drawing.Size(70, 70);
+            this.btL4.TabIndex = 39;
+            this.btL4.ToolTipText = "";
+            this.btL4.WaitOnLoad = false;
+            this.btL4.Zoom = 20;
+            this.btL4.ZoomSpeed = 10;
             // 
             // lbWar4
             // 
@@ -364,6 +406,7 @@ namespace SMESData
             // 
             this.panel5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel5.Controls.Add(this.btL5);
             this.panel5.Controls.Add(this.lbWar5);
             this.panel5.Controls.Add(this.lb5);
             this.panel5.Controls.Add(this.linePCanvas5);
@@ -375,6 +418,40 @@ namespace SMESData
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(385, 281);
             this.panel5.TabIndex = 25;
+            // 
+            // btL5
+            // 
+            this.btL5.ActiveImage = null;
+            this.btL5.AllowAnimations = true;
+            this.btL5.AllowBuffering = false;
+            this.btL5.AllowToggling = false;
+            this.btL5.AllowZooming = true;
+            this.btL5.AllowZoomingOnFocus = false;
+            this.btL5.BackColor = System.Drawing.Color.Transparent;
+            this.btL5.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btL5.ErrorImage = global::SMESData.Properties.Resources.close;
+            this.btL5.FadeWhenInactive = false;
+            this.btL5.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            this.btL5.Image = global::SMESData.Properties.Resources.analytics;
+            this.btL5.ImageActive = null;
+            this.btL5.ImageLocation = null;
+            this.btL5.ImageMargin = 20;
+            this.btL5.ImageSize = new System.Drawing.Size(50, 50);
+            this.btL5.ImageZoomSize = new System.Drawing.Size(70, 70);
+            this.btL5.InitialImage = ((System.Drawing.Image)(resources.GetObject("btL5.InitialImage")));
+            this.btL5.Location = new System.Drawing.Point(274, 150);
+            this.btL5.Name = "btL5";
+            this.btL5.Rotation = 0;
+            this.btL5.ShowActiveImage = true;
+            this.btL5.ShowCursorChanges = true;
+            this.btL5.ShowImageBorders = true;
+            this.btL5.ShowSizeMarkers = false;
+            this.btL5.Size = new System.Drawing.Size(70, 70);
+            this.btL5.TabIndex = 35;
+            this.btL5.ToolTipText = "";
+            this.btL5.WaitOnLoad = false;
+            this.btL5.Zoom = 20;
+            this.btL5.ZoomSpeed = 10;
             // 
             // lbWar5
             // 
@@ -518,6 +595,7 @@ namespace SMESData
             // 
             this.panel6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel6.Controls.Add(this.btL6);
             this.panel6.Controls.Add(this.lbWar6);
             this.panel6.Controls.Add(this.lb6);
             this.panel6.Controls.Add(this.linePCanvas6);
@@ -529,6 +607,40 @@ namespace SMESData
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(385, 281);
             this.panel6.TabIndex = 26;
+            // 
+            // btL6
+            // 
+            this.btL6.ActiveImage = null;
+            this.btL6.AllowAnimations = true;
+            this.btL6.AllowBuffering = false;
+            this.btL6.AllowToggling = false;
+            this.btL6.AllowZooming = true;
+            this.btL6.AllowZoomingOnFocus = false;
+            this.btL6.BackColor = System.Drawing.Color.Transparent;
+            this.btL6.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btL6.ErrorImage = global::SMESData.Properties.Resources.close;
+            this.btL6.FadeWhenInactive = false;
+            this.btL6.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            this.btL6.Image = global::SMESData.Properties.Resources.analytics;
+            this.btL6.ImageActive = null;
+            this.btL6.ImageLocation = null;
+            this.btL6.ImageMargin = 20;
+            this.btL6.ImageSize = new System.Drawing.Size(50, 50);
+            this.btL6.ImageZoomSize = new System.Drawing.Size(70, 70);
+            this.btL6.InitialImage = ((System.Drawing.Image)(resources.GetObject("btL6.InitialImage")));
+            this.btL6.Location = new System.Drawing.Point(274, 150);
+            this.btL6.Name = "btL6";
+            this.btL6.Rotation = 0;
+            this.btL6.ShowActiveImage = true;
+            this.btL6.ShowCursorChanges = true;
+            this.btL6.ShowImageBorders = true;
+            this.btL6.ShowSizeMarkers = false;
+            this.btL6.Size = new System.Drawing.Size(70, 70);
+            this.btL6.TabIndex = 40;
+            this.btL6.ToolTipText = "";
+            this.btL6.WaitOnLoad = false;
+            this.btL6.Zoom = 20;
+            this.btL6.ZoomSpeed = 10;
             // 
             // lbWar6
             // 
@@ -672,6 +784,7 @@ namespace SMESData
             // 
             this.panel7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel7.Controls.Add(this.btL7);
             this.panel7.Controls.Add(this.lbWar7);
             this.panel7.Controls.Add(this.lb7);
             this.panel7.Controls.Add(this.lbOP7);
@@ -683,6 +796,40 @@ namespace SMESData
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(385, 281);
             this.panel7.TabIndex = 27;
+            // 
+            // btL7
+            // 
+            this.btL7.ActiveImage = null;
+            this.btL7.AllowAnimations = true;
+            this.btL7.AllowBuffering = false;
+            this.btL7.AllowToggling = false;
+            this.btL7.AllowZooming = true;
+            this.btL7.AllowZoomingOnFocus = false;
+            this.btL7.BackColor = System.Drawing.Color.Transparent;
+            this.btL7.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btL7.ErrorImage = global::SMESData.Properties.Resources.close;
+            this.btL7.FadeWhenInactive = false;
+            this.btL7.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            this.btL7.Image = global::SMESData.Properties.Resources.analytics;
+            this.btL7.ImageActive = null;
+            this.btL7.ImageLocation = null;
+            this.btL7.ImageMargin = 20;
+            this.btL7.ImageSize = new System.Drawing.Size(50, 50);
+            this.btL7.ImageZoomSize = new System.Drawing.Size(70, 70);
+            this.btL7.InitialImage = ((System.Drawing.Image)(resources.GetObject("btL7.InitialImage")));
+            this.btL7.Location = new System.Drawing.Point(274, 150);
+            this.btL7.Name = "btL7";
+            this.btL7.Rotation = 0;
+            this.btL7.ShowActiveImage = true;
+            this.btL7.ShowCursorChanges = true;
+            this.btL7.ShowImageBorders = true;
+            this.btL7.ShowSizeMarkers = false;
+            this.btL7.Size = new System.Drawing.Size(70, 70);
+            this.btL7.TabIndex = 41;
+            this.btL7.ToolTipText = "";
+            this.btL7.WaitOnLoad = false;
+            this.btL7.Zoom = 20;
+            this.btL7.ZoomSpeed = 10;
             // 
             // lbWar7
             // 
@@ -902,6 +1049,7 @@ namespace SMESData
             // 
             this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel3.Controls.Add(this.btL3);
             this.panel3.Controls.Add(this.lbWar3);
             this.panel3.Controls.Add(this.lb3);
             this.panel3.Controls.Add(this.linePCanvas3);
@@ -913,6 +1061,40 @@ namespace SMESData
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(385, 281);
             this.panel3.TabIndex = 23;
+            // 
+            // btL3
+            // 
+            this.btL3.ActiveImage = null;
+            this.btL3.AllowAnimations = true;
+            this.btL3.AllowBuffering = false;
+            this.btL3.AllowToggling = false;
+            this.btL3.AllowZooming = true;
+            this.btL3.AllowZoomingOnFocus = false;
+            this.btL3.BackColor = System.Drawing.Color.Transparent;
+            this.btL3.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btL3.ErrorImage = global::SMESData.Properties.Resources.close;
+            this.btL3.FadeWhenInactive = false;
+            this.btL3.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            this.btL3.Image = global::SMESData.Properties.Resources.analytics;
+            this.btL3.ImageActive = null;
+            this.btL3.ImageLocation = null;
+            this.btL3.ImageMargin = 20;
+            this.btL3.ImageSize = new System.Drawing.Size(50, 50);
+            this.btL3.ImageZoomSize = new System.Drawing.Size(70, 70);
+            this.btL3.InitialImage = ((System.Drawing.Image)(resources.GetObject("btL3.InitialImage")));
+            this.btL3.Location = new System.Drawing.Point(274, 150);
+            this.btL3.Name = "btL3";
+            this.btL3.Rotation = 0;
+            this.btL3.ShowActiveImage = true;
+            this.btL3.ShowCursorChanges = true;
+            this.btL3.ShowImageBorders = true;
+            this.btL3.ShowSizeMarkers = false;
+            this.btL3.Size = new System.Drawing.Size(70, 70);
+            this.btL3.TabIndex = 38;
+            this.btL3.ToolTipText = "";
+            this.btL3.WaitOnLoad = false;
+            this.btL3.Zoom = 20;
+            this.btL3.ZoomSpeed = 10;
             // 
             // lbWar3
             // 
@@ -1058,6 +1240,7 @@ namespace SMESData
             // 
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Controls.Add(this.btL2);
             this.panel2.Controls.Add(this.lbWar2);
             this.panel2.Controls.Add(this.lb2);
             this.panel2.Controls.Add(this.linePCanvas2);
@@ -1069,6 +1252,40 @@ namespace SMESData
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(385, 281);
             this.panel2.TabIndex = 22;
+            // 
+            // btL2
+            // 
+            this.btL2.ActiveImage = null;
+            this.btL2.AllowAnimations = true;
+            this.btL2.AllowBuffering = false;
+            this.btL2.AllowToggling = false;
+            this.btL2.AllowZooming = true;
+            this.btL2.AllowZoomingOnFocus = false;
+            this.btL2.BackColor = System.Drawing.Color.Transparent;
+            this.btL2.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btL2.ErrorImage = global::SMESData.Properties.Resources.close;
+            this.btL2.FadeWhenInactive = false;
+            this.btL2.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            this.btL2.Image = global::SMESData.Properties.Resources.analytics;
+            this.btL2.ImageActive = null;
+            this.btL2.ImageLocation = null;
+            this.btL2.ImageMargin = 20;
+            this.btL2.ImageSize = new System.Drawing.Size(50, 50);
+            this.btL2.ImageZoomSize = new System.Drawing.Size(70, 70);
+            this.btL2.InitialImage = ((System.Drawing.Image)(resources.GetObject("btL2.InitialImage")));
+            this.btL2.Location = new System.Drawing.Point(274, 150);
+            this.btL2.Name = "btL2";
+            this.btL2.Rotation = 0;
+            this.btL2.ShowActiveImage = true;
+            this.btL2.ShowCursorChanges = true;
+            this.btL2.ShowImageBorders = true;
+            this.btL2.ShowSizeMarkers = false;
+            this.btL2.Size = new System.Drawing.Size(70, 70);
+            this.btL2.TabIndex = 37;
+            this.btL2.ToolTipText = "";
+            this.btL2.WaitOnLoad = false;
+            this.btL2.Zoom = 20;
+            this.btL2.ZoomSpeed = 10;
             // 
             // lbWar2
             // 
@@ -1189,6 +1406,7 @@ namespace SMESData
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.btL1);
             this.panel1.Controls.Add(this.lbWar1);
             this.panel1.Controls.Add(this.lb1);
             this.panel1.Controls.Add(this.lbNG1);
@@ -1200,6 +1418,40 @@ namespace SMESData
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(385, 281);
             this.panel1.TabIndex = 21;
+            // 
+            // btL1
+            // 
+            this.btL1.ActiveImage = null;
+            this.btL1.AllowAnimations = true;
+            this.btL1.AllowBuffering = false;
+            this.btL1.AllowToggling = false;
+            this.btL1.AllowZooming = true;
+            this.btL1.AllowZoomingOnFocus = false;
+            this.btL1.BackColor = System.Drawing.Color.Transparent;
+            this.btL1.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btL1.ErrorImage = global::SMESData.Properties.Resources.close;
+            this.btL1.FadeWhenInactive = false;
+            this.btL1.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            this.btL1.Image = global::SMESData.Properties.Resources.analytics;
+            this.btL1.ImageActive = null;
+            this.btL1.ImageLocation = null;
+            this.btL1.ImageMargin = 20;
+            this.btL1.ImageSize = new System.Drawing.Size(50, 50);
+            this.btL1.ImageZoomSize = new System.Drawing.Size(70, 70);
+            this.btL1.InitialImage = ((System.Drawing.Image)(resources.GetObject("btL1.InitialImage")));
+            this.btL1.Location = new System.Drawing.Point(274, 150);
+            this.btL1.Name = "btL1";
+            this.btL1.Rotation = 0;
+            this.btL1.ShowActiveImage = true;
+            this.btL1.ShowCursorChanges = true;
+            this.btL1.ShowImageBorders = true;
+            this.btL1.ShowSizeMarkers = false;
+            this.btL1.Size = new System.Drawing.Size(70, 70);
+            this.btL1.TabIndex = 36;
+            this.btL1.ToolTipText = "";
+            this.btL1.WaitOnLoad = false;
+            this.btL1.Zoom = 20;
+            this.btL1.ZoomSpeed = 10;
             // 
             // lbWar1
             // 
@@ -1761,5 +2013,12 @@ namespace SMESData
         private Bunifu.UI.WinForms.BunifuLabel lbWar7;
         private Bunifu.UI.WinForms.BunifuLabel lbWar3;
         private Bunifu.UI.WinForms.BunifuLabel lbWar2;
+        private Bunifu.UI.WinForms.BunifuImageButton btL4;
+        private Bunifu.UI.WinForms.BunifuImageButton btL6;
+        private Bunifu.UI.WinForms.BunifuImageButton btL7;
+        private Bunifu.UI.WinForms.BunifuImageButton btL3;
+        private Bunifu.UI.WinForms.BunifuImageButton btL2;
+        private Bunifu.UI.WinForms.BunifuImageButton btL1;
+        private Bunifu.UI.WinForms.BunifuImageButton btL5;
     }
 }
