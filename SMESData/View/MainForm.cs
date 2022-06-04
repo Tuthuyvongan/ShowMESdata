@@ -94,9 +94,6 @@ namespace SMESData
         {
             Dispose();
             Application.Exit();
-        }
-        
-
-
+        }        
     }
 }

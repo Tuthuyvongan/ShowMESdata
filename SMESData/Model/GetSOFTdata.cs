@@ -135,6 +135,8 @@ namespace SMESData
                 string DtIn = Convert.ToDateTime(dt.Rows[i]["Date"]).ToString("dd-MM-yyyy");
                 dt.Rows[i]["Date"] = DtIn;
             }
+            dt.DefaultView.Sort = "%NG_realtime DESC";
+            dt = dt.DefaultView.ToTable();
             return dt;
         }
     }

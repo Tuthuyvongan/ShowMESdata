@@ -16,7 +16,7 @@ namespace SMESData
         {
             InitializeComponent();
         }
-
+        DataTable dt = GetSOFTdata.getProductData(DateTime.Today.ToString("yyyy-MM-dd"), "");
         private void UC_Product_Info_Load(object sender, EventArgs e)
         {
             // Date time format
@@ -25,8 +25,8 @@ namespace SMESData
             dtpChart.Format = DateTimePickerFormat.Custom;
             dtpChart.Enabled = false;
             dtpChart.ValueChanged += new EventHandler(dtpChart_ValueChanged);
-            //Update datagridview
-            UpdateDTGV();
+            //Update datagridview        
+            dtgv_MQC_PD.DataSource = dt;           
             ChangeData();
             lblTime.Font = new Font("Times New Roman", 14, FontStyle.Bold);
             //Timer          
@@ -125,13 +125,15 @@ namespace SMESData
             MQCChart.BackgroundColor = bgColors;
         }
         public void UpdateDTGV()
-        {
+        {    
             dataMQC.Clear();
             string date = dtpChart.Value.ToString("yyyy-MM-dd");
-            string line = "";
+            SaveData.line = "";
+            string line = SaveData.line;
             dtgv_MQC_PD.DataSource = GetSOFTdata.getProductData(date, line);
-            dtgv_MQC_PD.Refresh();
             dtpChart.Visible = true;
+            ChangeColor();
+            ChangeData();
         }
         public void UpdateDTGVByLine()
         {
@@ -139,11 +141,27 @@ namespace SMESData
             string date = dtpChart.Value.ToString("yyyy-MM-dd");
             string line = SaveData.line;
             dtgv_MQC_PD.DataSource = GetSOFTdata.getProductData(date, line);
-            dtgv_MQC_PD.Refresh();
+            ChangeColor();
             ChangeData();
+        }
+        public void ChangeColor()
+        {
+            for (int i = 0; i < dtgv_MQC_PD.Rows.Count; i++)
+            {
+                if (double.Parse(dtgv_MQC_PD.Rows[i].Cells[7].Value.ToString()) > double.Parse(dtgv_MQC_PD.Rows[i].Cells[8].Value.ToString()))
+                {
+                    for (int j = 0; j < dtgv_MQC_PD.Columns.Count; j++)
+                    {
+                        dtgv_MQC_PD[j, i].Style.BackColor = Color.Red;
+                        dtgv_MQC_PD[j, i].Style.ForeColor = Color.White;
+                        dtgv_MQC_PD[j, i].Style.SelectionBackColor = Color.FromArgb(220, 20, 60);
+                    }
+                }
+            }
         }
         public void ChangeData()
         {
+            dataMQC.Clear();
             SaveData.Model = dtgv_MQC_PD.Rows[0].Cells[0].Value.ToString();
             SaveData.line = dtgv_MQC_PD.Rows[0].Cells[2].Value.ToString();
             SaveData.op = double.Parse(dtgv_MQC_PD.Rows[0].Cells[3].Value.ToString());
@@ -161,6 +179,7 @@ namespace SMESData
             lbNGR.Text = SaveData.NGrealtime.ToString() + "%";
             tbNGA.Text = SaveData.NGallow.ToString() + "%";
             renderPiechart();
+            
         }
         private void dtpChart_ValueChanged(object sender, EventArgs e)
         {
@@ -203,6 +222,7 @@ namespace SMESData
                 if (remainingSeconds < 0)
                 {
                     lblTime.Visible = false;
+                    DataTable dt = GetSOFTdata.getProductData(DateTime.Today.ToString("yyyy-MM-dd"), "");
                     UpdateDTGV();
                     timer1.Stop();
                     UpdateTime();
@@ -245,5 +265,30 @@ namespace SMESData
             lbQC.Text = "MQC";
             UpdateDTGV();
         }
+        private void search_Click(object sender, EventArgs e)
+        {
+            string model = tbSearch.Text.Trim();
+            string date = dtpChart.Value.ToString("yyyy-MM-dd");
+            string line = SaveData.line;
+            DataRow[] results = GetSOFTdata.getProductData(date, line).Select("Model LIKE '%" + model + "%'");
+            if (results.Length > 0)
+            {
+                dataMQC.Clear();
+                DataTable searchResultTable = results.CopyToDataTable();
+                dtgv_MQC_PD.DataSource = searchResultTable;
+                ChangeColor();
+                ChangeData();
+            }
+            else
+            {
+                MessageBox.Show("No result!");
+            }
+        }
+
+        private void tbSearch_TextChange(object sender, EventArgs e)
+        {
+            if (tbSearch.Text == "" || tbSearch.Text == null || tbSearch.Text == string.Empty)
+                dtgv_MQC_PD.DataSource = dt;
+        }  
     }
 }

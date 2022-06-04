@@ -354,6 +354,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\search.png" />
     <None Include="Resources\close.png" />
     <None Include="Resources\bar-graph.png" />
     <None Include="Resources\analytics.png" />
