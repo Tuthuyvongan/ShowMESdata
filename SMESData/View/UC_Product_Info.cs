@@ -27,9 +27,8 @@ namespace SMESData
             dtpChart.Enabled = false;
             dtpChart.ValueChanged += new EventHandler(dtpChart_ValueChanged);
             //Update datagridview
-            SaveData.MQCClick = false;
-            lbQC.Text = "MQC";
-            UpdateDTGV();
+            btMQCD.PerformClick();
+            btMQCD.Focus();
             //Setting
             lblTime.Font = new Font("Times New Roman", 14, FontStyle.Bold);
             //Timer          
