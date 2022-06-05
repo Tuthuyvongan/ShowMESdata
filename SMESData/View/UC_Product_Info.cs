@@ -129,70 +129,82 @@ namespace SMESData
             MQCChart.BackgroundColor = bgColors;
         }
         public void UpdateDTGV()
-        {    
-            dataMQC.Clear();
-            string date = dtpChart.Value.ToString("yyyy-MM-dd");
-            SaveData.line = "";
-            string line = SaveData.line;
-            dtgv_MQC_PD.DataSource = GetSOFTdata.getProductData(date, line);
-            dtpChart.Visible = true;
-            ChangeColor();
-            ChangeData();
+        {
+            if (dt != null)
+            {
+                dataMQC.Clear();
+                string date = dtpChart.Value.ToString("yyyy-MM-dd");
+                SaveData.line = "";
+                string line = SaveData.line;
+                dtgv_MQC_PD.DataSource = GetSOFTdata.getProductData(date, line);
+                dtpChart.Visible = true;
+                ChangeColor();
+                ChangeData();
+            }
         }
         public void UpdateDTGVByLine()
         {
-            dataMQC.Clear();
-            string date = dtpChart.Value.ToString("yyyy-MM-dd");
-            string line = SaveData.line;
-            dtgv_MQC_PD.DataSource = GetSOFTdata.getProductData(date, line);
-            ChangeColor();
-            ChangeData();
+            if (dt != null)
+            {
+                dataMQC.Clear();
+                string date = dtpChart.Value.ToString("yyyy-MM-dd");
+                string line = SaveData.line;
+                dtgv_MQC_PD.DataSource = GetSOFTdata.getProductData(date, line);
+                ChangeColor();
+                ChangeData();
+            }
         }
         public void ChangeColor()
         {
-            MessageWaitForm msf = new MessageWaitForm();
-            Thread backgroundThreadFetchData = new Thread(
-                    new ThreadStart(() =>
-                    {
-                        for (int i = 0; i < dtgv_MQC_PD.Rows.Count; i++)
+            if (dt != null && dtgv_MQC_PD.Rows.Count > 0)
+            {
+                MessageWaitForm msf = new MessageWaitForm();
+                Thread backgroundThreadFetchData = new Thread(
+                        new ThreadStart(() =>
                         {
-                            if (double.Parse(dtgv_MQC_PD.Rows[i].Cells[7].Value.ToString()) > double.Parse(dtgv_MQC_PD.Rows[i].Cells[8].Value.ToString()))
+                            for (int i = 0; i < dtgv_MQC_PD.Rows.Count; i++)
                             {
-                                for (int j = 0; j < dtgv_MQC_PD.Columns.Count; j++)
+                                if (double.Parse(dtgv_MQC_PD.Rows[i].Cells[7].Value.ToString()) > double.Parse(dtgv_MQC_PD.Rows[i].Cells[8].Value.ToString()))
                                 {
-                                    dtgv_MQC_PD[j, i].Style.BackColor = Color.Red;
-                                    dtgv_MQC_PD[j, i].Style.ForeColor = Color.White;
-                                    dtgv_MQC_PD[j, i].Style.SelectionBackColor = Color.FromArgb(220, 20, 60);
+                                    for (int j = 0; j < dtgv_MQC_PD.Columns.Count; j++)
+                                    {
+                                        dtgv_MQC_PD[j, i].Style.BackColor = Color.Red;
+                                        dtgv_MQC_PD[j, i].Style.ForeColor = Color.White;
+                                        dtgv_MQC_PD[j, i].Style.SelectionBackColor = Color.FromArgb(220, 20, 60);
+                                    }
                                 }
+                                Thread.Sleep(100);
+                                msf.UpdateProgress(100 * (i + 1) / dtgv_MQC_PD.Rows.Count, "Application is running, please wait ... ");
                             }
-                            Thread.Sleep(100);
-                            msf.UpdateProgress(100 * (i + 1) / dtgv_MQC_PD.Rows.Count, "Application is running, please wait ... ");
-                        }
-                        msf.BeginInvoke(new Action(() => msf.Close()));
-                    }));
-            backgroundThreadFetchData.Start();
-            msf.ShowDialog();  
+                            msf.BeginInvoke(new Action(() => msf.Close()));
+                        }));
+                backgroundThreadFetchData.Start();
+                msf.ShowDialog();
+            }
         }
         public void ChangeData()
         {
-            dataMQC.Clear();
-            SaveData.Model = dtgv_MQC_PD.Rows[0].Cells[0].Value.ToString();
-            SaveData.line = dtgv_MQC_PD.Rows[0].Cells[2].Value.ToString();
-            SaveData.op = double.Parse(dtgv_MQC_PD.Rows[0].Cells[3].Value.ToString());
-            SaveData.rw = double.Parse(dtgv_MQC_PD.Rows[0].Cells[4].Value.ToString());
-            SaveData.ng = double.Parse(dtgv_MQC_PD.Rows[0].Cells[5].Value.ToString());
-            SaveData.total = double.Parse(dtgv_MQC_PD.Rows[0].Cells[6].Value.ToString());
-            SaveData.NGrealtime = double.Parse(dtgv_MQC_PD.Rows[0].Cells[7].Value.ToString());
-            SaveData.NGallow = double.Parse(dtgv_MQC_PD.Rows[0].Cells[8].Value.ToString());
-            lbModel.Text = SaveData.Model;
-            lbLine.Text = SaveData.line;
-            lbOP.Text = SaveData.op.ToString();
-            lbRW.Text = SaveData.rw.ToString();
-            lbNG.Text = SaveData.ng.ToString();
-            lbTt.Text = SaveData.total.ToString();
-            lbNGR.Text = SaveData.NGrealtime.ToString() + "%";
-            tbNGA.Text = SaveData.NGallow.ToString() + "%";
-            renderPiechart();    
+            if (dt != null && dtgv_MQC_PD.Rows.Count > 0)
+            {
+                dataMQC.Clear();
+                SaveData.Model = dtgv_MQC_PD.Rows[0].Cells[0].Value.ToString();
+                SaveData.line = dtgv_MQC_PD.Rows[0].Cells[2].Value.ToString();
+                SaveData.op = double.Parse(dtgv_MQC_PD.Rows[0].Cells[3].Value.ToString());
+                SaveData.rw = double.Parse(dtgv_MQC_PD.Rows[0].Cells[4].Value.ToString());
+                SaveData.ng = double.Parse(dtgv_MQC_PD.Rows[0].Cells[5].Value.ToString());
+                SaveData.total = double.Parse(dtgv_MQC_PD.Rows[0].Cells[6].Value.ToString());
+                SaveData.NGrealtime = double.Parse(dtgv_MQC_PD.Rows[0].Cells[7].Value.ToString());
+                SaveData.NGallow = double.Parse(dtgv_MQC_PD.Rows[0].Cells[8].Value.ToString());
+                lbModel.Text = SaveData.Model;
+                lbLine.Text = SaveData.line;
+                lbOP.Text = SaveData.op.ToString();
+                lbRW.Text = SaveData.rw.ToString();
+                lbNG.Text = SaveData.ng.ToString();
+                lbTt.Text = SaveData.total.ToString();
+                lbNGR.Text = SaveData.NGrealtime.ToString() + "%";
+                tbNGA.Text = SaveData.NGallow.ToString() + "%";
+                renderPiechart();
+            }
         }
         private void dtpChart_ValueChanged(object sender, EventArgs e)
         {
@@ -201,16 +213,21 @@ namespace SMESData
         }
         public void UpdateTime()
         {
-            dtpChart.Value = DateTime.Today;
-            btStart.Enabled = false;
-            btStop.Enabled = true;
-            dtpChart.Enabled = false;
-            pnTimeControl.Enabled = false;
-            timer1.Start();
-            startTime = DateTime.Now;
-            lblTime.Visible = true;
-            SaveData.MQCClick = false;
-            SaveData.PQCClick = false;
+            if (dt != null)
+            {
+                dtpChart.Value = DateTime.Today;
+                btStart.Enabled = false;
+                btStop.Enabled = true;
+                dtpChart.Enabled = false;
+                pnTimeControl.Enabled = false;
+                timer1.Start();
+                startTime = DateTime.Now;
+                lblTime.Visible = true;
+                SaveData.MQCClick = false;
+                SaveData.PQCClick = false;
+            }
+            else
+                MessageBox.Show("No Data Today");
         }
         public void ChangeUpdateTime()
         {
@@ -238,6 +255,7 @@ namespace SMESData
                 {
                     lblTime.Visible = false;
                     timer1.Stop();
+                    dt = GetSOFTdata.getProductData(DateTime.Today.ToString("yyyy-MM-dd"), "");
                     UpdateDTGV();                   
                     UpdateTime();
                 }

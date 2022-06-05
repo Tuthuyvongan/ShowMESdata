@@ -119,7 +119,7 @@ namespace SMESData
             sqlGetData.Append("cast(m.NOGOOD / (m.OUTPUT + m.REWORK + m.NOGOOD) * 100 as decimal(10,1)) as '%NG_realtime', ");
             sqlGetData.Append("CASE WHEN r.rate IS NULL THEN (select top 1 rate from m_MQC_NGRATE where model = a.model and line = a.line order by inspectdate desc) ELSE '1.5' END as '%NG_allow' ");
             sqlGetData.Append("FROM m_ERPMQC_REALTIME as a ");
-            sqlGetData.Append("LEFT JOIN m_MQC_NGRATE as r on a.inspectdate = r.inspectdate and a.model = r.model and a.line = r.line ");
+            sqlGetData.Append("LEFT JOIN m_MQC_NGRATE as r on a.model = r.model and a.line = r.line and a.inspectdate = r.inspectdate ");
             sqlGetData.Append("join(SELECT model,  inspectdate, line, ");
             sqlGetData.Append("COALESCE(SUM(CASE WHEN remark = 'OP' THEN Cast(data as numeric(10,0)) END), 0) AS OUTPUT, ");
             sqlGetData.Append("COALESCE(SUM(CASE WHEN remark = 'RW' THEN Cast(data as numeric(10,0)) END), 0) AS REWORK, ");

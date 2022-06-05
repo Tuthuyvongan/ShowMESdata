@@ -80,7 +80,7 @@ namespace SMESData
         }
 
         private void btMQCPD_Click(object sender, EventArgs e)
-        {
+        {          
             PD = true;
             MQC = false;
             PQC = false;
