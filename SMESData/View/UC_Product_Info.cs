@@ -29,6 +29,7 @@ namespace SMESData
             //Update datagridview
             SaveData.MQCClick = false;
             SaveData.PQCClick = false;
+            SaveData.MQC = true;
             lbQC.Text = "MQC";
             UpdateDTGV();
             //Setting
@@ -138,13 +139,26 @@ namespace SMESData
         {
             if (dt != null)
             {
-                dataMQC.Clear();
-                string date = dtpChart.Value.ToString("yyyy-MM-dd");
-                SaveData.line = "";
-                string line = SaveData.line;
-                dtgv_MQC_PD.DataSource = GetSOFTdata.GetListMQC(date, line);
-                dtpChart.Visible = true;
-                ChangeColor();                
+                if (SaveData.MQC == true)
+                {
+                    dataMQC.Clear();
+                    string date = dtpChart.Value.ToString("yyyy-MM-dd");
+                    SaveData.line = "";
+                    string line = SaveData.line;
+                    dtgv_MQC_PD.DataSource = GetSOFTdata.GetListMQC(date, line);
+                    dtpChart.Visible = true;
+                    ChangeColor();
+                }  
+                else
+                {
+                    dataPQC.Clear();
+                    string date = dtpChart.Value.ToString("yyyy-MM-dd");
+                    SaveData.line = "";
+                    string line = SaveData.line;
+                    dtgv_MQC_PD.DataSource = GetSOFTdata.GetListMQC(date, line);
+                    dtpChart.Visible = true;
+                    ChangeColor();
+                }    
             }
             ChangeData();
         }
@@ -222,8 +236,6 @@ namespace SMESData
                 SaveData.MQCClick = false;
                 SaveData.PQCClick = false;
             }
-            else
-                MessageBox.Show("No Data Today");
         }
         public void ChangeUpdateTime()
         {
@@ -334,6 +346,7 @@ namespace SMESData
             SaveData.MQC = false;
             SaveData.PQC = true;
             lbQC.Text = "PQC";
+            UpdateDTGV();
         }
     }
 }

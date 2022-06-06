@@ -272,6 +272,7 @@
     <Compile Include="Controller\SQLClass\sqlSOFTCon.cs" />
     <Compile Include="Model\GetSOFTdata.cs" />
     <Compile Include="Model\ListMQC.cs" />
+    <Compile Include="Model\ListPQC.cs" />
     <Compile Include="Model\SaveData.cs" />
     <Compile Include="View\MainForm.cs">
       <SubType>Form</SubType>

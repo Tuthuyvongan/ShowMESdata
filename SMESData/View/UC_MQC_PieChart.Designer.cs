@@ -31,8 +31,8 @@ namespace SMESData
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_MQC_PieChart));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges15 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges16 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.linePCanvas1 = new Bunifu.Charts.WinForms.BunifuChartCanvas();
             this.L01Chart = new Bunifu.Charts.WinForms.ChartTypes.BunifuPieChart(this.components);
             this.L02Chart = new Bunifu.Charts.WinForms.ChartTypes.BunifuPieChart(this.components);
@@ -142,8 +142,8 @@ namespace SMESData
             this.linePCanvas1.Location = new System.Drawing.Point(7, 3);
             this.linePCanvas1.Margin = new System.Windows.Forms.Padding(4);
             this.linePCanvas1.Name = "linePCanvas1";
-            this.linePCanvas1.ShowXAxis = true;
-            this.linePCanvas1.ShowYAxis = true;
+            this.linePCanvas1.ShowXAxis = false;
+            this.linePCanvas1.ShowYAxis = false;
             this.linePCanvas1.Size = new System.Drawing.Size(255, 271);
             this.linePCanvas1.TabIndex = 6;
             this.linePCanvas1.Title = "";
@@ -304,7 +304,7 @@ namespace SMESData
             this.linePCanvas2.XAxesFont = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.linePCanvas2.XAxesForeColor = System.Drawing.SystemColors.ControlText;
             this.linePCanvas2.XAxesGridColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.linePCanvas2.XAxesGridLines = true;
+            this.linePCanvas2.XAxesGridLines = false;
             this.linePCanvas2.XAxesLabel = "";
             this.linePCanvas2.XAxesLabelFont = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linePCanvas2.XAxesLabelForeColor = System.Drawing.SystemColors.ControlText;
@@ -317,7 +317,7 @@ namespace SMESData
             this.linePCanvas2.YAxesFont = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linePCanvas2.YAxesForeColor = System.Drawing.SystemColors.ControlText;
             this.linePCanvas2.YAxesGridColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.linePCanvas2.YAxesGridLines = true;
+            this.linePCanvas2.YAxesGridLines = false;
             this.linePCanvas2.YAxesLabel = "";
             this.linePCanvas2.YAxesLabelFont = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linePCanvas2.YAxesLabelForeColor = System.Drawing.SystemColors.ControlText;
@@ -712,7 +712,7 @@ namespace SMESData
             this.linePCanvas3.XAxesFont = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.linePCanvas3.XAxesForeColor = System.Drawing.SystemColors.ControlText;
             this.linePCanvas3.XAxesGridColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.linePCanvas3.XAxesGridLines = true;
+            this.linePCanvas3.XAxesGridLines = false;
             this.linePCanvas3.XAxesLabel = "";
             this.linePCanvas3.XAxesLabelFont = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.linePCanvas3.XAxesLabelForeColor = System.Drawing.SystemColors.ControlText;
@@ -725,7 +725,7 @@ namespace SMESData
             this.linePCanvas3.YAxesFont = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.linePCanvas3.YAxesForeColor = System.Drawing.SystemColors.ControlText;
             this.linePCanvas3.YAxesGridColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.linePCanvas3.YAxesGridLines = true;
+            this.linePCanvas3.YAxesGridLines = false;
             this.linePCanvas3.YAxesLabel = "";
             this.linePCanvas3.YAxesLabelFont = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.linePCanvas3.YAxesLabelForeColor = System.Drawing.SystemColors.ControlText;
@@ -1709,11 +1709,11 @@ namespace SMESData
             this.btStart.ColorContrastOnClick = 45;
             this.btStart.ColorContrastOnHover = 45;
             this.btStart.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges15.BottomLeft = true;
-            borderEdges15.BottomRight = true;
-            borderEdges15.TopLeft = true;
-            borderEdges15.TopRight = true;
-            this.btStart.CustomizableEdges = borderEdges15;
+            borderEdges3.BottomLeft = true;
+            borderEdges3.BottomRight = true;
+            borderEdges3.TopLeft = true;
+            borderEdges3.TopRight = true;
+            this.btStart.CustomizableEdges = borderEdges3;
             this.btStart.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btStart.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btStart.DisabledFillColor = System.Drawing.Color.Empty;
@@ -1801,11 +1801,11 @@ namespace SMESData
             this.btStop.ColorContrastOnClick = 45;
             this.btStop.ColorContrastOnHover = 45;
             this.btStop.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges16.BottomLeft = true;
-            borderEdges16.BottomRight = true;
-            borderEdges16.TopLeft = true;
-            borderEdges16.TopRight = true;
-            this.btStop.CustomizableEdges = borderEdges16;
+            borderEdges4.BottomLeft = true;
+            borderEdges4.BottomRight = true;
+            borderEdges4.TopLeft = true;
+            borderEdges4.TopRight = true;
+            this.btStop.CustomizableEdges = borderEdges4;
             this.btStop.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btStop.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btStop.DisabledFillColor = System.Drawing.Color.Empty;
