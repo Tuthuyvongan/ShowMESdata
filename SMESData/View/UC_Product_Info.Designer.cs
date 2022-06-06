@@ -34,6 +34,7 @@ namespace SMESData
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Product_Info));
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
@@ -46,9 +47,9 @@ namespace SMESData
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Product_Info));
             this.dtgv_MQC_PD = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbLine = new Bunifu.UI.WinForms.BunifuLabel();
             this.btSearch = new Bunifu.UI.WinForms.BunifuImageButton();
             this.tbSearch = new Bunifu.UI.WinForms.BunifuTextBox();
             this.lbNGR = new Bunifu.UI.WinForms.BunifuLabel();
@@ -91,7 +92,6 @@ namespace SMESData
             this.MQCChart = new Bunifu.Charts.WinForms.ChartTypes.BunifuPieChart(this.components);
             this.PQCChart = new Bunifu.Charts.WinForms.ChartTypes.BunifuPieChart(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.lbLine = new Bunifu.UI.WinForms.BunifuLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_MQC_PD)).BeginInit();
             this.panel1.SuspendLayout();
             this.pnTimeControl.SuspendLayout();
@@ -210,6 +210,21 @@ namespace SMESData
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1412, 452);
             this.panel1.TabIndex = 18;
+            // 
+            // lbLine
+            // 
+            this.lbLine.AllowParentOverrides = false;
+            this.lbLine.AutoEllipsis = false;
+            this.lbLine.CursorType = null;
+            this.lbLine.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.lbLine.Location = new System.Drawing.Point(791, 117);
+            this.lbLine.Name = "lbLine";
+            this.lbLine.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbLine.Size = new System.Drawing.Size(12, 19);
+            this.lbLine.TabIndex = 58;
+            this.lbLine.Text = "...";
+            this.lbLine.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbLine.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // btSearch
             // 
@@ -1270,8 +1285,8 @@ namespace SMESData
             this.linePCanvas1.Location = new System.Drawing.Point(3, 52);
             this.linePCanvas1.Margin = new System.Windows.Forms.Padding(4);
             this.linePCanvas1.Name = "linePCanvas1";
-            this.linePCanvas1.ShowXAxis = true;
-            this.linePCanvas1.ShowYAxis = true;
+            this.linePCanvas1.ShowXAxis = false;
+            this.linePCanvas1.ShowYAxis = false;
             this.linePCanvas1.Size = new System.Drawing.Size(340, 340);
             this.linePCanvas1.TabIndex = 43;
             this.linePCanvas1.Title = "";
@@ -1288,7 +1303,7 @@ namespace SMESData
             this.linePCanvas1.XAxesFont = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.linePCanvas1.XAxesForeColor = System.Drawing.SystemColors.ControlText;
             this.linePCanvas1.XAxesGridColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.linePCanvas1.XAxesGridLines = true;
+            this.linePCanvas1.XAxesGridLines = false;
             this.linePCanvas1.XAxesLabel = "";
             this.linePCanvas1.XAxesLabelFont = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.linePCanvas1.XAxesLabelForeColor = System.Drawing.SystemColors.ControlText;
@@ -1301,7 +1316,7 @@ namespace SMESData
             this.linePCanvas1.YAxesFont = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.linePCanvas1.YAxesForeColor = System.Drawing.SystemColors.ControlText;
             this.linePCanvas1.YAxesGridColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.linePCanvas1.YAxesGridLines = true;
+            this.linePCanvas1.YAxesGridLines = false;
             this.linePCanvas1.YAxesLabel = "";
             this.linePCanvas1.YAxesLabelFont = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.linePCanvas1.YAxesLabelForeColor = System.Drawing.SystemColors.ControlText;
@@ -1347,21 +1362,6 @@ namespace SMESData
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // lbLine
-            // 
-            this.lbLine.AllowParentOverrides = false;
-            this.lbLine.AutoEllipsis = false;
-            this.lbLine.CursorType = null;
-            this.lbLine.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.lbLine.Location = new System.Drawing.Point(791, 117);
-            this.lbLine.Name = "lbLine";
-            this.lbLine.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbLine.Size = new System.Drawing.Size(12, 19);
-            this.lbLine.TabIndex = 58;
-            this.lbLine.Text = "...";
-            this.lbLine.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lbLine.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // UC_Product_Info
             // 

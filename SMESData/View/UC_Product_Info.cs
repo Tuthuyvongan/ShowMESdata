@@ -86,11 +86,14 @@ namespace SMESData
             MQCChart.Data = dataMQC;
             PQCChart.Data = dataPQC;
             //Add legends MQC           
-            if (dataMQC[0] == 0 && dataMQC[1] == 0 && dataMQC[2] == 0)
+            if (dataMQC[0] == 0 && dataMQC[1] == 0 && dataMQC[2] == 0 || dt == null || dtgv_MQC_PD.Rows.Count <= 0)
             {
                 lbOP1.Visible = false;
                 lbRW1.Visible = false;
                 lbNG1.Visible = false;
+                lbMdl.Visible = false;
+                lbModel.Visible = false;
+                linePCanvas1.Visible = false;
                 lbWar1.Visible = true;
                 lbWar1.Text = "No Data";
                 lbWar1.Font = new Font("Times New Roman", 28, FontStyle.Bold);
@@ -101,6 +104,9 @@ namespace SMESData
                 lbOP1.Visible = true;
                 lbRW1.Visible = true;
                 lbNG1.Visible = true;
+                lbMdl.Visible = true;
+                lbModel.Visible = true;
+                linePCanvas1.Visible = true;
                 lbOP1.BackColor = Color.DodgerBlue;
                 lbRW1.BackColor = Color.Orange;
                 lbNG1.BackColor = Color.Red;
@@ -110,23 +116,23 @@ namespace SMESData
                 lbOP1.Font = new Font("Times New Roman", 11, FontStyle.Bold);
                 lbRW1.Font = new Font("Times New Roman", 11, FontStyle.Bold);
                 lbNG1.Font = new Font("Times New Roman", 11, FontStyle.Bold);
-            }
-            //Target Canvas
-            MQCChart.TargetCanvas = linePCanvas1;
-            //Hide x y Canvas1
-            linePCanvas1.XAxesGridLines = false;
-            linePCanvas1.YAxesGridLines = false;
-            linePCanvas1.ShowXAxis = false;
-            linePCanvas1.ShowYAxis = false;
-            //Canvas labels
-            string[] remark = { "OUTPUT", "REWORK", "NO GOOD" };
-            linePCanvas1.Labels = remark;
-            //List Colors
-            List<Color> bgColors = new List<Color>();
-            bgColors.Add(Color.DodgerBlue);
-            bgColors.Add(Color.Orange);
-            bgColors.Add(Color.Red);
-            MQCChart.BackgroundColor = bgColors;
+                //Target Canvas
+                MQCChart.TargetCanvas = linePCanvas1;
+                //Hide x y Canvas1
+                linePCanvas1.XAxesGridLines = false;
+                linePCanvas1.YAxesGridLines = false;
+                linePCanvas1.ShowXAxis = false;
+                linePCanvas1.ShowYAxis = false;
+                //Canvas labels
+                string[] remark = { "OUTPUT", "REWORK", "NO GOOD" };
+                linePCanvas1.Labels = remark;
+                //List Colors
+                List<Color> bgColors = new List<Color>();
+                bgColors.Add(Color.DodgerBlue);
+                bgColors.Add(Color.Orange);
+                bgColors.Add(Color.Red);
+                MQCChart.BackgroundColor = bgColors;
+            }    
         }
         public void UpdateDTGV()
         {
@@ -138,9 +144,9 @@ namespace SMESData
                 string line = SaveData.line;
                 dtgv_MQC_PD.DataSource = GetSOFTdata.getProductData(date, line);
                 dtpChart.Visible = true;
-                ChangeColor();
-                ChangeData();
+                ChangeColor();                
             }
+            ChangeData();
         }
         public void UpdateDTGVByLine()
         {
@@ -150,9 +156,9 @@ namespace SMESData
                 string date = dtpChart.Value.ToString("yyyy-MM-dd");
                 string line = SaveData.line;
                 dtgv_MQC_PD.DataSource = GetSOFTdata.getProductData(date, line);
-                ChangeColor();
-                ChangeData();
+                ChangeColor();  
             }
+            ChangeData();
         }
         public void ChangeColor()
         {
@@ -202,9 +208,9 @@ namespace SMESData
                 lbNG.Text = SaveData.ng.ToString();
                 lbTt.Text = SaveData.total.ToString();
                 lbNGR.Text = SaveData.NGrealtime.ToString() + "%";
-                tbNGA.Text = SaveData.NGallow.ToString() + "%";
-                renderPiechart();
+                tbNGA.Text = SaveData.NGallow.ToString() + "%";                
             }
+            renderPiechart();
         }
         private void dtpChart_ValueChanged(object sender, EventArgs e)
         {
@@ -304,7 +310,7 @@ namespace SMESData
             }
             else
                 line = "";
-            DataRow[] results = GetSOFTdata.getProductData(date, line).Select("Model LIKE '%" + model + "%'");
+            DataRow[] results = dt.Select("Model LIKE '%" + model + "%'");
             if (results.Length > 0)
             {
                 dataMQC.Clear();
