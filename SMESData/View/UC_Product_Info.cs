@@ -302,7 +302,6 @@ namespace SMESData
         private void search_Click(object sender, EventArgs e)
         {
             string model = tbSearch.Text.Trim();
-            string date = dtpChart.Value.ToString("yyyy-MM-dd");
             string line;
             if (SaveData.MQCClick == true)
             {
@@ -310,7 +309,7 @@ namespace SMESData
             }
             else
                 line = "";
-            DataRow[] results = dt.Select("Model LIKE '%" + model + "%'");
+            DataRow[] results = dt.Select("Model LIKE '%" + model + "%' and line LIKE '%" + line + "%'");
             if (results.Length > 0)
             {
                 dataMQC.Clear();
@@ -329,6 +328,23 @@ namespace SMESData
         {
             if (tbSearch.Text == "" || tbSearch.Text == null || tbSearch.Text == string.Empty)
                 dtgv_MQC_PD.DataSource = dt;
+            string model = tbSearch.Text.Trim();
+            string line;
+            if (SaveData.MQCClick == true)
+            {
+                line = SaveData.line;
+            }
+            else
+                line = "";
+            DataRow[] results = dt.Select("Model LIKE '%" + model + "%' and line LIKE '%" + line + "%'");
+            if (results.Length > 0)
+            {
+                dataMQC.Clear();
+                DataTable searchResultTable = results.CopyToDataTable();
+                dtgv_MQC_PD.DataSource = searchResultTable;
+                ChangeColor();
+                ChangeData();
+            }            
         }
         private void btMQCD_Click(object sender, EventArgs e)
         {
