@@ -503,7 +503,8 @@ namespace SMESData
         }
         private void btL1_Click(object sender, EventArgs e)
         {
-           
+            SaveData.MQC = true;
+            SaveData.PQC = false;
             SaveData.MQCClick = true;
             SaveData.PQCClick = false;
             SaveData.line = "L01";
@@ -512,7 +513,8 @@ namespace SMESData
 
         private void btL2_Click(object sender, EventArgs e)
         {
-            
+            SaveData.MQC = true;
+            SaveData.PQC = false;
             SaveData.MQCClick = true;
             SaveData.PQCClick = false;
             SaveData.line = "L02";
@@ -521,7 +523,8 @@ namespace SMESData
 
         private void btL3_Click(object sender, EventArgs e)
         {
-            
+            SaveData.MQC = true;
+            SaveData.PQC = false;
             SaveData.MQCClick = true;
             SaveData.PQCClick = false;
             SaveData.line = "L03";
@@ -530,7 +533,8 @@ namespace SMESData
 
         private void btL4_Click(object sender, EventArgs e)
         {
-           
+            SaveData.MQC = true;
+            SaveData.PQC = false;
             SaveData.MQCClick = true;
             SaveData.PQCClick = false;
             SaveData.line = "L04";
@@ -539,7 +543,8 @@ namespace SMESData
 
         private void btL5_Click(object sender, EventArgs e)
         {
-            
+            SaveData.MQC = true;
+            SaveData.PQC = false;
             SaveData.MQCClick = true;
             SaveData.PQCClick = false;
             SaveData.line = "L05";
@@ -548,7 +553,8 @@ namespace SMESData
 
         private void btL6_Click(object sender, EventArgs e)
         {
-            
+            SaveData.MQC = true;
+            SaveData.PQC = false;
             SaveData.MQCClick = true;
             SaveData.PQCClick = false;
             SaveData.line = "L06";
@@ -557,7 +563,8 @@ namespace SMESData
 
         private void btL7_Click(object sender, EventArgs e)
         {
-           
+            SaveData.MQC = true;
+            SaveData.PQC = false;
             SaveData.MQCClick = true;
             SaveData.PQCClick = false;
             SaveData.line = "L07";
