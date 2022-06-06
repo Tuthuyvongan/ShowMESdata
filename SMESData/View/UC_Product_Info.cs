@@ -40,7 +40,6 @@ namespace SMESData
         //List data
         List<double> dataMQC = new List<double>();
         List<double> dataPQC = new List<double>();
-        DataTable dt1 = GetSOFTdata.getProductData(DateTime.Today.ToString("yyyy-MM-dd"), "");
         List<ListMQC> dt = GetSOFTdata.GetListMQC(DateTime.Today.ToString("yyyy-MM-dd"), "");
         //
         public int secondsToWait = 300;
@@ -165,28 +164,18 @@ namespace SMESData
         {
             if (dt != null && dtgv_MQC_PD.Rows.Count > 0)
             {
-                MessageWaitForm msf = new MessageWaitForm();
-                Thread backgroundThreadFetchData = new Thread(
-                        new ThreadStart(() =>
+                for (int i = 0; i < dtgv_MQC_PD.Rows.Count; i++)
+                {
+                    if (double.Parse(dtgv_MQC_PD.Rows[i].Cells[7].Value.ToString()) > double.Parse(dtgv_MQC_PD.Rows[i].Cells[8].Value.ToString()))
+                    {
+                        for (int j = 0; j < dtgv_MQC_PD.Columns.Count; j++)
                         {
-                            for (int i = 0; i < dtgv_MQC_PD.Rows.Count; i++)
-                            {
-                                if (double.Parse(dtgv_MQC_PD.Rows[i].Cells[7].Value.ToString()) > double.Parse(dtgv_MQC_PD.Rows[i].Cells[8].Value.ToString()))
-                                {
-                                    for (int j = 0; j < dtgv_MQC_PD.Columns.Count; j++)
-                                    {
-                                        dtgv_MQC_PD[j, i].Style.BackColor = Color.Red;
-                                        dtgv_MQC_PD[j, i].Style.ForeColor = Color.White;
-                                        dtgv_MQC_PD[j, i].Style.SelectionBackColor = Color.FromArgb(220, 20, 60);
-                                    }
-                                }
-                                Thread.Sleep(100);
-                                msf.UpdateProgress(100 * (i + 1) / dtgv_MQC_PD.Rows.Count, "Application is running, please wait ... ");
-                            }
-                            msf.BeginInvoke(new Action(() => msf.Close()));
-                        }));
-                backgroundThreadFetchData.Start();
-                msf.ShowDialog();
+                            dtgv_MQC_PD[j, i].Style.BackColor = Color.Red;
+                            dtgv_MQC_PD[j, i].Style.ForeColor = Color.White;
+                            dtgv_MQC_PD[j, i].Style.SelectionBackColor = Color.FromArgb(220, 20, 60);
+                        }
+                    }
+                }
             }
         }
         public void ChangeData()
@@ -304,18 +293,17 @@ namespace SMESData
         {
             string model = tbSearch.Text.Trim();
             string line;
+            string date = dtpChart.Value.ToString("yyyy-MM-dd");
             if (SaveData.MQCClick == true)
             {
                 line = SaveData.line;
             }
             else
                 line = "";
-            DataRow[] results = dt1.Select("Model LIKE '%" + model + "%' and line LIKE '%" + line + "%'");
-            if (results.Length > 0)
+            if (GetSOFTdata.search(model, date, line).Count > 0)
             {
                 dataMQC.Clear();
-                DataTable searchResultTable = results.CopyToDataTable();
-                dtgv_MQC_PD.DataSource = searchResultTable;
+                dtgv_MQC_PD.DataSource = GetSOFTdata.search(model, date, line);
                 ChangeColor();
                 ChangeData();
             }
@@ -329,23 +317,6 @@ namespace SMESData
         {
             if (tbSearch.Text == "" || tbSearch.Text == null || tbSearch.Text == string.Empty)
                 dtgv_MQC_PD.DataSource = dt;
-            string model = tbSearch.Text.Trim();
-            string line;
-            if (SaveData.MQCClick == true)
-            {
-                line = SaveData.line;
-            }
-            else
-                line = "";
-            DataRow[] results = dt1.Select("Model LIKE '%" + model + "%' and line LIKE '%" + line + "%'");
-            if (results.Length > 0)
-            {
-                dataMQC.Clear();
-                DataTable searchResultTable = results.CopyToDataTable();
-                dtgv_MQC_PD.DataSource = searchResultTable;
-                ChangeColor();
-                ChangeData();
-            }            
         }
         private void btMQCD_Click(object sender, EventArgs e)
         {
