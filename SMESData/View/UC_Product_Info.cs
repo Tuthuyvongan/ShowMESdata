@@ -40,7 +40,8 @@ namespace SMESData
         //List data
         List<double> dataMQC = new List<double>();
         List<double> dataPQC = new List<double>();
-        DataTable dt = GetSOFTdata.getProductData(DateTime.Today.ToString("yyyy-MM-dd"), "");
+        DataTable dt1 = GetSOFTdata.getProductData(DateTime.Today.ToString("yyyy-MM-dd"), "");
+        List<ListMQC> dt = GetSOFTdata.GetListMQC(DateTime.Today.ToString("yyyy-MM-dd"), "");
         //
         public int secondsToWait = 300;
         private DateTime startTime;
@@ -142,7 +143,7 @@ namespace SMESData
                 string date = dtpChart.Value.ToString("yyyy-MM-dd");
                 SaveData.line = "";
                 string line = SaveData.line;
-                dtgv_MQC_PD.DataSource = GetSOFTdata.getProductData(date, line);
+                dtgv_MQC_PD.DataSource = GetSOFTdata.GetListMQC(date, line);
                 dtpChart.Visible = true;
                 ChangeColor();                
             }
@@ -155,7 +156,7 @@ namespace SMESData
                 dataMQC.Clear();
                 string date = dtpChart.Value.ToString("yyyy-MM-dd");
                 string line = SaveData.line;
-                dtgv_MQC_PD.DataSource = GetSOFTdata.getProductData(date, line);
+                dtgv_MQC_PD.DataSource = GetSOFTdata.GetListMQC(date, line);
                 ChangeColor();  
             }
             ChangeData();
@@ -261,7 +262,7 @@ namespace SMESData
                 {
                     lblTime.Visible = false;
                     timer1.Stop();
-                    dt = GetSOFTdata.getProductData(DateTime.Today.ToString("yyyy-MM-dd"), "");
+                    dt = GetSOFTdata.GetListMQC(DateTime.Today.ToString("yyyy-MM-dd"), "");
                     UpdateDTGV();                   
                     UpdateTime();
                 }
@@ -309,7 +310,7 @@ namespace SMESData
             }
             else
                 line = "";
-            DataRow[] results = dt.Select("Model LIKE '%" + model + "%' and line LIKE '%" + line + "%'");
+            DataRow[] results = dt1.Select("Model LIKE '%" + model + "%' and line LIKE '%" + line + "%'");
             if (results.Length > 0)
             {
                 dataMQC.Clear();
@@ -336,7 +337,7 @@ namespace SMESData
             }
             else
                 line = "";
-            DataRow[] results = dt.Select("Model LIKE '%" + model + "%' and line LIKE '%" + line + "%'");
+            DataRow[] results = dt1.Select("Model LIKE '%" + model + "%' and line LIKE '%" + line + "%'");
             if (results.Length > 0)
             {
                 dataMQC.Clear();
