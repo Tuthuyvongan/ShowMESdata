@@ -326,7 +326,7 @@ namespace SMESData
             sqlGetData.Append("COALESCE(SUM(CASE WHEN AttributeType = 'RW' THEN Cast(Quantity as numeric(10,0)) END), 0) AS REWORK, ");
             sqlGetData.Append("COALESCE(SUM(CASE WHEN AttributeType = 'NG' THEN Cast(Quantity as numeric(10,0)) END), 0) AS NOGOOD ");
             sqlGetData.Append("FROM ProcessHistory.PQCMesData ");
-            sqlGetData.Append("WHERE InspectDateTime like '" + date + "' and line like '%" + line + "%' ");
+            sqlGetData.Append("WHERE InspectDateTime like '%" + date + "%' and line like '%" + line + "%' ");
             sqlGetData.Append("group by Model, line, CAST(InspectDateTime as Date)) as m ");
             sqlGetData.Append("on CAST(a.InspectDateTime as Date) = m.Date and a.Model = M.model and a.line = m.line ");
             sqlGetData.Append("order by Model");
