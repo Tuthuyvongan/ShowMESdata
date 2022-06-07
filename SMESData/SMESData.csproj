@@ -271,6 +271,7 @@
     <Compile Include="Controller\SQLClass\DatabaseUtils.cs" />
     <Compile Include="Controller\SQLClass\sqlSOFTCon.cs" />
     <Compile Include="Model\GetSOFTdata.cs" />
+    <Compile Include="Model\ListModel.cs" />
     <Compile Include="Model\ListMQC.cs" />
     <Compile Include="Model\ListPQC.cs" />
     <Compile Include="Model\SaveData.cs" />

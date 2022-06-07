@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace SMESData
 {
     public partial class Warning : Form
     {
+
+
         public Warning()
         {
             InitializeComponent();
@@ -30,12 +33,49 @@ namespace SMESData
         }
         private void btOK_Click(object sender, EventArgs e)
         {
-
+            string cmd;
+            DataTable dt = GetSOFTdata.GetModel(SaveData.Date);
+            DataRow[] results = dt.Select("model = '" + SaveData.Model + "'");
+            if (results.Length > 0)
+            {
+                cmd = UploadLogic.Update(SaveData.Model, SaveData.Date, SaveData.line, SaveData.NGallow);
+            }
+            else
+            {
+                cmd = UploadLogic.Insert(SaveData.Model, SaveData.Date, SaveData.line, SaveData.NGallow);
+            }
+            uploadWithTransactionSupport(cmd);
+            Close();
         }
 
         private void btCancel_Click(object sender, EventArgs e)
         {
             Close();
+        }
+        static void uploadWithTransactionSupport(string cmd)
+        {
+
+            SqlConnection conn = DatabaseUtils.GetSoftDBConnection();
+            SqlTransaction trans = null;
+            SqlCommand cmdMS = new SqlCommand();
+            try
+            {
+                conn.Open();                
+                trans = conn.BeginTransaction();
+                cmdMS.Transaction = trans;                
+                cmdMS.Connection = conn;
+                //Insert and update Mes_planning_excution commands execute
+                cmdMS.CommandText = cmd;
+                cmdMS.ExecuteNonQuery();
+                trans.Commit();
+                MessageBox.Show("Successfully Update to database!", "Complete!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + "\nFail to add and update data", "Error");
+                trans.Rollback();
+            }
+
         }
     }
 }

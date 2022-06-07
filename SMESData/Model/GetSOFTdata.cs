@@ -108,7 +108,8 @@ namespace SMESData
             StringBuilder sqlGetData = new StringBuilder();
             sqlGetData.Append("select distinct m.model as Model, m.inspectdate as Date, m.line as Line, m.OUTPUT, m.REWORK, m.NOGOOD, ");
             sqlGetData.Append("serno, ");
-            sqlGetData.Append("CASE WHEN r.rate IS NULL THEN (select top 1 rate from thu_SMESData_NGRate where model = a.model and line = a.line order by inspectdate desc) ELSE '1.5' END as '%NG_allow' ");
+            sqlGetData.Append("(CASE WHEN (select top 1 rate from thu_SMESData_NGRate where model = a.model and line = a.line order by inspectdate desc) IS NOT NULL ");
+            sqlGetData.Append("THEN (select top 1 rate from thu_SMESData_NGRate where model = a.model and line = a.line order by inspectdate desc) ELSE '1.5' END) as '%NG_allow' ");
             sqlGetData.Append("FROM m_ERPMQC_REALTIME as a ");
             sqlGetData.Append("LEFT JOIN thu_SMESData_NGRate as r on a.model = r.model and a.line = r.line and a.inspectdate = r.inspectdate ");
             sqlGetData.Append("join(SELECT model,  inspectdate, line, ");
@@ -213,7 +214,8 @@ namespace SMESData
             StringBuilder sqlGetData = new StringBuilder();
             sqlGetData.Append("select distinct m.model as Model, m.inspectdate as Date, m.line as Line, m.OUTPUT, m.REWORK, m.NOGOOD, ");
             sqlGetData.Append("serno, ");
-            sqlGetData.Append("CASE WHEN r.rate IS NULL THEN (select top 1 rate from thu_SMESData_NGRate where model = a.model and line = a.line order by inspectdate desc) ELSE '1.5' END as '%NG_allow' ");
+            sqlGetData.Append("(CASE WHEN (select top 1 rate from thu_SMESData_NGRate where model = a.model and line = a.line order by inspectdate desc) IS NOT NULL ");
+            sqlGetData.Append("THEN (select top 1 rate from thu_SMESData_NGRate where model = a.model and line = a.line order by inspectdate desc) ELSE '1.5' END) as '%NG_allow' ");
             sqlGetData.Append("FROM m_ERPMQC_REALTIME as a ");
             sqlGetData.Append("LEFT JOIN thu_SMESData_NGRate as r on a.model = r.model and a.line = r.line and a.inspectdate = r.inspectdate ");
             sqlGetData.Append("join(SELECT model,  inspectdate, line, ");
@@ -317,8 +319,8 @@ namespace SMESData
             sqlSOFTCon sqlSOFTCon = new sqlSOFTCon();
             StringBuilder sqlGetData = new StringBuilder();
             sqlGetData.Append("select distinct m.Model, m.Date, m.line as Line, m.OUTPUT, m.REWORK, m.NOGOOD, ");
-            sqlGetData.Append("CASE WHEN r.rate IS NULL ");
-            sqlGetData.Append("THEN (select top 1 rate from thu_SMESData_NGRate_PQC where Model = a.Model and line = a.line order by Date desc) ELSE '1.5' END as '%NG_allow', POCode ");
+            sqlGetData.Append("(CASE WHEN (select top 1 rate from thu_SMESData_NGRate_PQC where Model = a.Model and line = a.line order by Date desc) IS NOT NULL ");
+            sqlGetData.Append("THEN (select top 1 rate from thu_SMESData_NGRate_PQC where Model = a.Model and line = a.line order by Date desc) ELSE '1.5' END) as '%NG_allow', POCode ");
             sqlGetData.Append("FROM ProcessHistory.PQCMesData as a ");
             sqlGetData.Append("LEFT JOIN thu_SMESData_NGRate_PQC as r on a.Model = r.Model and a.line = r.line and CAST(a.InspectDateTime as Date) = r.Date ");
             sqlGetData.Append("join(SELECT Model, CAST(InspectDateTime as Date) as Date, line, ");
@@ -422,8 +424,8 @@ namespace SMESData
             sqlSOFTCon sqlSOFTCon = new sqlSOFTCon();
             StringBuilder sqlGetData = new StringBuilder();
             sqlGetData.Append("select distinct m.Model, m.Date, m.line as Line, m.OUTPUT, m.REWORK, m.NOGOOD, ");
-            sqlGetData.Append("CASE WHEN r.rate IS NULL ");
-            sqlGetData.Append("THEN (select top 1 rate from thu_SMESData_NGRate_PQC where Model = a.Model and line = a.line order by Date desc) ELSE '1.5' END as '%NG_allow', POCode ");
+            sqlGetData.Append("(CASE WHEN (select top 1 rate from thu_SMESData_NGRate_PQC where Model = a.Model and line = a.line order by Date desc) IS NOT NULL ");
+            sqlGetData.Append("THEN (select top 1 rate from thu_SMESData_NGRate_PQC where Model = a.Model and line = a.line order by Date desc) ELSE '1.5' END) as '%NG_allow', POCode ");
             sqlGetData.Append("FROM ProcessHistory.PQCMesData as a ");
             sqlGetData.Append("LEFT JOIN thu_SMESData_NGRate_PQC as r on a.Model = r.Model and a.line = r.line and CAST(a.InspectDateTime as Date) = r.Date ");
             sqlGetData.Append("join(SELECT Model, CAST(InspectDateTime as Date) as Date, line, ");
