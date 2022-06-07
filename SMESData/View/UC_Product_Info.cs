@@ -60,7 +60,7 @@ namespace SMESData
                 SaveData.ng = double.Parse(dtgv_MQC_PD.Rows[e.RowIndex].Cells[5].Value.ToString());
                 SaveData.total = double.Parse(dtgv_MQC_PD.Rows[e.RowIndex].Cells[6].Value.ToString());
                 SaveData.NGrealtime = double.Parse(dtgv_MQC_PD.Rows[e.RowIndex].Cells[7].Value.ToString());
-                SaveData.NGallow = double.Parse(dtgv_MQC_PD.Rows[e.RowIndex].Cells[8].Value.ToString());
+                SaveData.NGallow = dtgv_MQC_PD.Rows[e.RowIndex].Cells[8].Value.ToString();
                 lbModel.Text = SaveData.Model;
                 lbLine.Text = SaveData.line;
                 lbOP.Text = SaveData.op.ToString();
@@ -218,7 +218,7 @@ namespace SMESData
                 SaveData.ng = double.Parse(dtgv_MQC_PD.Rows[0].Cells[5].Value.ToString());
                 SaveData.total = double.Parse(dtgv_MQC_PD.Rows[0].Cells[6].Value.ToString());
                 SaveData.NGrealtime = double.Parse(dtgv_MQC_PD.Rows[0].Cells[7].Value.ToString());
-                SaveData.NGallow = double.Parse(dtgv_MQC_PD.Rows[0].Cells[8].Value.ToString());
+                SaveData.NGallow = dtgv_MQC_PD.Rows[0].Cells[8].Value.ToString();
                 lbModel.Text = SaveData.Model;
                 lbLine.Text = SaveData.line;
                 lbOP.Text = SaveData.op.ToString();
@@ -375,6 +375,14 @@ namespace SMESData
             SaveData.PQC = true;
             lbQC.Text = "PQC";
             UpdateDTGV();
+        }
+
+        private void btFix_Click(object sender, EventArgs e)
+        {
+            SaveData.NGallow = tbNGA.Text.ToString().Replace("%", "").Trim();
+            SaveData.Date = dtpChart.Value.ToString("dd-MM-yyyy");
+            Warning wn = new Warning();
+            wn.ShowDialog();
         }
     }
 }

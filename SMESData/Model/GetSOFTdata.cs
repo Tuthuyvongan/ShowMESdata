@@ -227,7 +227,7 @@ namespace SMESData
             sqlGetData.Append("order by Model desc");
             sqlSOFTCon.sqlDataAdapterFillDatatable(sqlGetData.ToString(), ref dt);
             ListMQC MQC = new ListMQC();
-            MQC.Total = 0;           
+            MQC.Total = 0;
             for (int i = 0; i < dt.Rows.Count; i++)
             {
                 if (dt.Rows.Count == 1)
@@ -518,6 +518,25 @@ namespace SMESData
                 }
             }
             return ListPQC;
+        }
+        public static DataTable GetModel(string date)
+        {
+            DataTable dt = new DataTable();
+            sqlSOFTCon sqlSOFTCon = new sqlSOFTCon();
+            StringBuilder sqlGetData = new StringBuilder();
+            if (SaveData.PQC == true)
+            {
+                sqlGetData.Append("select distinct Model from thu_SMESData_NGRate_PQC ");
+                sqlGetData.Append("where Date = '" + date + "'");
+                sqlSOFTCon.sqlDataAdapterFillDatatable(sqlGetData.ToString(), ref dt);
+            }  
+            else
+            {
+                sqlGetData.Append("select distinct model from thu_SMESData_NGRate ");
+                sqlGetData.Append("where inspectdate = '" + date + "'");
+                sqlSOFTCon.sqlDataAdapterFillDatatable(sqlGetData.ToString(), ref dt);
+            }                
+            return dt;
         }
     }
 }
