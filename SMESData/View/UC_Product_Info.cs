@@ -17,7 +17,6 @@ namespace SMESData
         {
             InitializeComponent();
         }
-        
         private void UC_Product_Info_Load(object sender, EventArgs e)
         {
             // Date time format
@@ -37,6 +36,7 @@ namespace SMESData
             lblTime.Font = new Font("Times New Roman", 14, FontStyle.Bold);
             //Timer          
             pnTimeControl.Enabled = false;
+            wn.OnUpdateStatus += customControl_OnUpdateStatus;
         }
 
         //List data
@@ -44,6 +44,7 @@ namespace SMESData
         List<double> dataPQC = new List<double>();
         List<ListMQC> dt1 = GetSOFTdata.GetListMQC(DateTime.Today.ToString("yyyy-MM-dd"), "");
         List<ListPQC> dt2 = GetSOFTdata.GetListPQC(DateTime.Today.ToString("yyyy-MM-dd"), "");
+        Warning wn = new Warning();
         //
         public int secondsToWait = 300;
         private DateTime startTime;
@@ -388,14 +389,12 @@ namespace SMESData
         private void btFix_Click(object sender, EventArgs e)
         {
             SaveData.NGallow = tbNGA.Text.ToString().Replace("%", "").Trim();
-            SaveData.Date = dtpChart.Value.ToString("dd-MM-yyyy");
-            Warning wn = new Warning();
+            SaveData.Date = dtpChart.Value.ToString("dd-MM-yyyy");           
             wn.ShowDialog();
         }
 
         public void tbSearch_KeyDown(object sender, KeyEventArgs e)
         {
-            
             if (e.KeyCode == Keys.Enter)
             {
                 string model = tbSearch.Text.Trim();
@@ -426,6 +425,10 @@ namespace SMESData
                     MessageBox.Show("No result!");
                 }
             }    
+        }
+        private void customControl_OnUpdateStatus(object sender, EventArgs e)
+        {
+            UpdateDTGV();
         }
     }
 }

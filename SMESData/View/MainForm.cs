@@ -29,10 +29,10 @@ namespace SMESData
         private void MainForm_Load(object sender, EventArgs e)
         {
             uc_MQC_PieChart.OnUpdateStatus += customControl_OnUpdateStatus;
+            uc_PQC_PieChart.OnUpdateStatus += customControl_OnUpdateStatus;
             btMQCPD.PerformClick();
             btMQCPD.Focus();
-        }
-        
+        }        
         
         private void customControl_OnUpdateStatus(object sender, EventArgs e)
         {
@@ -99,7 +99,9 @@ namespace SMESData
 
         private void MainForm_KeyDown(object sender, KeyEventArgs e)
         {
-            uc_PI.tbSearch_KeyDown(sender, e);
-        }
+            if (uc_PI != null)
+                if (e.KeyCode == Keys.Enter)
+                    uc_PI.tbSearch_KeyDown(sender, e);
+        }       
     }
 }

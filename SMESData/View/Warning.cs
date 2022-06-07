@@ -13,8 +13,6 @@ namespace SMESData
 {
     public partial class Warning : Form
     {
-
-
         public Warning()
         {
             InitializeComponent();
@@ -24,7 +22,6 @@ namespace SMESData
         {
             Close();
         }
-
         private void Warning_Load(object sender, EventArgs e)
         {
             lbModel.Text = SaveData.Model;
@@ -45,6 +42,18 @@ namespace SMESData
             }
             uploadWithTransactionSupport(cmd);
             Close();
+            UpdateStatus();
+        }
+        public delegate void StatusUpdateHandler(object sender, EventArgs e);
+        public event StatusUpdateHandler OnUpdateStatus;
+
+        private void UpdateStatus()
+        {
+            EventArgs args = new EventArgs();
+
+            //Call any listeners
+            OnUpdateStatus?.Invoke(this, args);
+
         }
 
         private void btCancel_Click(object sender, EventArgs e)
@@ -76,5 +85,6 @@ namespace SMESData
             }
 
         }
+
     }
 }
