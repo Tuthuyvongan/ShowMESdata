@@ -52,6 +52,7 @@ namespace SMESData
             if (e.RowIndex != -1)
             {
                 dataMQC.Clear();
+                dataPQC.Clear();
                 SaveData.Model = dtgv_MQC_PD.Rows[e.RowIndex].Cells[0].Value.ToString();
                 SaveData.line = dtgv_MQC_PD.Rows[e.RowIndex].Cells[2].Value.ToString();
                 SaveData.op = double.Parse(dtgv_MQC_PD.Rows[e.RowIndex].Cells[3].Value.ToString());
@@ -177,7 +178,7 @@ namespace SMESData
                 }    
                 else
                 {
-                    dataMQC.Clear();
+                    dataPQC.Clear();
                     string date = dtpChart.Value.ToString("yyyy-MM-dd");
                     string line = SaveData.line;
                     dtgv_MQC_PD.DataSource = GetSOFTdata.GetListPQC(date, line);
@@ -209,6 +210,7 @@ namespace SMESData
             if ((GetSOFTdata.GetListMQC(dtpChart.Value.ToString("yyyy-MM-dd"), "") != null && SaveData.MQC == true || GetSOFTdata.GetListPQC(dtpChart.Value.ToString("yyyy-MM-dd"), "") != null && SaveData.PQC == true) && dtgv_MQC_PD.Rows.Count > 0)
             {
                 dataMQC.Clear();
+                dataPQC.Clear();
                 SaveData.Model = dtgv_MQC_PD.Rows[0].Cells[0].Value.ToString();
                 SaveData.line = dtgv_MQC_PD.Rows[0].Cells[2].Value.ToString();
                 SaveData.op = double.Parse(dtgv_MQC_PD.Rows[0].Cells[3].Value.ToString());
@@ -319,16 +321,23 @@ namespace SMESData
             string model = tbSearch.Text.Trim();
             string line;
             string date = dtpChart.Value.ToString("yyyy-MM-dd");
-            if (SaveData.MQCClick == true)
+            if (SaveData.MQCClick == true || SaveData.PQCClick == true)
             {
                 line = SaveData.line;
             }
             else
                 line = "";
-            if (GetSOFTdata.search(model, date, line).Count > 0)
+            if (GetSOFTdata.search(model, date, line).Count > 0 && SaveData.MQC == true)
             {
                 dataMQC.Clear();
                 dtgv_MQC_PD.DataSource = GetSOFTdata.search(model, date, line);
+                ChangeColor();
+                ChangeData();
+            }
+            else if(GetSOFTdata.search(model, date, line).Count > 0 && SaveData.PQC == true)
+            {
+                dataPQC.Clear();
+                dtgv_MQC_PD.DataSource = GetSOFTdata.searchPQC(model, date, line);
                 ChangeColor();
                 ChangeData();
             }

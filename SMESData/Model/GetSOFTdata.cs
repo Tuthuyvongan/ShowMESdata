@@ -329,7 +329,112 @@ namespace SMESData
             sqlGetData.Append("WHERE InspectDateTime like '%" + date + "%' and line like '%" + line + "%' ");
             sqlGetData.Append("group by Model, line, CAST(InspectDateTime as Date)) as m ");
             sqlGetData.Append("on CAST(a.InspectDateTime as Date) = m.Date and a.Model = M.model and a.line = m.line ");
-            sqlGetData.Append("order by Model");
+            sqlGetData.Append("order by Model DESC");
+            sqlSOFTCon.sqlDataAdapterFillDatatable(sqlGetData.ToString(), ref dt);
+            ListPQC PQC = new ListPQC();
+            PQC.Total = 0;
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                if (dt.Rows.Count == 1)
+                {
+                    string[] POCode = dt.Rows[i]["POCode"].ToString().Split(';');
+                    PQC.Total = PQC.Total + double.Parse(POCode[4]);
+                    PQC.Model = dt.Rows[i]["Model"].ToString();
+                    PQC.Date = Convert.ToDateTime(dt.Rows[i]["Date"]).ToString("dd-MM-yyyy");
+                    PQC.Line = dt.Rows[i]["Line"].ToString();
+                    PQC.OUTPUT = double.Parse(dt.Rows[i]["OUTPUT"].ToString());
+                    PQC.REWORK = double.Parse(dt.Rows[i]["REWORK"].ToString());
+                    PQC.NOGOOD = double.Parse(dt.Rows[i]["NOGOOD"].ToString());
+                    PQC.NG_rate_realtime = Math.Round(PQC.NOGOOD / PQC.Total * 100, 1);
+                    PQC.NG_rate_allow = double.Parse(dt.Rows[i]["%NG_allow"].ToString());
+                    ListPQC.Add(PQC);
+                }
+                else
+                {
+                    if (i + 1 != dt.Rows.Count)
+                    {
+                        if (dt.Rows[i]["Model"].ToString() == dt.Rows[i + 1]["Model"].ToString() && dt.Rows[i]["Line"].ToString() == dt.Rows[i + 1]["Line"].ToString())
+                        {
+                            string[] POCode = dt.Rows[i]["POCode"].ToString().Split(';');
+                            string[] POCode1 = dt.Rows[i + 1]["POCode"].ToString().Split(';');
+                            if (POCode[3] != POCode1[3])
+                                PQC.Total = PQC.Total + double.Parse(POCode[4]);
+                        }
+                        else
+                        {
+                            string[] POCode = dt.Rows[i]["POCode"].ToString().Split(';');
+                            PQC.Total = PQC.Total + double.Parse(POCode[4]);
+                            PQC.Model = dt.Rows[i]["Model"].ToString();
+                            PQC.Date = Convert.ToDateTime(dt.Rows[i]["Date"]).ToString("dd-MM-yyyy");
+                            PQC.Line = dt.Rows[i]["Line"].ToString();
+                            PQC.OUTPUT = double.Parse(dt.Rows[i]["OUTPUT"].ToString());
+                            PQC.REWORK = double.Parse(dt.Rows[i]["REWORK"].ToString());
+                            PQC.NOGOOD = double.Parse(dt.Rows[i]["NOGOOD"].ToString());
+                            PQC.NG_rate_realtime = Math.Round(PQC.NOGOOD / PQC.Total * 100, 1);
+                            PQC.NG_rate_allow = double.Parse(dt.Rows[i]["%NG_allow"].ToString());
+                            ListPQC.Add(PQC);
+                            PQC = new ListPQC();
+                            PQC.Total = 0;
+                        }
+                    }
+                    else
+                    {
+                        if (dt.Rows[i - 1]["Model"].ToString() == dt.Rows[i]["Model"].ToString() && dt.Rows[i - 1]["Line"].ToString() == dt.Rows[i]["Line"].ToString())
+                        {
+                            string[] POCode = dt.Rows[i - 1]["POCode"].ToString().Split(';');
+                            string[] POCode1 = dt.Rows[i]["POCode"].ToString().Split(';');
+                            if (POCode[3] != POCode1[3])
+                                PQC.Total = PQC.Total + double.Parse(POCode[4]);
+                            PQC.Model = dt.Rows[i]["Model"].ToString();
+                            PQC.Date = Convert.ToDateTime(dt.Rows[i]["Date"]).ToString("dd-MM-yyyy");
+                            PQC.Line = dt.Rows[i]["Line"].ToString();
+                            PQC.OUTPUT = double.Parse(dt.Rows[i]["OUTPUT"].ToString());
+                            PQC.REWORK = double.Parse(dt.Rows[i]["REWORK"].ToString());
+                            PQC.NOGOOD = double.Parse(dt.Rows[i]["NOGOOD"].ToString());
+                            PQC.NG_rate_realtime = Math.Round(PQC.NOGOOD / PQC.Total * 100, 1);
+                            PQC.NG_rate_allow = double.Parse(dt.Rows[i]["%NG_allow"].ToString());
+                            ListPQC.Add(PQC);
+                        }
+                        else
+                        {
+                            string[] POCode = dt.Rows[i]["POCode"].ToString().Split(';');
+                            PQC.Total = PQC.Total + double.Parse(POCode[4]);
+                            PQC.Model = dt.Rows[i]["Model"].ToString();
+                            PQC.Date = Convert.ToDateTime(dt.Rows[i]["Date"]).ToString("dd-MM-yyyy");
+                            PQC.Line = dt.Rows[i]["Line"].ToString();
+                            PQC.OUTPUT = double.Parse(dt.Rows[i]["OUTPUT"].ToString());
+                            PQC.REWORK = double.Parse(dt.Rows[i]["REWORK"].ToString());
+                            PQC.NOGOOD = double.Parse(dt.Rows[i]["NOGOOD"].ToString());
+                            PQC.NG_rate_realtime = Math.Round(PQC.NOGOOD / PQC.Total * 100, 1);
+                            PQC.NG_rate_allow = double.Parse(dt.Rows[i]["%NG_allow"].ToString());
+                            ListPQC.Add(PQC);
+                        }
+                    }
+                }
+            }
+            return ListPQC;
+        }
+        // List product data of PQC
+        public static List<ListPQC> searchPQC(string model, string date, string line)
+        {
+            List<ListPQC> ListPQC = new List<ListPQC>();
+            DataTable dt = new DataTable();
+            sqlSOFTCon sqlSOFTCon = new sqlSOFTCon();
+            StringBuilder sqlGetData = new StringBuilder();
+            sqlGetData.Append("select distinct m.Model, m.Date, m.line as Line, m.OUTPUT, m.REWORK, m.NOGOOD, ");
+            sqlGetData.Append("CASE WHEN r.rate IS NULL ");
+            sqlGetData.Append("THEN (select top 1 rate from thu_SMESData_NGRate_PQC where Model = a.Model and line = a.line order by Date desc) ELSE '1.5' END as '%NG_allow', POCode ");
+            sqlGetData.Append("FROM ProcessHistory.PQCMesData as a ");
+            sqlGetData.Append("LEFT JOIN thu_SMESData_NGRate_PQC as r on a.Model = r.Model and a.line = r.line and CAST(a.InspectDateTime as Date) = r.Date ");
+            sqlGetData.Append("join(SELECT Model, CAST(InspectDateTime as Date) as Date, line, ");
+            sqlGetData.Append("COALESCE(SUM(CASE WHEN AttributeType = 'OP' THEN Cast(Quantity as numeric(10,0)) END), 0) AS OUTPUT, ");
+            sqlGetData.Append("COALESCE(SUM(CASE WHEN AttributeType = 'RW' THEN Cast(Quantity as numeric(10,0)) END), 0) AS REWORK, ");
+            sqlGetData.Append("COALESCE(SUM(CASE WHEN AttributeType = 'NG' THEN Cast(Quantity as numeric(10,0)) END), 0) AS NOGOOD ");
+            sqlGetData.Append("FROM ProcessHistory.PQCMesData ");
+            sqlGetData.Append("WHERE InspectDateTime like '%" + date + "%' and line like '%" + line + "%' and Model LIKE '%" + model + "%' ");
+            sqlGetData.Append("group by Model, line, CAST(InspectDateTime as Date)) as m ");
+            sqlGetData.Append("on CAST(a.InspectDateTime as Date) = m.Date and a.Model = M.model and a.line = m.line ");
+            sqlGetData.Append("order by Model DESC");
             sqlSOFTCon.sqlDataAdapterFillDatatable(sqlGetData.ToString(), ref dt);
             ListPQC PQC = new ListPQC();
             PQC.Total = 0;
