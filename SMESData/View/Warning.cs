@@ -34,8 +34,7 @@ namespace SMESData
         private void btOK_Click(object sender, EventArgs e)
         {
             string cmd;
-            DataTable dt = GetSOFTdata.GetModel(SaveData.Date);
-            DataRow[] results = dt.Select("model = '" + SaveData.Model + "'");
+            DataRow[] results = GetSOFTdata.GetModel(SaveData.Date).Select("model = '" + SaveData.Model + "'");
             if (results.Length > 0)
             {
                 cmd = UploadLogic.Update(SaveData.Model, SaveData.Date, SaveData.line, SaveData.NGallow);

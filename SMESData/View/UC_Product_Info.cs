@@ -30,6 +30,7 @@ namespace SMESData
             SaveData.MQCClick = false;
             SaveData.PQCClick = false;
             SaveData.MQC = true;
+            SaveData.PQC = false;
             lbQC.Text = "MQC";
             UpdateDTGV();
             //Setting
@@ -100,6 +101,13 @@ namespace SMESData
                 lbWar1.Visible = true;
                 lbWar1.Text = "No Data";
                 lbWar1.Font = new Font("Times New Roman", 28, FontStyle.Bold);
+                lbOP.Text = "";
+                lbRW.Text = "";
+                lbNG.Text = "";
+                lbTt.Text = "";
+                lbLine.Text = "";
+                lbNGR.Text = "";
+                tbNGA.Text = "";
             }
             else
             {
@@ -383,6 +391,40 @@ namespace SMESData
             SaveData.Date = dtpChart.Value.ToString("dd-MM-yyyy");
             Warning wn = new Warning();
             wn.ShowDialog();
+        }
+
+        private void tbSearch_KeyDown(object sender, KeyEventArgs e)
+        {
+            string model = tbSearch.Text.Trim();
+            string line;
+            string date = dtpChart.Value.ToString("yyyy-MM-dd");
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (SaveData.MQCClick == true || SaveData.PQCClick == true)
+                {
+                    line = SaveData.line;
+                }
+                else
+                    line = "";
+                if (GetSOFTdata.search(model, date, line).Count > 0 && SaveData.MQC == true)
+                {
+                    dataMQC.Clear();
+                    dtgv_MQC_PD.DataSource = GetSOFTdata.search(model, date, line);
+                    ChangeColor();
+                    ChangeData();
+                }
+                else if (GetSOFTdata.search(model, date, line).Count > 0 && SaveData.PQC == true)
+                {
+                    dataPQC.Clear();
+                    dtgv_MQC_PD.DataSource = GetSOFTdata.searchPQC(model, date, line);
+                    ChangeColor();
+                    ChangeData();
+                }
+                else
+                {
+                    MessageBox.Show("No result!");
+                }
+            }
         }
     }
 }
