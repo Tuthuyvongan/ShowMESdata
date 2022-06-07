@@ -95,6 +95,11 @@ namespace SMESData
         {
             Dispose();
             Application.Exit();
-        }        
+        }
+
+        private void MainForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            uc_PI.tbSearch_KeyDown(sender, e);
+        }
     }
 }

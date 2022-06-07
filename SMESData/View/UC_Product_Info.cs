@@ -393,13 +393,14 @@ namespace SMESData
             wn.ShowDialog();
         }
 
-        private void tbSearch_KeyDown(object sender, KeyEventArgs e)
+        public void tbSearch_KeyDown(object sender, KeyEventArgs e)
         {
-            string model = tbSearch.Text.Trim();
-            string line;
-            string date = dtpChart.Value.ToString("yyyy-MM-dd");
+            
             if (e.KeyCode == Keys.Enter)
             {
+                string model = tbSearch.Text.Trim();
+                string line;
+                string date = dtpChart.Value.ToString("yyyy-MM-dd");
                 if (SaveData.MQCClick == true || SaveData.PQCClick == true)
                 {
                     line = SaveData.line;
@@ -424,7 +425,7 @@ namespace SMESData
                 {
                     MessageBox.Show("No result!");
                 }
-            }
+            }    
         }
     }
 }
