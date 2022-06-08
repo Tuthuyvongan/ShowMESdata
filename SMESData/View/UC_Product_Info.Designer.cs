@@ -1378,7 +1378,7 @@ namespace SMESData
             // 
             this.linePCanvas1.AccessibleRole = System.Windows.Forms.AccessibleRole.Chart;
             this.linePCanvas1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.linePCanvas1.AnimationDuration = 1200;
+            this.linePCanvas1.AnimationDuration = 1000;
             this.linePCanvas1.AnimationType = Bunifu.Charts.WinForms.BunifuChartCanvas.AnimationOptions.easeOutQuart;
             this.linePCanvas1.BackColor = System.Drawing.Color.White;
             this.linePCanvas1.CanvasPadding = new System.Windows.Forms.Padding(10, -20, 10, 30);
