@@ -171,7 +171,7 @@ namespace SMESData
                             string[] serno = dt.Rows[i - 1]["serno"].ToString().Split(';');
                             string[] serno1 = dt.Rows[i]["serno"].ToString().Split(';');
                             if (serno[3] != serno1[3])
-                                MQC.Total = MQC.Total + double.Parse(serno[4]);
+                                MQC.Total = MQC.Total + double.Parse(serno1[4]);
                             MQC.Model = dt.Rows[i]["Model"].ToString();
                             MQC.Date = Convert.ToDateTime(dt.Rows[i]["Date"]).ToString("dd-MM-yyyy");
                             MQC.Line = dt.Rows[i]["Line"].ToString();
@@ -277,7 +277,7 @@ namespace SMESData
                             string[] serno = dt.Rows[i - 1]["serno"].ToString().Split(';');
                             string[] serno1 = dt.Rows[i]["serno"].ToString().Split(';');
                             if (serno[3] != serno1[3])
-                                MQC.Total = MQC.Total + double.Parse(serno[4]);
+                                MQC.Total = MQC.Total + double.Parse(serno1[4]);
                             MQC.Model = dt.Rows[i]["Model"].ToString();
                             MQC.Date = Convert.ToDateTime(dt.Rows[i]["Date"]).ToString("dd-MM-yyyy");
                             MQC.Line = dt.Rows[i]["Line"].ToString();
@@ -382,7 +382,7 @@ namespace SMESData
                             string[] POCode = dt.Rows[i - 1]["POCode"].ToString().Split(';');
                             string[] POCode1 = dt.Rows[i]["POCode"].ToString().Split(';');
                             if (POCode[3] != POCode1[3])
-                                PQC.Total = PQC.Total + double.Parse(POCode[4]);
+                                PQC.Total = PQC.Total + double.Parse(POCode1[4]);
                             PQC.Model = dt.Rows[i]["Model"].ToString();
                             PQC.Date = Convert.ToDateTime(dt.Rows[i]["Date"]).ToString("dd-MM-yyyy");
                             PQC.Line = dt.Rows[i]["Line"].ToString();
@@ -487,7 +487,7 @@ namespace SMESData
                             string[] POCode = dt.Rows[i - 1]["POCode"].ToString().Split(';');
                             string[] POCode1 = dt.Rows[i]["POCode"].ToString().Split(';');
                             if (POCode[3] != POCode1[3])
-                                PQC.Total = PQC.Total + double.Parse(POCode[4]);
+                                PQC.Total = PQC.Total + double.Parse(POCode1[4]);
                             PQC.Model = dt.Rows[i]["Model"].ToString();
                             PQC.Date = Convert.ToDateTime(dt.Rows[i]["Date"]).ToString("dd-MM-yyyy");
                             PQC.Line = dt.Rows[i]["Line"].ToString();
