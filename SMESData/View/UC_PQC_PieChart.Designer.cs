@@ -172,6 +172,7 @@ namespace SMESData
             this.btL4.WaitOnLoad = false;
             this.btL4.Zoom = 20;
             this.btL4.ZoomSpeed = 10;
+            this.btL4.Click += new System.EventHandler(this.btL4_Click);
             // 
             // lbWar4
             // 
@@ -452,6 +453,7 @@ namespace SMESData
             this.btL5.WaitOnLoad = false;
             this.btL5.Zoom = 20;
             this.btL5.ZoomSpeed = 10;
+            this.btL5.Click += new System.EventHandler(this.btL5_Click);
             // 
             // lbWar5
             // 
@@ -641,6 +643,7 @@ namespace SMESData
             this.btL6.WaitOnLoad = false;
             this.btL6.Zoom = 20;
             this.btL6.ZoomSpeed = 10;
+            this.btL6.Click += new System.EventHandler(this.btL6_Click);
             // 
             // lbWar6
             // 
@@ -830,6 +833,7 @@ namespace SMESData
             this.btL7.WaitOnLoad = false;
             this.btL7.Zoom = 20;
             this.btL7.ZoomSpeed = 10;
+            this.btL7.Click += new System.EventHandler(this.btL7_Click);
             // 
             // lbWar7
             // 
@@ -1095,6 +1099,7 @@ namespace SMESData
             this.btL3.WaitOnLoad = false;
             this.btL3.Zoom = 20;
             this.btL3.ZoomSpeed = 10;
+            this.btL3.Click += new System.EventHandler(this.btL3_Click);
             // 
             // lbWar3
             // 
@@ -1286,6 +1291,7 @@ namespace SMESData
             this.btL2.WaitOnLoad = false;
             this.btL2.Zoom = 20;
             this.btL2.ZoomSpeed = 10;
+            this.btL2.Click += new System.EventHandler(this.btL2_Click);
             // 
             // lbWar2
             // 
@@ -1452,6 +1458,7 @@ namespace SMESData
             this.btL1.WaitOnLoad = false;
             this.btL1.Zoom = 20;
             this.btL1.ZoomSpeed = 10;
+            this.btL1.Click += new System.EventHandler(this.btL1_Click);
             // 
             // lbWar1
             // 
