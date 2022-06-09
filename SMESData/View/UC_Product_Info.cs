@@ -222,14 +222,32 @@ namespace SMESData
                         { 
                             for (int i = 0; i < dtgv_MQC_PD.Rows.Count; i++)
                             {
-                                if (double.Parse(dtgv_MQC_PD.Rows[i].Cells[8].Value.ToString()) > double.Parse(dtgv_MQC_PD.Rows[i].Cells[9].Value.ToString()))
+                                if (double.Parse(dtgv_MQC_PD.Rows[i].Cells[8].Value.ToString()) > double.Parse(dtgv_MQC_PD.Rows[i].Cells[9].Value.ToString()) && double.Parse(dtgv_MQC_PD.Rows[i].Cells[10].Value.ToString()) > double.Parse(dtgv_MQC_PD.Rows[i].Cells[11].Value.ToString()))
+                                {
+                                    for (int j = 0; j < dtgv_MQC_PD.Columns.Count; j++)
+                                    {
+                                        dtgv_MQC_PD[j, i].Style.BackColor = Color.DarkViolet;
+                                        dtgv_MQC_PD[j, i].Style.ForeColor = Color.Yellow;
+                                        dtgv_MQC_PD[j, i].Style.SelectionBackColor = Color.FromArgb(102, 51, 153);
+                                    }
+                                }
+                                else if (double.Parse(dtgv_MQC_PD.Rows[i].Cells[8].Value.ToString()) > double.Parse(dtgv_MQC_PD.Rows[i].Cells[9].Value.ToString()))
                                 {
                                     for (int j = 0; j < dtgv_MQC_PD.Columns.Count; j++)
                                     {
                                         dtgv_MQC_PD[j, i].Style.BackColor = Color.Red;
                                         dtgv_MQC_PD[j, i].Style.ForeColor = Color.White;
                                         dtgv_MQC_PD[j, i].Style.SelectionBackColor = Color.FromArgb(220, 20, 60);
-                                    }                                    
+                                    }
+                                }
+                                else if (double.Parse(dtgv_MQC_PD.Rows[i].Cells[10].Value.ToString()) > double.Parse(dtgv_MQC_PD.Rows[i].Cells[11].Value.ToString()))
+                                {
+                                    for (int j = 0; j < dtgv_MQC_PD.Columns.Count; j++)
+                                    {
+                                        dtgv_MQC_PD[j, i].Style.BackColor = Color.Yellow;
+                                        dtgv_MQC_PD[j, i].Style.ForeColor = Color.Black;
+                                        dtgv_MQC_PD[j, i].Style.SelectionBackColor = Color.FromArgb(255, 165, 0);
+                                    }
                                 }
                                 Thread.Sleep(50);
                                 msf.UpdateProgress(100 * (i + 1) / dtgv_MQC_PD.Rows.Count, "Application is running, please wait ... ");
