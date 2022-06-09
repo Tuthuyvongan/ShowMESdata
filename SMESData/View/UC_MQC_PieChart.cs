@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Drawing;
 using System.Threading;
 using System.Windows.Forms;
@@ -29,6 +30,7 @@ namespace SMESData
             startTime = DateTime.Now;
             btStart.Enabled = false;
             pnTimeControl.Enabled = false;
+            changePanel();
         }
         //List data
         List<double> dataL01 = new List<double>();
@@ -120,6 +122,7 @@ namespace SMESData
         }
         public void renderPiechart()
         {
+            changePanel();
             //Add data
             lineData();
             L01Chart.Data = dataL01;
@@ -563,6 +566,80 @@ namespace SMESData
             SaveData.PQCClick = false;
             SaveData.line = "L07";
             UpdateStatus();
+        }
+        public void changePanel()
+        {
+            DataRow[] results1 = SaveData.dtTemp1.Select("Line = 'L01'");
+            DataRow[] results2 = SaveData.dtTemp1.Select("Line = 'L02'");
+            DataRow[] results3 = SaveData.dtTemp1.Select("Line = 'L03'");
+            DataRow[] results4 = SaveData.dtTemp1.Select("Line = 'L04'");
+            DataRow[] results5 = SaveData.dtTemp1.Select("Line = 'L05'");
+            DataRow[] results6 = SaveData.dtTemp1.Select("Line = 'L06'");
+            DataRow[] results7 = SaveData.dtTemp1.Select("Line = 'L07'");
+            //pn1
+            if (results1.Length > 0)
+                {
+                    panel1.BorderStyle = BorderStyle.FixedSingle;
+                }
+                else
+                {
+                    panel1.BorderStyle = BorderStyle.Fixed3D;
+                }
+                //pn2
+                if (results2.Length > 0)
+                {
+                    panel2.BorderStyle = BorderStyle.FixedSingle;
+                }
+                else
+                {
+                    panel2.BorderStyle = BorderStyle.Fixed3D;
+                }
+                //pn3
+                if (results3.Length > 0)
+                {
+                    panel3.BorderStyle = BorderStyle.FixedSingle;
+                }
+                else
+                {
+                    panel3.BorderStyle = BorderStyle.Fixed3D;
+                }
+                //pn4
+                if (results4.Length > 0)
+                {
+                    panel4.BorderStyle = BorderStyle.FixedSingle;
+                }
+                else
+                {
+                    panel4.BorderStyle = BorderStyle.Fixed3D;
+                }
+                //pn5
+                if (results5.Length > 0)
+                {
+                    panel5.BorderStyle = BorderStyle.FixedSingle;
+                }
+                else
+                {
+                    panel5.BorderStyle = BorderStyle.Fixed3D;
+                }
+                //pn6
+                if (results6.Length > 0)
+                {
+                    panel6.BorderStyle = BorderStyle.FixedSingle;
+                }
+                else
+                {
+                    panel6.BorderStyle = BorderStyle.Fixed3D;
+                }
+                //pn7
+                if (results7.Length > 0)
+                {
+                    panel7.BorderStyle = BorderStyle.FixedSingle;
+                }
+                else
+                {
+                    panel7.BorderStyle = BorderStyle.Fixed3D;
+                }
+              
         }
     }
 }

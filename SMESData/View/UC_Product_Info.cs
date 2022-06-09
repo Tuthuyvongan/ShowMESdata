@@ -32,7 +32,7 @@ namespace SMESData
             lblTime.Font = new Font("Times New Roman", 14, FontStyle.Bold);
             //Timer          
             pnTimeControl.Enabled = false;
-            wn.OnUpdateStatus += customControl_OnUpdateStatus;
+            wn.OnUpdateStatus += customControl_OnUpdateStatus;            
         }
 
         //List data
@@ -46,6 +46,8 @@ namespace SMESData
         //
         public int secondsToWait = 300;
         private DateTime startTime;
+        //       
+        
 
         private void dtgv_MQC_PD_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -145,11 +147,21 @@ namespace SMESData
             }    
         }
         public void UpdateDTGV()
-        {
+        {            
             if (GetSOFTdata.GetListMQC(dtpChart.Value.ToString("yyyy-MM-dd"), "") != null && SaveData.MQC == true || GetSOFTdata.GetListPQC(dtpChart.Value.ToString("yyyy-MM-dd"), "") != null && SaveData.PQC == true)
             {
                 if (SaveData.MQC == true)
                 {
+                    SaveData.dtTemp1 = new DataTable();
+                    DataColumn[] tableColumns = new DataColumn[]
+                    {
+                        new DataColumn()
+                           {
+                              ColumnName="Line",
+                              DataType=typeof(string),
+                           }
+                    };
+                    SaveData.dtTemp1.Columns.AddRange(tableColumns);
                     dataMQC.Clear();
                     string date = dtpChart.Value.ToString("yyyy-MM-dd");
                     SaveData.line = "";
@@ -160,6 +172,16 @@ namespace SMESData
                 }  
                 else
                 {
+                    SaveData.dtTemp2 = new DataTable();
+                    DataColumn[] tableColumns = new DataColumn[]
+                    {
+                        new DataColumn()
+                           {
+                              ColumnName="Line",
+                              DataType=typeof(string),
+                           }
+                    };
+                    SaveData.dtTemp2.Columns.AddRange(tableColumns);
                     dataPQC.Clear();
                     string date = dtpChart.Value.ToString("yyyy-MM-dd");
                     SaveData.line = "";
@@ -195,13 +217,13 @@ namespace SMESData
             ChangeData();
         }
         public void ChangeColor()
-        {
+        {                       
             if ((GetSOFTdata.GetListMQC(dtpChart.Value.ToString("yyyy-MM-dd"), "") != null && SaveData.MQC == true || GetSOFTdata.GetListPQC(dtpChart.Value.ToString("yyyy-MM-dd"), "") != null && SaveData.PQC == true) && dtgv_MQC_PD.Rows.Count > 0)
             {
                 MessageWaitForm msf = new MessageWaitForm();
                 Thread backgroundThreadFetchData = new Thread(
                         new ThreadStart(() =>
-                        {
+                        { 
                             for (int i = 0; i < dtgv_MQC_PD.Rows.Count; i++)
                             {
                                 if (double.Parse(dtgv_MQC_PD.Rows[i].Cells[7].Value.ToString()) > double.Parse(dtgv_MQC_PD.Rows[i].Cells[8].Value.ToString()))
@@ -212,6 +234,10 @@ namespace SMESData
                                         dtgv_MQC_PD[j, i].Style.ForeColor = Color.White;
                                         dtgv_MQC_PD[j, i].Style.SelectionBackColor = Color.FromArgb(220, 20, 60);
                                     }
+                                    if (SaveData.MQC == true)
+                                        SaveData.dtTemp1.Rows.Add(dtgv_MQC_PD.Rows[i].Cells[2].Value.ToString());
+                                    else
+                                        SaveData.dtTemp2.Rows.Add(dtgv_MQC_PD.Rows[i].Cells[2].Value.ToString());
                                 }
                                 Thread.Sleep(50);
                                 msf.UpdateProgress(100 * (i + 1) / dtgv_MQC_PD.Rows.Count, "Application is running, please wait ... ");
@@ -366,7 +392,7 @@ namespace SMESData
                 if (results.Length > 0)
                 {
                     DataTable searchResultTable = results.CopyToDataTable();
-                    dataMQC.Clear();
+                    dataPQC.Clear();
                     dtgv_MQC_PD.DataSource = searchResultTable;
                     ChangeColor();
                     ChangeData();
@@ -450,7 +476,7 @@ namespace SMESData
                     if (results.Length > 0)
                     {
                         DataTable searchResultTable = results.CopyToDataTable();
-                        dataMQC.Clear();
+                        dataPQC.Clear();
                         dtgv_MQC_PD.DataSource = searchResultTable;
                         ChangeColor();
                         ChangeData();

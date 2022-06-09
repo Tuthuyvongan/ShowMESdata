@@ -1,4 +1,8 @@
-﻿
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Data;
+using System.Windows.Forms;
 
 namespace SMESData
 {
@@ -17,5 +21,7 @@ namespace SMESData
         public static bool MQC { get; set; }
         public static bool PQC { get; set; }
         public static string Date { get; set; }
+        public static DataTable dtTemp1 { get; set; }
+        public static DataTable dtTemp2 { get; set; }
     }
 }
