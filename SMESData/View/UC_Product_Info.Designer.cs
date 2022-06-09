@@ -51,6 +51,8 @@ namespace SMESData
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.dtgv_MQC_PD = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbTarget = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lb8 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuButton1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.lbLine = new Bunifu.UI.WinForms.BunifuLabel();
             this.btSearch = new Bunifu.UI.WinForms.BunifuImageButton();
@@ -196,6 +198,8 @@ namespace SMESData
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.lbTarget);
+            this.panel1.Controls.Add(this.lb8);
             this.panel1.Controls.Add(this.bunifuButton1);
             this.panel1.Controls.Add(this.lbLine);
             this.panel1.Controls.Add(this.btSearch);
@@ -225,6 +229,37 @@ namespace SMESData
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1412, 452);
             this.panel1.TabIndex = 18;
+            // 
+            // lbTarget
+            // 
+            this.lbTarget.AllowParentOverrides = false;
+            this.lbTarget.AutoEllipsis = false;
+            this.lbTarget.CursorType = null;
+            this.lbTarget.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.lbTarget.Location = new System.Drawing.Point(539, 329);
+            this.lbTarget.Name = "lbTarget";
+            this.lbTarget.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbTarget.Size = new System.Drawing.Size(12, 19);
+            this.lbTarget.TabIndex = 62;
+            this.lbTarget.Text = "...";
+            this.lbTarget.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbTarget.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // lb8
+            // 
+            this.lb8.AllowParentOverrides = false;
+            this.lb8.AutoEllipsis = false;
+            this.lb8.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lb8.CursorType = System.Windows.Forms.Cursors.Default;
+            this.lb8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.lb8.Location = new System.Drawing.Point(483, 329);
+            this.lb8.Name = "lb8";
+            this.lb8.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lb8.Size = new System.Drawing.Size(50, 19);
+            this.lb8.TabIndex = 61;
+            this.lb8.Text = "Target: ";
+            this.lb8.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lb8.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // bunifuButton1
             // 
@@ -1546,5 +1581,7 @@ namespace SMESData
         private Bunifu.UI.WinForms.BunifuLabel lbLine;
         private Bunifu.UI.WinForms.BunifuDataGridView dtgv_MQC_PD;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton1;
+        private Bunifu.UI.WinForms.BunifuLabel lbTarget;
+        private Bunifu.UI.WinForms.BunifuLabel lb8;
     }
 }

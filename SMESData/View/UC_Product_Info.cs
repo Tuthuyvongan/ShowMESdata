@@ -72,6 +72,7 @@ namespace SMESData
                 lbRW.Text = SaveData.rw.ToString();
                 lbNG.Text = SaveData.ng.ToString();
                 lbTt.Text = SaveData.total.ToString();
+                lbTarget.Text = SaveData.target.ToString();
                 lbNGR.Text = SaveData.NGrealtime.ToString() + "%";
                 tbNGA.Text = SaveData.NGallow.ToString() + "%";
                 renderPiechart();
@@ -272,6 +273,7 @@ namespace SMESData
                 lbRW.Text = SaveData.rw.ToString();
                 lbNG.Text = SaveData.ng.ToString();
                 lbTt.Text = SaveData.total.ToString();
+                lbTarget.Text = SaveData.target.ToString();
                 lbNGR.Text = SaveData.NGrealtime.ToString() + "%";
                 tbNGA.Text = SaveData.NGallow.ToString() + "%";                
             }

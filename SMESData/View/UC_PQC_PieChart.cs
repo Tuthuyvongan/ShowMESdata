@@ -567,7 +567,7 @@ namespace SMESData
             SaveData.line = "L07";
             UpdateStatus();
         }
-        public void changePanel()
+        public void  changePanel()
         {
             if (SaveData.dtTemp2.Rows.Count > 0)
             {
