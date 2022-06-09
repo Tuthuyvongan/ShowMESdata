@@ -629,152 +629,152 @@ namespace SMESData
                 //pn2
                 if (results2.Length > 0)
                 {
-                    panel1.BorderStyle = BorderStyle.FixedSingle;
-                    panel1.BackColor = Color.DarkViolet;
-                    linePCanvas1.BackColor = Color.DarkViolet;
+                    panel2.BorderStyle = BorderStyle.FixedSingle;
+                    panel2.BackColor = Color.DarkViolet;
+                    linePCanvas2.BackColor = Color.DarkViolet;
                 }
                 else if (results22.Length > 0)
                 {
-                    panel1.BorderStyle = BorderStyle.FixedSingle;
-                    panel1.BackColor = Color.MistyRose;
-                    linePCanvas1.BackColor = Color.MistyRose;
+                    panel2.BorderStyle = BorderStyle.FixedSingle;
+                    panel2.BackColor = Color.MistyRose;
+                    linePCanvas2.BackColor = Color.MistyRose;
                 }
                 else if (results222.Length > 0)
                 {
-                    panel1.BorderStyle = BorderStyle.FixedSingle;
-                    panel1.BackColor = Color.LightYellow;
-                    linePCanvas1.BackColor = Color.LightYellow;
+                    panel2.BorderStyle = BorderStyle.FixedSingle;
+                    panel2.BackColor = Color.LightYellow;
+                    linePCanvas2.BackColor = Color.LightYellow;
                 }
                 else
                 {
-                    panel1.BorderStyle = BorderStyle.Fixed3D;
-                    panel1.BackColor = Color.White;
-                    linePCanvas1.BackColor = Color.White;
+                    panel2.BorderStyle = BorderStyle.Fixed3D;
+                    panel2.BackColor = Color.White;
+                    linePCanvas2.BackColor = Color.White;
                 }
                 //pn3
                 if (results3.Length > 0)
                 {
-                    panel1.BorderStyle = BorderStyle.FixedSingle;
-                    panel1.BackColor = Color.DarkViolet;
-                    linePCanvas1.BackColor = Color.DarkViolet;
+                    panel3.BorderStyle = BorderStyle.FixedSingle;
+                    panel3.BackColor = Color.DarkViolet;
+                    linePCanvas3.BackColor = Color.DarkViolet;
                 }
                 else if (results33.Length > 0)
                 {
-                    panel1.BorderStyle = BorderStyle.FixedSingle;
-                    panel1.BackColor = Color.MistyRose;
-                    linePCanvas1.BackColor = Color.MistyRose;
+                    panel3.BorderStyle = BorderStyle.FixedSingle;
+                    panel3.BackColor = Color.MistyRose;
+                    linePCanvas3.BackColor = Color.MistyRose;
                 }
                 else if (results333.Length > 0)
                 {
-                    panel1.BorderStyle = BorderStyle.FixedSingle;
-                    panel1.BackColor = Color.LightYellow;
-                    linePCanvas1.BackColor = Color.LightYellow;
+                    panel3.BorderStyle = BorderStyle.FixedSingle;
+                    panel3.BackColor = Color.LightYellow;
+                    linePCanvas3.BackColor = Color.LightYellow;
                 }
                 else
                 {
-                    panel1.BorderStyle = BorderStyle.Fixed3D;
-                    panel1.BackColor = Color.White;
-                    linePCanvas1.BackColor = Color.White;
+                    panel3.BorderStyle = BorderStyle.Fixed3D;
+                    panel3.BackColor = Color.White;
+                    linePCanvas3.BackColor = Color.White;
                 }
                 //pn4
                 if (results4.Length > 0)
                 {
-                    panel1.BorderStyle = BorderStyle.FixedSingle;
-                    panel1.BackColor = Color.DarkViolet;
-                    linePCanvas1.BackColor = Color.DarkViolet;
+                    panel4.BorderStyle = BorderStyle.FixedSingle;
+                    panel4.BackColor = Color.DarkViolet;
+                    linePCanvas4.BackColor = Color.DarkViolet;
                 }
                 else if (results44.Length > 0)
                 {
-                    panel1.BorderStyle = BorderStyle.FixedSingle;
-                    panel1.BackColor = Color.MistyRose;
-                    linePCanvas1.BackColor = Color.MistyRose;
+                    panel4.BorderStyle = BorderStyle.FixedSingle;
+                    panel4.BackColor = Color.MistyRose;
+                    linePCanvas4.BackColor = Color.MistyRose;
                 }
                 else if (results444.Length > 0)
                 {
-                    panel1.BorderStyle = BorderStyle.FixedSingle;
-                    panel1.BackColor = Color.LightYellow;
-                    linePCanvas1.BackColor = Color.LightYellow;
+                    panel4.BorderStyle = BorderStyle.FixedSingle;
+                    panel4.BackColor = Color.LightYellow;
+                    linePCanvas4.BackColor = Color.LightYellow;
                 }
                 else
                 {
-                    panel1.BorderStyle = BorderStyle.Fixed3D;
-                    panel1.BackColor = Color.White;
-                    linePCanvas1.BackColor = Color.White;
+                    panel4.BorderStyle = BorderStyle.Fixed3D;
+                    panel4.BackColor = Color.White;
+                    linePCanvas4.BackColor = Color.White;
                 }
                 //pn5
                 if (results5.Length > 0)
                 {
-                    panel1.BorderStyle = BorderStyle.FixedSingle;
-                    panel1.BackColor = Color.DarkViolet;
-                    linePCanvas1.BackColor = Color.DarkViolet;
+                    panel5.BorderStyle = BorderStyle.FixedSingle;
+                    panel5.BackColor = Color.DarkViolet;
+                    linePCanvas5.BackColor = Color.DarkViolet;
                 }
                 else if (results55.Length > 0)
                 {
-                    panel1.BorderStyle = BorderStyle.FixedSingle;
-                    panel1.BackColor = Color.MistyRose;
-                    linePCanvas1.BackColor = Color.MistyRose;
+                    panel5.BorderStyle = BorderStyle.FixedSingle;
+                    panel5.BackColor = Color.MistyRose;
+                    linePCanvas5.BackColor = Color.MistyRose;
                 }
                 else if (results555.Length > 0)
                 {
-                    panel1.BorderStyle = BorderStyle.FixedSingle;
-                    panel1.BackColor = Color.LightYellow;
-                    linePCanvas1.BackColor = Color.LightYellow;
+                    panel5.BorderStyle = BorderStyle.FixedSingle;
+                    panel5.BackColor = Color.LightYellow;
+                    linePCanvas5.BackColor = Color.LightYellow;
                 }
                 else
                 {
-                    panel1.BorderStyle = BorderStyle.Fixed3D;
-                    panel1.BackColor = Color.White;
-                    linePCanvas1.BackColor = Color.White;
+                    panel5.BorderStyle = BorderStyle.Fixed3D;
+                    panel5.BackColor = Color.White;
+                    linePCanvas5.BackColor = Color.White;
                 }
                 //pn6
                 if (results6.Length > 0)
                 {
-                    panel1.BorderStyle = BorderStyle.FixedSingle;
-                    panel1.BackColor = Color.DarkViolet;
-                    linePCanvas1.BackColor = Color.DarkViolet;
+                    panel6.BorderStyle = BorderStyle.FixedSingle;
+                    panel6.BackColor = Color.DarkViolet;
+                    linePCanvas6.BackColor = Color.DarkViolet;
                 }
                 else if (results66.Length > 0)
                 {
-                    panel1.BorderStyle = BorderStyle.FixedSingle;
-                    panel1.BackColor = Color.MistyRose;
-                    linePCanvas1.BackColor = Color.MistyRose;
+                    panel6.BorderStyle = BorderStyle.FixedSingle;
+                    panel6.BackColor = Color.MistyRose;
+                    linePCanvas6.BackColor = Color.MistyRose;
                 }
                 else if (results666.Length > 0)
                 {
-                    panel1.BorderStyle = BorderStyle.FixedSingle;
-                    panel1.BackColor = Color.LightYellow;
-                    linePCanvas1.BackColor = Color.LightYellow;
+                    panel6.BorderStyle = BorderStyle.FixedSingle;
+                    panel6.BackColor = Color.LightYellow;
+                    linePCanvas6.BackColor = Color.LightYellow;
                 }
                 else
                 {
-                    panel1.BorderStyle = BorderStyle.Fixed3D;
-                    panel1.BackColor = Color.White;
-                    linePCanvas1.BackColor = Color.White;
+                    panel6.BorderStyle = BorderStyle.Fixed3D;
+                    panel6.BackColor = Color.White;
+                    linePCanvas6.BackColor = Color.White;
                 }
                 //pn7
                 if (results7.Length > 0)
                 {
-                    panel1.BorderStyle = BorderStyle.FixedSingle;
-                    panel1.BackColor = Color.DarkViolet;
-                    linePCanvas1.BackColor = Color.DarkViolet;
+                    panel7.BorderStyle = BorderStyle.FixedSingle;
+                    panel7.BackColor = Color.DarkViolet;
+                    linePCanvas7.BackColor = Color.DarkViolet;
                 }
                 else if (results77.Length > 0)
                 {
-                    panel1.BorderStyle = BorderStyle.FixedSingle;
-                    panel1.BackColor = Color.MistyRose;
-                    linePCanvas1.BackColor = Color.MistyRose;
+                    panel7.BorderStyle = BorderStyle.FixedSingle;
+                    panel7.BackColor = Color.MistyRose;
+                    linePCanvas7.BackColor = Color.MistyRose;
                 }
                 else if (results777.Length > 0)
                 {
-                    panel1.BorderStyle = BorderStyle.FixedSingle;
-                    panel1.BackColor = Color.LightYellow;
-                    linePCanvas1.BackColor = Color.LightYellow;
+                    panel7.BorderStyle = BorderStyle.FixedSingle;
+                    panel7.BackColor = Color.LightYellow;
+                    linePCanvas7.BackColor = Color.LightYellow;
                 }
                 else
                 {
-                    panel1.BorderStyle = BorderStyle.Fixed3D;
-                    panel1.BackColor = Color.White;
-                    linePCanvas1.BackColor = Color.White;
+                    panel7.BorderStyle = BorderStyle.Fixed3D;
+                    panel7.BackColor = Color.White;
+                    linePCanvas7.BackColor = Color.White;
                 }
             }    
         }
