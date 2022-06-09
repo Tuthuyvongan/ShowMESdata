@@ -129,7 +129,7 @@ namespace SMESData
             this.linePCanvas1.AnimationDuration = 2000;
             this.linePCanvas1.AnimationType = Bunifu.Charts.WinForms.BunifuChartCanvas.AnimationOptions.easeOutQuart;
             this.linePCanvas1.BackColor = System.Drawing.Color.White;
-            this.linePCanvas1.CanvasPadding = new System.Windows.Forms.Padding(6);
+            this.linePCanvas1.CanvasPadding = new System.Windows.Forms.Padding(6, 6, 8, 6);
             this.linePCanvas1.Labels = new string[0];
             this.linePCanvas1.LegendAlignment = Bunifu.Charts.WinForms.BunifuChartCanvas.LegendAlignmentOptions.start;
             this.linePCanvas1.LegendDisplay = false;
@@ -272,7 +272,7 @@ namespace SMESData
             this.linePCanvas2.AnimationDuration = 2000;
             this.linePCanvas2.AnimationType = Bunifu.Charts.WinForms.BunifuChartCanvas.AnimationOptions.easeOutQuart;
             this.linePCanvas2.BackColor = System.Drawing.Color.White;
-            this.linePCanvas2.CanvasPadding = new System.Windows.Forms.Padding(6);
+            this.linePCanvas2.CanvasPadding = new System.Windows.Forms.Padding(6, 6, 8, 6);
             this.linePCanvas2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.linePCanvas2.Labels = new string[0];
             this.linePCanvas2.LegendAlignment = Bunifu.Charts.WinForms.BunifuChartCanvas.LegendAlignmentOptions.end;
@@ -681,7 +681,7 @@ namespace SMESData
             this.linePCanvas3.AnimationDuration = 2000;
             this.linePCanvas3.AnimationType = Bunifu.Charts.WinForms.BunifuChartCanvas.AnimationOptions.easeOutQuart;
             this.linePCanvas3.BackColor = System.Drawing.Color.White;
-            this.linePCanvas3.CanvasPadding = new System.Windows.Forms.Padding(6);
+            this.linePCanvas3.CanvasPadding = new System.Windows.Forms.Padding(6, 6, 8, 6);
             this.linePCanvas3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.linePCanvas3.Labels = new string[0];
             this.linePCanvas3.LegendAlignment = Bunifu.Charts.WinForms.BunifuChartCanvas.LegendAlignmentOptions.start;
@@ -872,7 +872,7 @@ namespace SMESData
             this.linePCanvas4.AnimationDuration = 2000;
             this.linePCanvas4.AnimationType = Bunifu.Charts.WinForms.BunifuChartCanvas.AnimationOptions.easeOutQuart;
             this.linePCanvas4.BackColor = System.Drawing.Color.White;
-            this.linePCanvas4.CanvasPadding = new System.Windows.Forms.Padding(6);
+            this.linePCanvas4.CanvasPadding = new System.Windows.Forms.Padding(6, 6, 8, 6);
             this.linePCanvas4.Labels = new string[0];
             this.linePCanvas4.LegendAlignment = Bunifu.Charts.WinForms.BunifuChartCanvas.LegendAlignmentOptions.start;
             this.linePCanvas4.LegendDisplay = false;
@@ -1062,7 +1062,7 @@ namespace SMESData
             this.linePCanvas5.AnimationDuration = 2000;
             this.linePCanvas5.AnimationType = Bunifu.Charts.WinForms.BunifuChartCanvas.AnimationOptions.easeOutQuart;
             this.linePCanvas5.BackColor = System.Drawing.Color.White;
-            this.linePCanvas5.CanvasPadding = new System.Windows.Forms.Padding(6);
+            this.linePCanvas5.CanvasPadding = new System.Windows.Forms.Padding(6, 6, 8, 6);
             this.linePCanvas5.Labels = new string[0];
             this.linePCanvas5.LegendAlignment = Bunifu.Charts.WinForms.BunifuChartCanvas.LegendAlignmentOptions.start;
             this.linePCanvas5.LegendDisplay = false;
@@ -1252,7 +1252,7 @@ namespace SMESData
             this.linePCanvas6.AnimationDuration = 2000;
             this.linePCanvas6.AnimationType = Bunifu.Charts.WinForms.BunifuChartCanvas.AnimationOptions.easeOutQuart;
             this.linePCanvas6.BackColor = System.Drawing.Color.White;
-            this.linePCanvas6.CanvasPadding = new System.Windows.Forms.Padding(6);
+            this.linePCanvas6.CanvasPadding = new System.Windows.Forms.Padding(6, 6, 8, 6);
             this.linePCanvas6.Labels = new string[0];
             this.linePCanvas6.LegendAlignment = Bunifu.Charts.WinForms.BunifuChartCanvas.LegendAlignmentOptions.start;
             this.linePCanvas6.LegendDisplay = false;
@@ -1474,7 +1474,7 @@ namespace SMESData
             this.linePCanvas7.AnimationDuration = 2000;
             this.linePCanvas7.AnimationType = Bunifu.Charts.WinForms.BunifuChartCanvas.AnimationOptions.easeOutQuart;
             this.linePCanvas7.BackColor = System.Drawing.Color.White;
-            this.linePCanvas7.CanvasPadding = new System.Windows.Forms.Padding(6);
+            this.linePCanvas7.CanvasPadding = new System.Windows.Forms.Padding(6, 6, 8, 6);
             this.linePCanvas7.Labels = new string[0];
             this.linePCanvas7.LegendAlignment = Bunifu.Charts.WinForms.BunifuChartCanvas.LegendAlignmentOptions.start;
             this.linePCanvas7.LegendDisplay = false;
