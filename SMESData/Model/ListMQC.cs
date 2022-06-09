@@ -11,6 +11,7 @@ namespace SMESData
         public double REWORK { get; set; }
         public double NOGOOD { get; set; }
         public double Total { get; set; }
+        public double Target { get; set; }
         public double NG_rate_realtime { get; set; }
         public double NG_rate_allow { get; set; }
     }

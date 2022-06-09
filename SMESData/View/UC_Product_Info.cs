@@ -27,12 +27,14 @@ namespace SMESData
             SaveData.MQC = true;
             SaveData.PQC = false;
             lbQC.Text = "MQC";
+            SaveData.dtTemp1 = new DataTable();
+            SaveData.dtTemp2 = new DataTable();
             UpdateDTGV();
             //Setting
             lblTime.Font = new Font("Times New Roman", 14, FontStyle.Bold);
             //Timer          
             pnTimeControl.Enabled = false;
-            wn.OnUpdateStatus += customControl_OnUpdateStatus;            
+            wn.OnUpdateStatus += customControl_OnUpdateStatus;   
         }
 
         //List data
@@ -61,8 +63,9 @@ namespace SMESData
                 SaveData.rw = double.Parse(dtgv_MQC_PD.Rows[e.RowIndex].Cells[4].Value.ToString());
                 SaveData.ng = double.Parse(dtgv_MQC_PD.Rows[e.RowIndex].Cells[5].Value.ToString());
                 SaveData.total = double.Parse(dtgv_MQC_PD.Rows[e.RowIndex].Cells[6].Value.ToString());
-                SaveData.NGrealtime = double.Parse(dtgv_MQC_PD.Rows[e.RowIndex].Cells[7].Value.ToString());
-                SaveData.NGallow = dtgv_MQC_PD.Rows[e.RowIndex].Cells[8].Value.ToString();
+                SaveData.target = double.Parse(dtgv_MQC_PD.Rows[e.RowIndex].Cells[7].Value.ToString());
+                SaveData.NGrealtime = double.Parse(dtgv_MQC_PD.Rows[e.RowIndex].Cells[8].Value.ToString());
+                SaveData.NGallow = dtgv_MQC_PD.Rows[e.RowIndex].Cells[9].Value.ToString();
                 lbModel.Text = SaveData.Model;
                 lbLine.Text = SaveData.line;
                 lbOP.Text = SaveData.op.ToString();
@@ -226,7 +229,7 @@ namespace SMESData
                         { 
                             for (int i = 0; i < dtgv_MQC_PD.Rows.Count; i++)
                             {
-                                if (double.Parse(dtgv_MQC_PD.Rows[i].Cells[7].Value.ToString()) > double.Parse(dtgv_MQC_PD.Rows[i].Cells[8].Value.ToString()))
+                                if (double.Parse(dtgv_MQC_PD.Rows[i].Cells[8].Value.ToString()) > double.Parse(dtgv_MQC_PD.Rows[i].Cells[9].Value.ToString()))
                                 {
                                     for (int j = 0; j < dtgv_MQC_PD.Columns.Count; j++)
                                     {
@@ -260,8 +263,9 @@ namespace SMESData
                 SaveData.rw = double.Parse(dtgv_MQC_PD.Rows[0].Cells[4].Value.ToString());
                 SaveData.ng = double.Parse(dtgv_MQC_PD.Rows[0].Cells[5].Value.ToString());
                 SaveData.total = double.Parse(dtgv_MQC_PD.Rows[0].Cells[6].Value.ToString());
-                SaveData.NGrealtime = double.Parse(dtgv_MQC_PD.Rows[0].Cells[7].Value.ToString());
-                SaveData.NGallow = dtgv_MQC_PD.Rows[0].Cells[8].Value.ToString();
+                SaveData.target = double.Parse(dtgv_MQC_PD.Rows[0].Cells[7].Value.ToString());
+                SaveData.NGrealtime = double.Parse(dtgv_MQC_PD.Rows[0].Cells[8].Value.ToString());
+                SaveData.NGallow = dtgv_MQC_PD.Rows[0].Cells[9].Value.ToString();
                 lbModel.Text = SaveData.Model;
                 lbLine.Text = SaveData.line;
                 lbOP.Text = SaveData.op.ToString();

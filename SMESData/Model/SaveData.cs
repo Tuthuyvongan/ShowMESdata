@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Data;
-using System.Windows.Forms;
+﻿using System.Data;
 
 namespace SMESData
 {
     public class SaveData
     {       
         public static double total { get; set; }
+        public static double target { get; set; }
         public static double op { get; set; }
         public static double rw { get; set; }       
         public static double ng { get; set; }     

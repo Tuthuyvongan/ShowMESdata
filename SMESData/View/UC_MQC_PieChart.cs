@@ -569,77 +569,107 @@ namespace SMESData
         }
         public void changePanel()
         {
-            DataRow[] results1 = SaveData.dtTemp1.Select("Line = 'L01'");
-            DataRow[] results2 = SaveData.dtTemp1.Select("Line = 'L02'");
-            DataRow[] results3 = SaveData.dtTemp1.Select("Line = 'L03'");
-            DataRow[] results4 = SaveData.dtTemp1.Select("Line = 'L04'");
-            DataRow[] results5 = SaveData.dtTemp1.Select("Line = 'L05'");
-            DataRow[] results6 = SaveData.dtTemp1.Select("Line = 'L06'");
-            DataRow[] results7 = SaveData.dtTemp1.Select("Line = 'L07'");
-            //pn1
-            if (results1.Length > 0)
+            if (SaveData.dtTemp1.Rows.Count > 0)
+            {
+                DataRow[] results1 = SaveData.dtTemp1.Select("Line = 'L01'");
+                DataRow[] results2 = SaveData.dtTemp1.Select("Line = 'L02'");
+                DataRow[] results3 = SaveData.dtTemp1.Select("Line = 'L03'");
+                DataRow[] results4 = SaveData.dtTemp1.Select("Line = 'L04'");
+                DataRow[] results5 = SaveData.dtTemp1.Select("Line = 'L05'");
+                DataRow[] results6 = SaveData.dtTemp1.Select("Line = 'L06'");
+                DataRow[] results7 = SaveData.dtTemp1.Select("Line = 'L07'");
+                //pn1
+                if (results1.Length > 0)
                 {
                     panel1.BorderStyle = BorderStyle.FixedSingle;
+                    panel1.BackColor = Color.MistyRose;
+                    linePCanvas1.BackColor = Color.MistyRose;
                 }
                 else
                 {
                     panel1.BorderStyle = BorderStyle.Fixed3D;
+                    panel1.BackColor = Color.White;
+                    linePCanvas1.BackColor = Color.White;
                 }
                 //pn2
                 if (results2.Length > 0)
                 {
                     panel2.BorderStyle = BorderStyle.FixedSingle;
+                    panel2.BackColor = Color.MistyRose;
+                    linePCanvas2.BackColor = Color.MistyRose;
                 }
                 else
                 {
                     panel2.BorderStyle = BorderStyle.Fixed3D;
+                    panel2.BackColor = Color.White;
+                    linePCanvas2.BackColor = Color.White;
                 }
                 //pn3
                 if (results3.Length > 0)
                 {
                     panel3.BorderStyle = BorderStyle.FixedSingle;
+                    panel3.BackColor = Color.MistyRose;
+                    linePCanvas3.BackColor = Color.MistyRose;
                 }
                 else
                 {
                     panel3.BorderStyle = BorderStyle.Fixed3D;
+                    panel3.BackColor = Color.White;
+                    linePCanvas3.BackColor = Color.White;
                 }
                 //pn4
                 if (results4.Length > 0)
                 {
                     panel4.BorderStyle = BorderStyle.FixedSingle;
+                    panel4.BackColor = Color.MistyRose;
+                    linePCanvas4.BackColor = Color.MistyRose;
                 }
                 else
                 {
                     panel4.BorderStyle = BorderStyle.Fixed3D;
+                    panel4.BackColor = Color.White;
+                    linePCanvas4.BackColor = Color.White;
                 }
                 //pn5
                 if (results5.Length > 0)
                 {
                     panel5.BorderStyle = BorderStyle.FixedSingle;
+                    panel5.BackColor = Color.MistyRose;
+                    linePCanvas5.BackColor = Color.MistyRose;
                 }
                 else
                 {
                     panel5.BorderStyle = BorderStyle.Fixed3D;
+                    panel5.BackColor = Color.White;
+                    linePCanvas5.BackColor = Color.White;
                 }
                 //pn6
                 if (results6.Length > 0)
                 {
                     panel6.BorderStyle = BorderStyle.FixedSingle;
+                    panel6.BackColor = Color.MistyRose;
+                    linePCanvas6.BackColor = Color.MistyRose;
                 }
                 else
                 {
                     panel6.BorderStyle = BorderStyle.Fixed3D;
+                    panel6.BackColor = Color.White;
+                    linePCanvas6.BackColor = Color.White;
                 }
                 //pn7
                 if (results7.Length > 0)
                 {
                     panel7.BorderStyle = BorderStyle.FixedSingle;
+                    panel7.BackColor = Color.MistyRose;
+                    linePCanvas7.BackColor = Color.MistyRose;
                 }
                 else
                 {
                     panel7.BorderStyle = BorderStyle.Fixed3D;
+                    panel7.BackColor = Color.White;
+                    linePCanvas7.BackColor = Color.White;
                 }
-              
+            }    
         }
     }
 }

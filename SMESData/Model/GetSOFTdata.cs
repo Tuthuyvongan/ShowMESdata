@@ -566,21 +566,22 @@ namespace SMESData
             sqlGetData.Append("order by Model desc, Line ");
             sqlSOFTCon.sqlDataAdapterFillDatatable(sqlGetData.ToString(), ref dt);
             ListMQC MQC = new ListMQC();
-            MQC.Total = 0;
+            MQC.Target = 0;
             for (int i = 0; i < dt.Rows.Count; i++)
             {
                 if (dt.Rows.Count == 1)
                 {
                     string[] serno = dt.Rows[i]["serno"].ToString().Split(';');
-                    MQC.Total = MQC.Total + double.Parse(serno[4]);
+                    MQC.Target = MQC.Target + double.Parse(serno[4]);
                     MQC.Model = dt.Rows[i]["Model"].ToString();
                     MQC.Date = Convert.ToDateTime(dt.Rows[i]["Date"]).ToString("dd-MM-yyyy");
                     MQC.Line = dt.Rows[i]["Line"].ToString();
                     MQC.OUTPUT = double.Parse(dt.Rows[i]["OUTPUT"].ToString());
                     MQC.REWORK = double.Parse(dt.Rows[i]["REWORK"].ToString());
                     MQC.NOGOOD = double.Parse(dt.Rows[i]["NOGOOD"].ToString());
+                    MQC.Total = MQC.OUTPUT + MQC.REWORK + MQC.NOGOOD;
                     MQC.NG_rate_realtime = Math.Round(MQC.NOGOOD / MQC.Total * 100, 1);
-                    MQC.NG_rate_allow = double.Parse(dt.Rows[i]["%NG_allow"].ToString());
+                    MQC.NG_rate_allow = double.Parse(dt.Rows[i]["%NG_allow"].ToString());                    
                     ListMQC.Add(MQC);
                 }
                 else
@@ -592,23 +593,24 @@ namespace SMESData
                             string[] serno = dt.Rows[i]["serno"].ToString().Split(';');
                             string[] serno1 = dt.Rows[i + 1]["serno"].ToString().Split(';');
                             if (serno[3] != serno1[3])
-                                MQC.Total = MQC.Total + double.Parse(serno[4]);
+                                MQC.Target = MQC.Target + double.Parse(serno[4]);
                         }
                         else
                         {
                             string[] serno = dt.Rows[i]["serno"].ToString().Split(';');
-                            MQC.Total = MQC.Total + double.Parse(serno[4]);
+                            MQC.Target = MQC.Target + double.Parse(serno[4]);
                             MQC.Model = dt.Rows[i]["Model"].ToString();
                             MQC.Date = Convert.ToDateTime(dt.Rows[i]["Date"]).ToString("dd-MM-yyyy");
                             MQC.Line = dt.Rows[i]["Line"].ToString();
                             MQC.OUTPUT = double.Parse(dt.Rows[i]["OUTPUT"].ToString());
                             MQC.REWORK = double.Parse(dt.Rows[i]["REWORK"].ToString());
                             MQC.NOGOOD = double.Parse(dt.Rows[i]["NOGOOD"].ToString());
+                            MQC.Total = MQC.OUTPUT + MQC.REWORK + MQC.NOGOOD;
                             MQC.NG_rate_realtime = Math.Round(MQC.NOGOOD / MQC.Total * 100, 1);
-                            MQC.NG_rate_allow = double.Parse(dt.Rows[i]["%NG_allow"].ToString());
+                            MQC.NG_rate_allow = double.Parse(dt.Rows[i]["%NG_allow"].ToString()); 
                             ListMQC.Add(MQC);
                             MQC = new ListMQC();
-                            MQC.Total = 0;
+                            MQC.Target = 0;
                         }
                     }
                     else
@@ -618,27 +620,29 @@ namespace SMESData
                             string[] serno = dt.Rows[i - 1]["serno"].ToString().Split(';');
                             string[] serno1 = dt.Rows[i]["serno"].ToString().Split(';');
                             if (serno[3] != serno1[3])
-                                MQC.Total = MQC.Total + double.Parse(serno1[4]);
+                                MQC.Target = MQC.Target + double.Parse(serno1[4]);
                             MQC.Model = dt.Rows[i]["Model"].ToString();
                             MQC.Date = Convert.ToDateTime(dt.Rows[i]["Date"]).ToString("dd-MM-yyyy");
                             MQC.Line = dt.Rows[i]["Line"].ToString();
                             MQC.OUTPUT = double.Parse(dt.Rows[i]["OUTPUT"].ToString());
                             MQC.REWORK = double.Parse(dt.Rows[i]["REWORK"].ToString());
                             MQC.NOGOOD = double.Parse(dt.Rows[i]["NOGOOD"].ToString());
+                            MQC.Total = MQC.OUTPUT + MQC.REWORK + MQC.NOGOOD;
                             MQC.NG_rate_realtime = Math.Round(MQC.NOGOOD / MQC.Total * 100, 1);
-                            MQC.NG_rate_allow = double.Parse(dt.Rows[i]["%NG_allow"].ToString());
+                            MQC.NG_rate_allow = double.Parse(dt.Rows[i]["%NG_allow"].ToString());                           
                             ListMQC.Add(MQC);
                         }
                         else
                         {
                             string[] serno = dt.Rows[i]["serno"].ToString().Split(';');
-                            MQC.Total = MQC.Total + double.Parse(serno[4]);
+                            MQC.Target = MQC.Target + double.Parse(serno[4]);
                             MQC.Model = dt.Rows[i]["Model"].ToString();
                             MQC.Date = Convert.ToDateTime(dt.Rows[i]["Date"]).ToString("dd-MM-yyyy");
                             MQC.Line = dt.Rows[i]["Line"].ToString();
                             MQC.OUTPUT = double.Parse(dt.Rows[i]["OUTPUT"].ToString());
                             MQC.REWORK = double.Parse(dt.Rows[i]["REWORK"].ToString());
                             MQC.NOGOOD = double.Parse(dt.Rows[i]["NOGOOD"].ToString());
+                            MQC.Total = MQC.OUTPUT + MQC.REWORK + MQC.NOGOOD;
                             MQC.NG_rate_realtime = Math.Round(MQC.NOGOOD / MQC.Total * 100, 1);
                             MQC.NG_rate_allow = double.Parse(dt.Rows[i]["%NG_allow"].ToString());
                             ListMQC.Add(MQC);
@@ -686,6 +690,11 @@ namespace SMESData
                 },
                 new DataColumn()
                 {
+                    ColumnName="Target",
+                    DataType=typeof(double),
+                },
+                new DataColumn()
+                {
                     ColumnName="NG_rate_realtime",
                     DataType=typeof(double),
                 },
@@ -698,7 +707,7 @@ namespace SMESData
             dtMQC.Columns.AddRange(tableColumns);
             foreach (var data in ListMQC)
             {
-                dtMQC.Rows.Add(data.Model, data.Date, data.Line, data.OUTPUT, data.REWORK, data.NOGOOD, data.Total, data.NG_rate_realtime, data.NG_rate_allow);
+                dtMQC.Rows.Add(data.Model, data.Date, data.Line, data.OUTPUT, data.REWORK, data.NOGOOD, data.Total, data.Target, data.NG_rate_realtime, data.NG_rate_allow);
             }
             dtMQC.DefaultView.Sort = "NG_rate_realtime DESC";
             dtMQC = dtMQC.DefaultView.ToTable();
@@ -727,19 +736,20 @@ namespace SMESData
             sqlGetData.Append("order by Model desc, Line");
             sqlSOFTCon.sqlDataAdapterFillDatatable(sqlGetData.ToString(), ref dt);
             ListPQC PQC = new ListPQC();
-            PQC.Total = 0;
+            PQC.Target = 0;
             for (int i = 0; i < dt.Rows.Count; i++)
             {
                 if (dt.Rows.Count == 1)
                 {
                     string[] POCode = dt.Rows[i]["POCode"].ToString().Split(';');
-                    PQC.Total = PQC.Total + double.Parse(POCode[4]);
+                    PQC.Target = PQC.Target + double.Parse(POCode[4]);
                     PQC.Model = dt.Rows[i]["Model"].ToString();
                     PQC.Date = Convert.ToDateTime(dt.Rows[i]["Date"]).ToString("dd-MM-yyyy");
                     PQC.Line = dt.Rows[i]["Line"].ToString();
                     PQC.OUTPUT = double.Parse(dt.Rows[i]["OUTPUT"].ToString());
                     PQC.REWORK = double.Parse(dt.Rows[i]["REWORK"].ToString());
                     PQC.NOGOOD = double.Parse(dt.Rows[i]["NOGOOD"].ToString());
+                    PQC.Total = PQC.OUTPUT + PQC.REWORK + PQC.NOGOOD;
                     PQC.NG_rate_realtime = Math.Round(PQC.NOGOOD / PQC.Total * 100, 1);
                     PQC.NG_rate_allow = double.Parse(dt.Rows[i]["%NG_allow"].ToString());
                     ListPQC.Add(PQC);
@@ -753,23 +763,24 @@ namespace SMESData
                             string[] POCode = dt.Rows[i]["POCode"].ToString().Split(';');
                             string[] POCode1 = dt.Rows[i + 1]["POCode"].ToString().Split(';');
                             if (POCode[3] != POCode1[3])
-                                PQC.Total = PQC.Total + double.Parse(POCode[4]);
+                                PQC.Target = PQC.Target + double.Parse(POCode[4]);
                         }
                         else
                         {
                             string[] POCode = dt.Rows[i]["POCode"].ToString().Split(';');
-                            PQC.Total = PQC.Total + double.Parse(POCode[4]);
+                            PQC.Target = PQC.Target + double.Parse(POCode[4]);
                             PQC.Model = dt.Rows[i]["Model"].ToString();
                             PQC.Date = Convert.ToDateTime(dt.Rows[i]["Date"]).ToString("dd-MM-yyyy");
                             PQC.Line = dt.Rows[i]["Line"].ToString();
                             PQC.OUTPUT = double.Parse(dt.Rows[i]["OUTPUT"].ToString());
                             PQC.REWORK = double.Parse(dt.Rows[i]["REWORK"].ToString());
                             PQC.NOGOOD = double.Parse(dt.Rows[i]["NOGOOD"].ToString());
+                            PQC.Total = PQC.OUTPUT + PQC.REWORK + PQC.NOGOOD;
                             PQC.NG_rate_realtime = Math.Round(PQC.NOGOOD / PQC.Total * 100, 1);
                             PQC.NG_rate_allow = double.Parse(dt.Rows[i]["%NG_allow"].ToString());
                             ListPQC.Add(PQC);
                             PQC = new ListPQC();
-                            PQC.Total = 0;
+                            PQC.Target = 0;
                         }
                     }
                     else
@@ -779,13 +790,14 @@ namespace SMESData
                             string[] POCode = dt.Rows[i - 1]["POCode"].ToString().Split(';');
                             string[] POCode1 = dt.Rows[i]["POCode"].ToString().Split(';');
                             if (POCode[3] != POCode1[3])
-                                PQC.Total = PQC.Total + double.Parse(POCode1[4]);
+                                PQC.Target = PQC.Target + double.Parse(POCode1[4]);
                             PQC.Model = dt.Rows[i]["Model"].ToString();
                             PQC.Date = Convert.ToDateTime(dt.Rows[i]["Date"]).ToString("dd-MM-yyyy");
                             PQC.Line = dt.Rows[i]["Line"].ToString();
                             PQC.OUTPUT = double.Parse(dt.Rows[i]["OUTPUT"].ToString());
                             PQC.REWORK = double.Parse(dt.Rows[i]["REWORK"].ToString());
                             PQC.NOGOOD = double.Parse(dt.Rows[i]["NOGOOD"].ToString());
+                            PQC.Total = PQC.OUTPUT + PQC.REWORK + PQC.NOGOOD;
                             PQC.NG_rate_realtime = Math.Round(PQC.NOGOOD / PQC.Total * 100, 1);
                             PQC.NG_rate_allow = double.Parse(dt.Rows[i]["%NG_allow"].ToString());
                             ListPQC.Add(PQC);
@@ -793,13 +805,14 @@ namespace SMESData
                         else
                         {
                             string[] POCode = dt.Rows[i]["POCode"].ToString().Split(';');
-                            PQC.Total = PQC.Total + double.Parse(POCode[4]);
+                            PQC.Target = PQC.Target + double.Parse(POCode[4]);
                             PQC.Model = dt.Rows[i]["Model"].ToString();
                             PQC.Date = Convert.ToDateTime(dt.Rows[i]["Date"]).ToString("dd-MM-yyyy");
                             PQC.Line = dt.Rows[i]["Line"].ToString();
                             PQC.OUTPUT = double.Parse(dt.Rows[i]["OUTPUT"].ToString());
                             PQC.REWORK = double.Parse(dt.Rows[i]["REWORK"].ToString());
                             PQC.NOGOOD = double.Parse(dt.Rows[i]["NOGOOD"].ToString());
+                            PQC.Total = PQC.OUTPUT + PQC.REWORK + PQC.NOGOOD;
                             PQC.NG_rate_realtime = Math.Round(PQC.NOGOOD / PQC.Total * 100, 1);
                             PQC.NG_rate_allow = double.Parse(dt.Rows[i]["%NG_allow"].ToString());
                             ListPQC.Add(PQC);
@@ -847,6 +860,11 @@ namespace SMESData
                 },
                 new DataColumn()
                 {
+                    ColumnName="Target",
+                    DataType=typeof(double),
+                },
+                new DataColumn()
+                {
                     ColumnName="NG_rate_realtime",
                     DataType=typeof(double),
                 },
@@ -859,7 +877,7 @@ namespace SMESData
             dtPQC.Columns.AddRange(tableColumns);
             foreach (var data in ListPQC)
             {
-                dtPQC.Rows.Add(data.Model, data.Date, data.Line, data.OUTPUT, data.REWORK, data.NOGOOD, data.Total, data.NG_rate_realtime, data.NG_rate_allow);
+                dtPQC.Rows.Add(data.Model, data.Date, data.Line, data.OUTPUT, data.REWORK, data.NOGOOD, data.Total, data.Target, data.NG_rate_realtime, data.NG_rate_allow);
             }
             dtPQC.DefaultView.Sort = "NG_rate_realtime DESC";
             dtPQC = dtPQC.DefaultView.ToTable();
