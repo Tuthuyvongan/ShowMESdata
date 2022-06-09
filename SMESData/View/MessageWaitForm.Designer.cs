@@ -37,6 +37,7 @@ namespace SMESData
             // lbWait
             // 
             this.lbWait.AllowParentOverrides = false;
+            this.lbWait.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbWait.AutoEllipsis = false;
             this.lbWait.Cursor = System.Windows.Forms.Cursors.Default;
             this.lbWait.CursorType = System.Windows.Forms.Cursors.Default;
@@ -53,6 +54,7 @@ namespace SMESData
             // progressBar1
             // 
             this.progressBar1.AllowAnimations = false;
+            this.progressBar1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.progressBar1.Animation = 0;
             this.progressBar1.AnimationSpeed = 220;
             this.progressBar1.AnimationStep = 10;

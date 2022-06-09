@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Drawing;
 using System.Threading;
 using System.Windows.Forms;
@@ -37,8 +38,10 @@ namespace SMESData
         //List data
         List<double> dataMQC = new List<double>();
         List<double> dataPQC = new List<double>();
-        List<ListMQC> dt1 = GetSOFTdata.GetListMQC(DateTime.Today.ToString("yyyy-MM-dd"), "");
-        List<ListPQC> dt2 = GetSOFTdata.GetListPQC(DateTime.Today.ToString("yyyy-MM-dd"), "");
+        DataTable dt1 = GetSOFTdata.GetListMQC(DateTime.Today.ToString("yyyy-MM-dd"), "");
+        DataTable dt2 = GetSOFTdata.GetListPQC(DateTime.Today.ToString("yyyy-MM-dd"), "");
+        //List<ListMQC> dt1 = GetSOFTdata.GetListMQC(DateTime.Today.ToString("yyyy-MM-dd"), "");
+        //List<ListPQC> dt2 = GetSOFTdata.GetListPQC(DateTime.Today.ToString("yyyy-MM-dd"), "");
         Warning wn = new Warning();
         //
         public int secondsToWait = 300;
@@ -341,23 +344,37 @@ namespace SMESData
             }
             else
                 line = "";
-            if (GetSOFTdata.search(model, date, line).Count > 0 && SaveData.MQC == true)
+            if (SaveData.MQC == true)
             {
-                dataMQC.Clear();
-                dtgv_MQC_PD.DataSource = GetSOFTdata.search(model, date, line);
-                ChangeColor();
-                ChangeData();
-            }
-            else if(GetSOFTdata.search(model, date, line).Count > 0 && SaveData.PQC == true)
-            {
-                dataPQC.Clear();
-                dtgv_MQC_PD.DataSource = GetSOFTdata.searchPQC(model, date, line);
-                ChangeColor();
-                ChangeData();
+                DataRow[] results = GetSOFTdata.GetListMQC(date, line).Select("Model like '%" + model + "%'");               
+                if (results.Length > 0)
+                {
+                    DataTable searchResultTable = results.CopyToDataTable();
+                    dataMQC.Clear();
+                    dtgv_MQC_PD.DataSource = searchResultTable;
+                    ChangeColor();
+                    ChangeData();
+                }
+                else
+                {
+                    MessageBox.Show("No result!");
+                }
             }
             else
             {
-                MessageBox.Show("No result!");
+                DataRow[] results = GetSOFTdata.GetListPQC(date, line).Select("Model like '%" + model + "%'");
+                if (results.Length > 0)
+                {
+                    DataTable searchResultTable = results.CopyToDataTable();
+                    dataMQC.Clear();
+                    dtgv_MQC_PD.DataSource = searchResultTable;
+                    ChangeColor();
+                    ChangeData();
+                }
+                else
+                {
+                    MessageBox.Show("No result!");
+                }
             }
         }
 
@@ -411,23 +428,37 @@ namespace SMESData
                 }
                 else
                     line = "";
-                if (GetSOFTdata.search(model, date, line).Count > 0 && SaveData.MQC == true)
+                if (SaveData.MQC == true)
                 {
-                    dataMQC.Clear();
-                    dtgv_MQC_PD.DataSource = GetSOFTdata.search(model, date, line);
-                    ChangeColor();
-                    ChangeData();
-                }
-                else if (GetSOFTdata.search(model, date, line).Count > 0 && SaveData.PQC == true)
-                {
-                    dataPQC.Clear();
-                    dtgv_MQC_PD.DataSource = GetSOFTdata.searchPQC(model, date, line);
-                    ChangeColor();
-                    ChangeData();
+                    DataRow[] results = GetSOFTdata.GetListMQC(date, line).Select("Model like '%" + model + "%'");
+                    if (results.Length > 0)
+                    {
+                        DataTable searchResultTable = results.CopyToDataTable();
+                        dataMQC.Clear();
+                        dtgv_MQC_PD.DataSource = searchResultTable;
+                        ChangeColor();
+                        ChangeData();
+                    }
+                    else
+                    {
+                        MessageBox.Show("No result!");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("No result!");
+                    DataRow[] results = GetSOFTdata.GetListPQC(date, line).Select("Model like '%" + model + "%'");
+                    if (results.Length > 0)
+                    {
+                        DataTable searchResultTable = results.CopyToDataTable();
+                        dataMQC.Clear();
+                        dtgv_MQC_PD.DataSource = searchResultTable;
+                        ChangeColor();
+                        ChangeData();
+                    }
+                    else
+                    {
+                        MessageBox.Show("No result!");
+                    }
                 }
             }    
         }
