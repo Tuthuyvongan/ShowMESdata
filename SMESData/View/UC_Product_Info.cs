@@ -76,9 +76,9 @@ namespace SMESData
         }
         public void lineData()
         {
-            double OP = Math.Round(SaveData.op / SaveData.target * 100, 1);
-            double RW = Math.Round(SaveData.rw / SaveData.target * 100, 1);
-            double NG = Math.Round(SaveData.ng / SaveData.target * 100, 1);
+            double OP = Math.Round(SaveData.op / SaveData.total * 100, 1);
+            double RW = Math.Round(SaveData.rw / SaveData.total * 100, 1);
+            double NG = Math.Round(SaveData.ng / SaveData.total * 100, 1);
             dataMQC.Add(OP);
             dataMQC.Add(RW);
             dataMQC.Add(NG);
