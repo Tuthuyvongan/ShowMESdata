@@ -861,7 +861,7 @@ namespace SMESData
             {
                 dtPQC.Rows.Add(data.Model, data.Date, data.Line, data.OUTPUT, data.REWORK, data.NOGOOD, data.Total, data.NG_rate_realtime, data.NG_rate_allow);
             }
-            dtPQC.DefaultView.Sort = "%NG_rate_realtime DESC";
+            dtPQC.DefaultView.Sort = "NG_rate_realtime DESC";
             dtPQC = dtPQC.DefaultView.ToTable();
             return dtPQC;
         }
