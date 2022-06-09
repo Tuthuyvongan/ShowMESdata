@@ -505,6 +505,7 @@ namespace SMESData
             SaveData.MQCClick = true;
             SaveData.PQCClick = false;
             SaveData.line = "L01";
+            SaveData.Date = dtpChart.Value.ToString("yyyy-MM-dd");
             UpdateStatus();
         }
 
@@ -515,6 +516,7 @@ namespace SMESData
             SaveData.MQCClick = true;
             SaveData.PQCClick = false;
             SaveData.line = "L02";
+            SaveData.Date = dtpChart.Value.ToString("yyyy-MM-dd");
             UpdateStatus();
         }
 
@@ -525,6 +527,7 @@ namespace SMESData
             SaveData.MQCClick = true;
             SaveData.PQCClick = false;
             SaveData.line = "L03";
+            SaveData.Date = dtpChart.Value.ToString("yyyy-MM-dd");
             UpdateStatus();
         }
 
@@ -535,6 +538,7 @@ namespace SMESData
             SaveData.MQCClick = true;
             SaveData.PQCClick = false;
             SaveData.line = "L04";
+            SaveData.Date = dtpChart.Value.ToString("yyyy-MM-dd");
             UpdateStatus();
         }
 
@@ -545,6 +549,7 @@ namespace SMESData
             SaveData.MQCClick = true;
             SaveData.PQCClick = false;
             SaveData.line = "L05";
+            SaveData.Date = dtpChart.Value.ToString("yyyy-MM-dd");
             UpdateStatus();
         }
 
@@ -555,6 +560,7 @@ namespace SMESData
             SaveData.MQCClick = true;
             SaveData.PQCClick = false;
             SaveData.line = "L06";
+            SaveData.Date = dtpChart.Value.ToString("yyyy-MM-dd");
             UpdateStatus();
         }
 
@@ -565,19 +571,22 @@ namespace SMESData
             SaveData.MQCClick = true;
             SaveData.PQCClick = false;
             SaveData.line = "L07";
+            SaveData.Date = dtpChart.Value.ToString("yyyy-MM-dd");
             UpdateStatus();
         }
         public void  changePanel()
         {
+            SaveData.dtTemp1 = new DataTable();
+            SaveData.dtTemp1 = GetSOFTdata.GetListMQC(dtpChart.Value.ToString("yyyy-MM-dd"), "");
             if (SaveData.dtTemp1.Rows.Count > 0)
             {
-                DataRow[] results1 = SaveData.dtTemp1.Select("Line = 'L01'");
-                DataRow[] results2 = SaveData.dtTemp1.Select("Line = 'L02'");
-                DataRow[] results3 = SaveData.dtTemp1.Select("Line = 'L03'");
-                DataRow[] results4 = SaveData.dtTemp1.Select("Line = 'L04'");
-                DataRow[] results5 = SaveData.dtTemp1.Select("Line = 'L05'");
-                DataRow[] results6 = SaveData.dtTemp1.Select("Line = 'L06'");
-                DataRow[] results7 = SaveData.dtTemp1.Select("Line = 'L07'");
+                DataRow[] results1 = SaveData.dtTemp1.Select("Line = 'L01' and NG_rate_realtime > NG_rate_allow");
+                DataRow[] results2 = SaveData.dtTemp1.Select("Line = 'L02' and NG_rate_realtime > NG_rate_allow");
+                DataRow[] results3 = SaveData.dtTemp1.Select("Line = 'L03' and NG_rate_realtime > NG_rate_allow");
+                DataRow[] results4 = SaveData.dtTemp1.Select("Line = 'L04' and NG_rate_realtime > NG_rate_allow");
+                DataRow[] results5 = SaveData.dtTemp1.Select("Line = 'L05' and NG_rate_realtime > NG_rate_allow");
+                DataRow[] results6 = SaveData.dtTemp1.Select("Line = 'L06' and NG_rate_realtime > NG_rate_allow");
+                DataRow[] results7 = SaveData.dtTemp1.Select("Line = 'L07' and NG_rate_realtime > NG_rate_allow");
                 //pn1
                 if (results1.Length > 0)
                 {

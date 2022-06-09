@@ -478,7 +478,6 @@ namespace SMESData
             this.tbSearch.TextPlaceholder = "Search Model Here";
             this.tbSearch.UseSystemPasswordChar = false;
             this.tbSearch.WordWrap = true;
-            this.tbSearch.TextChange += new System.EventHandler(this.tbSearch_TextChange);
             this.tbSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbSearch_KeyDown);
             // 
             // lbNGR

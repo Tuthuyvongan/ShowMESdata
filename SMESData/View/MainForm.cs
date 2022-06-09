@@ -32,7 +32,8 @@ namespace SMESData
             MQC = false;
             PQC = false;
             addUserControl(uc_PI);
-            uc_PI.UpdateTime();
+            if (SaveData.Date == DateTime.Today.ToString("yyyy-MM-dd"))
+                uc_PI.UpdateTime();
             btMQCPD.FocusState = BunifuButton2.ButtonStates.Pressed;
             btPQC.FocusState = BunifuButton2.ButtonStates.Idle;
             btMQC.FocusState = BunifuButton2.ButtonStates.Idle;
@@ -52,8 +53,9 @@ namespace SMESData
             MQC = true;
             PQC = false;
             PD = false;
-            addUserControl(uc_MQC_PieChart);            
-            uc_MQC_PieChart.UpdateTime();
+            addUserControl(uc_MQC_PieChart);
+            if (SaveData.Date == DateTime.Today.ToString("yyyy-MM-dd"))
+                uc_MQC_PieChart.UpdateTime();
             btMQC.FocusState = BunifuButton2.ButtonStates.Pressed;
             btPQC.FocusState = BunifuButton2.ButtonStates.Idle;
             btMQCPD.FocusState = BunifuButton2.ButtonStates.Idle;
@@ -64,8 +66,9 @@ namespace SMESData
             PQC = true;
             MQC = false;
             PD = false;
-            addUserControl(uc_PQC_PieChart);           
-            uc_PQC_PieChart.UpdateTime();
+            addUserControl(uc_PQC_PieChart);
+            if (SaveData.Date == DateTime.Today.ToString("yyyy-MM-dd"))
+                uc_PQC_PieChart.UpdateTime();
             btPQC.FocusState = BunifuButton2.ButtonStates.Pressed;
             btMQC.FocusState = BunifuButton2.ButtonStates.Idle;
             btMQCPD.FocusState = BunifuButton2.ButtonStates.Idle;
@@ -77,7 +80,8 @@ namespace SMESData
             MQC = false;
             PQC = false;
             addUserControl(uc_PI);
-            uc_PI.UpdateTime();
+            if (SaveData.Date == DateTime.Today.ToString("yyyy-MM-dd"))
+                uc_PI.UpdateTime();
             btMQCPD.FocusState = BunifuButton2.ButtonStates.Pressed;
             btPQC.FocusState = BunifuButton2.ButtonStates.Idle;
             btMQC.FocusState = BunifuButton2.ButtonStates.Idle;

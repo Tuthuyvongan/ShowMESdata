@@ -21,14 +21,13 @@ namespace SMESData
             dtpChart.Format = DateTimePickerFormat.Custom;
             dtpChart.Enabled = false;
             dtpChart.ValueChanged += new EventHandler(dtpChart_ValueChanged);
+            SaveData.Date = DateTime.Today.ToString("yyyy-MM-dd");
             //Update datagridview
             SaveData.MQCClick = false;
             SaveData.PQCClick = false;
             SaveData.MQC = true;
             SaveData.PQC = false;
             lbQC.Text = "MQC";
-            SaveData.dtTemp1 = new DataTable();
-            SaveData.dtTemp2 = new DataTable();
             UpdateDTGV();
             //Setting
             lblTime.Font = new Font("Times New Roman", 14, FontStyle.Bold);
@@ -40,10 +39,6 @@ namespace SMESData
         //List data
         List<double> dataMQC = new List<double>();
         List<double> dataPQC = new List<double>();
-        DataTable dt1 = GetSOFTdata.GetListMQC(DateTime.Today.ToString("yyyy-MM-dd"), "");
-        DataTable dt2 = GetSOFTdata.GetListPQC(DateTime.Today.ToString("yyyy-MM-dd"), "");
-        //List<ListMQC> dt1 = GetSOFTdata.GetListMQC(DateTime.Today.ToString("yyyy-MM-dd"), "");
-        //List<ListPQC> dt2 = GetSOFTdata.GetListPQC(DateTime.Today.ToString("yyyy-MM-dd"), "");
         Warning wn = new Warning();
         //
         public int secondsToWait = 300;
@@ -57,6 +52,7 @@ namespace SMESData
             {
                 dataMQC.Clear();
                 dataPQC.Clear();
+                SaveData.Date = dtpChart.Value.ToString("yyyy-MM-dd");
                 SaveData.Model = dtgv_MQC_PD.Rows[e.RowIndex].Cells[0].Value.ToString();
                 SaveData.line = dtgv_MQC_PD.Rows[e.RowIndex].Cells[2].Value.ToString();
                 SaveData.op = double.Parse(dtgv_MQC_PD.Rows[e.RowIndex].Cells[3].Value.ToString());
@@ -80,9 +76,9 @@ namespace SMESData
         }
         public void lineData()
         {
-            double OP = Math.Round(SaveData.op / SaveData.total * 100, 1);
-            double RW = Math.Round(SaveData.rw / SaveData.total * 100, 1);
-            double NG = Math.Round(SaveData.ng / SaveData.total * 100, 1);
+            double OP = Math.Round(SaveData.op / SaveData.target * 100, 1);
+            double RW = Math.Round(SaveData.rw / SaveData.target * 100, 1);
+            double NG = Math.Round(SaveData.ng / SaveData.target * 100, 1);
             dataMQC.Add(OP);
             dataMQC.Add(RW);
             dataMQC.Add(NG);
@@ -151,74 +147,59 @@ namespace SMESData
             }    
         }
         public void UpdateDTGV()
-        {            
-            if (GetSOFTdata.GetListMQC(dtpChart.Value.ToString("yyyy-MM-dd"), "") != null && SaveData.MQC == true || GetSOFTdata.GetListPQC(dtpChart.Value.ToString("yyyy-MM-dd"), "") != null && SaveData.PQC == true)
+        {
+            string date = dtpChart.Value.ToString("yyyy-MM-dd");
+            SaveData.line = "";
+            string line = SaveData.line;
+            if (GetSOFTdata.GetListMQC(date, line) != null && SaveData.MQC == true || GetSOFTdata.GetListPQC(date, line) != null && SaveData.PQC == true)
             {
                 if (SaveData.MQC == true)
-                {
-                    SaveData.dtTemp1 = new DataTable();
-                    DataColumn[] tableColumns = new DataColumn[]
-                    {
-                        new DataColumn()
-                           {
-                              ColumnName="Line",
-                              DataType=typeof(string),
-                           }
-                    };
-                    SaveData.dtTemp1.Columns.AddRange(tableColumns);
-                    dataMQC.Clear();
-                    string date = dtpChart.Value.ToString("yyyy-MM-dd");
-                    SaveData.line = "";
-                    string line = SaveData.line;
+                {                    
+                    dataMQC.Clear();                    
                     dtgv_MQC_PD.DataSource = GetSOFTdata.GetListMQC(date, line);
                     dtpChart.Visible = true;
                     ChangeColor();
                 }  
                 else
-                {
-                    SaveData.dtTemp2 = new DataTable();
-                    DataColumn[] tableColumns = new DataColumn[]
-                    {
-                        new DataColumn()
-                           {
-                              ColumnName="Line",
-                              DataType=typeof(string),
-                           }
-                    };
-                    SaveData.dtTemp2.Columns.AddRange(tableColumns);
-                    dataPQC.Clear();
-                    string date = dtpChart.Value.ToString("yyyy-MM-dd");
-                    SaveData.line = "";
-                    string line = SaveData.line;
+                {                  
+                    dataPQC.Clear();                   
                     dtgv_MQC_PD.DataSource = GetSOFTdata.GetListPQC(date, line);
                     dtpChart.Visible = true;
                     ChangeColor();
                 }    
             }
             ChangeData();
+            btStart.Enabled = true;
+            btStop.Enabled = false;
         }
         public void UpdateDTGVByLine()
         {
-            if (GetSOFTdata.GetListMQC(dtpChart.Value.ToString("yyyy-MM-dd"), "") != null && SaveData.MQC == true || GetSOFTdata.GetListPQC(dtpChart.Value.ToString("yyyy-MM-dd"), "") != null && SaveData.PQC == true)
+            dtpChart.Value = Convert.ToDateTime(SaveData.Date);
+            string date = SaveData.Date;
+            string line = SaveData.line;
+            if (GetSOFTdata.GetListMQC(date, line) != null && SaveData.MQC == true || GetSOFTdata.GetListPQC(date, line) != null && SaveData.PQC == true)
             {
                 if (SaveData.MQC == true)
                 {
-                    dataMQC.Clear();
-                    string date = dtpChart.Value.ToString("yyyy-MM-dd");
-                    string line = SaveData.line;
+                    dataMQC.Clear();                   
                     dtgv_MQC_PD.DataSource = GetSOFTdata.GetListMQC(date, line);
                     ChangeColor();
                 }    
                 else
                 {
                     dataPQC.Clear();
-                    string date = dtpChart.Value.ToString("yyyy-MM-dd");
-                    string line = SaveData.line;
                     dtgv_MQC_PD.DataSource = GetSOFTdata.GetListPQC(date, line);
                     ChangeColor();
                 }    
             }
             ChangeData();
+            btStart.Enabled = false;
+            btStop.Enabled = true;
+            dtpChart.Enabled = false;
+            pnTimeControl.Enabled = false;
+            lblTime.Visible = true;
+            SaveData.MQCClick = false;
+            SaveData.PQCClick = false;
         }
         public void ChangeColor()
         {                       
@@ -237,11 +218,7 @@ namespace SMESData
                                         dtgv_MQC_PD[j, i].Style.BackColor = Color.Red;
                                         dtgv_MQC_PD[j, i].Style.ForeColor = Color.White;
                                         dtgv_MQC_PD[j, i].Style.SelectionBackColor = Color.FromArgb(220, 20, 60);
-                                    }
-                                    if (SaveData.MQC == true)
-                                        SaveData.dtTemp1.Rows.Add(dtgv_MQC_PD.Rows[i].Cells[2].Value.ToString());
-                                    else
-                                        SaveData.dtTemp2.Rows.Add(dtgv_MQC_PD.Rows[i].Cells[2].Value.ToString());
+                                    }                                    
                                 }
                                 Thread.Sleep(50);
                                 msf.UpdateProgress(100 * (i + 1) / dtgv_MQC_PD.Rows.Count, "Application is running, please wait ... ");
@@ -258,6 +235,7 @@ namespace SMESData
             {
                 dataMQC.Clear();
                 dataPQC.Clear();
+                SaveData.Date = dtpChart.Value.ToString("yyyy-MM-dd");
                 SaveData.Model = dtgv_MQC_PD.Rows[0].Cells[0].Value.ToString();
                 SaveData.line = dtgv_MQC_PD.Rows[0].Cells[2].Value.ToString();
                 SaveData.op = double.Parse(dtgv_MQC_PD.Rows[0].Cells[3].Value.ToString());
@@ -281,8 +259,11 @@ namespace SMESData
         }
         private void dtpChart_ValueChanged(object sender, EventArgs e)
         {
-            dtpChart.Visible = false;
-            UpdateDTGV();
+            if (SaveData.MQCClick == false && SaveData.PQCClick == false)
+            {
+                dtpChart.Visible = false;
+                UpdateDTGV();
+            }      
         }
         public void UpdateTime()
         {
@@ -326,8 +307,6 @@ namespace SMESData
                 {
                     lblTime.Visible = false;
                     timer1.Stop();
-                    dt1 = GetSOFTdata.GetListMQC(DateTime.Today.ToString("yyyy-MM-dd"), "");
-                    dt2 = GetSOFTdata.GetListPQC(DateTime.Today.ToString("yyyy-MM-dd"), "");
                     UpdateDTGV();                   
                     UpdateTime();
                 }
@@ -410,17 +389,6 @@ namespace SMESData
             }
         }
 
-        private void tbSearch_TextChange(object sender, EventArgs e)
-        {
-            if (tbSearch.Text == "" || tbSearch.Text == null || tbSearch.Text == string.Empty)
-            {
-                if (dtpChart.Value == DateTime.Today)
-                    if (SaveData.MQC == true && dt1 != null)
-                        dtgv_MQC_PD.DataSource = dt1;
-                    else if (SaveData.PQC == true && dt2 != null)
-                        dtgv_MQC_PD.DataSource = dt2;
-            }    
-        }
         private void btMQCD_Click(object sender, EventArgs e)
         {
             SaveData.MQCClick = false;
