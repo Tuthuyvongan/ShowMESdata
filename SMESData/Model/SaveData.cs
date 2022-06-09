@@ -12,6 +12,8 @@ namespace SMESData
         public static string line { get; set; }
         public static double NGrealtime { get; set; }
         public static string NGallow { get; set; }
+        public static double RWrealtime { get; set; }
+        public static string RWallow { get; set; }
         public static string Model { get; set; }
         public static bool MQCClick { get; set; }
         public static bool PQCClick { get; set; }

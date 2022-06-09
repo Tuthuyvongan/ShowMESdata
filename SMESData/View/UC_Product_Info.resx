@@ -117,6 +117,18 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="lbRWA.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Times New Roman'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
+  </data>
+  <data name="bunifuLabel4.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Times New Roman'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
+  </data>
+  <data name="lbRWR.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Times New Roman'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
+  </data>
+  <data name="bunifuLabel2.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Times New Roman'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
+  </data>
   <data name="lbTarget.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 0px; font-family: 'Times New Roman'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
   </data>
@@ -126,12 +138,11 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="bunifuButton1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAIsAAAAyCAYAAABs3ChCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADUSURBVHhe7d2xDcMwAANB779ixnAvh+4CkMgEV9xDoFr1
-        us65Ps9zPfDP+05y6gtY0h5hSXuEJe0RlrRHWNIeYUl7hCXtEZa0R1jSHmFJe4Ql7RGWtEdY0h5hSXuE
-        Je0RlrRHWNIeYUl7hCXtEZa0R1jSHmFJe4Ql7RGWtEdY0h5hSXuEJe0RlrRHWNIeYUl7hCXtEZa0R1jS
-        HmFJe4Ql7RGWtEdY0h5hSXuEJe0RlrRHWNIeYUl7hCXtEZa0R1jSHmFJe4Ql7RGW93Oqe13Ar3Ou+wtG
-        NSTmawM1XwAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAAEwAAAApCAYAAACfrs/CAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACnSURBVGhD7dqxDcMwAMRA779ixnAv510zRBZgcYTw6lTr
+        Ouf6PM/15L/3rXbiRdzKMW7lGLdyjFs5xq0c41aOcSvHuJVj3MoxbuUYt3KMWznGrRzjVo5xK8e4lWPc
+        yjFu5Ri3coxbOcatHONWjnErx7iVY9zKMW7lGLdyjFs5xq0c41aOcSvHuJVj3MoxbuUYt3KMWznGrRzj
+        Vo5x7z/9+9dF6Jzr/gIFm2Ex1Z5GZQAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="lbLine.BaseStylesheet" xml:space="preserve">
@@ -468,11 +479,11 @@
   </data>
   <data name="tbNGA.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAIsAAAApCAYAAAAFzdoaAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACgSURBVHhe7dKxCQMxAARB9V+VHpXhMlyAjUCJ4W3W+Qxc
-        cvEO+Mta6zHnfJndbfdxUhljH/DN7uOkIhZ+EwuZWMjEQiYWMrGQiYVMLGRiIRMLmVjIxEImFjKxkImF
-        TCxkYiETC5lYyMRCJhYysZCJhUwsZGIhEwuZWMjEQiYWMrGQiYVMLGRiIRMLmVjIxEL2Ect1Xc99mN1t
-        93FSgWKMN0QwLB9lAVOmAAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAAF4AAAApCAYAAAC89Z4XAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACVSURBVGhD7dCxDcMwAANB7T+VDI2RMTJADAFqMoD9zT3A
+        huUNha21PnPOnz2/bX3Yx9iH3mlbH3bwbwY+CnwU+CjwUeCjwEeBjwIfBT4KfBT4KPBR4KPAR4GPAh8F
+        Pgp8FPgo8FHgo8BHgY8CHwU+CnwU+CjwUeCjwEeBjwIfBT4KfBT4qD/467q++7Dnt60Pu95vjBsT+hxo
+        voud2gAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="lbNG.BaseStylesheet" xml:space="preserve">

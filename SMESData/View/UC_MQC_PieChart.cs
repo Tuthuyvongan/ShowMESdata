@@ -574,7 +574,7 @@ namespace SMESData
             SaveData.Date = dtpChart.Value.ToString("yyyy-MM-dd");
             UpdateStatus();
         }
-        public void  changePanel()
+        public void changePanel()
         {
             SaveData.dtTemp1 = new DataTable();
             SaveData.dtTemp1 = GetSOFTdata.GetListMQC(dtpChart.Value.ToString("yyyy-MM-dd"), "");

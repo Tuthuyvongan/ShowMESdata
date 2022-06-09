@@ -51,6 +51,10 @@ namespace SMESData
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.dtgv_MQC_PD = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbRWA = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel4 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lbRWR = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lbTarget = new Bunifu.UI.WinForms.BunifuLabel();
             this.lb8 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuButton1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -198,6 +202,10 @@ namespace SMESData
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.lbRWA);
+            this.panel1.Controls.Add(this.bunifuLabel4);
+            this.panel1.Controls.Add(this.lbRWR);
+            this.panel1.Controls.Add(this.bunifuLabel2);
             this.panel1.Controls.Add(this.lbTarget);
             this.panel1.Controls.Add(this.lb8);
             this.panel1.Controls.Add(this.bunifuButton1);
@@ -229,6 +237,66 @@ namespace SMESData
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1412, 452);
             this.panel1.TabIndex = 18;
+            // 
+            // lbRWA
+            // 
+            this.lbRWA.AllowParentOverrides = false;
+            this.lbRWA.AutoEllipsis = false;
+            this.lbRWA.CursorType = null;
+            this.lbRWA.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.lbRWA.Location = new System.Drawing.Point(836, 329);
+            this.lbRWA.Name = "lbRWA";
+            this.lbRWA.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbRWA.Size = new System.Drawing.Size(8, 19);
+            this.lbRWA.TabIndex = 66;
+            this.lbRWA.Text = "..";
+            this.lbRWA.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbRWA.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // bunifuLabel4
+            // 
+            this.bunifuLabel4.AllowParentOverrides = false;
+            this.bunifuLabel4.AutoEllipsis = false;
+            this.bunifuLabel4.CursorType = null;
+            this.bunifuLabel4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.bunifuLabel4.Location = new System.Drawing.Point(749, 329);
+            this.bunifuLabel4.Name = "bunifuLabel4";
+            this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel4.Size = new System.Drawing.Size(84, 19);
+            this.bunifuLabel4.TabIndex = 65;
+            this.bunifuLabel4.Text = "%RW Allow";
+            this.bunifuLabel4.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel4.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // lbRWR
+            // 
+            this.lbRWR.AllowParentOverrides = false;
+            this.lbRWR.AutoEllipsis = false;
+            this.lbRWR.CursorType = null;
+            this.lbRWR.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.lbRWR.Location = new System.Drawing.Point(860, 279);
+            this.lbRWR.Name = "lbRWR";
+            this.lbRWR.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbRWR.Size = new System.Drawing.Size(8, 19);
+            this.lbRWR.TabIndex = 64;
+            this.lbRWR.Text = "..";
+            this.lbRWR.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbRWR.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // bunifuLabel2
+            // 
+            this.bunifuLabel2.AllowParentOverrides = false;
+            this.bunifuLabel2.AutoEllipsis = false;
+            this.bunifuLabel2.CursorType = null;
+            this.bunifuLabel2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.bunifuLabel2.Location = new System.Drawing.Point(749, 279);
+            this.bunifuLabel2.Name = "bunifuLabel2";
+            this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel2.Size = new System.Drawing.Size(108, 19);
+            this.bunifuLabel2.TabIndex = 63;
+            this.bunifuLabel2.Text = "%RW Realtime";
+            this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // lbTarget
             // 
@@ -269,14 +337,13 @@ namespace SMESData
             this.bunifuButton1.AnimationSpeed = 200;
             this.bunifuButton1.AutoGenerateColors = false;
             this.bunifuButton1.AutoRoundBorders = false;
-            this.bunifuButton1.AutoSize = true;
             this.bunifuButton1.AutoSizeLeftIcon = true;
             this.bunifuButton1.AutoSizeRightIcon = true;
             this.bunifuButton1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuButton1.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
             this.bunifuButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton1.BackgroundImage")));
             this.bunifuButton1.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.bunifuButton1.ButtonText = "Fix %NG Allow";
+            this.bunifuButton1.ButtonText = "Fix %NG \r\nAllow";
             this.bunifuButton1.ButtonTextMarginLeft = 0;
             this.bunifuButton1.ColorContrastOnClick = 45;
             this.bunifuButton1.ColorContrastOnHover = 45;
@@ -291,7 +358,7 @@ namespace SMESData
             this.bunifuButton1.DisabledFillColor = System.Drawing.Color.Empty;
             this.bunifuButton1.DisabledForecolor = System.Drawing.Color.Empty;
             this.bunifuButton1.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.bunifuButton1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuButton1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuButton1.ForeColor = System.Drawing.Color.Black;
             this.bunifuButton1.IconLeft = null;
             this.bunifuButton1.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -311,7 +378,7 @@ namespace SMESData
             this.bunifuButton1.IdleIconLeftImage = null;
             this.bunifuButton1.IdleIconRightImage = null;
             this.bunifuButton1.IndicateFocus = false;
-            this.bunifuButton1.Location = new System.Drawing.Point(837, 264);
+            this.bunifuButton1.Location = new System.Drawing.Point(936, 210);
             this.bunifuButton1.Name = "bunifuButton1";
             this.bunifuButton1.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bunifuButton1.OnDisabledState.BorderRadius = 1;
@@ -345,7 +412,7 @@ namespace SMESData
             this.bunifuButton1.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.bunifuButton1.OnPressedState.IconLeftImage = null;
             this.bunifuButton1.OnPressedState.IconRightImage = null;
-            this.bunifuButton1.Size = new System.Drawing.Size(139, 50);
+            this.bunifuButton1.Size = new System.Drawing.Size(76, 41);
             this.bunifuButton1.TabIndex = 60;
             this.bunifuButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuButton1.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -360,7 +427,7 @@ namespace SMESData
             this.lbLine.AutoEllipsis = false;
             this.lbLine.CursorType = null;
             this.lbLine.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.lbLine.Location = new System.Drawing.Point(791, 117);
+            this.lbLine.Location = new System.Drawing.Point(790, 117);
             this.lbLine.Name = "lbLine";
             this.lbLine.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbLine.Size = new System.Drawing.Size(12, 19);
@@ -486,7 +553,7 @@ namespace SMESData
             this.lbNGR.AutoEllipsis = false;
             this.lbNGR.CursorType = null;
             this.lbNGR.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.lbNGR.Location = new System.Drawing.Point(861, 171);
+            this.lbNGR.Location = new System.Drawing.Point(860, 171);
             this.lbNGR.Name = "lbNGR";
             this.lbNGR.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbNGR.Size = new System.Drawing.Size(8, 19);
@@ -523,7 +590,7 @@ namespace SMESData
             this.tbNGA.IconRight = null;
             this.tbNGA.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.tbNGA.Lines = new string[0];
-            this.tbNGA.Location = new System.Drawing.Point(837, 210);
+            this.tbNGA.Location = new System.Drawing.Point(836, 210);
             this.tbNGA.MaxLength = 32767;
             this.tbNGA.MinimumSize = new System.Drawing.Size(1, 1);
             this.tbNGA.Modified = false;
@@ -559,7 +626,7 @@ namespace SMESData
             this.tbNGA.SelectionLength = 0;
             this.tbNGA.SelectionStart = 0;
             this.tbNGA.ShortcutsEnabled = true;
-            this.tbNGA.Size = new System.Drawing.Size(139, 41);
+            this.tbNGA.Size = new System.Drawing.Size(94, 41);
             this.tbNGA.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.tbNGA.TabIndex = 53;
             this.tbNGA.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -651,7 +718,7 @@ namespace SMESData
             this.lb7.AutoEllipsis = false;
             this.lb7.CursorType = null;
             this.lb7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.lb7.Location = new System.Drawing.Point(750, 225);
+            this.lb7.Location = new System.Drawing.Point(749, 225);
             this.lb7.Name = "lb7";
             this.lb7.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lb7.Size = new System.Drawing.Size(81, 19);
@@ -666,7 +733,7 @@ namespace SMESData
             this.lb6.AutoEllipsis = false;
             this.lb6.CursorType = null;
             this.lb6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.lb6.Location = new System.Drawing.Point(750, 171);
+            this.lb6.Location = new System.Drawing.Point(749, 171);
             this.lb6.Name = "lb6";
             this.lb6.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lb6.Size = new System.Drawing.Size(105, 19);
@@ -681,7 +748,7 @@ namespace SMESData
             this.lb5.AutoEllipsis = false;
             this.lb5.CursorType = null;
             this.lb5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.lb5.Location = new System.Drawing.Point(750, 117);
+            this.lb5.Location = new System.Drawing.Point(749, 117);
             this.lb5.Name = "lb5";
             this.lb5.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lb5.Size = new System.Drawing.Size(35, 19);
@@ -1582,5 +1649,9 @@ namespace SMESData
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton1;
         private Bunifu.UI.WinForms.BunifuLabel lbTarget;
         private Bunifu.UI.WinForms.BunifuLabel lb8;
+        private Bunifu.UI.WinForms.BunifuLabel lbRWA;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel4;
+        private Bunifu.UI.WinForms.BunifuLabel lbRWR;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel2;
     }
 }

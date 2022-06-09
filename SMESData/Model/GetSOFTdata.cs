@@ -101,7 +101,7 @@ namespace SMESData
             sqlGetData.Append("select distinct m.model as Model, m.inspectdate as Date, m.line as Line, m.OUTPUT, m.REWORK, m.NOGOOD, ");
             sqlGetData.Append("serno, ");
             sqlGetData.Append("(CASE WHEN (select top 1 rate from thu_SMESData_NGRate where model = a.model and line = a.line order by inspectdate desc) IS NOT NULL ");
-            sqlGetData.Append("THEN (select top 1 rate from thu_SMESData_NGRate where model = a.model and line = a.line order by inspectdate desc) ELSE '2' END) as '%NG_allow' ");
+            sqlGetData.Append("THEN (select top 1 rate from thu_SMESData_NGRate where model = a.model and line = a.line order by inspectdate desc) ELSE '2' END) as '%NG_allow', '2.5' as '%RW_allow' ");
             sqlGetData.Append("FROM m_ERPMQC_REALTIME as a ");
             sqlGetData.Append("LEFT JOIN thu_SMESData_NGRate as r on a.model = r.model and a.line = r.line and a.inspectdate = r.inspectdate ");
             sqlGetData.Append("join(SELECT model,  inspectdate, line, ");
@@ -130,7 +130,9 @@ namespace SMESData
                     MQC.NOGOOD = double.Parse(dt.Rows[i]["NOGOOD"].ToString());
                     MQC.Total = MQC.OUTPUT + MQC.REWORK + MQC.NOGOOD;
                     MQC.NG_rate_realtime = Math.Round(MQC.NOGOOD / MQC.Total * 100, 1);
-                    MQC.NG_rate_allow = double.Parse(dt.Rows[i]["%NG_allow"].ToString());                    
+                    MQC.NG_rate_allow = double.Parse(dt.Rows[i]["%NG_allow"].ToString());
+                    MQC.RW_rate_realtime = Math.Round(MQC.REWORK / MQC.Total * 100, 1);
+                    MQC.RW_rate_allow = double.Parse(dt.Rows[i]["%RW_allow"].ToString());
                     ListMQC.Add(MQC);
                 }
                 else
@@ -156,7 +158,9 @@ namespace SMESData
                             MQC.NOGOOD = double.Parse(dt.Rows[i]["NOGOOD"].ToString());
                             MQC.Total = MQC.OUTPUT + MQC.REWORK + MQC.NOGOOD;
                             MQC.NG_rate_realtime = Math.Round(MQC.NOGOOD / MQC.Total * 100, 1);
-                            MQC.NG_rate_allow = double.Parse(dt.Rows[i]["%NG_allow"].ToString()); 
+                            MQC.NG_rate_allow = double.Parse(dt.Rows[i]["%NG_allow"].ToString());
+                            MQC.RW_rate_realtime = Math.Round(MQC.REWORK / MQC.Total * 100, 1);
+                            MQC.RW_rate_allow = double.Parse(dt.Rows[i]["%RW_allow"].ToString());
                             ListMQC.Add(MQC);
                             MQC = new ListMQC();
                             MQC.Target = 0;
@@ -178,7 +182,9 @@ namespace SMESData
                             MQC.NOGOOD = double.Parse(dt.Rows[i]["NOGOOD"].ToString());
                             MQC.Total = MQC.OUTPUT + MQC.REWORK + MQC.NOGOOD;
                             MQC.NG_rate_realtime = Math.Round(MQC.NOGOOD / MQC.Total * 100, 1);
-                            MQC.NG_rate_allow = double.Parse(dt.Rows[i]["%NG_allow"].ToString());                           
+                            MQC.NG_rate_allow = double.Parse(dt.Rows[i]["%NG_allow"].ToString());
+                            MQC.RW_rate_realtime = Math.Round(MQC.REWORK / MQC.Total * 100, 1);
+                            MQC.RW_rate_allow = double.Parse(dt.Rows[i]["%RW_allow"].ToString());
                             ListMQC.Add(MQC);
                         }
                         else
@@ -194,6 +200,8 @@ namespace SMESData
                             MQC.Total = MQC.OUTPUT + MQC.REWORK + MQC.NOGOOD;
                             MQC.NG_rate_realtime = Math.Round(MQC.NOGOOD / MQC.Total * 100, 1);
                             MQC.NG_rate_allow = double.Parse(dt.Rows[i]["%NG_allow"].ToString());
+                            MQC.RW_rate_realtime = Math.Round(MQC.REWORK / MQC.Total * 100, 1);
+                            MQC.RW_rate_allow = double.Parse(dt.Rows[i]["%RW_allow"].ToString());
                             ListMQC.Add(MQC);
                         }
                     }
@@ -251,12 +259,22 @@ namespace SMESData
                 {
                     ColumnName="NG_rate_allow",
                     DataType=typeof(double),
+                },
+                new DataColumn()
+                {
+                    ColumnName="RW_rate_realtime",
+                    DataType=typeof(double),
+                },
+                new DataColumn()
+                {
+                    ColumnName="RW_rate_allow",
+                    DataType=typeof(double),
                 }
             };
             dtMQC.Columns.AddRange(tableColumns);
             foreach (var data in ListMQC)
             {
-                dtMQC.Rows.Add(data.Model, data.Date, data.Line, data.OUTPUT, data.REWORK, data.NOGOOD, data.Total, data.Target, data.NG_rate_realtime, data.NG_rate_allow);
+                dtMQC.Rows.Add(data.Model, data.Date, data.Line, data.OUTPUT, data.REWORK, data.NOGOOD, data.Total, data.Target, data.NG_rate_realtime, data.NG_rate_allow, data.RW_rate_realtime, data.RW_rate_allow);
             }
             dtMQC.DefaultView.Sort = "NG_rate_realtime DESC";
             dtMQC = dtMQC.DefaultView.ToTable();
@@ -271,7 +289,7 @@ namespace SMESData
             StringBuilder sqlGetData = new StringBuilder();
             sqlGetData.Append("select distinct m.Model, m.Date, m.line as Line, m.OUTPUT, m.REWORK, m.NOGOOD, ");
             sqlGetData.Append("(CASE WHEN (select top 1 rate from thu_SMESData_NGRate_PQC where Model = a.Model and line = a.line order by Date desc) IS NOT NULL ");
-            sqlGetData.Append("THEN (select top 1 rate from thu_SMESData_NGRate_PQC where Model = a.Model and line = a.line order by Date desc) ELSE '2' END) as '%NG_allow', POCode ");
+            sqlGetData.Append("THEN (select top 1 rate from thu_SMESData_NGRate_PQC where Model = a.Model and line = a.line order by Date desc) ELSE '2' END) as '%NG_allow', POCode, '2.5' as '%RW_allow' ");
             sqlGetData.Append("FROM ProcessHistory.PQCMesData as a ");
             sqlGetData.Append("LEFT JOIN thu_SMESData_NGRate_PQC as r on a.Model = r.Model and a.line = r.line and CAST(a.InspectDateTime as Date) = r.Date ");
             sqlGetData.Append("join(SELECT Model, CAST(InspectDateTime as Date) as Date, line, ");
@@ -301,6 +319,8 @@ namespace SMESData
                     PQC.Total = PQC.OUTPUT + PQC.REWORK + PQC.NOGOOD;
                     PQC.NG_rate_realtime = Math.Round(PQC.NOGOOD / PQC.Total * 100, 1);
                     PQC.NG_rate_allow = double.Parse(dt.Rows[i]["%NG_allow"].ToString());
+                    PQC.RW_rate_realtime = Math.Round(PQC.REWORK / PQC.Total * 100, 1);
+                    PQC.RW_rate_allow = double.Parse(dt.Rows[i]["%RW_allow"].ToString());
                     ListPQC.Add(PQC);
                 }
                 else
@@ -327,6 +347,8 @@ namespace SMESData
                             PQC.Total = PQC.OUTPUT + PQC.REWORK + PQC.NOGOOD;
                             PQC.NG_rate_realtime = Math.Round(PQC.NOGOOD / PQC.Total * 100, 1);
                             PQC.NG_rate_allow = double.Parse(dt.Rows[i]["%NG_allow"].ToString());
+                            PQC.RW_rate_realtime = Math.Round(PQC.REWORK / PQC.Total * 100, 1);
+                            PQC.RW_rate_allow = double.Parse(dt.Rows[i]["%RW_allow"].ToString());
                             ListPQC.Add(PQC);
                             PQC = new ListPQC();
                             PQC.Target = 0;
@@ -349,6 +371,8 @@ namespace SMESData
                             PQC.Total = PQC.OUTPUT + PQC.REWORK + PQC.NOGOOD;
                             PQC.NG_rate_realtime = Math.Round(PQC.NOGOOD / PQC.Total * 100, 1);
                             PQC.NG_rate_allow = double.Parse(dt.Rows[i]["%NG_allow"].ToString());
+                            PQC.RW_rate_realtime = Math.Round(PQC.REWORK / PQC.Total * 100, 1);
+                            PQC.RW_rate_allow = double.Parse(dt.Rows[i]["%RW_allow"].ToString());
                             ListPQC.Add(PQC);
                         }
                         else
@@ -364,6 +388,8 @@ namespace SMESData
                             PQC.Total = PQC.OUTPUT + PQC.REWORK + PQC.NOGOOD;
                             PQC.NG_rate_realtime = Math.Round(PQC.NOGOOD / PQC.Total * 100, 1);
                             PQC.NG_rate_allow = double.Parse(dt.Rows[i]["%NG_allow"].ToString());
+                            PQC.RW_rate_realtime = Math.Round(PQC.REWORK / PQC.Total * 100, 1);
+                            PQC.RW_rate_allow = double.Parse(dt.Rows[i]["%RW_allow"].ToString());
                             ListPQC.Add(PQC);
                         }
                     }
@@ -421,17 +447,26 @@ namespace SMESData
                 {
                     ColumnName="NG_rate_allow",
                     DataType=typeof(double),
+                },
+                new DataColumn()
+                {
+                    ColumnName="RW_rate_realtime",
+                    DataType=typeof(double),
+                },
+                new DataColumn()
+                {
+                    ColumnName="RW_rate_allow",
+                    DataType=typeof(double),
                 }
             };
             dtPQC.Columns.AddRange(tableColumns);
             foreach (var data in ListPQC)
             {
-                dtPQC.Rows.Add(data.Model, data.Date, data.Line, data.OUTPUT, data.REWORK, data.NOGOOD, data.Total, data.Target, data.NG_rate_realtime, data.NG_rate_allow);
+                dtPQC.Rows.Add(data.Model, data.Date, data.Line, data.OUTPUT, data.REWORK, data.NOGOOD, data.Total, data.Target, data.NG_rate_realtime, data.NG_rate_allow, data.RW_rate_realtime, data.RW_rate_allow);
             }
             dtPQC.DefaultView.Sort = "NG_rate_realtime DESC";
             dtPQC = dtPQC.DefaultView.ToTable();
             return dtPQC;
         }
-
     }
 }

@@ -62,6 +62,8 @@ namespace SMESData
                 SaveData.target = double.Parse(dtgv_MQC_PD.Rows[e.RowIndex].Cells[7].Value.ToString());
                 SaveData.NGrealtime = double.Parse(dtgv_MQC_PD.Rows[e.RowIndex].Cells[8].Value.ToString());
                 SaveData.NGallow = dtgv_MQC_PD.Rows[e.RowIndex].Cells[9].Value.ToString();
+                SaveData.RWrealtime = double.Parse(dtgv_MQC_PD.Rows[e.RowIndex].Cells[10].Value.ToString());
+                SaveData.RWallow = dtgv_MQC_PD.Rows[e.RowIndex].Cells[11].Value.ToString();
                 lbModel.Text = SaveData.Model;
                 lbLine.Text = SaveData.line;
                 lbOP.Text = SaveData.op.ToString();
@@ -71,6 +73,8 @@ namespace SMESData
                 lbTarget.Text = SaveData.target.ToString();
                 lbNGR.Text = SaveData.NGrealtime.ToString() + "%";
                 tbNGA.Text = SaveData.NGallow.ToString() + "%";
+                lbRWR.Text = SaveData.RWrealtime.ToString() + "%";
+                lbRWA.Text = SaveData.RWallow.ToString() + "%";
                 renderPiechart();
             }
         }
@@ -147,12 +151,12 @@ namespace SMESData
             }    
         }
         public void UpdateDTGV()
-        {
+        {           
             string date = dtpChart.Value.ToString("yyyy-MM-dd");
             SaveData.line = "";
             string line = SaveData.line;
             if (GetSOFTdata.GetListMQC(date, line) != null && SaveData.MQC == true || GetSOFTdata.GetListPQC(date, line) != null && SaveData.PQC == true)
-            {
+            {              
                 if (SaveData.MQC == true)
                 {                    
                     dataMQC.Clear();                    
@@ -166,19 +170,20 @@ namespace SMESData
                     dtgv_MQC_PD.DataSource = GetSOFTdata.GetListPQC(date, line);
                     dtpChart.Visible = true;
                     ChangeColor();
-                }    
+                }
+                dtgv_MQC_PD.Columns["target"].Visible = false;
+                dtgv_MQC_PD.Columns["NG_rate_allow"].Visible = false;
+                dtgv_MQC_PD.Columns["RW_rate_allow"].Visible = false;
             }
             ChangeData();
-            btStart.Enabled = true;
-            btStop.Enabled = false;
         }
         public void UpdateDTGVByLine()
-        {
+        {           
             dtpChart.Value = Convert.ToDateTime(SaveData.Date);
             string date = SaveData.Date;
             string line = SaveData.line;
             if (GetSOFTdata.GetListMQC(date, line) != null && SaveData.MQC == true || GetSOFTdata.GetListPQC(date, line) != null && SaveData.PQC == true)
-            {
+            {                
                 if (SaveData.MQC == true)
                 {
                     dataMQC.Clear();                   
@@ -190,16 +195,22 @@ namespace SMESData
                     dataPQC.Clear();
                     dtgv_MQC_PD.DataSource = GetSOFTdata.GetListPQC(date, line);
                     ChangeColor();
-                }    
+                }
+                dtgv_MQC_PD.Columns["target"].Visible = false;
+                dtgv_MQC_PD.Columns["NG_rate_allow"].Visible = false;
+                dtgv_MQC_PD.Columns["RW_rate_allow"].Visible = false;
             }
             ChangeData();
-            btStart.Enabled = false;
-            btStop.Enabled = true;
-            dtpChart.Enabled = false;
-            pnTimeControl.Enabled = false;
-            lblTime.Visible = true;
-            SaveData.MQCClick = false;
-            SaveData.PQCClick = false;
+            if (SaveData.Date != DateTime.Today.ToString("yyyy-MM-dd"))
+            {
+                btStart.Enabled = true;
+                btStop.Enabled = false;
+                dtpChart.Enabled = true;
+                pnTimeControl.Enabled = true;
+                lblTime.Text = "Auto update" + "\r\n" + "data is stopping";
+                SaveData.MQCClick = false;
+                SaveData.PQCClick = false;
+            }    
         }
         public void ChangeColor()
         {                       
@@ -245,6 +256,8 @@ namespace SMESData
                 SaveData.target = double.Parse(dtgv_MQC_PD.Rows[0].Cells[7].Value.ToString());
                 SaveData.NGrealtime = double.Parse(dtgv_MQC_PD.Rows[0].Cells[8].Value.ToString());
                 SaveData.NGallow = dtgv_MQC_PD.Rows[0].Cells[9].Value.ToString();
+                SaveData.RWrealtime = double.Parse(dtgv_MQC_PD.Rows[0].Cells[10].Value.ToString());
+                SaveData.RWallow = dtgv_MQC_PD.Rows[0].Cells[11].Value.ToString();
                 lbModel.Text = SaveData.Model;
                 lbLine.Text = SaveData.line;
                 lbOP.Text = SaveData.op.ToString();
@@ -253,7 +266,9 @@ namespace SMESData
                 lbTt.Text = SaveData.total.ToString();
                 lbTarget.Text = SaveData.target.ToString();
                 lbNGR.Text = SaveData.NGrealtime.ToString() + "%";
-                tbNGA.Text = SaveData.NGallow.ToString() + "%";                
+                tbNGA.Text = SaveData.NGallow.ToString() + "%";
+                lbRWR.Text = SaveData.RWrealtime.ToString() + "%";
+                lbRWA.Text = SaveData.RWallow.ToString() + "%";
             }
             renderPiechart();
         }
