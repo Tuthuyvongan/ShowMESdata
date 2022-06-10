@@ -76,7 +76,7 @@ namespace SMESData
                 lbRWR.Text = SaveData.RWrealtime.ToString() + "%";
                 lbRWA.Text = SaveData.RWallow.ToString() + "%";
                 renderPiechart();
-            }
+            }            
         }
         public void lineData()
         {
@@ -498,6 +498,11 @@ namespace SMESData
         private void customControl_OnUpdateStatus(object sender, EventArgs e)
         {
             UpdateDTGV();
+        }
+        private void dtgv_MQC_PD_Sorted(object sender, EventArgs e)
+        {
+            ChangeColor();
+            ChangeData();
         }
     }
 }

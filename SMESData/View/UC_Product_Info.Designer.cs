@@ -196,7 +196,8 @@ namespace SMESData
             this.dtgv_MQC_PD.Size = new System.Drawing.Size(1404, 448);
             this.dtgv_MQC_PD.TabIndex = 17;
             this.dtgv_MQC_PD.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
-            this.dtgv_MQC_PD.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgv_MQC_PD_CellClick);
+            this.dtgv_MQC_PD.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgv_MQC_PD_CellClick);            
+            this.dtgv_MQC_PD.Sorted += new System.EventHandler(this.dtgv_MQC_PD_Sorted);
             // 
             // panel1
             // 
