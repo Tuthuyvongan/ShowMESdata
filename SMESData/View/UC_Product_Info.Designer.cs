@@ -173,7 +173,7 @@ namespace SMESData
             this.dtgv_MQC_PD.HeaderBackColor = System.Drawing.Color.DodgerBlue;
             this.dtgv_MQC_PD.HeaderBgColor = System.Drawing.Color.Empty;
             this.dtgv_MQC_PD.HeaderForeColor = System.Drawing.Color.White;
-            this.dtgv_MQC_PD.Location = new System.Drawing.Point(2, -2);
+            this.dtgv_MQC_PD.Location = new System.Drawing.Point(2, 2);
             this.dtgv_MQC_PD.Margin = new System.Windows.Forms.Padding(2);
             this.dtgv_MQC_PD.Name = "dtgv_MQC_PD";
             this.dtgv_MQC_PD.ReadOnly = true;
@@ -195,7 +195,7 @@ namespace SMESData
             this.dtgv_MQC_PD.RowTemplate.ReadOnly = true;
             this.dtgv_MQC_PD.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dtgv_MQC_PD.ShowEditingIcon = false;
-            this.dtgv_MQC_PD.Size = new System.Drawing.Size(1404, 448);
+            this.dtgv_MQC_PD.Size = new System.Drawing.Size(1404, 452);
             this.dtgv_MQC_PD.TabIndex = 17;
             this.dtgv_MQC_PD.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.dtgv_MQC_PD.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgv_MQC_PD_CellClick);
@@ -1638,7 +1638,7 @@ namespace SMESData
             this.panel2.Controls.Add(this.dtgv_MQC_PD);
             this.panel2.Location = new System.Drawing.Point(15, 452);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1412, 452);
+            this.panel2.Size = new System.Drawing.Size(1412, 460);
             this.panel2.TabIndex = 19;
             // 
             // MQCChart
