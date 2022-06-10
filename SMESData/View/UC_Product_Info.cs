@@ -40,6 +40,7 @@ namespace SMESData
         List<double> dataMQC = new List<double>();
         List<double> dataPQC = new List<double>();
         Warning wn = new Warning();
+        FormInfo FI = new FormInfo();
         //
         public int secondsToWait = 300;
         private DateTime startTime;
@@ -503,6 +504,11 @@ namespace SMESData
         {
             ChangeColor();
             ChangeData();
+        }
+
+        private void btSI_Click(object sender, EventArgs e)
+        {            
+            FI.ShowDialog();
         }
     }
 }

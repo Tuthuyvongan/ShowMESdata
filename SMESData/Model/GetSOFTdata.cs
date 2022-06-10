@@ -468,5 +468,72 @@ namespace SMESData
             dtPQC = dtPQC.DefaultView.ToTable();
             return dtPQC;
         }
+        //Get Info of product
+        public static DataTable GetInfo(string model, string line, string date)
+        {
+
+            DataTable dt = new DataTable();
+            sqlSOFTCon sqlSOFTCon = new sqlSOFTCon();
+            StringBuilder sqlGetData = new StringBuilder();
+            DataColumn[] tableColumns = new DataColumn[]
+            {
+                new DataColumn()
+                {
+                    ColumnName="Model",
+                    DataType=typeof(string),
+                },
+                new DataColumn()
+                {
+                    ColumnName="LotNumber",
+                    DataType=typeof(string),
+                },
+                new DataColumn()
+                {
+                    ColumnName="Line",
+                    DataType=typeof(string),
+                },
+                new DataColumn()
+                {
+                    ColumnName="Date",
+                    DataType=typeof(string),
+                },
+                new DataColumn()
+                {
+                    ColumnName="Time",
+                    DataType=typeof(string),
+                },
+                new DataColumn()
+                {
+                    ColumnName="DateTime",
+                    DataType=typeof(string),
+                }
+            };
+            dt.Columns.AddRange(tableColumns);
+            if (SaveData.PQC == true)
+            {
+                sqlGetData.Append("SELECT Model, LotNumber, Line, InspectDateTime as DateTime, Quantity, Inspector, AttributeType as Remark, POCode as Serno FROM ProcessHistory.PQCMesData ");
+                sqlGetData.Append("where Model = '" + model + "' and Line = '" + line + "' and InspectDateTime like '%" + date + "%'");
+                sqlGetData.Append("order by InspectDateTime, AttributeType");
+                sqlSOFTCon.sqlDataAdapterFillDatatable(sqlGetData.ToString(), ref dt);
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    string DtIn = Convert.ToDateTime(dt.Rows[i]["DateTime"]).ToString("dd-MM-yyyy HH:mm:ss");
+                    dt.Rows[i]["DateTime"] = DtIn;
+                }
+            }
+            else
+            {
+                sqlGetData.Append("SELECT model as Model, lot as LotNumber, line as Line, inspectdate as Date, inspecttime as Time, data as Quantity, judge as Inspector, remark as Remark, serno as Serno FROM m_ERPMQC_REALTIME ");
+                sqlGetData.Append("where model = '" + model + "' and line = '" + line + "' and inspectdate = '" + date + "'");
+                sqlGetData.Append("order by inspecttime desc, remark");
+                sqlSOFTCon.sqlDataAdapterFillDatatable(sqlGetData.ToString(), ref dt);
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    string DtIn = Convert.ToDateTime(dt.Rows[i]["Date"]).ToString("dd-MM-yyyy");
+                    dt.Rows[i]["DateTime"] = DtIn + " " + dt.Rows[i]["Time"];
+                }
+            }
+            return dt;
+        }
     }
 }

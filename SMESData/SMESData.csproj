@@ -171,6 +171,12 @@
     <Compile Include="Model\ListPQC.cs" />
     <Compile Include="Model\SaveData.cs" />
     <Compile Include="Model\UploadLogic.cs" />
+    <Compile Include="View\FormInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormInfo.Designer.cs">
+      <DependentUpon>FormInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -209,6 +215,9 @@
     <Compile Include="View\Warning.Designer.cs">
       <DependentUpon>Warning.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\FormInfo.resx">
+      <DependentUpon>FormInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
       <SubType>Designer</SubType>
