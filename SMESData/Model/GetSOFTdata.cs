@@ -513,7 +513,7 @@ namespace SMESData
             {
                 sqlGetData.Append("SELECT Model, LotNumber, Line, InspectDateTime as DateTime, Quantity, Inspector, AttributeType as Remark, POCode as Serno FROM ProcessHistory.PQCMesData ");
                 sqlGetData.Append("where Model = '" + model + "' and Line = '" + line + "' and InspectDateTime like '%" + date + "%'");
-                sqlGetData.Append("order by InspectDateTime, AttributeType");
+                sqlGetData.Append("order by InspectDateTime desc, AttributeType");
                 sqlSOFTCon.sqlDataAdapterFillDatatable(sqlGetData.ToString(), ref dt);
                 for (int i = 0; i < dt.Rows.Count; i++)
                 {
