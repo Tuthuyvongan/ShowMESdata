@@ -776,7 +776,38 @@ namespace SMESData
                     panel7.BackColor = Color.White;
                     linePCanvas7.BackColor = Color.White;
                 }
-            }    
+            }
+            else
+            {
+                //pn1
+                panel1.BorderStyle = BorderStyle.Fixed3D;
+                panel1.BackColor = Color.White;
+                linePCanvas1.BackColor = Color.White;
+                //pn2
+                panel2.BorderStyle = BorderStyle.Fixed3D;
+                panel2.BackColor = Color.White;
+                linePCanvas2.BackColor = Color.White;
+                //pn3
+                panel3.BorderStyle = BorderStyle.Fixed3D;
+                panel3.BackColor = Color.White;
+                linePCanvas3.BackColor = Color.White;
+                //pn4
+                panel4.BorderStyle = BorderStyle.Fixed3D;
+                panel4.BackColor = Color.White;
+                linePCanvas4.BackColor = Color.White;
+                //pn5
+                panel5.BorderStyle = BorderStyle.Fixed3D;
+                panel5.BackColor = Color.White;
+                linePCanvas5.BackColor = Color.White;
+                //pn6
+                panel6.BorderStyle = BorderStyle.Fixed3D;
+                panel6.BackColor = Color.White;
+                linePCanvas6.BackColor = Color.White;
+                //pn7
+                panel7.BorderStyle = BorderStyle.Fixed3D;
+                panel7.BackColor = Color.White;
+                linePCanvas7.BackColor = Color.White;
+            }
         }
     }
 }

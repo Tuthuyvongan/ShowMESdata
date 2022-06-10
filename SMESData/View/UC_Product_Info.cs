@@ -20,8 +20,8 @@ namespace SMESData
             dtpChart.CustomFormat = "dd-MM-yyyy";
             dtpChart.Format = DateTimePickerFormat.Custom;
             dtpChart.Enabled = false;
-            dtpChart.ValueChanged += new EventHandler(dtpChart_ValueChanged);
             SaveData.Date = DateTime.Today.ToString("yyyy-MM-dd");
+            dtpChart.ValueChanged += new EventHandler(dtpChart_ValueChanged);           
             //Update datagridview
             SaveData.MQCClick = false;
             SaveData.PQCClick = false;

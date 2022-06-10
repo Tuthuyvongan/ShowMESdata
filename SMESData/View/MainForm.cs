@@ -22,7 +22,15 @@ namespace SMESData
         {
             uc_MQC_PieChart.OnUpdateStatus += customControl_OnUpdateStatus;
             uc_PQC_PieChart.OnUpdateStatus += customControl_OnUpdateStatus;
-            btMQCPD.PerformClick();
+            PD = true;
+            MQC = false;
+            PQC = false;
+            addUserControl(uc_PI);
+            if (SaveData.Date == DateTime.Today.ToString("yyyy-MM-dd"))
+                uc_PI.UpdateTime();
+            btMQCPD.FocusState = BunifuButton2.ButtonStates.Pressed;
+            btPQC.FocusState = BunifuButton2.ButtonStates.Idle;
+            btMQC.FocusState = BunifuButton2.ButtonStates.Idle;
             btMQCPD.Focus();
         }        
         

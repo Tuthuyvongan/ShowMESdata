@@ -31,8 +31,8 @@ namespace SMESData
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_PQC_PieChart));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges11 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges12 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btL4 = new Bunifu.UI.WinForms.BunifuImageButton();
             this.lbWar4 = new Bunifu.UI.WinForms.BunifuLabel();
@@ -212,6 +212,7 @@ namespace SMESData
             this.linePCanvas4.AnimationType = Bunifu.Charts.WinForms.BunifuChartCanvas.AnimationOptions.easeOutQuart;
             this.linePCanvas4.BackColor = System.Drawing.Color.White;
             this.linePCanvas4.CanvasPadding = new System.Windows.Forms.Padding(6, 6, 8, 6);
+            this.linePCanvas4.Font = new System.Drawing.Font("Times New Roman", 8.25F);
             this.linePCanvas4.Labels = new string[0];
             this.linePCanvas4.LegendAlignment = Bunifu.Charts.WinForms.BunifuChartCanvas.LegendAlignmentOptions.start;
             this.linePCanvas4.LegendDisplay = false;
@@ -334,7 +335,7 @@ namespace SMESData
             this.linePCanvas3.AnimationType = Bunifu.Charts.WinForms.BunifuChartCanvas.AnimationOptions.easeOutQuart;
             this.linePCanvas3.BackColor = System.Drawing.Color.White;
             this.linePCanvas3.CanvasPadding = new System.Windows.Forms.Padding(6, 6, 8, 6);
-            this.linePCanvas3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.linePCanvas3.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linePCanvas3.Labels = new string[0];
             this.linePCanvas3.LegendAlignment = Bunifu.Charts.WinForms.BunifuChartCanvas.LegendAlignmentOptions.start;
             this.linePCanvas3.LegendDisplay = false;
@@ -493,6 +494,7 @@ namespace SMESData
             this.linePCanvas5.AnimationType = Bunifu.Charts.WinForms.BunifuChartCanvas.AnimationOptions.easeOutQuart;
             this.linePCanvas5.BackColor = System.Drawing.Color.White;
             this.linePCanvas5.CanvasPadding = new System.Windows.Forms.Padding(6, 6, 8, 6);
+            this.linePCanvas5.Font = new System.Drawing.Font("Times New Roman", 8.25F);
             this.linePCanvas5.Labels = new string[0];
             this.linePCanvas5.LegendAlignment = Bunifu.Charts.WinForms.BunifuChartCanvas.LegendAlignmentOptions.start;
             this.linePCanvas5.LegendDisplay = false;
@@ -683,6 +685,7 @@ namespace SMESData
             this.linePCanvas6.AnimationType = Bunifu.Charts.WinForms.BunifuChartCanvas.AnimationOptions.easeOutQuart;
             this.linePCanvas6.BackColor = System.Drawing.Color.White;
             this.linePCanvas6.CanvasPadding = new System.Windows.Forms.Padding(6, 6, 8, 6);
+            this.linePCanvas6.Font = new System.Drawing.Font("Times New Roman", 8.25F);
             this.linePCanvas6.Labels = new string[0];
             this.linePCanvas6.LegendAlignment = Bunifu.Charts.WinForms.BunifuChartCanvas.LegendAlignmentOptions.start;
             this.linePCanvas6.LegendDisplay = false;
@@ -905,6 +908,7 @@ namespace SMESData
             this.linePCanvas7.AnimationType = Bunifu.Charts.WinForms.BunifuChartCanvas.AnimationOptions.easeOutQuart;
             this.linePCanvas7.BackColor = System.Drawing.Color.White;
             this.linePCanvas7.CanvasPadding = new System.Windows.Forms.Padding(6, 6, 8, 6);
+            this.linePCanvas7.Font = new System.Drawing.Font("Times New Roman", 8.25F);
             this.linePCanvas7.Labels = new string[0];
             this.linePCanvas7.LegendAlignment = Bunifu.Charts.WinForms.BunifuChartCanvas.LegendAlignmentOptions.start;
             this.linePCanvas7.LegendDisplay = false;
@@ -996,7 +1000,8 @@ namespace SMESData
             this.linePCanvas1.AnimationDuration = 2000;
             this.linePCanvas1.AnimationType = Bunifu.Charts.WinForms.BunifuChartCanvas.AnimationOptions.easeOutQuart;
             this.linePCanvas1.BackColor = System.Drawing.Color.White;
-            this.linePCanvas1.CanvasPadding = new System.Windows.Forms.Padding(6, 6, 8, 6);
+            this.linePCanvas1.CanvasPadding = new System.Windows.Forms.Padding(6, 18, 8, -6);
+            this.linePCanvas1.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linePCanvas1.Labels = new string[0];
             this.linePCanvas1.LegendAlignment = Bunifu.Charts.WinForms.BunifuChartCanvas.LegendAlignmentOptions.start;
             this.linePCanvas1.LegendDisplay = false;
@@ -1163,8 +1168,8 @@ namespace SMESData
             this.linePCanvas2.AnimationDuration = 2000;
             this.linePCanvas2.AnimationType = Bunifu.Charts.WinForms.BunifuChartCanvas.AnimationOptions.easeOutQuart;
             this.linePCanvas2.BackColor = System.Drawing.Color.White;
-            this.linePCanvas2.CanvasPadding = new System.Windows.Forms.Padding(6, 6, 8, 6);
-            this.linePCanvas2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.linePCanvas2.CanvasPadding = new System.Windows.Forms.Padding(6, 18, 8, -6);
+            this.linePCanvas2.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linePCanvas2.Labels = new string[0];
             this.linePCanvas2.LegendAlignment = Bunifu.Charts.WinForms.BunifuChartCanvas.LegendAlignmentOptions.end;
             this.linePCanvas2.LegendDisplay = false;
@@ -1594,11 +1599,11 @@ namespace SMESData
             this.btStart.ColorContrastOnClick = 45;
             this.btStart.ColorContrastOnHover = 45;
             this.btStart.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.btStart.CustomizableEdges = borderEdges1;
+            borderEdges11.BottomLeft = true;
+            borderEdges11.BottomRight = true;
+            borderEdges11.TopLeft = true;
+            borderEdges11.TopRight = true;
+            this.btStart.CustomizableEdges = borderEdges11;
             this.btStart.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btStart.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btStart.DisabledFillColor = System.Drawing.Color.Empty;
@@ -1639,7 +1644,7 @@ namespace SMESData
             this.btStart.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btStart.onHoverState.BorderThickness = 1;
             this.btStart.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(150)))), ((int)(((byte)(255)))));
-            this.btStart.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.btStart.onHoverState.ForeColor = System.Drawing.Color.Black;
             this.btStart.onHoverState.IconLeftImage = null;
             this.btStart.onHoverState.IconRightImage = null;
             this.btStart.OnIdleState.BorderColor = System.Drawing.Color.DodgerBlue;
@@ -1686,11 +1691,11 @@ namespace SMESData
             this.btStop.ColorContrastOnClick = 45;
             this.btStop.ColorContrastOnHover = 45;
             this.btStop.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.btStop.CustomizableEdges = borderEdges2;
+            borderEdges12.BottomLeft = true;
+            borderEdges12.BottomRight = true;
+            borderEdges12.TopLeft = true;
+            borderEdges12.TopRight = true;
+            this.btStop.CustomizableEdges = borderEdges12;
             this.btStop.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btStop.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btStop.DisabledFillColor = System.Drawing.Color.Empty;
@@ -1731,7 +1736,7 @@ namespace SMESData
             this.btStop.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btStop.onHoverState.BorderThickness = 1;
             this.btStop.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(151)))), ((int)(((byte)(0)))));
-            this.btStop.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.btStop.onHoverState.ForeColor = System.Drawing.Color.Black;
             this.btStop.onHoverState.IconLeftImage = null;
             this.btStop.onHoverState.IconRightImage = null;
             this.btStop.OnIdleState.BorderColor = System.Drawing.Color.Orange;
