@@ -2015,6 +2015,7 @@ namespace SMESData
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1592, 1077);
             this.tableLayoutPanel1.TabIndex = 45;
+            this.tableLayoutPanel1.SizeChanged += new System.EventHandler(this.tableLayoutPanel1_SizeChanged);
             // 
             // UC_PQC_PieChart
             // 

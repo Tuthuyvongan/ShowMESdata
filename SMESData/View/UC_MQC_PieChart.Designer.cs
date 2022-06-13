@@ -31,8 +31,8 @@ namespace SMESData
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_MQC_PieChart));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges11 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges12 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.lbWar5 = new Bunifu.UI.WinForms.BunifuLabel();
             this.btL6 = new Bunifu.UI.WinForms.BunifuImageButton();
             this.lbWar6 = new Bunifu.UI.WinForms.BunifuLabel();
@@ -846,6 +846,7 @@ namespace SMESData
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1592, 1077);
             this.tableLayoutPanel1.TabIndex = 39;
+            this.tableLayoutPanel1.SizeChanged += new System.EventHandler(this.tableLayoutPanel1_SizeChanged);
             // 
             // panel1
             // 
@@ -1589,11 +1590,11 @@ namespace SMESData
             this.btStart.ColorContrastOnClick = 45;
             this.btStart.ColorContrastOnHover = 45;
             this.btStart.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges11.BottomLeft = true;
-            borderEdges11.BottomRight = true;
-            borderEdges11.TopLeft = true;
-            borderEdges11.TopRight = true;
-            this.btStart.CustomizableEdges = borderEdges11;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.btStart.CustomizableEdges = borderEdges1;
             this.btStart.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btStart.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btStart.DisabledFillColor = System.Drawing.Color.Empty;
@@ -1682,11 +1683,11 @@ namespace SMESData
             this.btStop.ColorContrastOnClick = 45;
             this.btStop.ColorContrastOnHover = 45;
             this.btStop.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges12.BottomLeft = true;
-            borderEdges12.BottomRight = true;
-            borderEdges12.TopLeft = true;
-            borderEdges12.TopRight = true;
-            this.btStop.CustomizableEdges = borderEdges12;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.btStop.CustomizableEdges = borderEdges2;
             this.btStop.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btStop.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btStop.DisabledFillColor = System.Drawing.Color.Empty;

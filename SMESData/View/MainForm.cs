@@ -50,8 +50,8 @@ namespace SMESData
         }
         public void addUserControl(UserControl userControl)
         {
-            userControl.Dock = DockStyle.Fill;
             pnMain.Controls.Clear();
+            userControl.Dock = DockStyle.Fill;            
             pnMain.Controls.Add(userControl);
             userControl.BringToFront();
         }

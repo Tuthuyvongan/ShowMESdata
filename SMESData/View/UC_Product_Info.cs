@@ -33,7 +33,7 @@ namespace SMESData
             lblTime.Font = new Font("Times New Roman", 14, FontStyle.Bold);
             //Timer          
             pnTimeControl.Enabled = false;
-            wn.OnUpdateStatus += customControl_OnUpdateStatus;   
+            wn.OnUpdateStatus += customControl_OnUpdateStatus;           
         }
 
         //List data
@@ -508,6 +508,22 @@ namespace SMESData
         private void btSI_Click(object sender, EventArgs e)
         {            
             FI.ShowDialog();
+        }
+        public void sizeChange()
+        {
+            if (tableLayoutPanel1.Width >= 1500)
+            {
+                linePCanvas1.CanvasPadding = new Padding(25, -15, 25, 40);
+            }
+            else
+            {
+                linePCanvas1.CanvasPadding = new Padding(3, -20, 7, 25);
+            }
+        }
+
+        private void dtgv_MQC_PD_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            sizeChange();
         }
     }
 }

@@ -30,9 +30,9 @@ namespace SMESData
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges43 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges44 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges45 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.pnMain = new Bunifu.UI.WinForms.BunifuPanel();
             this.pnMenu = new Bunifu.UI.WinForms.BunifuPanel();
             this.btMQCPD = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
@@ -100,11 +100,11 @@ namespace SMESData
             this.btMQCPD.ColorContrastOnClick = 45;
             this.btMQCPD.ColorContrastOnHover = 45;
             this.btMQCPD.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges43.BottomLeft = true;
-            borderEdges43.BottomRight = true;
-            borderEdges43.TopLeft = true;
-            borderEdges43.TopRight = true;
-            this.btMQCPD.CustomizableEdges = borderEdges43;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.btMQCPD.CustomizableEdges = borderEdges1;
             this.btMQCPD.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btMQCPD.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btMQCPD.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -228,11 +228,11 @@ namespace SMESData
             this.btPQC.ColorContrastOnClick = 45;
             this.btPQC.ColorContrastOnHover = 45;
             this.btPQC.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges44.BottomLeft = true;
-            borderEdges44.BottomRight = true;
-            borderEdges44.TopLeft = true;
-            borderEdges44.TopRight = true;
-            this.btPQC.CustomizableEdges = borderEdges44;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.btPQC.CustomizableEdges = borderEdges2;
             this.btPQC.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btPQC.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btPQC.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -319,11 +319,11 @@ namespace SMESData
             this.btMQC.ColorContrastOnClick = 45;
             this.btMQC.ColorContrastOnHover = 45;
             this.btMQC.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges45.BottomLeft = true;
-            borderEdges45.BottomRight = true;
-            borderEdges45.TopLeft = true;
-            borderEdges45.TopRight = true;
-            this.btMQC.CustomizableEdges = borderEdges45;
+            borderEdges3.BottomLeft = true;
+            borderEdges3.BottomRight = true;
+            borderEdges3.TopLeft = true;
+            borderEdges3.TopRight = true;
+            this.btMQC.CustomizableEdges = borderEdges3;
             this.btMQC.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btMQC.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btMQC.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -417,7 +417,6 @@ namespace SMESData
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MainForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ShowMESData";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MainForm_Load);

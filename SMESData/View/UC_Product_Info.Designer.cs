@@ -31,25 +31,25 @@ namespace SMESData
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Product_Info));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle81 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle82 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle83 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle84 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle85 = new System.Windows.Forms.DataGridViewCellStyle();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges97 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges98 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges99 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges100 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties129 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties130 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties131 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties132 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges101 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties133 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties134 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties135 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties136 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges102 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.MQCChart = new Bunifu.Charts.WinForms.ChartTypes.BunifuPieChart(this.components);
             this.PQCChart = new Bunifu.Charts.WinForms.ChartTypes.BunifuPieChart(this.components);
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -81,11 +81,11 @@ namespace SMESData
             this.btStop = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.dtpChart = new Bunifu.UI.WinForms.BunifuDatePicker();
-            this.lb3 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.lb2 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.lb1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lb8 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.dtpChart = new Bunifu.UI.WinForms.BunifuDatePicker();
+            this.lb1 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lb2 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lb3 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lb4 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lb5 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lb6 = new Bunifu.UI.WinForms.BunifuLabel();
@@ -104,9 +104,9 @@ namespace SMESData
             this.lbTt = new Bunifu.UI.WinForms.BunifuLabel();
             this.lbTarget = new Bunifu.UI.WinForms.BunifuLabel();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
-            this.tbSearch = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.btSearch = new Bunifu.UI.WinForms.BunifuImageButton();
             this.btSI = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.btSearch = new Bunifu.UI.WinForms.BunifuImageButton();
+            this.tbSearch = new Bunifu.UI.WinForms.BunifuTextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_MQC_PD)).BeginInit();
@@ -172,11 +172,11 @@ namespace SMESData
             this.dtgv_MQC_PD.AllowUserToDeleteRows = false;
             this.dtgv_MQC_PD.AllowUserToResizeColumns = false;
             this.dtgv_MQC_PD.AllowUserToResizeRows = false;
-            dataGridViewCellStyle81.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle81.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle81.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle81.ForeColor = System.Drawing.Color.Black;
-            this.dtgv_MQC_PD.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle81;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.dtgv_MQC_PD.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgv_MQC_PD.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -186,14 +186,14 @@ namespace SMESData
             this.dtgv_MQC_PD.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
             this.dtgv_MQC_PD.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
             this.dtgv_MQC_PD.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle82.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle82.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle82.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle82.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle82.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle82.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle82.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgv_MQC_PD.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle82;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgv_MQC_PD.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dtgv_MQC_PD.ColumnHeadersHeight = 40;
             this.dtgv_MQC_PD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dtgv_MQC_PD.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
@@ -214,14 +214,14 @@ namespace SMESData
             this.dtgv_MQC_PD.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.dtgv_MQC_PD.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
             this.dtgv_MQC_PD.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle83.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle83.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle83.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle83.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle83.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle83.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle83.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgv_MQC_PD.DefaultCellStyle = dataGridViewCellStyle83;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgv_MQC_PD.DefaultCellStyle = dataGridViewCellStyle3;
             this.dtgv_MQC_PD.EnableHeadersVisualStyles = false;
             this.dtgv_MQC_PD.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.dtgv_MQC_PD.HeaderBackColor = System.Drawing.Color.DodgerBlue;
@@ -232,19 +232,19 @@ namespace SMESData
             this.dtgv_MQC_PD.Name = "dtgv_MQC_PD";
             this.dtgv_MQC_PD.ReadOnly = true;
             this.dtgv_MQC_PD.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle84.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle84.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle84.Font = new System.Drawing.Font("Times New Roman", 8.25F);
-            dataGridViewCellStyle84.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle84.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle84.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle84.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgv_MQC_PD.RowHeadersDefaultCellStyle = dataGridViewCellStyle84;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Times New Roman", 8.25F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgv_MQC_PD.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dtgv_MQC_PD.RowHeadersVisible = false;
             this.dtgv_MQC_PD.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridViewCellStyle85.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle85.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtgv_MQC_PD.RowsDefaultCellStyle = dataGridViewCellStyle85;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtgv_MQC_PD.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dtgv_MQC_PD.RowTemplate.Height = 40;
             this.dtgv_MQC_PD.RowTemplate.ReadOnly = true;
             this.dtgv_MQC_PD.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
@@ -253,6 +253,7 @@ namespace SMESData
             this.dtgv_MQC_PD.TabIndex = 69;
             this.dtgv_MQC_PD.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.dtgv_MQC_PD.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgv_MQC_PD_CellClick);
+            this.dtgv_MQC_PD.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dtgv_MQC_PD_DataBindingComplete);
             this.dtgv_MQC_PD.Sorted += new System.EventHandler(this.dtgv_MQC_PD_Sorted);
             // 
             // tableLayoutPanel2
@@ -522,11 +523,11 @@ namespace SMESData
             this.btMQCD.ColorContrastOnClick = 45;
             this.btMQCD.ColorContrastOnHover = 45;
             this.btMQCD.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges97.BottomLeft = true;
-            borderEdges97.BottomRight = true;
-            borderEdges97.TopLeft = true;
-            borderEdges97.TopRight = true;
-            this.btMQCD.CustomizableEdges = borderEdges97;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.btMQCD.CustomizableEdges = borderEdges1;
             this.btMQCD.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btMQCD.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btMQCD.DisabledFillColor = System.Drawing.Color.Empty;
@@ -615,11 +616,11 @@ namespace SMESData
             this.btPQCD.ColorContrastOnClick = 45;
             this.btPQCD.ColorContrastOnHover = 45;
             this.btPQCD.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges98.BottomLeft = true;
-            borderEdges98.BottomRight = true;
-            borderEdges98.TopLeft = true;
-            borderEdges98.TopRight = true;
-            this.btPQCD.CustomizableEdges = borderEdges98;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.btPQCD.CustomizableEdges = borderEdges2;
             this.btPQCD.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btPQCD.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btPQCD.DisabledFillColor = System.Drawing.Color.Empty;
@@ -870,11 +871,11 @@ namespace SMESData
             this.btStart.ColorContrastOnClick = 45;
             this.btStart.ColorContrastOnHover = 45;
             this.btStart.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges99.BottomLeft = true;
-            borderEdges99.BottomRight = true;
-            borderEdges99.TopLeft = true;
-            borderEdges99.TopRight = true;
-            this.btStart.CustomizableEdges = borderEdges99;
+            borderEdges3.BottomLeft = true;
+            borderEdges3.BottomRight = true;
+            borderEdges3.TopLeft = true;
+            borderEdges3.TopRight = true;
+            this.btStart.CustomizableEdges = borderEdges3;
             this.btStart.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btStart.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btStart.DisabledFillColor = System.Drawing.Color.Empty;
@@ -963,11 +964,11 @@ namespace SMESData
             this.btStop.ColorContrastOnClick = 45;
             this.btStop.ColorContrastOnHover = 45;
             this.btStop.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges100.BottomLeft = true;
-            borderEdges100.BottomRight = true;
-            borderEdges100.TopLeft = true;
-            borderEdges100.TopRight = true;
-            this.btStop.CustomizableEdges = borderEdges100;
+            borderEdges4.BottomLeft = true;
+            borderEdges4.BottomRight = true;
+            borderEdges4.TopLeft = true;
+            borderEdges4.TopRight = true;
+            this.btStop.CustomizableEdges = borderEdges4;
             this.btStop.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btStop.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btStop.DisabledFillColor = System.Drawing.Color.Empty;
@@ -1100,6 +1101,23 @@ namespace SMESData
             this.tableLayoutPanel6.Size = new System.Drawing.Size(769, 465);
             this.tableLayoutPanel6.TabIndex = 0;
             // 
+            // lb8
+            // 
+            this.lb8.AllowParentOverrides = false;
+            this.lb8.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lb8.AutoEllipsis = false;
+            this.lb8.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lb8.CursorType = System.Windows.Forms.Cursors.Default;
+            this.lb8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.lb8.Location = new System.Drawing.Point(100, 415);
+            this.lb8.Name = "lb8";
+            this.lb8.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lb8.Size = new System.Drawing.Size(50, 19);
+            this.lb8.TabIndex = 67;
+            this.lb8.Text = "Target: ";
+            this.lb8.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lb8.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
             // dtpChart
             // 
             this.dtpChart.BackColor = System.Drawing.Color.Transparent;
@@ -1124,41 +1142,9 @@ namespace SMESData
             this.dtpChart.Margin = new System.Windows.Forms.Padding(2);
             this.dtpChart.MinimumSize = new System.Drawing.Size(4, 32);
             this.dtpChart.Name = "dtpChart";
-            this.dtpChart.Size = new System.Drawing.Size(156, 32);
+            this.dtpChart.Size = new System.Drawing.Size(149, 32);
             this.dtpChart.TabIndex = 34;
             this.dtpChart.Value = new System.DateTime(2022, 5, 29, 0, 0, 0, 0);
-            // 
-            // lb3
-            // 
-            this.lb3.AllowParentOverrides = false;
-            this.lb3.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lb3.AutoEllipsis = false;
-            this.lb3.CursorType = null;
-            this.lb3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.lb3.Location = new System.Drawing.Point(76, 260);
-            this.lb3.Name = "lb3";
-            this.lb3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lb3.Size = new System.Drawing.Size(81, 19);
-            this.lb3.TabIndex = 65;
-            this.lb3.Text = "NO GOOD: ";
-            this.lb3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lb3.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // lb2
-            // 
-            this.lb2.AllowParentOverrides = false;
-            this.lb2.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lb2.AutoEllipsis = false;
-            this.lb2.CursorType = null;
-            this.lb2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.lb2.Location = new System.Drawing.Point(75, 183);
-            this.lb2.Name = "lb2";
-            this.lb2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lb2.Size = new System.Drawing.Size(82, 19);
-            this.lb2.TabIndex = 64;
-            this.lb2.Text = "RE WORK: ";
-            this.lb2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lb2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // lb1
             // 
@@ -1167,7 +1153,7 @@ namespace SMESData
             this.lb1.AutoEllipsis = false;
             this.lb1.CursorType = null;
             this.lb1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.lb1.Location = new System.Drawing.Point(89, 106);
+            this.lb1.Location = new System.Drawing.Point(82, 106);
             this.lb1.Name = "lb1";
             this.lb1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lb1.Size = new System.Drawing.Size(68, 19);
@@ -1176,22 +1162,37 @@ namespace SMESData
             this.lb1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lb1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // lb8
+            // lb2
             // 
-            this.lb8.AllowParentOverrides = false;
-            this.lb8.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lb8.AutoEllipsis = false;
-            this.lb8.Cursor = System.Windows.Forms.Cursors.Default;
-            this.lb8.CursorType = System.Windows.Forms.Cursors.Default;
-            this.lb8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.lb8.Location = new System.Drawing.Point(107, 415);
-            this.lb8.Name = "lb8";
-            this.lb8.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lb8.Size = new System.Drawing.Size(50, 19);
-            this.lb8.TabIndex = 67;
-            this.lb8.Text = "Target: ";
-            this.lb8.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lb8.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.lb2.AllowParentOverrides = false;
+            this.lb2.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lb2.AutoEllipsis = false;
+            this.lb2.CursorType = null;
+            this.lb2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.lb2.Location = new System.Drawing.Point(68, 183);
+            this.lb2.Name = "lb2";
+            this.lb2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lb2.Size = new System.Drawing.Size(82, 19);
+            this.lb2.TabIndex = 64;
+            this.lb2.Text = "RE WORK: ";
+            this.lb2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lb2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // lb3
+            // 
+            this.lb3.AllowParentOverrides = false;
+            this.lb3.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lb3.AutoEllipsis = false;
+            this.lb3.CursorType = null;
+            this.lb3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.lb3.Location = new System.Drawing.Point(69, 260);
+            this.lb3.Name = "lb3";
+            this.lb3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lb3.Size = new System.Drawing.Size(81, 19);
+            this.lb3.TabIndex = 65;
+            this.lb3.Text = "NO GOOD: ";
+            this.lb3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lb3.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // lb4
             // 
@@ -1201,7 +1202,7 @@ namespace SMESData
             this.lb4.Cursor = System.Windows.Forms.Cursors.Default;
             this.lb4.CursorType = System.Windows.Forms.Cursors.Default;
             this.lb4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.lb4.Location = new System.Drawing.Point(117, 337);
+            this.lb4.Location = new System.Drawing.Point(110, 337);
             this.lb4.Name = "lb4";
             this.lb4.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lb4.Size = new System.Drawing.Size(40, 19);
@@ -1217,7 +1218,7 @@ namespace SMESData
             this.lb5.AutoEllipsis = false;
             this.lb5.CursorType = null;
             this.lb5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.lb5.Location = new System.Drawing.Point(366, 106);
+            this.lb5.Location = new System.Drawing.Point(421, 106);
             this.lb5.Name = "lb5";
             this.lb5.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lb5.Size = new System.Drawing.Size(35, 19);
@@ -1233,7 +1234,7 @@ namespace SMESData
             this.lb6.AutoEllipsis = false;
             this.lb6.CursorType = null;
             this.lb6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.lb6.Location = new System.Drawing.Point(296, 183);
+            this.lb6.Location = new System.Drawing.Point(351, 183);
             this.lb6.Name = "lb6";
             this.lb6.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lb6.Size = new System.Drawing.Size(105, 19);
@@ -1249,7 +1250,7 @@ namespace SMESData
             this.lb7.AutoEllipsis = false;
             this.lb7.CursorType = null;
             this.lb7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.lb7.Location = new System.Drawing.Point(320, 260);
+            this.lb7.Location = new System.Drawing.Point(375, 260);
             this.lb7.Name = "lb7";
             this.lb7.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lb7.Size = new System.Drawing.Size(81, 19);
@@ -1265,7 +1266,7 @@ namespace SMESData
             this.bunifuLabel2.AutoEllipsis = false;
             this.bunifuLabel2.CursorType = null;
             this.bunifuLabel2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.bunifuLabel2.Location = new System.Drawing.Point(293, 337);
+            this.bunifuLabel2.Location = new System.Drawing.Point(348, 337);
             this.bunifuLabel2.Name = "bunifuLabel2";
             this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel2.Size = new System.Drawing.Size(108, 19);
@@ -1281,7 +1282,7 @@ namespace SMESData
             this.bunifuLabel4.AutoEllipsis = false;
             this.bunifuLabel4.CursorType = null;
             this.bunifuLabel4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.bunifuLabel4.Location = new System.Drawing.Point(317, 415);
+            this.bunifuLabel4.Location = new System.Drawing.Point(372, 415);
             this.bunifuLabel4.Name = "bunifuLabel4";
             this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel4.Size = new System.Drawing.Size(84, 19);
@@ -1297,7 +1298,7 @@ namespace SMESData
             this.lbLine.AutoEllipsis = false;
             this.lbLine.CursorType = null;
             this.lbLine.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.lbLine.Location = new System.Drawing.Point(407, 106);
+            this.lbLine.Location = new System.Drawing.Point(462, 106);
             this.lbLine.Name = "lbLine";
             this.lbLine.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbLine.Size = new System.Drawing.Size(12, 19);
@@ -1313,7 +1314,7 @@ namespace SMESData
             this.lbNGR.AutoEllipsis = false;
             this.lbNGR.CursorType = null;
             this.lbNGR.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.lbNGR.Location = new System.Drawing.Point(407, 183);
+            this.lbNGR.Location = new System.Drawing.Point(462, 183);
             this.lbNGR.Name = "lbNGR";
             this.lbNGR.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbNGR.Size = new System.Drawing.Size(12, 19);
@@ -1351,32 +1352,32 @@ namespace SMESData
             this.tbNGA.IconRight = null;
             this.tbNGA.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.tbNGA.Lines = new string[0];
-            this.tbNGA.Location = new System.Drawing.Point(407, 249);
+            this.tbNGA.Location = new System.Drawing.Point(462, 249);
             this.tbNGA.MaxLength = 32767;
             this.tbNGA.MinimumSize = new System.Drawing.Size(1, 1);
             this.tbNGA.Modified = false;
             this.tbNGA.Multiline = false;
             this.tbNGA.Name = "tbNGA";
-            stateProperties129.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties129.FillColor = System.Drawing.Color.Empty;
-            stateProperties129.ForeColor = System.Drawing.Color.Empty;
-            stateProperties129.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.tbNGA.OnActiveState = stateProperties129;
-            stateProperties130.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties130.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties130.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties130.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.tbNGA.OnDisabledState = stateProperties130;
-            stateProperties131.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties131.FillColor = System.Drawing.Color.Empty;
-            stateProperties131.ForeColor = System.Drawing.Color.Empty;
-            stateProperties131.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.tbNGA.OnHoverState = stateProperties131;
-            stateProperties132.BorderColor = System.Drawing.Color.Silver;
-            stateProperties132.FillColor = System.Drawing.Color.White;
-            stateProperties132.ForeColor = System.Drawing.Color.Empty;
-            stateProperties132.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.tbNGA.OnIdleState = stateProperties132;
+            stateProperties1.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties1.FillColor = System.Drawing.Color.Empty;
+            stateProperties1.ForeColor = System.Drawing.Color.Empty;
+            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tbNGA.OnActiveState = stateProperties1;
+            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.tbNGA.OnDisabledState = stateProperties2;
+            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties3.FillColor = System.Drawing.Color.Empty;
+            stateProperties3.ForeColor = System.Drawing.Color.Empty;
+            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tbNGA.OnHoverState = stateProperties3;
+            stateProperties4.BorderColor = System.Drawing.Color.Silver;
+            stateProperties4.FillColor = System.Drawing.Color.White;
+            stateProperties4.ForeColor = System.Drawing.Color.Empty;
+            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tbNGA.OnIdleState = stateProperties4;
             this.tbNGA.Padding = new System.Windows.Forms.Padding(3);
             this.tbNGA.PasswordChar = '\0';
             this.tbNGA.PlaceholderForeColor = System.Drawing.Color.Silver;
@@ -1405,7 +1406,7 @@ namespace SMESData
             this.lbRWR.AutoEllipsis = false;
             this.lbRWR.CursorType = null;
             this.lbRWR.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.lbRWR.Location = new System.Drawing.Point(407, 337);
+            this.lbRWR.Location = new System.Drawing.Point(462, 337);
             this.lbRWR.Name = "lbRWR";
             this.lbRWR.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbRWR.Size = new System.Drawing.Size(12, 19);
@@ -1421,7 +1422,7 @@ namespace SMESData
             this.lbRWA.AutoEllipsis = false;
             this.lbRWA.CursorType = null;
             this.lbRWA.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.lbRWA.Location = new System.Drawing.Point(407, 415);
+            this.lbRWA.Location = new System.Drawing.Point(462, 415);
             this.lbRWA.Name = "lbRWA";
             this.lbRWA.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbRWA.Size = new System.Drawing.Size(12, 19);
@@ -1450,11 +1451,11 @@ namespace SMESData
             this.btFix.ColorContrastOnClick = 45;
             this.btFix.ColorContrastOnHover = 45;
             this.btFix.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges101.BottomLeft = true;
-            borderEdges101.BottomRight = true;
-            borderEdges101.TopLeft = true;
-            borderEdges101.TopRight = true;
-            this.btFix.CustomizableEdges = borderEdges101;
+            borderEdges5.BottomLeft = true;
+            borderEdges5.BottomRight = true;
+            borderEdges5.TopLeft = true;
+            borderEdges5.TopRight = true;
+            this.btFix.CustomizableEdges = borderEdges5;
             this.btFix.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btFix.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btFix.DisabledFillColor = System.Drawing.Color.Empty;
@@ -1480,7 +1481,7 @@ namespace SMESData
             this.btFix.IdleIconLeftImage = null;
             this.btFix.IdleIconRightImage = null;
             this.btFix.IndicateFocus = false;
-            this.btFix.Location = new System.Drawing.Point(547, 250);
+            this.btFix.Location = new System.Drawing.Point(615, 250);
             this.btFix.Name = "btFix";
             this.btFix.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btFix.OnDisabledState.BorderRadius = 1;
@@ -1530,7 +1531,7 @@ namespace SMESData
             this.lbOP.AutoEllipsis = false;
             this.lbOP.CursorType = null;
             this.lbOP.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.lbOP.Location = new System.Drawing.Point(163, 106);
+            this.lbOP.Location = new System.Drawing.Point(156, 106);
             this.lbOP.Name = "lbOP";
             this.lbOP.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbOP.Size = new System.Drawing.Size(12, 19);
@@ -1546,7 +1547,7 @@ namespace SMESData
             this.lbRW.AutoEllipsis = false;
             this.lbRW.CursorType = null;
             this.lbRW.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.lbRW.Location = new System.Drawing.Point(163, 183);
+            this.lbRW.Location = new System.Drawing.Point(156, 183);
             this.lbRW.Name = "lbRW";
             this.lbRW.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbRW.Size = new System.Drawing.Size(12, 19);
@@ -1562,7 +1563,7 @@ namespace SMESData
             this.lbNG.AutoEllipsis = false;
             this.lbNG.CursorType = null;
             this.lbNG.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.lbNG.Location = new System.Drawing.Point(163, 260);
+            this.lbNG.Location = new System.Drawing.Point(156, 260);
             this.lbNG.Name = "lbNG";
             this.lbNG.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbNG.Size = new System.Drawing.Size(12, 19);
@@ -1578,7 +1579,7 @@ namespace SMESData
             this.lbTt.AutoEllipsis = false;
             this.lbTt.CursorType = null;
             this.lbTt.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.lbTt.Location = new System.Drawing.Point(163, 337);
+            this.lbTt.Location = new System.Drawing.Point(156, 337);
             this.lbTt.Name = "lbTt";
             this.lbTt.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbTt.Size = new System.Drawing.Size(12, 19);
@@ -1594,7 +1595,7 @@ namespace SMESData
             this.lbTarget.AutoEllipsis = false;
             this.lbTarget.CursorType = null;
             this.lbTarget.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.lbTarget.Location = new System.Drawing.Point(163, 415);
+            this.lbTarget.Location = new System.Drawing.Point(156, 415);
             this.lbTarget.Name = "lbTarget";
             this.lbTarget.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbTarget.Size = new System.Drawing.Size(12, 19);
@@ -1623,119 +1624,6 @@ namespace SMESData
             this.tableLayoutPanel7.Size = new System.Drawing.Size(769, 75);
             this.tableLayoutPanel7.TabIndex = 1;
             // 
-            // tbSearch
-            // 
-            this.tbSearch.AcceptsReturn = false;
-            this.tbSearch.AcceptsTab = false;
-            this.tbSearch.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.tbSearch.AnimationSpeed = 200;
-            this.tbSearch.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.tbSearch.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.tbSearch.AutoSizeHeight = true;
-            this.tbSearch.BackColor = System.Drawing.Color.Transparent;
-            this.tbSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tbSearch.BackgroundImage")));
-            this.tbSearch.BorderColorActive = System.Drawing.Color.DodgerBlue;
-            this.tbSearch.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.tbSearch.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.tbSearch.BorderColorIdle = System.Drawing.Color.Silver;
-            this.tbSearch.BorderRadius = 1;
-            this.tbSearch.BorderThickness = 1;
-            this.tbSearch.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.tbSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbSearch.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
-            this.tbSearch.DefaultText = "";
-            this.tbSearch.FillColor = System.Drawing.Color.White;
-            this.tbSearch.HideSelection = true;
-            this.tbSearch.IconLeft = null;
-            this.tbSearch.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbSearch.IconPadding = 10;
-            this.tbSearch.IconRight = null;
-            this.tbSearch.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbSearch.Lines = new string[0];
-            this.tbSearch.Location = new System.Drawing.Point(105, 18);
-            this.tbSearch.MaxLength = 32767;
-            this.tbSearch.MinimumSize = new System.Drawing.Size(1, 1);
-            this.tbSearch.Modified = false;
-            this.tbSearch.Multiline = false;
-            this.tbSearch.Name = "tbSearch";
-            stateProperties133.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties133.FillColor = System.Drawing.Color.Empty;
-            stateProperties133.ForeColor = System.Drawing.Color.Empty;
-            stateProperties133.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.tbSearch.OnActiveState = stateProperties133;
-            stateProperties134.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties134.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties134.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties134.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.tbSearch.OnDisabledState = stateProperties134;
-            stateProperties135.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties135.FillColor = System.Drawing.Color.Empty;
-            stateProperties135.ForeColor = System.Drawing.Color.Empty;
-            stateProperties135.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.tbSearch.OnHoverState = stateProperties135;
-            stateProperties136.BorderColor = System.Drawing.Color.Silver;
-            stateProperties136.FillColor = System.Drawing.Color.White;
-            stateProperties136.ForeColor = System.Drawing.Color.Empty;
-            stateProperties136.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.tbSearch.OnIdleState = stateProperties136;
-            this.tbSearch.Padding = new System.Windows.Forms.Padding(3);
-            this.tbSearch.PasswordChar = '\0';
-            this.tbSearch.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.tbSearch.PlaceholderText = "Search Model Here";
-            this.tbSearch.ReadOnly = false;
-            this.tbSearch.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.tbSearch.SelectedText = "";
-            this.tbSearch.SelectionLength = 0;
-            this.tbSearch.SelectionStart = 0;
-            this.tbSearch.ShortcutsEnabled = true;
-            this.tbSearch.Size = new System.Drawing.Size(260, 39);
-            this.tbSearch.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.tbSearch.TabIndex = 56;
-            this.tbSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.tbSearch.TextMarginBottom = 0;
-            this.tbSearch.TextMarginLeft = 3;
-            this.tbSearch.TextMarginTop = 1;
-            this.tbSearch.TextPlaceholder = "Search Model Here";
-            this.tbSearch.UseSystemPasswordChar = false;
-            this.tbSearch.WordWrap = true;
-            this.tbSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbSearch_KeyDown);
-            // 
-            // btSearch
-            // 
-            this.btSearch.ActiveImage = null;
-            this.btSearch.AllowAnimations = true;
-            this.btSearch.AllowBuffering = false;
-            this.btSearch.AllowToggling = false;
-            this.btSearch.AllowZooming = true;
-            this.btSearch.AllowZoomingOnFocus = false;
-            this.btSearch.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btSearch.BackColor = System.Drawing.Color.Transparent;
-            this.btSearch.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btSearch.ErrorImage = global::SMESData.Properties.Resources.close;
-            this.btSearch.FadeWhenInactive = false;
-            this.btSearch.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
-            this.btSearch.Image = global::SMESData.Properties.Resources.search;
-            this.btSearch.ImageActive = null;
-            this.btSearch.ImageLocation = null;
-            this.btSearch.ImageMargin = 10;
-            this.btSearch.ImageSize = new System.Drawing.Size(40, 40);
-            this.btSearch.ImageZoomSize = new System.Drawing.Size(50, 50);
-            this.btSearch.InitialImage = ((System.Drawing.Image)(resources.GetObject("btSearch.InitialImage")));
-            this.btSearch.Location = new System.Drawing.Point(371, 12);
-            this.btSearch.Name = "btSearch";
-            this.btSearch.Rotation = 0;
-            this.btSearch.ShowActiveImage = true;
-            this.btSearch.ShowCursorChanges = true;
-            this.btSearch.ShowImageBorders = false;
-            this.btSearch.ShowSizeMarkers = false;
-            this.btSearch.Size = new System.Drawing.Size(50, 50);
-            this.btSearch.TabIndex = 58;
-            this.btSearch.ToolTipText = "";
-            this.btSearch.WaitOnLoad = false;
-            this.btSearch.Zoom = 10;
-            this.btSearch.ZoomSpeed = 10;
-            this.btSearch.Click += new System.EventHandler(this.search_Click);
-            // 
             // btSI
             // 
             this.btSI.AllowAnimations = true;
@@ -1756,11 +1644,11 @@ namespace SMESData
             this.btSI.ColorContrastOnClick = 45;
             this.btSI.ColorContrastOnHover = 45;
             this.btSI.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges102.BottomLeft = true;
-            borderEdges102.BottomRight = true;
-            borderEdges102.TopLeft = true;
-            borderEdges102.TopRight = true;
-            this.btSI.CustomizableEdges = borderEdges102;
+            borderEdges6.BottomLeft = true;
+            borderEdges6.BottomRight = true;
+            borderEdges6.TopLeft = true;
+            borderEdges6.TopRight = true;
+            this.btSI.CustomizableEdges = borderEdges6;
             this.btSI.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btSI.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btSI.DisabledFillColor = System.Drawing.Color.Empty;
@@ -1828,6 +1716,119 @@ namespace SMESData
             this.btSI.TextPadding = new System.Windows.Forms.Padding(0);
             this.btSI.UseDefaultRadiusAndThickness = true;
             this.btSI.Click += new System.EventHandler(this.btSI_Click);
+            // 
+            // btSearch
+            // 
+            this.btSearch.ActiveImage = null;
+            this.btSearch.AllowAnimations = true;
+            this.btSearch.AllowBuffering = false;
+            this.btSearch.AllowToggling = false;
+            this.btSearch.AllowZooming = true;
+            this.btSearch.AllowZoomingOnFocus = false;
+            this.btSearch.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btSearch.BackColor = System.Drawing.Color.Transparent;
+            this.btSearch.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btSearch.ErrorImage = global::SMESData.Properties.Resources.close;
+            this.btSearch.FadeWhenInactive = false;
+            this.btSearch.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            this.btSearch.Image = global::SMESData.Properties.Resources.search;
+            this.btSearch.ImageActive = null;
+            this.btSearch.ImageLocation = null;
+            this.btSearch.ImageMargin = 10;
+            this.btSearch.ImageSize = new System.Drawing.Size(40, 40);
+            this.btSearch.ImageZoomSize = new System.Drawing.Size(50, 50);
+            this.btSearch.InitialImage = ((System.Drawing.Image)(resources.GetObject("btSearch.InitialImage")));
+            this.btSearch.Location = new System.Drawing.Point(371, 12);
+            this.btSearch.Name = "btSearch";
+            this.btSearch.Rotation = 0;
+            this.btSearch.ShowActiveImage = true;
+            this.btSearch.ShowCursorChanges = true;
+            this.btSearch.ShowImageBorders = false;
+            this.btSearch.ShowSizeMarkers = false;
+            this.btSearch.Size = new System.Drawing.Size(50, 50);
+            this.btSearch.TabIndex = 58;
+            this.btSearch.ToolTipText = "";
+            this.btSearch.WaitOnLoad = false;
+            this.btSearch.Zoom = 10;
+            this.btSearch.ZoomSpeed = 10;
+            this.btSearch.Click += new System.EventHandler(this.search_Click);
+            // 
+            // tbSearch
+            // 
+            this.tbSearch.AcceptsReturn = false;
+            this.tbSearch.AcceptsTab = false;
+            this.tbSearch.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.tbSearch.AnimationSpeed = 200;
+            this.tbSearch.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.tbSearch.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.tbSearch.AutoSizeHeight = true;
+            this.tbSearch.BackColor = System.Drawing.Color.Transparent;
+            this.tbSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tbSearch.BackgroundImage")));
+            this.tbSearch.BorderColorActive = System.Drawing.Color.DodgerBlue;
+            this.tbSearch.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.tbSearch.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.tbSearch.BorderColorIdle = System.Drawing.Color.Silver;
+            this.tbSearch.BorderRadius = 1;
+            this.tbSearch.BorderThickness = 1;
+            this.tbSearch.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.tbSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbSearch.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.tbSearch.DefaultText = "";
+            this.tbSearch.FillColor = System.Drawing.Color.White;
+            this.tbSearch.HideSelection = true;
+            this.tbSearch.IconLeft = null;
+            this.tbSearch.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbSearch.IconPadding = 10;
+            this.tbSearch.IconRight = null;
+            this.tbSearch.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbSearch.Lines = new string[0];
+            this.tbSearch.Location = new System.Drawing.Point(105, 18);
+            this.tbSearch.MaxLength = 32767;
+            this.tbSearch.MinimumSize = new System.Drawing.Size(1, 1);
+            this.tbSearch.Modified = false;
+            this.tbSearch.Multiline = false;
+            this.tbSearch.Name = "tbSearch";
+            stateProperties5.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties5.FillColor = System.Drawing.Color.Empty;
+            stateProperties5.ForeColor = System.Drawing.Color.Empty;
+            stateProperties5.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tbSearch.OnActiveState = stateProperties5;
+            stateProperties6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties6.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.tbSearch.OnDisabledState = stateProperties6;
+            stateProperties7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties7.FillColor = System.Drawing.Color.Empty;
+            stateProperties7.ForeColor = System.Drawing.Color.Empty;
+            stateProperties7.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tbSearch.OnHoverState = stateProperties7;
+            stateProperties8.BorderColor = System.Drawing.Color.Silver;
+            stateProperties8.FillColor = System.Drawing.Color.White;
+            stateProperties8.ForeColor = System.Drawing.Color.Empty;
+            stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tbSearch.OnIdleState = stateProperties8;
+            this.tbSearch.Padding = new System.Windows.Forms.Padding(3);
+            this.tbSearch.PasswordChar = '\0';
+            this.tbSearch.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.tbSearch.PlaceholderText = "Search Model Here";
+            this.tbSearch.ReadOnly = false;
+            this.tbSearch.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.tbSearch.SelectedText = "";
+            this.tbSearch.SelectionLength = 0;
+            this.tbSearch.SelectionStart = 0;
+            this.tbSearch.ShortcutsEnabled = true;
+            this.tbSearch.Size = new System.Drawing.Size(260, 39);
+            this.tbSearch.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
+            this.tbSearch.TabIndex = 56;
+            this.tbSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.tbSearch.TextMarginBottom = 0;
+            this.tbSearch.TextMarginLeft = 3;
+            this.tbSearch.TextMarginTop = 1;
+            this.tbSearch.TextPlaceholder = "Search Model Here";
+            this.tbSearch.UseSystemPasswordChar = false;
+            this.tbSearch.WordWrap = true;
+            this.tbSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbSearch_KeyDown);
             // 
             // timer1
             // 
