@@ -30,9 +30,9 @@ namespace SMESData
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.pnMain = new Bunifu.UI.WinForms.BunifuPanel();
             this.pnMenu = new Bunifu.UI.WinForms.BunifuPanel();
             this.btMQCPD = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
@@ -57,7 +57,7 @@ namespace SMESData
             this.pnMain.Margin = new System.Windows.Forms.Padding(2);
             this.pnMain.Name = "pnMain";
             this.pnMain.ShowBorders = true;
-            this.pnMain.Size = new System.Drawing.Size(1305, 804);
+            this.pnMain.Size = new System.Drawing.Size(1785, 989);
             this.pnMain.TabIndex = 10;
             // 
             // pnMenu
@@ -78,7 +78,7 @@ namespace SMESData
             this.pnMenu.Margin = new System.Windows.Forms.Padding(2);
             this.pnMenu.Name = "pnMenu";
             this.pnMenu.ShowBorders = true;
-            this.pnMenu.Size = new System.Drawing.Size(135, 804);
+            this.pnMenu.Size = new System.Drawing.Size(135, 989);
             this.pnMenu.TabIndex = 9;
             // 
             // btMQCPD
@@ -100,11 +100,11 @@ namespace SMESData
             this.btMQCPD.ColorContrastOnClick = 45;
             this.btMQCPD.ColorContrastOnHover = 45;
             this.btMQCPD.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.btMQCPD.CustomizableEdges = borderEdges1;
+            borderEdges4.BottomLeft = true;
+            borderEdges4.BottomRight = true;
+            borderEdges4.TopLeft = true;
+            borderEdges4.TopRight = true;
+            this.btMQCPD.CustomizableEdges = borderEdges4;
             this.btMQCPD.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btMQCPD.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btMQCPD.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -180,6 +180,7 @@ namespace SMESData
             this.btClose.AllowToggling = false;
             this.btClose.AllowZooming = true;
             this.btClose.AllowZoomingOnFocus = false;
+            this.btClose.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btClose.BackColor = System.Drawing.Color.Transparent;
             this.btClose.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btClose.ErrorImage = ((System.Drawing.Image)(resources.GetObject("btClose.ErrorImage")));
@@ -192,7 +193,7 @@ namespace SMESData
             this.btClose.ImageSize = new System.Drawing.Size(55, 61);
             this.btClose.ImageZoomSize = new System.Drawing.Size(75, 81);
             this.btClose.InitialImage = ((System.Drawing.Image)(resources.GetObject("btClose.InitialImage")));
-            this.btClose.Location = new System.Drawing.Point(30, 773);
+            this.btClose.Location = new System.Drawing.Point(31, 885);
             this.btClose.Margin = new System.Windows.Forms.Padding(2);
             this.btClose.Name = "btClose";
             this.btClose.Rotation = 0;
@@ -227,11 +228,11 @@ namespace SMESData
             this.btPQC.ColorContrastOnClick = 45;
             this.btPQC.ColorContrastOnHover = 45;
             this.btPQC.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.btPQC.CustomizableEdges = borderEdges2;
+            borderEdges5.BottomLeft = true;
+            borderEdges5.BottomRight = true;
+            borderEdges5.TopLeft = true;
+            borderEdges5.TopRight = true;
+            this.btPQC.CustomizableEdges = borderEdges5;
             this.btPQC.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btPQC.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btPQC.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -318,11 +319,11 @@ namespace SMESData
             this.btMQC.ColorContrastOnClick = 45;
             this.btMQC.ColorContrastOnHover = 45;
             this.btMQC.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges3.BottomLeft = true;
-            borderEdges3.BottomRight = true;
-            borderEdges3.TopLeft = true;
-            borderEdges3.TopRight = true;
-            this.btMQC.CustomizableEdges = borderEdges3;
+            borderEdges6.BottomLeft = true;
+            borderEdges6.BottomRight = true;
+            borderEdges6.TopLeft = true;
+            borderEdges6.TopRight = true;
+            this.btMQC.CustomizableEdges = borderEdges6;
             this.btMQC.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btMQC.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btMQC.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -408,7 +409,7 @@ namespace SMESData
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1440, 804);
+            this.ClientSize = new System.Drawing.Size(1920, 989);
             this.Controls.Add(this.pnMain);
             this.Controls.Add(this.pnMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
