@@ -31,8 +31,8 @@ namespace SMESData
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_MQC_PieChart));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges9 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges10 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges11 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges12 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.lbWar5 = new Bunifu.UI.WinForms.BunifuLabel();
             this.btL6 = new Bunifu.UI.WinForms.BunifuImageButton();
             this.lbWar6 = new Bunifu.UI.WinForms.BunifuLabel();
@@ -127,10 +127,13 @@ namespace SMESData
             // lbWar5
             // 
             this.lbWar5.AllowParentOverrides = false;
+            this.lbWar5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbWar5.AutoEllipsis = false;
             this.lbWar5.CursorType = null;
             this.lbWar5.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbWar5.Location = new System.Drawing.Point(100, 120);
+            this.lbWar5.Location = new System.Drawing.Point(140, 100);
             this.lbWar5.Name = "lbWar5";
             this.lbWar5.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbWar5.Size = new System.Drawing.Size(12, 37);
@@ -178,10 +181,13 @@ namespace SMESData
             // lbWar6
             // 
             this.lbWar6.AllowParentOverrides = false;
+            this.lbWar6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbWar6.AutoEllipsis = false;
             this.lbWar6.CursorType = null;
             this.lbWar6.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbWar6.Location = new System.Drawing.Point(100, 120);
+            this.lbWar6.Location = new System.Drawing.Point(140, 100);
             this.lbWar6.Name = "lbWar6";
             this.lbWar6.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbWar6.Size = new System.Drawing.Size(12, 37);
@@ -391,10 +397,13 @@ namespace SMESData
             // lbWar4
             // 
             this.lbWar4.AllowParentOverrides = false;
+            this.lbWar4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbWar4.AutoEllipsis = false;
             this.lbWar4.CursorType = null;
             this.lbWar4.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbWar4.Location = new System.Drawing.Point(100, 120);
+            this.lbWar4.Location = new System.Drawing.Point(140, 100);
             this.lbWar4.Name = "lbWar4";
             this.lbWar4.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbWar4.Size = new System.Drawing.Size(12, 37);
@@ -669,10 +678,13 @@ namespace SMESData
             // lbWar7
             // 
             this.lbWar7.AllowParentOverrides = false;
+            this.lbWar7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbWar7.AutoEllipsis = false;
             this.lbWar7.CursorType = null;
             this.lbWar7.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbWar7.Location = new System.Drawing.Point(100, 120);
+            this.lbWar7.Location = new System.Drawing.Point(140, 100);
             this.lbWar7.Name = "lbWar7";
             this.lbWar7.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbWar7.Size = new System.Drawing.Size(12, 37);
@@ -739,7 +751,7 @@ namespace SMESData
             this.linePCanvas7.AnimationDuration = 2000;
             this.linePCanvas7.AnimationType = Bunifu.Charts.WinForms.BunifuChartCanvas.AnimationOptions.easeOutQuart;
             this.linePCanvas7.BackColor = System.Drawing.Color.White;
-            this.linePCanvas7.CanvasPadding = new System.Windows.Forms.Padding(6, 6, 8, 6);
+            this.linePCanvas7.CanvasPadding = new System.Windows.Forms.Padding(25, 0, 25, 35);
             this.linePCanvas7.Font = new System.Drawing.Font("Times New Roman", 8.25F);
             this.linePCanvas7.Labels = new string[0];
             this.linePCanvas7.LegendAlignment = Bunifu.Charts.WinForms.BunifuChartCanvas.LegendAlignmentOptions.start;
@@ -894,10 +906,13 @@ namespace SMESData
             // lbWar1
             // 
             this.lbWar1.AllowParentOverrides = false;
+            this.lbWar1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbWar1.AutoEllipsis = false;
             this.lbWar1.CursorType = null;
             this.lbWar1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbWar1.Location = new System.Drawing.Point(100, 120);
+            this.lbWar1.Location = new System.Drawing.Point(140, 100);
             this.lbWar1.Name = "lbWar1";
             this.lbWar1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbWar1.Size = new System.Drawing.Size(12, 37);
@@ -985,7 +1000,7 @@ namespace SMESData
             this.linePCanvas1.AnimationDuration = 2000;
             this.linePCanvas1.AnimationType = Bunifu.Charts.WinForms.BunifuChartCanvas.AnimationOptions.easeOutQuart;
             this.linePCanvas1.BackColor = System.Drawing.Color.White;
-            this.linePCanvas1.CanvasPadding = new System.Windows.Forms.Padding(6, 6, 8, 6);
+            this.linePCanvas1.CanvasPadding = new System.Windows.Forms.Padding(25, 0, 25, 35);
             this.linePCanvas1.Font = new System.Drawing.Font("Times New Roman", 8.25F);
             this.linePCanvas1.Labels = new string[0];
             this.linePCanvas1.LegendAlignment = Bunifu.Charts.WinForms.BunifuChartCanvas.LegendAlignmentOptions.start;
@@ -1097,10 +1112,13 @@ namespace SMESData
             // lbWar2
             // 
             this.lbWar2.AllowParentOverrides = false;
+            this.lbWar2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbWar2.AutoEllipsis = false;
             this.lbWar2.CursorType = null;
             this.lbWar2.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbWar2.Location = new System.Drawing.Point(100, 120);
+            this.lbWar2.Location = new System.Drawing.Point(140, 100);
             this.lbWar2.Name = "lbWar2";
             this.lbWar2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbWar2.Size = new System.Drawing.Size(12, 37);
@@ -1127,13 +1145,14 @@ namespace SMESData
             // 
             // linePCanvas2
             // 
+            this.linePCanvas2.AccessibleRole = System.Windows.Forms.AccessibleRole.Chart;
             this.linePCanvas2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.linePCanvas2.AnimationDuration = 2000;
             this.linePCanvas2.AnimationType = Bunifu.Charts.WinForms.BunifuChartCanvas.AnimationOptions.easeOutQuart;
             this.linePCanvas2.BackColor = System.Drawing.Color.White;
-            this.linePCanvas2.CanvasPadding = new System.Windows.Forms.Padding(6, 6, 8, 6);
+            this.linePCanvas2.CanvasPadding = new System.Windows.Forms.Padding(25, 0, 25, 35);
             this.linePCanvas2.Font = new System.Drawing.Font("Times New Roman", 8.25F);
             this.linePCanvas2.Labels = new string[0];
             this.linePCanvas2.LegendAlignment = Bunifu.Charts.WinForms.BunifuChartCanvas.LegendAlignmentOptions.end;
@@ -1296,10 +1315,13 @@ namespace SMESData
             // lbWar3
             // 
             this.lbWar3.AllowParentOverrides = false;
+            this.lbWar3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbWar3.AutoEllipsis = false;
             this.lbWar3.CursorType = null;
             this.lbWar3.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbWar3.Location = new System.Drawing.Point(100, 120);
+            this.lbWar3.Location = new System.Drawing.Point(140, 100);
             this.lbWar3.Name = "lbWar3";
             this.lbWar3.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbWar3.Size = new System.Drawing.Size(12, 37);
@@ -1332,7 +1354,7 @@ namespace SMESData
             this.linePCanvas3.AnimationDuration = 2000;
             this.linePCanvas3.AnimationType = Bunifu.Charts.WinForms.BunifuChartCanvas.AnimationOptions.easeOutQuart;
             this.linePCanvas3.BackColor = System.Drawing.Color.White;
-            this.linePCanvas3.CanvasPadding = new System.Windows.Forms.Padding(6, 6, 8, 6);
+            this.linePCanvas3.CanvasPadding = new System.Windows.Forms.Padding(25, 0, 25, 35);
             this.linePCanvas3.Font = new System.Drawing.Font("Times New Roman", 8.25F);
             this.linePCanvas3.Labels = new string[0];
             this.linePCanvas3.LegendAlignment = Bunifu.Charts.WinForms.BunifuChartCanvas.LegendAlignmentOptions.start;
@@ -1567,11 +1589,11 @@ namespace SMESData
             this.btStart.ColorContrastOnClick = 45;
             this.btStart.ColorContrastOnHover = 45;
             this.btStart.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges9.BottomLeft = true;
-            borderEdges9.BottomRight = true;
-            borderEdges9.TopLeft = true;
-            borderEdges9.TopRight = true;
-            this.btStart.CustomizableEdges = borderEdges9;
+            borderEdges11.BottomLeft = true;
+            borderEdges11.BottomRight = true;
+            borderEdges11.TopLeft = true;
+            borderEdges11.TopRight = true;
+            this.btStart.CustomizableEdges = borderEdges11;
             this.btStart.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btStart.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btStart.DisabledFillColor = System.Drawing.Color.Empty;
@@ -1660,11 +1682,11 @@ namespace SMESData
             this.btStop.ColorContrastOnClick = 45;
             this.btStop.ColorContrastOnHover = 45;
             this.btStop.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges10.BottomLeft = true;
-            borderEdges10.BottomRight = true;
-            borderEdges10.TopLeft = true;
-            borderEdges10.TopRight = true;
-            this.btStop.CustomizableEdges = borderEdges10;
+            borderEdges12.BottomLeft = true;
+            borderEdges12.BottomRight = true;
+            borderEdges12.TopLeft = true;
+            borderEdges12.TopRight = true;
+            this.btStop.CustomizableEdges = borderEdges12;
             this.btStop.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btStop.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btStop.DisabledFillColor = System.Drawing.Color.Empty;
