@@ -19,7 +19,7 @@ namespace SMESData
         private void Warning_Load(object sender, EventArgs e)
         {
             lbModel.Text = SaveData.Model;
-            lbDate.Text = SaveData.Date;
+            lbDate.Text = Convert.ToDateTime(SaveData.Date).ToString("dd-MM-yyyy");
             lbNGA.Text = SaveData.NGallow + "%";
         }
         private void btOK_Click(object sender, EventArgs e)

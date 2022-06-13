@@ -445,7 +445,6 @@ namespace SMESData
         private void btFix_Click(object sender, EventArgs e)
         {
             SaveData.NGallow = tbNGA.Text.Replace("%", "").Trim();
-            SaveData.Date = dtpChart.Value.ToString("dd-MM-yyyy");
             wn.ShowDialog();
         }
 

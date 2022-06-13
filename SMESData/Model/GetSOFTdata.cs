@@ -80,13 +80,13 @@ namespace SMESData
             if (SaveData.PQC == true)
             {
                 sqlGetData.Append("select distinct Model from thu_SMESData_NGRate_PQC ");
-                sqlGetData.Append("where Date = '" + Convert.ToDateTime(date).ToString("yyyy-MM-dd") + "'");
+                sqlGetData.Append("where Date = '" + date + "'");
                 sqlSOFTCon.sqlDataAdapterFillDatatable(sqlGetData.ToString(), ref dt);
             }  
             else
             {
                 sqlGetData.Append("select distinct model from thu_SMESData_NGRate ");
-                sqlGetData.Append("where inspectdate = '" + Convert.ToDateTime(date).ToString("yyyy-MM-dd") + "'");
+                sqlGetData.Append("where inspectdate = '" + date + "'");
                 sqlSOFTCon.sqlDataAdapterFillDatatable(sqlGetData.ToString(), ref dt);
             }                
             return dt;
