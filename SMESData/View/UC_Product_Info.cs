@@ -34,7 +34,6 @@ namespace SMESData
             //Timer          
             pnTimeControl.Enabled = false;
             wn.OnUpdateStatus += customControl_OnUpdateStatus;          
-            sizeChange();
         }
 
         //List data
@@ -91,7 +90,12 @@ namespace SMESData
 
         }
         public void renderPiechart()
-        {            
+        {
+            //Add QC text
+            if (SaveData.MQC == true)
+                lbQC.Text = "MQC";
+            else
+                lbQC.Text = "PQC";
             //Add data
             lineData();
             MQCChart.Data = dataMQC;
@@ -149,8 +153,8 @@ namespace SMESData
                 bgColors.Add(Color.DodgerBlue);
                 bgColors.Add(Color.Orange);
                 bgColors.Add(Color.Red);
-                MQCChart.BackgroundColor = bgColors;
-            }    
+                MQCChart.BackgroundColor = bgColors;  
+            }            
         }
         public void UpdateDTGV()
         {           
@@ -164,20 +168,20 @@ namespace SMESData
                     dataMQC.Clear();                    
                     dtgv_MQC_PD.DataSource = GetSOFTdata.GetListMQC(date, line);
                     dtpChart.Visible = true;
-                    ChangeColor();
+                    //ChangeColor();
                 }  
                 else
                 {                  
                     dataPQC.Clear();                   
                     dtgv_MQC_PD.DataSource = GetSOFTdata.GetListPQC(date, line);
                     dtpChart.Visible = true;
-                    ChangeColor();
+                    //ChangeColor();
                 }
                 dtgv_MQC_PD.Columns["target"].Visible = false;
                 dtgv_MQC_PD.Columns["NG_rate_allow"].Visible = false;
                 dtgv_MQC_PD.Columns["RW_rate_allow"].Visible = false;
             }
-            ChangeData();
+            //ChangeData();
         }
         public void UpdateDTGVByLine()
         {           
@@ -190,19 +194,19 @@ namespace SMESData
                 {
                     dataMQC.Clear();                   
                     dtgv_MQC_PD.DataSource = GetSOFTdata.GetListMQC(date, line);
-                    ChangeColor();
+                    //ChangeColor();
                 }    
                 else
                 {
                     dataPQC.Clear();
                     dtgv_MQC_PD.DataSource = GetSOFTdata.GetListPQC(date, line);
-                    ChangeColor();
+                    //ChangeColor();
                 }
                 dtgv_MQC_PD.Columns["target"].Visible = false;
                 dtgv_MQC_PD.Columns["NG_rate_allow"].Visible = false;
                 dtgv_MQC_PD.Columns["RW_rate_allow"].Visible = false;
             }
-            ChangeData();
+            //ChangeData();
             if (SaveData.Date != DateTime.Today.ToString("yyyy-MM-dd"))
             {
                 btStart.Enabled = true;
@@ -398,8 +402,8 @@ namespace SMESData
                     DataTable searchResultTable = results.CopyToDataTable();
                     dataMQC.Clear();
                     dtgv_MQC_PD.DataSource = searchResultTable;
-                    ChangeColor();
-                    ChangeData();
+                    //ChangeColor();
+                    //ChangeData();
                 }
                 else
                 {
@@ -414,8 +418,8 @@ namespace SMESData
                     DataTable searchResultTable = results.CopyToDataTable();
                     dataPQC.Clear();
                     dtgv_MQC_PD.DataSource = searchResultTable;
-                    ChangeColor();
-                    ChangeData();
+                    //ChangeColor();
+                    //ChangeData();
                 }
                 else
                 {
@@ -430,7 +434,6 @@ namespace SMESData
             SaveData.PQCClick = false;
             SaveData.MQC = true;
             SaveData.PQC = false;
-            lbQC.Text = "MQC";
             UpdateDTGV();
         }
         private void btPQCD_Click(object sender, EventArgs e)
@@ -439,7 +442,6 @@ namespace SMESData
             SaveData.PQCClick = false;
             SaveData.MQC = false;
             SaveData.PQC = true;
-            lbQC.Text = "PQC";
             UpdateDTGV();
         }
 
@@ -470,8 +472,8 @@ namespace SMESData
                         DataTable searchResultTable = results.CopyToDataTable();
                         dataMQC.Clear();
                         dtgv_MQC_PD.DataSource = searchResultTable;
-                        ChangeColor();
-                        ChangeData();
+                        //ChangeColor();
+                        //ChangeData();
                     }
                     else
                     {
@@ -486,8 +488,8 @@ namespace SMESData
                         DataTable searchResultTable = results.CopyToDataTable();
                         dataPQC.Clear();
                         dtgv_MQC_PD.DataSource = searchResultTable;
-                        ChangeColor();
-                        ChangeData();
+                        //ChangeColor();
+                        //ChangeData();
                     }
                     else
                     {
@@ -500,11 +502,6 @@ namespace SMESData
         {
             UpdateDTGV();
         }
-        private void dtgv_MQC_PD_Sorted(object sender, EventArgs e)
-        {
-            ChangeColor();
-            ChangeData();
-        }
 
         private void btSI_Click(object sender, EventArgs e)
         {            
@@ -512,20 +509,26 @@ namespace SMESData
         }
         public void sizeChange()
         {
+            linePCanvas1.CanvasPadding = new Padding(25, -15, 25, 40);
+
+        }
+        public void sizeDefault()
+        {
             linePCanvas1.CanvasPadding = new Padding(3, -20, 7, 25);
-            if (tableLayoutPanel1.Width >= 1500)
-            {
-                linePCanvas1.CanvasPadding = new Padding(25, -15, 25, 40);
-            }
-            else
-            {
-                linePCanvas1.CanvasPadding = new Padding(3, -20, 7, 25);
-            }
         }
 
         private void dtgv_MQC_PD_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
-            sizeChange();
+            if (Screen.PrimaryScreen.Bounds.Width <= 1550)
+            {
+                sizeDefault();
+            }    
+            else
+            {
+                sizeChange();
+            }
+            ChangeColor();
+            ChangeData();
         }
     }
 }
