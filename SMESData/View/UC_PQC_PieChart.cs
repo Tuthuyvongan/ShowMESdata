@@ -122,6 +122,7 @@ namespace SMESData
         }
         public void renderPiechart()
         {
+            sizeChange();
             changePanel();
             //Add data
             lineData();
@@ -811,6 +812,29 @@ namespace SMESData
         }
 
         private void tableLayoutPanel1_SizeChanged(object sender, EventArgs e)
+        {
+            if (tableLayoutPanel1.Width >= 1500)
+            {
+                linePCanvas1.CanvasPadding = new Padding(25, 0, 25, 35);
+                linePCanvas2.CanvasPadding = new Padding(25, 0, 25, 35);
+                linePCanvas3.CanvasPadding = new Padding(25, 0, 25, 35);
+                linePCanvas4.CanvasPadding = new Padding(6, 6, 8, 6);
+                linePCanvas5.CanvasPadding = new Padding(6, 6, 8, 6);
+                linePCanvas6.CanvasPadding = new Padding(6, 6, 8, 6);
+                linePCanvas7.CanvasPadding = new Padding(25, 0, 25, 35);
+            }
+            else
+            {
+                linePCanvas1.CanvasPadding = new Padding(6, -6, 8, 18);
+                linePCanvas2.CanvasPadding = new Padding(6, -6, 8, 18);
+                linePCanvas3.CanvasPadding = new Padding(6, -4, 10, 18);
+                linePCanvas4.CanvasPadding = new Padding(6, 6, 8, 6);
+                linePCanvas5.CanvasPadding = new Padding(6, 6, 8, 6);
+                linePCanvas6.CanvasPadding = new Padding(6, 6, 8, 6);
+                linePCanvas7.CanvasPadding = new Padding(6, -6, 8, 18);
+            }
+        }
+        public void sizeChange()
         {
             if (tableLayoutPanel1.Width >= 1500)
             {

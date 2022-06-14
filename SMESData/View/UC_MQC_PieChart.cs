@@ -122,6 +122,7 @@ namespace SMESData
         }
         public void renderPiechart()
         {
+            sizeChange()
             changePanel();
             //Add data
             lineData();

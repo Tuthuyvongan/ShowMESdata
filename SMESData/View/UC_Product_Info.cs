@@ -33,7 +33,7 @@ namespace SMESData
             lblTime.Font = new Font("Times New Roman", 14, FontStyle.Bold);
             //Timer          
             pnTimeControl.Enabled = false;
-            wn.OnUpdateStatus += customControl_OnUpdateStatus;           
+            wn.OnUpdateStatus += customControl_OnUpdateStatus;
         }
 
         //List data
@@ -90,7 +90,7 @@ namespace SMESData
 
         }
         public void renderPiechart()
-        {
+        {            
             //Add data
             lineData();
             MQCChart.Data = dataMQC;
