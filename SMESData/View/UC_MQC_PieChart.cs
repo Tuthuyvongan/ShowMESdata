@@ -417,6 +417,7 @@ namespace SMESData
             timer1.Start();
             startTime = DateTime.Now;
             lblTime.Visible = true;
+            SaveData.Date = dtpChart.Value.ToString("yyyy-MM-dd");
         }
         public void ChangeUpdateTime()
         {

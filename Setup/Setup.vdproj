@@ -454,12 +454,6 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_8E1D8F4EED9FAA6E8C7213CFD87DBCB2"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_A12840A6EEC64127A21A30BAB7393EFC"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -677,6 +671,12 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_0D6A95D6B4053FE4286BE36258DE9EE7"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_8E1D8F4EED9FAA6E8C7213CFD87DBCB2"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -1998,7 +1998,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:SMESC"
         "ProductCode" = "8:{D8F94AE9-438F-460A-AAD9-FCE55A462568}"
-        "PackageCode" = "8:{B7FDC8AF-9709-448C-8B32-91267A3D7401}"
+        "PackageCode" = "8:{9CA3A4ED-AF64-4176-A284-5ACDFFB9096F}"
         "UpgradeCode" = "8:{CF832587-9211-4101-8DD2-6AA547741F62}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"

@@ -1060,11 +1060,11 @@ namespace SMESData
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel6.ColumnCount = 5;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.27698F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.51495F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.20546F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.36671F));
             this.tableLayoutPanel6.Controls.Add(this.lb8, 0, 5);
             this.tableLayoutPanel6.Controls.Add(this.dtpChart, 0, 0);
             this.tableLayoutPanel6.Controls.Add(this.lb1, 0, 1);
@@ -1108,7 +1108,7 @@ namespace SMESData
             this.lb8.Cursor = System.Windows.Forms.Cursors.Default;
             this.lb8.CursorType = System.Windows.Forms.Cursors.Default;
             this.lb8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.lb8.Location = new System.Drawing.Point(100, 415);
+            this.lb8.Location = new System.Drawing.Point(125, 415);
             this.lb8.Name = "lb8";
             this.lb8.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lb8.Size = new System.Drawing.Size(50, 19);
@@ -1141,7 +1141,7 @@ namespace SMESData
             this.dtpChart.Margin = new System.Windows.Forms.Padding(2);
             this.dtpChart.MinimumSize = new System.Drawing.Size(4, 32);
             this.dtpChart.Name = "dtpChart";
-            this.dtpChart.Size = new System.Drawing.Size(149, 32);
+            this.dtpChart.Size = new System.Drawing.Size(174, 32);
             this.dtpChart.TabIndex = 34;
             this.dtpChart.Value = new System.DateTime(2022, 5, 29, 0, 0, 0, 0);
             // 
@@ -1152,7 +1152,7 @@ namespace SMESData
             this.lb1.AutoEllipsis = false;
             this.lb1.CursorType = null;
             this.lb1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.lb1.Location = new System.Drawing.Point(82, 106);
+            this.lb1.Location = new System.Drawing.Point(107, 106);
             this.lb1.Name = "lb1";
             this.lb1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lb1.Size = new System.Drawing.Size(68, 19);
@@ -1168,7 +1168,7 @@ namespace SMESData
             this.lb2.AutoEllipsis = false;
             this.lb2.CursorType = null;
             this.lb2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.lb2.Location = new System.Drawing.Point(68, 183);
+            this.lb2.Location = new System.Drawing.Point(93, 183);
             this.lb2.Name = "lb2";
             this.lb2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lb2.Size = new System.Drawing.Size(82, 19);
@@ -1184,7 +1184,7 @@ namespace SMESData
             this.lb3.AutoEllipsis = false;
             this.lb3.CursorType = null;
             this.lb3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.lb3.Location = new System.Drawing.Point(69, 260);
+            this.lb3.Location = new System.Drawing.Point(94, 260);
             this.lb3.Name = "lb3";
             this.lb3.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lb3.Size = new System.Drawing.Size(81, 19);
@@ -1201,7 +1201,7 @@ namespace SMESData
             this.lb4.Cursor = System.Windows.Forms.Cursors.Default;
             this.lb4.CursorType = System.Windows.Forms.Cursors.Default;
             this.lb4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.lb4.Location = new System.Drawing.Point(110, 337);
+            this.lb4.Location = new System.Drawing.Point(135, 337);
             this.lb4.Name = "lb4";
             this.lb4.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lb4.Size = new System.Drawing.Size(40, 19);
@@ -1217,7 +1217,7 @@ namespace SMESData
             this.lb5.AutoEllipsis = false;
             this.lb5.CursorType = null;
             this.lb5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.lb5.Location = new System.Drawing.Point(421, 106);
+            this.lb5.Location = new System.Drawing.Point(419, 106);
             this.lb5.Name = "lb5";
             this.lb5.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lb5.Size = new System.Drawing.Size(35, 19);
@@ -1233,7 +1233,7 @@ namespace SMESData
             this.lb6.AutoEllipsis = false;
             this.lb6.CursorType = null;
             this.lb6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.lb6.Location = new System.Drawing.Point(351, 183);
+            this.lb6.Location = new System.Drawing.Point(349, 183);
             this.lb6.Name = "lb6";
             this.lb6.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lb6.Size = new System.Drawing.Size(105, 19);
@@ -1249,7 +1249,7 @@ namespace SMESData
             this.lb7.AutoEllipsis = false;
             this.lb7.CursorType = null;
             this.lb7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.lb7.Location = new System.Drawing.Point(375, 260);
+            this.lb7.Location = new System.Drawing.Point(373, 260);
             this.lb7.Name = "lb7";
             this.lb7.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lb7.Size = new System.Drawing.Size(81, 19);
@@ -1265,7 +1265,7 @@ namespace SMESData
             this.bunifuLabel2.AutoEllipsis = false;
             this.bunifuLabel2.CursorType = null;
             this.bunifuLabel2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.bunifuLabel2.Location = new System.Drawing.Point(348, 337);
+            this.bunifuLabel2.Location = new System.Drawing.Point(346, 337);
             this.bunifuLabel2.Name = "bunifuLabel2";
             this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel2.Size = new System.Drawing.Size(108, 19);
@@ -1281,7 +1281,7 @@ namespace SMESData
             this.bunifuLabel4.AutoEllipsis = false;
             this.bunifuLabel4.CursorType = null;
             this.bunifuLabel4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.bunifuLabel4.Location = new System.Drawing.Point(372, 415);
+            this.bunifuLabel4.Location = new System.Drawing.Point(370, 415);
             this.bunifuLabel4.Name = "bunifuLabel4";
             this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel4.Size = new System.Drawing.Size(84, 19);
@@ -1297,7 +1297,7 @@ namespace SMESData
             this.lbLine.AutoEllipsis = false;
             this.lbLine.CursorType = null;
             this.lbLine.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.lbLine.Location = new System.Drawing.Point(462, 106);
+            this.lbLine.Location = new System.Drawing.Point(460, 106);
             this.lbLine.Name = "lbLine";
             this.lbLine.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbLine.Size = new System.Drawing.Size(12, 19);
@@ -1313,7 +1313,7 @@ namespace SMESData
             this.lbNGR.AutoEllipsis = false;
             this.lbNGR.CursorType = null;
             this.lbNGR.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.lbNGR.Location = new System.Drawing.Point(462, 183);
+            this.lbNGR.Location = new System.Drawing.Point(460, 183);
             this.lbNGR.Name = "lbNGR";
             this.lbNGR.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbNGR.Size = new System.Drawing.Size(12, 19);
@@ -1351,7 +1351,7 @@ namespace SMESData
             this.tbNGA.IconRight = null;
             this.tbNGA.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.tbNGA.Lines = new string[0];
-            this.tbNGA.Location = new System.Drawing.Point(462, 249);
+            this.tbNGA.Location = new System.Drawing.Point(460, 249);
             this.tbNGA.MaxLength = 32767;
             this.tbNGA.MinimumSize = new System.Drawing.Size(1, 1);
             this.tbNGA.Modified = false;
@@ -1405,7 +1405,7 @@ namespace SMESData
             this.lbRWR.AutoEllipsis = false;
             this.lbRWR.CursorType = null;
             this.lbRWR.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.lbRWR.Location = new System.Drawing.Point(462, 337);
+            this.lbRWR.Location = new System.Drawing.Point(460, 337);
             this.lbRWR.Name = "lbRWR";
             this.lbRWR.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbRWR.Size = new System.Drawing.Size(12, 19);
@@ -1421,7 +1421,7 @@ namespace SMESData
             this.lbRWA.AutoEllipsis = false;
             this.lbRWA.CursorType = null;
             this.lbRWA.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.lbRWA.Location = new System.Drawing.Point(462, 415);
+            this.lbRWA.Location = new System.Drawing.Point(460, 415);
             this.lbRWA.Name = "lbRWA";
             this.lbRWA.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbRWA.Size = new System.Drawing.Size(12, 19);
@@ -1480,7 +1480,7 @@ namespace SMESData
             this.btFix.IdleIconLeftImage = null;
             this.btFix.IdleIconRightImage = null;
             this.btFix.IndicateFocus = false;
-            this.btFix.Location = new System.Drawing.Point(615, 250);
+            this.btFix.Location = new System.Drawing.Point(599, 250);
             this.btFix.Name = "btFix";
             this.btFix.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btFix.OnDisabledState.BorderRadius = 1;
@@ -1530,7 +1530,7 @@ namespace SMESData
             this.lbOP.AutoEllipsis = false;
             this.lbOP.CursorType = null;
             this.lbOP.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.lbOP.Location = new System.Drawing.Point(156, 106);
+            this.lbOP.Location = new System.Drawing.Point(181, 106);
             this.lbOP.Name = "lbOP";
             this.lbOP.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbOP.Size = new System.Drawing.Size(12, 19);
@@ -1546,7 +1546,7 @@ namespace SMESData
             this.lbRW.AutoEllipsis = false;
             this.lbRW.CursorType = null;
             this.lbRW.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.lbRW.Location = new System.Drawing.Point(156, 183);
+            this.lbRW.Location = new System.Drawing.Point(181, 183);
             this.lbRW.Name = "lbRW";
             this.lbRW.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbRW.Size = new System.Drawing.Size(12, 19);
@@ -1562,7 +1562,7 @@ namespace SMESData
             this.lbNG.AutoEllipsis = false;
             this.lbNG.CursorType = null;
             this.lbNG.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.lbNG.Location = new System.Drawing.Point(156, 260);
+            this.lbNG.Location = new System.Drawing.Point(181, 260);
             this.lbNG.Name = "lbNG";
             this.lbNG.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbNG.Size = new System.Drawing.Size(12, 19);
@@ -1578,7 +1578,7 @@ namespace SMESData
             this.lbTt.AutoEllipsis = false;
             this.lbTt.CursorType = null;
             this.lbTt.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.lbTt.Location = new System.Drawing.Point(156, 337);
+            this.lbTt.Location = new System.Drawing.Point(181, 337);
             this.lbTt.Name = "lbTt";
             this.lbTt.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbTt.Size = new System.Drawing.Size(12, 19);
@@ -1594,7 +1594,7 @@ namespace SMESData
             this.lbTarget.AutoEllipsis = false;
             this.lbTarget.CursorType = null;
             this.lbTarget.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.lbTarget.Location = new System.Drawing.Point(156, 415);
+            this.lbTarget.Location = new System.Drawing.Point(181, 415);
             this.lbTarget.Name = "lbTarget";
             this.lbTarget.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbTarget.Size = new System.Drawing.Size(12, 19);

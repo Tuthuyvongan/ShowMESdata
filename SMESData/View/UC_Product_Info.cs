@@ -135,9 +135,9 @@ namespace SMESData
                 lbOP1.Text = "OUTPUT: " + dataMQC[0].ToString() + "%";
                 lbRW1.Text = "REWORK: " + dataMQC[1].ToString() + "%";
                 lbNG1.Text = "NO GOOD: " + dataMQC[2].ToString() + "%";
-                lbOP1.Font = new Font("Times New Roman", 11, FontStyle.Bold);
-                lbRW1.Font = new Font("Times New Roman", 11, FontStyle.Bold);
-                lbNG1.Font = new Font("Times New Roman", 11, FontStyle.Bold);
+                lbOP1.Font = new Font("Times New Roman", 13, FontStyle.Bold);
+                lbRW1.Font = new Font("Times New Roman", 13, FontStyle.Bold);
+                lbNG1.Font = new Font("Times New Roman", 13, FontStyle.Bold);
                 //Target Canvas
                 MQCChart.TargetCanvas = linePCanvas1;
                 //Hide x y Canvas1
@@ -254,7 +254,7 @@ namespace SMESData
                                         dtgv_MQC_PD[j, i].Style.ForeColor = Color.Black;
                                         dtgv_MQC_PD[j, i].Style.SelectionBackColor = Color.FromArgb(255, 165, 0);
                                     }
-                                }
+                                }                  
                                 Thread.Sleep(50);
                                 msf.UpdateProgress(100 * (i + 1) / dtgv_MQC_PD.Rows.Count, "Application is running, please wait ... ");
                             }
@@ -529,6 +529,8 @@ namespace SMESData
             }
             ChangeColor();
             ChangeData();
+            dtgv_MQC_PD.Columns["NG_rate_realtime"].HeaderText = "NG_realtime (%)";
+            dtgv_MQC_PD.Columns["RW_rate_realtime"].HeaderText = "RW_realtime (%)";
         }
     }
 }
