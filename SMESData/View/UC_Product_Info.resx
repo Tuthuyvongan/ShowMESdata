@@ -189,86 +189,10 @@
         ZW1zBV9zaXplCF92ZXJzaW9uBwAABggIAgAAAAkDAAAAAAAAAAAAAAAPAwAAAAAAAAAGCw==
 </value>
   </data>
-  <data name="lbWar1.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; font-family: 'Times New Roman'; font-size: 48pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(0, 0, 0); text-align: center; }</value>
-  </data>
-  <data name="lbMdl.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; font-family: 'Times New Roman'; font-size: 20.25pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
-  </data>
-  <data name="lbModel.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; font-family: 'Times New Roman'; font-size: 20.25pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
-  </data>
-  <data name="lbQC.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; font-family: 'Times New Roman'; font-size: 32.25pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
-  </data>
-  <data name="lbNG1.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; font-family: 'Times New Roman'; font-size: 9pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
-  </data>
-  <data name="lbRW1.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; font-family: 'Times New Roman'; font-size: 9pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
-  </data>
-  <data name="lbOP1.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; font-family: 'Times New Roman'; font-size: 9pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btMQCD.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAIoAAABECAYAAABeZa2gAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADTSURBVHhe7dKxCYBAAMBAJ/mVdT/HsH+1EgSFDHDFVWmz
-        jG3uYztP+Df3e5SvAG9GITEKiVFIjEJiFBKjkBiFxCgkRiExColRSIxCYhQSo5AYhcQoJEYhMQqJUUiM
-        QmIUEqOQGIXEKCRGITEKiVFIjEJiFBKjkBiFxCgkRiExColRSIxCYhQSo5AYhcQoJEYhMQqJUUiMQmIU
-        EqOQGIXEKCRGITEKiVFIjEJiFBKjkBiFxCgkRiExColRSIxCYhQSo5AYhcQoJEYhWcY6j68Aj3UeF7uE
-        9ioNjpZkAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="btPQCD.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAIoAAABECAYAAABeZa2gAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADTSURBVHhe7dKxCYBAAMBAJ/mVdT/HsH+1EgSFDHDFVWmz
-        jG3uYztP+Df3e5SvAG9GITEKiVFIjEJiFBKjkBiFxCgkRiExColRSIxCYhQSo5AYhcQoJEYhMQqJUUiM
-        QmIUEqOQGIXEKCRGITEKiVFIjEJiFBKjkBiFxCgkRiExColRSIxCYhQSo5AYhcQoJEYhMQqJUUiMQmIU
-        EqOQGIXEKCRGITEKiVFIjEJiFBKjkBiFxCgkRiExColRSIxCYhQSo5AYhcQoJEYhWcY6j68Aj3UeF7uE
-        9ioNjpZkAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="lblTime.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; font-family: 'Times New Roman'; font-size: 13.8pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(0, 0, 0); text-align: center; }</value>
-  </data>
-  <data name="lbBox.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; font-family: 'Times New Roman'; font-size: 14.25pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(0, 0, 0); text-align: center; }</value>
-  </data>
-  <data name="lbS.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; font-family: 'Times New Roman'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
-  </data>
-  <data name="lbM.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; font-family: 'Times New Roman'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
-  </data>
-  <data name="lbH.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; font-family: 'Times New Roman'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
-  </data>
-  <data name="btStart.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAIoAAABECAYAAABeZa2gAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADTSURBVHhe7dKxCYBAAMBAJ/mVdT/HsH+1EgSFDHDFVWmz
-        jG3uYztP+Df3e5SvAG9GITEKiVFIjEJiFBKjkBiFxCgkRiExColRSIxCYhQSo5AYhcQoJEYhMQqJUUiM
-        QmIUEqOQGIXEKCRGITEKiVFIjEJiFBKjkBiFxCgkRiExColRSIxCYhQSo5AYhcQoJEYhMQqJUUiMQmIU
-        EqOQGIXEKCRGITEKiVFIjEJiFBKjkBiFxCgkRiExColRSIxCYhQSo5AYhcQoJEYhWcY6j68Aj3UeF7uE
-        9ioNjpZkAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="btStop.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAIoAAABECAYAAABeZa2gAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADTSURBVHhe7dKxDYRAEMDA7b+Pq4oyyA/0wScIJBcwwURO
-        PXvNca254MvvkXkL8GQUEqOQGIXEKCRGITEKiVFIjEJiFBKjkBiFxCgkRiExColRSIxCYhQSo5AYhcQo
-        JEYhMQqJUUiMQmIUEqOQGIXEKCRGITEKiVFIjEJiFBKjkBiFxCgkRiExColRSIxCYhQSo5AYhcQoJEYh
-        MQqJUUiMQmIUEqOQGIXEKCRGITEKiVFIjEJiFBKjkBiFxCgkRiExColRSIxCYhSS2WvOtwB/e815AzpZ
-        rDV0UKYcAAAAAElFTkSuQmCC
-</value>
-  </data>
   <data name="lb8.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 0px; font-family: 'Times New Roman'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="dtpChart.Icon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -353,6 +277,82 @@
   </data>
   <data name="lbTarget.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 0px; font-family: 'Times New Roman'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
+  </data>
+  <data name="lbWar1.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Times New Roman'; font-size: 48pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(0, 0, 0); text-align: center; }</value>
+  </data>
+  <data name="lbMdl.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Times New Roman'; font-size: 20.25pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
+  </data>
+  <data name="lbModel.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Times New Roman'; font-size: 20.25pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
+  </data>
+  <data name="lbQC.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Times New Roman'; font-size: 32.25pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
+  </data>
+  <data name="lbNG1.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Times New Roman'; font-size: 9pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
+  </data>
+  <data name="lbRW1.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Times New Roman'; font-size: 9pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
+  </data>
+  <data name="lbOP1.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Times New Roman'; font-size: 9pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
+  </data>
+  <data name="btMQCD.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAIoAAABECAYAAABeZa2gAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADTSURBVHhe7dKxCYBAAMBAJ/mVdT/HsH+1EgSFDHDFVWmz
+        jG3uYztP+Df3e5SvAG9GITEKiVFIjEJiFBKjkBiFxCgkRiExColRSIxCYhQSo5AYhcQoJEYhMQqJUUiM
+        QmIUEqOQGIXEKCRGITEKiVFIjEJiFBKjkBiFxCgkRiExColRSIxCYhQSo5AYhcQoJEYhMQqJUUiMQmIU
+        EqOQGIXEKCRGITEKiVFIjEJiFBKjkBiFxCgkRiExColRSIxCYhQSo5AYhcQoJEYhWcY6j68Aj3UeF7uE
+        9ioNjpZkAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="btPQCD.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAIoAAABECAYAAABeZa2gAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADTSURBVHhe7dKxCYBAAMBAJ/mVdT/HsH+1EgSFDHDFVWmz
+        jG3uYztP+Df3e5SvAG9GITEKiVFIjEJiFBKjkBiFxCgkRiExColRSIxCYhQSo5AYhcQoJEYhMQqJUUiM
+        QmIUEqOQGIXEKCRGITEKiVFIjEJiFBKjkBiFxCgkRiExColRSIxCYhQSo5AYhcQoJEYhMQqJUUiMQmIU
+        EqOQGIXEKCRGITEKiVFIjEJiFBKjkBiFxCgkRiExColRSIxCYhQSo5AYhcQoJEYhWcY6j68Aj3UeF7uE
+        9ioNjpZkAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="lblTime.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Times New Roman'; font-size: 13.8pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(0, 0, 0); text-align: center; }</value>
+  </data>
+  <data name="lbBox.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Times New Roman'; font-size: 14.25pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(0, 0, 0); text-align: center; }</value>
+  </data>
+  <data name="lbS.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Times New Roman'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
+  </data>
+  <data name="lbM.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Times New Roman'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
+  </data>
+  <data name="lbH.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Times New Roman'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
+  </data>
+  <data name="btStart.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAIoAAABECAYAAABeZa2gAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADTSURBVHhe7dKxCYBAAMBAJ/mVdT/HsH+1EgSFDHDFVWmz
+        jG3uYztP+Df3e5SvAG9GITEKiVFIjEJiFBKjkBiFxCgkRiExColRSIxCYhQSo5AYhcQoJEYhMQqJUUiM
+        QmIUEqOQGIXEKCRGITEKiVFIjEJiFBKjkBiFxCgkRiExColRSIxCYhQSo5AYhcQoJEYhMQqJUUiMQmIU
+        EqOQGIXEKCRGITEKiVFIjEJiFBKjkBiFxCgkRiExColRSIxCYhQSo5AYhcQoJEYhWcY6j68Aj3UeF7uE
+        9ioNjpZkAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="btStop.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAIoAAABECAYAAABeZa2gAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADTSURBVHhe7dKxDYRAEMDA7b+Pq4oyyA/0wScIJBcwwURO
+        PXvNca254MvvkXkL8GQUEqOQGIXEKCRGITEKiVFIjEJiFBKjkBiFxCgkRiExColRSIxCYhQSo5AYhcQo
+        JEYhMQqJUUiMQmIUEqOQGIXEKCRGITEKiVFIjEJiFBKjkBiFxCgkRiExColRSIxCYhQSo5AYhcQoJEYh
+        MQqJUUiMQmIUEqOQGIXEKCRGITEKiVFIjEJiFBKjkBiFxCgkRiExColRSIxCYhSS2WvOtwB/e815AzpZ
+        rDV0UKYcAAAAAElFTkSuQmCC
+</value>
   </data>
   <data name="btSI.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

@@ -61,7 +61,9 @@ namespace SMESData
             MQC = true;
             PQC = false;
             PD = false;
+            uc_MQC_PieChart.sizeChange();
             addUserControl(uc_MQC_PieChart);
+            Refresh();
             if (SaveData.Date == DateTime.Today.ToString("yyyy-MM-dd"))
                 uc_MQC_PieChart.UpdateTime();
             btMQC.FocusState = BunifuButton2.ButtonStates.Pressed;

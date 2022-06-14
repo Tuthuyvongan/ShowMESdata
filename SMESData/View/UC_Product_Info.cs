@@ -33,7 +33,8 @@ namespace SMESData
             lblTime.Font = new Font("Times New Roman", 14, FontStyle.Bold);
             //Timer          
             pnTimeControl.Enabled = false;
-            wn.OnUpdateStatus += customControl_OnUpdateStatus;
+            wn.OnUpdateStatus += customControl_OnUpdateStatus;          
+            sizeChange();
         }
 
         //List data
@@ -511,6 +512,7 @@ namespace SMESData
         }
         public void sizeChange()
         {
+            linePCanvas1.CanvasPadding = new Padding(3, -20, 7, 25);
             if (tableLayoutPanel1.Width >= 1500)
             {
                 linePCanvas1.CanvasPadding = new Padding(25, -15, 25, 40);
