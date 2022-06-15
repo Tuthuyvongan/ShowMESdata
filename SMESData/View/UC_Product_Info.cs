@@ -315,7 +315,6 @@ namespace SMESData
                 pnTimeControl.Enabled = false;
                 timer1.Start();
                 startTime = DateTime.Now;
-                lblTime.Visible = true;
                 SaveData.MQCClick = false;
                 SaveData.PQCClick = false;
             }
@@ -344,10 +343,13 @@ namespace SMESData
                 lblTime.Text = "Data update in: " + "\r\n" + time.ToString();
                 if (remainingSeconds < 0)
                 {
-                    lblTime.Visible = false;
+                    lblTime.Text = "Data is being" + "\r\n" + "updated";
                     timer1.Stop();
+                    SaveData.uc_pi = 0;
+                    SaveData.uc_mqc = -1;
+                    SaveData.uc_pqc = -1;
                     UpdateDTGV();                   
-                    UpdateTime();
+                    UpdateTime();                    
                 }
             }
             else

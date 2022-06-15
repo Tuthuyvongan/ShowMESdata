@@ -23,6 +23,9 @@ namespace SMESData
             btMQCPD.PerformClick();
             btMQCPD.Focus();
             changeSize();
+            SaveData.uc_pi = 0;
+            SaveData.uc_mqc = 0;
+            SaveData.uc_pqc = 0;
         }        
         public void changeSize()
         {
@@ -37,18 +40,42 @@ namespace SMESData
                 uc_PQC_PieChart.sizeChange();
             }
         }
+        public void updateChartPI()
+        {
+            if (SaveData.uc_pi == -1 && uc_PI != null)
+            {
+                uc_PI.UpdateDTGV();
+                SaveData.uc_pi = 0;
+            }
+        }
+        public void updateChartMQC()
+        {
+            if (SaveData.uc_mqc == -1 && uc_MQC_PieChart != null)
+            {
+                uc_MQC_PieChart.renderPiechart();
+                SaveData.uc_mqc = 0;
+            }            
+        }
+        public void updateChartPQC()
+        {
+            if (SaveData.uc_pqc == -1 && uc_PQC_PieChart != null)
+            {
+                uc_PQC_PieChart.renderPiechart();
+                SaveData.uc_pqc = 0;
+            }
+        }
         private void customControl_OnUpdateStatus(object sender, EventArgs e)
         {
             PD = true;
             MQC = false;
             PQC = false;
-            addUserControl(uc_PI);
-            if (SaveData.Date == DateTime.Today.ToString("yyyy-MM-dd"))
-                uc_PI.UpdateTime();
             btMQCPD.FocusState = BunifuButton2.ButtonStates.Pressed;
             btPQC.FocusState = BunifuButton2.ButtonStates.Idle;
             btMQC.FocusState = BunifuButton2.ButtonStates.Idle;
             btMQCPD.Focus();
+            addUserControl(uc_PI);
+            if (SaveData.Date == DateTime.Today.ToString("yyyy-MM-dd"))
+                uc_PI.UpdateTime();            
             uc_PI.UpdateDTGVByLine();
         }
         private void addUserControl(UserControl userControl)
@@ -64,12 +91,13 @@ namespace SMESData
             MQC = true;
             PQC = false;
             PD = false;
-            addUserControl(uc_MQC_PieChart);
-            if (SaveData.Date == DateTime.Today.ToString("yyyy-MM-dd"))
-                uc_MQC_PieChart.UpdateTime();
             btMQC.FocusState = BunifuButton2.ButtonStates.Pressed;
             btPQC.FocusState = BunifuButton2.ButtonStates.Idle;
             btMQCPD.FocusState = BunifuButton2.ButtonStates.Idle;
+            updateChartMQC();
+            addUserControl(uc_MQC_PieChart);
+            if (SaveData.Date == DateTime.Today.ToString("yyyy-MM-dd"))
+                uc_MQC_PieChart.UpdateTime();    
         }
 
         private void btPQC_Click(object sender, EventArgs e)
@@ -77,12 +105,13 @@ namespace SMESData
             PQC = true;
             MQC = false;
             PD = false;
-            addUserControl(uc_PQC_PieChart);
-            if (SaveData.Date == DateTime.Today.ToString("yyyy-MM-dd"))
-                uc_PQC_PieChart.UpdateTime();
             btPQC.FocusState = BunifuButton2.ButtonStates.Pressed;
             btMQC.FocusState = BunifuButton2.ButtonStates.Idle;
             btMQCPD.FocusState = BunifuButton2.ButtonStates.Idle;
+            updateChartPQC();
+            addUserControl(uc_PQC_PieChart);
+            if (SaveData.Date == DateTime.Today.ToString("yyyy-MM-dd"))
+                uc_PQC_PieChart.UpdateTime();
         }
 
         private void btMQCPD_Click(object sender, EventArgs e)
@@ -90,12 +119,13 @@ namespace SMESData
             PD = true;
             MQC = false;
             PQC = false;
-            addUserControl(uc_PI);
-            if (SaveData.Date == DateTime.Today.ToString("yyyy-MM-dd"))
-                uc_PI.UpdateTime();
             btMQCPD.FocusState = BunifuButton2.ButtonStates.Pressed;
             btPQC.FocusState = BunifuButton2.ButtonStates.Idle;
             btMQC.FocusState = BunifuButton2.ButtonStates.Idle;
+            updateChartPI();
+            addUserControl(uc_PI);
+            if (SaveData.Date == DateTime.Today.ToString("yyyy-MM-dd"))
+                uc_PI.UpdateTime();      
         }
 
         private void btClose_Click(object sender, EventArgs e)

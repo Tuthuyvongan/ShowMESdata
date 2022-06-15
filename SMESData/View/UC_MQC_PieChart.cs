@@ -30,7 +30,6 @@ namespace SMESData
             startTime = DateTime.Now;
             btStart.Enabled = false;
             pnTimeControl.Enabled = false;
-            changePanel();
         }
         //List data
         List<double> dataL01 = new List<double>();
@@ -120,8 +119,19 @@ namespace SMESData
             backgroundThreadFetchData.Start();
             msf.ShowDialog();
         }
+        public void clearData()
+        {
+            dataL01.Clear();
+            dataL02.Clear();
+            dataL03.Clear();
+            dataL04.Clear();
+            dataL05.Clear();
+            dataL06.Clear();
+            dataL07.Clear();
+        }
         public void renderPiechart()
-        {          
+        {
+            clearData();
             changePanel();
             //Add data
             lineData();
@@ -398,13 +408,6 @@ namespace SMESData
         private void dtpChart_ValueChanged(object sender, EventArgs e)
         {                 
             dtpChart.Visible = false;
-            dataL01.Clear();
-            dataL02.Clear();
-            dataL03.Clear();
-            dataL04.Clear();
-            dataL05.Clear();
-            dataL06.Clear();
-            dataL07.Clear();
             renderPiechart();
         }
         public void UpdateTime()
@@ -416,7 +419,6 @@ namespace SMESData
             pnTimeControl.Enabled = false;
             timer1.Start();
             startTime = DateTime.Now;
-            lblTime.Visible = true;
             SaveData.Date = dtpChart.Value.ToString("yyyy-MM-dd");
         }
         public void ChangeUpdateTime()
@@ -442,16 +444,12 @@ namespace SMESData
                                 ts.Seconds);
                 lblTime.Text = "Chart update in: " + "\r\n" + time.ToString();
                 if (remainingSeconds < 0)
-                {                    
-                    lblTime.Visible = false;
-                    dataL01.Clear();
-                    dataL02.Clear();
-                    dataL03.Clear();
-                    dataL04.Clear();
-                    dataL05.Clear();
-                    dataL06.Clear();
-                    dataL07.Clear();
+                {
+                    lblTime.Text = "Data is being" + "\r\n" + "updated";
                     timer1.Stop();
+                    SaveData.uc_pi = -1;
+                    SaveData.uc_mqc = 0;
+                    SaveData.uc_pqc = -1;
                     renderPiechart();
                     UpdateTime();
                 }

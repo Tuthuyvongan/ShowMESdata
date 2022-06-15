@@ -22,5 +22,8 @@ namespace SMESData
         public static string Date { get; set; }
         public static DataTable dtTemp1 { get; set; }
         public static DataTable dtTemp2 { get; set; }
+        public static int uc_mqc { get; set; }
+        public static int uc_pqc { get; set; }
+        public static int uc_pi { get; set; }
     }
 }

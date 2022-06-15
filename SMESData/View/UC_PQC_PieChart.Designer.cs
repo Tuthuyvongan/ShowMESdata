@@ -31,8 +31,8 @@ namespace SMESData
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_PQC_PieChart));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges17 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges18 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.btL2 = new Bunifu.UI.WinForms.BunifuImageButton();
             this.panel6 = new System.Windows.Forms.Panel();
             this.btL6 = new Bunifu.UI.WinForms.BunifuImageButton();
@@ -83,14 +83,6 @@ namespace SMESData
             this.L04Chart = new Bunifu.Charts.WinForms.ChartTypes.BunifuPieChart(this.components);
             this.L05Chart = new Bunifu.Charts.WinForms.ChartTypes.BunifuPieChart(this.components);
             this.L06Chart = new Bunifu.Charts.WinForms.ChartTypes.BunifuPieChart(this.components);
-            this.pnTimeControl = new Bunifu.UI.WinForms.BunifuShadowPanel();
-            this.lbBox = new Bunifu.UI.WinForms.BunifuLabel();
-            this.lbS = new Bunifu.UI.WinForms.BunifuLabel();
-            this.lbM = new Bunifu.UI.WinForms.BunifuLabel();
-            this.lbH = new Bunifu.UI.WinForms.BunifuLabel();
-            this.nbS = new System.Windows.Forms.NumericUpDown();
-            this.nbM = new System.Windows.Forms.NumericUpDown();
-            this.nbH = new System.Windows.Forms.NumericUpDown();
             this.dtpChart = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.lblTime = new Bunifu.UI.WinForms.BunifuLabel();
@@ -110,18 +102,28 @@ namespace SMESData
             this.linePCanvas7 = new Bunifu.Charts.WinForms.BunifuChartCanvas();
             this.lbRW7 = new Bunifu.UI.WinForms.BunifuLabel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.pnTimeControl = new Bunifu.UI.WinForms.BunifuShadowPanel();
+            this.lbBox = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lbS = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lbM = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lbH = new Bunifu.UI.WinForms.BunifuLabel();
+            this.nbS = new System.Windows.Forms.NumericUpDown();
+            this.nbM = new System.Windows.Forms.NumericUpDown();
+            this.nbH = new System.Windows.Forms.NumericUpDown();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             this.pnTimeControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nbS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nbM)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nbH)).BeginInit();
-            this.panel1.SuspendLayout();
-            this.panel7.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btL2
@@ -769,7 +771,7 @@ namespace SMESData
             this.btStart.AllowAnimations = true;
             this.btStart.AllowMouseEffects = true;
             this.btStart.AllowToggling = false;
-            this.btStart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btStart.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btStart.AnimationSpeed = 200;
             this.btStart.AutoGenerateColors = false;
             this.btStart.AutoRoundBorders = false;
@@ -784,11 +786,11 @@ namespace SMESData
             this.btStart.ColorContrastOnClick = 45;
             this.btStart.ColorContrastOnHover = 45;
             this.btStart.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.btStart.CustomizableEdges = borderEdges1;
+            borderEdges17.BottomLeft = true;
+            borderEdges17.BottomRight = true;
+            borderEdges17.TopLeft = true;
+            borderEdges17.TopRight = true;
+            this.btStart.CustomizableEdges = borderEdges17;
             this.btStart.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btStart.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btStart.DisabledFillColor = System.Drawing.Color.Empty;
@@ -814,7 +816,7 @@ namespace SMESData
             this.btStart.IdleIconLeftImage = null;
             this.btStart.IdleIconRightImage = null;
             this.btStart.IndicateFocus = false;
-            this.btStart.Location = new System.Drawing.Point(1617, 238);
+            this.btStart.Location = new System.Drawing.Point(26, 262);
             this.btStart.Name = "btStart";
             this.btStart.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btStart.OnDisabledState.BorderRadius = 1;
@@ -1307,7 +1309,7 @@ namespace SMESData
             this.btStop.AllowAnimations = true;
             this.btStop.AllowMouseEffects = true;
             this.btStop.AllowToggling = false;
-            this.btStop.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btStop.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btStop.AnimationSpeed = 200;
             this.btStop.AutoGenerateColors = false;
             this.btStop.AutoRoundBorders = false;
@@ -1322,11 +1324,11 @@ namespace SMESData
             this.btStop.ColorContrastOnClick = 45;
             this.btStop.ColorContrastOnHover = 45;
             this.btStop.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.btStop.CustomizableEdges = borderEdges2;
+            borderEdges18.BottomLeft = true;
+            borderEdges18.BottomRight = true;
+            borderEdges18.TopLeft = true;
+            borderEdges18.TopRight = true;
+            this.btStop.CustomizableEdges = borderEdges18;
             this.btStop.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btStop.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btStop.DisabledFillColor = System.Drawing.Color.Empty;
@@ -1352,7 +1354,7 @@ namespace SMESData
             this.btStop.IdleIconLeftImage = null;
             this.btStop.IdleIconRightImage = null;
             this.btStop.IndicateFocus = false;
-            this.btStop.Location = new System.Drawing.Point(1617, 129);
+            this.btStop.Location = new System.Drawing.Point(26, 163);
             this.btStop.Name = "btStop";
             this.btStop.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btStop.OnDisabledState.BorderRadius = 1;
@@ -1467,137 +1469,9 @@ namespace SMESData
             this.L06Chart.Label = "Label here";
             this.L06Chart.TargetCanvas = null;
             // 
-            // pnTimeControl
-            // 
-            this.pnTimeControl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnTimeControl.BackColor = System.Drawing.Color.Transparent;
-            this.pnTimeControl.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.pnTimeControl.BorderRadius = 1;
-            this.pnTimeControl.BorderThickness = 1;
-            this.pnTimeControl.Controls.Add(this.lbBox);
-            this.pnTimeControl.Controls.Add(this.lbS);
-            this.pnTimeControl.Controls.Add(this.lbM);
-            this.pnTimeControl.Controls.Add(this.lbH);
-            this.pnTimeControl.Controls.Add(this.nbS);
-            this.pnTimeControl.Controls.Add(this.nbM);
-            this.pnTimeControl.Controls.Add(this.nbH);
-            this.pnTimeControl.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
-            this.pnTimeControl.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
-            this.pnTimeControl.Location = new System.Drawing.Point(1602, 363);
-            this.pnTimeControl.Name = "pnTimeControl";
-            this.pnTimeControl.PanelColor = System.Drawing.Color.White;
-            this.pnTimeControl.PanelColor2 = System.Drawing.Color.White;
-            this.pnTimeControl.ShadowColor = System.Drawing.Color.DarkGray;
-            this.pnTimeControl.ShadowDept = 2;
-            this.pnTimeControl.ShadowDepth = 5;
-            this.pnTimeControl.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
-            this.pnTimeControl.ShadowTopLeftVisible = false;
-            this.pnTimeControl.Size = new System.Drawing.Size(165, 210);
-            this.pnTimeControl.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
-            this.pnTimeControl.TabIndex = 44;
-            // 
-            // lbBox
-            // 
-            this.lbBox.AllowParentOverrides = false;
-            this.lbBox.AutoEllipsis = true;
-            this.lbBox.CursorType = null;
-            this.lbBox.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbBox.Location = new System.Drawing.Point(24, 15);
-            this.lbBox.Name = "lbBox";
-            this.lbBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbBox.Size = new System.Drawing.Size(114, 44);
-            this.lbBox.TabIndex = 6;
-            this.lbBox.Text = "Choose Chart \r\nUpdate Time \r\n";
-            this.lbBox.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
-            this.lbBox.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // lbS
-            // 
-            this.lbS.AllowParentOverrides = false;
-            this.lbS.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbS.AutoEllipsis = false;
-            this.lbS.CursorType = null;
-            this.lbS.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbS.Location = new System.Drawing.Point(83, 172);
-            this.lbS.Name = "lbS";
-            this.lbS.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbS.Size = new System.Drawing.Size(55, 19);
-            this.lbS.TabIndex = 5;
-            this.lbS.Text = "Seconds";
-            this.lbS.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lbS.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // lbM
-            // 
-            this.lbM.AllowParentOverrides = false;
-            this.lbM.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbM.AutoEllipsis = false;
-            this.lbM.CursorType = null;
-            this.lbM.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbM.Location = new System.Drawing.Point(83, 129);
-            this.lbM.Name = "lbM";
-            this.lbM.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbM.Size = new System.Drawing.Size(56, 19);
-            this.lbM.TabIndex = 4;
-            this.lbM.Text = "Minutes";
-            this.lbM.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lbM.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // lbH
-            // 
-            this.lbH.AllowParentOverrides = false;
-            this.lbH.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbH.AutoEllipsis = false;
-            this.lbH.CursorType = null;
-            this.lbH.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbH.Location = new System.Drawing.Point(83, 83);
-            this.lbH.Name = "lbH";
-            this.lbH.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbH.Size = new System.Drawing.Size(41, 19);
-            this.lbH.TabIndex = 3;
-            this.lbH.Text = "Hours";
-            this.lbH.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lbH.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // nbS
-            // 
-            this.nbS.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.nbS.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nbS.Location = new System.Drawing.Point(19, 165);
-            this.nbS.Name = "nbS";
-            this.nbS.Size = new System.Drawing.Size(58, 26);
-            this.nbS.TabIndex = 2;
-            this.nbS.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.nbS.UpDownAlign = System.Windows.Forms.LeftRightAlignment.Left;
-            this.nbS.ValueChanged += new System.EventHandler(this.nbS_ValueChanged);
-            // 
-            // nbM
-            // 
-            this.nbM.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.nbM.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nbM.Location = new System.Drawing.Point(19, 122);
-            this.nbM.Name = "nbM";
-            this.nbM.Size = new System.Drawing.Size(58, 26);
-            this.nbM.TabIndex = 1;
-            this.nbM.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.nbM.UpDownAlign = System.Windows.Forms.LeftRightAlignment.Left;
-            this.nbM.ValueChanged += new System.EventHandler(this.nbM_ValueChanged);
-            // 
-            // nbH
-            // 
-            this.nbH.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.nbH.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nbH.Location = new System.Drawing.Point(19, 80);
-            this.nbH.Name = "nbH";
-            this.nbH.Size = new System.Drawing.Size(58, 26);
-            this.nbH.TabIndex = 0;
-            this.nbH.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.nbH.UpDownAlign = System.Windows.Forms.LeftRightAlignment.Left;
-            this.nbH.ValueChanged += new System.EventHandler(this.nbH_ValueChanged);
-            // 
             // dtpChart
             // 
-            this.dtpChart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtpChart.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtpChart.BackColor = System.Drawing.Color.Transparent;
             this.dtpChart.BorderColor = System.Drawing.Color.Silver;
             this.dtpChart.BorderRadius = 1;
@@ -1616,7 +1490,7 @@ namespace SMESData
             this.dtpChart.IconColor = System.Drawing.Color.DodgerBlue;
             this.dtpChart.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.dtpChart.LeftTextMargin = 5;
-            this.dtpChart.Location = new System.Drawing.Point(1617, 25);
+            this.dtpChart.Location = new System.Drawing.Point(20, 19);
             this.dtpChart.Margin = new System.Windows.Forms.Padding(2);
             this.dtpChart.MinimumSize = new System.Drawing.Size(4, 32);
             this.dtpChart.Name = "dtpChart";
@@ -1631,12 +1505,12 @@ namespace SMESData
             // lblTime
             // 
             this.lblTime.AllowParentOverrides = false;
-            this.lblTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTime.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblTime.AutoEllipsis = false;
             this.lblTime.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblTime.CursorType = System.Windows.Forms.Cursors.Default;
             this.lblTime.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
-            this.lblTime.Location = new System.Drawing.Point(1617, 75);
+            this.lblTime.Location = new System.Drawing.Point(87, 73);
             this.lblTime.Name = "lblTime";
             this.lblTime.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblTime.Size = new System.Drawing.Size(15, 20);
@@ -2016,16 +1890,164 @@ namespace SMESData
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1592, 1077);
             this.tableLayoutPanel1.TabIndex = 45;
             // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel2.ColumnCount = 1;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Controls.Add(this.pnTimeControl, 0, 4);
+            this.tableLayoutPanel2.Controls.Add(this.dtpChart, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btStart, 0, 3);
+            this.tableLayoutPanel2.Controls.Add(this.lblTime, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.btStop, 0, 2);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(1595, 2);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 5;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.523765F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.387698F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.226468F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.470752F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 66.48096F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(190, 1077);
+            this.tableLayoutPanel2.TabIndex = 46;
+            // 
+            // pnTimeControl
+            // 
+            this.pnTimeControl.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pnTimeControl.BackColor = System.Drawing.Color.Transparent;
+            this.pnTimeControl.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.pnTimeControl.BorderRadius = 1;
+            this.pnTimeControl.BorderThickness = 1;
+            this.pnTimeControl.Controls.Add(this.lbBox);
+            this.pnTimeControl.Controls.Add(this.lbS);
+            this.pnTimeControl.Controls.Add(this.lbM);
+            this.pnTimeControl.Controls.Add(this.lbH);
+            this.pnTimeControl.Controls.Add(this.nbS);
+            this.pnTimeControl.Controls.Add(this.nbM);
+            this.pnTimeControl.Controls.Add(this.nbH);
+            this.pnTimeControl.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
+            this.pnTimeControl.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
+            this.pnTimeControl.Location = new System.Drawing.Point(12, 363);
+            this.pnTimeControl.Name = "pnTimeControl";
+            this.pnTimeControl.PanelColor = System.Drawing.Color.White;
+            this.pnTimeControl.PanelColor2 = System.Drawing.Color.White;
+            this.pnTimeControl.ShadowColor = System.Drawing.Color.DarkGray;
+            this.pnTimeControl.ShadowDept = 2;
+            this.pnTimeControl.ShadowDepth = 5;
+            this.pnTimeControl.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
+            this.pnTimeControl.ShadowTopLeftVisible = false;
+            this.pnTimeControl.Size = new System.Drawing.Size(165, 210);
+            this.pnTimeControl.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
+            this.pnTimeControl.TabIndex = 45;
+            // 
+            // lbBox
+            // 
+            this.lbBox.AllowParentOverrides = false;
+            this.lbBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbBox.AutoEllipsis = true;
+            this.lbBox.CursorType = null;
+            this.lbBox.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbBox.Location = new System.Drawing.Point(24, 15);
+            this.lbBox.Name = "lbBox";
+            this.lbBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbBox.Size = new System.Drawing.Size(114, 44);
+            this.lbBox.TabIndex = 6;
+            this.lbBox.Text = "Choose Chart \r\nUpdate Time \r\n";
+            this.lbBox.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
+            this.lbBox.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // lbS
+            // 
+            this.lbS.AllowParentOverrides = false;
+            this.lbS.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbS.AutoEllipsis = false;
+            this.lbS.CursorType = null;
+            this.lbS.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbS.Location = new System.Drawing.Point(83, 172);
+            this.lbS.Name = "lbS";
+            this.lbS.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbS.Size = new System.Drawing.Size(55, 19);
+            this.lbS.TabIndex = 5;
+            this.lbS.Text = "Seconds";
+            this.lbS.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbS.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // lbM
+            // 
+            this.lbM.AllowParentOverrides = false;
+            this.lbM.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbM.AutoEllipsis = false;
+            this.lbM.CursorType = null;
+            this.lbM.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbM.Location = new System.Drawing.Point(83, 129);
+            this.lbM.Name = "lbM";
+            this.lbM.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbM.Size = new System.Drawing.Size(56, 19);
+            this.lbM.TabIndex = 4;
+            this.lbM.Text = "Minutes";
+            this.lbM.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbM.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // lbH
+            // 
+            this.lbH.AllowParentOverrides = false;
+            this.lbH.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbH.AutoEllipsis = false;
+            this.lbH.CursorType = null;
+            this.lbH.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbH.Location = new System.Drawing.Point(83, 83);
+            this.lbH.Name = "lbH";
+            this.lbH.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbH.Size = new System.Drawing.Size(41, 19);
+            this.lbH.TabIndex = 3;
+            this.lbH.Text = "Hours";
+            this.lbH.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbH.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // nbS
+            // 
+            this.nbS.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.nbS.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nbS.Location = new System.Drawing.Point(19, 165);
+            this.nbS.Name = "nbS";
+            this.nbS.Size = new System.Drawing.Size(58, 26);
+            this.nbS.TabIndex = 2;
+            this.nbS.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nbS.UpDownAlign = System.Windows.Forms.LeftRightAlignment.Left;
+            this.nbS.ValueChanged += new System.EventHandler(this.nbS_ValueChanged);
+            // 
+            // nbM
+            // 
+            this.nbM.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.nbM.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nbM.Location = new System.Drawing.Point(19, 122);
+            this.nbM.Name = "nbM";
+            this.nbM.Size = new System.Drawing.Size(58, 26);
+            this.nbM.TabIndex = 1;
+            this.nbM.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nbM.UpDownAlign = System.Windows.Forms.LeftRightAlignment.Left;
+            this.nbM.ValueChanged += new System.EventHandler(this.nbM_ValueChanged);
+            // 
+            // nbH
+            // 
+            this.nbH.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.nbH.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nbH.Location = new System.Drawing.Point(19, 80);
+            this.nbH.Name = "nbH";
+            this.nbH.Size = new System.Drawing.Size(58, 26);
+            this.nbH.TabIndex = 0;
+            this.nbH.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nbH.UpDownAlign = System.Windows.Forms.LeftRightAlignment.Left;
+            this.nbH.ValueChanged += new System.EventHandler(this.nbH_ValueChanged);
+            // 
             // UC_PQC_PieChart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.btStart);
-            this.Controls.Add(this.btStop);
-            this.Controls.Add(this.pnTimeControl);
-            this.Controls.Add(this.dtpChart);
-            this.Controls.Add(this.lblTime);
+            this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -2042,18 +2064,19 @@ namespace SMESData
             this.panel2.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            this.pnTimeControl.ResumeLayout(false);
-            this.pnTimeControl.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nbS)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nbM)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nbH)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
+            this.pnTimeControl.ResumeLayout(false);
+            this.pnTimeControl.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nbS)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nbM)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nbH)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -2109,14 +2132,6 @@ namespace SMESData
         private Bunifu.Charts.WinForms.ChartTypes.BunifuPieChart L04Chart;
         private Bunifu.Charts.WinForms.ChartTypes.BunifuPieChart L05Chart;
         private Bunifu.Charts.WinForms.ChartTypes.BunifuPieChart L06Chart;
-        private Bunifu.UI.WinForms.BunifuShadowPanel pnTimeControl;
-        private Bunifu.UI.WinForms.BunifuLabel lbBox;
-        private Bunifu.UI.WinForms.BunifuLabel lbS;
-        private Bunifu.UI.WinForms.BunifuLabel lbM;
-        private Bunifu.UI.WinForms.BunifuLabel lbH;
-        private System.Windows.Forms.NumericUpDown nbS;
-        private System.Windows.Forms.NumericUpDown nbM;
-        private System.Windows.Forms.NumericUpDown nbH;
         private Bunifu.UI.WinForms.BunifuDatePicker dtpChart;
         private System.Windows.Forms.Timer timer1;
         private Bunifu.UI.WinForms.BunifuLabel lblTime;
@@ -2136,5 +2151,14 @@ namespace SMESData
         private Bunifu.Charts.WinForms.BunifuChartCanvas linePCanvas7;
         private Bunifu.UI.WinForms.BunifuLabel lbRW7;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private Bunifu.UI.WinForms.BunifuShadowPanel pnTimeControl;
+        private Bunifu.UI.WinForms.BunifuLabel lbBox;
+        private Bunifu.UI.WinForms.BunifuLabel lbS;
+        private Bunifu.UI.WinForms.BunifuLabel lbM;
+        private Bunifu.UI.WinForms.BunifuLabel lbH;
+        private System.Windows.Forms.NumericUpDown nbS;
+        private System.Windows.Forms.NumericUpDown nbM;
+        private System.Windows.Forms.NumericUpDown nbH;
     }
 }

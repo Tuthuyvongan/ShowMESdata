@@ -691,11 +691,12 @@ namespace SMESData
             // lblTime
             // 
             this.lblTime.AllowParentOverrides = false;
+            this.lblTime.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblTime.AutoEllipsis = false;
             this.lblTime.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblTime.CursorType = System.Windows.Forms.Cursors.Default;
             this.lblTime.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
-            this.lblTime.Location = new System.Drawing.Point(196, 156);
+            this.lblTime.Location = new System.Drawing.Point(282, 156);
             this.lblTime.Name = "lblTime";
             this.lblTime.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblTime.Size = new System.Drawing.Size(15, 20);
@@ -736,6 +737,7 @@ namespace SMESData
             // lbBox
             // 
             this.lbBox.AllowParentOverrides = false;
+            this.lbBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbBox.AutoEllipsis = true;
             this.lbBox.CursorType = null;
             this.lbBox.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1063,8 +1065,8 @@ namespace SMESData
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.27698F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.51495F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.20546F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.36671F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.94538F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.62679F));
             this.tableLayoutPanel6.Controls.Add(this.lb8, 0, 5);
             this.tableLayoutPanel6.Controls.Add(this.dtpChart, 0, 0);
             this.tableLayoutPanel6.Controls.Add(this.lb1, 0, 1);
@@ -1480,7 +1482,7 @@ namespace SMESData
             this.btFix.IdleIconLeftImage = null;
             this.btFix.IdleIconRightImage = null;
             this.btFix.IndicateFocus = false;
-            this.btFix.Location = new System.Drawing.Point(599, 250);
+            this.btFix.Location = new System.Drawing.Point(597, 250);
             this.btFix.Name = "btFix";
             this.btFix.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btFix.OnDisabledState.BorderRadius = 1;
