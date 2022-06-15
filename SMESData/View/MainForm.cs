@@ -13,16 +13,28 @@ namespace SMESData
         UC_MQC_PieChart uc_MQC_PieChart = new UC_MQC_PieChart();
         UC_PQC_PieChart uc_PQC_PieChart = new UC_PQC_PieChart();
         UC_Product_Info uc_PI = new UC_Product_Info();
+        //For timer tick event in every user control
         public static bool MQC;
         public static bool PQC;
         public static bool PD;
+        //Check
+        public static bool ucMQC;
+        public static bool ucPQC;
+        public static bool ucPD;
+
         private void MainForm_Load(object sender, EventArgs e)
         {
+            //For check user control already add or not
+            ucMQC = false;
+            ucPQC = false;
+            ucPD = false;
+            //Add event for click button line in user control MQC/PQC change to user control Product Data
             uc_MQC_PieChart.OnUpdateStatus += customControl_OnUpdateStatus;
             uc_PQC_PieChart.OnUpdateStatus += customControl_OnUpdateStatus;
             btMQCPD.PerformClick();
             btMQCPD.Focus();
             changeSize();
+            //For sync update after a user control update in every user control
             SaveData.uc_pi = 0;
             SaveData.uc_mqc = 0;
             SaveData.uc_pqc = 0;
@@ -42,7 +54,7 @@ namespace SMESData
         }
         public void updateChartPI()
         {
-            if (SaveData.uc_pi == -1 && uc_PI != null)
+            if (SaveData.uc_pi == -1 && ucPD == true)
             {
                 uc_PI.UpdateDTGV();
                 SaveData.uc_pi = 0;
@@ -50,7 +62,7 @@ namespace SMESData
         }
         public void updateChartMQC()
         {
-            if (SaveData.uc_mqc == -1 && uc_MQC_PieChart != null)
+            if (SaveData.uc_mqc == -1 && ucMQC == true)
             {
                 uc_MQC_PieChart.renderPiechart();
                 SaveData.uc_mqc = 0;
@@ -58,7 +70,7 @@ namespace SMESData
         }
         public void updateChartPQC()
         {
-            if (SaveData.uc_pqc == -1 && uc_PQC_PieChart != null)
+            if (SaveData.uc_pqc == -1 && ucPQC == true)
             {
                 uc_PQC_PieChart.renderPiechart();
                 SaveData.uc_pqc = 0;
@@ -77,27 +89,28 @@ namespace SMESData
             if (SaveData.Date == DateTime.Today.ToString("yyyy-MM-dd"))
                 uc_PI.UpdateTime();            
             uc_PI.UpdateDTGVByLine();
+            ucPD = true;
         }
         private void addUserControl(UserControl userControl)
-        {
+        {           
             pnMain.Controls.Clear();
             userControl.Dock = DockStyle.Fill;            
             pnMain.Controls.Add(userControl);
             userControl.BringToFront();
         }
-     
         private void btMQC_Click(object sender, EventArgs e)
         {
             MQC = true;
             PQC = false;
-            PD = false;
+            PD = false;  
             btMQC.FocusState = BunifuButton2.ButtonStates.Pressed;
             btPQC.FocusState = BunifuButton2.ButtonStates.Idle;
             btMQCPD.FocusState = BunifuButton2.ButtonStates.Idle;
             updateChartMQC();
             addUserControl(uc_MQC_PieChart);
             if (SaveData.Date == DateTime.Today.ToString("yyyy-MM-dd"))
-                uc_MQC_PieChart.UpdateTime();    
+                uc_MQC_PieChart.UpdateTime();
+            ucMQC = true;
         }
 
         private void btPQC_Click(object sender, EventArgs e)
@@ -112,6 +125,7 @@ namespace SMESData
             addUserControl(uc_PQC_PieChart);
             if (SaveData.Date == DateTime.Today.ToString("yyyy-MM-dd"))
                 uc_PQC_PieChart.UpdateTime();
+            ucPQC = true;
         }
 
         private void btMQCPD_Click(object sender, EventArgs e)
@@ -125,7 +139,8 @@ namespace SMESData
             updateChartPI();
             addUserControl(uc_PI);
             if (SaveData.Date == DateTime.Today.ToString("yyyy-MM-dd"))
-                uc_PI.UpdateTime();      
+                uc_PI.UpdateTime();
+            ucPD = true;
         }
 
         private void btClose_Click(object sender, EventArgs e)
