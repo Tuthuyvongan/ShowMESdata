@@ -106,10 +106,12 @@ namespace SMESData
             btMQC.FocusState = BunifuButton2.ButtonStates.Pressed;
             btPQC.FocusState = BunifuButton2.ButtonStates.Idle;
             btMQCPD.FocusState = BunifuButton2.ButtonStates.Idle;
-            updateChartMQC();
             addUserControl(uc_MQC_PieChart);
             if (SaveData.Date == DateTime.Today.ToString("yyyy-MM-dd"))
+            {
+                updateChartMQC();
                 uc_MQC_PieChart.UpdateTime();
+            }       
             ucMQC = true;
         }
 
@@ -121,10 +123,13 @@ namespace SMESData
             btPQC.FocusState = BunifuButton2.ButtonStates.Pressed;
             btMQC.FocusState = BunifuButton2.ButtonStates.Idle;
             btMQCPD.FocusState = BunifuButton2.ButtonStates.Idle;
-            updateChartPQC();
+            
             addUserControl(uc_PQC_PieChart);
             if (SaveData.Date == DateTime.Today.ToString("yyyy-MM-dd"))
+            {
+                updateChartPQC();
                 uc_PQC_PieChart.UpdateTime();
+            }           
             ucPQC = true;
         }
 
@@ -136,10 +141,12 @@ namespace SMESData
             btMQCPD.FocusState = BunifuButton2.ButtonStates.Pressed;
             btPQC.FocusState = BunifuButton2.ButtonStates.Idle;
             btMQC.FocusState = BunifuButton2.ButtonStates.Idle;
-            updateChartPI();
             addUserControl(uc_PI);
             if (SaveData.Date == DateTime.Today.ToString("yyyy-MM-dd"))
+            {
+                updateChartPI();
                 uc_PI.UpdateTime();
+            }    
             ucPD = true;
         }
 
