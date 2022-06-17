@@ -176,10 +176,7 @@ namespace SMESData
                     dtgv_MQC_PD.DataSource = GetSOFTdata.GetListPQC(date, line);
                     dtpChart.Visible = true;
                     //ChangeColor();
-                }
-                dtgv_MQC_PD.Columns["target"].Visible = false;
-                dtgv_MQC_PD.Columns["NG_rate_allow"].Visible = false;
-                dtgv_MQC_PD.Columns["RW_rate_allow"].Visible = false;
+                }             
             }
             //ChangeData();
         }
@@ -202,9 +199,6 @@ namespace SMESData
                     dtgv_MQC_PD.DataSource = GetSOFTdata.GetListPQC(date, line);
                     //ChangeColor();
                 }
-                dtgv_MQC_PD.Columns["target"].Visible = false;
-                dtgv_MQC_PD.Columns["NG_rate_allow"].Visible = false;
-                dtgv_MQC_PD.Columns["RW_rate_allow"].Visible = false;
             }
             //ChangeData();
             if (SaveData.Date != DateTime.Today.ToString("yyyy-MM-dd"))
@@ -518,10 +512,29 @@ namespace SMESData
         {
             linePCanvas1.CanvasPadding = new Padding(3, -20, 7, 25);
         }
-
+        public void dtgvSetting()
+        {
+            dtgv_MQC_PD.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dtgv_MQC_PD.Columns["NG_rate_allow"].Visible = false;
+            dtgv_MQC_PD.Columns["RW_rate_allow"].Visible = false;
+            dtgv_MQC_PD.Columns["target"].HeaderText = "Target";
+            dtgv_MQC_PD.Columns["NG_rate_realtime"].HeaderText = "NG_realtime (%)";
+            dtgv_MQC_PD.Columns["RW_rate_realtime"].HeaderText = "RW_realtime (%)";
+            dtgv_MQC_PD.Columns["Model"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dtgv_MQC_PD.Columns["Model"].FillWeight = 3;
+            dtgv_MQC_PD.Columns["Date"].FillWeight = 2;
+            dtgv_MQC_PD.Columns["Line"].FillWeight = 1;
+            dtgv_MQC_PD.Columns["OUTPUT"].FillWeight = 2;
+            dtgv_MQC_PD.Columns["REWORK"].FillWeight = 2;
+            dtgv_MQC_PD.Columns["NOGOOD"].FillWeight = 2;
+            dtgv_MQC_PD.Columns["Total"].FillWeight = 1;
+            dtgv_MQC_PD.Columns["target"].FillWeight = 1;
+            dtgv_MQC_PD.Columns["NG_rate_realtime"].FillWeight = 2;
+            dtgv_MQC_PD.Columns["RW_rate_realtime"].FillWeight = 2;
+        }
         private void dtgv_MQC_PD_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
-            if (Screen.PrimaryScreen.Bounds.Width <= 1550)
+            if (Screen.PrimaryScreen.Bounds.Width == 1536)
             {
                 sizeDefault();
             }    
@@ -529,10 +542,9 @@ namespace SMESData
             {
                 sizeChange();
             }
+            dtgvSetting();
             ChangeColor();
-            ChangeData();
-            dtgv_MQC_PD.Columns["NG_rate_realtime"].HeaderText = "NG_realtime (%)";
-            dtgv_MQC_PD.Columns["RW_rate_realtime"].HeaderText = "RW_realtime (%)";
+            ChangeData();      
         }
     }
 }

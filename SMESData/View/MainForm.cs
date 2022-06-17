@@ -41,7 +41,7 @@ namespace SMESData
         }        
         public void changeSize()
         {
-            if (Screen.PrimaryScreen.Bounds.Width <= 1550)
+            if (Screen.PrimaryScreen.Bounds.Width == 1536)
             {
                 uc_MQC_PieChart.sizeDefault();
                 uc_PQC_PieChart.sizeDefault();

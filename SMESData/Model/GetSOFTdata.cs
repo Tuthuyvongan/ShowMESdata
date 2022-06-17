@@ -112,6 +112,7 @@ namespace SMESData
             sqlGetData.Append("WHERE inspectdate = '" + date + "' and line like '%" + line + "%'");
             sqlGetData.Append("group by model, inspectdate, line) as m ");
             sqlGetData.Append("on a.inspectdate = m.inspectdate and a.model = m.model and a.line = m.line ");
+            //Do not change this sort for correcting logic in for loop. Model have same name and diffrent line will stand side by side
             sqlGetData.Append("order by Model desc, Line ");
             sqlSOFTCon.sqlDataAdapterFillDatatable(sqlGetData.ToString(), ref dt);
             ListMQC MQC = new ListMQC();
@@ -300,6 +301,7 @@ namespace SMESData
             sqlGetData.Append("WHERE InspectDateTime like '%" + date + "%' and line like '%" + line + "%' ");
             sqlGetData.Append("group by Model, line, CAST(InspectDateTime as Date)) as m ");
             sqlGetData.Append("on CAST(a.InspectDateTime as Date) = m.Date and a.Model = M.model and a.line = m.line ");
+            //Do not change this sort for correcting logic in for loop. Model have same name and diffrent line will stand side by side
             sqlGetData.Append("order by Model desc, Line");
             sqlSOFTCon.sqlDataAdapterFillDatatable(sqlGetData.ToString(), ref dt);
             ListPQC PQC = new ListPQC();

@@ -44,7 +44,6 @@ namespace SMESData
             dtgv_Info.Columns["Inspector"].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
             dtgv_Info.Columns["Remark"].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
             dtgv_Info.Columns["Serno"].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-
             dtgv_Info.Columns["Model"].Width = 175;
             dtgv_Info.Columns["LotNumber"].Width = 125;
             dtgv_Info.Columns["Line"].Width = 50;

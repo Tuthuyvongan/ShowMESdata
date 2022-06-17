@@ -89,7 +89,6 @@ namespace SMESData
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             this.dtgv_Info.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgv_Info.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dtgv_Info.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgv_Info.BackgroundColor = System.Drawing.Color.LightGray;
             this.dtgv_Info.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dtgv_Info.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
