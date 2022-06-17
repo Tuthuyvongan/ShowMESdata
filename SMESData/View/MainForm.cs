@@ -122,8 +122,7 @@ namespace SMESData
             PD = false;
             btPQC.FocusState = BunifuButton2.ButtonStates.Pressed;
             btMQC.FocusState = BunifuButton2.ButtonStates.Idle;
-            btMQCPD.FocusState = BunifuButton2.ButtonStates.Idle;
-            
+            btMQCPD.FocusState = BunifuButton2.ButtonStates.Idle;  
             addUserControl(uc_PQC_PieChart);
             if (SaveData.Date == DateTime.Today.ToString("yyyy-MM-dd"))
             {
