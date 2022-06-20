@@ -508,7 +508,6 @@ namespace SMESData
         public void sizeChange()
         {
             linePCanvas1.CanvasPadding = new Padding(25, -15, 25, 40);
-
         }
         public void sizeDefault()
         {
