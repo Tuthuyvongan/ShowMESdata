@@ -294,9 +294,10 @@ namespace SMESData
         {
             if (SaveData.MQCClick == false && SaveData.PQCClick == false)
             {
+                SaveData.check = true;
                 dtpChart.Visible = false;
                 UpdateDTGV();
-            }      
+            }  
         }
         public void UpdateTime()
         {
@@ -351,6 +352,7 @@ namespace SMESData
         }
         private void btStart_Click(object sender, EventArgs e)
         {
+            SaveData.check = false;
             UpdateTime();
         }
         private void btStop_Click(object sender, EventArgs e)

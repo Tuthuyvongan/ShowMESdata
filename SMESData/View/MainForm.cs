@@ -54,7 +54,7 @@ namespace SMESData
         }
         public void updateChartPI()
         {
-            if (SaveData.uc_pi == -1 && ucPD == true)
+            if (SaveData.uc_pi == -1 && ucPD == true && SaveData.check == false)
             {
                 uc_PI.UpdateDTGV();
                 SaveData.uc_pi = 0;
@@ -62,7 +62,7 @@ namespace SMESData
         }
         public void updateChartMQC()
         {
-            if (SaveData.uc_mqc == -1 && ucMQC == true)
+            if (SaveData.uc_mqc == -1 && ucMQC == true && SaveData.check == false)
             {
                 uc_MQC_PieChart.renderPiechart();
                 SaveData.uc_mqc = 0;
@@ -70,7 +70,7 @@ namespace SMESData
         }
         public void updateChartPQC()
         {
-            if (SaveData.uc_pqc == -1 && ucPQC == true)
+            if (SaveData.uc_pqc == -1 && ucPQC == true && SaveData.check == false)
             {
                 uc_PQC_PieChart.renderPiechart();
                 SaveData.uc_pqc = 0;
@@ -107,9 +107,9 @@ namespace SMESData
             btPQC.FocusState = BunifuButton2.ButtonStates.Idle;
             btMQCPD.FocusState = BunifuButton2.ButtonStates.Idle;
             addUserControl(uc_MQC_PieChart);
+            updateChartMQC();
             if (SaveData.Date == DateTime.Today.ToString("yyyy-MM-dd"))
-            {
-                updateChartMQC();
+            { 
                 uc_MQC_PieChart.UpdateTime();
             }       
             ucMQC = true;
@@ -124,9 +124,9 @@ namespace SMESData
             btMQC.FocusState = BunifuButton2.ButtonStates.Idle;
             btMQCPD.FocusState = BunifuButton2.ButtonStates.Idle;  
             addUserControl(uc_PQC_PieChart);
+            updateChartPQC();
             if (SaveData.Date == DateTime.Today.ToString("yyyy-MM-dd"))
             {
-                updateChartPQC();
                 uc_PQC_PieChart.UpdateTime();
             }           
             ucPQC = true;
@@ -141,9 +141,9 @@ namespace SMESData
             btPQC.FocusState = BunifuButton2.ButtonStates.Idle;
             btMQC.FocusState = BunifuButton2.ButtonStates.Idle;
             addUserControl(uc_PI);
+            updateChartPI();
             if (SaveData.Date == DateTime.Today.ToString("yyyy-MM-dd"))
             {
-                updateChartPI();
                 uc_PI.UpdateTime();
             }    
             ucPD = true;

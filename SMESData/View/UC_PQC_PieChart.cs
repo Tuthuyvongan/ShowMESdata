@@ -406,7 +406,8 @@ namespace SMESData
         }
 
         private void dtpChart_ValueChanged(object sender, EventArgs e)
-        {           
+        {
+            SaveData.check = true;
             dtpChart.Visible = false;            
             renderPiechart();
         }        
@@ -459,6 +460,7 @@ namespace SMESData
         }
         private void btStart_Click(object sender, EventArgs e)
         {
+            SaveData.check = false;
             UpdateTime();       
         }
         private void btStop_Click(object sender, EventArgs e)

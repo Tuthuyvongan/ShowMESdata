@@ -25,5 +25,6 @@ namespace SMESData
         public static int uc_mqc { get; set; }
         public static int uc_pqc { get; set; }
         public static int uc_pi { get; set; }
+        public static bool check { get; set; }
     }
 }
