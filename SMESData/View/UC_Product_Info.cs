@@ -312,6 +312,7 @@ namespace SMESData
                 startTime = DateTime.Now;
                 SaveData.MQCClick = false;
                 SaveData.PQCClick = false;
+                SaveData.Date = dtpChart.Value.ToString("yyyy-MM-dd");
             }
         }
         public void ChangeUpdateTime()
