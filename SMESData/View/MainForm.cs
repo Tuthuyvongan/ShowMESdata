@@ -28,6 +28,8 @@ namespace SMESData
             ucMQC = false;
             ucPQC = false;
             ucPD = false;
+            //Check
+            SaveData.check = false;
             //Add event for click button line in user control MQC/PQC change to user control Product Data
             uc_MQC_PieChart.OnUpdateStatus += customControl_OnUpdateStatus;
             uc_PQC_PieChart.OnUpdateStatus += customControl_OnUpdateStatus;
