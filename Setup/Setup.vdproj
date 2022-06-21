@@ -1998,7 +1998,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:SMESC"
         "ProductCode" = "8:{D8F94AE9-438F-460A-AAD9-FCE55A462568}"
-        "PackageCode" = "8:{358033A5-C66E-41E9-B29E-80E4D4ED9BD1}"
+        "PackageCode" = "8:{1003CAB8-C011-4073-B0D7-8BD29063B1BF}"
         "UpgradeCode" = "8:{CF832587-9211-4101-8DD2-6AA547741F62}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"

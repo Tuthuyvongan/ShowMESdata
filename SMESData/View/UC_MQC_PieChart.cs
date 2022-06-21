@@ -812,13 +812,13 @@ namespace SMESData
         }
         public void sizeChange()
         {
-            linePCanvas1.CanvasPadding = new Padding(25, 0, 25, 35);
-            linePCanvas2.CanvasPadding = new Padding(25, 0, 25, 35);
-            linePCanvas3.CanvasPadding = new Padding(25, 0, 25, 35);
+            linePCanvas1.CanvasPadding = new Padding(28, 6, 28, 38);
+            linePCanvas2.CanvasPadding = new Padding(28, 6, 28, 38);
+            linePCanvas3.CanvasPadding = new Padding(28, 6, 28, 38);
             linePCanvas4.CanvasPadding = new Padding(14, 6, 14, 14);
             linePCanvas5.CanvasPadding = new Padding(14, 6, 14, 14);
             linePCanvas6.CanvasPadding = new Padding(14, 6, 14, 14);
-            linePCanvas7.CanvasPadding = new Padding(25, 0, 25, 35);
+            linePCanvas7.CanvasPadding = new Padding(28, 6, 28, 38);
         }
         public void sizeDefault()
         {

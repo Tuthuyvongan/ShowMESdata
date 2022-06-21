@@ -232,7 +232,7 @@ namespace SMESData
             this.dtgv_MQC_PD.ReadOnly = true;
             this.dtgv_MQC_PD.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Times New Roman", 8.25F);
             dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -1479,7 +1479,7 @@ namespace SMESData
             this.btFix.IdleIconLeftImage = null;
             this.btFix.IdleIconRightImage = null;
             this.btFix.IndicateFocus = false;
-            this.btFix.Location = new System.Drawing.Point(597, 250);
+            this.btFix.Location = new System.Drawing.Point(597, 249);
             this.btFix.Name = "btFix";
             this.btFix.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btFix.OnDisabledState.BorderRadius = 1;
@@ -1489,11 +1489,11 @@ namespace SMESData
             this.btFix.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.btFix.OnDisabledState.IconLeftImage = null;
             this.btFix.OnDisabledState.IconRightImage = null;
-            this.btFix.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btFix.onHoverState.BorderColor = System.Drawing.Color.Gold;
             this.btFix.onHoverState.BorderRadius = 1;
             this.btFix.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btFix.onHoverState.BorderThickness = 1;
-            this.btFix.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btFix.onHoverState.FillColor = System.Drawing.Color.Gold;
             this.btFix.onHoverState.ForeColor = System.Drawing.Color.White;
             this.btFix.onHoverState.IconLeftImage = null;
             this.btFix.onHoverState.IconRightImage = null;
@@ -1513,7 +1513,7 @@ namespace SMESData
             this.btFix.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btFix.OnPressedState.IconLeftImage = null;
             this.btFix.OnPressedState.IconRightImage = null;
-            this.btFix.Size = new System.Drawing.Size(76, 38);
+            this.btFix.Size = new System.Drawing.Size(76, 41);
             this.btFix.TabIndex = 78;
             this.btFix.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btFix.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;

@@ -28,7 +28,7 @@ namespace SMESData
             ucMQC = false;
             ucPQC = false;
             ucPD = false;
-            //Check
+            //Check date time picker change
             SaveData.check = false;
             //Add event for click button line in user control MQC/PQC change to user control Product Data
             uc_MQC_PieChart.OnUpdateStatus += customControl_OnUpdateStatus;

@@ -134,14 +134,14 @@ namespace SMESData
             clearData();
             changePanel();
             //Add data
-            lineData();
+            lineData();            
             L01Chart.Data = dataL01;
             L02Chart.Data = dataL02;
             L03Chart.Data = dataL03;
             L04Chart.Data = dataL04;
             L05Chart.Data = dataL05;
             L06Chart.Data = dataL06;
-            L07Chart.Data = dataL07;            
+            L07Chart.Data = dataL07;
             //Add legends L01           
             if (dataL01[0] == 0 && dataL01[1] == 0 && dataL01[2] == 0)
             {
@@ -812,22 +812,22 @@ namespace SMESData
         }
         public void sizeChange()
         {
-            linePCanvas1.CanvasPadding = new Padding(25, 0, 25, 35);
-            linePCanvas2.CanvasPadding = new Padding(25, 0, 25, 35);
-            linePCanvas3.CanvasPadding = new Padding(25, 0, 25, 35);
-            linePCanvas4.CanvasPadding = new Padding(14, 6, 14, 14);
-            linePCanvas5.CanvasPadding = new Padding(14, 6, 14, 14);
-            linePCanvas6.CanvasPadding = new Padding(14, 6, 14, 14);
-            linePCanvas7.CanvasPadding = new Padding(25, 0, 25, 35);
+            linePCanvas1.CanvasPadding = new Padding(14, 6, 14, 14);
+            linePCanvas2.CanvasPadding = new Padding(28, 6, 28, 38);
+            linePCanvas3.CanvasPadding = new Padding(14, 6, 14, 14);
+            linePCanvas4.CanvasPadding = new Padding(28, 6, 28, 38);
+            linePCanvas5.CanvasPadding = new Padding(28, 6, 28, 38);
+            linePCanvas6.CanvasPadding = new Padding(28, 6, 28, 38);
+            linePCanvas7.CanvasPadding = new Padding(28, 6, 28, 38);
         }
         public void sizeDefault()
         {
-            linePCanvas1.CanvasPadding = new Padding(6, -6, 8, 18);
+            linePCanvas1.CanvasPadding = new Padding(6, 6, 8, 6);
             linePCanvas2.CanvasPadding = new Padding(6, -6, 8, 18);
-            linePCanvas3.CanvasPadding = new Padding(6, -4, 10, 18);
-            linePCanvas4.CanvasPadding = new Padding(6, 6, 8, 6);
-            linePCanvas5.CanvasPadding = new Padding(6, 6, 8, 6);
-            linePCanvas6.CanvasPadding = new Padding(6, 6, 8, 6);
+            linePCanvas3.CanvasPadding = new Padding(6, 6, 8, 6);
+            linePCanvas4.CanvasPadding = new Padding(6, -6, 8, 18);
+            linePCanvas5.CanvasPadding = new Padding(6, -6, 8, 18);
+            linePCanvas6.CanvasPadding = new Padding(6, -6, 8, 18);
             linePCanvas7.CanvasPadding = new Padding(6, -6, 8, 18);
         }
     }
