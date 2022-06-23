@@ -519,8 +519,8 @@ namespace SMESData
             dtgv_MQC_PD.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dtgv_MQC_PD.Columns["NG_rate_allow"].Visible = false;
             dtgv_MQC_PD.Columns["RW_rate_allow"].Visible = false;
-            if(SaveData.PQC == true)
-                dtgv_MQC_PD.Columns["Temp"].Visible = false;
+            //if(SaveData.PQC == true)
+            //    dtgv_MQC_PD.Columns["Temp"].Visible = false;
             dtgv_MQC_PD.Columns["NG_rate_realtime"].HeaderText = "NG_realtime (%)";
             dtgv_MQC_PD.Columns["RW_rate_realtime"].HeaderText = "RW_realtime (%)";
             dtgv_MQC_PD.Columns["Model"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -537,7 +537,7 @@ namespace SMESData
         }
         private void dtgv_MQC_PD_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
-            if (Screen.PrimaryScreen.Bounds.Width == 1536)
+            if (Screen.PrimaryScreen.Bounds.Width <= 1536)
             {
                 sizeDefault();
             }    

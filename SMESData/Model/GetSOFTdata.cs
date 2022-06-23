@@ -282,194 +282,6 @@ namespace SMESData
             return dtMQC;
         }
         //Get List PQC to Datatable
-        //public static DataTable GetListPQC(string date, string line)
-        //{
-        //    List<ListPQC> ListPQC = new List<ListPQC>();
-        //    DataTable dt = new DataTable();
-        //    sqlSOFTCon sqlSOFTCon = new sqlSOFTCon();
-        //    StringBuilder sqlGetData = new StringBuilder();
-        //    sqlGetData.Append("select distinct m.Model, m.Date, m.line as Line, m.OUTPUT, m.REWORK, m.NOGOOD, ");
-        //    sqlGetData.Append("(CASE WHEN (select top 1 rate from thu_SMESData_NGRate_PQC where Model = a.Model and line = a.line order by Date desc) IS NOT NULL ");
-        //    sqlGetData.Append("THEN (select top 1 rate from thu_SMESData_NGRate_PQC where Model = a.Model and line = a.line order by Date desc) ELSE '2' END) as '%NG_allow', POCode, '2.5' as '%RW_allow' ");
-        //    sqlGetData.Append("FROM ProcessHistory.PQCMesData as a ");
-        //    sqlGetData.Append("LEFT JOIN thu_SMESData_NGRate_PQC as r on a.Model = r.Model and a.line = r.line and CAST(a.InspectDateTime as Date) = r.Date ");
-        //    sqlGetData.Append("join(SELECT Model, CAST(InspectDateTime as Date) as Date, line, ");
-        //    sqlGetData.Append("COALESCE(SUM(CASE WHEN AttributeType = 'OP' THEN Cast(Quantity as numeric(10,0)) END), 0) AS OUTPUT, ");
-        //    sqlGetData.Append("COALESCE(SUM(CASE WHEN AttributeType = 'RW' THEN Cast(Quantity as numeric(10,0)) END), 0) AS REWORK, ");
-        //    sqlGetData.Append("COALESCE(SUM(CASE WHEN AttributeType = 'NG' THEN Cast(Quantity as numeric(10,0)) END), 0) AS NOGOOD ");
-        //    sqlGetData.Append("FROM ProcessHistory.PQCMesData ");
-        //    sqlGetData.Append("WHERE InspectDateTime like '%" + date + "%' and line like '%" + line + "%' ");
-        //    sqlGetData.Append("group by Model, line, CAST(InspectDateTime as Date)) as m ");
-        //    sqlGetData.Append("on CAST(a.InspectDateTime as Date) = m.Date and a.Model = M.model and a.line = m.line ");
-        //    //Do not change this sort for correcting logic in for loop. Model have same name and diffrent line will stand side by side
-        //    sqlGetData.Append("order by Model desc, Line");
-        //    sqlSOFTCon.sqlDataAdapterFillDatatable(sqlGetData.ToString(), ref dt);
-        //    ListPQC PQC = new ListPQC();
-        //    PQC.Target = 0;
-        //    for (int i = 0; i < dt.Rows.Count; i++)
-        //    {
-        //        if (dt.Rows.Count == 1)
-        //        {
-        //            string[] POCode = dt.Rows[i]["POCode"].ToString().Split(';');
-        //            PQC.Target = PQC.Target + double.Parse(POCode[4]);
-        //            PQC.Model = dt.Rows[i]["Model"].ToString();
-        //            PQC.Date = Convert.ToDateTime(dt.Rows[i]["Date"]).ToString("dd-MM-yyyy");
-        //            PQC.Line = dt.Rows[i]["Line"].ToString();
-        //            PQC.OUTPUT = double.Parse(dt.Rows[i]["OUTPUT"].ToString());
-        //            PQC.REWORK = double.Parse(dt.Rows[i]["REWORK"].ToString());
-        //            PQC.NOGOOD = double.Parse(dt.Rows[i]["NOGOOD"].ToString());
-        //            PQC.Total = PQC.OUTPUT + PQC.REWORK + PQC.NOGOOD;
-        //            PQC.NG_rate_realtime = Math.Round(PQC.NOGOOD / PQC.Total * 100, 1);
-        //            PQC.NG_rate_allow = double.Parse(dt.Rows[i]["%NG_allow"].ToString());
-        //            PQC.RW_rate_realtime = Math.Round(PQC.REWORK / PQC.Total * 100, 1);
-        //            PQC.RW_rate_allow = double.Parse(dt.Rows[i]["%RW_allow"].ToString());
-        //            ListPQC.Add(PQC);
-        //        }
-        //        else
-        //        {
-        //            if (i + 1 != dt.Rows.Count)
-        //            {
-        //                if (dt.Rows[i]["Model"].ToString() == dt.Rows[i + 1]["Model"].ToString() && dt.Rows[i]["Line"].ToString() == dt.Rows[i + 1]["Line"].ToString())
-        //                {
-        //                    string[] POCode = dt.Rows[i]["POCode"].ToString().Split(';');
-        //                    string[] POCode1 = dt.Rows[i + 1]["POCode"].ToString().Split(';');
-        //                    if (POCode[3] != POCode1[3])
-        //                        PQC.Target = PQC.Target + double.Parse(POCode[4]);
-        //                }
-        //                else
-        //                {
-        //                    string[] POCode = dt.Rows[i]["POCode"].ToString().Split(';');
-        //                    PQC.Target = PQC.Target + double.Parse(POCode[4]);
-        //                    PQC.Model = dt.Rows[i]["Model"].ToString();
-        //                    PQC.Date = Convert.ToDateTime(dt.Rows[i]["Date"]).ToString("dd-MM-yyyy");
-        //                    PQC.Line = dt.Rows[i]["Line"].ToString();
-        //                    PQC.OUTPUT = double.Parse(dt.Rows[i]["OUTPUT"].ToString());
-        //                    PQC.REWORK = double.Parse(dt.Rows[i]["REWORK"].ToString());
-        //                    PQC.NOGOOD = double.Parse(dt.Rows[i]["NOGOOD"].ToString());
-        //                    PQC.Total = PQC.OUTPUT + PQC.REWORK + PQC.NOGOOD;
-        //                    PQC.NG_rate_realtime = Math.Round(PQC.NOGOOD / PQC.Total * 100, 1);
-        //                    PQC.NG_rate_allow = double.Parse(dt.Rows[i]["%NG_allow"].ToString());
-        //                    PQC.RW_rate_realtime = Math.Round(PQC.REWORK / PQC.Total * 100, 1);
-        //                    PQC.RW_rate_allow = double.Parse(dt.Rows[i]["%RW_allow"].ToString());
-        //                    ListPQC.Add(PQC);
-        //                    PQC = new ListPQC();
-        //                    PQC.Target = 0;
-        //                }
-        //            }
-        //            else
-        //            {
-        //                if (dt.Rows[i - 1]["Model"].ToString() == dt.Rows[i]["Model"].ToString() && dt.Rows[i - 1]["Line"].ToString() == dt.Rows[i]["Line"].ToString())
-        //                {
-        //                    string[] POCode = dt.Rows[i - 1]["POCode"].ToString().Split(';');
-        //                    string[] POCode1 = dt.Rows[i]["POCode"].ToString().Split(';');
-        //                    if (POCode[3] != POCode1[3])
-        //                        PQC.Target = PQC.Target + double.Parse(POCode1[4]);
-        //                    PQC.Model = dt.Rows[i]["Model"].ToString();
-        //                    PQC.Date = Convert.ToDateTime(dt.Rows[i]["Date"]).ToString("dd-MM-yyyy");
-        //                    PQC.Line = dt.Rows[i]["Line"].ToString();
-        //                    PQC.OUTPUT = double.Parse(dt.Rows[i]["OUTPUT"].ToString());
-        //                    PQC.REWORK = double.Parse(dt.Rows[i]["REWORK"].ToString());
-        //                    PQC.NOGOOD = double.Parse(dt.Rows[i]["NOGOOD"].ToString());
-        //                    PQC.Total = PQC.OUTPUT + PQC.REWORK + PQC.NOGOOD;
-        //                    PQC.NG_rate_realtime = Math.Round(PQC.NOGOOD / PQC.Total * 100, 1);
-        //                    PQC.NG_rate_allow = double.Parse(dt.Rows[i]["%NG_allow"].ToString());
-        //                    PQC.RW_rate_realtime = Math.Round(PQC.REWORK / PQC.Total * 100, 1);
-        //                    PQC.RW_rate_allow = double.Parse(dt.Rows[i]["%RW_allow"].ToString());
-        //                    ListPQC.Add(PQC);
-        //                }
-        //                else
-        //                {
-        //                    string[] POCode = dt.Rows[i]["POCode"].ToString().Split(';');
-        //                    PQC.Target = PQC.Target + double.Parse(POCode[4]);
-        //                    PQC.Model = dt.Rows[i]["Model"].ToString();
-        //                    PQC.Date = Convert.ToDateTime(dt.Rows[i]["Date"]).ToString("dd-MM-yyyy");
-        //                    PQC.Line = dt.Rows[i]["Line"].ToString();
-        //                    PQC.OUTPUT = double.Parse(dt.Rows[i]["OUTPUT"].ToString());
-        //                    PQC.REWORK = double.Parse(dt.Rows[i]["REWORK"].ToString());
-        //                    PQC.NOGOOD = double.Parse(dt.Rows[i]["NOGOOD"].ToString());
-        //                    PQC.Total = PQC.OUTPUT + PQC.REWORK + PQC.NOGOOD;
-        //                    PQC.NG_rate_realtime = Math.Round(PQC.NOGOOD / PQC.Total * 100, 1);
-        //                    PQC.NG_rate_allow = double.Parse(dt.Rows[i]["%NG_allow"].ToString());
-        //                    PQC.RW_rate_realtime = Math.Round(PQC.REWORK / PQC.Total * 100, 1);
-        //                    PQC.RW_rate_allow = double.Parse(dt.Rows[i]["%RW_allow"].ToString());
-        //                    ListPQC.Add(PQC);
-        //                }
-        //            }
-        //        }
-        //    }
-        //    DataTable dtPQC = new DataTable();
-        //    DataColumn[] tableColumns = new DataColumn[]
-        //    {
-        //        new DataColumn()
-        //        {
-        //            ColumnName="Model",
-        //            DataType=typeof(string),
-        //        },
-        //        new DataColumn()
-        //        {
-        //            ColumnName="Date",
-        //            DataType=typeof(string),
-        //        },
-        //        new DataColumn()
-        //        {
-        //            ColumnName="Line",
-        //            DataType=typeof(string),
-        //        },
-        //        new DataColumn()
-        //        {
-        //            ColumnName="OUTPUT",
-        //            DataType=typeof(double),
-        //        },
-        //        new DataColumn()
-        //        {
-        //            ColumnName="REWORK",
-        //            DataType=typeof(double),
-        //        },
-        //        new DataColumn()
-        //        {
-        //            ColumnName="NOGOOD",
-        //            DataType=typeof(double),
-        //        },
-        //        new DataColumn()
-        //        {
-        //            ColumnName="Total",
-        //            DataType=typeof(double),
-        //        },
-        //        new DataColumn()
-        //        {
-        //            ColumnName="Target",
-        //            DataType=typeof(double),
-        //        },
-        //        new DataColumn()
-        //        {
-        //            ColumnName="NG_rate_realtime",
-        //            DataType=typeof(double),
-        //        },
-        //        new DataColumn()
-        //        {
-        //            ColumnName="NG_rate_allow",
-        //            DataType=typeof(double),
-        //        },
-        //        new DataColumn()
-        //        {
-        //            ColumnName="RW_rate_realtime",
-        //            DataType=typeof(double),
-        //        },
-        //        new DataColumn()
-        //        {
-        //            ColumnName="RW_rate_allow",
-        //            DataType=typeof(double),
-        //        }
-        //    };
-        //    dtPQC.Columns.AddRange(tableColumns);
-        //    foreach (var data in ListPQC)
-        //    {
-        //        dtPQC.Rows.Add(data.Model, data.Date, data.Line, data.OUTPUT, data.REWORK, data.NOGOOD, data.Total, data.Target, data.NG_rate_realtime, data.NG_rate_allow, data.RW_rate_realtime, data.RW_rate_allow);
-        //    }
-        //    dtPQC.DefaultView.Sort = "NG_rate_realtime DESC";
-        //    dtPQC = dtPQC.DefaultView.ToTable();
-        //    return dtPQC;
-        //}
         public static DataTable GetListPQC(string date, string line)
         {
             List<ListPQC> ListPQC = new List<ListPQC>();
@@ -478,9 +290,7 @@ namespace SMESData
             StringBuilder sqlGetData = new StringBuilder();
             sqlGetData.Append("select distinct m.Model, m.Date, m.line as Line, m.OUTPUT, m.REWORK, m.NOGOOD, ");
             sqlGetData.Append("(CASE WHEN (select top 1 rate from thu_SMESData_NGRate_PQC where Model = a.Model and line = a.line order by Date desc) IS NOT NULL ");
-            sqlGetData.Append("THEN (select top 1 rate from thu_SMESData_NGRate_PQC where Model = a.Model and line = a.line order by Date desc) ELSE '2' END) as '%NG_allow', POCode, '2.5' as '%RW_allow', ");
-            sqlGetData.Append("(CASE WHEN (select top 1 OutputTarget from ProcessHistory.DailyPerformanceGoal where Model = a.Model and line = a.line order by LastTimeModified desc) IS NOT NULL ");
-            sqlGetData.Append("THEN (select top 1 OutputTarget from ProcessHistory.DailyPerformanceGoal where Model = a.Model and line = a.line order by LastTimeModified desc) ELSE '1000' END) as Target ");
+            sqlGetData.Append("THEN (select top 1 rate from thu_SMESData_NGRate_PQC where Model = a.Model and line = a.line order by Date desc) ELSE '2' END) as '%NG_allow', POCode, '2.5' as '%RW_allow' ");
             sqlGetData.Append("FROM ProcessHistory.PQCMesData as a ");
             sqlGetData.Append("LEFT JOIN thu_SMESData_NGRate_PQC as r on a.Model = r.Model and a.line = r.line and CAST(a.InspectDateTime as Date) = r.Date ");
             sqlGetData.Append("join(SELECT Model, CAST(InspectDateTime as Date) as Date, line, ");
@@ -495,13 +305,13 @@ namespace SMESData
             sqlGetData.Append("order by Model desc, Line");
             sqlSOFTCon.sqlDataAdapterFillDatatable(sqlGetData.ToString(), ref dt);
             ListPQC PQC = new ListPQC();
-            PQC.Temp = 0;
+            PQC.Target = 0;
             for (int i = 0; i < dt.Rows.Count; i++)
             {
                 if (dt.Rows.Count == 1)
                 {
                     string[] POCode = dt.Rows[i]["POCode"].ToString().Split(';');
-                    PQC.Temp = PQC.Temp + double.Parse(POCode[4]);
+                    PQC.Target = PQC.Target + double.Parse(POCode[4]);
                     PQC.Model = dt.Rows[i]["Model"].ToString();
                     PQC.Date = Convert.ToDateTime(dt.Rows[i]["Date"]).ToString("dd-MM-yyyy");
                     PQC.Line = dt.Rows[i]["Line"].ToString();
@@ -509,7 +319,6 @@ namespace SMESData
                     PQC.REWORK = double.Parse(dt.Rows[i]["REWORK"].ToString());
                     PQC.NOGOOD = double.Parse(dt.Rows[i]["NOGOOD"].ToString());
                     PQC.Total = PQC.OUTPUT + PQC.REWORK + PQC.NOGOOD;
-                    PQC.Target = double.Parse(dt.Rows[i]["Target"].ToString());
                     PQC.NG_rate_realtime = Math.Round(PQC.NOGOOD / PQC.Total * 100, 1);
                     PQC.NG_rate_allow = double.Parse(dt.Rows[i]["%NG_allow"].ToString());
                     PQC.RW_rate_realtime = Math.Round(PQC.REWORK / PQC.Total * 100, 1);
@@ -525,12 +334,12 @@ namespace SMESData
                             string[] POCode = dt.Rows[i]["POCode"].ToString().Split(';');
                             string[] POCode1 = dt.Rows[i + 1]["POCode"].ToString().Split(';');
                             if (POCode[3] != POCode1[3])
-                                PQC.Temp = PQC.Temp + double.Parse(POCode[4]);
+                                PQC.Target = PQC.Target + double.Parse(POCode[4]);
                         }
                         else
                         {
                             string[] POCode = dt.Rows[i]["POCode"].ToString().Split(';');
-                            PQC.Temp = PQC.Temp + double.Parse(POCode[4]);
+                            PQC.Target = PQC.Target + double.Parse(POCode[4]);
                             PQC.Model = dt.Rows[i]["Model"].ToString();
                             PQC.Date = Convert.ToDateTime(dt.Rows[i]["Date"]).ToString("dd-MM-yyyy");
                             PQC.Line = dt.Rows[i]["Line"].ToString();
@@ -538,14 +347,13 @@ namespace SMESData
                             PQC.REWORK = double.Parse(dt.Rows[i]["REWORK"].ToString());
                             PQC.NOGOOD = double.Parse(dt.Rows[i]["NOGOOD"].ToString());
                             PQC.Total = PQC.OUTPUT + PQC.REWORK + PQC.NOGOOD;
-                            PQC.Target = double.Parse(dt.Rows[i]["Target"].ToString());
                             PQC.NG_rate_realtime = Math.Round(PQC.NOGOOD / PQC.Total * 100, 1);
                             PQC.NG_rate_allow = double.Parse(dt.Rows[i]["%NG_allow"].ToString());
                             PQC.RW_rate_realtime = Math.Round(PQC.REWORK / PQC.Total * 100, 1);
                             PQC.RW_rate_allow = double.Parse(dt.Rows[i]["%RW_allow"].ToString());
                             ListPQC.Add(PQC);
                             PQC = new ListPQC();
-                            PQC.Temp = 0;
+                            PQC.Target = 0;
                         }
                     }
                     else
@@ -555,7 +363,7 @@ namespace SMESData
                             string[] POCode = dt.Rows[i - 1]["POCode"].ToString().Split(';');
                             string[] POCode1 = dt.Rows[i]["POCode"].ToString().Split(';');
                             if (POCode[3] != POCode1[3])
-                                PQC.Temp = PQC.Temp + double.Parse(POCode1[4]);
+                                PQC.Target = PQC.Target + double.Parse(POCode1[4]);
                             PQC.Model = dt.Rows[i]["Model"].ToString();
                             PQC.Date = Convert.ToDateTime(dt.Rows[i]["Date"]).ToString("dd-MM-yyyy");
                             PQC.Line = dt.Rows[i]["Line"].ToString();
@@ -563,7 +371,6 @@ namespace SMESData
                             PQC.REWORK = double.Parse(dt.Rows[i]["REWORK"].ToString());
                             PQC.NOGOOD = double.Parse(dt.Rows[i]["NOGOOD"].ToString());
                             PQC.Total = PQC.OUTPUT + PQC.REWORK + PQC.NOGOOD;
-                            PQC.Target = double.Parse(dt.Rows[i]["Target"].ToString());
                             PQC.NG_rate_realtime = Math.Round(PQC.NOGOOD / PQC.Total * 100, 1);
                             PQC.NG_rate_allow = double.Parse(dt.Rows[i]["%NG_allow"].ToString());
                             PQC.RW_rate_realtime = Math.Round(PQC.REWORK / PQC.Total * 100, 1);
@@ -573,7 +380,7 @@ namespace SMESData
                         else
                         {
                             string[] POCode = dt.Rows[i]["POCode"].ToString().Split(';');
-                            PQC.Temp = PQC.Temp + double.Parse(POCode[4]);
+                            PQC.Target = PQC.Target + double.Parse(POCode[4]);
                             PQC.Model = dt.Rows[i]["Model"].ToString();
                             PQC.Date = Convert.ToDateTime(dt.Rows[i]["Date"]).ToString("dd-MM-yyyy");
                             PQC.Line = dt.Rows[i]["Line"].ToString();
@@ -581,7 +388,6 @@ namespace SMESData
                             PQC.REWORK = double.Parse(dt.Rows[i]["REWORK"].ToString());
                             PQC.NOGOOD = double.Parse(dt.Rows[i]["NOGOOD"].ToString());
                             PQC.Total = PQC.OUTPUT + PQC.REWORK + PQC.NOGOOD;
-                            PQC.Target = double.Parse(dt.Rows[i]["Target"].ToString());
                             PQC.NG_rate_realtime = Math.Round(PQC.NOGOOD / PQC.Total * 100, 1);
                             PQC.NG_rate_allow = double.Parse(dt.Rows[i]["%NG_allow"].ToString());
                             PQC.RW_rate_realtime = Math.Round(PQC.REWORK / PQC.Total * 100, 1);
@@ -653,22 +459,216 @@ namespace SMESData
                 {
                     ColumnName="RW_rate_allow",
                     DataType=typeof(double),
-                },
-                new DataColumn()
-                {
-                    ColumnName="Temp",
-                    DataType=typeof(double),
                 }
             };
             dtPQC.Columns.AddRange(tableColumns);
             foreach (var data in ListPQC)
             {
-                dtPQC.Rows.Add(data.Model, data.Date, data.Line, data.OUTPUT, data.REWORK, data.NOGOOD, data.Total, data.Target, data.NG_rate_realtime, data.NG_rate_allow, data.RW_rate_realtime, data.RW_rate_allow, data.Temp);
+                dtPQC.Rows.Add(data.Model, data.Date, data.Line, data.OUTPUT, data.REWORK, data.NOGOOD, data.Total, data.Target, data.NG_rate_realtime, data.NG_rate_allow, data.RW_rate_realtime, data.RW_rate_allow);
             }
             dtPQC.DefaultView.Sort = "NG_rate_realtime DESC";
             dtPQC = dtPQC.DefaultView.ToTable();
             return dtPQC;
         }
+        //public static DataTable GetListPQCTarget(string date, string line)
+        //{
+        //    List<ListPQC> ListPQC = new List<ListPQC>();
+        //    DataTable dt = new DataTable();
+        //    sqlSOFTCon sqlSOFTCon = new sqlSOFTCon();
+        //    StringBuilder sqlGetData = new StringBuilder();
+        //    sqlGetData.Append("select distinct m.Model, m.Date, m.line as Line, m.OUTPUT, m.REWORK, m.NOGOOD, ");
+        //    sqlGetData.Append("(CASE WHEN (select top 1 rate from thu_SMESData_NGRate_PQC where Model = a.Model and line = a.line order by Date desc) IS NOT NULL ");
+        //    sqlGetData.Append("THEN (select top 1 rate from thu_SMESData_NGRate_PQC where Model = a.Model and line = a.line order by Date desc) ELSE '2' END) as '%NG_allow', POCode, '2.5' as '%RW_allow', ");
+        //    sqlGetData.Append("(CASE WHEN (select top 1 OutputTarget from ProcessHistory.DailyPerformanceGoal where Model = a.Model and line = a.line order by LastTimeModified desc) IS NOT NULL ");
+        //    sqlGetData.Append("THEN (select top 1 OutputTarget from ProcessHistory.DailyPerformanceGoal where Model = a.Model and line = a.line order by LastTimeModified desc) ELSE '1000' END) as Target ");
+        //    sqlGetData.Append("FROM ProcessHistory.PQCMesData as a ");
+        //    sqlGetData.Append("LEFT JOIN thu_SMESData_NGRate_PQC as r on a.Model = r.Model and a.line = r.line and CAST(a.InspectDateTime as Date) = r.Date ");
+        //    sqlGetData.Append("join(SELECT Model, CAST(InspectDateTime as Date) as Date, line, ");
+        //    sqlGetData.Append("COALESCE(SUM(CASE WHEN AttributeType = 'OP' THEN Cast(Quantity as numeric(10,0)) END), 0) AS OUTPUT, ");
+        //    sqlGetData.Append("COALESCE(SUM(CASE WHEN AttributeType = 'RW' THEN Cast(Quantity as numeric(10,0)) END), 0) AS REWORK, ");
+        //    sqlGetData.Append("COALESCE(SUM(CASE WHEN AttributeType = 'NG' THEN Cast(Quantity as numeric(10,0)) END), 0) AS NOGOOD ");
+        //    sqlGetData.Append("FROM ProcessHistory.PQCMesData ");
+        //    sqlGetData.Append("WHERE InspectDateTime like '%" + date + "%' and line like '%" + line + "%' ");
+        //    sqlGetData.Append("group by Model, line, CAST(InspectDateTime as Date)) as m ");
+        //    sqlGetData.Append("on CAST(a.InspectDateTime as Date) = m.Date and a.Model = M.model and a.line = m.line ");
+        //    //Do not change this sort for correcting logic in for loop. Model have same name and diffrent line will stand side by side
+        //    sqlGetData.Append("order by Model desc, Line");
+        //    sqlSOFTCon.sqlDataAdapterFillDatatable(sqlGetData.ToString(), ref dt);
+        //    ListPQC PQC = new ListPQC();
+        //    PQC.Temp = 0;
+        //    for (int i = 0; i < dt.Rows.Count; i++)
+        //    {
+        //        if (dt.Rows.Count == 1)
+        //        {
+        //            string[] POCode = dt.Rows[i]["POCode"].ToString().Split(';');
+        //            PQC.Temp = PQC.Temp + double.Parse(POCode[4]);
+        //            PQC.Model = dt.Rows[i]["Model"].ToString();
+        //            PQC.Date = Convert.ToDateTime(dt.Rows[i]["Date"]).ToString("dd-MM-yyyy");
+        //            PQC.Line = dt.Rows[i]["Line"].ToString();
+        //            PQC.OUTPUT = double.Parse(dt.Rows[i]["OUTPUT"].ToString());
+        //            PQC.REWORK = double.Parse(dt.Rows[i]["REWORK"].ToString());
+        //            PQC.NOGOOD = double.Parse(dt.Rows[i]["NOGOOD"].ToString());
+        //            PQC.Total = PQC.OUTPUT + PQC.REWORK + PQC.NOGOOD;
+        //            PQC.Target = double.Parse(dt.Rows[i]["Target"].ToString());
+        //            PQC.NG_rate_realtime = Math.Round(PQC.NOGOOD / PQC.Total * 100, 1);
+        //            PQC.NG_rate_allow = double.Parse(dt.Rows[i]["%NG_allow"].ToString());
+        //            PQC.RW_rate_realtime = Math.Round(PQC.REWORK / PQC.Total * 100, 1);
+        //            PQC.RW_rate_allow = double.Parse(dt.Rows[i]["%RW_allow"].ToString());
+        //            ListPQC.Add(PQC);
+        //        }
+        //        else
+        //        {
+        //            if (i + 1 != dt.Rows.Count)
+        //            {
+        //                if (dt.Rows[i]["Model"].ToString() == dt.Rows[i + 1]["Model"].ToString() && dt.Rows[i]["Line"].ToString() == dt.Rows[i + 1]["Line"].ToString())
+        //                {
+        //                    string[] POCode = dt.Rows[i]["POCode"].ToString().Split(';');
+        //                    string[] POCode1 = dt.Rows[i + 1]["POCode"].ToString().Split(';');
+        //                    if (POCode[3] != POCode1[3])
+        //                        PQC.Temp = PQC.Temp + double.Parse(POCode[4]);
+        //                }
+        //                else
+        //                {
+        //                    string[] POCode = dt.Rows[i]["POCode"].ToString().Split(';');
+        //                    PQC.Temp = PQC.Temp + double.Parse(POCode[4]);
+        //                    PQC.Model = dt.Rows[i]["Model"].ToString();
+        //                    PQC.Date = Convert.ToDateTime(dt.Rows[i]["Date"]).ToString("dd-MM-yyyy");
+        //                    PQC.Line = dt.Rows[i]["Line"].ToString();
+        //                    PQC.OUTPUT = double.Parse(dt.Rows[i]["OUTPUT"].ToString());
+        //                    PQC.REWORK = double.Parse(dt.Rows[i]["REWORK"].ToString());
+        //                    PQC.NOGOOD = double.Parse(dt.Rows[i]["NOGOOD"].ToString());
+        //                    PQC.Total = PQC.OUTPUT + PQC.REWORK + PQC.NOGOOD;
+        //                    PQC.Target = double.Parse(dt.Rows[i]["Target"].ToString());
+        //                    PQC.NG_rate_realtime = Math.Round(PQC.NOGOOD / PQC.Total * 100, 1);
+        //                    PQC.NG_rate_allow = double.Parse(dt.Rows[i]["%NG_allow"].ToString());
+        //                    PQC.RW_rate_realtime = Math.Round(PQC.REWORK / PQC.Total * 100, 1);
+        //                    PQC.RW_rate_allow = double.Parse(dt.Rows[i]["%RW_allow"].ToString());
+        //                    ListPQC.Add(PQC);
+        //                    PQC = new ListPQC();
+        //                    PQC.Temp = 0;
+        //                }
+        //            }
+        //            else
+        //            {
+        //                if (dt.Rows[i - 1]["Model"].ToString() == dt.Rows[i]["Model"].ToString() && dt.Rows[i - 1]["Line"].ToString() == dt.Rows[i]["Line"].ToString())
+        //                {
+        //                    string[] POCode = dt.Rows[i - 1]["POCode"].ToString().Split(';');
+        //                    string[] POCode1 = dt.Rows[i]["POCode"].ToString().Split(';');
+        //                    if (POCode[3] != POCode1[3])
+        //                        PQC.Temp = PQC.Temp + double.Parse(POCode1[4]);
+        //                    PQC.Model = dt.Rows[i]["Model"].ToString();
+        //                    PQC.Date = Convert.ToDateTime(dt.Rows[i]["Date"]).ToString("dd-MM-yyyy");
+        //                    PQC.Line = dt.Rows[i]["Line"].ToString();
+        //                    PQC.OUTPUT = double.Parse(dt.Rows[i]["OUTPUT"].ToString());
+        //                    PQC.REWORK = double.Parse(dt.Rows[i]["REWORK"].ToString());
+        //                    PQC.NOGOOD = double.Parse(dt.Rows[i]["NOGOOD"].ToString());
+        //                    PQC.Total = PQC.OUTPUT + PQC.REWORK + PQC.NOGOOD;
+        //                    PQC.Target = double.Parse(dt.Rows[i]["Target"].ToString());
+        //                    PQC.NG_rate_realtime = Math.Round(PQC.NOGOOD / PQC.Total * 100, 1);
+        //                    PQC.NG_rate_allow = double.Parse(dt.Rows[i]["%NG_allow"].ToString());
+        //                    PQC.RW_rate_realtime = Math.Round(PQC.REWORK / PQC.Total * 100, 1);
+        //                    PQC.RW_rate_allow = double.Parse(dt.Rows[i]["%RW_allow"].ToString());
+        //                    ListPQC.Add(PQC);
+        //                }
+        //                else
+        //                {
+        //                    string[] POCode = dt.Rows[i]["POCode"].ToString().Split(';');
+        //                    PQC.Temp = PQC.Temp + double.Parse(POCode[4]);
+        //                    PQC.Model = dt.Rows[i]["Model"].ToString();
+        //                    PQC.Date = Convert.ToDateTime(dt.Rows[i]["Date"]).ToString("dd-MM-yyyy");
+        //                    PQC.Line = dt.Rows[i]["Line"].ToString();
+        //                    PQC.OUTPUT = double.Parse(dt.Rows[i]["OUTPUT"].ToString());
+        //                    PQC.REWORK = double.Parse(dt.Rows[i]["REWORK"].ToString());
+        //                    PQC.NOGOOD = double.Parse(dt.Rows[i]["NOGOOD"].ToString());
+        //                    PQC.Total = PQC.OUTPUT + PQC.REWORK + PQC.NOGOOD;
+        //                    PQC.Target = double.Parse(dt.Rows[i]["Target"].ToString());
+        //                    PQC.NG_rate_realtime = Math.Round(PQC.NOGOOD / PQC.Total * 100, 1);
+        //                    PQC.NG_rate_allow = double.Parse(dt.Rows[i]["%NG_allow"].ToString());
+        //                    PQC.RW_rate_realtime = Math.Round(PQC.REWORK / PQC.Total * 100, 1);
+        //                    PQC.RW_rate_allow = double.Parse(dt.Rows[i]["%RW_allow"].ToString());
+        //                    ListPQC.Add(PQC);
+        //                }
+        //            }
+        //        }
+        //    }
+        //    DataTable dtPQC = new DataTable();
+        //    DataColumn[] tableColumns = new DataColumn[]
+        //    {
+        //        new DataColumn()
+        //        {
+        //            ColumnName="Model",
+        //            DataType=typeof(string),
+        //        },
+        //        new DataColumn()
+        //        {
+        //            ColumnName="Date",
+        //            DataType=typeof(string),
+        //        },
+        //        new DataColumn()
+        //        {
+        //            ColumnName="Line",
+        //            DataType=typeof(string),
+        //        },
+        //        new DataColumn()
+        //        {
+        //            ColumnName="OUTPUT",
+        //            DataType=typeof(double),
+        //        },
+        //        new DataColumn()
+        //        {
+        //            ColumnName="REWORK",
+        //            DataType=typeof(double),
+        //        },
+        //        new DataColumn()
+        //        {
+        //            ColumnName="NOGOOD",
+        //            DataType=typeof(double),
+        //        },
+        //        new DataColumn()
+        //        {
+        //            ColumnName="Total",
+        //            DataType=typeof(double),
+        //        },
+        //        new DataColumn()
+        //        {
+        //            ColumnName="Target",
+        //            DataType=typeof(double),
+        //        },
+        //        new DataColumn()
+        //        {
+        //            ColumnName="NG_rate_realtime",
+        //            DataType=typeof(double),
+        //        },
+        //        new DataColumn()
+        //        {
+        //            ColumnName="NG_rate_allow",
+        //            DataType=typeof(double),
+        //        },
+        //        new DataColumn()
+        //        {
+        //            ColumnName="RW_rate_realtime",
+        //            DataType=typeof(double),
+        //        },
+        //        new DataColumn()
+        //        {
+        //            ColumnName="RW_rate_allow",
+        //            DataType=typeof(double),
+        //        },
+        //        new DataColumn()
+        //        {
+        //            ColumnName="Temp",
+        //            DataType=typeof(double),
+        //        }
+        //    };
+        //    dtPQC.Columns.AddRange(tableColumns);
+        //    foreach (var data in ListPQC)
+        //    {
+        //        dtPQC.Rows.Add(data.Model, data.Date, data.Line, data.OUTPUT, data.REWORK, data.NOGOOD, data.Total, data.Target, data.NG_rate_realtime, data.NG_rate_allow, data.RW_rate_realtime, data.RW_rate_allow, data.Temp);
+        //    }
+        //    dtPQC.DefaultView.Sort = "NG_rate_realtime DESC";
+        //    dtPQC = dtPQC.DefaultView.ToTable();
+        //    return dtPQC;
+        //}
         //Get Info of product
         public static DataTable GetInfo(string model, string line, string date)
         {
