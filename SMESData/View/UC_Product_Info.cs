@@ -313,6 +313,7 @@ namespace SMESData
                 SaveData.MQCClick = false;
                 SaveData.PQCClick = false;
                 SaveData.Date = dtpChart.Value.ToString("yyyy-MM-dd");
+                SaveData.check = false;
             }
         }
         public void ChangeUpdateTime()
@@ -354,7 +355,6 @@ namespace SMESData
         private void btStart_Click(object sender, EventArgs e)
         {
             UpdateTime();
-            SaveData.check = false;
         }
         private void btStop_Click(object sender, EventArgs e)
         {
