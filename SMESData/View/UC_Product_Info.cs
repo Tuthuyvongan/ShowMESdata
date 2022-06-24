@@ -353,8 +353,8 @@ namespace SMESData
         }
         private void btStart_Click(object sender, EventArgs e)
         {
-            SaveData.check = false;
             UpdateTime();
+            SaveData.check = false;
         }
         private void btStop_Click(object sender, EventArgs e)
         {

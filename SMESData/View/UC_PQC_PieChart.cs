@@ -459,9 +459,9 @@ namespace SMESData
                 timer1.Stop();
         }
         private void btStart_Click(object sender, EventArgs e)
-        {
+        {     
+            UpdateTime();
             SaveData.check = false;
-            UpdateTime();       
         }
         private void btStop_Click(object sender, EventArgs e)
         {
