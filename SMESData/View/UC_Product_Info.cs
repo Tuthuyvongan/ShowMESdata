@@ -537,7 +537,7 @@ namespace SMESData
         }
         private void dtgv_MQC_PD_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
-            if (Screen.PrimaryScreen.Bounds.Width <= 1536)
+            if (Screen.PrimaryScreen.Bounds.Width <= 1600)
             {
                 sizeDefault();
             }    
