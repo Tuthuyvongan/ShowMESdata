@@ -514,7 +514,7 @@ namespace SMESData
             this.btMQCD.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
             this.btMQCD.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btMQCD.BackgroundImage")));
             this.btMQCD.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btMQCD.ButtonText = "Show All MQC\r\nProduct Data";
+            this.btMQCD.ButtonText = "Show All MQC\r\nModel Data";
             this.btMQCD.ButtonTextMarginLeft = 0;
             this.btMQCD.ColorContrastOnClick = 45;
             this.btMQCD.ColorContrastOnHover = 45;
@@ -607,7 +607,7 @@ namespace SMESData
             this.btPQCD.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
             this.btPQCD.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btPQCD.BackgroundImage")));
             this.btPQCD.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btPQCD.ButtonText = "Show All PQC\r\nProduct Data\r\n";
+            this.btPQCD.ButtonText = "Show All PQC\r\nModel Data\r\n";
             this.btPQCD.ButtonTextMarginLeft = 0;
             this.btPQCD.ColorContrastOnClick = 45;
             this.btPQCD.ColorContrastOnHover = 45;
@@ -864,7 +864,7 @@ namespace SMESData
             this.btStart.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
             this.btStart.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btStart.BackgroundImage")));
             this.btStart.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btStart.ButtonText = "Start Auto \r\nUpdate Product \r\nData";
+            this.btStart.ButtonText = "Start Auto \r\nUpdate Model\r\nData";
             this.btStart.ButtonTextMarginLeft = 0;
             this.btStart.ColorContrastOnClick = 45;
             this.btStart.ColorContrastOnHover = 45;
@@ -957,7 +957,7 @@ namespace SMESData
             this.btStop.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
             this.btStop.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btStop.BackgroundImage")));
             this.btStop.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btStop.ButtonText = "Stop Auto \r\nUpdate Product \r\nData";
+            this.btStop.ButtonText = "Stop Auto \r\nUpdate Model\r\nData";
             this.btStop.ButtonTextMarginLeft = 0;
             this.btStop.ColorContrastOnClick = 45;
             this.btStop.ColorContrastOnHover = 45;

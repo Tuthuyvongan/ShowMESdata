@@ -53,11 +53,11 @@ namespace SMESData
             this.pnMain.BorderRadius = 0;
             this.pnMain.BorderThickness = 0;
             this.pnMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnMain.Location = new System.Drawing.Point(135, 0);
-            this.pnMain.Margin = new System.Windows.Forms.Padding(2);
+            this.pnMain.Location = new System.Drawing.Point(180, 0);
+            this.pnMain.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnMain.Name = "pnMain";
             this.pnMain.ShowBorders = true;
-            this.pnMain.Size = new System.Drawing.Size(1785, 928);
+            this.pnMain.Size = new System.Drawing.Size(2380, 1142);
             this.pnMain.TabIndex = 10;
             // 
             // pnMenu
@@ -75,10 +75,10 @@ namespace SMESData
             this.pnMenu.Controls.Add(this.pbLogo);
             this.pnMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnMenu.Location = new System.Drawing.Point(0, 0);
-            this.pnMenu.Margin = new System.Windows.Forms.Padding(2);
+            this.pnMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnMenu.Name = "pnMenu";
             this.pnMenu.ShowBorders = true;
-            this.pnMenu.Size = new System.Drawing.Size(135, 928);
+            this.pnMenu.Size = new System.Drawing.Size(180, 1142);
             this.pnMenu.TabIndex = 9;
             // 
             // btMQCPD
@@ -95,7 +95,7 @@ namespace SMESData
             this.btMQCPD.BackColor1 = System.Drawing.Color.Black;
             this.btMQCPD.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btMQCPD.BackgroundImage")));
             this.btMQCPD.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.btMQCPD.ButtonText = "Product\r Info";
+            this.btMQCPD.ButtonText = "Model\r\nData";
             this.btMQCPD.ButtonTextMarginLeft = 0;
             this.btMQCPD.ColorContrastOnClick = 45;
             this.btMQCPD.ColorContrastOnHover = 45;
@@ -128,8 +128,8 @@ namespace SMESData
             this.btMQCPD.IdleIconLeftImage = null;
             this.btMQCPD.IdleIconRightImage = null;
             this.btMQCPD.IndicateFocus = true;
-            this.btMQCPD.Location = new System.Drawing.Point(0, 310);
-            this.btMQCPD.Margin = new System.Windows.Forms.Padding(2);
+            this.btMQCPD.Location = new System.Drawing.Point(0, 382);
+            this.btMQCPD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btMQCPD.Name = "btMQCPD";
             this.btMQCPD.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btMQCPD.OnDisabledState.BorderRadius = 1;
@@ -163,7 +163,7 @@ namespace SMESData
             this.btMQCPD.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btMQCPD.OnPressedState.IconLeftImage = null;
             this.btMQCPD.OnPressedState.IconRightImage = null;
-            this.btMQCPD.Size = new System.Drawing.Size(135, 73);
+            this.btMQCPD.Size = new System.Drawing.Size(180, 90);
             this.btMQCPD.TabIndex = 7;
             this.btMQCPD.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btMQCPD.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -190,18 +190,18 @@ namespace SMESData
             this.btClose.ImageActive = null;
             this.btClose.ImageLocation = null;
             this.btClose.ImageMargin = 20;
-            this.btClose.ImageSize = new System.Drawing.Size(55, 61);
-            this.btClose.ImageZoomSize = new System.Drawing.Size(75, 81);
+            this.btClose.ImageSize = new System.Drawing.Size(80, 80);
+            this.btClose.ImageZoomSize = new System.Drawing.Size(100, 100);
             this.btClose.InitialImage = ((System.Drawing.Image)(resources.GetObject("btClose.InitialImage")));
-            this.btClose.Location = new System.Drawing.Point(31, 824);
-            this.btClose.Margin = new System.Windows.Forms.Padding(2);
+            this.btClose.Location = new System.Drawing.Point(41, 1014);
+            this.btClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btClose.Name = "btClose";
             this.btClose.Rotation = 0;
             this.btClose.ShowActiveImage = true;
             this.btClose.ShowCursorChanges = true;
             this.btClose.ShowImageBorders = true;
             this.btClose.ShowSizeMarkers = false;
-            this.btClose.Size = new System.Drawing.Size(75, 81);
+            this.btClose.Size = new System.Drawing.Size(100, 100);
             this.btClose.TabIndex = 6;
             this.btClose.ToolTipText = "";
             this.btClose.WaitOnLoad = false;
@@ -256,8 +256,8 @@ namespace SMESData
             this.btPQC.IdleIconLeftImage = null;
             this.btPQC.IdleIconRightImage = null;
             this.btPQC.IndicateFocus = true;
-            this.btPQC.Location = new System.Drawing.Point(0, 211);
-            this.btPQC.Margin = new System.Windows.Forms.Padding(2);
+            this.btPQC.Location = new System.Drawing.Point(0, 260);
+            this.btPQC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btPQC.Name = "btPQC";
             this.btPQC.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btPQC.OnDisabledState.BorderRadius = 1;
@@ -291,7 +291,7 @@ namespace SMESData
             this.btPQC.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btPQC.OnPressedState.IconLeftImage = null;
             this.btPQC.OnPressedState.IconRightImage = null;
-            this.btPQC.Size = new System.Drawing.Size(135, 73);
+            this.btPQC.Size = new System.Drawing.Size(180, 90);
             this.btPQC.TabIndex = 5;
             this.btPQC.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btPQC.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -347,8 +347,8 @@ namespace SMESData
             this.btMQC.IdleIconLeftImage = null;
             this.btMQC.IdleIconRightImage = null;
             this.btMQC.IndicateFocus = true;
-            this.btMQC.Location = new System.Drawing.Point(0, 112);
-            this.btMQC.Margin = new System.Windows.Forms.Padding(2);
+            this.btMQC.Location = new System.Drawing.Point(0, 138);
+            this.btMQC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btMQC.Name = "btMQC";
             this.btMQC.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btMQC.OnDisabledState.BorderRadius = 1;
@@ -382,7 +382,7 @@ namespace SMESData
             this.btMQC.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btMQC.OnPressedState.IconLeftImage = null;
             this.btMQC.OnPressedState.IconRightImage = null;
-            this.btMQC.Size = new System.Drawing.Size(135, 73);
+            this.btMQC.Size = new System.Drawing.Size(180, 90);
             this.btMQC.TabIndex = 3;
             this.btMQC.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btMQC.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -397,25 +397,25 @@ namespace SMESData
             this.pbLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pbLogo.Image = ((System.Drawing.Image)(resources.GetObject("pbLogo.Image")));
             this.pbLogo.Location = new System.Drawing.Point(0, 0);
-            this.pbLogo.Margin = new System.Windows.Forms.Padding(2);
+            this.pbLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbLogo.Name = "pbLogo";
-            this.pbLogo.Size = new System.Drawing.Size(135, 107);
+            this.pbLogo.Size = new System.Drawing.Size(180, 132);
             this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbLogo.TabIndex = 0;
             this.pbLogo.TabStop = false;
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1920, 928);
+            this.ClientSize = new System.Drawing.Size(2560, 1142);
             this.Controls.Add(this.pnMain);
             this.Controls.Add(this.pnMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MainForm";
             this.Text = "ShowMESData";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
