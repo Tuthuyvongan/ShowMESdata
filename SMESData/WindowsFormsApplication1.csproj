@@ -96,7 +96,7 @@
     <Reference Include="WindowsBase" />
     <Reference Include="WindowsFormsIntegration" />
     <Reference Include="XanderUI">
-      <HintPath>..\..\..\Downloads\XanderUI.dll</HintPath>
+      <HintPath>..\..\..\..\Downloads\XanderUI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
