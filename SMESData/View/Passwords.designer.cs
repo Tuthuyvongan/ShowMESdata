@@ -43,7 +43,7 @@ namespace WindowsFormsApplication1
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(154, 74);
+            this.label1.Location = new System.Drawing.Point(70, 44);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(192, 26);
@@ -53,11 +53,11 @@ namespace WindowsFormsApplication1
             // txtPass
             // 
             this.txtPass.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtPass.Location = new System.Drawing.Point(354, 74);
+            this.txtPass.Location = new System.Drawing.Point(270, 44);
             this.txtPass.Margin = new System.Windows.Forms.Padding(4);
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';
-            this.txtPass.Size = new System.Drawing.Size(281, 22);
+            this.txtPass.Size = new System.Drawing.Size(250, 22);
             this.txtPass.TabIndex = 1;
             // 
             // btOk
@@ -74,7 +74,7 @@ namespace WindowsFormsApplication1
             this.btOk.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
             this.btOk.HoverTextColor = System.Drawing.Color.DodgerBlue;
             this.btOk.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
-            this.btOk.Location = new System.Drawing.Point(220, 120);
+            this.btOk.Location = new System.Drawing.Point(136, 90);
             this.btOk.Margin = new System.Windows.Forms.Padding(4, 20, 10, 4);
             this.btOk.Name = "btOk";
             this.btOk.Size = new System.Drawing.Size(120, 31);
@@ -96,7 +96,7 @@ namespace WindowsFormsApplication1
             this.btCancel.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
             this.btCancel.HoverTextColor = System.Drawing.Color.DodgerBlue;
             this.btCancel.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
-            this.btCancel.Location = new System.Drawing.Point(360, 120);
+            this.btCancel.Location = new System.Drawing.Point(276, 90);
             this.btCancel.Margin = new System.Windows.Forms.Padding(10, 20, 4, 4);
             this.btCancel.Name = "btCancel";
             this.btCancel.Size = new System.Drawing.Size(120, 31);
@@ -123,7 +123,7 @@ namespace WindowsFormsApplication1
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(700, 200);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(533, 141);
             this.tableLayoutPanel1.TabIndex = 4;
             // 
             // Passwords
@@ -131,7 +131,7 @@ namespace WindowsFormsApplication1
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(700, 200);
+            this.ClientSize = new System.Drawing.Size(533, 141);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.KeyPreview = true;

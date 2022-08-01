@@ -43,7 +43,7 @@ namespace WindowsFormsApplication1
             this.progressBar1.BarThickness = 5;
             this.progressBar1.CompleteColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(119)))), ((int)(((byte)(215)))));
             this.progressBar1.InocmpletedColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(223)))), ((int)(((byte)(223)))));
-            this.progressBar1.Location = new System.Drawing.Point(87, 34);
+            this.progressBar1.Location = new System.Drawing.Point(45, 22);
             this.progressBar1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 15);
             this.progressBar1.MaxValue = 100;
             this.progressBar1.Name = "progressBar1";
@@ -58,7 +58,7 @@ namespace WindowsFormsApplication1
             this.lbWait.AutoSize = true;
             this.lbWait.BackColor = System.Drawing.Color.Transparent;
             this.lbWait.Font = new System.Drawing.Font("Times New Roman", 14.25F);
-            this.lbWait.Location = new System.Drawing.Point(134, 95);
+            this.lbWait.Location = new System.Drawing.Point(92, 83);
             this.lbWait.Margin = new System.Windows.Forms.Padding(4, 15, 4, 0);
             this.lbWait.Name = "lbWait";
             this.lbWait.Size = new System.Drawing.Size(367, 27);
@@ -80,7 +80,7 @@ namespace WindowsFormsApplication1
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(636, 160);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(552, 137);
             this.tableLayoutPanel1.TabIndex = 4;
             // 
             // MessageWaitForm
@@ -88,7 +88,7 @@ namespace WindowsFormsApplication1
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(636, 160);
+            this.ClientSize = new System.Drawing.Size(552, 137);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);

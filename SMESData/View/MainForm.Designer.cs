@@ -52,7 +52,7 @@ namespace WindowsFormsApplication1
             this.pnMain.Location = new System.Drawing.Point(180, 0);
             this.pnMain.Margin = new System.Windows.Forms.Padding(0);
             this.pnMain.Name = "pnMain";
-            this.pnMain.Size = new System.Drawing.Size(2220, 1102);
+            this.pnMain.Size = new System.Drawing.Size(1748, 1036);
             this.pnMain.TabIndex = 10;
             // 
             // pnMenu
@@ -71,7 +71,7 @@ namespace WindowsFormsApplication1
             this.pnMenu.Location = new System.Drawing.Point(0, 0);
             this.pnMenu.Margin = new System.Windows.Forms.Padding(0);
             this.pnMenu.Name = "pnMenu";
-            this.pnMenu.Size = new System.Drawing.Size(180, 1102);
+            this.pnMenu.Size = new System.Drawing.Size(180, 1036);
             this.pnMenu.TabIndex = 9;
             // 
             // btClose
@@ -88,9 +88,9 @@ namespace WindowsFormsApplication1
             this.btClose.HoverBackgroundColor = System.Drawing.Color.White;
             this.btClose.HoverTextColor = System.Drawing.Color.DodgerBlue;
             this.btClose.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
-            this.btClose.Location = new System.Drawing.Point(41, 971);
+            this.btClose.Location = new System.Drawing.Point(53, 915);
             this.btClose.Name = "btClose";
-            this.btClose.Size = new System.Drawing.Size(100, 100);
+            this.btClose.Size = new System.Drawing.Size(80, 80);
             this.btClose.TabIndex = 14;
             this.btClose.TextColor = System.Drawing.Color.DodgerBlue;
             this.btClose.Vertical_Alignment = System.Drawing.StringAlignment.Center;
@@ -110,9 +110,9 @@ namespace WindowsFormsApplication1
             this.btNornal.HoverBackgroundColor = System.Drawing.Color.White;
             this.btNornal.HoverTextColor = System.Drawing.Color.DodgerBlue;
             this.btNornal.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
-            this.btNornal.Location = new System.Drawing.Point(41, 853);
+            this.btNornal.Location = new System.Drawing.Point(53, 815);
             this.btNornal.Name = "btNornal";
-            this.btNornal.Size = new System.Drawing.Size(100, 100);
+            this.btNornal.Size = new System.Drawing.Size(80, 80);
             this.btNornal.TabIndex = 13;
             this.btNornal.TextColor = System.Drawing.Color.DodgerBlue;
             this.btNornal.Vertical_Alignment = System.Drawing.StringAlignment.Center;
@@ -132,9 +132,9 @@ namespace WindowsFormsApplication1
             this.btMin.HoverBackgroundColor = System.Drawing.Color.White;
             this.btMin.HoverTextColor = System.Drawing.Color.DodgerBlue;
             this.btMin.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
-            this.btMin.Location = new System.Drawing.Point(41, 735);
+            this.btMin.Location = new System.Drawing.Point(53, 715);
             this.btMin.Name = "btMin";
-            this.btMin.Size = new System.Drawing.Size(100, 100);
+            this.btMin.Size = new System.Drawing.Size(80, 80);
             this.btMin.TabIndex = 12;
             this.btMin.TextColor = System.Drawing.Color.DodgerBlue;
             this.btMin.Vertical_Alignment = System.Drawing.StringAlignment.Center;
@@ -154,10 +154,10 @@ namespace WindowsFormsApplication1
             this.btMQCPD.HoverBackgroundColor = System.Drawing.Color.LightSkyBlue;
             this.btMQCPD.HoverTextColor = System.Drawing.Color.White;
             this.btMQCPD.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
-            this.btMQCPD.Location = new System.Drawing.Point(0, 422);
+            this.btMQCPD.Location = new System.Drawing.Point(0, 380);
             this.btMQCPD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btMQCPD.Name = "btMQCPD";
-            this.btMQCPD.Size = new System.Drawing.Size(180, 120);
+            this.btMQCPD.Size = new System.Drawing.Size(180, 100);
             this.btMQCPD.TabIndex = 11;
             this.btMQCPD.TextColor = System.Drawing.Color.White;
             this.btMQCPD.Vertical_Alignment = System.Drawing.StringAlignment.Center;
@@ -180,7 +180,7 @@ namespace WindowsFormsApplication1
             this.btMQC.Location = new System.Drawing.Point(0, 138);
             this.btMQC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btMQC.Name = "btMQC";
-            this.btMQC.Size = new System.Drawing.Size(180, 120);
+            this.btMQC.Size = new System.Drawing.Size(180, 100);
             this.btMQC.TabIndex = 0;
             this.btMQC.TextColor = System.Drawing.Color.White;
             this.btMQC.Vertical_Alignment = System.Drawing.StringAlignment.Center;
@@ -200,10 +200,10 @@ namespace WindowsFormsApplication1
             this.btPQC.HoverBackgroundColor = System.Drawing.Color.LightSkyBlue;
             this.btPQC.HoverTextColor = System.Drawing.Color.White;
             this.btPQC.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
-            this.btPQC.Location = new System.Drawing.Point(0, 280);
+            this.btPQC.Location = new System.Drawing.Point(0, 259);
             this.btPQC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btPQC.Name = "btPQC";
-            this.btPQC.Size = new System.Drawing.Size(180, 120);
+            this.btPQC.Size = new System.Drawing.Size(180, 100);
             this.btPQC.TabIndex = 10;
             this.btPQC.TextColor = System.Drawing.Color.White;
             this.btPQC.Vertical_Alignment = System.Drawing.StringAlignment.Center;
@@ -227,7 +227,7 @@ namespace WindowsFormsApplication1
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(2400, 1102);
+            this.ClientSize = new System.Drawing.Size(1928, 1036);
             this.Controls.Add(this.pnMain);
             this.Controls.Add(this.pnMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -237,6 +237,7 @@ namespace WindowsFormsApplication1
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ShowMESData";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MainForm_KeyDown);
             this.pnMenu.ResumeLayout(false);
