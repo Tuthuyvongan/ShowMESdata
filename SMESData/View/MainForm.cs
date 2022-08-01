@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
-using Bunifu.UI.WinForms.BunifuButton;
 
-namespace SMESData
+namespace WindowsFormsApplication1
 {
     public partial class MainForm : Form
     {
@@ -10,6 +9,27 @@ namespace SMESData
         {
             InitializeComponent();           
         }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            AutoScaleMode = AutoScaleMode.None;
+            //For check user control already add or not
+            ucMQC = false;
+            ucPQC = false;
+            ucPD = false;
+            //Check date time picker change
+            SaveData.check = false;
+            //Add event for click button line in user control MQC/PQC change to user control Product Data
+            uc_MQC_PieChart.OnUpdateStatus += customControl_OnUpdateStatus;
+            uc_PQC_PieChart.OnUpdateStatus += customControl_OnUpdateStatus;
+            //For sync update after a user control update in every user control
+            SaveData.uc_pi = 0;
+            SaveData.uc_mqc = 0;
+            SaveData.uc_pqc = 0;
+            //Show Model Info UC
+            btMQCPD_Click(sender, e);
+        }
+
         UC_MQC_PieChart uc_MQC_PieChart = new UC_MQC_PieChart();
         UC_PQC_PieChart uc_PQC_PieChart = new UC_PQC_PieChart();
         UC_Product_Info uc_PI = new UC_Product_Info();
@@ -22,38 +42,6 @@ namespace SMESData
         public static bool ucPQC;
         public static bool ucPD;
 
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-            //For check user control already add or not
-            ucMQC = false;
-            ucPQC = false;
-            ucPD = false;
-            //Check date time picker change
-            SaveData.check = false;
-            //Add event for click button line in user control MQC/PQC change to user control Product Data
-            uc_MQC_PieChart.OnUpdateStatus += customControl_OnUpdateStatus;
-            uc_PQC_PieChart.OnUpdateStatus += customControl_OnUpdateStatus;
-            btMQCPD.PerformClick();
-            btMQCPD.Focus();
-            changeSize();
-            //For sync update after a user control update in every user control
-            SaveData.uc_pi = 0;
-            SaveData.uc_mqc = 0;
-            SaveData.uc_pqc = 0;
-        }        
-        public void changeSize()
-        {
-            if (Screen.PrimaryScreen.Bounds.Width <= 1600)
-            {
-                uc_MQC_PieChart.sizeDefault();
-                uc_PQC_PieChart.sizeDefault();
-            }
-            else
-            {
-                uc_MQC_PieChart.sizeChange();
-                uc_PQC_PieChart.sizeChange();
-            }
-        }
         public void updateChartPI()
         {
             if (SaveData.uc_pi == -1 && ucPD == true && SaveData.check == false)
@@ -83,9 +71,9 @@ namespace SMESData
             PD = true;
             MQC = false;
             PQC = false;
-            btMQCPD.FocusState = BunifuButton2.ButtonStates.Pressed;
-            btPQC.FocusState = BunifuButton2.ButtonStates.Idle;
-            btMQC.FocusState = BunifuButton2.ButtonStates.Idle;
+            btMQC.BackgroundColor = System.Drawing.Color.Black;
+            btPQC.BackgroundColor = System.Drawing.Color.Black;
+            btMQCPD.BackgroundColor = System.Drawing.Color.SteelBlue;          
             btMQCPD.Focus();
             addUserControl(uc_PI);
             if (SaveData.Date == DateTime.Today.ToString("yyyy-MM-dd"))
@@ -104,10 +92,10 @@ namespace SMESData
         {
             MQC = true;
             PQC = false;
-            PD = false;  
-            btMQC.FocusState = BunifuButton2.ButtonStates.Pressed;
-            btPQC.FocusState = BunifuButton2.ButtonStates.Idle;
-            btMQCPD.FocusState = BunifuButton2.ButtonStates.Idle;
+            PD = false;
+            btMQC.BackgroundColor = System.Drawing.Color.SteelBlue;
+            btPQC.BackgroundColor = System.Drawing.Color.Black;
+            btMQCPD.BackgroundColor = System.Drawing.Color.Black;
             addUserControl(uc_MQC_PieChart);
             updateChartMQC();
             if (SaveData.Date == DateTime.Today.ToString("yyyy-MM-dd"))
@@ -122,9 +110,9 @@ namespace SMESData
             PQC = true;
             MQC = false;
             PD = false;
-            btPQC.FocusState = BunifuButton2.ButtonStates.Pressed;
-            btMQC.FocusState = BunifuButton2.ButtonStates.Idle;
-            btMQCPD.FocusState = BunifuButton2.ButtonStates.Idle;  
+            btMQC.BackgroundColor = System.Drawing.Color.Black;
+            btPQC.BackgroundColor = System.Drawing.Color.SteelBlue;
+            btMQCPD.BackgroundColor = System.Drawing.Color.Black;
             addUserControl(uc_PQC_PieChart);
             updateChartPQC();
             if (SaveData.Date == DateTime.Today.ToString("yyyy-MM-dd"))
@@ -139,9 +127,9 @@ namespace SMESData
             PD = true;
             MQC = false;
             PQC = false;
-            btMQCPD.FocusState = BunifuButton2.ButtonStates.Pressed;
-            btPQC.FocusState = BunifuButton2.ButtonStates.Idle;
-            btMQC.FocusState = BunifuButton2.ButtonStates.Idle;
+            btMQC.BackgroundColor = System.Drawing.Color.Black;
+            btPQC.BackgroundColor = System.Drawing.Color.Black;
+            btMQCPD.BackgroundColor = System.Drawing.Color.SteelBlue;
             addUserControl(uc_PI);
             updateChartPI();
             if (SaveData.Date == DateTime.Today.ToString("yyyy-MM-dd"))
@@ -153,8 +141,7 @@ namespace SMESData
 
         private void btClose_Click(object sender, EventArgs e)
         {
-            Dispose();
-            Application.Exit();
+            Close();
         }
 
         private void MainForm_KeyDown(object sender, KeyEventArgs e)
@@ -162,6 +149,19 @@ namespace SMESData
             if (uc_PI != null)
                 if (e.KeyCode == Keys.Enter)
                     uc_PI.tbSearch_KeyDown(sender, e);
-        }       
+        }
+
+        private void btNornal_Click(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Normal)
+                WindowState = FormWindowState.Maximized;
+            else
+                WindowState = FormWindowState.Normal;
+        }
+
+        private void btMin_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
     }
 }

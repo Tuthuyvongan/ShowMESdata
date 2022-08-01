@@ -3,7 +3,7 @@ using System.Data;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
-namespace SMESData
+namespace WindowsFormsApplication1
 {
     public partial class Warning : Form
     {
@@ -28,11 +28,11 @@ namespace SMESData
             DataRow[] results = GetSOFTdata.GetModel(SaveData.Date).Select("model = '" + SaveData.Model + "'");
             if (results.Length > 0)
             {
-                cmd = UploadLogic.Update(SaveData.Model, SaveData.Date, SaveData.line, SaveData.NGallow);
+                cmd = UploadLogic.Update(SaveData.Model, SaveData.Date, SaveData.NGallow);
             }
             else
             {
-                cmd = UploadLogic.Insert(SaveData.Model, SaveData.Date, SaveData.line, SaveData.NGallow);
+                cmd = UploadLogic.Insert(SaveData.Model, SaveData.Date, SaveData.NGallow);
             }
             uploadWithTransactionSupport(cmd);
             Close();

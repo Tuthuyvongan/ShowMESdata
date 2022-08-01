@@ -1,11 +1,13 @@
-﻿using System;
+﻿using LiveCharts;
+using LiveCharts.Wpf;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
 using System.Threading;
 using System.Windows.Forms;
 
-namespace SMESData
+namespace WindowsFormsApplication1
 {
     public partial class UC_PQC_PieChart : UserControl
     {
@@ -29,8 +31,10 @@ namespace SMESData
             timer1.Start();
             startTime = DateTime.Now;
             btStart.Enabled = false;
+            btStart.BackgroundColor = Color.Gainsboro;
             pnTimeControl.Enabled = false;
         }
+
         //List data
         List<double> dataL01 = new List<double>();
         List<double> dataL02 = new List<double>();
@@ -109,15 +113,118 @@ namespace SMESData
                                 d = 0;
                             else
                                 d = Math.Round(temp / GetSOFTdata.getTotalPQC("L07", date) * 100, 2);
-                            dataL07.Add(d);
-                            Thread.Sleep(50);
+                            dataL07.Add(d);       
                             msf.UpdateProgress(100 * (i + 1) / 3, "Application is running, please wait ... ");
+                            Thread.Sleep(50);
                         }
                         msf.BeginInvoke(new Action(() => msf.Close()));
                     }
                 ));
             backgroundThreadFetchData.Start();
             msf.ShowDialog();
+        }
+        public void createPieChart()
+        {
+            //Change visible false
+            L01Chart.Visible = false;
+            L02Chart.Visible = false;
+            L03Chart.Visible = false;
+            L04Chart.Visible = false;
+            L05Chart.Visible = false;
+            L06Chart.Visible = false;
+            L07Chart.Visible = false;
+            //Binding Data
+            string[] remark = { "OUTPUT", "REWORK", "NO GOOD" };
+            List<System.Windows.Media.Color> bgColors = new List<System.Windows.Media.Color>();
+            bgColors.Add(System.Windows.Media.Color.FromRgb(30, 144, 255));
+            bgColors.Add(System.Windows.Media.Color.FromRgb(255, 140, 0));
+            bgColors.Add(System.Windows.Media.Color.FromRgb(255, 0, 0));
+            //L01
+            for (int i = 0; i < 3; i++)
+            {
+                L01Chart.Series.Add(new PieSeries
+                {
+                    Title = remark[i],
+                    Values = new ChartValues<double> { dataL01[i] },
+                    Fill = new System.Windows.Media.SolidColorBrush(bgColors[i])
+                });
+            }
+            //L02
+            for (int i = 0; i < 3; i++)
+            {
+                L02Chart.Series.Add(new PieSeries
+                {
+                    Title = remark[i],
+                    Values = new ChartValues<double> { dataL02[i] },
+                    Fill = new System.Windows.Media.SolidColorBrush(bgColors[i])
+                });
+            }
+            //L03
+            for (int i = 0; i < 3; i++)
+            {
+                L03Chart.Series.Add(new PieSeries
+                {
+                    Title = remark[i],
+                    Values = new ChartValues<double> { dataL03[i] },
+                    Fill = new System.Windows.Media.SolidColorBrush(bgColors[i])
+                });
+            }
+            //L04
+            for (int i = 0; i < 3; i++)
+            {
+                L04Chart.Series.Add(new PieSeries
+                {
+                    Title = remark[i],
+                    Values = new ChartValues<double> { dataL04[i] },
+                    Fill = new System.Windows.Media.SolidColorBrush(bgColors[i])
+                });
+            }
+            //L05
+            for (int i = 0; i < 3; i++)
+            {
+                L05Chart.Series.Add(new PieSeries
+                {
+                    Title = remark[i],
+                    Values = new ChartValues<double> { dataL05[i] },
+                    Fill = new System.Windows.Media.SolidColorBrush(bgColors[i])
+                });
+            }
+            //L06
+            for (int i = 0; i < 3; i++)
+            {
+                L06Chart.Series.Add(new PieSeries
+                {
+                    Title = remark[i],
+                    Values = new ChartValues<double> { dataL06[i] },
+                    Fill = new System.Windows.Media.SolidColorBrush(bgColors[i])
+                });
+            }
+            //L07
+            for (int i = 0; i < 3; i++)
+            {
+                L07Chart.Series.Add(new PieSeries
+                {
+                    Title = remark[i],
+                    Values = new ChartValues<double> { dataL07[i] },
+                    Fill = new System.Windows.Media.SolidColorBrush(bgColors[i])
+                });
+            }
+            //Hide Legend
+            L01Chart.LegendLocation = LegendLocation.None;
+            L02Chart.LegendLocation = LegendLocation.None;
+            L03Chart.LegendLocation = LegendLocation.None;
+            L04Chart.LegendLocation = LegendLocation.None;
+            L05Chart.LegendLocation = LegendLocation.None;
+            L06Chart.LegendLocation = LegendLocation.None;
+            L07Chart.LegendLocation = LegendLocation.None;
+            ///Change visible true
+            L01Chart.Visible = true;
+            L02Chart.Visible = true;
+            L03Chart.Visible = true;
+            L04Chart.Visible = true;
+            L05Chart.Visible = true;
+            L06Chart.Visible = true;
+            L07Chart.Visible = true;
         }
         public void clearData()
         {
@@ -128,20 +235,21 @@ namespace SMESData
             dataL05.Clear();
             dataL06.Clear();
             dataL07.Clear();
+            L01Chart.Series.Clear();
+            L02Chart.Series.Clear();
+            L03Chart.Series.Clear();
+            L04Chart.Series.Clear();
+            L05Chart.Series.Clear();
+            L06Chart.Series.Clear();
+            L07Chart.Series.Clear();
         }
         public void renderPiechart()
         {
             clearData();
             changePanel();
             //Add data
-            lineData();            
-            L01Chart.Data = dataL01;
-            L02Chart.Data = dataL02;
-            L03Chart.Data = dataL03;
-            L04Chart.Data = dataL04;
-            L05Chart.Data = dataL05;
-            L06Chart.Data = dataL06;
-            L07Chart.Data = dataL07;
+            lineData();
+            createPieChart();
             //Add legends L01           
             if (dataL01[0] == 0 && dataL01[1] == 0 && dataL01[2] == 0)
             {
@@ -151,7 +259,7 @@ namespace SMESData
                 btL1.Visible = false;
                 lbWar1.Visible = true;
                 lbWar1.Text = "No Data";
-                lbWar1.Font = new Font("Times New Roman", 28, FontStyle.Bold);
+                lbWar1.Font = new Font("Times New Roman", 48, FontStyle.Bold);
             }
             else
             {
@@ -179,7 +287,7 @@ namespace SMESData
                 btL2.Visible = false;
                 lbWar2.Visible = true;
                 lbWar2.Text = "No Data";
-                lbWar2.Font = new Font("Times New Roman", 28, FontStyle.Bold);
+                lbWar2.Font = new Font("Times New Roman", 48, FontStyle.Bold);
             }
             else
             {
@@ -207,7 +315,7 @@ namespace SMESData
                 btL3.Visible = false;
                 lbWar3.Visible = true;
                 lbWar3.Text = "No Data";
-                lbWar3.Font = new Font("Times New Roman", 28, FontStyle.Bold);
+                lbWar3.Font = new Font("Times New Roman", 48, FontStyle.Bold);
             }
             else
             {
@@ -235,7 +343,7 @@ namespace SMESData
                 btL4.Visible = false;
                 lbWar4.Visible = true;
                 lbWar4.Text = "No Data";
-                lbWar4.Font = new Font("Times New Roman", 28, FontStyle.Bold);
+                lbWar4.Font = new Font("Times New Roman", 48, FontStyle.Bold);
             }
             else
             {
@@ -263,7 +371,7 @@ namespace SMESData
                 btL5.Visible = false;
                 lbWar5.Visible = true;
                 lbWar5.Text = "No Data";
-                lbWar5.Font = new Font("Times New Roman", 28, FontStyle.Bold);
+                lbWar5.Font = new Font("Times New Roman", 48, FontStyle.Bold);
             }
             else
             {
@@ -291,7 +399,7 @@ namespace SMESData
                 btL6.Visible = false;
                 lbWar6.Visible = true;
                 lbWar6.Text = "No Data";
-                lbWar6.Font = new Font("Times New Roman", 28, FontStyle.Bold);
+                lbWar6.Font = new Font("Times New Roman", 48, FontStyle.Bold);
             }
             else
             {
@@ -319,7 +427,7 @@ namespace SMESData
                 btL7.Visible = false;
                 lbWar7.Visible = true;
                 lbWar7.Text = "No Data";
-                lbWar7.Font = new Font("Times New Roman", 28, FontStyle.Bold);
+                lbWar7.Font = new Font("Times New Roman", 48, FontStyle.Bold);
             }
             else
             {
@@ -338,70 +446,6 @@ namespace SMESData
                 lbRW7.Font = new Font("Times New Roman", 10, FontStyle.Bold);
                 lbNG7.Font = new Font("Times New Roman", 10, FontStyle.Bold);
             }
-            //Target Canvas
-            L01Chart.TargetCanvas = linePCanvas1;
-            L02Chart.TargetCanvas = linePCanvas2;
-            L03Chart.TargetCanvas = linePCanvas3;
-            L04Chart.TargetCanvas = linePCanvas4;
-            L05Chart.TargetCanvas = linePCanvas5;
-            L06Chart.TargetCanvas = linePCanvas6;
-            L07Chart.TargetCanvas = linePCanvas7;
-            //Hide x y Canvas1
-            linePCanvas1.XAxesGridLines = false;
-            linePCanvas1.YAxesGridLines = false;
-            linePCanvas1.ShowXAxis = false;
-            linePCanvas1.ShowYAxis = false;
-            //Hide x y Canvas2
-            linePCanvas2.XAxesGridLines = false;
-            linePCanvas2.YAxesGridLines = false;
-            linePCanvas2.ShowXAxis = false;
-            linePCanvas2.ShowYAxis = false;
-            //Hide x y Canvas3
-            linePCanvas3.XAxesGridLines = false;
-            linePCanvas3.YAxesGridLines = false;
-            linePCanvas3.ShowXAxis = false;
-            linePCanvas3.ShowYAxis = false;
-            //Hide x y Canvas4
-            linePCanvas4.XAxesGridLines = false;
-            linePCanvas4.YAxesGridLines = false;
-            linePCanvas4.ShowXAxis = false;
-            linePCanvas4.ShowYAxis = false;
-            //Hide x y Canvas5
-            linePCanvas5.XAxesGridLines = false;
-            linePCanvas5.YAxesGridLines = false;
-            linePCanvas5.ShowXAxis = false;
-            linePCanvas5.ShowYAxis = false;
-            //Hide x y Canvas6
-            linePCanvas6.XAxesGridLines = false;
-            linePCanvas6.YAxesGridLines = false;
-            linePCanvas6.ShowXAxis = false;
-            linePCanvas6.ShowYAxis = false;
-            //Hide x y Canvas7
-            linePCanvas7.XAxesGridLines = false;
-            linePCanvas7.YAxesGridLines = false;
-            linePCanvas7.ShowXAxis = false;
-            linePCanvas7.ShowYAxis = false;
-            //Canvas labels
-            string[] type = { "OUTPUT", "REWORK", "NO GOOD" };
-            linePCanvas1.Labels = type;
-            linePCanvas2.Labels = type;
-            linePCanvas3.Labels = type;
-            linePCanvas4.Labels = type;
-            linePCanvas5.Labels = type;
-            linePCanvas6.Labels = type;
-            linePCanvas7.Labels = type;
-            //List Colors
-            List<Color> bgColors = new List<Color>();
-            bgColors.Add(Color.DodgerBlue);
-            bgColors.Add(Color.Orange);
-            bgColors.Add(Color.Red);
-            L01Chart.BackgroundColor = bgColors;
-            L02Chart.BackgroundColor = bgColors;
-            L03Chart.BackgroundColor = bgColors;
-            L04Chart.BackgroundColor = bgColors;
-            L05Chart.BackgroundColor = bgColors;
-            L06Chart.BackgroundColor = bgColors;
-            L07Chart.BackgroundColor = bgColors;
             dtpChart.Visible = true;          
         }
 
@@ -415,7 +459,9 @@ namespace SMESData
         {
             dtpChart.Value = DateTime.Today;
             btStart.Enabled = false;
+            btStart.BackgroundColor = Color.Gainsboro;
             btStop.Enabled = true;
+            btStop.BackgroundColor = Color.Orange;
             dtpChart.Enabled = false;
             pnTimeControl.Enabled = false;
             timer1.Start();
@@ -466,7 +512,9 @@ namespace SMESData
         private void btStop_Click(object sender, EventArgs e)
         {
             btStart.Enabled = true;
+            btStart.BackgroundColor = Color.DodgerBlue;
             btStop.Enabled = false;
+            btStop.BackgroundColor = Color.Gainsboro;
             dtpChart.Enabled = true;
             pnTimeControl.Enabled = true;
             timer1.Stop();
@@ -607,175 +655,175 @@ namespace SMESData
                 {
                     panel1.BorderStyle = BorderStyle.FixedSingle;
                     panel1.BackColor = Color.DarkViolet;
-                    linePCanvas1.BackColor = Color.DarkViolet;
+                    L01Chart.BackColor = Color.DarkViolet;
                 }
                 else if (results11.Length > 0)
                 {
                     panel1.BorderStyle = BorderStyle.FixedSingle;
                     panel1.BackColor = Color.Yellow;
-                    linePCanvas1.BackColor = Color.Yellow;
+                    L01Chart.BackColor = Color.Yellow;
                 }
                 //else if (results111.Length > 0)
                 //{
                 //    panel1.BorderStyle = BorderStyle.FixedSingle;
                 //    panel1.BackColor = Color.LightYellow;
-                //    linePCanvas1.BackColor = Color.LightYellow;
+                //    L01Chart.BackColor = Color.LightYellow;
                 //}
                 else
                 {
                     panel1.BorderStyle = BorderStyle.Fixed3D;
                     panel1.BackColor = Color.White;
-                    linePCanvas1.BackColor = Color.White;
+                    L01Chart.BackColor = Color.White;
                 }
                 //pn2
                 if (results2.Length > 0)
                 {
                     panel2.BorderStyle = BorderStyle.FixedSingle;
                     panel2.BackColor = Color.DarkViolet;
-                    linePCanvas2.BackColor = Color.DarkViolet;
+                    L02Chart.BackColor = Color.DarkViolet;
                 }
                 else if (results22.Length > 0)
                 {
                     panel2.BorderStyle = BorderStyle.FixedSingle;
                     panel2.BackColor = Color.Yellow;
-                    linePCanvas2.BackColor = Color.Yellow;
+                    L02Chart.BackColor = Color.Yellow;
                 }
                 //else if (results222.Length > 0)
                 //{
                 //    panel2.BorderStyle = BorderStyle.FixedSingle;
                 //    panel2.BackColor = Color.LightYellow;
-                //    linePCanvas2.BackColor = Color.LightYellow;
+                //    L02Chart.BackColor = Color.LightYellow;
                 //}
                 else
                 {
                     panel2.BorderStyle = BorderStyle.Fixed3D;
                     panel2.BackColor = Color.White;
-                    linePCanvas2.BackColor = Color.White;
+                    L02Chart.BackColor = Color.White;
                 }
                 //pn3
                 if (results3.Length > 0)
                 {
                     panel3.BorderStyle = BorderStyle.FixedSingle;
                     panel3.BackColor = Color.DarkViolet;
-                    linePCanvas3.BackColor = Color.DarkViolet;
+                    L03Chart.BackColor = Color.DarkViolet;
                 }
                 else if (results33.Length > 0)
                 {
                     panel3.BorderStyle = BorderStyle.FixedSingle;
                     panel3.BackColor = Color.Yellow;
-                    linePCanvas3.BackColor = Color.Yellow;
+                    L03Chart.BackColor = Color.Yellow;
                 }
                 //else if (results333.Length > 0)
                 //{
                 //    panel3.BorderStyle = BorderStyle.FixedSingle;
                 //    panel3.BackColor = Color.LightYellow;
-                //    linePCanvas3.BackColor = Color.LightYellow;
+                //    L03Chart.BackColor = Color.LightYellow;
                 //}
                 else
                 {
                     panel3.BorderStyle = BorderStyle.Fixed3D;
                     panel3.BackColor = Color.White;
-                    linePCanvas3.BackColor = Color.White;
+                    L03Chart.BackColor = Color.White;
                 }
                 //pn4
                 if (results4.Length > 0)
                 {
                     panel4.BorderStyle = BorderStyle.FixedSingle;
                     panel4.BackColor = Color.DarkViolet;
-                    linePCanvas4.BackColor = Color.DarkViolet;
+                    L04Chart.BackColor = Color.DarkViolet;
                 }
                 else if (results44.Length > 0)
                 {
                     panel4.BorderStyle = BorderStyle.FixedSingle;
                     panel4.BackColor = Color.Yellow;
-                    linePCanvas4.BackColor = Color.Yellow;
+                    L04Chart.BackColor = Color.Yellow;
                 }
                 //else if (results444.Length > 0)
                 //{
                 //    panel4.BorderStyle = BorderStyle.FixedSingle;
                 //    panel4.BackColor = Color.LightYellow;
-                //    linePCanvas4.BackColor = Color.LightYellow;
+                //    L04Chart.BackColor = Color.LightYellow;
                 //}
                 else
                 {
                     panel4.BorderStyle = BorderStyle.Fixed3D;
                     panel4.BackColor = Color.White;
-                    linePCanvas4.BackColor = Color.White;
+                    L04Chart.BackColor = Color.White;
                 }
                 //pn5
                 if (results5.Length > 0)
                 {
                     panel5.BorderStyle = BorderStyle.FixedSingle;
                     panel5.BackColor = Color.DarkViolet;
-                    linePCanvas5.BackColor = Color.DarkViolet;
+                    L05Chart.BackColor = Color.DarkViolet;
                 }
                 else if (results55.Length > 0)
                 {
                     panel5.BorderStyle = BorderStyle.FixedSingle;
                     panel5.BackColor = Color.Yellow;
-                    linePCanvas5.BackColor = Color.Yellow;
+                    L05Chart.BackColor = Color.Yellow;
                 }
                 //else if (results555.Length > 0)
                 //{
                 //    panel5.BorderStyle = BorderStyle.FixedSingle;
                 //    panel5.BackColor = Color.LightYellow;
-                //    linePCanvas5.BackColor = Color.LightYellow;
+                //    L05Chart.BackColor = Color.LightYellow;
                 //}
                 else
                 {
                     panel5.BorderStyle = BorderStyle.Fixed3D;
                     panel5.BackColor = Color.White;
-                    linePCanvas5.BackColor = Color.White;
+                    L05Chart.BackColor = Color.White;
                 }
                 //pn6
                 if (results6.Length > 0)
                 {
                     panel6.BorderStyle = BorderStyle.FixedSingle;
                     panel6.BackColor = Color.DarkViolet;
-                    linePCanvas6.BackColor = Color.DarkViolet;
+                    L06Chart.BackColor = Color.DarkViolet;
                 }
                 else if (results66.Length > 0)
                 {
                     panel6.BorderStyle = BorderStyle.FixedSingle;
                     panel6.BackColor = Color.Yellow;
-                    linePCanvas6.BackColor = Color.Yellow;
+                    L06Chart.BackColor = Color.Yellow;
                 }
                 //else if (results666.Length > 0)
                 //{
                 //    panel6.BorderStyle = BorderStyle.FixedSingle;
                 //    panel6.BackColor = Color.LightYellow;
-                //    linePCanvas6.BackColor = Color.LightYellow;
+                //    L06Chart.BackColor = Color.LightYellow;
                 //}
                 else
                 {
                     panel6.BorderStyle = BorderStyle.Fixed3D;
                     panel6.BackColor = Color.White;
-                    linePCanvas6.BackColor = Color.White;
+                    L06Chart.BackColor = Color.White;
                 }
                 //pn7
                 if (results7.Length > 0)
                 {
                     panel7.BorderStyle = BorderStyle.FixedSingle;
                     panel7.BackColor = Color.DarkViolet;
-                    linePCanvas7.BackColor = Color.DarkViolet;
+                    L07Chart.BackColor = Color.DarkViolet;
                 }
                 else if (results77.Length > 0)
                 {
                     panel7.BorderStyle = BorderStyle.FixedSingle;
                     panel7.BackColor = Color.Yellow;
-                    linePCanvas7.BackColor = Color.Yellow;
+                    L07Chart.BackColor = Color.Yellow;
                 }
                 //else if (results777.Length > 0)
                 //{
                 //    panel7.BorderStyle = BorderStyle.FixedSingle;
                 //    panel7.BackColor = Color.LightYellow;
-                //    linePCanvas7.BackColor = Color.LightYellow;
+                //    L07Chart.BackColor = Color.LightYellow;
                 //}
                 else
                 {
                     panel7.BorderStyle = BorderStyle.Fixed3D;
                     panel7.BackColor = Color.White;
-                    linePCanvas7.BackColor = Color.White;
+                    L07Chart.BackColor = Color.White;
                 }
             }
             else
@@ -783,52 +831,32 @@ namespace SMESData
                 //pn1
                 panel1.BorderStyle = BorderStyle.Fixed3D;
                 panel1.BackColor = Color.White;
-                linePCanvas1.BackColor = Color.White;
+                L01Chart.BackColor = Color.White;
                 //pn2
                 panel2.BorderStyle = BorderStyle.Fixed3D;
                 panel2.BackColor = Color.White;
-                linePCanvas2.BackColor = Color.White;
+                L02Chart.BackColor = Color.White;
                 //pn3
                 panel3.BorderStyle = BorderStyle.Fixed3D;
                 panel3.BackColor = Color.White;
-                linePCanvas3.BackColor = Color.White;
+                L03Chart.BackColor = Color.White;
                 //pn4
                 panel4.BorderStyle = BorderStyle.Fixed3D;
                 panel4.BackColor = Color.White;
-                linePCanvas4.BackColor = Color.White;
+                L04Chart.BackColor = Color.White;
                 //pn5
                 panel5.BorderStyle = BorderStyle.Fixed3D;
                 panel5.BackColor = Color.White;
-                linePCanvas5.BackColor = Color.White;
+                L05Chart.BackColor = Color.White;
                 //pn6
                 panel6.BorderStyle = BorderStyle.Fixed3D;
                 panel6.BackColor = Color.White;
-                linePCanvas6.BackColor = Color.White;
+                L06Chart.BackColor = Color.White;
                 //pn7
                 panel7.BorderStyle = BorderStyle.Fixed3D;
                 panel7.BackColor = Color.White;
-                linePCanvas7.BackColor = Color.White;
+                L07Chart.BackColor = Color.White;
             }
-        }
-        public void sizeChange()
-        {
-            linePCanvas1.CanvasPadding = new Padding(14, 6, 14, 14);
-            linePCanvas2.CanvasPadding = new Padding(28, 6, 28, 38);
-            linePCanvas3.CanvasPadding = new Padding(14, 6, 14, 14);
-            linePCanvas4.CanvasPadding = new Padding(28, 6, 28, 38);
-            linePCanvas5.CanvasPadding = new Padding(28, 6, 28, 38);
-            linePCanvas6.CanvasPadding = new Padding(28, 6, 28, 38);
-            linePCanvas7.CanvasPadding = new Padding(28, 6, 28, 38);
-        }
-        public void sizeDefault()
-        {
-            linePCanvas1.CanvasPadding = new Padding(6, 6, 8, 6);
-            linePCanvas2.CanvasPadding = new Padding(6, -6, 8, 18);
-            linePCanvas3.CanvasPadding = new Padding(6, 6, 8, 6);
-            linePCanvas4.CanvasPadding = new Padding(6, -6, 8, 18);
-            linePCanvas5.CanvasPadding = new Padding(6, -6, 8, 18);
-            linePCanvas6.CanvasPadding = new Padding(6, -6, 8, 18);
-            linePCanvas7.CanvasPadding = new Padding(6, -6, 8, 18);
         }
     }
 }

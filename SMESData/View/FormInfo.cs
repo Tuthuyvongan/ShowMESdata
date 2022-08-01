@@ -1,14 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SMESData
+namespace WindowsFormsApplication1
 {
     public partial class FormInfo : Form
     {
@@ -34,24 +27,19 @@ namespace SMESData
             string line = SaveData.line;
             string date = SaveData.Date;
             dtgv_Info.DataSource = GetSOFTdata.GetInfo(model, line, date);
+            dtgv_Info.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dtgv_Info.Columns["Date"].Visible = false;
             dtgv_Info.Columns["Time"].Visible = false;
-            dtgv_Info.Columns["Model"].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            dtgv_Info.Columns["LotNumber"].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            dtgv_Info.Columns["Line"].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            dtgv_Info.Columns["DateTime"].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            dtgv_Info.Columns["Quantity"].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            dtgv_Info.Columns["Inspector"].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            dtgv_Info.Columns["Remark"].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            dtgv_Info.Columns["Serno"].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            dtgv_Info.Columns["Model"].Width = 175;
-            dtgv_Info.Columns["LotNumber"].Width = 125;
-            dtgv_Info.Columns["Line"].Width = 50;
-            dtgv_Info.Columns["DateTime"].Width = 150;
-            dtgv_Info.Columns["Quantity"].Width = 75;
-            dtgv_Info.Columns["Inspector"].Width = 75;
-            dtgv_Info.Columns["Remark"].Width = 75;
-            dtgv_Info.Columns["Serno"].Width = 775;
+            dtgv_Info.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dtgv_Info.Columns["Serno"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dtgv_Info.Columns["Model"].FillWeight = 175;
+            dtgv_Info.Columns["LotNumber"].FillWeight = 125;
+            dtgv_Info.Columns["Line"].FillWeight = 50;
+            dtgv_Info.Columns["DateTime"].FillWeight = 150;
+            dtgv_Info.Columns["Quantity"].FillWeight = 75;
+            dtgv_Info.Columns["Inspector"].FillWeight = 100;
+            dtgv_Info.Columns["Remark"].FillWeight = 75;
+            dtgv_Info.Columns["Serno"].FillWeight = 750;
         }
     }
 }

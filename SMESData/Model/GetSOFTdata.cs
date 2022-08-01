@@ -4,10 +4,9 @@ using System.Text;
 using System.Data;
 using System.Windows.Forms;
 
-namespace SMESData
+namespace WindowsFormsApplication1
 {
     class GetSOFTdata
-
     {      
         //total data in every line
         public static double getTotalMQC(string line, string date)
@@ -71,7 +70,7 @@ namespace SMESData
                 s = double.Parse(temp);
             return s;
         }
-        //Get Medel
+        //Get Model in table NGRate
         public static DataTable GetModel(string date)
         {
             DataTable dt = new DataTable();
@@ -100,10 +99,13 @@ namespace SMESData
             StringBuilder sqlGetData = new StringBuilder();
             sqlGetData.Append("select distinct m.model as Model, m.inspectdate as Date, m.line as Line, m.OUTPUT, m.REWORK, m.NOGOOD, ");
             sqlGetData.Append("serno, ");
-            sqlGetData.Append("(CASE WHEN (select top 1 rate from thu_SMESData_NGRate where model = a.model and line = a.line order by inspectdate desc) IS NOT NULL ");
-            sqlGetData.Append("THEN (select top 1 rate from thu_SMESData_NGRate where model = a.model and line = a.line order by inspectdate desc) ELSE '2' END) as '%NG_allow', '2.5' as '%RW_allow' ");
+            sqlGetData.Append("(CASE WHEN (select top 1 rate from thu_SMESData_NGRate where model = a.model order by inspectdate desc) IS NOT NULL ");
+            sqlGetData.Append("THEN (select top 1 rate from thu_SMESData_NGRate where model = a.model order by inspectdate desc) ");
+            sqlGetData.Append("ELSE '2' END) as '%NG_allow', '2.5' as '%RW_allow', ");
+            sqlGetData.Append("(CASE WHEN (select OUTPUT from thu_MQC_DailyTarget where model = a.model and Date = a.inspectdate) IS NOT NULL ");
+            sqlGetData.Append("THEN (select OUTPUT from thu_MQC_DailyTarget where model = a.model and Date = a.inspectdate) ELSE '0' END) as DailyTarget ");
             sqlGetData.Append("FROM m_ERPMQC_REALTIME as a ");
-            sqlGetData.Append("LEFT JOIN thu_SMESData_NGRate as r on a.model = r.model and a.line = r.line and a.inspectdate = r.inspectdate ");
+            sqlGetData.Append("LEFT JOIN thu_SMESData_NGRate as r on a.model = r.model and a.inspectdate = r.inspectdate ");
             sqlGetData.Append("join(SELECT model,  inspectdate, line, ");
             sqlGetData.Append("COALESCE(SUM(CASE WHEN remark = 'OP' THEN Cast(data as numeric(10,0)) END), 0) AS OUTPUT, ");
             sqlGetData.Append("COALESCE(SUM(CASE WHEN remark = 'RW' THEN Cast(data as numeric(10,0)) END), 0) AS REWORK, ");
@@ -130,6 +132,7 @@ namespace SMESData
                     MQC.REWORK = double.Parse(dt.Rows[i]["REWORK"].ToString());
                     MQC.NOGOOD = double.Parse(dt.Rows[i]["NOGOOD"].ToString());
                     MQC.Total = MQC.OUTPUT + MQC.REWORK + MQC.NOGOOD;
+                    MQC.DailyTarget = double.Parse(dt.Rows[i]["DailyTarget"].ToString());
                     MQC.NG_rate_realtime = Math.Round(MQC.NOGOOD / MQC.Total * 100, 1);
                     MQC.NG_rate_allow = double.Parse(dt.Rows[i]["%NG_allow"].ToString());
                     MQC.RW_rate_realtime = Math.Round(MQC.REWORK / MQC.Total * 100, 1);
@@ -158,6 +161,7 @@ namespace SMESData
                             MQC.REWORK = double.Parse(dt.Rows[i]["REWORK"].ToString());
                             MQC.NOGOOD = double.Parse(dt.Rows[i]["NOGOOD"].ToString());
                             MQC.Total = MQC.OUTPUT + MQC.REWORK + MQC.NOGOOD;
+                            MQC.DailyTarget = double.Parse(dt.Rows[i]["DailyTarget"].ToString());
                             MQC.NG_rate_realtime = Math.Round(MQC.NOGOOD / MQC.Total * 100, 1);
                             MQC.NG_rate_allow = double.Parse(dt.Rows[i]["%NG_allow"].ToString());
                             MQC.RW_rate_realtime = Math.Round(MQC.REWORK / MQC.Total * 100, 1);
@@ -182,6 +186,7 @@ namespace SMESData
                             MQC.REWORK = double.Parse(dt.Rows[i]["REWORK"].ToString());
                             MQC.NOGOOD = double.Parse(dt.Rows[i]["NOGOOD"].ToString());
                             MQC.Total = MQC.OUTPUT + MQC.REWORK + MQC.NOGOOD;
+                            MQC.DailyTarget = double.Parse(dt.Rows[i]["DailyTarget"].ToString());
                             MQC.NG_rate_realtime = Math.Round(MQC.NOGOOD / MQC.Total * 100, 1);
                             MQC.NG_rate_allow = double.Parse(dt.Rows[i]["%NG_allow"].ToString());
                             MQC.RW_rate_realtime = Math.Round(MQC.REWORK / MQC.Total * 100, 1);
@@ -199,6 +204,7 @@ namespace SMESData
                             MQC.REWORK = double.Parse(dt.Rows[i]["REWORK"].ToString());
                             MQC.NOGOOD = double.Parse(dt.Rows[i]["NOGOOD"].ToString());
                             MQC.Total = MQC.OUTPUT + MQC.REWORK + MQC.NOGOOD;
+                            MQC.DailyTarget = double.Parse(dt.Rows[i]["DailyTarget"].ToString());
                             MQC.NG_rate_realtime = Math.Round(MQC.NOGOOD / MQC.Total * 100, 1);
                             MQC.NG_rate_allow = double.Parse(dt.Rows[i]["%NG_allow"].ToString());
                             MQC.RW_rate_realtime = Math.Round(MQC.REWORK / MQC.Total * 100, 1);
@@ -248,7 +254,7 @@ namespace SMESData
                 },
                 new DataColumn()
                 {
-                    ColumnName="Target",
+                    ColumnName="DailyTarget",
                     DataType=typeof(double),
                 },
                 new DataColumn()
@@ -270,12 +276,17 @@ namespace SMESData
                 {
                     ColumnName="RW_rate_allow",
                     DataType=typeof(double),
-                }
+                },
+                new DataColumn()
+                {
+                    ColumnName="Target",
+                    DataType=typeof(double),
+                },
             };
             dtMQC.Columns.AddRange(tableColumns);
             foreach (var data in ListMQC)
             {
-                dtMQC.Rows.Add(data.Model, data.Date, data.Line, data.OUTPUT, data.REWORK, data.NOGOOD, data.Total, data.Target, data.NG_rate_realtime, data.NG_rate_allow, data.RW_rate_realtime, data.RW_rate_allow);
+                dtMQC.Rows.Add(data.Model, data.Date, data.Line, data.OUTPUT, data.REWORK, data.NOGOOD, data.Total, data.DailyTarget, data.NG_rate_realtime, data.NG_rate_allow, data.RW_rate_realtime, data.RW_rate_allow, data.Target);
             }
             dtMQC.DefaultView.Sort = "NG_rate_realtime DESC";
             dtMQC = dtMQC.DefaultView.ToTable();
@@ -289,10 +300,10 @@ namespace SMESData
             sqlSOFTCon sqlSOFTCon = new sqlSOFTCon();
             StringBuilder sqlGetData = new StringBuilder();
             sqlGetData.Append("select distinct m.Model, m.Date, m.line as Line, m.OUTPUT, m.REWORK, m.NOGOOD, ");
-            sqlGetData.Append("(CASE WHEN (select top 1 rate from thu_SMESData_NGRate_PQC where Model = a.Model and line = a.line order by Date desc) IS NOT NULL ");
-            sqlGetData.Append("THEN (select top 1 rate from thu_SMESData_NGRate_PQC where Model = a.Model and line = a.line order by Date desc) ELSE '2' END) as '%NG_allow', POCode, '2.5' as '%RW_allow' ");
+            sqlGetData.Append("(CASE WHEN (select top 1 rate from thu_SMESData_NGRate_PQC where Model = a.Model order by Date desc) IS NOT NULL ");
+            sqlGetData.Append("THEN (select top 1 rate from thu_SMESData_NGRate_PQC where Model = a.Model order by Date desc) ELSE '2' END) as '%NG_allow', POCode, '2.5' as '%RW_allow' ");
             sqlGetData.Append("FROM ProcessHistory.PQCMesData as a ");
-            sqlGetData.Append("LEFT JOIN thu_SMESData_NGRate_PQC as r on a.Model = r.Model and a.line = r.line and CAST(a.InspectDateTime as Date) = r.Date ");
+            sqlGetData.Append("LEFT JOIN thu_SMESData_NGRate_PQC as r on a.Model = r.Model and CAST(a.InspectDateTime as Date) = r.Date ");
             sqlGetData.Append("join(SELECT Model, CAST(InspectDateTime as Date) as Date, line, ");
             sqlGetData.Append("COALESCE(SUM(CASE WHEN AttributeType = 'OP' THEN Cast(Quantity as numeric(10,0)) END), 0) AS OUTPUT, ");
             sqlGetData.Append("COALESCE(SUM(CASE WHEN AttributeType = 'RW' THEN Cast(Quantity as numeric(10,0)) END), 0) AS REWORK, ");
@@ -733,6 +744,24 @@ namespace SMESData
                     string DtIn = Convert.ToDateTime(dt.Rows[i]["Date"]).ToString("dd-MM-yyyy");
                     dt.Rows[i]["DateTime"] = DtIn + " " + dt.Rows[i]["Time"];
                 }
+            }
+            return dt;
+        }
+        //Get all model in table m_ERPMQC_REALTIME
+        public static DataTable getAllModel()
+        {
+            DataTable dt = new DataTable();
+            sqlSOFTCon sqlSOFTCon = new sqlSOFTCon();
+            StringBuilder sqlGetData = new StringBuilder();
+            if (SaveData.PQC == true)
+            {
+                sqlGetData.Append("SELECT distinct Model FROM ProcessHistory.PQCMesData where Model != ''");
+                sqlSOFTCon.sqlDataAdapterFillDatatable(sqlGetData.ToString(), ref dt);
+            }
+            else
+            {
+                sqlGetData.Append("SELECT distinct model FROM m_ERPMQC_REALTIME where model != ''");
+                sqlSOFTCon.sqlDataAdapterFillDatatable(sqlGetData.ToString(), ref dt);
             }
             return dt;
         }

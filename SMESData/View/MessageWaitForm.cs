@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace SMESData
+namespace WindowsFormsApplication1
 {
     public partial class MessageWaitForm : Form
     {

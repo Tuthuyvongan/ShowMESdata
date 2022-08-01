@@ -1,11 +1,13 @@
-﻿using System;
+﻿using LiveCharts;
+using LiveCharts.Wpf;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
 using System.Threading;
 using System.Windows.Forms;
 
-namespace SMESData
+namespace WindowsFormsApplication1
 {
     public partial class UC_Product_Info : UserControl
     {
@@ -22,6 +24,12 @@ namespace SMESData
             dtpChart.Enabled = false;
             SaveData.Date = DateTime.Today.ToString("yyyy-MM-dd");
             dtpChart.ValueChanged += new EventHandler(dtpChart_ValueChanged);           
+            //Setting
+            lblTime.Font = new Font("Times New Roman", 14, FontStyle.Bold);
+            //Timer          
+            pnTimeControl.Enabled = false;
+            wn.OnUpdateStatus += customControl_OnUpdateStatus;
+            wnAll.OnUpdateStatus += customControl_OnUpdateStatus;
             //Update datagridview
             SaveData.MQCClick = false;
             SaveData.PQCClick = false;
@@ -29,18 +37,19 @@ namespace SMESData
             SaveData.PQC = false;
             lbQC.Text = "MQC";
             UpdateDTGV();
-            //Setting
-            lblTime.Font = new Font("Times New Roman", 14, FontStyle.Bold);
-            //Timer          
-            pnTimeControl.Enabled = false;
-            wn.OnUpdateStatus += customControl_OnUpdateStatus;          
+            dtgv_MQC_PD.DataBindingComplete += new DataGridViewBindingCompleteEventHandler(dtgv_MQC_PD_DataBindingComplete);
+            //Update btMQC, btPQC BackgroundColor
+            btMQCD.BackgroundColor = Color.FromArgb(40, 96, 144);
+            btPQCD.BackgroundColor = Color.DodgerBlue;
         }
 
         //List data
         List<double> dataMQC = new List<double>();
         List<double> dataPQC = new List<double>();
         Warning wn = new Warning();
+        WarningAll wnAll = new WarningAll();
         FormInfo FI = new FormInfo();
+        Passwords pw = new Passwords();
         //
         public int secondsToWait = 300;
         private DateTime startTime;
@@ -87,7 +96,9 @@ namespace SMESData
             dataMQC.Add(OP);
             dataMQC.Add(RW);
             dataMQC.Add(NG);
-
+            dataPQC.Add(OP);
+            dataPQC.Add(RW);
+            dataPQC.Add(NG);
         }
         public void renderPiechart()
         {
@@ -98,8 +109,40 @@ namespace SMESData
                 lbQC.Text = "PQC";
             //Add data
             lineData();
-            MQCChart.Data = dataMQC;
-            PQCChart.Data = dataPQC;
+            //Binding Data
+            linePCanvas1.Visible = false;
+            string[] remark = { "OUTPUT", "REWORK", "NO GOOD" };
+            List<System.Windows.Media.Color> bgColors = new List<System.Windows.Media.Color>();
+            bgColors.Add(System.Windows.Media.Color.FromRgb(30, 144, 255));
+            bgColors.Add(System.Windows.Media.Color.FromRgb(255, 140, 0));
+            bgColors.Add(System.Windows.Media.Color.FromRgb(255, 0, 0));
+            if (SaveData.MQC == true)
+            {
+                linePCanvas1.Series.Clear();
+                for (int i = 0; i < 3; i++)
+                {
+                    linePCanvas1.Series.Add(new PieSeries
+                    {
+                        Title = remark[i],
+                        Values = new ChartValues<double> { dataMQC[i] },
+                        Fill = new System.Windows.Media.SolidColorBrush(bgColors[i])
+                    });
+                }
+            }    
+            else
+            {
+                linePCanvas1.Series.Clear();
+                for (int i = 0; i < 3; i++)
+                {
+                    linePCanvas1.Series.Add(new PieSeries
+                    {
+                        Title = remark[i],
+                        Values = new ChartValues<double> { dataPQC[i] },
+                        Fill = new System.Windows.Media.SolidColorBrush(bgColors[i])
+                    });
+                }
+            }
+            linePCanvas1.Visible = true;
             //Add legends MQC           
             if (dataMQC[0] == 0 && dataMQC[1] == 0 && dataMQC[2] == 0 || GetSOFTdata.GetListMQC(dtpChart.Value.ToString("yyyy-MM-dd"), "") == null && SaveData.MQC == true || GetSOFTdata.GetListPQC(dtpChart.Value.ToString("yyyy-MM-dd"), "") == null && SaveData.PQC == true || dtgv_MQC_PD.Rows.Count <= 0)
             {
@@ -111,7 +154,7 @@ namespace SMESData
                 linePCanvas1.Visible = false;
                 lbWar1.Visible = true;
                 lbWar1.Text = "No Data";
-                lbWar1.Font = new Font("Times New Roman", 28, FontStyle.Bold);
+                lbWar1.Font = new Font("Times New Roman", 72, FontStyle.Bold);
                 lbOP.Text = "";
                 lbRW.Text = "";
                 lbNG.Text = "";
@@ -137,23 +180,7 @@ namespace SMESData
                 lbNG1.Text = "NO GOOD: " + dataMQC[2].ToString() + "%";
                 lbOP1.Font = new Font("Times New Roman", 13, FontStyle.Bold);
                 lbRW1.Font = new Font("Times New Roman", 13, FontStyle.Bold);
-                lbNG1.Font = new Font("Times New Roman", 13, FontStyle.Bold);
-                //Target Canvas
-                MQCChart.TargetCanvas = linePCanvas1;
-                //Hide x y Canvas1
-                linePCanvas1.XAxesGridLines = false;
-                linePCanvas1.YAxesGridLines = false;
-                linePCanvas1.ShowXAxis = false;
-                linePCanvas1.ShowYAxis = false;
-                //Canvas labels
-                string[] remark = { "OUTPUT", "REWORK", "NO GOOD" };
-                linePCanvas1.Labels = remark;
-                //List Colors
-                List<Color> bgColors = new List<Color>();
-                bgColors.Add(Color.DodgerBlue);
-                bgColors.Add(Color.Orange);
-                bgColors.Add(Color.Red);
-                MQCChart.BackgroundColor = bgColors;  
+                lbNG1.Font = new Font("Times New Roman", 13, FontStyle.Bold);      
             }            
         }
         public void UpdateDTGV()
@@ -165,20 +192,17 @@ namespace SMESData
             {              
                 if (SaveData.MQC == true)
                 {                    
-                    dataMQC.Clear();                    
+                    dataMQC.Clear();
                     dtgv_MQC_PD.DataSource = GetSOFTdata.GetListMQC(date, line);
                     dtpChart.Visible = true;
-                    //ChangeColor();
                 }  
                 else
                 {                  
-                    dataPQC.Clear();                   
+                    dataPQC.Clear();
                     dtgv_MQC_PD.DataSource = GetSOFTdata.GetListPQC(date, line);
                     dtpChart.Visible = true;
-                    //ChangeColor();
                 }             
             }
-            //ChangeData();
         }
         public void UpdateDTGVByLine()
         {           
@@ -189,22 +213,21 @@ namespace SMESData
             {                
                 if (SaveData.MQC == true)
                 {
-                    dataMQC.Clear();                   
+                    dataMQC.Clear();
                     dtgv_MQC_PD.DataSource = GetSOFTdata.GetListMQC(date, line);
-                    //ChangeColor();
                 }    
                 else
                 {
                     dataPQC.Clear();
                     dtgv_MQC_PD.DataSource = GetSOFTdata.GetListPQC(date, line);
-                    //ChangeColor();
                 }
             }
-            //ChangeData();
             if (SaveData.Date != DateTime.Today.ToString("yyyy-MM-dd"))
             {
                 btStart.Enabled = true;
+                btStart.BackgroundColor = Color.DodgerBlue;
                 btStop.Enabled = false;
+                btStop.BackgroundColor = Color.Gainsboro;
                 dtpChart.Enabled = true;
                 pnTimeControl.Enabled = true;
                 lblTime.Text = "Auto update" + "\r\n" + "data is stopping";
@@ -248,9 +271,18 @@ namespace SMESData
                                         dtgv_MQC_PD[j, i].Style.ForeColor = Color.Black;
                                         dtgv_MQC_PD[j, i].Style.SelectionBackColor = Color.FromArgb(255, 165, 0);
                                     }
-                                }                  
-                                Thread.Sleep(50);
+                                }     
+                                else
+                                {
+                                    for (int j = 0; j < dtgv_MQC_PD.Columns.Count; j++)
+                                    {
+                                        dtgv_MQC_PD[j, i].Style.BackColor = Color.FromArgb(248, 251, 255);
+                                        dtgv_MQC_PD[j, i].Style.ForeColor = Color.Black;
+                                        dtgv_MQC_PD[j, i].Style.SelectionBackColor = Color.FromArgb(221, 238, 255);
+                                    }
+                                }
                                 msf.UpdateProgress(100 * (i + 1) / dtgv_MQC_PD.Rows.Count, "Application is running, please wait ... ");
+                                Thread.Sleep(50);
                             }
                             msf.BeginInvoke(new Action(() => msf.Close()));
                         }));
@@ -305,7 +337,9 @@ namespace SMESData
             {
                 dtpChart.Value = DateTime.Today;
                 btStart.Enabled = false;
+                btStart.BackgroundColor = Color.Gainsboro;
                 btStop.Enabled = true;
+                btStop.BackgroundColor = Color.Orange;
                 dtpChart.Enabled = false;
                 pnTimeControl.Enabled = false;
                 timer1.Start();
@@ -359,7 +393,9 @@ namespace SMESData
         private void btStop_Click(object sender, EventArgs e)
         {
             btStart.Enabled = true;
+            btStart.BackgroundColor = Color.DodgerBlue;
             btStop.Enabled = false;
+            btStop.BackgroundColor = Color.Gainsboro;
             dtpChart.Enabled = true;
             pnTimeControl.Enabled = true;
             timer1.Stop();
@@ -401,8 +437,6 @@ namespace SMESData
                     DataTable searchResultTable = results.CopyToDataTable();
                     dataMQC.Clear();
                     dtgv_MQC_PD.DataSource = searchResultTable;
-                    //ChangeColor();
-                    //ChangeData();
                 }
                 else
                 {
@@ -417,8 +451,6 @@ namespace SMESData
                     DataTable searchResultTable = results.CopyToDataTable();
                     dataPQC.Clear();
                     dtgv_MQC_PD.DataSource = searchResultTable;
-                    //ChangeColor();
-                    //ChangeData();
                 }
                 else
                 {
@@ -429,6 +461,8 @@ namespace SMESData
 
         private void btMQCD_Click(object sender, EventArgs e)
         {
+            btPQCD.BackgroundColor = Color.DodgerBlue;
+            btMQCD.BackgroundColor = Color.FromArgb(40, 96, 144);
             SaveData.MQCClick = false;
             SaveData.PQCClick = false;
             SaveData.MQC = true;
@@ -437,6 +471,8 @@ namespace SMESData
         }
         private void btPQCD_Click(object sender, EventArgs e)
         {
+            btMQCD.BackgroundColor = Color.DodgerBlue;
+            btPQCD.BackgroundColor = Color.FromArgb(40, 96, 144);
             SaveData.MQCClick = false;
             SaveData.PQCClick = false;
             SaveData.MQC = false;
@@ -446,8 +482,38 @@ namespace SMESData
 
         private void btFix_Click(object sender, EventArgs e)
         {
-            SaveData.NGallow = tbNGA.Text.Replace("%", "").Trim();
-            wn.ShowDialog();
+            SaveData.checkpass = false;
+            pw.ShowDialog();
+            if (SaveData.checkpass == true)
+            {
+                if (tbNGA.Text != null && tbNGA.Text != "" && lbModel.Text != null && lbModel.Text != "" && lbModel.Text != "..")
+                {
+                    SaveData.NGallow = tbNGA.Text.Replace("%", "").Trim();
+                    wn.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("No Data");
+                }
+            }
+        }
+
+        private void btFixAll_Click(object sender, EventArgs e)
+        {
+            SaveData.checkpass = false;
+            pw.ShowDialog();
+            if (SaveData.checkpass == true)
+            {
+                if (tbNGA.Text != null && tbNGA.Text != "")
+                {
+                    SaveData.NGallow = tbNGA.Text.Replace("%", "").Trim();
+                    wnAll.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Please enter %NG Allow");
+                }
+            }
         }
 
         public void tbSearch_KeyDown(object sender, KeyEventArgs e)
@@ -471,8 +537,6 @@ namespace SMESData
                         DataTable searchResultTable = results.CopyToDataTable();
                         dataMQC.Clear();
                         dtgv_MQC_PD.DataSource = searchResultTable;
-                        //ChangeColor();
-                        //ChangeData();
                     }
                     else
                     {
@@ -487,8 +551,6 @@ namespace SMESData
                         DataTable searchResultTable = results.CopyToDataTable();
                         dataPQC.Clear();
                         dtgv_MQC_PD.DataSource = searchResultTable;
-                        //ChangeColor();
-                        //ChangeData();
                     }
                     else
                     {
@@ -506,45 +568,37 @@ namespace SMESData
         {            
             FI.ShowDialog();
         }
-        public void sizeChange()
-        {
-            linePCanvas1.CanvasPadding = new Padding(45, 0, 45, 45);
-        }
-        public void sizeDefault()
-        {
-            linePCanvas1.CanvasPadding = new Padding(3, -20, 7, 25);
-        }
         public void dtgvSetting()
         {
+            dtgv_MQC_PD.ColumnHeadersDefaultCellStyle.Font = new Font("Times New Roman", 14.4F, FontStyle.Bold);
             dtgv_MQC_PD.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dtgv_MQC_PD.Columns["NG_rate_allow"].Visible = false;
             dtgv_MQC_PD.Columns["RW_rate_allow"].Visible = false;
-            //if(SaveData.PQC == true)
-            //    dtgv_MQC_PD.Columns["Temp"].Visible = false;
+            if (SaveData.PQC == true)
+            {
+                dtgv_MQC_PD.Columns["Target"].Visible = true;
+                dtgv_MQC_PD.Columns["Target"].FillWeight = 1;
+            }
+            if(SaveData.MQC == true)
+            {
+                dtgv_MQC_PD.Columns["DailyTarget"].FillWeight = 2;
+                dtgv_MQC_PD.Columns["Target"].Visible = false;
+            }
+            dtgv_MQC_PD.Columns["Model"].FillWeight = 3;
             dtgv_MQC_PD.Columns["NG_rate_realtime"].HeaderText = "NG_realtime (%)";
             dtgv_MQC_PD.Columns["RW_rate_realtime"].HeaderText = "RW_realtime (%)";
             dtgv_MQC_PD.Columns["Model"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dtgv_MQC_PD.Columns["Model"].FillWeight = 3;
             dtgv_MQC_PD.Columns["Date"].FillWeight = 2;
             dtgv_MQC_PD.Columns["Line"].FillWeight = 1;
             dtgv_MQC_PD.Columns["OUTPUT"].FillWeight = 2;
             dtgv_MQC_PD.Columns["REWORK"].FillWeight = 2;
             dtgv_MQC_PD.Columns["NOGOOD"].FillWeight = 2;
             dtgv_MQC_PD.Columns["Total"].FillWeight = 1;
-            dtgv_MQC_PD.Columns["target"].FillWeight = 1;
             dtgv_MQC_PD.Columns["NG_rate_realtime"].FillWeight = 2;
             dtgv_MQC_PD.Columns["RW_rate_realtime"].FillWeight = 2;
         }
         private void dtgv_MQC_PD_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
-            if (Screen.PrimaryScreen.Bounds.Width <= 1600)
-            {
-                sizeDefault();
-            }    
-            else
-            {
-                sizeChange();
-            }
             dtgvSetting();
             ChangeColor();
             ChangeData();      

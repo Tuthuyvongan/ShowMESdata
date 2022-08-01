@@ -1,6 +1,6 @@
 ﻿using System.Data;
 
-namespace SMESData
+namespace WindowsFormsApplication1
 {
     public class SaveData
     {       
@@ -26,5 +26,7 @@ namespace SMESData
         public static int uc_pqc { get; set; }
         public static int uc_pi { get; set; }
         public static bool check { get; set; }
+        public static string pass { get; set; }
+        public static bool checkpass { get; set; }
     }
 }

@@ -1,5 +1,5 @@
 ﻿
-namespace SMESData
+namespace WindowsFormsApplication1
 {
     partial class Warning
     {
@@ -29,379 +29,312 @@ namespace SMESData
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Warning));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            this.lbMdl = new Bunifu.UI.WinForms.BunifuLabel();
-            this.lbModel = new Bunifu.UI.WinForms.BunifuLabel();
-            this.lb7 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.lbNGA = new Bunifu.UI.WinForms.BunifuLabel();
-            this.lbDate = new Bunifu.UI.WinForms.BunifuLabel();
-            this.lbSD = new Bunifu.UI.WinForms.BunifuLabel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.lbWar = new System.Windows.Forms.Label();
-            this.btOK = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.btCancel = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.btClose = new Bunifu.UI.WinForms.BunifuImageButton();
+            this.btClose = new XanderUI.XUIButton();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lbDate = new System.Windows.Forms.Label();
+            this.lbSD = new System.Windows.Forms.Label();
+            this.lbNGA = new System.Windows.Forms.Label();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.lbMdl = new System.Windows.Forms.Label();
+            this.lbModel = new System.Windows.Forms.Label();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.btOk = new XanderUI.XUIButton();
+            this.btCancel = new XanderUI.XUIButton();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
-            // lbMdl
+            // tableLayoutPanel1
             // 
-            this.lbMdl.AllowParentOverrides = false;
-            this.lbMdl.AutoEllipsis = false;
-            this.lbMdl.Cursor = System.Windows.Forms.Cursors.Default;
-            this.lbMdl.CursorType = System.Windows.Forms.Cursors.Default;
-            this.lbMdl.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
-            this.lbMdl.Location = new System.Drawing.Point(17, 51);
-            this.lbMdl.Name = "lbMdl";
-            this.lbMdl.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbMdl.Size = new System.Drawing.Size(74, 26);
-            this.lbMdl.TabIndex = 52;
-            this.lbMdl.Text = "Model:";
-            this.lbMdl.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lbMdl.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // lbModel
-            // 
-            this.lbModel.AllowParentOverrides = false;
-            this.lbModel.AutoEllipsis = false;
-            this.lbModel.Cursor = System.Windows.Forms.Cursors.Default;
-            this.lbModel.CursorType = System.Windows.Forms.Cursors.Default;
-            this.lbModel.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
-            this.lbModel.Location = new System.Drawing.Point(97, 51);
-            this.lbModel.Name = "lbModel";
-            this.lbModel.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbModel.Size = new System.Drawing.Size(12, 26);
-            this.lbModel.TabIndex = 51;
-            this.lbModel.Text = "..";
-            this.lbModel.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lbModel.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // lb7
-            // 
-            this.lb7.AllowParentOverrides = false;
-            this.lb7.AutoEllipsis = false;
-            this.lb7.CursorType = null;
-            this.lb7.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
-            this.lb7.Location = new System.Drawing.Point(17, 100);
-            this.lb7.Name = "lb7";
-            this.lb7.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lb7.Size = new System.Drawing.Size(134, 26);
-            this.lb7.TabIndex = 54;
-            this.lb7.Text = "%NG Allow:";
-            this.lb7.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lb7.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // lbNGA
-            // 
-            this.lbNGA.AllowParentOverrides = false;
-            this.lbNGA.AutoEllipsis = false;
-            this.lbNGA.CursorType = null;
-            this.lbNGA.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
-            this.lbNGA.Location = new System.Drawing.Point(157, 100);
-            this.lbNGA.Name = "lbNGA";
-            this.lbNGA.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbNGA.Size = new System.Drawing.Size(18, 26);
-            this.lbNGA.TabIndex = 59;
-            this.lbNGA.Text = "...";
-            this.lbNGA.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lbNGA.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // lbDate
-            // 
-            this.lbDate.AllowParentOverrides = false;
-            this.lbDate.AutoEllipsis = false;
-            this.lbDate.CursorType = null;
-            this.lbDate.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
-            this.lbDate.Location = new System.Drawing.Point(291, 100);
-            this.lbDate.Name = "lbDate";
-            this.lbDate.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbDate.Size = new System.Drawing.Size(18, 26);
-            this.lbDate.TabIndex = 61;
-            this.lbDate.Text = "...";
-            this.lbDate.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lbDate.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // lbSD
-            // 
-            this.lbSD.AllowParentOverrides = false;
-            this.lbSD.AutoEllipsis = false;
-            this.lbSD.CursorType = null;
-            this.lbSD.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
-            this.lbSD.Location = new System.Drawing.Point(237, 100);
-            this.lbSD.Name = "lbSD";
-            this.lbSD.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbSD.Size = new System.Drawing.Size(48, 26);
-            this.lbSD.TabIndex = 60;
-            this.lbSD.Text = "Date";
-            this.lbSD.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lbSD.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 92.53F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.47F));
+            this.tableLayoutPanel1.Controls.Add(this.lbWar, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btClose, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel4, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 0, 3);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 4;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(950, 270);
+            this.tableLayoutPanel1.TabIndex = 86;
             // 
             // lbWar
             // 
+            this.lbWar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lbWar.AutoSize = true;
             this.lbWar.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbWar.Location = new System.Drawing.Point(12, 10);
+            this.lbWar.Location = new System.Drawing.Point(187, 32);
+            this.lbWar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbWar.Name = "lbWar";
-            this.lbWar.Size = new System.Drawing.Size(405, 26);
-            this.lbWar.TabIndex = 62;
+            this.lbWar.Size = new System.Drawing.Size(504, 35);
+            this.lbWar.TabIndex = 72;
             this.lbWar.Text = "Do you want to fix the following data ?";
-            // 
-            // btOK
-            // 
-            this.btOK.AllowAnimations = true;
-            this.btOK.AllowMouseEffects = true;
-            this.btOK.AllowToggling = false;
-            this.btOK.AnimationSpeed = 200;
-            this.btOK.AutoGenerateColors = false;
-            this.btOK.AutoRoundBorders = false;
-            this.btOK.AutoSizeLeftIcon = true;
-            this.btOK.AutoSizeRightIcon = true;
-            this.btOK.BackColor = System.Drawing.Color.Transparent;
-            this.btOK.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
-            this.btOK.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btOK.BackgroundImage")));
-            this.btOK.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btOK.ButtonText = "Ok";
-            this.btOK.ButtonTextMarginLeft = 0;
-            this.btOK.ColorContrastOnClick = 45;
-            this.btOK.ColorContrastOnHover = 45;
-            this.btOK.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.btOK.CustomizableEdges = borderEdges1;
-            this.btOK.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btOK.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btOK.DisabledFillColor = System.Drawing.Color.Empty;
-            this.btOK.DisabledForecolor = System.Drawing.Color.Empty;
-            this.btOK.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.btOK.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btOK.ForeColor = System.Drawing.Color.White;
-            this.btOK.IconLeft = null;
-            this.btOK.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btOK.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.btOK.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
-            this.btOK.IconMarginLeft = 11;
-            this.btOK.IconPadding = 10;
-            this.btOK.IconRight = null;
-            this.btOK.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btOK.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.btOK.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
-            this.btOK.IconSize = 25;
-            this.btOK.IdleBorderColor = System.Drawing.Color.Empty;
-            this.btOK.IdleBorderRadius = 0;
-            this.btOK.IdleBorderThickness = 0;
-            this.btOK.IdleFillColor = System.Drawing.Color.Empty;
-            this.btOK.IdleIconLeftImage = null;
-            this.btOK.IdleIconRightImage = null;
-            this.btOK.IndicateFocus = false;
-            this.btOK.Location = new System.Drawing.Point(157, 140);
-            this.btOK.Name = "btOK";
-            this.btOK.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btOK.OnDisabledState.BorderRadius = 1;
-            this.btOK.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btOK.OnDisabledState.BorderThickness = 1;
-            this.btOK.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btOK.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btOK.OnDisabledState.IconLeftImage = null;
-            this.btOK.OnDisabledState.IconRightImage = null;
-            this.btOK.onHoverState.BorderColor = System.Drawing.Color.DeepSkyBlue;
-            this.btOK.onHoverState.BorderRadius = 1;
-            this.btOK.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btOK.onHoverState.BorderThickness = 1;
-            this.btOK.onHoverState.FillColor = System.Drawing.Color.DeepSkyBlue;
-            this.btOK.onHoverState.ForeColor = System.Drawing.Color.White;
-            this.btOK.onHoverState.IconLeftImage = null;
-            this.btOK.onHoverState.IconRightImage = null;
-            this.btOK.OnIdleState.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.btOK.OnIdleState.BorderRadius = 1;
-            this.btOK.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btOK.OnIdleState.BorderThickness = 1;
-            this.btOK.OnIdleState.FillColor = System.Drawing.Color.DodgerBlue;
-            this.btOK.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.btOK.OnIdleState.IconLeftImage = null;
-            this.btOK.OnIdleState.IconRightImage = null;
-            this.btOK.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btOK.OnPressedState.BorderRadius = 1;
-            this.btOK.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btOK.OnPressedState.BorderThickness = 1;
-            this.btOK.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btOK.OnPressedState.ForeColor = System.Drawing.Color.White;
-            this.btOK.OnPressedState.IconLeftImage = null;
-            this.btOK.OnPressedState.IconRightImage = null;
-            this.btOK.Size = new System.Drawing.Size(72, 42);
-            this.btOK.TabIndex = 64;
-            this.btOK.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btOK.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btOK.TextMarginLeft = 0;
-            this.btOK.TextPadding = new System.Windows.Forms.Padding(0);
-            this.btOK.UseDefaultRadiusAndThickness = true;
-            this.btOK.Click += new System.EventHandler(this.btOK_Click);
-            // 
-            // btCancel
-            // 
-            this.btCancel.AllowAnimations = true;
-            this.btCancel.AllowMouseEffects = true;
-            this.btCancel.AllowToggling = false;
-            this.btCancel.AnimationSpeed = 200;
-            this.btCancel.AutoGenerateColors = false;
-            this.btCancel.AutoRoundBorders = false;
-            this.btCancel.AutoSizeLeftIcon = true;
-            this.btCancel.AutoSizeRightIcon = true;
-            this.btCancel.BackColor = System.Drawing.Color.Transparent;
-            this.btCancel.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
-            this.btCancel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btCancel.BackgroundImage")));
-            this.btCancel.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btCancel.ButtonText = "Cancel";
-            this.btCancel.ButtonTextMarginLeft = 0;
-            this.btCancel.ColorContrastOnClick = 45;
-            this.btCancel.ColorContrastOnHover = 45;
-            this.btCancel.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.btCancel.CustomizableEdges = borderEdges2;
-            this.btCancel.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btCancel.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btCancel.DisabledFillColor = System.Drawing.Color.Empty;
-            this.btCancel.DisabledForecolor = System.Drawing.Color.Empty;
-            this.btCancel.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.btCancel.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btCancel.ForeColor = System.Drawing.Color.White;
-            this.btCancel.IconLeft = null;
-            this.btCancel.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btCancel.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.btCancel.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
-            this.btCancel.IconMarginLeft = 11;
-            this.btCancel.IconPadding = 10;
-            this.btCancel.IconRight = null;
-            this.btCancel.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btCancel.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.btCancel.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
-            this.btCancel.IconSize = 25;
-            this.btCancel.IdleBorderColor = System.Drawing.Color.Empty;
-            this.btCancel.IdleBorderRadius = 0;
-            this.btCancel.IdleBorderThickness = 0;
-            this.btCancel.IdleFillColor = System.Drawing.Color.Empty;
-            this.btCancel.IdleIconLeftImage = null;
-            this.btCancel.IdleIconRightImage = null;
-            this.btCancel.IndicateFocus = false;
-            this.btCancel.Location = new System.Drawing.Point(235, 140);
-            this.btCancel.Name = "btCancel";
-            this.btCancel.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btCancel.OnDisabledState.BorderRadius = 1;
-            this.btCancel.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btCancel.OnDisabledState.BorderThickness = 1;
-            this.btCancel.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btCancel.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btCancel.OnDisabledState.IconLeftImage = null;
-            this.btCancel.OnDisabledState.IconRightImage = null;
-            this.btCancel.onHoverState.BorderColor = System.Drawing.Color.Moccasin;
-            this.btCancel.onHoverState.BorderRadius = 1;
-            this.btCancel.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btCancel.onHoverState.BorderThickness = 1;
-            this.btCancel.onHoverState.FillColor = System.Drawing.Color.Moccasin;
-            this.btCancel.onHoverState.ForeColor = System.Drawing.Color.White;
-            this.btCancel.onHoverState.IconLeftImage = null;
-            this.btCancel.onHoverState.IconRightImage = null;
-            this.btCancel.OnIdleState.BorderColor = System.Drawing.Color.Orange;
-            this.btCancel.OnIdleState.BorderRadius = 1;
-            this.btCancel.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btCancel.OnIdleState.BorderThickness = 1;
-            this.btCancel.OnIdleState.FillColor = System.Drawing.Color.Orange;
-            this.btCancel.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.btCancel.OnIdleState.IconLeftImage = null;
-            this.btCancel.OnIdleState.IconRightImage = null;
-            this.btCancel.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btCancel.OnPressedState.BorderRadius = 1;
-            this.btCancel.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btCancel.OnPressedState.BorderThickness = 1;
-            this.btCancel.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btCancel.OnPressedState.ForeColor = System.Drawing.Color.White;
-            this.btCancel.OnPressedState.IconLeftImage = null;
-            this.btCancel.OnPressedState.IconRightImage = null;
-            this.btCancel.Size = new System.Drawing.Size(72, 42);
-            this.btCancel.TabIndex = 63;
-            this.btCancel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btCancel.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btCancel.TextMarginLeft = 0;
-            this.btCancel.TextPadding = new System.Windows.Forms.Padding(0);
-            this.btCancel.UseDefaultRadiusAndThickness = true;
-            this.btCancel.Click += new System.EventHandler(this.btCancel_Click);
             // 
             // btClose
             // 
-            this.btClose.ActiveImage = null;
-            this.btClose.AllowAnimations = true;
-            this.btClose.AllowBuffering = false;
-            this.btClose.AllowToggling = false;
-            this.btClose.AllowZooming = true;
-            this.btClose.AllowZoomingOnFocus = false;
-            this.btClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btClose.BackColor = System.Drawing.Color.Transparent;
-            this.btClose.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btClose.ErrorImage = ((System.Drawing.Image)(resources.GetObject("btClose.ErrorImage")));
-            this.btClose.FadeWhenInactive = false;
-            this.btClose.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
-            this.btClose.Image = global::SMESData.Properties.Resources.close;
-            this.btClose.ImageActive = null;
-            this.btClose.ImageLocation = null;
-            this.btClose.ImageMargin = 10;
-            this.btClose.ImageSize = new System.Drawing.Size(25, 25);
-            this.btClose.ImageZoomSize = new System.Drawing.Size(35, 35);
-            this.btClose.InitialImage = ((System.Drawing.Image)(resources.GetObject("btClose.InitialImage")));
-            this.btClose.Location = new System.Drawing.Point(468, 1);
+            this.btClose.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btClose.BackgroundColor = System.Drawing.Color.Transparent;
+            this.btClose.ButtonImage = global::SMESData.Properties.Resources.close;
+            this.btClose.ButtonStyle = XanderUI.XUIButton.Style.MaterialRounded;
+            this.btClose.ButtonText = "";
+            this.btClose.ClickBackColor = System.Drawing.Color.Transparent;
+            this.btClose.ClickTextColor = System.Drawing.Color.DodgerBlue;
+            this.btClose.CornerRadius = 5;
+            this.btClose.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
+            this.btClose.HoverBackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.btClose.HoverTextColor = System.Drawing.Color.DodgerBlue;
+            this.btClose.ImagePosition = XanderUI.XUIButton.imgPosition.Right;
+            this.btClose.Location = new System.Drawing.Point(879, 0);
+            this.btClose.Margin = new System.Windows.Forms.Padding(0);
             this.btClose.Name = "btClose";
-            this.btClose.Rotation = 0;
-            this.btClose.ShowActiveImage = true;
-            this.btClose.ShowCursorChanges = true;
-            this.btClose.ShowImageBorders = true;
-            this.btClose.ShowSizeMarkers = false;
-            this.btClose.Size = new System.Drawing.Size(35, 35);
-            this.btClose.TabIndex = 65;
-            this.btClose.ToolTipText = "";
-            this.btClose.WaitOnLoad = false;
-            this.btClose.Zoom = 10;
-            this.btClose.ZoomSpeed = 10;
+            this.btClose.Size = new System.Drawing.Size(71, 67);
+            this.btClose.TabIndex = 76;
+            this.btClose.TextColor = System.Drawing.Color.DodgerBlue;
+            this.btClose.Vertical_Alignment = System.Drawing.StringAlignment.Center;
             this.btClose.Click += new System.EventHandler(this.btClose_Click);
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel2.ColumnCount = 4;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.71264F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.05747F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.86207F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.25287F));
+            this.tableLayoutPanel2.Controls.Add(this.label1, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.lbDate, 3, 0);
+            this.tableLayoutPanel2.Controls.Add(this.lbSD, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.lbNGA, 1, 0);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 134);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(879, 67);
+            this.tableLayoutPanel2.TabIndex = 85;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(119, 16);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label1.Size = new System.Drawing.Size(182, 35);
+            this.label1.TabIndex = 72;
+            this.label1.Text = "%NG Allow:";
+            // 
+            // lbDate
+            // 
+            this.lbDate.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbDate.AutoSize = true;
+            this.lbDate.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
+            this.lbDate.Location = new System.Drawing.Point(580, 16);
+            this.lbDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbDate.Name = "lbDate";
+            this.lbDate.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbDate.Size = new System.Drawing.Size(39, 35);
+            this.lbDate.TabIndex = 71;
+            this.lbDate.Text = "...";
+            // 
+            // lbSD
+            // 
+            this.lbSD.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lbSD.AutoSize = true;
+            this.lbSD.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
+            this.lbSD.Location = new System.Drawing.Point(488, 16);
+            this.lbSD.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbSD.Name = "lbSD";
+            this.lbSD.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbSD.Size = new System.Drawing.Size(84, 35);
+            this.lbSD.TabIndex = 70;
+            this.lbSD.Text = "Date:";
+            // 
+            // lbNGA
+            // 
+            this.lbNGA.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbNGA.AutoSize = true;
+            this.lbNGA.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
+            this.lbNGA.Location = new System.Drawing.Point(309, 16);
+            this.lbNGA.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbNGA.Name = "lbNGA";
+            this.lbNGA.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbNGA.Size = new System.Drawing.Size(39, 35);
+            this.lbNGA.TabIndex = 69;
+            this.lbNGA.Text = "...";
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel4.ColumnCount = 2;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.81229F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65.18771F));
+            this.tableLayoutPanel4.Controls.Add(this.lbMdl, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.lbModel, 1, 0);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 67);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 1;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(879, 67);
+            this.tableLayoutPanel4.TabIndex = 87;
+            // 
+            // lbMdl
+            // 
+            this.lbMdl.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lbMdl.AutoSize = true;
+            this.lbMdl.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lbMdl.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
+            this.lbMdl.Location = new System.Drawing.Point(195, 16);
+            this.lbMdl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbMdl.Name = "lbMdl";
+            this.lbMdl.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbMdl.Size = new System.Drawing.Size(106, 35);
+            this.lbMdl.TabIndex = 68;
+            this.lbMdl.Text = "Model:";
+            // 
+            // lbModel
+            // 
+            this.lbModel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbModel.AutoSize = true;
+            this.lbModel.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lbModel.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
+            this.lbModel.Location = new System.Drawing.Point(309, 16);
+            this.lbModel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbModel.Name = "lbModel";
+            this.lbModel.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbModel.Size = new System.Drawing.Size(39, 35);
+            this.lbModel.TabIndex = 66;
+            this.lbModel.Text = "...";
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel3.ColumnCount = 2;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.85591F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.14409F));
+            this.tableLayoutPanel3.Controls.Add(this.btOk, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.btCancel, 1, 0);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 201);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(879, 69);
+            this.tableLayoutPanel3.TabIndex = 88;
+            // 
+            // btOk
+            // 
+            this.btOk.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btOk.BackgroundColor = System.Drawing.Color.DodgerBlue;
+            this.btOk.ButtonImage = null;
+            this.btOk.ButtonStyle = XanderUI.XUIButton.Style.MaterialRounded;
+            this.btOk.ButtonText = "Ok";
+            this.btOk.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btOk.ClickTextColor = System.Drawing.Color.White;
+            this.btOk.CornerRadius = 5;
+            this.btOk.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold);
+            this.btOk.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
+            this.btOk.HoverBackgroundColor = System.Drawing.Color.DeepSkyBlue;
+            this.btOk.HoverTextColor = System.Drawing.Color.Black;
+            this.btOk.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
+            this.btOk.Location = new System.Drawing.Point(308, 4);
+            this.btOk.Margin = new System.Windows.Forms.Padding(4, 4, 10, 4);
+            this.btOk.Name = "btOk";
+            this.btOk.Size = new System.Drawing.Size(120, 60);
+            this.btOk.TabIndex = 85;
+            this.btOk.TextColor = System.Drawing.Color.White;
+            this.btOk.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            this.btOk.Click += new System.EventHandler(this.btOK_Click);
+            // 
+            // btCancel
+            // 
+            this.btCancel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btCancel.BackgroundColor = System.Drawing.Color.Orange;
+            this.btCancel.ButtonImage = null;
+            this.btCancel.ButtonStyle = XanderUI.XUIButton.Style.MaterialRounded;
+            this.btCancel.ButtonText = "Cancel";
+            this.btCancel.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btCancel.ClickTextColor = System.Drawing.Color.White;
+            this.btCancel.CornerRadius = 5;
+            this.btCancel.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold);
+            this.btCancel.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
+            this.btCancel.HoverBackgroundColor = System.Drawing.Color.Moccasin;
+            this.btCancel.HoverTextColor = System.Drawing.Color.Black;
+            this.btCancel.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
+            this.btCancel.Location = new System.Drawing.Point(448, 4);
+            this.btCancel.Margin = new System.Windows.Forms.Padding(10, 4, 4, 4);
+            this.btCancel.Name = "btCancel";
+            this.btCancel.Size = new System.Drawing.Size(120, 60);
+            this.btCancel.TabIndex = 84;
+            this.btCancel.TextColor = System.Drawing.Color.White;
+            this.btCancel.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            this.btCancel.Click += new System.EventHandler(this.btCancel_Click);
             // 
             // Warning
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(503, 194);
-            this.Controls.Add(this.btClose);
-            this.Controls.Add(this.btOK);
-            this.Controls.Add(this.btCancel);
-            this.Controls.Add(this.lbWar);
-            this.Controls.Add(this.lbDate);
-            this.Controls.Add(this.lbSD);
-            this.Controls.Add(this.lbNGA);
-            this.Controls.Add(this.lb7);
-            this.Controls.Add(this.lbMdl);
-            this.Controls.Add(this.lbModel);
+            this.ClientSize = new System.Drawing.Size(950, 270);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Warning";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Warning";
             this.Load += new System.EventHandler(this.Warning_Load);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel4.PerformLayout();
+            this.tableLayoutPanel3.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        private Bunifu.UI.WinForms.BunifuLabel lbMdl;
-        private Bunifu.UI.WinForms.BunifuLabel lbModel;
-        private Bunifu.UI.WinForms.BunifuLabel lb7;
-        private Bunifu.UI.WinForms.BunifuLabel lbNGA;
-        private Bunifu.UI.WinForms.BunifuLabel lbDate;
-        private Bunifu.UI.WinForms.BunifuLabel lbSD;
+
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label lbWar;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btOK;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btCancel;
-        private Bunifu.UI.WinForms.BunifuImageButton btClose;
+        private XanderUI.XUIButton btClose;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbDate;
+        private System.Windows.Forms.Label lbSD;
+        private System.Windows.Forms.Label lbNGA;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.Label lbMdl;
+        private System.Windows.Forms.Label lbModel;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private XanderUI.XUIButton btOk;
+        private XanderUI.XUIButton btCancel;
     }
 }

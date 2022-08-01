@@ -1,6 +1,6 @@
 ﻿
 
-namespace SMESData
+namespace WindowsFormsApplication1
 {
     class ListPQC
     {

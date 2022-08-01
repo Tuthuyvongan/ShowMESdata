@@ -1,5 +1,5 @@
 ﻿
-namespace SMESData
+namespace WindowsFormsApplication1
 {
     partial class MessageWaitForm
     {
@@ -29,75 +29,81 @@ namespace SMESData
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MessageWaitForm));
-            this.lbWait = new Bunifu.UI.WinForms.BunifuLabel();
-            this.progressBar1 = new Bunifu.UI.WinForms.BunifuProgressBar();
+            this.progressBar1 = new XanderUI.XUIFlatProgressBar();
+            this.lbWait = new System.Windows.Forms.Label();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // lbWait
-            // 
-            this.lbWait.AllowParentOverrides = false;
-            this.lbWait.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbWait.AutoEllipsis = false;
-            this.lbWait.Cursor = System.Windows.Forms.Cursors.Default;
-            this.lbWait.CursorType = System.Windows.Forms.Cursors.Default;
-            this.lbWait.Font = new System.Drawing.Font("Times New Roman", 14.25F);
-            this.lbWait.Location = new System.Drawing.Point(74, 73);
-            this.lbWait.Name = "lbWait";
-            this.lbWait.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbWait.Size = new System.Drawing.Size(274, 21);
-            this.lbWait.TabIndex = 0;
-            this.lbWait.Text = "Application is running, please wait ...";
-            this.lbWait.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lbWait.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // progressBar1
             // 
-            this.progressBar1.AllowAnimations = false;
-            this.progressBar1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.progressBar1.Animation = 0;
-            this.progressBar1.AnimationSpeed = 220;
-            this.progressBar1.AnimationStep = 10;
+            this.progressBar1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.progressBar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(223)))), ((int)(((byte)(223)))));
-            this.progressBar1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("progressBar1.BackgroundImage")));
-            this.progressBar1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(223)))), ((int)(((byte)(223)))));
-            this.progressBar1.BorderRadius = 9;
-            this.progressBar1.BorderThickness = 1;
-            this.progressBar1.Location = new System.Drawing.Point(53, 31);
-            this.progressBar1.Maximum = 100;
-            this.progressBar1.MaximumValue = 100;
-            this.progressBar1.Minimum = 0;
-            this.progressBar1.MinimumValue = 0;
+            this.progressBar1.BarStyle = XanderUI.XUIFlatProgressBar.Style.Material;
+            this.progressBar1.BarThickness = 5;
+            this.progressBar1.CompleteColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(119)))), ((int)(((byte)(215)))));
+            this.progressBar1.InocmpletedColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(223)))), ((int)(((byte)(223)))));
+            this.progressBar1.Location = new System.Drawing.Point(87, 34);
+            this.progressBar1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 15);
+            this.progressBar1.MaxValue = 100;
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            this.progressBar1.ProgressBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(223)))), ((int)(((byte)(223)))));
-            this.progressBar1.ProgressColorLeft = System.Drawing.Color.DodgerBlue;
-            this.progressBar1.ProgressColorRight = System.Drawing.Color.LimeGreen;
-            this.progressBar1.Size = new System.Drawing.Size(320, 25);
-            this.progressBar1.TabIndex = 1;
+            this.progressBar1.Size = new System.Drawing.Size(462, 31);
+            this.progressBar1.TabIndex = 2;
+            this.progressBar1.Text = "progressBar1";
             this.progressBar1.Value = 0;
-            this.progressBar1.ValueByTransition = 0;
+            // 
+            // lbWait
+            // 
+            this.lbWait.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbWait.AutoSize = true;
+            this.lbWait.BackColor = System.Drawing.Color.Transparent;
+            this.lbWait.Font = new System.Drawing.Font("Times New Roman", 14.25F);
+            this.lbWait.Location = new System.Drawing.Point(134, 95);
+            this.lbWait.Margin = new System.Windows.Forms.Padding(4, 15, 4, 0);
+            this.lbWait.Name = "lbWait";
+            this.lbWait.Size = new System.Drawing.Size(367, 27);
+            this.lbWait.TabIndex = 3;
+            this.lbWait.Text = "Application is running, please wait ...";
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.progressBar1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lbWait, 0, 1);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(636, 160);
+            this.tableLayoutPanel1.TabIndex = 4;
             // 
             // MessageWaitForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(436, 127);
-            this.Controls.Add(this.progressBar1);
-            this.Controls.Add(this.lbWait);
+            this.ClientSize = new System.Drawing.Size(636, 160);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MessageWaitForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MessageWaitForm";
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private Bunifu.UI.WinForms.BunifuLabel lbWait;
-        private Bunifu.UI.WinForms.BunifuProgressBar progressBar1;
+        private XanderUI.XUIFlatProgressBar progressBar1;
+        private System.Windows.Forms.Label lbWait;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }
