@@ -55,8 +55,8 @@ namespace WindowsFormsApplication1
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 91.11F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.89F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 92.53F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.47F));
             this.tableLayoutPanel1.Controls.Add(this.lbWar, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.btClose, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 2);
@@ -70,7 +70,7 @@ namespace WindowsFormsApplication1
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(720, 250);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(640, 190);
             this.tableLayoutPanel1.TabIndex = 86;
             // 
             // lbWar
@@ -78,7 +78,7 @@ namespace WindowsFormsApplication1
             this.lbWar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lbWar.AutoSize = true;
             this.lbWar.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbWar.Location = new System.Drawing.Point(75, 27);
+            this.lbWar.Location = new System.Drawing.Point(44, 12);
             this.lbWar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbWar.Name = "lbWar";
             this.lbWar.Size = new System.Drawing.Size(504, 35);
@@ -101,10 +101,10 @@ namespace WindowsFormsApplication1
             this.btClose.HoverBackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.btClose.HoverTextColor = System.Drawing.Color.DodgerBlue;
             this.btClose.ImagePosition = XanderUI.XUIButton.imgPosition.Right;
-            this.btClose.Location = new System.Drawing.Point(655, 0);
+            this.btClose.Location = new System.Drawing.Point(592, 0);
             this.btClose.Margin = new System.Windows.Forms.Padding(0);
             this.btClose.Name = "btClose";
-            this.btClose.Size = new System.Drawing.Size(65, 62);
+            this.btClose.Size = new System.Drawing.Size(48, 47);
             this.btClose.TabIndex = 76;
             this.btClose.TextColor = System.Drawing.Color.DodgerBlue;
             this.btClose.Vertical_Alignment = System.Drawing.StringAlignment.Center;
@@ -117,19 +117,19 @@ namespace WindowsFormsApplication1
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel2.ColumnCount = 4;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.71264F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.05747F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.86207F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.2027F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.70946F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.25287F));
             this.tableLayoutPanel2.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.lbDate, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.lbSD, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.lbNGA, 1, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 124);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 94);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(655, 62);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(592, 47);
             this.tableLayoutPanel2.TabIndex = 85;
             // 
             // label1
@@ -137,7 +137,7 @@ namespace WindowsFormsApplication1
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(41, 13);
+            this.label1.Location = new System.Drawing.Point(19, 6);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -150,7 +150,7 @@ namespace WindowsFormsApplication1
             this.lbDate.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbDate.AutoSize = true;
             this.lbDate.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
-            this.lbDate.Location = new System.Drawing.Point(433, 13);
+            this.lbDate.Location = new System.Drawing.Point(392, 6);
             this.lbDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbDate.Name = "lbDate";
             this.lbDate.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -163,7 +163,7 @@ namespace WindowsFormsApplication1
             this.lbSD.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lbSD.AutoSize = true;
             this.lbSD.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
-            this.lbSD.Location = new System.Drawing.Point(341, 13);
+            this.lbSD.Location = new System.Drawing.Point(300, 6);
             this.lbSD.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbSD.Name = "lbSD";
             this.lbSD.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -176,7 +176,7 @@ namespace WindowsFormsApplication1
             this.lbNGA.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbNGA.AutoSize = true;
             this.lbNGA.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
-            this.lbNGA.Location = new System.Drawing.Point(231, 13);
+            this.lbNGA.Location = new System.Drawing.Point(209, 6);
             this.lbNGA.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbNGA.Name = "lbNGA";
             this.lbNGA.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -190,16 +190,16 @@ namespace WindowsFormsApplication1
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel4.ColumnCount = 2;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.81229F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65.18771F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.62838F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65.37162F));
             this.tableLayoutPanel4.Controls.Add(this.lbMdl, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.lbModel, 1, 0);
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 62);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 47);
             this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(655, 62);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(592, 47);
             this.tableLayoutPanel4.TabIndex = 87;
             // 
             // lbMdl
@@ -208,7 +208,7 @@ namespace WindowsFormsApplication1
             this.lbMdl.AutoSize = true;
             this.lbMdl.Cursor = System.Windows.Forms.Cursors.Default;
             this.lbMdl.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
-            this.lbMdl.Location = new System.Drawing.Point(118, 13);
+            this.lbMdl.Location = new System.Drawing.Point(95, 6);
             this.lbMdl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbMdl.Name = "lbMdl";
             this.lbMdl.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -222,7 +222,7 @@ namespace WindowsFormsApplication1
             this.lbModel.AutoSize = true;
             this.lbModel.Cursor = System.Windows.Forms.Cursors.Default;
             this.lbModel.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
-            this.lbModel.Location = new System.Drawing.Point(232, 13);
+            this.lbModel.Location = new System.Drawing.Point(209, 6);
             this.lbModel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbModel.Name = "lbModel";
             this.lbModel.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -240,12 +240,12 @@ namespace WindowsFormsApplication1
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.14409F));
             this.tableLayoutPanel3.Controls.Add(this.btOk, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.btCancel, 1, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 186);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 141);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(655, 64);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(592, 49);
             this.tableLayoutPanel3.TabIndex = 88;
             // 
             // btOk
@@ -263,10 +263,10 @@ namespace WindowsFormsApplication1
             this.btOk.HoverBackgroundColor = System.Drawing.Color.DeepSkyBlue;
             this.btOk.HoverTextColor = System.Drawing.Color.Black;
             this.btOk.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
-            this.btOk.Location = new System.Drawing.Point(196, 4);
+            this.btOk.Location = new System.Drawing.Point(165, 4);
             this.btOk.Margin = new System.Windows.Forms.Padding(4, 4, 10, 4);
             this.btOk.Name = "btOk";
-            this.btOk.Size = new System.Drawing.Size(120, 56);
+            this.btOk.Size = new System.Drawing.Size(120, 41);
             this.btOk.TabIndex = 85;
             this.btOk.TextColor = System.Drawing.Color.White;
             this.btOk.Vertical_Alignment = System.Drawing.StringAlignment.Center;
@@ -287,10 +287,10 @@ namespace WindowsFormsApplication1
             this.btCancel.HoverBackgroundColor = System.Drawing.Color.Moccasin;
             this.btCancel.HoverTextColor = System.Drawing.Color.Black;
             this.btCancel.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
-            this.btCancel.Location = new System.Drawing.Point(336, 4);
+            this.btCancel.Location = new System.Drawing.Point(305, 4);
             this.btCancel.Margin = new System.Windows.Forms.Padding(10, 4, 4, 4);
             this.btCancel.Name = "btCancel";
-            this.btCancel.Size = new System.Drawing.Size(120, 56);
+            this.btCancel.Size = new System.Drawing.Size(120, 41);
             this.btCancel.TabIndex = 84;
             this.btCancel.TextColor = System.Drawing.Color.White;
             this.btCancel.Vertical_Alignment = System.Drawing.StringAlignment.Center;
@@ -301,7 +301,7 @@ namespace WindowsFormsApplication1
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(720, 250);
+            this.ClientSize = new System.Drawing.Size(640, 190);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
