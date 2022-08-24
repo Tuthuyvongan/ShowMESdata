@@ -568,8 +568,9 @@ namespace WindowsFormsApplication1
         {
             dtgv_MQC_PD.ColumnHeadersDefaultCellStyle.Font = new Font("Times New Roman", 14.5F, FontStyle.Bold);
             dtgv_MQC_PD.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dtgv_MQC_PD.Columns["NG_rate_allow"].Visible = false;
             dtgv_MQC_PD.Columns["RW_rate_allow"].Visible = false;
+            dtgv_MQC_PD.Columns["RW_rate_realtime"].Visible = false;
+            dtgv_MQC_PD.Columns["REWORK"].Visible = false;
             if (SaveData.PQC == true)
             {
                 dtgv_MQC_PD.Columns["Target"].HeaderText = "TARGET";
@@ -582,7 +583,7 @@ namespace WindowsFormsApplication1
                 dtgv_MQC_PD.Columns["DailyTarget"].FillWeight = 2;
             }
             dtgv_MQC_PD.Columns["NG_rate_realtime"].HeaderText = "NG_realtime(%)";
-            dtgv_MQC_PD.Columns["RW_rate_realtime"].HeaderText = "RW_realtime(%)";
+            dtgv_MQC_PD.Columns["NG_rate_allow"].HeaderText = "NG_allow(%)";
             dtgv_MQC_PD.Columns["Model"].HeaderText = "MODEL";
             dtgv_MQC_PD.Columns["Date"].HeaderText = "DATE";
             dtgv_MQC_PD.Columns["Line"].HeaderText = "LINE";
@@ -592,11 +593,10 @@ namespace WindowsFormsApplication1
             dtgv_MQC_PD.Columns["Date"].FillWeight = 2;
             dtgv_MQC_PD.Columns["Line"].FillWeight = 1;
             dtgv_MQC_PD.Columns["OUTPUT"].FillWeight = 2;
-            dtgv_MQC_PD.Columns["REWORK"].FillWeight = 2;
             dtgv_MQC_PD.Columns["NOGOOD"].FillWeight = 2;
             dtgv_MQC_PD.Columns["Total"].FillWeight = 1;
             dtgv_MQC_PD.Columns["NG_rate_realtime"].FillWeight = 2;
-            dtgv_MQC_PD.Columns["RW_rate_realtime"].FillWeight = 2;
+            dtgv_MQC_PD.Columns["NG_rate_allow"].FillWeight = 2;
         }
         private void dtgv_MQC_PD_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {

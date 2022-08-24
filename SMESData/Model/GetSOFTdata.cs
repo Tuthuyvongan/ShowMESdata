@@ -91,193 +91,193 @@ namespace WindowsFormsApplication1
             return dt;
         }
         //Get List MQC to DataTable
-        //public static DataTable GetListMQC(string date, string line)
-        //{
-        //    List<ListMQC> ListMQC = new List<ListMQC>();
-        //    DataTable dt = new DataTable();
-        //    sqlSOFTCon sqlSOFTCon = new sqlSOFTCon();
-        //    StringBuilder sqlGetData = new StringBuilder();
-        //    sqlGetData.Append("select distinct m.model as Model, m.inspectdate as Date, m.line as Line, m.OUTPUT, m.REWORK, m.NOGOOD, ");
-        //    sqlGetData.Append("serno, ");
-        //    sqlGetData.Append("(CASE WHEN (select top 1 rate from thu_SMESData_NGRate where model = a.model order by inspectdate desc) IS NOT NULL ");
-        //    sqlGetData.Append("THEN (select top 1 rate from thu_SMESData_NGRate where model = a.model order by inspectdate desc) ");
-        //    sqlGetData.Append("ELSE '2' END) as '%NG_allow', '2.5' as '%RW_allow', ");
-        //    sqlGetData.Append("(CASE WHEN (select OUTPUT from thu_MQC_DailyTarget where model = a.model and Date = a.inspectdate) IS NOT NULL ");
-        //    sqlGetData.Append("THEN (select OUTPUT from thu_MQC_DailyTarget where model = a.model and Date = a.inspectdate) ELSE '0' END) as DailyTarget ");
-        //    sqlGetData.Append("FROM m_ERPMQC_REALTIME as a ");
-        //    sqlGetData.Append("LEFT JOIN thu_SMESData_NGRate as r on a.model = r.model and a.inspectdate = r.inspectdate ");
-        //    sqlGetData.Append("join(SELECT model,  inspectdate, line, ");
-        //    sqlGetData.Append("COALESCE(SUM(CASE WHEN remark = 'OP' THEN Cast(data as numeric(10,0)) END), 0) AS OUTPUT, ");
-        //    sqlGetData.Append("COALESCE(SUM(CASE WHEN remark = 'RW' THEN Cast(data as numeric(10,0)) END), 0) AS REWORK, ");
-        //    sqlGetData.Append("COALESCE(SUM(CASE WHEN remark = 'NG' THEN Cast(data as numeric(10,0)) END), 0) AS NOGOOD ");
-        //    sqlGetData.Append("FROM m_ERPMQC_REALTIME ");
-        //    sqlGetData.Append("WHERE inspectdate = '" + date + "' and line like '%" + line + "%'");
-        //    sqlGetData.Append("group by model, inspectdate, line) as m ");
-        //    sqlGetData.Append("on a.inspectdate = m.inspectdate and a.model = m.model and a.line = m.line ");
-        //    //Do not change this sort for correcting logic in for loop. Model have same name and diffrent line will stand side by side
-        //    sqlGetData.Append("order by Model desc, Line ");
-        //    sqlSOFTCon.sqlDataAdapterFillDatatable(sqlGetData.ToString(), ref dt);
-        //    ListMQC MQC = new ListMQC();
-        //    for (int i = 0; i < dt.Rows.Count; i++)
-        //    {
-        //        if (dt.Rows.Count == 1)
-        //        {
-        //            string[] serno = dt.Rows[i]["serno"].ToString().Split(';');
-        //            MQC.Model = dt.Rows[i]["Model"].ToString();
-        //            MQC.Date = Convert.ToDateTime(dt.Rows[i]["Date"]).ToString("dd-MM-yyyy");
-        //            MQC.Line = dt.Rows[i]["Line"].ToString();
-        //            MQC.OUTPUT = double.Parse(dt.Rows[i]["OUTPUT"].ToString());
-        //            MQC.REWORK = double.Parse(dt.Rows[i]["REWORK"].ToString());
-        //            MQC.NOGOOD = double.Parse(dt.Rows[i]["NOGOOD"].ToString());
-        //            MQC.Total = MQC.OUTPUT + MQC.REWORK + MQC.NOGOOD;
-        //            MQC.DailyTarget = double.Parse(dt.Rows[i]["DailyTarget"].ToString());
-        //            MQC.NG_rate_realtime = Math.Round(MQC.NOGOOD / MQC.Total * 100, 1);
-        //            MQC.NG_rate_allow = double.Parse(dt.Rows[i]["%NG_allow"].ToString());
-        //            MQC.RW_rate_realtime = Math.Round(MQC.REWORK / MQC.Total * 100, 1);
-        //            MQC.RW_rate_allow = double.Parse(dt.Rows[i]["%RW_allow"].ToString());
-        //            ListMQC.Add(MQC);
-        //        }
-        //        else
-        //        {
-        //            if (i + 1 != dt.Rows.Count)
-        //            {
-        //                if (dt.Rows[i]["Model"].ToString() == dt.Rows[i + 1]["Model"].ToString() && dt.Rows[i]["Line"].ToString() == dt.Rows[i + 1]["Line"].ToString())
-        //                {
-        //                    string[] serno = dt.Rows[i]["serno"].ToString().Split(';');
-        //                    string[] serno1 = dt.Rows[i + 1]["serno"].ToString().Split(';');
-        //                }
-        //                else
-        //                {
-        //                    string[] serno = dt.Rows[i]["serno"].ToString().Split(';');
-        //                    MQC.Model = dt.Rows[i]["Model"].ToString();
-        //                    MQC.Date = Convert.ToDateTime(dt.Rows[i]["Date"]).ToString("dd-MM-yyyy");
-        //                    MQC.Line = dt.Rows[i]["Line"].ToString();
-        //                    MQC.OUTPUT = double.Parse(dt.Rows[i]["OUTPUT"].ToString());
-        //                    MQC.REWORK = double.Parse(dt.Rows[i]["REWORK"].ToString());
-        //                    MQC.NOGOOD = double.Parse(dt.Rows[i]["NOGOOD"].ToString());
-        //                    MQC.Total = MQC.OUTPUT + MQC.REWORK + MQC.NOGOOD;
-        //                    MQC.DailyTarget = double.Parse(dt.Rows[i]["DailyTarget"].ToString());
-        //                    MQC.NG_rate_realtime = Math.Round(MQC.NOGOOD / MQC.Total * 100, 1);
-        //                    MQC.NG_rate_allow = double.Parse(dt.Rows[i]["%NG_allow"].ToString());
-        //                    MQC.RW_rate_realtime = Math.Round(MQC.REWORK / MQC.Total * 100, 1);
-        //                    MQC.RW_rate_allow = double.Parse(dt.Rows[i]["%RW_allow"].ToString());
-        //                    ListMQC.Add(MQC);
-        //                    MQC = new ListMQC();
-        //                }
-        //            }
-        //            else
-        //            {
-        //                if (dt.Rows[i - 1]["Model"].ToString() == dt.Rows[i]["Model"].ToString() && dt.Rows[i - 1]["Line"].ToString() == dt.Rows[i]["Line"].ToString())
-        //                {
-        //                    string[] serno = dt.Rows[i - 1]["serno"].ToString().Split(';');
-        //                    string[] serno1 = dt.Rows[i]["serno"].ToString().Split(';');
-        //                    MQC.Model = dt.Rows[i]["Model"].ToString();
-        //                    MQC.Date = Convert.ToDateTime(dt.Rows[i]["Date"]).ToString("dd-MM-yyyy");
-        //                    MQC.Line = dt.Rows[i]["Line"].ToString();
-        //                    MQC.OUTPUT = double.Parse(dt.Rows[i]["OUTPUT"].ToString());
-        //                    MQC.REWORK = double.Parse(dt.Rows[i]["REWORK"].ToString());
-        //                    MQC.NOGOOD = double.Parse(dt.Rows[i]["NOGOOD"].ToString());
-        //                    MQC.Total = MQC.OUTPUT + MQC.REWORK + MQC.NOGOOD;
-        //                    MQC.DailyTarget = double.Parse(dt.Rows[i]["DailyTarget"].ToString());
-        //                    MQC.NG_rate_realtime = Math.Round(MQC.NOGOOD / MQC.Total * 100, 1);
-        //                    MQC.NG_rate_allow = double.Parse(dt.Rows[i]["%NG_allow"].ToString());
-        //                    MQC.RW_rate_realtime = Math.Round(MQC.REWORK / MQC.Total * 100, 1);
-        //                    MQC.RW_rate_allow = double.Parse(dt.Rows[i]["%RW_allow"].ToString());
-        //                    ListMQC.Add(MQC);
-        //                }
-        //                else
-        //                {
-        //                    string[] serno = dt.Rows[i]["serno"].ToString().Split(';');
-        //                    MQC.Model = dt.Rows[i]["Model"].ToString();
-        //                    MQC.Date = Convert.ToDateTime(dt.Rows[i]["Date"]).ToString("dd-MM-yyyy");
-        //                    MQC.Line = dt.Rows[i]["Line"].ToString();
-        //                    MQC.OUTPUT = double.Parse(dt.Rows[i]["OUTPUT"].ToString());
-        //                    MQC.REWORK = double.Parse(dt.Rows[i]["REWORK"].ToString());
-        //                    MQC.NOGOOD = double.Parse(dt.Rows[i]["NOGOOD"].ToString());
-        //                    MQC.Total = MQC.OUTPUT + MQC.REWORK + MQC.NOGOOD;
-        //                    MQC.DailyTarget = double.Parse(dt.Rows[i]["DailyTarget"].ToString());
-        //                    MQC.NG_rate_realtime = Math.Round(MQC.NOGOOD / MQC.Total * 100, 1);
-        //                    MQC.NG_rate_allow = double.Parse(dt.Rows[i]["%NG_allow"].ToString());
-        //                    MQC.RW_rate_realtime = Math.Round(MQC.REWORK / MQC.Total * 100, 1);
-        //                    MQC.RW_rate_allow = double.Parse(dt.Rows[i]["%RW_allow"].ToString());
-        //                    ListMQC.Add(MQC);
-        //                }
-        //            }
-        //        }
-        //    }
-        //    DataTable dtMQC = new DataTable();
-        //    DataColumn[] tableColumns = new DataColumn[]
-        //    {
-        //        new DataColumn()
-        //        {
-        //            ColumnName="Model",
-        //            DataType=typeof(string),
-        //        },
-        //        new DataColumn()
-        //        {
-        //            ColumnName="Date",
-        //            DataType=typeof(string),
-        //        },
-        //        new DataColumn()
-        //        {
-        //            ColumnName="Line",
-        //            DataType=typeof(string),
-        //        },
-        //        new DataColumn()
-        //        {
-        //            ColumnName="OUTPUT",
-        //            DataType=typeof(double),
-        //        },
-        //        new DataColumn()
-        //        {
-        //            ColumnName="REWORK",
-        //            DataType=typeof(double),
-        //        },
-        //        new DataColumn()
-        //        {
-        //            ColumnName="NOGOOD",
-        //            DataType=typeof(double),
-        //        },
-        //        new DataColumn()
-        //        {
-        //            ColumnName="Total",
-        //            DataType=typeof(double),
-        //        },
-        //        new DataColumn()
-        //        {
-        //            ColumnName="DailyTarget",
-        //            DataType=typeof(double),
-        //        },
-        //        new DataColumn()
-        //        {
-        //            ColumnName="NG_rate_realtime",
-        //            DataType=typeof(double),
-        //        },
-        //        new DataColumn()
-        //        {
-        //            ColumnName="NG_rate_allow",
-        //            DataType=typeof(double),
-        //        },
-        //        new DataColumn()
-        //        {
-        //            ColumnName="RW_rate_realtime",
-        //            DataType=typeof(double),
-        //        },
-        //        new DataColumn()
-        //        {
-        //            ColumnName="RW_rate_allow",
-        //            DataType=typeof(double),
-        //        },
-        //    };
-        //    dtMQC.Columns.AddRange(tableColumns);
-        //    foreach (var data in ListMQC)
-        //    {
-        //        dtMQC.Rows.Add(data.Model, data.Date, data.Line, data.OUTPUT, data.REWORK, data.NOGOOD, data.Total, data.DailyTarget, data.NG_rate_realtime, data.NG_rate_allow, data.RW_rate_realtime, data.RW_rate_allow);
-        //    }
-        //    dtMQC.DefaultView.Sort = "NG_rate_realtime DESC";
-        //    dtMQC = dtMQC.DefaultView.ToTable();
-        //    return dtMQC;
-        //}
+        public static DataTable GetListMQC(string date, string line)
+        {
+            List<ListMQC> ListMQC = new List<ListMQC>();
+            DataTable dt = new DataTable();
+            sqlSOFTCon sqlSOFTCon = new sqlSOFTCon();
+            StringBuilder sqlGetData = new StringBuilder();
+            sqlGetData.Append("select distinct m.model as Model, m.inspectdate as Date, m.line as Line, m.OUTPUT, m.REWORK, m.NOGOOD, ");
+            sqlGetData.Append("serno, ");
+            sqlGetData.Append("(CASE WHEN (select top 1 rate from thu_SMESData_NGRate where model = a.model order by inspectdate desc) IS NOT NULL ");
+            sqlGetData.Append("THEN (select top 1 rate from thu_SMESData_NGRate where model = a.model order by inspectdate desc) ");
+            sqlGetData.Append("ELSE '2' END) as '%NG_allow', '2.5' as '%RW_allow', ");
+            sqlGetData.Append("(CASE WHEN (select OUTPUT from thu_MQC_DailyTarget where model = a.model and Date = a.inspectdate) IS NOT NULL ");
+            sqlGetData.Append("THEN (select OUTPUT from thu_MQC_DailyTarget where model = a.model and Date = a.inspectdate) ELSE '0' END) as DailyTarget ");
+            sqlGetData.Append("FROM m_ERPMQC_REALTIME as a ");
+            sqlGetData.Append("LEFT JOIN thu_SMESData_NGRate as r on a.model = r.model and a.inspectdate = r.inspectdate ");
+            sqlGetData.Append("join(SELECT model,  inspectdate, line, ");
+            sqlGetData.Append("COALESCE(SUM(CASE WHEN remark = 'OP' THEN Cast(data as numeric(10,0)) END), 0) AS OUTPUT, ");
+            sqlGetData.Append("COALESCE(SUM(CASE WHEN remark = 'RW' THEN Cast(data as numeric(10,0)) END), 0) AS REWORK, ");
+            sqlGetData.Append("COALESCE(SUM(CASE WHEN remark = 'NG' THEN Cast(data as numeric(10,0)) END), 0) AS NOGOOD ");
+            sqlGetData.Append("FROM m_ERPMQC_REALTIME ");
+            sqlGetData.Append("WHERE inspectdate = '" + date + "' and line like '%" + line + "%'");
+            sqlGetData.Append("group by model, inspectdate, line) as m ");
+            sqlGetData.Append("on a.inspectdate = m.inspectdate and a.model = m.model and a.line = m.line ");
+            //Do not change this sort for correcting logic in for loop. Model have same name and diffrent line will stand side by side
+            sqlGetData.Append("order by Model desc, Line ");
+            sqlSOFTCon.sqlDataAdapterFillDatatable(sqlGetData.ToString(), ref dt);
+            ListMQC MQC = new ListMQC();
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                if (dt.Rows.Count == 1)
+                {
+                    string[] serno = dt.Rows[i]["serno"].ToString().Split(';');
+                    MQC.Model = dt.Rows[i]["Model"].ToString();
+                    MQC.Date = Convert.ToDateTime(dt.Rows[i]["Date"]).ToString("dd-MM-yyyy");
+                    MQC.Line = dt.Rows[i]["Line"].ToString();
+                    MQC.OUTPUT = double.Parse(dt.Rows[i]["OUTPUT"].ToString());
+                    MQC.REWORK = double.Parse(dt.Rows[i]["REWORK"].ToString());
+                    MQC.NOGOOD = double.Parse(dt.Rows[i]["NOGOOD"].ToString());
+                    MQC.Total = MQC.OUTPUT + MQC.REWORK + MQC.NOGOOD;
+                    MQC.DailyTarget = double.Parse(dt.Rows[i]["DailyTarget"].ToString());
+                    MQC.NG_rate_realtime = Math.Round(MQC.NOGOOD / MQC.Total * 100, 1);
+                    MQC.NG_rate_allow = double.Parse(dt.Rows[i]["%NG_allow"].ToString());
+                    MQC.RW_rate_realtime = Math.Round(MQC.REWORK / MQC.Total * 100, 1);
+                    MQC.RW_rate_allow = double.Parse(dt.Rows[i]["%RW_allow"].ToString());
+                    ListMQC.Add(MQC);
+                }
+                else
+                {
+                    if (i + 1 != dt.Rows.Count)
+                    {
+                        if (dt.Rows[i]["Model"].ToString() == dt.Rows[i + 1]["Model"].ToString() && dt.Rows[i]["Line"].ToString() == dt.Rows[i + 1]["Line"].ToString())
+                        {
+                            string[] serno = dt.Rows[i]["serno"].ToString().Split(';');
+                            string[] serno1 = dt.Rows[i + 1]["serno"].ToString().Split(';');
+                        }
+                        else
+                        {
+                            string[] serno = dt.Rows[i]["serno"].ToString().Split(';');
+                            MQC.Model = dt.Rows[i]["Model"].ToString();
+                            MQC.Date = Convert.ToDateTime(dt.Rows[i]["Date"]).ToString("dd-MM-yyyy");
+                            MQC.Line = dt.Rows[i]["Line"].ToString();
+                            MQC.OUTPUT = double.Parse(dt.Rows[i]["OUTPUT"].ToString());
+                            MQC.REWORK = double.Parse(dt.Rows[i]["REWORK"].ToString());
+                            MQC.NOGOOD = double.Parse(dt.Rows[i]["NOGOOD"].ToString());
+                            MQC.Total = MQC.OUTPUT + MQC.REWORK + MQC.NOGOOD;
+                            MQC.DailyTarget = double.Parse(dt.Rows[i]["DailyTarget"].ToString());
+                            MQC.NG_rate_realtime = Math.Round(MQC.NOGOOD / MQC.Total * 100, 1);
+                            MQC.NG_rate_allow = double.Parse(dt.Rows[i]["%NG_allow"].ToString());
+                            MQC.RW_rate_realtime = Math.Round(MQC.REWORK / MQC.Total * 100, 1);
+                            MQC.RW_rate_allow = double.Parse(dt.Rows[i]["%RW_allow"].ToString());
+                            ListMQC.Add(MQC);
+                            MQC = new ListMQC();
+                        }
+                    }
+                    else
+                    {
+                        if (dt.Rows[i - 1]["Model"].ToString() == dt.Rows[i]["Model"].ToString() && dt.Rows[i - 1]["Line"].ToString() == dt.Rows[i]["Line"].ToString())
+                        {
+                            string[] serno = dt.Rows[i - 1]["serno"].ToString().Split(';');
+                            string[] serno1 = dt.Rows[i]["serno"].ToString().Split(';');
+                            MQC.Model = dt.Rows[i]["Model"].ToString();
+                            MQC.Date = Convert.ToDateTime(dt.Rows[i]["Date"]).ToString("dd-MM-yyyy");
+                            MQC.Line = dt.Rows[i]["Line"].ToString();
+                            MQC.OUTPUT = double.Parse(dt.Rows[i]["OUTPUT"].ToString());
+                            MQC.REWORK = double.Parse(dt.Rows[i]["REWORK"].ToString());
+                            MQC.NOGOOD = double.Parse(dt.Rows[i]["NOGOOD"].ToString());
+                            MQC.Total = MQC.OUTPUT + MQC.REWORK + MQC.NOGOOD;
+                            MQC.DailyTarget = double.Parse(dt.Rows[i]["DailyTarget"].ToString());
+                            MQC.NG_rate_realtime = Math.Round(MQC.NOGOOD / MQC.Total * 100, 1);
+                            MQC.NG_rate_allow = double.Parse(dt.Rows[i]["%NG_allow"].ToString());
+                            MQC.RW_rate_realtime = Math.Round(MQC.REWORK / MQC.Total * 100, 1);
+                            MQC.RW_rate_allow = double.Parse(dt.Rows[i]["%RW_allow"].ToString());
+                            ListMQC.Add(MQC);
+                        }
+                        else
+                        {
+                            string[] serno = dt.Rows[i]["serno"].ToString().Split(';');
+                            MQC.Model = dt.Rows[i]["Model"].ToString();
+                            MQC.Date = Convert.ToDateTime(dt.Rows[i]["Date"]).ToString("dd-MM-yyyy");
+                            MQC.Line = dt.Rows[i]["Line"].ToString();
+                            MQC.OUTPUT = double.Parse(dt.Rows[i]["OUTPUT"].ToString());
+                            MQC.REWORK = double.Parse(dt.Rows[i]["REWORK"].ToString());
+                            MQC.NOGOOD = double.Parse(dt.Rows[i]["NOGOOD"].ToString());
+                            MQC.Total = MQC.OUTPUT + MQC.REWORK + MQC.NOGOOD;
+                            MQC.DailyTarget = double.Parse(dt.Rows[i]["DailyTarget"].ToString());
+                            MQC.NG_rate_realtime = Math.Round(MQC.NOGOOD / MQC.Total * 100, 1);
+                            MQC.NG_rate_allow = double.Parse(dt.Rows[i]["%NG_allow"].ToString());
+                            MQC.RW_rate_realtime = Math.Round(MQC.REWORK / MQC.Total * 100, 1);
+                            MQC.RW_rate_allow = double.Parse(dt.Rows[i]["%RW_allow"].ToString());
+                            ListMQC.Add(MQC);
+                        }
+                    }
+                }
+            }
+            DataTable dtMQC = new DataTable();
+            DataColumn[] tableColumns = new DataColumn[]
+            {
+                new DataColumn()
+                {
+                    ColumnName="Model",
+                    DataType=typeof(string),
+                },
+                new DataColumn()
+                {
+                    ColumnName="Date",
+                    DataType=typeof(string),
+                },
+                new DataColumn()
+                {
+                    ColumnName="Line",
+                    DataType=typeof(string),
+                },
+                new DataColumn()
+                {
+                    ColumnName="OUTPUT",
+                    DataType=typeof(double),
+                },
+                new DataColumn()
+                {
+                    ColumnName="REWORK",
+                    DataType=typeof(double),
+                },
+                new DataColumn()
+                {
+                    ColumnName="NOGOOD",
+                    DataType=typeof(double),
+                },
+                new DataColumn()
+                {
+                    ColumnName="Total",
+                    DataType=typeof(double),
+                },
+                new DataColumn()
+                {
+                    ColumnName="DailyTarget",
+                    DataType=typeof(double),
+                },
+                new DataColumn()
+                {
+                    ColumnName="NG_rate_realtime",
+                    DataType=typeof(double),
+                },
+                new DataColumn()
+                {
+                    ColumnName="NG_rate_allow",
+                    DataType=typeof(double),
+                },
+                new DataColumn()
+                {
+                    ColumnName="RW_rate_realtime",
+                    DataType=typeof(double),
+                },
+                new DataColumn()
+                {
+                    ColumnName="RW_rate_allow",
+                    DataType=typeof(double),
+                },
+            };
+            dtMQC.Columns.AddRange(tableColumns);
+            foreach (var data in ListMQC)
+            {
+                dtMQC.Rows.Add(data.Model, data.Date, data.Line, data.OUTPUT, data.REWORK, data.NOGOOD, data.Total, data.DailyTarget, data.NG_rate_realtime, data.NG_rate_allow, data.RW_rate_realtime, data.RW_rate_allow);
+            }
+            dtMQC.DefaultView.Sort = "NG_rate_realtime DESC";
+            dtMQC = dtMQC.DefaultView.ToTable();
+            return dtMQC;
+        }
         //Get List PQC to Datatable
         public static DataTable GetListPQC(string date, string line)
         {
@@ -550,144 +550,6 @@ namespace WindowsFormsApplication1
                 sqlGetData.Append("SELECT distinct model FROM m_ERPMQC_REALTIME where model != ''");
                 sqlSOFTCon.sqlDataAdapterFillDatatable(sqlGetData.ToString(), ref dt);
             }
-            return dt;
-        }
-        public static DataTable ListMQC(string date)
-        {
-            double fail = 0;
-            DataTable dt1 = new DataTable();
-            sqlMES sqlMESCon = new sqlMES();
-            StringBuilder sqlGetData = new StringBuilder();
-            sqlGetData.Append("SELECT c.uuid as 'UUID', a.product_no as Model, a.send_quantity as Total, a.pass_qty as OUTPUT, a.failed_qty as NOGOOD, a.send_time as 'Date' ");
-            sqlGetData.Append("FROM mes_quality_control.quality_control_order AS a, mes_planning_excution.job_move AS b, mes_planning_excution.job_order_record AS c ");
-            sqlGetData.Append("WHERE a.job_move_uuid = b.uuid AND b.job_order_uuid = c.job_order_uuid ");
-            sqlGetData.Append("AND a.send_quantity = c.actual_finish_qty AND b.create_by = c.create_by ");
-            sqlGetData.Append("AND a.create_date LIKE '%" + date + "%' AND a.operation_no = 'OP10' AND a.send_quantity IS NOT NULL ");
-            sqlGetData.Append("ORDER BY a.product_no ");
-            sqlMESCon.sqlDataAdapterFillDatatable(sqlGetData.ToString(), ref dt1);
-            List<ListMQC> ListMQC = new List<ListMQC>();
-            ListMQC MQC = new ListMQC();
-            DataTable dt2 = new DataTable();
-            sqlSOFTCon sqlSOFTCon = new sqlSOFTCon();
-            StringBuilder sqlGetSqlSeverData = new StringBuilder();
-            for (int i = 0; i < dt1.Rows.Count; i++)
-            {
-                MQC.Model = dt1.Rows[i]["Model"].ToString();
-                MQC.Date = Convert.ToDateTime(dt1.Rows[i]["Date"]).ToString("dd-MM-yyyy");
-                sqlGetSqlSeverData.Append("select distinct a.line as Line, (CASE WHEN (select top 1 rate from thu_SMESData_NGRate where model = a.model order by inspectdate desc) IS NOT NULL ");
-                sqlGetSqlSeverData.Append("THEN (select top 1 rate from thu_SMESData_NGRate where model = a.model order by inspectdate desc) ");
-                sqlGetSqlSeverData.Append("ELSE '2' END) as '%NG_allow', (CASE WHEN (select OUTPUT from thu_MQC_DailyTarget where model = a.model and Date = a.inspectdate) IS NOT NULL ");
-                sqlGetSqlSeverData.Append("THEN (select OUTPUT from thu_MQC_DailyTarget where model = a.model and Date = a.inspectdate) ELSE '0' END) as DailyTarget ");
-                sqlGetSqlSeverData.Append("FROM m_ERPMQC_REALTIME as a WHERE inspectdate = '" + date + "' and serno like '%" + dt1.Rows[i]["UUID"].ToString() + "%' and model = '" + dt1.Rows[i]["Model"].ToString() + "'");
-                sqlSOFTCon.sqlDataAdapterFillDatatable(sqlGetSqlSeverData.ToString(), ref dt2);
-                MQC.Line = dt2.Rows[0]["Line"].ToString();
-                //OP
-                if (double.TryParse(dt1.Rows[i]["OUTPUT"].ToString(), out fail))
-                    MQC.OUTPUT = double.Parse(dt1.Rows[i]["OUTPUT"].ToString());
-                else
-                    MQC.OUTPUT = fail;
-                //RW
-                MQC.REWORK = 0;
-                //NG
-                if (double.TryParse(dt1.Rows[i]["NOGOOD"].ToString(), out fail))
-                    MQC.NOGOOD = double.Parse(dt1.Rows[i]["NOGOOD"].ToString());
-                else
-                    MQC.NOGOOD = fail;
-                //Total
-                if (double.TryParse(dt1.Rows[i]["Total"].ToString(), out fail))
-                    MQC.Total = double.Parse(dt1.Rows[i]["Total"].ToString());
-                else
-                    MQC.Total = fail;
-                MQC.DailyTarget = double.Parse(dt2.Rows[0]["DailyTarget"].ToString());
-                MQC.NG_rate_realtime = 0;
-                MQC.NG_rate_allow = 0;
-                //MQC.NG_rate_realtime = Math.Round(MQC.NOGOOD / MQC.Total * 100, 1);
-                //MQC.NG_rate_allow = double.Parse(dt2.Rows[0]["%NG_allow"].ToString());
-                MQC.RW_rate_realtime = 0;
-                MQC.RW_rate_allow = 0;
-                ListMQC.Add(MQC);
-                MQC = new ListMQC();
-            }
-            DataTable dtMQC = new DataTable();
-            DataColumn[] tableColumns = new DataColumn[]
-            {
-                new DataColumn()
-                {
-                    ColumnName="Model",
-                    DataType=typeof(string),
-                },
-                new DataColumn()
-                {
-                    ColumnName="Date",
-                    DataType=typeof(string),
-                },
-                new DataColumn()
-                {
-                    ColumnName="Line",
-                    DataType=typeof(string),
-                },
-                new DataColumn()
-                {
-                    ColumnName="OUTPUT",
-                    DataType=typeof(double),
-                },
-                new DataColumn()
-                {
-                    ColumnName="REWORK",
-                    DataType=typeof(double),
-                },
-                new DataColumn()
-                {
-                    ColumnName="NOGOOD",
-                    DataType=typeof(double),
-                },
-                new DataColumn()
-                {
-                    ColumnName="Total",
-                    DataType=typeof(double),
-                },
-                new DataColumn()
-                {
-                    ColumnName="DailyTarget",
-                    DataType=typeof(double),
-                },
-                new DataColumn()
-                {
-                    ColumnName="NG_rate_realtime",
-                    DataType=typeof(double),
-                },
-                new DataColumn()
-                {
-                    ColumnName="NG_rate_allow",
-                    DataType=typeof(double),
-                },
-                new DataColumn()
-                {
-                    ColumnName="RW_rate_realtime",
-                    DataType=typeof(double),
-                },
-                new DataColumn()
-                {
-                    ColumnName="RW_rate_allow",
-                    DataType=typeof(double),
-                }
-            };
-            dtMQC.Columns.AddRange(tableColumns);
-            foreach (var data in ListMQC)
-            {
-                dtMQC.Rows.Add(data.Model, data.Date, data.Line, data.OUTPUT, data.REWORK, data.NOGOOD, data.Total, data.DailyTarget, data.NG_rate_realtime, data.NG_rate_allow, data.RW_rate_realtime, data.RW_rate_allow);
-            }
-            dtMQC.DefaultView.Sort = "Model, Line";
-            dtMQC = dtMQC.DefaultView.ToTable();
-            
-            return dtMQC;
-        }
-        public static DataTable GetListMQC(string date, string line)
-        {
-            DataTable dt = ListMQC(date);
-            DataRow[] results = dt.Select("Date = '" + date + "' and Line = '" + line + "'");
-            dt = results.CopyToDataTable();
-            dt.DefaultView.Sort = "NG_rate_realtime DESC";
             return dt;
         }
     }
