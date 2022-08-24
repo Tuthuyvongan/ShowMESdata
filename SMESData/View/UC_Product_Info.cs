@@ -244,35 +244,28 @@ namespace WindowsFormsApplication1
                 MessageWaitForm msf = new MessageWaitForm();
                 Thread backgroundThreadFetchData = new Thread(
                         new ThreadStart(() =>
-                        {
-                            if(dtgv_MQC_PD.Rows.Count > 0)
+                        { 
+                            for (int i = 0; i < dtgv_MQC_PD.Rows.Count; i++)
                             {
-                                for (int i = 0; i < dtgv_MQC_PD.Rows.Count; i++)
+                                if (double.Parse(dtgv_MQC_PD.Rows[i].Cells[8].Value.ToString()) > double.Parse(dtgv_MQC_PD.Rows[i].Cells[9].Value.ToString()))
                                 {
-                                    if (double.Parse(dtgv_MQC_PD.Rows[i].Cells[8].Value.ToString()) > double.Parse(dtgv_MQC_PD.Rows[i].Cells[9].Value.ToString()))
+                                    for (int j = 0; j < dtgv_MQC_PD.Columns.Count; j++)
                                     {
-                                        for (int j = 0; j < dtgv_MQC_PD.Columns.Count; j++)
-                                        {
-                                            dtgv_MQC_PD[j, i].Style.BackColor = Color.Red;
-                                            dtgv_MQC_PD[j, i].Style.ForeColor = Color.White;
-                                            dtgv_MQC_PD[j, i].Style.SelectionBackColor = Color.FromArgb(220, 20, 60);
-                                        }
+                                        dtgv_MQC_PD[j, i].Style.BackColor = Color.Red;
+                                        dtgv_MQC_PD[j, i].Style.ForeColor = Color.White;
+                                        dtgv_MQC_PD[j, i].Style.SelectionBackColor = Color.FromArgb(220, 20, 60);
                                     }
-                                    else
-                                    {
-                                        for (int j = 0; j < dtgv_MQC_PD.Columns.Count; j++)
-                                        {
-                                            dtgv_MQC_PD[j, i].Style.BackColor = Color.FromArgb(248, 251, 255);
-                                            dtgv_MQC_PD[j, i].Style.ForeColor = Color.Black;
-                                            dtgv_MQC_PD[j, i].Style.SelectionBackColor = Color.FromArgb(221, 238, 255);
-                                        }
-                                    }
-                                    msf.UpdateProgress(100 * (i + 1) / dtgv_MQC_PD.Rows.Count, "Application is running, please wait ... ");
                                 }
-                            }
-                            else
-                            {
-                                MessageBox.Show("Vui long nhap du lieu tim kiem");
+                                else
+                                {
+                                    for (int j = 0; j < dtgv_MQC_PD.Columns.Count; j++)
+                                    {
+                                        dtgv_MQC_PD[j, i].Style.BackColor = Color.FromArgb(248, 251, 255);
+                                        dtgv_MQC_PD[j, i].Style.ForeColor = Color.Black;
+                                        dtgv_MQC_PD[j, i].Style.SelectionBackColor = Color.FromArgb(221, 238, 255);
+                                    }
+                                }
+                                msf.UpdateProgress(100 * (i + 1) / dtgv_MQC_PD.Rows.Count, "Application is running, please wait ... ");
                             }
                             msf.BeginInvoke(new Action(() => msf.Close()));
                         }));
