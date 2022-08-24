@@ -4,6 +4,7 @@ using System.Text;
 using System.Data;
 using System.Windows.Forms;
 using System.Threading;
+using System.Linq;
 
 namespace WindowsFormsApplication1
 {
@@ -335,7 +336,7 @@ namespace WindowsFormsApplication1
             return dt1;
 
         }
-        public static DataTable ListMQC2(string date, string line)
+        public static DataTable ListMQC2(string date)
         {
             DataTable dt = new DataTable();
             sqlSOFTCon sqlSOFTCon = new sqlSOFTCon();
@@ -350,7 +351,7 @@ namespace WindowsFormsApplication1
             sqlGetData.Append("LEFT JOIN thu_SMESData_NGRate as r on a.model = r.model and a.inspectdate = r.inspectdate ");
             sqlGetData.Append("join(SELECT model, inspectdate, line ");
             sqlGetData.Append("FROM m_ERPMQC_REALTIME ");
-            sqlGetData.Append("WHERE inspectdate like '%" + Convert.ToDateTime(date).ToString("yyyy-MM") + "%' and line like '%" + line + "%'");
+            sqlGetData.Append("WHERE inspectdate like '%" + Convert.ToDateTime(date).ToString("yyyy-MM") + "%'");
             sqlGetData.Append("group by model, inspectdate, line) as m ");
             sqlGetData.Append("on a.inspectdate = m.inspectdate and a.model = m.model and a.line = m.line ");
             sqlSOFTCon.sqlDataAdapterFillDatatable(sqlGetData.ToString(), ref dt);
@@ -368,7 +369,7 @@ namespace WindowsFormsApplication1
             else
             {
                 dt1 = ListMQC1(date);
-                dt = ListMQC2(date, line);
+                dt = ListMQC2(date);
             }
             double fail = -1;
             List<ListMQC> ListMQC = new List<ListMQC>();
@@ -401,10 +402,27 @@ namespace WindowsFormsApplication1
                     MQC.OUTPUT = 0;
                 MQC.REWORK = 0;
                 MQC.Total = double.Parse(dt1.Rows[i]["Total"].ToString());
-                MQC.NG_rate_realtime = Math.Round(MQC.NOGOOD / MQC.Total * 100, 1);
+                MQC.NG_rate_realtime = 0;
+                //MQC.NG_rate_realtime = Math.Round(MQC.NOGOOD / MQC.Total * 100, 1);
                 ListMQC.Add(MQC);
                 MQC = new ListMQC();
             }
+            List<ListMQC> ListMQCTemp = new List<ListMQC>();
+            ListMQC MQCTemp = new ListMQC();
+            var res = ListMQC.GroupBy(x => new { x.Model, x.Line }).Select(g => g.ToList()).ToList();
+            for(int i = 0; i < res.Count; i++)
+            {
+                MQCTemp.Model = res[0][i].Model;
+                MQCTemp.Line = res[0][i].Line;
+                MQCTemp.NOGOOD = res[0][i].NOGOOD;
+                MQCTemp.OUTPUT = res[0][i].OUTPUT;
+                MQCTemp.REWORK = 0;
+                MQCTemp.Total = res[0][i].Total;
+                MQCTemp.NG_rate_allow = res[0][i].NG_rate_allow;
+                MQCTemp.NG_rate_realtime = Math.Round(MQCTemp.NOGOOD / MQCTemp.Total * 100, 1);
+                ListMQCTemp.Add(MQCTemp);
+                MQCTemp = new ListMQC();
+            }    
             DataTable dtMQC = new DataTable();
             DataColumn[] tableColumns = new DataColumn[]
             {
@@ -460,15 +478,19 @@ namespace WindowsFormsApplication1
                     },
             };
             dtMQC.Columns.AddRange(tableColumns);
-            foreach (var data in ListMQC)
+            foreach (var data in ListMQCTemp)
             {
                 dtMQC.Rows.Add(data.Model, data.Date, data.Line, data.OUTPUT, data.REWORK, data.NOGOOD, data.Total, data.DailyTarget, data.NG_rate_realtime, data.NG_rate_allow);
             }
             DataRow[] rs = dtMQC.Select("Line like '%" + SaveData.line + "%'");
             DataTable rsMQC = new DataTable();
             rsMQC = rs.CopyToDataTable();
-            rsMQC.DefaultView.Sort = "Model, Line";
-            rsMQC = rsMQC.DefaultView.ToTable();
+            if (dtMQC.Rows.Count > 0)
+            {
+                SaveData.checknull = false;
+            }
+            else
+                SaveData.checknull = true;
             return rsMQC;
         }
         public static DataTable GetListPQC(string date, string line)
