@@ -351,7 +351,7 @@ namespace WindowsFormsApplication1
             sqlGetData.Append("LEFT JOIN thu_SMESData_NGRate as r on a.model = r.model and a.inspectdate = r.inspectdate ");
             sqlGetData.Append("join(SELECT model, inspectdate, line ");
             sqlGetData.Append("FROM m_ERPMQC_REALTIME ");
-            sqlGetData.Append("WHERE inspectdate like '%" + Convert.ToDateTime(date).ToString("yyyy-MM") + "%'");
+            sqlGetData.Append("WHERE inspectdate like '%" + Convert.ToDateTime(date).ToString("yyyy-MM") + "%' AND line = ''");
             sqlGetData.Append("group by model, inspectdate, line) as m ");
             sqlGetData.Append("on a.inspectdate = m.inspectdate and a.model = m.model and a.line = m.line ");
             sqlSOFTCon.sqlDataAdapterFillDatatable(sqlGetData.ToString(), ref dt);
@@ -482,16 +482,16 @@ namespace WindowsFormsApplication1
             {
                 dtMQC.Rows.Add(data.Model, data.Date, data.Line, data.OUTPUT, data.REWORK, data.NOGOOD, data.Total, data.DailyTarget, data.NG_rate_realtime, data.NG_rate_allow);
             }
-            DataRow[] rs = dtMQC.Select("Line like '%" + SaveData.line + "%'");
-            DataTable rsMQC = new DataTable();
-            rsMQC = rs.CopyToDataTable();
+            //DataRow[] rs = dtMQC.Select("Line like '%" + SaveData.line + "%'");
+            //DataTable rsMQC = new DataTable();
+            //rsMQC = rs.CopyToDataTable();
             if (dtMQC.Rows.Count > 0)
             {
                 SaveData.checknull = false;
             }
             else
                 SaveData.checknull = true;
-            return rsMQC;
+            return dtMQC;
         }
         public static DataTable GetListPQC(string date, string line)
         {

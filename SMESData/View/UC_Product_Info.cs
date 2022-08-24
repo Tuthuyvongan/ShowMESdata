@@ -29,7 +29,7 @@ namespace WindowsFormsApplication1
             SaveData.dtTemp3 = new DataTable();
             SaveData.dtTemp4 = new DataTable();
             SaveData.dtTemp3 = GetSOFTdata.ListMQC1(SaveData.Date);
-            SaveData.dtTemp4 = GetSOFTdata.ListMQC2(SaveData.Date, SaveData.line);
+            SaveData.dtTemp4 = GetSOFTdata.ListMQC2(SaveData.Date);
             //Setting
             lblTime.Font = new Font("Times New Roman", 14, FontStyle.Bold);
             //Timer          
@@ -37,6 +37,8 @@ namespace WindowsFormsApplication1
             wn.OnUpdateStatus += customControl_OnUpdateStatus;
             wnAll.OnUpdateStatus += customControl_OnUpdateStatus;
             //Update datagridview
+            SaveData.checknull = false;
+            SaveData.checknullPQC = false;
             SaveData.MQCClick = false;
             SaveData.PQCClick = false;
             SaveData.MQC = true;
@@ -367,7 +369,7 @@ namespace WindowsFormsApplication1
                     UpdateDTGV();                   
                     UpdateTime();
                     SaveData.dtTemp3 = GetSOFTdata.ListMQC1(SaveData.Date);
-                    SaveData.dtTemp4 = GetSOFTdata.ListMQC2(SaveData.Date, SaveData.line);
+                    SaveData.dtTemp4 = GetSOFTdata.ListMQC2(SaveData.Date);
                 }
             }
             else
