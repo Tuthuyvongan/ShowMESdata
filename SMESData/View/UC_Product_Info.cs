@@ -193,20 +193,17 @@ namespace WindowsFormsApplication1
             string date = dtpChart.Value.ToString("yyyy-MM-dd");
             SaveData.line = "";
             string line = SaveData.line;
-            if (SaveData.checknull == false && SaveData.MQC == true || SaveData.checknullPQC == false && SaveData.PQC == true)
-            {              
-                if (SaveData.MQC == true)
-                {                    
-                    dataMQC.Clear();
-                    dtgv_MQC_PD.DataSource = GetSOFTdata.GetListMQC(date, line);
-                    dtpChart.Visible = true;
-                }  
-                else
-                {                  
-                    dataPQC.Clear();
-                    dtgv_MQC_PD.DataSource = GetSOFTdata.GetListPQC(date, line);
-                    dtpChart.Visible = true;
-                }             
+            if (SaveData.MQC == true)
+            {
+                dataMQC.Clear();
+                dtgv_MQC_PD.DataSource = GetSOFTdata.GetListMQC(date, line);
+                dtpChart.Visible = true;
+            }
+            else
+            {
+                dataPQC.Clear();
+                dtgv_MQC_PD.DataSource = GetSOFTdata.GetListPQC(date, line);
+                dtpChart.Visible = true;
             }
         }
         public void UpdateDTGVByLine()
@@ -216,18 +213,15 @@ namespace WindowsFormsApplication1
             dtpChart.Value = Convert.ToDateTime(SaveData.Date);
             string date = SaveData.Date;
             string line = SaveData.line;
-            if (SaveData.checknull == false && SaveData.MQC == true || SaveData.checknullPQC == false && SaveData.PQC == true)
-            {                
-                if (SaveData.MQC == true)
-                {
-                    dataMQC.Clear();
-                    dtgv_MQC_PD.DataSource = GetSOFTdata.GetListMQC(date, line);
-                }    
-                else
-                {
-                    dataPQC.Clear();
-                    dtgv_MQC_PD.DataSource = GetSOFTdata.GetListPQC(date, line);
-                }
+            if (SaveData.MQC == true)
+            {
+                dataMQC.Clear();
+                dtgv_MQC_PD.DataSource = GetSOFTdata.GetListMQC(date, line);
+            }
+            else
+            {
+                dataPQC.Clear();
+                dtgv_MQC_PD.DataSource = GetSOFTdata.GetListPQC(date, line);
             }
             if (SaveData.Date != DateTime.Today.ToString("yyyy-MM-dd"))
             {
@@ -323,10 +317,6 @@ namespace WindowsFormsApplication1
         }
         public void UpdateTime()
         {
-            if (SaveData.checknull == false && SaveData.MQC == true || SaveData.checknullPQC == false && SaveData.PQC == true)
-            {
-
-            }
             dtpChart.Value = DateTime.Today;
             btStart.Enabled = false;
             btStart.BackgroundColor = Color.Gainsboro;
