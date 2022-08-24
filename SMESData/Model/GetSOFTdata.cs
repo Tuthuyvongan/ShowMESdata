@@ -333,10 +333,15 @@ namespace WindowsFormsApplication1
             sqlGetData.Append("AND a.create_date LIKE '%" + date + "%' AND a.operation_no = 'OP10' AND a.send_quantity IS NOT NULL ");
             sqlGetData.Append("ORDER BY a.product_no ");
             sqlMESCon.sqlDataAdapterFillDatatable(sqlGetData.ToString(), ref dt1);
+            if (dt1.Rows.Count > 0)
+            {
+                SaveData.checknull = false;
+            }
+            else
+                SaveData.checknull = true;
             return dt1;
-
         }
-        public static DataTable ListMQC2(string date)
+        public static DataTable ListMQC2(string date, string line)
         {
             DataTable dt = new DataTable();
             sqlSOFTCon sqlSOFTCon = new sqlSOFTCon();
@@ -351,7 +356,7 @@ namespace WindowsFormsApplication1
             sqlGetData.Append("LEFT JOIN thu_SMESData_NGRate as r on a.model = r.model and a.inspectdate = r.inspectdate ");
             sqlGetData.Append("join(SELECT model, inspectdate, line ");
             sqlGetData.Append("FROM m_ERPMQC_REALTIME ");
-            sqlGetData.Append("WHERE inspectdate like '%" + Convert.ToDateTime(date).ToString("yyyy-MM") + "%' AND line = ''");
+            sqlGetData.Append("WHERE inspectdate like '%" + Convert.ToDateTime(date).ToString("yyyy-MM") + "%' AND line like '%" + line + "%'");
             sqlGetData.Append("group by model, inspectdate, line) as m ");
             sqlGetData.Append("on a.inspectdate = m.inspectdate and a.model = m.model and a.line = m.line ");
             sqlSOFTCon.sqlDataAdapterFillDatatable(sqlGetData.ToString(), ref dt);
@@ -359,18 +364,8 @@ namespace WindowsFormsApplication1
         }
         public static DataTable GetListMQC(string date, string line)
         {
-            DataTable dt1;
-            DataTable dt;
-            if (SaveData.Date == DateTime.Today.ToString("yyyy-MM-dd"))
-            {
-                dt1 = SaveData.dtTemp3;
-                dt = SaveData.dtTemp4;
-            }
-            else
-            {
-                dt1 = ListMQC1(date);
-                dt = ListMQC2(date);
-            }
+            DataTable dt1 = SaveData.dtTemp3;
+            DataTable dt = SaveData.dtTemp4;
             double fail = -1;
             List<ListMQC> ListMQC = new List<ListMQC>();
             ListMQC MQC = new ListMQC();
@@ -409,20 +404,22 @@ namespace WindowsFormsApplication1
             }
             List<ListMQC> ListMQCTemp = new List<ListMQC>();
             ListMQC MQCTemp = new ListMQC();
-            var res = ListMQC.GroupBy(x => new { x.Model, x.Line }).Select(g => g.ToList()).ToList();
-            for(int i = 0; i < res.Count; i++)
+            var res = ListMQC.GroupBy(x => new { x.Model, x.Line, x.NOGOOD, x.OUTPUT, x.Total, x.DailyTarget }).Select(g => g.ToList()).ToList();
+            for (int i = 0; i < res.Count; i++)
             {
-                MQCTemp.Model = res[0][i].Model;
-                MQCTemp.Line = res[0][i].Line;
-                MQCTemp.NOGOOD = res[0][i].NOGOOD;
-                MQCTemp.OUTPUT = res[0][i].OUTPUT;
+                MQCTemp.Model = res[i][i].Model;
+                MQCTemp.Line = res[i][i].Line;
+                MQCTemp.DailyTarget = res[i][i].DailyTarget;
+                MQCTemp.Date = Convert.ToDateTime(SaveData.Date).ToString("dd-MM-yyyy");
+                MQCTemp.NOGOOD = res[i][i].NOGOOD;
+                MQCTemp.OUTPUT = res[i][i].OUTPUT;
                 MQCTemp.REWORK = 0;
-                MQCTemp.Total = res[0][i].Total;
-                MQCTemp.NG_rate_allow = res[0][i].NG_rate_allow;
+                MQCTemp.Total = res[i][i].Total;
+                MQCTemp.NG_rate_allow = res[i][i].NG_rate_allow;
                 MQCTemp.NG_rate_realtime = Math.Round(MQCTemp.NOGOOD / MQCTemp.Total * 100, 1);
                 ListMQCTemp.Add(MQCTemp);
                 MQCTemp = new ListMQC();
-            }    
+            }
             DataTable dtMQC = new DataTable();
             DataColumn[] tableColumns = new DataColumn[]
             {

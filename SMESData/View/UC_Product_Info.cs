@@ -29,7 +29,7 @@ namespace WindowsFormsApplication1
             SaveData.dtTemp3 = new DataTable();
             SaveData.dtTemp4 = new DataTable();
             SaveData.dtTemp3 = GetSOFTdata.ListMQC1(SaveData.Date);
-            SaveData.dtTemp4 = GetSOFTdata.ListMQC2(SaveData.Date);
+            SaveData.dtTemp4 = GetSOFTdata.ListMQC2(SaveData.Date, "");
             //Setting
             lblTime.Font = new Font("Times New Roman", 14, FontStyle.Bold);
             //Timer          
@@ -315,6 +315,9 @@ namespace WindowsFormsApplication1
             {
                 SaveData.check = true;
                 dtpChart.Visible = false;
+                SaveData.Date = dtpChart.Value.ToString("yyyy-MM-dd");
+                SaveData.dtTemp3 = GetSOFTdata.ListMQC1(SaveData.Date);
+                SaveData.dtTemp4 = GetSOFTdata.ListMQC2(SaveData.Date, "");
                 UpdateDTGV();
             }  
         }
@@ -322,20 +325,21 @@ namespace WindowsFormsApplication1
         {
             if (SaveData.checknull == false && SaveData.MQC == true || SaveData.checknullPQC == false && SaveData.PQC == true)
             {
-                dtpChart.Value = DateTime.Today;
-                btStart.Enabled = false;
-                btStart.BackgroundColor = Color.Gainsboro;
-                btStop.Enabled = true;
-                btStop.BackgroundColor = Color.Orange;
-                dtpChart.Enabled = false;
-                pnTimeControl.Enabled = false;
-                timer1.Start();
-                startTime = DateTime.Now;
-                SaveData.MQCClick = false;
-                SaveData.PQCClick = false;
-                SaveData.Date = dtpChart.Value.ToString("yyyy-MM-dd");
-                SaveData.check = false;
+
             }
+            dtpChart.Value = DateTime.Today;
+            btStart.Enabled = false;
+            btStart.BackgroundColor = Color.Gainsboro;
+            btStop.Enabled = true;
+            btStop.BackgroundColor = Color.Orange;
+            dtpChart.Enabled = false;
+            pnTimeControl.Enabled = false;
+            timer1.Start();
+            startTime = DateTime.Now;
+            SaveData.MQCClick = false;
+            SaveData.PQCClick = false;
+            SaveData.Date = dtpChart.Value.ToString("yyyy-MM-dd");
+            SaveData.check = false;
         }
         public void ChangeUpdateTime()
         {
@@ -366,10 +370,10 @@ namespace WindowsFormsApplication1
                     SaveData.uc_pi = 0;
                     SaveData.uc_mqc = -1;
                     SaveData.uc_pqc = -1;
-                    UpdateDTGV();                   
-                    UpdateTime();
                     SaveData.dtTemp3 = GetSOFTdata.ListMQC1(SaveData.Date);
-                    SaveData.dtTemp4 = GetSOFTdata.ListMQC2(SaveData.Date);
+                    SaveData.dtTemp4 = GetSOFTdata.ListMQC2(SaveData.Date, "");
+                    UpdateDTGV();
+                    UpdateTime();
                 }
             }
             else
