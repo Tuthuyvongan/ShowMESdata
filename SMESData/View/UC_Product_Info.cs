@@ -24,6 +24,7 @@ namespace WindowsFormsApplication1
             dtpChart.Enabled = false;
             SaveData.Date = DateTime.Today.ToString("yyyy-MM-dd");
             dtpChart.ValueChanged += new EventHandler(dtpChart_ValueChanged);
+            //
             SaveData.dtTemp3 = new DataTable();
             SaveData.dtTemp3 = GetSOFTdata.ListUUID(SaveData.Date);
             //Setting
@@ -56,7 +57,6 @@ namespace WindowsFormsApplication1
         public int secondsToWait = 300;
         private DateTime startTime;
         //       
-        
 
         private void dtgv_MQC_PD_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -266,6 +266,7 @@ namespace WindowsFormsApplication1
                                     }
                                 }
                                 msf.UpdateProgress(100 * (i + 1) / dtgv_MQC_PD.Rows.Count, "Application is running, please wait ... ");
+                                Thread.Sleep(50);
                             }
                             msf.BeginInvoke(new Action(() => msf.Close()));
                         }));
@@ -361,7 +362,8 @@ namespace WindowsFormsApplication1
                     SaveData.uc_mqc = -1;
                     SaveData.uc_pqc = -1;
                     UpdateDTGV();                   
-                    UpdateTime();                    
+                    UpdateTime();
+                    SaveData.dtTemp3 = GetSOFTdata.ListUUID(SaveData.Date);
                 }
             }
             else

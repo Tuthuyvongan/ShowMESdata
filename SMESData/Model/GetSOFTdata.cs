@@ -141,114 +141,115 @@ namespace WindowsFormsApplication1
             ListMQC MQC = new ListMQC();
             MQC.OUTPUT = 0;
             MQC.NOGOOD = 0;
-            MessageWaitForm msf = new MessageWaitForm();
-            Thread backgroundThreadFetchData = new Thread(
-                    new ThreadStart(() =>
+            //MessageWaitForm msf = new MessageWaitForm();
+            //Thread backgroundThreadFetchData = new Thread(
+            //        new ThreadStart(() =>
+            //        {
+
+            //            msf.BeginInvoke(new Action(() => msf.Close()));
+            //        }));
+            //backgroundThreadFetchData.Start();
+            //msf.ShowDialog();
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                if (dt.Rows.Count == 1)
+                {
+                    string[] serno = dt.Rows[i]["serno"].ToString().Split(';');
+                    string uuid = serno[3];
+                    DataRow[] result = dt1.Select("uuid = '" + uuid + "'");
+                    if (result.Length > 0)
                     {
-                        for (int i = 0; i < dt.Rows.Count; i++)
+                        MQC.Model = dt.Rows[i]["Model"].ToString();
+                        MQC.Date = Convert.ToDateTime(dt.Rows[i]["Date"]).ToString("dd-MM-yyyy");
+                        MQC.Line = dt.Rows[i]["Line"].ToString();
+                        if (dt.Rows[i]["remark"].ToString() == "NG")
                         {
-                            if (dt.Rows.Count == 1)
+                            MQC.NOGOOD = MQC.NOGOOD + double.Parse(dt.Rows[i]["data"].ToString());
+                        }
+                        else if (dt.Rows[i]["remark"].ToString() == "OP")
+                        {
+                            MQC.OUTPUT = MQC.OUTPUT + double.Parse(dt.Rows[i]["data"].ToString());
+                        }
+                        MQC.REWORK = 0;
+                        MQC.Total = MQC.OUTPUT + MQC.REWORK + MQC.NOGOOD;
+                        MQC.DailyTarget = double.Parse(dt.Rows[i]["DailyTarget"].ToString());
+                        MQC.NG_rate_realtime = Math.Round(MQC.NOGOOD / MQC.Total * 100, 1);
+                        MQC.NG_rate_allow = double.Parse(dt.Rows[i]["%NG_allow"].ToString());
+                        ListMQC.Add(MQC);
+                    }
+                }
+                else
+                {
+                    if (i + 1 != dt.Rows.Count)
+                    {
+                        string[] serno = dt.Rows[i]["serno"].ToString().Split(';');
+                        string uuid = serno[3];
+                        DataRow[] result = dt1.Select("uuid = '" + uuid + "'");
+                        if (result.Length > 0)
+                        {
+                            if (dt.Rows[i]["Model"].ToString() == dt.Rows[i + 1]["Model"].ToString() && dt.Rows[i]["Line"].ToString() == dt.Rows[i + 1]["Line"].ToString())
                             {
-                                string[] serno = dt.Rows[i]["serno"].ToString().Split(';');
-                                string uuid = serno[3];
-                                DataRow[] result = dt1.Select("uuid = '" + uuid + "'");
-                                if (result.Length > 0)
+                                if (dt.Rows[i]["remark"].ToString() == "NG")
                                 {
-                                    MQC.Model = dt.Rows[i]["Model"].ToString();
-                                    MQC.Date = Convert.ToDateTime(dt.Rows[i]["Date"]).ToString("dd-MM-yyyy");
-                                    MQC.Line = dt.Rows[i]["Line"].ToString();
-                                    if (dt.Rows[i]["remark"].ToString() == "NG")
-                                    {
-                                        MQC.NOGOOD = MQC.NOGOOD + double.Parse(dt.Rows[i]["data"].ToString());
-                                    }
-                                    else if (dt.Rows[i]["remark"].ToString() == "OP")
-                                    {
-                                        MQC.OUTPUT = MQC.OUTPUT + double.Parse(dt.Rows[i]["data"].ToString());
-                                    }
-                                    MQC.REWORK = 0;
-                                    MQC.Total = MQC.OUTPUT + MQC.REWORK + MQC.NOGOOD;
-                                    MQC.DailyTarget = double.Parse(dt.Rows[i]["DailyTarget"].ToString());
-                                    MQC.NG_rate_realtime = Math.Round(MQC.NOGOOD / MQC.Total * 100, 1);
-                                    MQC.NG_rate_allow = double.Parse(dt.Rows[i]["%NG_allow"].ToString());
-                                    ListMQC.Add(MQC);
+                                    MQC.NOGOOD = MQC.NOGOOD + double.Parse(dt.Rows[i]["data"].ToString());
+                                }
+                                else if (dt.Rows[i]["remark"].ToString() == "OP")
+                                {
+                                    MQC.OUTPUT = MQC.OUTPUT + double.Parse(dt.Rows[i]["data"].ToString());
                                 }
                             }
                             else
                             {
-                                if (i + 1 != dt.Rows.Count)
+                                MQC.Model = dt.Rows[i]["Model"].ToString();
+                                MQC.Date = Convert.ToDateTime(dt.Rows[i]["Date"]).ToString("dd-MM-yyyy");
+                                MQC.Line = dt.Rows[i]["Line"].ToString();
+                                if (dt.Rows[i]["remark"].ToString() == "NG")
                                 {
-                                    string[] serno = dt.Rows[i]["serno"].ToString().Split(';');
-                                    string uuid = serno[3];
-                                    DataRow[] result = dt1.Select("uuid = '" + uuid + "'");
-                                    if (result.Length > 0)
-                                    {
-                                        if (dt.Rows[i]["Model"].ToString() == dt.Rows[i + 1]["Model"].ToString() && dt.Rows[i]["Line"].ToString() == dt.Rows[i + 1]["Line"].ToString())
-                                        {
-                                            if (dt.Rows[i]["remark"].ToString() == "NG")
-                                            {
-                                                MQC.NOGOOD = MQC.NOGOOD + double.Parse(dt.Rows[i]["data"].ToString());
-                                            }
-                                            else if (dt.Rows[i]["remark"].ToString() == "OP")
-                                            {
-                                                MQC.OUTPUT = MQC.OUTPUT + double.Parse(dt.Rows[i]["data"].ToString());
-                                            }
-                                        }
-                                        else
-                                        {
-                                            MQC.Model = dt.Rows[i]["Model"].ToString();
-                                            MQC.Date = Convert.ToDateTime(dt.Rows[i]["Date"]).ToString("dd-MM-yyyy");
-                                            MQC.Line = dt.Rows[i]["Line"].ToString();
-                                            if (dt.Rows[i]["remark"].ToString() == "NG")
-                                            {
-                                                MQC.NOGOOD = MQC.NOGOOD + double.Parse(dt.Rows[i]["data"].ToString());
-                                            }
-                                            else if (dt.Rows[i]["remark"].ToString() == "OP")
-                                            {
-                                                MQC.OUTPUT = MQC.OUTPUT + double.Parse(dt.Rows[i]["data"].ToString());
-                                            }
-                                            MQC.REWORK = 0;
-                                            MQC.Total = MQC.OUTPUT + MQC.REWORK + MQC.NOGOOD;
-                                            MQC.DailyTarget = double.Parse(dt.Rows[i]["DailyTarget"].ToString());
-                                            MQC.NG_rate_realtime = Math.Round(MQC.NOGOOD / MQC.Total * 100, 1);
-                                            MQC.NG_rate_allow = double.Parse(dt.Rows[i]["%NG_allow"].ToString());
-                                            ListMQC.Add(MQC);
-                                            MQC = new ListMQC();
-                                        }
-                                    }
+                                    MQC.NOGOOD = MQC.NOGOOD + double.Parse(dt.Rows[i]["data"].ToString());
                                 }
-                                else
+                                else if (dt.Rows[i]["remark"].ToString() == "OP")
                                 {
-                                    string[] serno = dt.Rows[i]["serno"].ToString().Split(';');
-                                    string uuid = serno[3];
-                                    DataRow[] result = dt1.Select("uuid = '" + uuid + "'");
-                                    if (result.Length > 0)
-                                    {
-                                        MQC.Model = dt.Rows[i]["Model"].ToString();
-                                        MQC.Date = Convert.ToDateTime(dt.Rows[i]["Date"]).ToString("dd-MM-yyyy");
-                                        MQC.Line = dt.Rows[i]["Line"].ToString();
-                                        if (dt.Rows[i]["remark"].ToString() == "NG")
-                                        {
-                                            MQC.NOGOOD = MQC.NOGOOD + double.Parse(dt.Rows[i]["data"].ToString());
-                                        }
-                                        else if (dt.Rows[i]["remark"].ToString() == "OP")
-                                        {
-                                            MQC.OUTPUT = MQC.OUTPUT + double.Parse(dt.Rows[i]["data"].ToString());
-                                        }
-                                        MQC.REWORK = 0;
-                                        MQC.Total = MQC.OUTPUT + MQC.REWORK + MQC.NOGOOD;
-                                        MQC.DailyTarget = double.Parse(dt.Rows[i]["DailyTarget"].ToString());
-                                        MQC.NG_rate_realtime = Math.Round(MQC.NOGOOD / MQC.Total * 100, 1);
-                                        MQC.NG_rate_allow = double.Parse(dt.Rows[i]["%NG_allow"].ToString());
-                                        ListMQC.Add(MQC);
-                                    }
+                                    MQC.OUTPUT = MQC.OUTPUT + double.Parse(dt.Rows[i]["data"].ToString());
                                 }
+                                MQC.REWORK = 0;
+                                MQC.Total = MQC.OUTPUT + MQC.REWORK + MQC.NOGOOD;
+                                MQC.DailyTarget = double.Parse(dt.Rows[i]["DailyTarget"].ToString());
+                                MQC.NG_rate_realtime = Math.Round(MQC.NOGOOD / MQC.Total * 100, 1);
+                                MQC.NG_rate_allow = double.Parse(dt.Rows[i]["%NG_allow"].ToString());
+                                ListMQC.Add(MQC);
+                                MQC = new ListMQC();
                             }
-                            msf.UpdateProgress(100 * (i + 1) / dt.Rows.Count, "Application is running, please wait ... ");
                         }
-                        msf.BeginInvoke(new Action(() => msf.Close()));
-                    }));
-            backgroundThreadFetchData.Start();
-            msf.ShowDialog();
+                    }
+                    else
+                    {
+                        string[] serno = dt.Rows[i]["serno"].ToString().Split(';');
+                        string uuid = serno[3];
+                        DataRow[] result = dt1.Select("uuid = '" + uuid + "'");
+                        if (result.Length > 0)
+                        {
+                            MQC.Model = dt.Rows[i]["Model"].ToString();
+                            MQC.Date = Convert.ToDateTime(dt.Rows[i]["Date"]).ToString("dd-MM-yyyy");
+                            MQC.Line = dt.Rows[i]["Line"].ToString();
+                            if (dt.Rows[i]["remark"].ToString() == "NG")
+                            {
+                                MQC.NOGOOD = MQC.NOGOOD + double.Parse(dt.Rows[i]["data"].ToString());
+                            }
+                            else if (dt.Rows[i]["remark"].ToString() == "OP")
+                            {
+                                MQC.OUTPUT = MQC.OUTPUT + double.Parse(dt.Rows[i]["data"].ToString());
+                            }
+                            MQC.REWORK = 0;
+                            MQC.Total = MQC.OUTPUT + MQC.REWORK + MQC.NOGOOD;
+                            MQC.DailyTarget = double.Parse(dt.Rows[i]["DailyTarget"].ToString());
+                            MQC.NG_rate_realtime = Math.Round(MQC.NOGOOD / MQC.Total * 100, 1);
+                            MQC.NG_rate_allow = double.Parse(dt.Rows[i]["%NG_allow"].ToString());
+                            ListMQC.Add(MQC);
+                        }
+                    }
+                }
+                //msf.UpdateProgress(100 * (i + 1) / dt.Rows.Count, "Application is running, please wait ... ");
+            }
             DataTable dtMQC = new DataTable();
             DataColumn[] tableColumns = new DataColumn[]
             {
