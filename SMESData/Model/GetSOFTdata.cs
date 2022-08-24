@@ -397,29 +397,11 @@ namespace WindowsFormsApplication1
                     MQC.OUTPUT = 0;
                 MQC.REWORK = 0;
                 MQC.Total = double.Parse(dt1.Rows[i]["Total"].ToString());
-                MQC.NG_rate_realtime = 0;
-                //MQC.NG_rate_realtime = Math.Round(MQC.NOGOOD / MQC.Total * 100, 1);
+                MQC.NG_rate_realtime = Math.Round(MQC.NOGOOD / MQC.Total * 100, 1);
                 ListMQC.Add(MQC);
                 MQC = new ListMQC();
             }
-            List<ListMQC> ListMQCTemp = new List<ListMQC>();
-            ListMQC MQCTemp = new ListMQC();
-            var res = ListMQC.GroupBy(x => new { x.Model, x.Line, x.NOGOOD, x.OUTPUT, x.Total, x.DailyTarget }).Select(g => g.ToList()).ToList();
-            for (int i = 0; i < res.Count; i++)
-            {
-                MQCTemp.Model = res[i][i].Model;
-                MQCTemp.Line = res[i][i].Line;
-                MQCTemp.DailyTarget = res[i][i].DailyTarget;
-                MQCTemp.Date = Convert.ToDateTime(SaveData.Date).ToString("dd-MM-yyyy");
-                MQCTemp.NOGOOD = res[i][i].NOGOOD;
-                MQCTemp.OUTPUT = res[i][i].OUTPUT;
-                MQCTemp.REWORK = 0;
-                MQCTemp.Total = res[i][i].Total;
-                MQCTemp.NG_rate_allow = res[i][i].NG_rate_allow;
-                MQCTemp.NG_rate_realtime = Math.Round(MQCTemp.NOGOOD / MQCTemp.Total * 100, 1);
-                ListMQCTemp.Add(MQCTemp);
-                MQCTemp = new ListMQC();
-            }
+            
             DataTable dtMQC = new DataTable();
             DataColumn[] tableColumns = new DataColumn[]
             {
@@ -475,20 +457,55 @@ namespace WindowsFormsApplication1
                     },
             };
             dtMQC.Columns.AddRange(tableColumns);
-            foreach (var data in ListMQCTemp)
+            foreach (var data in ListMQC)
             {
                 dtMQC.Rows.Add(data.Model, data.Date, data.Line, data.OUTPUT, data.REWORK, data.NOGOOD, data.Total, data.DailyTarget, data.NG_rate_realtime, data.NG_rate_allow);
             }
-            //DataRow[] rs = dtMQC.Select("Line like '%" + SaveData.line + "%'");
-            //DataTable rsMQC = new DataTable();
-            //rsMQC = rs.CopyToDataTable();
+            dtMQC.DefaultView.Sort = "Model, Line";
+            dtMQC = dtMQC.DefaultView.ToTable();
+            for (int i = 0; i < dtMQC.Rows.Count; i++)
+            {
+                if (dtMQC.Rows.Count == 1)
+                {
+                }
+                else
+                {
+                    if (i + 1 != dtMQC.Rows.Count)
+                    {
+                        if (dtMQC.Rows[i]["Model"].ToString() == dtMQC.Rows[i + 1]["Model"].ToString() && dtMQC.Rows[i]["Line"].ToString() == dtMQC.Rows[i + 1]["Line"].ToString())
+                        {
+                            dtMQC.Rows[i]["OUTPUT"] = (double.Parse(dtMQC.Rows[i]["OUTPUT"].ToString()) + double.Parse(dtMQC.Rows[i + 1]["OUTPUT"].ToString())).ToString();
+                            dtMQC.Rows[i]["NOGOOD"] = (double.Parse(dtMQC.Rows[i]["NOGOOD"].ToString()) + double.Parse(dtMQC.Rows[i + 1]["NOGOOD"].ToString())).ToString();
+                            dtMQC.Rows[i]["Total"] = (double.Parse(dtMQC.Rows[i]["Total"].ToString()) + double.Parse(dtMQC.Rows[i + 1]["Total"].ToString())).ToString();
+                            dtMQC.Rows[i + 1].Delete();
+                            dtMQC.AcceptChanges();
+                        }
+                        else
+                        {
+                            dtMQC.Rows[i]["NG_rate_realtime"] = Math.Round(double.Parse(dtMQC.Rows[i]["NOGOOD"].ToString()) / double.Parse(dtMQC.Rows[i]["Total"].ToString()) * 100, 1).ToString();
+                        }
+                    }
+                    else
+                    {
+
+                    }
+                }
+            }
+            DataTable rsMQC = new DataTable();
             if (dtMQC.Rows.Count > 0)
             {
+                DataRow[] rs = dtMQC.Select("Line like '%" + SaveData.line + "%'");
+                rsMQC = rs.CopyToDataTable();
+                rsMQC.DefaultView.Sort = "Model";
+                rsMQC = rsMQC.DefaultView.ToTable();
                 SaveData.checknull = false;
+                return rsMQC;
             }
             else
+            {
                 SaveData.checknull = true;
-            return dtMQC;
+                return dtMQC;
+            }
         }
         public static DataTable GetListPQC(string date, string line)
         {
