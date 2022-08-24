@@ -25,8 +25,11 @@ namespace WindowsFormsApplication1
             SaveData.Date = DateTime.Today.ToString("yyyy-MM-dd");
             dtpChart.ValueChanged += new EventHandler(dtpChart_ValueChanged);
             //
+            SaveData.line = "";
             SaveData.dtTemp3 = new DataTable();
-            SaveData.dtTemp3 = GetSOFTdata.ListUUID(SaveData.Date);
+            SaveData.dtTemp4 = new DataTable();
+            SaveData.dtTemp3 = GetSOFTdata.ListMQC1(SaveData.Date);
+            SaveData.dtTemp4 = GetSOFTdata.ListMQC2(SaveData.Date, SaveData.line);
             //Setting
             lblTime.Font = new Font("Times New Roman", 14, FontStyle.Bold);
             //Timer          
@@ -363,7 +366,8 @@ namespace WindowsFormsApplication1
                     SaveData.uc_pqc = -1;
                     UpdateDTGV();                   
                     UpdateTime();
-                    SaveData.dtTemp3 = GetSOFTdata.ListUUID(SaveData.Date);
+                    SaveData.dtTemp3 = GetSOFTdata.ListMQC1(SaveData.Date);
+                    SaveData.dtTemp4 = GetSOFTdata.ListMQC2(SaveData.Date, SaveData.line);
                 }
             }
             else
