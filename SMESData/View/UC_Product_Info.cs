@@ -23,7 +23,9 @@ namespace WindowsFormsApplication1
             dtpChart.Format = DateTimePickerFormat.Custom;
             dtpChart.Enabled = false;
             SaveData.Date = DateTime.Today.ToString("yyyy-MM-dd");
-            dtpChart.ValueChanged += new EventHandler(dtpChart_ValueChanged);           
+            dtpChart.ValueChanged += new EventHandler(dtpChart_ValueChanged);
+            SaveData.dtTemp3 = new DataTable();
+            SaveData.dtTemp3 = GetSOFTdata.ListUUID(SaveData.Date);
             //Setting
             lblTime.Font = new Font("Times New Roman", 14, FontStyle.Bold);
             //Timer          
@@ -66,14 +68,14 @@ namespace WindowsFormsApplication1
                 SaveData.Model = dtgv_MQC_PD.Rows[e.RowIndex].Cells[0].Value.ToString();
                 SaveData.line = dtgv_MQC_PD.Rows[e.RowIndex].Cells[2].Value.ToString();
                 SaveData.op = double.Parse(dtgv_MQC_PD.Rows[e.RowIndex].Cells[3].Value.ToString());
-                SaveData.rw = double.Parse(dtgv_MQC_PD.Rows[e.RowIndex].Cells[4].Value.ToString());
+                SaveData.rw = 0;
                 SaveData.ng = double.Parse(dtgv_MQC_PD.Rows[e.RowIndex].Cells[5].Value.ToString());
                 SaveData.total = double.Parse(dtgv_MQC_PD.Rows[e.RowIndex].Cells[6].Value.ToString());
                 SaveData.target = double.Parse(dtgv_MQC_PD.Rows[e.RowIndex].Cells[7].Value.ToString());
                 SaveData.NGrealtime = double.Parse(dtgv_MQC_PD.Rows[e.RowIndex].Cells[8].Value.ToString());
                 SaveData.NGallow = dtgv_MQC_PD.Rows[e.RowIndex].Cells[9].Value.ToString();
-                SaveData.RWrealtime = double.Parse(dtgv_MQC_PD.Rows[e.RowIndex].Cells[10].Value.ToString());
-                SaveData.RWallow = dtgv_MQC_PD.Rows[e.RowIndex].Cells[11].Value.ToString();
+                SaveData.RWrealtime = 0;
+                SaveData.RWallow = "0";
                 lbModel.Text = SaveData.Model;
                 lbLine.Text = SaveData.line;
                 lbOP.Text = SaveData.op.ToString();
@@ -89,7 +91,7 @@ namespace WindowsFormsApplication1
         public void lineData()
         {
             double OP = Math.Round(SaveData.op / SaveData.total * 100, 1);
-            double RW = Math.Round(SaveData.rw / SaveData.total * 100, 1);
+            double RW = 0;
             double NG = Math.Round(SaveData.ng / SaveData.total * 100, 1);
             dataMQC.Add(OP);
             dataMQC.Add(RW);
@@ -142,7 +144,7 @@ namespace WindowsFormsApplication1
             }
             linePCanvas1.Visible = true;
             //Add legends MQC           
-            if (dataMQC[0] == 0 && dataMQC[1] == 0 && dataMQC[2] == 0 || GetSOFTdata.GetListMQC(dtpChart.Value.ToString("yyyy-MM-dd"), "") == null && SaveData.MQC == true || GetSOFTdata.GetListPQC(dtpChart.Value.ToString("yyyy-MM-dd"), "") == null && SaveData.PQC == true || dtgv_MQC_PD.Rows.Count <= 0)
+            if (dataMQC[0] == 0 && dataMQC[1] == 0 && dataMQC[2] == 0 || SaveData.checknull == true && SaveData.MQC == true || SaveData.checknullPQC == true && SaveData.PQC == true || dtgv_MQC_PD.Rows.Count <= 0)
             {
                 lbOP1.Visible = false;
                 lbRW1.Visible = false;
@@ -186,7 +188,7 @@ namespace WindowsFormsApplication1
             string date = dtpChart.Value.ToString("yyyy-MM-dd");
             SaveData.line = "";
             string line = SaveData.line;
-            if (GetSOFTdata.GetListMQC(date, line) != null && SaveData.MQC == true || GetSOFTdata.GetListPQC(date, line) != null && SaveData.PQC == true)
+            if (SaveData.checknull == false && SaveData.MQC == true || SaveData.checknullPQC == false && SaveData.PQC == true)
             {              
                 if (SaveData.MQC == true)
                 {                    
@@ -203,11 +205,13 @@ namespace WindowsFormsApplication1
             }
         }
         public void UpdateDTGVByLine()
-        {           
+        {
+            btMQCD.BackgroundColor = Color.DodgerBlue;
+            btPQCD.BackgroundColor = Color.DodgerBlue;
             dtpChart.Value = Convert.ToDateTime(SaveData.Date);
             string date = SaveData.Date;
             string line = SaveData.line;
-            if (GetSOFTdata.GetListMQC(date, line) != null && SaveData.MQC == true || GetSOFTdata.GetListPQC(date, line) != null && SaveData.PQC == true)
+            if (SaveData.checknull == false && SaveData.MQC == true || SaveData.checknullPQC == false && SaveData.PQC == true)
             {                
                 if (SaveData.MQC == true)
                 {
@@ -235,52 +239,40 @@ namespace WindowsFormsApplication1
         }
         public void ChangeColor()
         {                       
-            if ((GetSOFTdata.GetListMQC(dtpChart.Value.ToString("yyyy-MM-dd"), "") != null && SaveData.MQC == true || GetSOFTdata.GetListPQC(dtpChart.Value.ToString("yyyy-MM-dd"), "") != null && SaveData.PQC == true) && dtgv_MQC_PD.Rows.Count > 0)
+            if ((SaveData.checknull == false && SaveData.MQC == true || SaveData.checknullPQC == false && SaveData.PQC == true) && dtgv_MQC_PD.Rows.Count > 0)
             {
                 MessageWaitForm msf = new MessageWaitForm();
                 Thread backgroundThreadFetchData = new Thread(
                         new ThreadStart(() =>
-                        { 
-                            for (int i = 0; i < dtgv_MQC_PD.Rows.Count; i++)
+                        {
+                            if(dtgv_MQC_PD.Rows.Count > 0)
                             {
-                                if (double.Parse(dtgv_MQC_PD.Rows[i].Cells[8].Value.ToString()) > double.Parse(dtgv_MQC_PD.Rows[i].Cells[9].Value.ToString()) && double.Parse(dtgv_MQC_PD.Rows[i].Cells[10].Value.ToString()) > double.Parse(dtgv_MQC_PD.Rows[i].Cells[11].Value.ToString()))
+                                for (int i = 0; i < dtgv_MQC_PD.Rows.Count; i++)
                                 {
-                                    for (int j = 0; j < dtgv_MQC_PD.Columns.Count; j++)
+                                    if (double.Parse(dtgv_MQC_PD.Rows[i].Cells[8].Value.ToString()) > double.Parse(dtgv_MQC_PD.Rows[i].Cells[9].Value.ToString()))
                                     {
-                                        dtgv_MQC_PD[j, i].Style.BackColor = Color.DarkViolet;
-                                        dtgv_MQC_PD[j, i].Style.ForeColor = Color.Yellow;
-                                        dtgv_MQC_PD[j, i].Style.SelectionBackColor = Color.FromArgb(102, 51, 153);
+                                        for (int j = 0; j < dtgv_MQC_PD.Columns.Count; j++)
+                                        {
+                                            dtgv_MQC_PD[j, i].Style.BackColor = Color.Red;
+                                            dtgv_MQC_PD[j, i].Style.ForeColor = Color.White;
+                                            dtgv_MQC_PD[j, i].Style.SelectionBackColor = Color.FromArgb(220, 20, 60);
+                                        }
                                     }
+                                    else
+                                    {
+                                        for (int j = 0; j < dtgv_MQC_PD.Columns.Count; j++)
+                                        {
+                                            dtgv_MQC_PD[j, i].Style.BackColor = Color.FromArgb(248, 251, 255);
+                                            dtgv_MQC_PD[j, i].Style.ForeColor = Color.Black;
+                                            dtgv_MQC_PD[j, i].Style.SelectionBackColor = Color.FromArgb(221, 238, 255);
+                                        }
+                                    }
+                                    msf.UpdateProgress(100 * (i + 1) / dtgv_MQC_PD.Rows.Count, "Application is running, please wait ... ");
                                 }
-                                else if (double.Parse(dtgv_MQC_PD.Rows[i].Cells[8].Value.ToString()) > double.Parse(dtgv_MQC_PD.Rows[i].Cells[9].Value.ToString()))
-                                {
-                                    for (int j = 0; j < dtgv_MQC_PD.Columns.Count; j++)
-                                    {
-                                        dtgv_MQC_PD[j, i].Style.BackColor = Color.Red;
-                                        dtgv_MQC_PD[j, i].Style.ForeColor = Color.White;
-                                        dtgv_MQC_PD[j, i].Style.SelectionBackColor = Color.FromArgb(220, 20, 60);
-                                    }
-                                }
-                                else if (double.Parse(dtgv_MQC_PD.Rows[i].Cells[10].Value.ToString()) > double.Parse(dtgv_MQC_PD.Rows[i].Cells[11].Value.ToString()))
-                                {
-                                    for (int j = 0; j < dtgv_MQC_PD.Columns.Count; j++)
-                                    {
-                                        dtgv_MQC_PD[j, i].Style.BackColor = Color.Yellow;
-                                        dtgv_MQC_PD[j, i].Style.ForeColor = Color.Black;
-                                        dtgv_MQC_PD[j, i].Style.SelectionBackColor = Color.FromArgb(255, 165, 0);
-                                    }
-                                }     
-                                else
-                                {
-                                    for (int j = 0; j < dtgv_MQC_PD.Columns.Count; j++)
-                                    {
-                                        dtgv_MQC_PD[j, i].Style.BackColor = Color.FromArgb(248, 251, 255);
-                                        dtgv_MQC_PD[j, i].Style.ForeColor = Color.Black;
-                                        dtgv_MQC_PD[j, i].Style.SelectionBackColor = Color.FromArgb(221, 238, 255);
-                                    }
-                                }
-                                msf.UpdateProgress(100 * (i + 1) / dtgv_MQC_PD.Rows.Count, "Application is running, please wait ... ");
-                                Thread.Sleep(50);
+                            }
+                            else
+                            {
+                                MessageBox.Show("Vui long nhap du lieu tim kiem");
                             }
                             msf.BeginInvoke(new Action(() => msf.Close()));
                         }));
@@ -290,7 +282,7 @@ namespace WindowsFormsApplication1
         }
         public void ChangeData()
         {
-            if ((GetSOFTdata.GetListMQC(dtpChart.Value.ToString("yyyy-MM-dd"), "") != null && SaveData.MQC == true || GetSOFTdata.GetListPQC(dtpChart.Value.ToString("yyyy-MM-dd"), "") != null && SaveData.PQC == true) && dtgv_MQC_PD.Rows.Count > 0)
+            if ((SaveData.checknull == false && SaveData.MQC == true || SaveData.checknullPQC == false && SaveData.PQC == true) && dtgv_MQC_PD.Rows.Count > 0)
             {
                 dataMQC.Clear();
                 dataPQC.Clear();
@@ -298,14 +290,14 @@ namespace WindowsFormsApplication1
                 SaveData.Model = dtgv_MQC_PD.Rows[0].Cells[0].Value.ToString();
                 SaveData.line = dtgv_MQC_PD.Rows[0].Cells[2].Value.ToString();
                 SaveData.op = double.Parse(dtgv_MQC_PD.Rows[0].Cells[3].Value.ToString());
-                SaveData.rw = double.Parse(dtgv_MQC_PD.Rows[0].Cells[4].Value.ToString());
+                SaveData.rw = 0;
                 SaveData.ng = double.Parse(dtgv_MQC_PD.Rows[0].Cells[5].Value.ToString());
                 SaveData.total = double.Parse(dtgv_MQC_PD.Rows[0].Cells[6].Value.ToString());
                 SaveData.target = double.Parse(dtgv_MQC_PD.Rows[0].Cells[7].Value.ToString());
                 SaveData.NGrealtime = double.Parse(dtgv_MQC_PD.Rows[0].Cells[8].Value.ToString());
                 SaveData.NGallow = dtgv_MQC_PD.Rows[0].Cells[9].Value.ToString();
-                SaveData.RWrealtime = double.Parse(dtgv_MQC_PD.Rows[0].Cells[10].Value.ToString());
-                SaveData.RWallow = dtgv_MQC_PD.Rows[0].Cells[11].Value.ToString();
+                SaveData.RWrealtime = 0;
+                SaveData.RWallow = "0";
                 lbModel.Text = SaveData.Model;
                 lbLine.Text = SaveData.line;
                 lbOP.Text = SaveData.op.ToString();
@@ -329,7 +321,7 @@ namespace WindowsFormsApplication1
         }
         public void UpdateTime()
         {
-            if (GetSOFTdata.GetListMQC(dtpChart.Value.ToString("yyyy-MM-dd"), "") != null && SaveData.MQC == true || GetSOFTdata.GetListPQC(dtpChart.Value.ToString("yyyy-MM-dd"), "") != null && SaveData.PQC == true)
+            if (SaveData.checknull == false && SaveData.MQC == true || SaveData.checknullPQC == false && SaveData.PQC == true)
             {
                 dtpChart.Value = DateTime.Today;
                 btStart.Enabled = false;
@@ -568,11 +560,11 @@ namespace WindowsFormsApplication1
         {
             dtgv_MQC_PD.ColumnHeadersDefaultCellStyle.Font = new Font("Times New Roman", 14.5F, FontStyle.Bold);
             dtgv_MQC_PD.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dtgv_MQC_PD.Columns["RW_rate_allow"].Visible = false;
-            dtgv_MQC_PD.Columns["RW_rate_realtime"].Visible = false;
             dtgv_MQC_PD.Columns["REWORK"].Visible = false;
             if (SaveData.PQC == true)
             {
+                dtgv_MQC_PD.Columns["RW_rate_allow"].Visible = false;
+                dtgv_MQC_PD.Columns["RW_rate_realtime"].Visible = false;
                 dtgv_MQC_PD.Columns["Target"].HeaderText = "TARGET";
                 dtgv_MQC_PD.Columns["Target"].Visible = true;
                 dtgv_MQC_PD.Columns["Target"].FillWeight = 2;

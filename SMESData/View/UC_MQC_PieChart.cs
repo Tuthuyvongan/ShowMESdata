@@ -115,7 +115,6 @@ namespace WindowsFormsApplication1
                                 d = Math.Round(temp / GetSOFTdata.getTotalMQC("L07", date) * 100, 2);
                             dataL07.Add(d);    
                             msf.UpdateProgress(100 * (i + 1) / 3, "Application is running, please wait ... ");
-                            Thread.Sleep(50);
                         }
                         msf.BeginInvoke(new Action(() => msf.Close()));
                     }
@@ -629,35 +628,29 @@ namespace WindowsFormsApplication1
             SaveData.dtTemp1 = GetSOFTdata.GetListMQC(dtpChart.Value.ToString("yyyy-MM-dd"), "");
             if (SaveData.dtTemp1.Rows.Count > 0)
             {
-                DataRow[] results1 = SaveData.dtTemp1.Select("Line = 'L01' and NG_rate_realtime > NG_rate_allow and RW_rate_realtime > RW_rate_allow");
-                DataRow[] results11 = SaveData.dtTemp1.Select("Line = 'L01' and (NG_rate_realtime > NG_rate_allow or RW_rate_realtime > RW_rate_allow)");
+                //DataRow[] results1 = SaveData.dtTemp1.Select("Line = 'L01' and NG_rate_realtime > NG_rate_allow and RW_rate_realtime > RW_rate_allow");
+                DataRow[] results11 = SaveData.dtTemp1.Select("Line = 'L01' and (NG_rate_realtime > NG_rate_allow)");
                 //DataRow[] results111 = SaveData.dtTemp1.Select("Line = 'L01' and RW_rate_realtime > RW_rate_allow");
-                DataRow[] results2 = SaveData.dtTemp1.Select("Line = 'L02' and NG_rate_realtime > NG_rate_allow and RW_rate_realtime > RW_rate_allow");
-                DataRow[] results22 = SaveData.dtTemp1.Select("Line = 'L02' and (NG_rate_realtime > NG_rate_allow or RW_rate_realtime > RW_rate_allow)");
+                //DataRow[] results2 = SaveData.dtTemp1.Select("Line = 'L02' and NG_rate_realtime > NG_rate_allow and RW_rate_realtime > RW_rate_allow");
+                DataRow[] results22 = SaveData.dtTemp1.Select("Line = 'L02' and (NG_rate_realtime > NG_rate_allow)");
                 //DataRow[] results222 = SaveData.dtTemp1.Select("Line = 'L02' and RW_rate_realtime > RW_rate_allow");
-                DataRow[] results3 = SaveData.dtTemp1.Select("Line = 'L03' and NG_rate_realtime > NG_rate_allow and RW_rate_realtime > RW_rate_allow");
-                DataRow[] results33 = SaveData.dtTemp1.Select("Line = 'L03' and (NG_rate_realtime > NG_rate_allow or RW_rate_realtime > RW_rate_allow)");
+                //DataRow[] results3 = SaveData.dtTemp1.Select("Line = 'L03' and NG_rate_realtime > NG_rate_allow and RW_rate_realtime > RW_rate_allow");
+                DataRow[] results33 = SaveData.dtTemp1.Select("Line = 'L03' and (NG_rate_realtime > NG_rate_allow)");
                 //DataRow[] results333 = SaveData.dtTemp1.Select("Line = 'L03' and RW_rate_realtime > RW_rate_allow");
-                DataRow[] results4 = SaveData.dtTemp1.Select("Line = 'L04' and NG_rate_realtime > NG_rate_allow and RW_rate_realtime > RW_rate_allow");
-                DataRow[] results44 = SaveData.dtTemp1.Select("Line = 'L04' and (NG_rate_realtime > NG_rate_allow or RW_rate_realtime > RW_rate_allow)");
+                //DataRow[] results4 = SaveData.dtTemp1.Select("Line = 'L04' and NG_rate_realtime > NG_rate_allow and RW_rate_realtime > RW_rate_allow");
+                DataRow[] results44 = SaveData.dtTemp1.Select("Line = 'L04' and (NG_rate_realtime > NG_rate_allow)");
                 //DataRow[] results444 = SaveData.dtTemp1.Select("Line = 'L04' and RW_rate_realtime > RW_rate_allow");
-                DataRow[] results5 = SaveData.dtTemp1.Select("Line = 'L05' and NG_rate_realtime > NG_rate_allow and RW_rate_realtime > RW_rate_allow");
-                DataRow[] results55 = SaveData.dtTemp1.Select("Line = 'L05' and (NG_rate_realtime > NG_rate_allow or RW_rate_realtime > RW_rate_allow)");
+                //DataRow[] results5 = SaveData.dtTemp1.Select("Line = 'L05' and NG_rate_realtime > NG_rate_allow and RW_rate_realtime > RW_rate_allow");
+                DataRow[] results55 = SaveData.dtTemp1.Select("Line = 'L05' and (NG_rate_realtime > NG_rate_allow)");
                 //DataRow[] results555 = SaveData.dtTemp1.Select("Line = 'L05' and RW_rate_realtime > RW_rate_allow");
-                DataRow[] results6 = SaveData.dtTemp1.Select("Line = 'L06' and NG_rate_realtime > NG_rate_allow and RW_rate_realtime > RW_rate_allow");
-                DataRow[] results66 = SaveData.dtTemp1.Select("Line = 'L06' and (NG_rate_realtime > NG_rate_allow or RW_rate_realtime > RW_rate_allow)");
+                //DataRow[] results6 = SaveData.dtTemp1.Select("Line = 'L06' and NG_rate_realtime > NG_rate_allow and RW_rate_realtime > RW_rate_allow");
+                DataRow[] results66 = SaveData.dtTemp1.Select("Line = 'L06' and (NG_rate_realtime > NG_rate_allow)");
                 //DataRow[] results666 = SaveData.dtTemp1.Select("Line = 'L06' and RW_rate_realtime > RW_rate_allow");
-                DataRow[] results7 = SaveData.dtTemp1.Select("Line = 'L07' and NG_rate_realtime > NG_rate_allow and RW_rate_realtime > RW_rate_allow");
-                DataRow[] results77 = SaveData.dtTemp1.Select("Line = 'L07' and (NG_rate_realtime > NG_rate_allow or RW_rate_realtime > RW_rate_allow)");
+                //DataRow[] results7 = SaveData.dtTemp1.Select("Line = 'L07' and NG_rate_realtime > NG_rate_allow and RW_rate_realtime > RW_rate_allow");
+                DataRow[] results77 = SaveData.dtTemp1.Select("Line = 'L07' and (NG_rate_realtime > NG_rate_allow)");
                 //DataRow[] results777 = SaveData.dtTemp1.Select("Line = 'L07' and RW_rate_realtime > RW_rate_allow");
                 //pn1
-                if (results1.Length > 0)
-                {
-                    panel1.BorderStyle = BorderStyle.FixedSingle;
-                    panel1.BackColor = Color.DarkViolet;
-                    L01Chart.BackColor = Color.DarkViolet;
-                }
-                else if (results11.Length > 0)
+                if (results11.Length > 0)
                 {
                     panel1.BorderStyle = BorderStyle.FixedSingle;
                     panel1.BackColor = Color.Yellow;
@@ -676,13 +669,7 @@ namespace WindowsFormsApplication1
                     L01Chart.BackColor = Color.White;
                 }
                 //pn2
-                if (results2.Length > 0)
-                {
-                    panel2.BorderStyle = BorderStyle.FixedSingle;
-                    panel2.BackColor = Color.DarkViolet;
-                    L02Chart.BackColor = Color.DarkViolet;
-                }
-                else if (results22.Length > 0)
+                if (results22.Length > 0)
                 {
                     panel2.BorderStyle = BorderStyle.FixedSingle;
                     panel2.BackColor = Color.Yellow;
@@ -701,13 +688,7 @@ namespace WindowsFormsApplication1
                     L02Chart.BackColor = Color.White;
                 }
                 //pn3
-                if (results3.Length > 0)
-                {
-                    panel3.BorderStyle = BorderStyle.FixedSingle;
-                    panel3.BackColor = Color.DarkViolet;
-                    L03Chart.BackColor = Color.DarkViolet;
-                }
-                else if (results33.Length > 0)
+                if (results33.Length > 0)
                 {
                     panel3.BorderStyle = BorderStyle.FixedSingle;
                     panel3.BackColor = Color.Yellow;
@@ -726,13 +707,7 @@ namespace WindowsFormsApplication1
                     L03Chart.BackColor = Color.White;
                 }
                 //pn4
-                if (results4.Length > 0)
-                {
-                    panel4.BorderStyle = BorderStyle.FixedSingle;
-                    panel4.BackColor = Color.DarkViolet;
-                    L04Chart.BackColor = Color.DarkViolet;
-                }
-                else if (results44.Length > 0)
+                if (results44.Length > 0)
                 {
                     panel4.BorderStyle = BorderStyle.FixedSingle;
                     panel4.BackColor = Color.Yellow;
@@ -751,13 +726,7 @@ namespace WindowsFormsApplication1
                     L04Chart.BackColor = Color.White;
                 }
                 //pn5
-                if (results5.Length > 0)
-                {
-                    panel5.BorderStyle = BorderStyle.FixedSingle;
-                    panel5.BackColor = Color.DarkViolet;
-                    L05Chart.BackColor = Color.DarkViolet;
-                }
-                else if (results55.Length > 0)
+                if (results55.Length > 0)
                 {
                     panel5.BorderStyle = BorderStyle.FixedSingle;
                     panel5.BackColor = Color.Yellow;
@@ -776,13 +745,7 @@ namespace WindowsFormsApplication1
                     L05Chart.BackColor = Color.White;
                 }
                 //pn6
-                if (results6.Length > 0)
-                {
-                    panel6.BorderStyle = BorderStyle.FixedSingle;
-                    panel6.BackColor = Color.DarkViolet;
-                    L06Chart.BackColor = Color.DarkViolet;
-                }
-                else if (results66.Length > 0)
+                if (results66.Length > 0)
                 {
                     panel6.BorderStyle = BorderStyle.FixedSingle;
                     panel6.BackColor = Color.Yellow;
@@ -801,13 +764,7 @@ namespace WindowsFormsApplication1
                     L06Chart.BackColor = Color.White;
                 }
                 //pn7
-                if (results7.Length > 0)
-                {
-                    panel7.BorderStyle = BorderStyle.FixedSingle;
-                    panel7.BackColor = Color.DarkViolet;
-                    L07Chart.BackColor = Color.DarkViolet;
-                }
-                else if (results77.Length > 0)
+                if (results77.Length > 0)
                 {
                     panel7.BorderStyle = BorderStyle.FixedSingle;
                     panel7.BackColor = Color.Yellow;

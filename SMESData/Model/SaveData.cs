@@ -22,11 +22,14 @@ namespace WindowsFormsApplication1
         public static string Date { get; set; }
         public static DataTable dtTemp1 { get; set; }
         public static DataTable dtTemp2 { get; set; }
+        public static DataTable dtTemp3 { get; set; }
         public static int uc_mqc { get; set; }
         public static int uc_pqc { get; set; }
         public static int uc_pi { get; set; }
         public static bool check { get; set; }
         public static string pass { get; set; }
         public static bool checkpass { get; set; }
+        public static bool checknull { get; set; }
+        public static bool checknullPQC { get; set; }
     }
 }

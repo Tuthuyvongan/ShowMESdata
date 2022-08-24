@@ -16,7 +16,8 @@ namespace WindowsFormsApplication1
                 new Action(() =>
                 {
                     lbWait.Text = announce + progress + "%";
-                }));
+                }
+            ));
             progressBar1.BeginInvoke(
                 new Action(() =>
                 {
