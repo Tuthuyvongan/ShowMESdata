@@ -127,7 +127,7 @@
     <Compile Include="Model\ListPQC.cs" />
     <Compile Include="Model\SaveData.cs" />
     <Compile Include="Model\UploadLogic.cs" />
-    <Compile Include="SQLConnection\sqlMESPlanningExcution.cs" />
+    <Compile Include="SQLConnection\sqlMES.cs" />
     <Compile Include="SQLConnection\DatabaseSQLServerUtils.cs" />
     <Compile Include="SQLConnection\DatabaseUtils.cs" />
     <Compile Include="SQLConnection\sqlSOFTCon.cs" />

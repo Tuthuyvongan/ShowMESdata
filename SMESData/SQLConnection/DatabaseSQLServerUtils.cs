@@ -12,9 +12,9 @@ namespace WindowsFormsApplication1
             SqlConnection con = new SqlConnection(connectionString);
             return con;
         }
-        public static MySqlConnection GetMesDBConnection(string host, string user, string password, string database)
+        public static MySqlConnection GetMesDBConnection(string host, string user, string password)
         {
-            string connectionString = string.Format("host={0};user={1};password={2};database={3};", host, user, password, database);
+            string connectionString = string.Format("host={0};user={1};password={2};", host, user, password);
             MySqlConnection con = new MySqlConnection(connectionString);
             return con;
         }

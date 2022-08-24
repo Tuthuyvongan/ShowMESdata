@@ -83,8 +83,6 @@ namespace WindowsFormsApplication1
                 lbTarget.Text = SaveData.target.ToString();
                 lbNGR.Text = SaveData.NGrealtime.ToString() + "%";
                 tbNGA.Text = SaveData.NGallow.ToString() + "%";
-                lbRWR.Text = SaveData.RWrealtime.ToString() + "%";
-                lbRWA.Text = SaveData.RWallow.ToString() + "%";
                 renderPiechart();
             }            
         }
@@ -317,8 +315,6 @@ namespace WindowsFormsApplication1
                 lbTarget.Text = SaveData.target.ToString();
                 lbNGR.Text = SaveData.NGrealtime.ToString() + "%";
                 tbNGA.Text = SaveData.NGallow.ToString() + "%";
-                lbRWR.Text = SaveData.RWrealtime.ToString() + "%";
-                lbRWA.Text = SaveData.RWallow.ToString() + "%";
             }
             renderPiechart();
         }
@@ -584,7 +580,6 @@ namespace WindowsFormsApplication1
             {
                 dtgv_MQC_PD.Columns["DailyTarget"].HeaderText = "DAILY TARGET";
                 dtgv_MQC_PD.Columns["DailyTarget"].FillWeight = 2;
-                dtgv_MQC_PD.Columns["Target"].Visible = false;
             }
             dtgv_MQC_PD.Columns["NG_rate_realtime"].HeaderText = "NG_realtime(%)";
             dtgv_MQC_PD.Columns["RW_rate_realtime"].HeaderText = "RW_realtime(%)";

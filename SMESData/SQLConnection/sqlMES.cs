@@ -5,9 +5,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-    public class sqlMESPlanningExcutionCon
+    public class sqlMES
     {
-        public MySqlConnection conn = DatabaseUtils.getMes_quality_control_order();
+        public MySqlConnection conn = DatabaseUtils.getMesData();
 
         public string sqlExecuteScalarString(string sql)
         {
