@@ -464,11 +464,12 @@ namespace WindowsFormsApplication1
             {
                 dtMQC.Rows.Add(data.Model, data.Date, data.Line, data.OUTPUT, data.REWORK, data.NOGOOD, data.Total, data.DailyTarget, data.NG_rate_realtime, data.NG_rate_allow);
             }
-            DataRow[] rs = dtMQC.Select("Line = '" + SaveData.line + "'");
-            dtMQC = rs.CopyToDataTable();
-            dtMQC.DefaultView.Sort = "Model, Line";
-            dtMQC = dtMQC.DefaultView.ToTable();
-            return dtMQC;
+            DataRow[] rs = dtMQC.Select("Line like '%" + SaveData.line + "%'");
+            DataTable rsMQC = new DataTable();
+            rsMQC = rs.CopyToDataTable();
+            rsMQC.DefaultView.Sort = "Model, Line";
+            rsMQC = rsMQC.DefaultView.ToTable();
+            return rsMQC;
         }
         public static DataTable GetListPQC(string date, string line)
         {
