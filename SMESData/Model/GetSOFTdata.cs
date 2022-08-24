@@ -479,6 +479,7 @@ namespace WindowsFormsApplication1
                             dtMQC.Rows[i]["Total"] = (double.Parse(dtMQC.Rows[i]["Total"].ToString()) + double.Parse(dtMQC.Rows[i + 1]["Total"].ToString())).ToString();
                             dtMQC.Rows[i + 1].Delete();
                             dtMQC.AcceptChanges();
+                            i--;
                         }
                         else
                         {
@@ -496,7 +497,7 @@ namespace WindowsFormsApplication1
             {
                 DataRow[] rs = dtMQC.Select("Line like '%" + SaveData.line + "%'");
                 rsMQC = rs.CopyToDataTable();
-                rsMQC.DefaultView.Sort = "Model";
+                rsMQC.DefaultView.Sort = "NG_rate_realtime DESC";
                 rsMQC = rsMQC.DefaultView.ToTable();
                 SaveData.checknull = false;
                 return rsMQC;
