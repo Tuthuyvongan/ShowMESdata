@@ -110,7 +110,7 @@ namespace WindowsFormsApplication1
             DataTable dt1 = new DataTable();
             sqlMES sqlMESCon = new sqlMES();
             StringBuilder sqlGetData = new StringBuilder();
-            sqlGetData.Append("SELECT DISTINCT c.uuid as UUID, a.product_no as Model, a.send_quantity as Total, a.pass_qty as OUTPUT, a.failed_qty as NOGOOD ");
+            sqlGetData.Append("SELECT DISTINCT c.uuid as UUID, a.product_no as Model, a.send_quantity as Total, a.pass_qty as OUTPUT, a.failed_qty as NOGOOD, a.send_time as Date ");
             sqlGetData.Append("FROM mes_quality_control.quality_control_order AS a, mes_planning_excution.job_move AS b, mes_planning_excution.job_order_record AS c ");
             sqlGetData.Append("WHERE a.job_move_uuid = b.uuid AND b.job_order_uuid = c.job_order_uuid AND b.product_lot_no = c.product_lot_no ");
             sqlGetData.Append("AND a.send_quantity = c.actual_finish_qty AND b.create_by = c.create_by AND a.delete_flag = 0 AND b.delete_flag = 0 AND c.delete_flag = 0 ");
@@ -174,7 +174,8 @@ namespace WindowsFormsApplication1
             for (int i = 0; i < dt1.Rows.Count; i++)
             {
                 MQC.Model = dt1.Rows[i]["Model"].ToString();
-                MQC.Date = Convert.ToDateTime(date).ToString("dd-MM-yyyy");
+                //MQC.Date = Convert.ToDateTime(date).ToString("dd-MM-yyyy");
+                MQC.Date = dt1.Rows[i]["Date"].ToString();
                 string uuid = dt1.Rows[i]["UUID"].ToString();
                 DataRow[] result = dt.Select("serno like '%" + uuid + "%'");
                 if (result.Length > 0)
@@ -201,7 +202,7 @@ namespace WindowsFormsApplication1
                 ListMQC.Add(MQC);
                 MQC = new ListMQC();
             }
-            
+            SaveData.dtTemp6 = new DataTable();
             DataTable dtMQC = new DataTable();
             DataColumn[] tableColumns = new DataColumn[]
             {
@@ -254,17 +255,73 @@ namespace WindowsFormsApplication1
                     {
                         ColumnName="NG_rate_allow",
                         DataType=typeof(double),
+                    }
+            };
+            DataColumn[] tableColumns1 = new DataColumn[]
+            {
+                    new DataColumn()
+                    {
+                        ColumnName="Model",
+                        DataType=typeof(string),
                     },
+                    new DataColumn()
+                    {
+                        ColumnName="Date",
+                        DataType=typeof(string),
+                    },
+                    new DataColumn()
+                    {
+                        ColumnName="Line",
+                        DataType=typeof(string),
+                    },
+                    new DataColumn()
+                    {
+                        ColumnName="OUTPUT",
+                        DataType=typeof(double),
+                    },
+                    new DataColumn()
+                    {
+                        ColumnName="REWORK",
+                        DataType=typeof(double),
+                    },
+                    new DataColumn()
+                    {
+                        ColumnName="NOGOOD",
+                        DataType=typeof(double),
+                    },
+                    new DataColumn()
+                    {
+                        ColumnName="Total",
+                        DataType=typeof(double),
+                    },
+                    new DataColumn()
+                    {
+                        ColumnName="DailyTarget",
+                        DataType=typeof(double),
+                    },
+                    new DataColumn()
+                    {
+                        ColumnName="NG_rate_realtime",
+                        DataType=typeof(double),
+                    },
+                    new DataColumn()
+                    {
+                        ColumnName="NG_rate_allow",
+                        DataType=typeof(double),
+                    }
             };
             dtMQC.Columns.AddRange(tableColumns);
+            SaveData.dtTemp6.Columns.AddRange(tableColumns1);
             foreach (var data in ListMQC)
             {
                 dtMQC.Rows.Add(data.Model, data.Date, data.Line, data.OUTPUT, data.REWORK, data.NOGOOD, data.Total, data.DailyTarget, data.NG_rate_realtime, data.NG_rate_allow);
+                SaveData.dtTemp6.Rows.Add(data.Model, data.Date, data.Line, data.OUTPUT, data.REWORK, data.NOGOOD, data.Total, data.DailyTarget, data.NG_rate_realtime, data.NG_rate_allow);
             }
             dtMQC.DefaultView.Sort = "Model, Line";
             dtMQC = dtMQC.DefaultView.ToTable();
             for (int i = 0; i < dtMQC.Rows.Count; i++)
             {
+                dtMQC.Rows[i]["Date"] = Convert.ToDateTime(date).ToString("dd-MM-yyyy");
                 if (dtMQC.Rows.Count == 1)
                 {
                 }
@@ -520,8 +577,11 @@ namespace WindowsFormsApplication1
             DataTable dt = new DataTable();
             sqlSOFTCon sqlSOFTCon = new sqlSOFTCon();
             StringBuilder sqlGetData = new StringBuilder();
-            DataColumn[] tableColumns = new DataColumn[]
+
+            if (SaveData.PQC == true)
             {
+                DataColumn[] tableColumns = new DataColumn[]
+{
                 new DataColumn()
                 {
                     ColumnName="Model",
@@ -552,10 +612,8 @@ namespace WindowsFormsApplication1
                     ColumnName="DateTime",
                     DataType=typeof(string),
                 }
-            };
-            dt.Columns.AddRange(tableColumns);
-            if (SaveData.PQC == true)
-            {
+};
+                dt.Columns.AddRange(tableColumns);
                 sqlGetData.Append("SELECT Model, LotNumber, Line, InspectDateTime as DateTime, Quantity, Inspector, AttributeType as Remark, POCode as Serno FROM ProcessHistory.PQCMesData ");
                 sqlGetData.Append("where Model = '" + model + "' and Line = '" + line + "' and InspectDateTime like '%" + date + "%'");
                 sqlGetData.Append("order by InspectDateTime desc, AttributeType");
@@ -568,15 +626,67 @@ namespace WindowsFormsApplication1
             }
             else
             {
-                sqlGetData.Append("SELECT model as Model, lot as LotNumber, line as Line, inspectdate as Date, inspecttime as Time, data as Quantity, judge as Inspector, remark as Remark, serno as Serno FROM m_ERPMQC_REALTIME ");
-                sqlGetData.Append("where model = '" + model + "' and line = '" + line + "' and inspectdate = '" + date + "'");
-                sqlGetData.Append("order by inspecttime desc, remark");
-                sqlSOFTCon.sqlDataAdapterFillDatatable(sqlGetData.ToString(), ref dt);
-                for (int i = 0; i < dt.Rows.Count; i++)
+                DataColumn[] tableColumns = new DataColumn[]
+            {
+                    new DataColumn()
+                    {
+                        ColumnName="Model",
+                        DataType=typeof(string),
+                    },
+                    new DataColumn()
+                    {
+                        ColumnName="Date",
+                        DataType=typeof(string),
+                    },
+                    new DataColumn()
+                    {
+                        ColumnName="Line",
+                        DataType=typeof(string),
+                    },
+                    new DataColumn()
+                    {
+                        ColumnName="OUTPUT",
+                        DataType=typeof(double),
+                    },
+                    new DataColumn()
+                    {
+                        ColumnName="REWORK",
+                        DataType=typeof(double),
+                    },
+                    new DataColumn()
+                    {
+                        ColumnName="NOGOOD",
+                        DataType=typeof(double),
+                    },
+                    new DataColumn()
+                    {
+                        ColumnName="Total",
+                        DataType=typeof(double),
+                    },
+                    new DataColumn()
+                    {
+                        ColumnName="DailyTarget",
+                        DataType=typeof(double),
+                    },
+                    new DataColumn()
+                    {
+                        ColumnName="NG_rate_realtime",
+                        DataType=typeof(double),
+                    },
+                    new DataColumn()
+                    {
+                        ColumnName="NG_rate_allow",
+                        DataType=typeof(double),
+                    }
+            };
+                dt.Columns.AddRange(tableColumns);
+                DataRow[] rs;
+                if (SaveData.dtTemp6 != null)
                 {
-                    string DtIn = Convert.ToDateTime(dt.Rows[i]["Date"]).ToString("dd-MM-yyyy");
-                    dt.Rows[i]["DateTime"] = DtIn + " " + dt.Rows[i]["Time"];
-                }
+                    rs = SaveData.dtTemp6.Select("Model = '" + model + "' and Line = '" + line + "'");
+                    if (rs.Length > 0)
+                        dt = rs.CopyToDataTable();
+                }         
             }
             return dt;
         }
