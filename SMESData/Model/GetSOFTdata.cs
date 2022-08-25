@@ -14,11 +14,9 @@ namespace WindowsFormsApplication1
         public static double getTotalMQC(string line, string date)
         {
             double s = 0;
-            DataTable dt = new DataTable();
-            DataRow[] rs = SaveData.dtTemp5.Select("Line = '" + line + "'");
-            if (rs.Length > 0)
+            DataTable dt = GetListMQC(date, line);
+            if (dt.Rows.Count > 0)
             {
-                dt = rs.CopyToDataTable();
                 for (int i = 0; i < dt.Rows.Count; i++)
                 {
                     s = s + double.Parse(dt.Rows[i]["Total"].ToString());
@@ -34,11 +32,9 @@ namespace WindowsFormsApplication1
         public static double getTotalRemark(string line, string remark, string date)
         {
             double s = 0;
-            DataTable dt = new DataTable();
-            DataRow[] rs = SaveData.dtTemp5.Select("Line = '" + line + "'");
-            if (rs.Length > 0)
+            DataTable dt = GetListMQC(date, line);
+            if (dt.Rows.Count > 0)
             {
-                dt = rs.CopyToDataTable();
                 for (int i = 0; i < dt.Rows.Count; i ++)
                 {
                     s = s + double.Parse(dt.Rows[i][remark].ToString());

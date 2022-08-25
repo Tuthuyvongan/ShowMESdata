@@ -28,10 +28,8 @@ namespace WindowsFormsApplication1
             SaveData.line = "";
             SaveData.dtTemp3 = new DataTable();
             SaveData.dtTemp4 = new DataTable();
-            SaveData.dtTemp5 = new DataTable();
             SaveData.dtTemp3 = GetSOFTdata.ListMQC1(SaveData.Date);
             SaveData.dtTemp4 = GetSOFTdata.ListMQC2(SaveData.Date, "");
-            SaveData.dtTemp5 = GetSOFTdata.GetListMQC(SaveData.Date, "");
             //Setting
             lblTime.Font = new Font("Times New Roman", 14, FontStyle.Bold);
             //Timer          
@@ -315,7 +313,6 @@ namespace WindowsFormsApplication1
                 SaveData.dtTemp3 = GetSOFTdata.ListMQC1(SaveData.Date);
                 SaveData.dtTemp4 = GetSOFTdata.ListMQC2(SaveData.Date, "");
                 UpdateDTGV();
-                SaveData.dtTemp5 = GetSOFTdata.GetListMQC(SaveData.Date, "");
             }  
         }
         public void UpdateTime()
@@ -365,7 +362,6 @@ namespace WindowsFormsApplication1
                     SaveData.uc_pqc = -1;
                     SaveData.dtTemp3 = GetSOFTdata.ListMQC1(SaveData.Date);
                     SaveData.dtTemp4 = GetSOFTdata.ListMQC2(SaveData.Date, "");
-                    SaveData.dtTemp5 = GetSOFTdata.GetListMQC(SaveData.Date, "");
                     UpdateDTGV();
                     UpdateTime();
                 }

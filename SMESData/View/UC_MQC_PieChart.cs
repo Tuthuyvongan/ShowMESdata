@@ -453,7 +453,8 @@ namespace WindowsFormsApplication1
             SaveData.check = true;
             dtpChart.Visible = false;
             SaveData.Date = dtpChart.Value.ToString("yyyy-MM-dd");
-            SaveData.dtTemp5 = GetSOFTdata.GetListMQC(SaveData.Date, "");
+            SaveData.dtTemp3 = GetSOFTdata.ListMQC1(SaveData.Date);
+            SaveData.dtTemp4 = GetSOFTdata.ListMQC2(SaveData.Date, "");
             renderPiechart();
         }
         public void UpdateTime()
@@ -499,7 +500,8 @@ namespace WindowsFormsApplication1
                     SaveData.uc_pi = -1;
                     SaveData.uc_mqc = 0;
                     SaveData.uc_pqc = -1;
-                    SaveData.dtTemp5 = GetSOFTdata.GetListMQC(SaveData.Date, "");
+                    SaveData.dtTemp3 = GetSOFTdata.ListMQC1(SaveData.Date);
+                    SaveData.dtTemp4 = GetSOFTdata.ListMQC2(SaveData.Date, "");
                     renderPiechart();
                     UpdateTime();
                 }
