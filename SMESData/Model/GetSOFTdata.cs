@@ -15,7 +15,7 @@ namespace WindowsFormsApplication1
         { 
             double s = 0;
             DataTable dt = new DataTable();
-            DataRow []rs = SaveData.dtTemp5.Select("Line = '" + line + "' and Date = '" + Convert.ToDateTime(date).ToString("dd-MM-YYYY") + "'");
+            DataRow []rs = SaveData.dtTemp5.Select("Line = '" + line + "' and Date = '" + Convert.ToDateTime(date).ToString("dd-MM-yyyy") + "'");
             if (rs.Length > 0)
             {
                 dt = rs.CopyToDataTable();
@@ -37,7 +37,7 @@ namespace WindowsFormsApplication1
                 SaveData.dtTemp5 = GetListMQC(date, "");
             double s = 0;
             DataTable dt = new DataTable();
-            DataRow[] rs = SaveData.dtTemp5.Select("Line = '" + line + "' and Date = '" + Convert.ToDateTime(date).ToString("dd-MM-YYYY") + "'");
+            DataRow[] rs = SaveData.dtTemp5.Select("Line = '" + line + "' and Date = '" + Convert.ToDateTime(date).ToString("dd-MM-yyyy") + "'");
             if (rs.Length > 0)
             {
                 dt = rs.CopyToDataTable();
