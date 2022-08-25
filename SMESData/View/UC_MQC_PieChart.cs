@@ -53,74 +53,65 @@ namespace WindowsFormsApplication1
             string [] remark = { "OUTPUT", "REWORK", "NOGOOD" };
             double d;
             double temp;
-            MessageWaitForm msf = new MessageWaitForm();
-            Thread backgroundThreadFetchData = new Thread(
-                    new ThreadStart(() =>
-                    {
-                        for (int i = 0; i < 3; i++)
-                        {
-                            //L01
-                            temp = GetSOFTdata.getTotalRemark("L01", remark[i], date);
-                            if (temp == 0 || temp is double.NaN)
-                                d = 0;
-                            else
-                                d = Math.Round(temp / GetSOFTdata.getTotalMQC("L01", date) * 100, 2);
-                            dataL01.Add(d);
+            for (int i = 0; i < 3; i++)
+            {
+                //L01
+                temp = GetSOFTdata.getTotalRemark("L01", remark[i], date);
+                if (temp == 0 || temp is double.NaN)
+                    d = 0;
+                else
+                    d = Math.Round(temp / GetSOFTdata.getTotalMQC("L01", date) * 100, 2);
+                dataL01.Add(d);
 
-                            //L02
-                            temp = GetSOFTdata.getTotalRemark("L02", remark[i], date);
-                            if (temp == 0 || temp is double.NaN)
-                                d = 0;
-                            else
-                                d = Math.Round(temp / GetSOFTdata.getTotalMQC("L02", date) * 100, 2);
-                            dataL02.Add(d);
+                //L02
+                temp = GetSOFTdata.getTotalRemark("L02", remark[i], date);
+                if (temp == 0 || temp is double.NaN)
+                    d = 0;
+                else
+                    d = Math.Round(temp / GetSOFTdata.getTotalMQC("L02", date) * 100, 2);
+                dataL02.Add(d);
 
-                            //L03
-                            temp = GetSOFTdata.getTotalRemark("L03", remark[i], date);
-                            if (temp == 0 || temp is double.NaN)
-                                d = 0;
-                            else
-                                d = Math.Round(temp / GetSOFTdata.getTotalMQC("L03", date) * 100, 2);
-                            dataL03.Add(d);
+                //L03
+                temp = GetSOFTdata.getTotalRemark("L03", remark[i], date);
+                if (temp == 0 || temp is double.NaN)
+                    d = 0;
+                else
+                    d = Math.Round(temp / GetSOFTdata.getTotalMQC("L03", date) * 100, 2);
+                dataL03.Add(d);
 
-                            //L04
-                            temp = GetSOFTdata.getTotalRemark("L04", remark[i], date);
-                            if (temp == 0 || temp is double.NaN)
-                                d = 0;
-                            else
-                                d = Math.Round(temp / GetSOFTdata.getTotalMQC("L04", date) * 100, 2);
-                            dataL04.Add(d);
+                //L04
+                temp = GetSOFTdata.getTotalRemark("L04", remark[i], date);
+                if (temp == 0 || temp is double.NaN)
+                    d = 0;
+                else
+                    d = Math.Round(temp / GetSOFTdata.getTotalMQC("L04", date) * 100, 2);
+                dataL04.Add(d);
 
-                            //L05
-                            temp = GetSOFTdata.getTotalRemark("L05", remark[i], date);
-                            if (temp == 0 || temp is double.NaN)
-                                d = 0;
-                            else
-                                d = Math.Round(temp / GetSOFTdata.getTotalMQC("L05", date) * 100, 2);
-                            dataL05.Add(d);
+                //L05
+                temp = GetSOFTdata.getTotalRemark("L05", remark[i], date);
+                if (temp == 0 || temp is double.NaN)
+                    d = 0;
+                else
+                    d = Math.Round(temp / GetSOFTdata.getTotalMQC("L05", date) * 100, 2);
+                dataL05.Add(d);
 
-                            //L06
-                            temp = GetSOFTdata.getTotalRemark("L06", remark[i], date);
-                            if (temp == 0 || temp is double.NaN)
-                                d = 0;
-                            else
-                                d = Math.Round(temp / GetSOFTdata.getTotalMQC("L06", date) * 100, 2);
-                            dataL06.Add(d);
+                //L06
+                temp = GetSOFTdata.getTotalRemark("L06", remark[i], date);
+                if (temp == 0 || temp is double.NaN)
+                    d = 0;
+                else
+                    d = Math.Round(temp / GetSOFTdata.getTotalMQC("L06", date) * 100, 2);
+                dataL06.Add(d);
 
-                            //L07
-                            temp = GetSOFTdata.getTotalRemark("L07", remark[i], date);
-                            if (temp == 0 || temp is double.NaN)
-                                d = 0;
-                            else
-                                d = Math.Round(temp / GetSOFTdata.getTotalMQC("L07", date) * 100, 2);
-                            dataL07.Add(d);    
-                            msf.UpdateProgress(100 * (i + 1) / 3, "Application is running, please wait ... ");
-                        }
-                        msf.BeginInvoke(new Action(() => msf.Close()));
-                    }
-                ));
-            backgroundThreadFetchData.Start();
-            msf.ShowDialog();
+                //L07
+                temp = GetSOFTdata.getTotalRemark("L07", remark[i], date);
+                if (temp == 0 || temp is double.NaN)
+                    d = 0;
+                else
+                    d = Math.Round(temp / GetSOFTdata.getTotalMQC("L07", date) * 100, 2);
+                dataL07.Add(d);
+                
+            }
         }
         public void createPieChart()
         {
@@ -453,8 +444,6 @@ namespace WindowsFormsApplication1
             SaveData.check = true;
             dtpChart.Visible = false;
             SaveData.Date = dtpChart.Value.ToString("yyyy-MM-dd");
-            SaveData.dtTemp3 = GetSOFTdata.ListMQC1(SaveData.Date);
-            SaveData.dtTemp4 = GetSOFTdata.ListMQC2(SaveData.Date, "");
             renderPiechart();
         }
         public void UpdateTime()
@@ -502,6 +491,7 @@ namespace WindowsFormsApplication1
                     SaveData.uc_pqc = -1;
                     SaveData.dtTemp3 = GetSOFTdata.ListMQC1(SaveData.Date);
                     SaveData.dtTemp4 = GetSOFTdata.ListMQC2(SaveData.Date, "");
+                    SaveData.dtTemp5 = GetSOFTdata.GetListMQC(SaveData.Date, "");
                     renderPiechart();
                     UpdateTime();
                 }
@@ -629,30 +619,30 @@ namespace WindowsFormsApplication1
         }
         public void changePanel()
         {
-            SaveData.dtTemp1 = new DataTable();
-            SaveData.dtTemp1 = GetSOFTdata.GetListMQC(dtpChart.Value.ToString("yyyy-MM-dd"), "");
+            //SaveData.dtTemp1 = new DataTable();
+            //SaveData.dtTemp1 = GetSOFTdata.GetListMQC(dtpChart.Value.ToString("yyyy-MM-dd"), "");
             if (SaveData.dtTemp1.Rows.Count > 0)
             {
                 //DataRow[] results1 = SaveData.dtTemp1.Select("Line = 'L01' and NG_rate_realtime > NG_rate_allow and RW_rate_realtime > RW_rate_allow");
-                DataRow[] results11 = SaveData.dtTemp1.Select("Line = 'L01' and (NG_rate_realtime > NG_rate_allow)");
+                DataRow[] results11 = SaveData.dtTemp5.Select("Line = 'L01' and (NG_rate_realtime > NG_rate_allow)");
                 //DataRow[] results111 = SaveData.dtTemp1.Select("Line = 'L01' and RW_rate_realtime > RW_rate_allow");
                 //DataRow[] results2 = SaveData.dtTemp1.Select("Line = 'L02' and NG_rate_realtime > NG_rate_allow and RW_rate_realtime > RW_rate_allow");
-                DataRow[] results22 = SaveData.dtTemp1.Select("Line = 'L02' and (NG_rate_realtime > NG_rate_allow)");
+                DataRow[] results22 = SaveData.dtTemp5.Select("Line = 'L02' and (NG_rate_realtime > NG_rate_allow)");
                 //DataRow[] results222 = SaveData.dtTemp1.Select("Line = 'L02' and RW_rate_realtime > RW_rate_allow");
                 //DataRow[] results3 = SaveData.dtTemp1.Select("Line = 'L03' and NG_rate_realtime > NG_rate_allow and RW_rate_realtime > RW_rate_allow");
-                DataRow[] results33 = SaveData.dtTemp1.Select("Line = 'L03' and (NG_rate_realtime > NG_rate_allow)");
+                DataRow[] results33 = SaveData.dtTemp5.Select("Line = 'L03' and (NG_rate_realtime > NG_rate_allow)");
                 //DataRow[] results333 = SaveData.dtTemp1.Select("Line = 'L03' and RW_rate_realtime > RW_rate_allow");
                 //DataRow[] results4 = SaveData.dtTemp1.Select("Line = 'L04' and NG_rate_realtime > NG_rate_allow and RW_rate_realtime > RW_rate_allow");
-                DataRow[] results44 = SaveData.dtTemp1.Select("Line = 'L04' and (NG_rate_realtime > NG_rate_allow)");
+                DataRow[] results44 = SaveData.dtTemp5.Select("Line = 'L04' and (NG_rate_realtime > NG_rate_allow)");
                 //DataRow[] results444 = SaveData.dtTemp1.Select("Line = 'L04' and RW_rate_realtime > RW_rate_allow");
                 //DataRow[] results5 = SaveData.dtTemp1.Select("Line = 'L05' and NG_rate_realtime > NG_rate_allow and RW_rate_realtime > RW_rate_allow");
-                DataRow[] results55 = SaveData.dtTemp1.Select("Line = 'L05' and (NG_rate_realtime > NG_rate_allow)");
+                DataRow[] results55 = SaveData.dtTemp5.Select("Line = 'L05' and (NG_rate_realtime > NG_rate_allow)");
                 //DataRow[] results555 = SaveData.dtTemp1.Select("Line = 'L05' and RW_rate_realtime > RW_rate_allow");
                 //DataRow[] results6 = SaveData.dtTemp1.Select("Line = 'L06' and NG_rate_realtime > NG_rate_allow and RW_rate_realtime > RW_rate_allow");
-                DataRow[] results66 = SaveData.dtTemp1.Select("Line = 'L06' and (NG_rate_realtime > NG_rate_allow)");
+                DataRow[] results66 = SaveData.dtTemp5.Select("Line = 'L06' and (NG_rate_realtime > NG_rate_allow)");
                 //DataRow[] results666 = SaveData.dtTemp1.Select("Line = 'L06' and RW_rate_realtime > RW_rate_allow");
                 //DataRow[] results7 = SaveData.dtTemp1.Select("Line = 'L07' and NG_rate_realtime > NG_rate_allow and RW_rate_realtime > RW_rate_allow");
-                DataRow[] results77 = SaveData.dtTemp1.Select("Line = 'L07' and (NG_rate_realtime > NG_rate_allow)");
+                DataRow[] results77 = SaveData.dtTemp5.Select("Line = 'L07' and (NG_rate_realtime > NG_rate_allow)");
                 //DataRow[] results777 = SaveData.dtTemp1.Select("Line = 'L07' and RW_rate_realtime > RW_rate_allow");
                 //pn1
                 if (results11.Length > 0)

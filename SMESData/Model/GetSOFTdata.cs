@@ -12,15 +12,27 @@ namespace WindowsFormsApplication1
     {
         //total data in every line
         public static double getTotalMQC(string line, string date)
-        {
+        { 
             double s = 0;
-            DataTable dt = GetListMQC(date, line);
-            if (dt.Rows.Count > 0)
+            DataTable dt = new DataTable();
+            DataRow []rs = SaveData.dtTemp5.Select("Line = '" + line + "' and Date = '" + date + "'");
+            if (rs.Length > 0)
             {
-                for (int i = 0; i < dt.Rows.Count; i++)
-                {
-                    s = s + double.Parse(dt.Rows[i]["Total"].ToString());
-                }
+                dt = rs.CopyToDataTable();
+                MessageWaitForm msf = new MessageWaitForm();
+                Thread backgroundThreadFetchData = new Thread(
+                        new ThreadStart(() =>
+                        {
+                            for (int i = 0; i < dt.Rows.Count; i++)
+                            {
+                                s = s + double.Parse(dt.Rows[i]["Total"].ToString());
+                                msf.UpdateProgress(100 * (i + 1) / dt.Rows.Count, "Application is running, please wait ... ");
+                            }
+                            msf.BeginInvoke(new Action(() => msf.Close()));
+                        }
+                    ));
+                backgroundThreadFetchData.Start();
+                msf.ShowDialog();
             }
             else
             {
@@ -31,10 +43,14 @@ namespace WindowsFormsApplication1
         // NG, RW, OP data of MQC in every line in date
         public static double getTotalRemark(string line, string remark, string date)
         {
+            if (date != SaveData.Date2 || date != SaveData.Date1)
+                SaveData.dtTemp5 = GetListMQC(date, "");
             double s = 0;
-            DataTable dt = GetListMQC(date, line);
-            if (dt.Rows.Count > 0)
+            DataTable dt = new DataTable();
+            DataRow[] rs = SaveData.dtTemp5.Select("Line = '" + line + "' and Date = '" + date + "'");
+            if (rs.Length > 0)
             {
+                dt = rs.CopyToDataTable();
                 for (int i = 0; i < dt.Rows.Count; i ++)
                 {
                     s = s + double.Parse(dt.Rows[i][remark].ToString());
@@ -100,6 +116,7 @@ namespace WindowsFormsApplication1
         //List MQC from MySQL
         public static DataTable ListMQC1(string date)
         {
+            SaveData.Date1 = date;
             DataTable dt1 = new DataTable();
             sqlMES sqlMESCon = new sqlMES();
             StringBuilder sqlGetData = new StringBuilder();
@@ -121,6 +138,7 @@ namespace WindowsFormsApplication1
         //List MQC from SQL Sever
         public static DataTable ListMQC2(string date, string line)
         {
+            SaveData.Date2 = date;
             DataTable dt = new DataTable();
             sqlSOFTCon sqlSOFTCon = new sqlSOFTCon();
             StringBuilder sqlGetData = new StringBuilder();
@@ -143,8 +161,21 @@ namespace WindowsFormsApplication1
         //List MQC after merge
         public static DataTable GetListMQC(string date, string line)
         {
-            DataTable dt1 = SaveData.dtTemp3;
-            DataTable dt = SaveData.dtTemp4;
+            DataTable dt1 = new DataTable();
+            DataTable dt = new DataTable();
+            if (SaveData.Date1 != date || SaveData.Date2 != date)
+            {
+                SaveData.dtTemp3 = ListMQC1(SaveData.Date);
+                SaveData.dtTemp4 = ListMQC2(SaveData.Date, "");
+                dt1 = SaveData.dtTemp3;
+                dt = SaveData.dtTemp4;
+            }    
+            else
+            {
+                dt1 = SaveData.dtTemp3;
+                dt = SaveData.dtTemp4;
+            }    
+            
             double fail = -1;
             List<ListMQC> ListMQC = new List<ListMQC>();
             ListMQC MQC = new ListMQC();
@@ -271,7 +302,9 @@ namespace WindowsFormsApplication1
                     }
                 }
             }
-            DataTable rsMQC = new DataTable();
+            DataTable rsMQC;
+            SaveData.dtTemp5 = new DataTable();
+            SaveData.dtTemp5 = dtMQC;
             if (dtMQC.Rows.Count > 0)
             {
                 DataRow[] rs = dtMQC.Select("Line like '%" + line + "%'");
