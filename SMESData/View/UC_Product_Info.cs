@@ -216,7 +216,15 @@ namespace WindowsFormsApplication1
             if (SaveData.MQC == true)
             {
                 dataMQC.Clear();
-                dtgv_MQC_PD.DataSource = GetSOFTdata.GetListMQC(date, line);
+                if (date != SaveData.Date1 || date != SaveData.Date2)
+                {
+                    dtgv_MQC_PD.DataSource = GetSOFTdata.GetListMQC(date, line);
+                }
+                else
+                {
+                    DataRow[] rs = SaveData.dtTemp5.Select("Line = '" + line + "'");
+                    dtgv_MQC_PD.DataSource = rs.CopyToDataTable();
+                }
             }
             else
             {
