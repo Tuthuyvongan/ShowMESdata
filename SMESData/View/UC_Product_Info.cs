@@ -273,7 +273,7 @@ namespace WindowsFormsApplication1
                                     }
                                 }
                                 msf.UpdateProgress(100 * (i + 1) / dtgv_MQC_PD.Rows.Count, "Application is running, please wait ... ");
-                                Thread.Sleep(50);
+                                Thread.Sleep(10);
                             }
                             msf.BeginInvoke(new Action(() => msf.Close()));
                         }));
@@ -421,7 +421,7 @@ namespace WindowsFormsApplication1
                 line = "";
             if (SaveData.MQC == true)
             {
-                DataRow[] results = GetSOFTdata.GetListMQC(date, line).Select("Model like '%" + model + "%'");               
+                DataRow[] results = SaveData.dtTemp5.Select("Model like '%" + model + "%'");               
                 if (results.Length > 0)
                 {
                     DataTable searchResultTable = results.CopyToDataTable();
@@ -521,7 +521,7 @@ namespace WindowsFormsApplication1
                     line = "";
                 if (SaveData.MQC == true)
                 {
-                    DataRow[] results = GetSOFTdata.GetListMQC(date, line).Select("Model like '%" + model + "%'");
+                    DataRow[] results = SaveData.dtTemp5.Select("Model like '%" + model + "%'");
                     if (results.Length > 0)
                     {
                         DataTable searchResultTable = results.CopyToDataTable();

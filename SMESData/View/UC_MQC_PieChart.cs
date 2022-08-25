@@ -115,7 +115,7 @@ namespace WindowsFormsApplication1
                                 d = Math.Round(temp / GetSOFTdata.getTotalMQC("L07", date) * 100, 2);
                             dataL07.Add(d);
                             msf.UpdateProgress(100 * (i + 1) / 3, "Application is running, please wait ... ");
-                            Thread.Sleep(50);
+                            Thread.Sleep(100);
                         }
                         msf.BeginInvoke(new Action(() => msf.Close()));
                     }
