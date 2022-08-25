@@ -621,7 +621,7 @@ namespace WindowsFormsApplication1
         {
             //SaveData.dtTemp1 = new DataTable();
             //SaveData.dtTemp1 = GetSOFTdata.GetListMQC(dtpChart.Value.ToString("yyyy-MM-dd"), "");
-            if (SaveData.dtTemp1.Rows.Count > 0)
+            if (SaveData.dtTemp5.Rows.Count > 0)
             {
                 //DataRow[] results1 = SaveData.dtTemp1.Select("Line = 'L01' and NG_rate_realtime > NG_rate_allow and RW_rate_realtime > RW_rate_allow");
                 DataRow[] results11 = SaveData.dtTemp5.Select("Line = 'L01' and (NG_rate_realtime > NG_rate_allow)");
