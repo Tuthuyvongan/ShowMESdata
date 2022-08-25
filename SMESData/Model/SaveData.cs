@@ -24,6 +24,7 @@ namespace WindowsFormsApplication1
         public static DataTable dtTemp2 { get; set; }
         public static DataTable dtTemp3 { get; set; }
         public static DataTable dtTemp4 { get; set; }
+        public static DataTable dtTemp5 { get; set; }
         public static int uc_mqc { get; set; }
         public static int uc_pqc { get; set; }
         public static int uc_pi { get; set; }

@@ -50,7 +50,7 @@ namespace WindowsFormsApplication1
         public void lineData()
         {
             string date = dtpChart.Value.ToString("yyyy-MM-dd");
-            string [] remark = { "OP", "RW", "NG" };
+            string [] remark = { "OUTPUT", "REWORK", "NOGOOD" };
             double d;
             double temp;
             MessageWaitForm msf = new MessageWaitForm();
@@ -452,6 +452,8 @@ namespace WindowsFormsApplication1
         {
             SaveData.check = true;
             dtpChart.Visible = false;
+            SaveData.Date = dtpChart.Value.ToString("yyyy-MM-dd");
+            SaveData.dtTemp5 = GetSOFTdata.GetListMQC(SaveData.Date, "");
             renderPiechart();
         }
         public void UpdateTime()
@@ -463,9 +465,10 @@ namespace WindowsFormsApplication1
             btStop.BackgroundColor = Color.Orange;
             dtpChart.Enabled = false;
             pnTimeControl.Enabled = false;
+            SaveData.Date = dtpChart.Value.ToString("yyyy-MM-dd");
+            SaveData.dtTemp5 = GetSOFTdata.GetListMQC(SaveData.Date, "");
             timer1.Start();
             startTime = DateTime.Now;
-            SaveData.Date = dtpChart.Value.ToString("yyyy-MM-dd");
             SaveData.check = false;
         }
         public void ChangeUpdateTime()

@@ -13,32 +13,41 @@ namespace WindowsFormsApplication1
         //total data in every line
         public static double getTotalMQC(string line, string date)
         {
-            sqlSOFTCon sqlSOFTCon = new sqlSOFTCon();
-            StringBuilder sqlGetData = new StringBuilder();
-            double s;
-            string temp;
-            sqlGetData.Append("select SUM(CASE WHEN line = '" + line + "' and inspectdate = '" + date + "' THEN Cast(data as numeric(10,0)) END) ");
-            sqlGetData.Append("from m_ERPMQC_REALTIME");
-            temp = sqlSOFTCon.sqlExecuteScalarString(sqlGetData.ToString());
-            s = double.Parse(temp);
+            double s = 0;
+            DataTable dt = SaveData.dtTemp5;
+            DataRow[] rs = dt.Select("Line = '" + line + "' and date = '" + date + "'");
+            if (rs.Length > 0)
+            {
+                dt = rs.CopyToDataTable();
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    s = s + double.Parse(dt.Rows[i]["Total"].ToString());
+                }
+            }
+            else
+            {
+                s = 0;
+            }
             return s;
         }
         // NG, RW, OP data of MQC in every line in date
         public static double getTotalRemark(string line, string remark, string date)
         {
-            sqlSOFTCon sqlSOFTCon = new sqlSOFTCon();
-            StringBuilder sqlGetData = new StringBuilder();
-            double s;
-            string temp;
-            sqlGetData.Append("select SUM(CASE WHEN line = '" + line + "' and remark = '" + remark + "' and inspectdate = '" + date + "' THEN Cast(data as numeric(10,0)) END) ");
-            sqlGetData.Append("from m_ERPMQC_REALTIME");
-            temp = sqlSOFTCon.sqlExecuteScalarString(sqlGetData.ToString());
-            if (temp == string.Empty || temp == "" || temp == null)
+            double s = 0;
+            DataTable dt = SaveData.dtTemp5;
+            DataRow[] rs = dt.Select("Line = '" + line + "' and date = '" + date + "'");
+            if (rs.Length > 0)
+            {
+                dt = rs.CopyToDataTable();
+                for (int i = 0; i < dt.Rows.Count; i ++)
+                {
+                    s = s + double.Parse(dt.Rows[i][remark].ToString());
+                }    
+            }   
+            else
             {
                 s = 0;
-            }
-            else
-                s = double.Parse(temp);
+            }    
             return s;
         }
         // total data of PQC in every line in date
@@ -92,235 +101,7 @@ namespace WindowsFormsApplication1
             }                
             return dt;
         }
-        ////Get List UUID from job_order_record
-        //public static DataTable ListUUID(string date)
-        //{
-        //    DataTable dt1 = new DataTable();
-        //    sqlMES sqlMESCon = new sqlMES();
-        //    StringBuilder sqlGetData = new StringBuilder();
-        //    sqlGetData.Append("SELECT c.uuid as 'UUID'");
-        //    sqlGetData.Append("FROM mes_quality_control.quality_control_order AS a, mes_planning_excution.job_move AS b, mes_planning_excution.job_order_record AS c ");
-        //    sqlGetData.Append("WHERE a.job_move_uuid = b.uuid AND b.job_order_uuid = c.job_order_uuid ");
-        //    sqlGetData.Append("AND a.send_quantity = c.actual_finish_qty AND b.create_by = c.create_by ");
-        //    sqlGetData.Append("AND a.create_date LIKE '%" + date + "%' AND a.operation_no = 'OP10' AND a.send_quantity IS NOT NULL ");
-        //    sqlGetData.Append("ORDER BY a.product_no ");
-        //    sqlMESCon.sqlDataAdapterFillDatatable(sqlGetData.ToString(), ref dt1);
-        //    return dt1;
-        //}
-        ////Get List MQC to DataTable
-        //public static DataTable GetListMQC(string date, string line)
-        //{
-        //    DataTable dt1 = new DataTable();
-        //    if (SaveData.Date == DateTime.Today.ToString("yyyy-MM-dd"))
-        //    {
-        //        dt1 = SaveData.dtTemp3;
-        //    }
-        //    else
-        //    {
-        //        dt1 = ListUUID(date);
-        //    }
-        //    List<ListMQC> ListMQC = new List<ListMQC>();
-        //    DataTable dt = new DataTable();
-        //    sqlSOFTCon sqlSOFTCon = new sqlSOFTCon();
-        //    StringBuilder sqlGetData = new StringBuilder();
-        //    sqlGetData.Append("select serno, m.model as Model, m.inspectdate as 'Date', m.line as Line, a.data, a.remark, ");
-        //    sqlGetData.Append("(CASE WHEN (select top 1 rate from thu_SMESData_NGRate where model = a.model order by inspectdate desc) IS NOT NULL ");
-        //    sqlGetData.Append("THEN (select top 1 rate from thu_SMESData_NGRate where model = a.model order by inspectdate desc) ");
-        //    sqlGetData.Append("ELSE '2' END) as '%NG_allow', ");
-        //    sqlGetData.Append("(CASE WHEN (select OUTPUT from thu_MQC_DailyTarget where model = a.model and Date = a.inspectdate) IS NOT NULL ");
-        //    sqlGetData.Append("THEN (select OUTPUT from thu_MQC_DailyTarget where model = a.model and Date = a.inspectdate) ELSE '0' END) as DailyTarget ");
-        //    sqlGetData.Append("FROM m_ERPMQC_REALTIME as a ");
-        //    sqlGetData.Append("LEFT JOIN thu_SMESData_NGRate as r on a.model = r.model and a.inspectdate = r.inspectdate ");
-        //    sqlGetData.Append("join(SELECT model, inspectdate, line ");
-        //    sqlGetData.Append("FROM m_ERPMQC_REALTIME ");
-        //    sqlGetData.Append("WHERE inspectdate = '" + date + "' and line like '%" + line + "%'");
-        //    sqlGetData.Append("group by model, inspectdate, line) as m ");
-        //    sqlGetData.Append("on a.inspectdate = m.inspectdate and a.model = m.model and a.line = m.line ");
-        //    //Do not change this sort for correcting logic in for loop. Model have same name and diffrent line will stand side by side
-        //    sqlGetData.Append("order by Model desc, Line");
-        //    sqlSOFTCon.sqlDataAdapterFillDatatable(sqlGetData.ToString(), ref dt);
-        //    ListMQC MQC = new ListMQC();
-        //    MQC.OUTPUT = 0;
-        //    MQC.NOGOOD = 0;
-        //    //MessageWaitForm msf = new MessageWaitForm();
-        //    //Thread backgroundThreadFetchData = new Thread(
-        //    //        new ThreadStart(() =>
-        //    //        {
-
-        //    //            msf.BeginInvoke(new Action(() => msf.Close()));
-        //    //        }));
-        //    //backgroundThreadFetchData.Start();
-        //    //msf.ShowDialog();
-        //    for (int i = 0; i < dt.Rows.Count; i++)
-        //    {
-        //        if (dt.Rows.Count == 1)
-        //        {
-        //            string[] serno = dt.Rows[i]["serno"].ToString().Split(';');
-        //            string uuid = serno[3];
-        //            DataRow[] result = dt1.Select("uuid = '" + uuid + "'");
-        //            if (result.Length > 0)
-        //            {
-        //                MQC.Model = dt.Rows[i]["Model"].ToString();
-        //                MQC.Date = Convert.ToDateTime(dt.Rows[i]["Date"]).ToString("dd-MM-yyyy");
-        //                MQC.Line = dt.Rows[i]["Line"].ToString();
-        //                if (dt.Rows[i]["remark"].ToString() == "NG")
-        //                {
-        //                    MQC.NOGOOD = MQC.NOGOOD + double.Parse(dt.Rows[i]["data"].ToString());
-        //                }
-        //                else if (dt.Rows[i]["remark"].ToString() == "OP")
-        //                {
-        //                    MQC.OUTPUT = MQC.OUTPUT + double.Parse(dt.Rows[i]["data"].ToString());
-        //                }
-        //                MQC.REWORK = 0;
-        //                MQC.Total = MQC.OUTPUT + MQC.REWORK + MQC.NOGOOD;
-        //                MQC.DailyTarget = double.Parse(dt.Rows[i]["DailyTarget"].ToString());
-        //                MQC.NG_rate_realtime = Math.Round(MQC.NOGOOD / MQC.Total * 100, 1);
-        //                MQC.NG_rate_allow = double.Parse(dt.Rows[i]["%NG_allow"].ToString());
-        //                ListMQC.Add(MQC);
-        //            }
-        //        }
-        //        else
-        //        {
-        //            if (i + 1 != dt.Rows.Count)
-        //            {
-        //                string[] serno = dt.Rows[i]["serno"].ToString().Split(';');
-        //                string uuid = serno[3];
-        //                DataRow[] result = dt1.Select("uuid = '" + uuid + "'");
-        //                if (result.Length > 0)
-        //                {
-        //                    if (dt.Rows[i]["Model"].ToString() == dt.Rows[i + 1]["Model"].ToString() && dt.Rows[i]["Line"].ToString() == dt.Rows[i + 1]["Line"].ToString())
-        //                    {
-        //                        if (dt.Rows[i]["remark"].ToString() == "NG")
-        //                        {
-        //                            MQC.NOGOOD = MQC.NOGOOD + double.Parse(dt.Rows[i]["data"].ToString());
-        //                        }
-        //                        else if (dt.Rows[i]["remark"].ToString() == "OP")
-        //                        {
-        //                            MQC.OUTPUT = MQC.OUTPUT + double.Parse(dt.Rows[i]["data"].ToString());
-        //                        }
-        //                    }
-        //                    else
-        //                    {
-        //                        MQC.Model = dt.Rows[i]["Model"].ToString();
-        //                        MQC.Date = Convert.ToDateTime(dt.Rows[i]["Date"]).ToString("dd-MM-yyyy");
-        //                        MQC.Line = dt.Rows[i]["Line"].ToString();
-        //                        if (dt.Rows[i]["remark"].ToString() == "NG")
-        //                        {
-        //                            MQC.NOGOOD = MQC.NOGOOD + double.Parse(dt.Rows[i]["data"].ToString());
-        //                        }
-        //                        else if (dt.Rows[i]["remark"].ToString() == "OP")
-        //                        {
-        //                            MQC.OUTPUT = MQC.OUTPUT + double.Parse(dt.Rows[i]["data"].ToString());
-        //                        }
-        //                        MQC.REWORK = 0;
-        //                        MQC.Total = MQC.OUTPUT + MQC.REWORK + MQC.NOGOOD;
-        //                        MQC.DailyTarget = double.Parse(dt.Rows[i]["DailyTarget"].ToString());
-        //                        MQC.NG_rate_realtime = Math.Round(MQC.NOGOOD / MQC.Total * 100, 1);
-        //                        MQC.NG_rate_allow = double.Parse(dt.Rows[i]["%NG_allow"].ToString());
-        //                        ListMQC.Add(MQC);
-        //                        MQC = new ListMQC();
-        //                    }
-        //                }
-        //            }
-        //            else
-        //            {
-        //                string[] serno = dt.Rows[i]["serno"].ToString().Split(';');
-        //                string uuid = serno[3];
-        //                DataRow[] result = dt1.Select("uuid = '" + uuid + "'");
-        //                if (result.Length > 0)
-        //                {
-        //                    MQC.Model = dt.Rows[i]["Model"].ToString();
-        //                    MQC.Date = Convert.ToDateTime(dt.Rows[i]["Date"]).ToString("dd-MM-yyyy");
-        //                    MQC.Line = dt.Rows[i]["Line"].ToString();
-        //                    if (dt.Rows[i]["remark"].ToString() == "NG")
-        //                    {
-        //                        MQC.NOGOOD = MQC.NOGOOD + double.Parse(dt.Rows[i]["data"].ToString());
-        //                    }
-        //                    else if (dt.Rows[i]["remark"].ToString() == "OP")
-        //                    {
-        //                        MQC.OUTPUT = MQC.OUTPUT + double.Parse(dt.Rows[i]["data"].ToString());
-        //                    }
-        //                    MQC.REWORK = 0;
-        //                    MQC.Total = MQC.OUTPUT + MQC.REWORK + MQC.NOGOOD;
-        //                    MQC.DailyTarget = double.Parse(dt.Rows[i]["DailyTarget"].ToString());
-        //                    MQC.NG_rate_realtime = Math.Round(MQC.NOGOOD / MQC.Total * 100, 1);
-        //                    MQC.NG_rate_allow = double.Parse(dt.Rows[i]["%NG_allow"].ToString());
-        //                    ListMQC.Add(MQC);
-        //                }
-        //            }
-        //        }
-        //        //msf.UpdateProgress(100 * (i + 1) / dt.Rows.Count, "Application is running, please wait ... ");
-        //    }
-        //    DataTable dtMQC = new DataTable();
-        //    DataColumn[] tableColumns = new DataColumn[]
-        //    {
-        //        new DataColumn()
-        //        {
-        //            ColumnName="Model",
-        //            DataType=typeof(string),
-        //        },
-        //        new DataColumn()
-        //        {
-        //            ColumnName="Date",
-        //            DataType=typeof(string),
-        //        },
-        //        new DataColumn()
-        //        {
-        //            ColumnName="Line",
-        //            DataType=typeof(string),
-        //        },
-        //        new DataColumn()
-        //        {
-        //            ColumnName="OUTPUT",
-        //            DataType=typeof(double),
-        //        },
-        //        new DataColumn()
-        //        {
-        //            ColumnName="REWORK",
-        //            DataType=typeof(double),
-        //        },
-        //        new DataColumn()
-        //        {
-        //            ColumnName="NOGOOD",
-        //            DataType=typeof(double),
-        //        },
-        //        new DataColumn()
-        //        {
-        //            ColumnName="Total",
-        //            DataType=typeof(double),
-        //        },
-        //        new DataColumn()
-        //        {
-        //            ColumnName="DailyTarget",
-        //            DataType=typeof(double),
-        //        },
-        //        new DataColumn()
-        //        {
-        //            ColumnName="NG_rate_realtime",
-        //            DataType=typeof(double),
-        //        },
-        //        new DataColumn()
-        //        {
-        //            ColumnName="NG_rate_allow",
-        //            DataType=typeof(double),
-        //        },
-        //    };
-        //    dtMQC.Columns.AddRange(tableColumns);
-        //    foreach (var data in ListMQC)
-        //    {
-        //        dtMQC.Rows.Add(data.Model, data.Date, data.Line, data.OUTPUT, data.REWORK, data.NOGOOD, data.Total, data.DailyTarget, data.NG_rate_realtime, data.NG_rate_allow);
-        //    }
-        //    dtMQC.DefaultView.Sort = "NG_rate_realtime DESC";
-        //    dtMQC = dtMQC.DefaultView.ToTable();
-        //    return dtMQC;
-        //    if (dtMQC.Rows.Count > 0)
-        //    {
-        //        SaveData.checknull = false;
-        //    }
-        //    else
-        //        SaveData.checknull = true;
-        //}
-        //Get List PQC to Datatable
+        //List MQC from MySQL
         public static DataTable ListMQC1(string date)
         {
             DataTable dt1 = new DataTable();
@@ -341,6 +122,7 @@ namespace WindowsFormsApplication1
                 SaveData.checknull = true;
             return dt1;
         }
+        //List MQC from SQL Sever
         public static DataTable ListMQC2(string date, string line)
         {
             DataTable dt = new DataTable();
@@ -362,6 +144,7 @@ namespace WindowsFormsApplication1
             sqlSOFTCon.sqlDataAdapterFillDatatable(sqlGetData.ToString(), ref dt);
             return dt;
         }
+        //List MQC after merge
         public static DataTable GetListMQC(string date, string line)
         {
             DataTable dt1 = SaveData.dtTemp3;
@@ -496,11 +279,19 @@ namespace WindowsFormsApplication1
             if (dtMQC.Rows.Count > 0)
             {
                 DataRow[] rs = dtMQC.Select("Line like '%" + SaveData.line + "%'");
-                rsMQC = rs.CopyToDataTable();
-                rsMQC.DefaultView.Sort = "NG_rate_realtime DESC";
-                rsMQC = rsMQC.DefaultView.ToTable();
-                SaveData.checknull = false;
-                return rsMQC;
+                if (rs.Length > 0)
+                {
+                    rsMQC = rs.CopyToDataTable();
+                    rsMQC.DefaultView.Sort = "NG_rate_realtime DESC";
+                    rsMQC = rsMQC.DefaultView.ToTable();
+                    SaveData.checknull = false;
+                    return rsMQC;
+                } 
+                else
+                {
+                    MessageBox.Show("No data in this line");
+                    return dtMQC;
+                }    
             }
             else
             {
@@ -508,6 +299,7 @@ namespace WindowsFormsApplication1
                 return dtMQC;
             }
         }
+        //List PQC
         public static DataTable GetListPQC(string date, string line)
         {
             List<ListPQC> ListPQC = new List<ListPQC>();
