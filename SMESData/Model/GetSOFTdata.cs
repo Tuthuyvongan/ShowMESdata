@@ -15,24 +15,14 @@ namespace WindowsFormsApplication1
         { 
             double s = 0;
             DataTable dt = new DataTable();
-            DataRow []rs = SaveData.dtTemp5.Select("Line = '" + line + "'");
+            DataRow []rs = SaveData.dtTemp5.Select("Line = '" + line + "' and Date = '" + Convert.ToDateTime(date).ToString("dd-MM-YYYY") + "'");
             if (rs.Length > 0)
             {
                 dt = rs.CopyToDataTable();
-                MessageWaitForm msf = new MessageWaitForm();
-                Thread backgroundThreadFetchData = new Thread(
-                        new ThreadStart(() =>
-                        {
-                            for (int i = 0; i < dt.Rows.Count; i++)
-                            {
-                                s = s + double.Parse(dt.Rows[i]["Total"].ToString());
-                                msf.UpdateProgress(100 * (i + 1) / dt.Rows.Count, "Application is running, please wait ... ");
-                            }
-                            msf.BeginInvoke(new Action(() => msf.Close()));
-                        }
-                    ));
-                backgroundThreadFetchData.Start();
-                msf.ShowDialog();
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    s = s + double.Parse(dt.Rows[i]["Total"].ToString()); 
+                }
             }
             else
             {
@@ -47,7 +37,7 @@ namespace WindowsFormsApplication1
                 SaveData.dtTemp5 = GetListMQC(date, "");
             double s = 0;
             DataTable dt = new DataTable();
-            DataRow[] rs = SaveData.dtTemp5.Select("Line = '" + line + "'");
+            DataRow[] rs = SaveData.dtTemp5.Select("Line = '" + line + "' and Date = '" + Convert.ToDateTime(date).ToString("dd-MM-YYYY") + "'");
             if (rs.Length > 0)
             {
                 dt = rs.CopyToDataTable();
