@@ -14,8 +14,8 @@ namespace WindowsFormsApplication1
         public static double getTotalMQC(string line, string date)
         {
             double s = 0;
-            DataTable dt = SaveData.dtTemp5;
-            DataRow[] rs = dt.Select("Line = '" + line + "' and date = '" + date + "'");
+            DataTable dt = new DataTable();
+            DataRow[] rs = SaveData.dtTemp5.Select("Line = '" + line + "'");
             if (rs.Length > 0)
             {
                 dt = rs.CopyToDataTable();
@@ -34,8 +34,8 @@ namespace WindowsFormsApplication1
         public static double getTotalRemark(string line, string remark, string date)
         {
             double s = 0;
-            DataTable dt = SaveData.dtTemp5;
-            DataRow[] rs = dt.Select("Line = '" + line + "' and date = '" + date + "'");
+            DataTable dt = new DataTable();
+            DataRow[] rs = SaveData.dtTemp5.Select("Line = '" + line + "'");
             if (rs.Length > 0)
             {
                 dt = rs.CopyToDataTable();
@@ -157,7 +157,7 @@ namespace WindowsFormsApplication1
             for (int i = 0; i < dt1.Rows.Count; i++)
             {
                 MQC.Model = dt1.Rows[i]["Model"].ToString();
-                MQC.Date = Convert.ToDateTime(SaveData.Date).ToString("dd-MM-yyyy");
+                MQC.Date = Convert.ToDateTime(date).ToString("dd-MM-yyyy");
                 string uuid = dt1.Rows[i]["UUID"].ToString();
                 DataRow[] result = dt.Select("serno like '%" + uuid + "%'");
                 if (result.Length > 0)
@@ -278,7 +278,7 @@ namespace WindowsFormsApplication1
             DataTable rsMQC = new DataTable();
             if (dtMQC.Rows.Count > 0)
             {
-                DataRow[] rs = dtMQC.Select("Line like '%" + SaveData.line + "%'");
+                DataRow[] rs = dtMQC.Select("Line like '%" + line + "%'");
                 if (rs.Length > 0)
                 {
                     rsMQC = rs.CopyToDataTable();

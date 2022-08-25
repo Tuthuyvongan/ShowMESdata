@@ -466,7 +466,6 @@ namespace WindowsFormsApplication1
             dtpChart.Enabled = false;
             pnTimeControl.Enabled = false;
             SaveData.Date = dtpChart.Value.ToString("yyyy-MM-dd");
-            SaveData.dtTemp5 = GetSOFTdata.GetListMQC(SaveData.Date, "");
             timer1.Start();
             startTime = DateTime.Now;
             SaveData.check = false;
@@ -500,6 +499,7 @@ namespace WindowsFormsApplication1
                     SaveData.uc_pi = -1;
                     SaveData.uc_mqc = 0;
                     SaveData.uc_pqc = -1;
+                    SaveData.dtTemp5 = GetSOFTdata.GetListMQC(SaveData.Date, "");
                     renderPiechart();
                     UpdateTime();
                 }
