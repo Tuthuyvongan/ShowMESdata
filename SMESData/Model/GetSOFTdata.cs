@@ -110,10 +110,10 @@ namespace WindowsFormsApplication1
             DataTable dt1 = new DataTable();
             sqlMES sqlMESCon = new sqlMES();
             StringBuilder sqlGetData = new StringBuilder();
-            sqlGetData.Append("SELECT DISTINCT c.uuid as UUID, a.product_no as Model, a.send_quantity as Total, a.pass_qty as OUTPUT, a.failed_qty as NOGOOD ");
+            sqlGetData.Append("SELECT DISTINCT c.uuid as UUID, a.product_no as Model, a.send_quantity as Total, a.pass_qty as OUTPUT, a.failed_qty as NOGOOD, a.send_time as Date ");
             sqlGetData.Append("FROM mes_quality_control.quality_control_order AS a, mes_planning_excution.job_move AS b, mes_planning_excution.job_order_record AS c ");
             sqlGetData.Append("WHERE a.job_move_uuid = b.uuid AND b.job_order_uuid = c.job_order_uuid AND b.product_lot_no = c.product_lot_no ");
-            sqlGetData.Append("AND DATE_FORMAT(b.create_date,'%Y-%m-%d %H') = DATE_FORMAT(c.update_date,'%Y-%m-%d %H') ");
+            sqlGetData.Append("AND TIMESTAMPDIFF(SECOND, c.update_date, b.create_date) < 5 AND TIMESTAMPDIFF(SECOND, c.update_date, b.create_date) >= 0 ");
             sqlGetData.Append("AND a.send_quantity = c.actual_finish_qty AND b.create_by = c.create_by AND a.delete_flag = 0 AND b.delete_flag = 0 AND c.delete_flag = 0 ");
             sqlGetData.Append("AND a.send_time LIKE '%" + date + "%' AND a.operation_no = 'OP10' AND a.send_quantity IS NOT NULL ");
             sqlGetData.Append("ORDER BY a.product_no ");
@@ -179,8 +179,8 @@ namespace WindowsFormsApplication1
                         for (int i = 0; i < dt1.Rows.Count; i++)
                         {
                             MQC.Model = dt1.Rows[i]["Model"].ToString();
-                            MQC.Date = Convert.ToDateTime(date).ToString("dd-MM-yyyy");
-                            //MQC.Date = dt1.Rows[i]["Date"].ToString();
+                            //MQC.Date = Convert.ToDateTime(date).ToString("dd-MM-yyyy");
+                            MQC.Date = Convert.ToDateTime(dt1.Rows[i]["Date"].ToString()).ToString("dd-MM-yyyy HH:mm:ss");
                             string uuid = dt1.Rows[i]["UUID"].ToString();
                             DataRow[] result = dt.Select("serno like '%" + uuid + "%'");
                             if (result.Length > 0)

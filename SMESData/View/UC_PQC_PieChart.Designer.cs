@@ -755,15 +755,16 @@ namespace WindowsFormsApplication1
             // 
             // lblTime
             // 
-            this.lblTime.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblTime.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTime.AutoSize = true;
             this.lblTime.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblTime.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
-            this.lblTime.Location = new System.Drawing.Point(80, 73);
-            this.lblTime.Margin = new System.Windows.Forms.Padding(0, 3, 0, 0);
+            this.lblTime.Location = new System.Drawing.Point(3, 73);
+            this.lblTime.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
             this.lblTime.Name = "lblTime";
             this.lblTime.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblTime.Size = new System.Drawing.Size(30, 26);
+            this.lblTime.Size = new System.Drawing.Size(184, 26);
             this.lblTime.TabIndex = 41;
             this.lblTime.Text = "...";
             this.lblTime.TextAlign = System.Drawing.ContentAlignment.TopCenter;

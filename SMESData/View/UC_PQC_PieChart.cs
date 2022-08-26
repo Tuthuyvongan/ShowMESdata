@@ -489,7 +489,7 @@ namespace WindowsFormsApplication1
                                 ts.Hours,
                                 ts.Minutes,
                                 ts.Seconds);
-                lblTime.Text = "Chart update in: " + "\r\n" + time.ToString();
+                lblTime.Text = "Chart update in:" + "\r\n" + time.ToString();
                 if (remainingSeconds < 0)
                 {
                     lblTime.Text = "Data is being" + "\r\n" + "updated";                                 
