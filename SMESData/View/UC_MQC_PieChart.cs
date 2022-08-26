@@ -122,6 +122,7 @@ namespace WindowsFormsApplication1
                 ));
             backgroundThreadFetchData.Start();
             msf.ShowDialog();
+            
         }
         public void createPieChart()
         {

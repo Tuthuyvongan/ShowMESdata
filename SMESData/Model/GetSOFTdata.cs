@@ -171,37 +171,77 @@ namespace WindowsFormsApplication1
             ListMQC MQC = new ListMQC();
             MQC.OUTPUT = 0;
             MQC.NOGOOD = 0;
-            for (int i = 0; i < dt1.Rows.Count; i++)
-            {
-                MQC.Model = dt1.Rows[i]["Model"].ToString();
-                //MQC.Date = Convert.ToDateTime(date).ToString("dd-MM-yyyy");
-                MQC.Date = dt1.Rows[i]["Date"].ToString();
-                string uuid = dt1.Rows[i]["UUID"].ToString();
-                DataRow[] result = dt.Select("serno like '%" + uuid + "%'");
-                if (result.Length > 0)
-                {
-                    MQC.DailyTarget = double.Parse(result[0][3].ToString());
-                    MQC.NG_rate_allow = double.Parse(result[0][2].ToString());
-                    MQC.Line = result[0][1].ToString();
-                }
-                else
-                {
-                    MQC.Line = "L02";
-                }
-                if (double.TryParse(dt1.Rows[i]["NOGOOD"].ToString(), out fail))
-                    MQC.NOGOOD = double.Parse(dt1.Rows[i]["NOGOOD"].ToString());
-                else
-                    MQC.NOGOOD = 0;
-                if (double.TryParse(dt1.Rows[i]["OUTPUT"].ToString(), out fail))
-                    MQC.OUTPUT = double.Parse(dt1.Rows[i]["OUTPUT"].ToString());
-                else
-                    MQC.OUTPUT = 0;
-                MQC.REWORK = 0;
-                MQC.Total = double.Parse(dt1.Rows[i]["Total"].ToString());
-                MQC.NG_rate_realtime = Math.Round(MQC.NOGOOD / MQC.Total * 100, 1);
-                ListMQC.Add(MQC);
-                MQC = new ListMQC();
-            }
+            MessageWaitForm msf = new MessageWaitForm();
+            Thread backgroundThreadFetchData = new Thread(
+                    new ThreadStart(() =>
+                    {
+                        for (int i = 0; i < dt1.Rows.Count; i++)
+                        {
+                            MQC.Model = dt1.Rows[i]["Model"].ToString();
+                            //MQC.Date = Convert.ToDateTime(date).ToString("dd-MM-yyyy");
+                            MQC.Date = dt1.Rows[i]["Date"].ToString();
+                            string uuid = dt1.Rows[i]["UUID"].ToString();
+                            DataRow[] result = dt.Select("serno like '%" + uuid + "%'");
+                            if (result.Length > 0)
+                            {
+                                MQC.DailyTarget = double.Parse(result[0][3].ToString());
+                                MQC.NG_rate_allow = double.Parse(result[0][2].ToString());
+                                MQC.Line = result[0][1].ToString();
+                            }
+                            else
+                            {
+                                MQC.Line = "L02";
+                            }
+                            if (double.TryParse(dt1.Rows[i]["NOGOOD"].ToString(), out fail))
+                                MQC.NOGOOD = double.Parse(dt1.Rows[i]["NOGOOD"].ToString());
+                            else
+                                MQC.NOGOOD = 0;
+                            if (double.TryParse(dt1.Rows[i]["OUTPUT"].ToString(), out fail))
+                                MQC.OUTPUT = double.Parse(dt1.Rows[i]["OUTPUT"].ToString());
+                            else
+                                MQC.OUTPUT = 0;
+                            MQC.REWORK = 0;
+                            MQC.Total = double.Parse(dt1.Rows[i]["Total"].ToString());
+                            MQC.NG_rate_realtime = Math.Round(MQC.NOGOOD / MQC.Total * 100, 1);
+                            ListMQC.Add(MQC);
+                            MQC = new ListMQC();
+                            msf.UpdateProgress(100 * (i + 1) / dt1.Rows.Count, "Application is running, please wait ... ");
+                        }
+                        msf.BeginInvoke(new Action(() => msf.Close()));
+                    }));
+            backgroundThreadFetchData.Start();
+            msf.ShowDialog();
+            //for (int i = 0; i < dt1.Rows.Count; i++)
+            //{
+            //    MQC.Model = dt1.Rows[i]["Model"].ToString();
+            //    //MQC.Date = Convert.ToDateTime(date).ToString("dd-MM-yyyy");
+            //    MQC.Date = dt1.Rows[i]["Date"].ToString();
+            //    string uuid = dt1.Rows[i]["UUID"].ToString();
+            //    DataRow[] result = dt.Select("serno like '%" + uuid + "%'");
+            //    if (result.Length > 0)
+            //    {
+            //        MQC.DailyTarget = double.Parse(result[0][3].ToString());
+            //        MQC.NG_rate_allow = double.Parse(result[0][2].ToString());
+            //        MQC.Line = result[0][1].ToString();
+            //    }
+            //    else
+            //    {
+            //        MQC.Line = "L02";
+            //    }
+            //    if (double.TryParse(dt1.Rows[i]["NOGOOD"].ToString(), out fail))
+            //        MQC.NOGOOD = double.Parse(dt1.Rows[i]["NOGOOD"].ToString());
+            //    else
+            //        MQC.NOGOOD = 0;
+            //    if (double.TryParse(dt1.Rows[i]["OUTPUT"].ToString(), out fail))
+            //        MQC.OUTPUT = double.Parse(dt1.Rows[i]["OUTPUT"].ToString());
+            //    else
+            //        MQC.OUTPUT = 0;
+            //    MQC.REWORK = 0;
+            //    MQC.Total = double.Parse(dt1.Rows[i]["Total"].ToString());
+            //    MQC.NG_rate_realtime = Math.Round(MQC.NOGOOD / MQC.Total * 100, 1);
+            //    ListMQC.Add(MQC);
+            //    MQC = new ListMQC();
+            //}
             SaveData.dtTemp6 = new DataTable();
             DataTable dtMQC = new DataTable();
             DataColumn[] tableColumns = new DataColumn[]

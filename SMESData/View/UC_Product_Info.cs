@@ -273,7 +273,7 @@ namespace WindowsFormsApplication1
                                     }
                                 }
                                 msf.UpdateProgress(100 * (i + 1) / dtgv_MQC_PD.Rows.Count, "Application is running, please wait ... ");
-                                Thread.Sleep(10);
+                                Thread.Sleep(30);
                             }
                             msf.BeginInvoke(new Action(() => msf.Close()));
                         }));
