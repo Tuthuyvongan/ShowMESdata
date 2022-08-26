@@ -110,7 +110,7 @@ namespace WindowsFormsApplication1
             DataTable dt1 = new DataTable();
             sqlMES sqlMESCon = new sqlMES();
             StringBuilder sqlGetData = new StringBuilder();
-            sqlGetData.Append("SELECT DISTINCT c.uuid as UUID, a.product_no as Model, a.send_quantity as Total, a.pass_qty as OUTPUT, a.failed_qty as NOGOOD, a.send_time as Date ");
+            sqlGetData.Append("SELECT DISTINCT c.uuid as UUID, a.product_no as Model, a.send_quantity as Total, a.pass_qty as OUTPUT, a.failed_qty as NOGOOD ");
             sqlGetData.Append("FROM mes_quality_control.quality_control_order AS a, mes_planning_excution.job_move AS b, mes_planning_excution.job_order_record AS c ");
             sqlGetData.Append("WHERE a.job_move_uuid = b.uuid AND b.job_order_uuid = c.job_order_uuid AND b.product_lot_no = c.product_lot_no ");
             sqlGetData.Append("AND DATE_FORMAT(b.create_date,'%Y-%m-%d %H') = DATE_FORMAT(c.update_date,'%Y-%m-%d %H') ");
@@ -179,8 +179,8 @@ namespace WindowsFormsApplication1
                         for (int i = 0; i < dt1.Rows.Count; i++)
                         {
                             MQC.Model = dt1.Rows[i]["Model"].ToString();
-                            //MQC.Date = Convert.ToDateTime(date).ToString("dd-MM-yyyy");
-                            MQC.Date = dt1.Rows[i]["Date"].ToString();
+                            MQC.Date = Convert.ToDateTime(date).ToString("dd-MM-yyyy");
+                            //MQC.Date = dt1.Rows[i]["Date"].ToString();
                             string uuid = dt1.Rows[i]["UUID"].ToString();
                             DataRow[] result = dt.Select("serno like '%" + uuid + "%'");
                             if (result.Length > 0)
