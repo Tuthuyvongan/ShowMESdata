@@ -45,3 +45,4 @@ C:\Users\admin\Documents\GitHub\ShowMESdata\SMESData\obj\Release\SMESData.applic
 C:\Users\admin\Documents\GitHub\ShowMESdata\SMESData\obj\Release\WindowsFormsApplication1.csproj.CopyComplete
 C:\Users\admin\Documents\GitHub\ShowMESdata\SMESData\obj\Release\SMESData.exe
 C:\Users\admin\Documents\GitHub\ShowMESdata\SMESData\obj\Release\SMESData.pdb
+C:\Users\admin\Documents\GitHub\ShowMESdata\SMESData\obj\Release\WindowsFormsApplication1.csproj.AssemblyReference.cache
