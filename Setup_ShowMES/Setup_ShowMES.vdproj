@@ -765,7 +765,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Setup_ShowMES"
         "ProductCode" = "8:{5F1A7049-623A-42A6-A090-EDF40C92133E}"
-        "PackageCode" = "8:{28667F1F-B23D-4B76-A819-693D338F8DFE}"
+        "PackageCode" = "8:{B107D05B-4771-48B4-90A8-360DFDC9016F}"
         "UpgradeCode" = "8:{A8019282-7ED1-4A25-A838-E839A16EA855}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
