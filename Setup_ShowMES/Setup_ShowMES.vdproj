@@ -765,7 +765,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Setup_ShowMES"
         "ProductCode" = "8:{5F1A7049-623A-42A6-A090-EDF40C92133E}"
-        "PackageCode" = "8:{B107D05B-4771-48B4-90A8-360DFDC9016F}"
+        "PackageCode" = "8:{23194859-6657-4142-A0E6-27BB0EE476E5}"
         "UpgradeCode" = "8:{A8019282-7ED1-4A25-A838-E839A16EA855}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -1300,7 +1300,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_5151D9BB71A0452188C2179600688A50"
             {
-            "SourcePath" = "8:..\\SMESData\\obj\\Debug\\SMESData.exe"
+            "SourcePath" = "8:..\\SMESData\\obj\\Release\\SMESData.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_D7112FD65D03478584233422F4DFAD9C"

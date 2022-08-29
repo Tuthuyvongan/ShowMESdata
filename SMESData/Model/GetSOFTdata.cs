@@ -191,6 +191,7 @@ namespace WindowsFormsApplication1
                             }
                             else
                             {
+                                MQC.NG_rate_allow = 2;
                                 MQC.Line = "L02";
                             }
                             if (double.TryParse(dt1.Rows[i]["NOGOOD"].ToString(), out fail))
