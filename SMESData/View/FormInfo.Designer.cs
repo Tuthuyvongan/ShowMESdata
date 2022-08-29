@@ -92,7 +92,7 @@ namespace WindowsFormsApplication1
             this.dtgv_Info.RowHeadersWidth = 51;
             this.dtgv_Info.RowTemplate.Height = 50;
             this.dtgv_Info.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dtgv_Info.Size = new System.Drawing.Size(1682, 800);
+            this.dtgv_Info.Size = new System.Drawing.Size(1482, 800);
             this.dtgv_Info.TabIndex = 82;
             // 
             // FormInfo
@@ -100,7 +100,7 @@ namespace WindowsFormsApplication1
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(1682, 753);
+            this.ClientSize = new System.Drawing.Size(1482, 753);
             this.Controls.Add(this.dtgv_Info);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
