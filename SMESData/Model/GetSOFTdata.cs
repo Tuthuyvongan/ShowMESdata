@@ -179,8 +179,8 @@ namespace WindowsFormsApplication1
                         for (int i = 0; i < dt1.Rows.Count; i++)
                         {
                             MQC.Model = dt1.Rows[i]["Model"].ToString();
-                                //MQC.Date = Convert.ToDateTime(date).ToString("dd-MM-yyyy");
-                                MQC.Date = Convert.ToDateTime(dt1.Rows[i]["Date"].ToString()).ToString("dd-MM-yyyy HH:mm:ss");
+                            //MQC.Date = Convert.ToDateTime(date).ToString("dd-MM-yyyy");
+                            MQC.Date = Convert.ToDateTime(dt1.Rows[i]["Date"].ToString()).ToString("dd-MM-yyyy HH:mm:ss");
                             string uuid = dt1.Rows[i]["UUID"].ToString();
                             DataRow[] result = dt.Select("serno like '%" + uuid + "%'");
                             if (result.Length > 0)
