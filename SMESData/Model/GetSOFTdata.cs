@@ -156,8 +156,8 @@ namespace WindowsFormsApplication1
             DataTable dt = new DataTable();
             if (SaveData.Date1 != date || SaveData.Date2 != date)
             {
-                SaveData.dtTemp3 = ListMQC1(SaveData.Date);
-                SaveData.dtTemp4 = ListMQC2(SaveData.Date, "");
+                SaveData.dtTemp3 = ListMQC1(date);
+                SaveData.dtTemp4 = ListMQC2(date, "");
                 dt1 = SaveData.dtTemp3;
                 dt = SaveData.dtTemp4;
             }    

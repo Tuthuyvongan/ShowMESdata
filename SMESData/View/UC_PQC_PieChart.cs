@@ -245,10 +245,10 @@ namespace WindowsFormsApplication1
         public void renderPiechart()
         {
             clearData();
-            changePanel();
             //Add data
             lineData();
             createPieChart();
+            changePanel();
             //Add legends L01           
             if (dataL01[0] == 0 && dataL01[1] == 0 && dataL01[2] == 0)
             {
