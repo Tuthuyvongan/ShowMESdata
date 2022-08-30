@@ -202,12 +202,14 @@ namespace WindowsFormsApplication1
                             {
                                 if (resultTemp.Length > 0)
                                 {
+                                    //MQC.NG_rate_allow = 0;
                                     MQC.NG_rate_allow = double.Parse(resultTemp[0][2].ToString());
                                     MQC.Line = resultTemp[0][1].ToString();
                                 }
                                 else
                                 {
                                     MQC.NG_rate_allow = 2;
+                                    //MQC.NG_rate_allow = 0;
                                     MQC.Line = "L02";
                                 }
                             }

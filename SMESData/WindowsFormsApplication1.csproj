@@ -27,7 +27,7 @@
     <PublisherName>AnhThu</PublisherName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.html</WebPage>
-    <ApplicationRevision>4</ApplicationRevision>
+    <ApplicationRevision>7</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -58,7 +58,7 @@
     <ApplicationIcon>combo-256.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>EAB05CCA23FD9B93B90D40FF56B5097AE61FAF45</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>E808BBA05DC9C46ADC501F3BEFE2F5349868B92E</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestKeyFile>WindowsFormsApplication1_TemporaryKey.pfx</ManifestKeyFile>
