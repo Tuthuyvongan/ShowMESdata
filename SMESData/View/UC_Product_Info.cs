@@ -618,22 +618,28 @@ namespace WindowsFormsApplication1
                     {
                         string filePath = dlgSave.FileName;
                         directPath = Path.GetFullPath(filePath);
-                        DataTable dt = GetSOFTdata.GetListMQC(SaveData.Date, "");
+                        //DataTable temp = GetSOFTdata.GetListMQC(SaveData.Date, "");
+                        DataTable dt = new DataTable();
+                        {
+                            dt.Columns.Add("Model");
+                            dt.Columns.Add("Date");
+                            dt.Columns.Add("Line");
+                            dt.Columns.Add("OUTPUT");
+                            dt.Columns.Add("REWORK");
+                            dt.Columns.Add("NOGOOD");
+                            dt.Columns.Add("Total");
+                            dt.Columns.Add("DailyTarget");
+                            dt.Columns.Add("NG_rate_realtime");
+                            dt.Columns.Add("NG_rate_allow");
+                        }
+                        dt = SaveData.dtTemp5;
                         var value = new Dictionary<string, object>()
                         {
-                            //["Title"] = "MQC Chart",
-                            ["MQC"] = dt
+                            ["Title"] = "MQC Chart",
+                            ["MQC"] = dt,
                         };
-                        try
-                        {
-                            MiniExcel.SaveAs(directPath, value, true, "null", ExcelType.XLSX, null, true);
-                            //MiniExcel.SaveAsByTemplate(directPath, tempPath, value);
-                        }
-                        catch (Exception errorMsg)
-                        {
-                            MessageBox.Show(errorMsg.Message);
-                            File.Delete(directPath);
-                        }
+                        //MiniExcel.SaveAs(directPath, value, true, "null", ExcelType.XLSX, null, true);
+                        MiniExcel.SaveAsByTemplate(directPath, tempPath, value);
                         DialogResult dialogResult = MessageBox.Show("The excel file was saved. Would you like to access the file?", "Alert", MessageBoxButtons.OKCancel);
                         if (dialogResult == DialogResult.OK)
                         {
@@ -644,6 +650,7 @@ namespace WindowsFormsApplication1
                 catch (Exception errorMsg)
                 {
                     MessageBox.Show(errorMsg.Message);
+                    //File.Delete(directPath);
                 }
         }
     }
