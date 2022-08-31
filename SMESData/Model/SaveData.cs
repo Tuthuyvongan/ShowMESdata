@@ -20,14 +20,24 @@ namespace WindowsFormsApplication1
         public static bool MQC { get; set; }
         public static bool PQC { get; set; }
         public static string Date { get; set; }
+        //List MQC Date
         public static string Date1 { get; set; }
         public static string Date2 { get; set; }
-        public static DataTable dtTemp1 { get; set; }
+        //List PQC Date
+        public static string Date3 { get; set; }
+        public static string Date4 { get; set; }
+        //public static DataTable dtTemp1 { get; set; }
         public static DataTable dtTemp2 { get; set; }
+        //DataTable of MQC
         public static DataTable dtTemp3 { get; set; }
         public static DataTable dtTemp4 { get; set; }
         public static DataTable dtTemp5 { get; set; }
         public static DataTable dtTemp6 { get; set; }
+        //DataTable of PQC
+        public static DataTable dtTemp7 { get; set; }
+        public static DataTable dtTemp8 { get; set; }
+        public static DataTable dtTemp9 { get; set; }
+        public static DataTable dtTemp10 { get; set; }
         public static int uc_mqc { get; set; }
         public static int uc_pqc { get; set; }
         public static int uc_pi { get; set; }
