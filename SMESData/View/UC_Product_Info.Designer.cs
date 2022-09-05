@@ -61,6 +61,7 @@ namespace WindowsFormsApplication1
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.btStart = new XanderUI.XUIButton();
             this.btStop = new XanderUI.XUIButton();
+            this.btExport = new XanderUI.XUIButton();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tbpnInfo = new System.Windows.Forms.TableLayoutPanel();
             this.lb8 = new System.Windows.Forms.Label();
@@ -331,6 +332,7 @@ namespace WindowsFormsApplication1
             this.tableLayoutPanel3.Controls.Add(this.btPQCD, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.lblTime, 1, 1);
             this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel5, 1, 2);
+            this.tableLayoutPanel3.Controls.Add(this.btExport, 0, 1);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(1399, 0);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -576,6 +578,32 @@ namespace WindowsFormsApplication1
             this.btStop.TextColor = System.Drawing.Color.White;
             this.btStop.Vertical_Alignment = System.Drawing.StringAlignment.Center;
             this.btStop.Click += new System.EventHandler(this.btStop_Click);
+            // 
+            // btExport
+            // 
+            this.btExport.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btExport.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btExport.ButtonImage = global::SMESData.Properties.Resources.excel;
+            this.btExport.ButtonStyle = XanderUI.XUIButton.Style.MaterialRounded;
+            this.btExport.ButtonText = "Export Excel";
+            this.btExport.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
+            this.btExport.ClickTextColor = System.Drawing.Color.DodgerBlue;
+            this.btExport.CornerRadius = 5;
+            this.btExport.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold);
+            this.btExport.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
+            this.btExport.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
+            this.btExport.HoverTextColor = System.Drawing.Color.DodgerBlue;
+            this.btExport.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
+            this.btExport.Location = new System.Drawing.Point(15, 158);
+            this.btExport.Margin = new System.Windows.Forms.Padding(15, 5, 15, 5);
+            this.btExport.Name = "btExport";
+            this.btExport.Size = new System.Drawing.Size(163, 68);
+            this.btExport.TabIndex = 86;
+            this.btExport.TextColor = System.Drawing.Color.DodgerBlue;
+            this.btExport.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            this.btExport.Click += new System.EventHandler(this.btExport_Click);
             // 
             // tableLayoutPanel4
             // 
@@ -1083,5 +1111,6 @@ namespace WindowsFormsApplication1
         private System.Windows.Forms.NumericUpDown nbM;
         private System.Windows.Forms.NumericUpDown nbH;
         private LiveCharts.WinForms.PieChart linePCanvas1;
+        private XanderUI.XUIButton btExport;
     }
 }

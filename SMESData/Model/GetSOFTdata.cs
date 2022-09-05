@@ -4,12 +4,12 @@ using System.Text;
 using System.Data;
 using System.Windows.Forms;
 using System.Threading;
-using System.Linq;
 
 namespace WindowsFormsApplication1
 {
     class GetSOFTdata
     {
+        /* Get Data for MQC Chart */
         //total data in every line
         public static double getTotalMQC(string line, string date)
         { 
@@ -52,57 +52,6 @@ namespace WindowsFormsApplication1
             }    
             return s;
         }
-        // total data of PQC in every line in date
-        public static double getTotalPQC(string line, string date)
-        {
-            sqlSOFTCon sqlSOFTCon = new sqlSOFTCon();
-            StringBuilder sqlGetData = new StringBuilder();
-            double s;
-            string temp;
-            sqlGetData.Append("select SUM(CASE WHEN Line = '" + line + "' and InspectDateTime like '%" + date + "%' THEN Cast(Quantity as numeric(10,0)) END) ");
-            sqlGetData.Append("from ProcessHistory.PQCMesData");
-            temp = sqlSOFTCon.sqlExecuteScalarString(sqlGetData.ToString());
-            s = double.Parse(temp);
-            return s;
-        }
-        // NG, RW, OP data of PQC in every line in date
-        public static double getTotalAttributeType(string line, string type, string date)
-        {
-            sqlSOFTCon sqlSOFTCon = new sqlSOFTCon();
-            StringBuilder sqlGetData = new StringBuilder();
-            double s;
-            string temp;
-            sqlGetData.Append("select SUM(CASE WHEN Line = '" + line + "' and AttributeType = '" + type + "' and InspectDateTime like '%" + date + "%' THEN Cast(Quantity as numeric(10,0)) END) ");
-            sqlGetData.Append("from ProcessHistory.PQCMesData");
-            temp = sqlSOFTCon.sqlExecuteScalarString(sqlGetData.ToString());
-            if (temp == string.Empty || temp == "" || temp == null)
-            {
-                s = 0;
-            }
-            else
-                s = double.Parse(temp);
-            return s;
-        }
-        //Get Model in table NGRate
-        public static DataTable GetModel(string date)
-        {
-            DataTable dt = new DataTable();
-            sqlSOFTCon sqlSOFTCon = new sqlSOFTCon();
-            StringBuilder sqlGetData = new StringBuilder();
-            if (SaveData.PQC == true)
-            {
-                sqlGetData.Append("select distinct Model from thu_SMESData_NGRate_PQC ");
-                sqlGetData.Append("where Date = '" + date + "'");
-                sqlSOFTCon.sqlDataAdapterFillDatatable(sqlGetData.ToString(), ref dt);
-            }  
-            else
-            {
-                sqlGetData.Append("select distinct model from thu_SMESData_NGRate ");
-                sqlGetData.Append("where inspectdate = '" + date + "'");
-                sqlSOFTCon.sqlDataAdapterFillDatatable(sqlGetData.ToString(), ref dt);
-            }                
-            return dt;
-        }
         //List MQC from MySQL
         public static DataTable ListMQC1(string date)
         {
@@ -138,12 +87,12 @@ namespace WindowsFormsApplication1
             sqlGetData.Append("THEN (select top 1 rate from thu_SMESData_NGRate where model = a.model order by inspectdate desc) ");
             sqlGetData.Append("ELSE '2' END) as '%NG_allow', ");
             sqlGetData.Append("(CASE WHEN (select OUTPUT from thu_MQC_DailyTarget where model = a.model and Date = a.inspectdate) IS NOT NULL ");
-            sqlGetData.Append("THEN (select OUTPUT from thu_MQC_DailyTarget where model = a.model and Date = a.inspectdate) ELSE '0' END) as DailyTarget, m.model as Model, m.inspectdate as Date ");
+            sqlGetData.Append("THEN (select OUTPUT from thu_MQC_DailyTarget where model = a.model and Date = '" + date + "') ELSE '0' END) as DailyTarget, m.model as Model, m.inspectdate as Date ");
             sqlGetData.Append("FROM m_ERPMQC_REALTIME as a ");
             sqlGetData.Append("LEFT JOIN thu_SMESData_NGRate as r on a.model = r.model and a.inspectdate = r.inspectdate ");
             sqlGetData.Append("join(SELECT model, inspectdate, line ");
             sqlGetData.Append("FROM m_ERPMQC_REALTIME ");
-            sqlGetData.Append("WHERE inspectdate like '%" + Convert.ToDateTime(date).ToString("yyyy-MM") + "%' AND line like '%" + line + "%'");
+            sqlGetData.Append("WHERE inspectdate >= DATEADD(day, -30, '" + date + "') AND inspectdate <= '" + date + "' AND line like '%" + line + "%'");
             sqlGetData.Append("group by model, inspectdate, line) as m ");
             sqlGetData.Append("on a.inspectdate = m.inspectdate and a.model = m.model and a.line = m.line ");
             sqlSOFTCon.sqlDataAdapterFillDatatable(sqlGetData.ToString(), ref dt);
@@ -408,6 +357,62 @@ namespace WindowsFormsApplication1
                 return dtMQC;
             }
         }
+
+        /* Get Data for PQC Chart */
+        //total data of PQC in every line in date
+        public static double getTotalPQC(string line, string date)
+        {
+            sqlSOFTCon sqlSOFTCon = new sqlSOFTCon();
+            StringBuilder sqlGetData = new StringBuilder();
+            double s;
+            string temp;
+            sqlGetData.Append("select SUM(CASE WHEN Line = '" + line + "' and InspectDateTime like '%" + date + "%' THEN Cast(Quantity as numeric(10,0)) END) ");
+            sqlGetData.Append("from ProcessHistory.PQCMesData");
+            temp = sqlSOFTCon.sqlExecuteScalarString(sqlGetData.ToString());
+            s = double.Parse(temp);
+            return s;
+        }
+        //NG, RW, OP data of PQC in every line in date
+        public static double getTotalAttributeType(string line, string type, string date)
+        {
+            sqlSOFTCon sqlSOFTCon = new sqlSOFTCon();
+            StringBuilder sqlGetData = new StringBuilder();
+            double s;
+            string temp;
+            sqlGetData.Append("select SUM(CASE WHEN Line = '" + line + "' and AttributeType = '" + type + "' and InspectDateTime like '%" + date + "%' THEN Cast(Quantity as numeric(10,0)) END) ");
+            sqlGetData.Append("from ProcessHistory.PQCMesData");
+            temp = sqlSOFTCon.sqlExecuteScalarString(sqlGetData.ToString());
+            if (temp == string.Empty || temp == "" || temp == null)
+            {
+                s = 0;
+            }
+            else
+                s = double.Parse(temp);
+            return s;
+        }
+        //List PQC from MySQL
+        public static DataTable ListPQC1(string date)
+        {
+            SaveData.Date3 = date;
+            DataTable dt1 = new DataTable();
+            sqlMES sqlMESCon = new sqlMES();
+            StringBuilder sqlGetData = new StringBuilder();
+            sqlGetData.Append("SELECT DISTINCT c.uuid as UUID, a.product_no as Model, a.send_quantity as Total, a.pass_qty as OUTPUT, a.failed_qty as NOGOOD, a.send_time as Date ");
+            sqlGetData.Append("FROM mes_quality_control.quality_control_order AS a, mes_planning_excution.job_move AS b, mes_planning_excution.job_order_record AS c ");
+            sqlGetData.Append("WHERE a.job_move_uuid = b.uuid AND b.job_order_uuid = c.job_order_uuid AND b.product_lot_no = c.product_lot_no ");
+            sqlGetData.Append("AND TIMESTAMPDIFF(SECOND, c.update_date, b.create_date) < 5 AND TIMESTAMPDIFF(SECOND, c.update_date, b.create_date) >= 0 ");
+            sqlGetData.Append("AND a.send_quantity = c.actual_finish_qty AND b.create_by = c.create_by AND a.delete_flag = 0 AND b.delete_flag = 0 AND c.delete_flag = 0 ");
+            sqlGetData.Append("AND a.send_time LIKE '%" + date + "%' AND a.operation_no = 'OP14' AND a.send_quantity IS NOT NULL ");
+            sqlGetData.Append("ORDER BY a.product_no ");
+            sqlMESCon.sqlDataAdapterFillDatatable(sqlGetData.ToString(), ref dt1);
+            if (dt1.Rows.Count > 0)
+            {
+                SaveData.checknull = false;
+            }
+            else
+                SaveData.checknull = true;
+            return dt1;
+        }
         //List PQC
         public static DataTable GetListPQC(string date, string line)
         {
@@ -603,6 +608,28 @@ namespace WindowsFormsApplication1
             else
                 SaveData.checknullPQC = true;
         }
+
+        /* Get extra data */
+        //Get Model in table NGRate
+        public static DataTable GetModel(string date)
+        {
+            DataTable dt = new DataTable();
+            sqlSOFTCon sqlSOFTCon = new sqlSOFTCon();
+            StringBuilder sqlGetData = new StringBuilder();
+            if (SaveData.PQC == true)
+            {
+                sqlGetData.Append("select distinct Model from thu_SMESData_NGRate_PQC ");
+                sqlGetData.Append("where Date = '" + date + "'");
+                sqlSOFTCon.sqlDataAdapterFillDatatable(sqlGetData.ToString(), ref dt);
+            }
+            else
+            {
+                sqlGetData.Append("select distinct model from thu_SMESData_NGRate ");
+                sqlGetData.Append("where inspectdate = '" + date + "'");
+                sqlSOFTCon.sqlDataAdapterFillDatatable(sqlGetData.ToString(), ref dt);
+            }
+            return dt;
+        }
         //Get Info of product
         public static DataTable GetInfo(string model, string line, string date)
         {
@@ -614,7 +641,7 @@ namespace WindowsFormsApplication1
             if (SaveData.PQC == true)
             {
                 DataColumn[] tableColumns = new DataColumn[]
-{
+            {
                 new DataColumn()
                 {
                     ColumnName="Model",
@@ -645,7 +672,7 @@ namespace WindowsFormsApplication1
                     ColumnName="DateTime",
                     DataType=typeof(string),
                 }
-};
+            };
                 dt.Columns.AddRange(tableColumns);
                 sqlGetData.Append("SELECT Model, LotNumber, Line, InspectDateTime as DateTime, Quantity, Inspector, AttributeType as Remark, POCode as Serno FROM ProcessHistory.PQCMesData ");
                 sqlGetData.Append("where Model = '" + model + "' and Line = '" + line + "' and InspectDateTime like '%" + date + "%'");
@@ -660,7 +687,7 @@ namespace WindowsFormsApplication1
             else
             {
                 DataColumn[] tableColumns = new DataColumn[]
-            {
+                {
                     new DataColumn()
                     {
                         ColumnName="Model",
@@ -711,7 +738,7 @@ namespace WindowsFormsApplication1
                         ColumnName="NG_rate_allow",
                         DataType=typeof(double),
                     }
-            };
+                };
                 dt.Columns.AddRange(tableColumns);
                 DataRow[] rs;
                 if (SaveData.dtTemp6 != null)

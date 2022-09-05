@@ -1,9 +1,12 @@
 ﻿using LiveCharts;
 using LiveCharts.Wpf;
+using MiniExcelLibs;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Threading;
 using System.Windows.Forms;
 
@@ -598,6 +601,61 @@ namespace WindowsFormsApplication1
             dtgvSetting();
             ChangeColor();
             ChangeData();      
+        }
+        //public string tempPath = Directory.GetCurrentDirectory() + @"\Temp.xlsx";
+        public string tempPath = Path.Combine(Path.GetFullPath(@"..\..\"), "Resources") + @"\Temp.xlsx";
+        public string directPath;
+        private void btExport_Click(object sender, EventArgs e)
+        {
+            using (SaveFileDialog dlgSave = new SaveFileDialog())
+                try
+                {
+                    dlgSave.CheckFileExists = false;
+                    // SaveFileDialog title
+                    dlgSave.Title = "Save File";
+                    // Available file extensions
+                    dlgSave.Filter = "Execl files (*.xlsx)|*.xlsx|Execl files (*.xls)|*.xls";
+                    if (dlgSave.ShowDialog() == DialogResult.OK && dlgSave.FileName.Length > 0)
+                    {
+                        string filePath = dlgSave.FileName;
+                        directPath = Path.GetFullPath(filePath);
+                        DataTable temp = GetSOFTdata.GetListMQC(SaveData.Date, "");
+                        DataTable temp1 = GetSOFTdata.GetListPQC(SaveData.Date, "");
+                        //DataTable dt = new DataTable();
+                        //{
+                        //    dt.Columns.Add("Model");
+                        //    dt.Columns.Add("Date");
+                        //    dt.Columns.Add("Line");
+                        //    dt.Columns.Add("OUTPUT");
+                        //    dt.Columns.Add("REWORK");
+                        //    dt.Columns.Add("NOGOOD");
+                        //    dt.Columns.Add("Total");
+                        //    dt.Columns.Add("DailyTarget");
+                        //    dt.Columns.Add("NG_rate_realtime");
+                        //    dt.Columns.Add("NG_rate_allow");
+                        //}
+                        //dt = SaveData.dtTemp5;
+                        var value = new Dictionary<string, object>()
+                        {
+                            ["Title1"] = "MQC Chart",
+                            ["Title2"] = "PQC Chart",
+                            ["PQC"] = temp1,
+                            ["MQC"] = temp,
+                        };
+                        //MiniExcel.SaveAs(directPath, value, true, "null", ExcelType.XLSX, null, true);
+                        MiniExcel.SaveAsByTemplate(directPath, tempPath, value);
+                        DialogResult dialogResult = MessageBox.Show("The excel file was saved. Would you like to access the file?", "Alert", MessageBoxButtons.OKCancel);
+                        if (dialogResult == DialogResult.OK)
+                        {
+                            Process.Start(directPath);
+                        }
+                    }
+                }
+                catch (Exception errorMsg)
+                {
+                    MessageBox.Show(errorMsg.Message);
+                    //File.Delete(directPath);
+                }
         }
     }
 }

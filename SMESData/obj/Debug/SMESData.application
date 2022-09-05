@@ -14,14 +14,14 @@
     <framework targetVersion="4.7.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="SMESData.exe.manifest" size="12330">
+    <dependentAssembly dependencyType="install" codebase="SMESData.exe.manifest" size="12968">
       <assemblyIdentity name="SMESData.exe" version="1.0.0.7" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>fdXcPNt+oL27l9ELfJ+qYL3xD/EKXIaBtoLoDNrAqzs=</dsig:DigestValue>
+        <dsig:DigestValue>lRNYphzpyjXkNfXU4wo1YG8gDNwDXZXeHogGvoT/u4w=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

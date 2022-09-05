@@ -79,26 +79,38 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MySqlConnector.dll" size="613888">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MiniExcel.dll" size="164352">
+      <assemblyIdentity name="MiniExcel" version="1.26.6.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>zdOZXAXXL5SFwj6YCvjn7+PCZ2t2fHJUhBCzgh3GJXo=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MySqlConnector.dll" size="614400">
       <assemblyIdentity name="MySqlConnector" version="2.0.0.0" publicKeyToken="D33D3E53AA5F8C92" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>H1qwsihH+jC6rZqz+u3g5pkX4hL/hveRrrGsVraXrWo=</dsig:DigestValue>
+        <dsig:DigestValue>aYVJpH+eRmVu+tI2rgywlwO55HLtbD1S0oN6SIo7uJI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SMESData.exe" size="1894880">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SMESData.exe" size="1910240">
       <assemblyIdentity name="SMESData" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>2s/a4e8gCpgBMUkwOm+qUZtyWmIuI57VO2v38b+3J5Q=</dsig:DigestValue>
+        <dsig:DigestValue>aGnk5EZNg+Slr9cEEAVwkti47/COJ+B6oZ+tyuV+AUE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
