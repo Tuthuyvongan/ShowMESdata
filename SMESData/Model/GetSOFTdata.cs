@@ -4,7 +4,6 @@ using System.Text;
 using System.Data;
 using System.Windows.Forms;
 using System.Threading;
-using System.Linq;
 
 namespace WindowsFormsApplication1
 {
@@ -88,12 +87,12 @@ namespace WindowsFormsApplication1
             sqlGetData.Append("THEN (select top 1 rate from thu_SMESData_NGRate where model = a.model order by inspectdate desc) ");
             sqlGetData.Append("ELSE '2' END) as '%NG_allow', ");
             sqlGetData.Append("(CASE WHEN (select OUTPUT from thu_MQC_DailyTarget where model = a.model and Date = a.inspectdate) IS NOT NULL ");
-            sqlGetData.Append("THEN (select OUTPUT from thu_MQC_DailyTarget where model = a.model and Date = a.inspectdate) ELSE '0' END) as DailyTarget, m.model as Model, m.inspectdate as Date ");
+            sqlGetData.Append("THEN (select OUTPUT from thu_MQC_DailyTarget where model = a.model and Date = '" + date + "') ELSE '0' END) as DailyTarget, m.model as Model, m.inspectdate as Date ");
             sqlGetData.Append("FROM m_ERPMQC_REALTIME as a ");
             sqlGetData.Append("LEFT JOIN thu_SMESData_NGRate as r on a.model = r.model and a.inspectdate = r.inspectdate ");
             sqlGetData.Append("join(SELECT model, inspectdate, line ");
             sqlGetData.Append("FROM m_ERPMQC_REALTIME ");
-            sqlGetData.Append("WHERE inspectdate like '%" + Convert.ToDateTime(date).ToString("yyyy-MM") + "%' AND line like '%" + line + "%'");
+            sqlGetData.Append("WHERE inspectdate >= DATEADD(day, -30, '" + date + "') AND inspectdate <= '" + date + "' AND line like '%" + line + "%'");
             sqlGetData.Append("group by model, inspectdate, line) as m ");
             sqlGetData.Append("on a.inspectdate = m.inspectdate and a.model = m.model and a.line = m.line ");
             sqlSOFTCon.sqlDataAdapterFillDatatable(sqlGetData.ToString(), ref dt);
