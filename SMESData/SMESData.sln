@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.32228.343
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApplication1", "WindowsFormsApplication1.csproj", "{2A8BCFF8-31BF-4368-AEC1-DFA8B3C21DF3}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup_ShowMES", "..\Setup_ShowMES\Setup_ShowMES.vdproj", "{F4712D3B-D0A6-4AAE-9DA3-3DD6CC668821}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup_ShowMES", "..\Setup_ShowMES\Setup_ShowMES.vdproj", "{D914552B-65E0-438B-B9ED-4A211E4FDF7C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,8 +17,8 @@ Global
 		{2A8BCFF8-31BF-4368-AEC1-DFA8B3C21DF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2A8BCFF8-31BF-4368-AEC1-DFA8B3C21DF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2A8BCFF8-31BF-4368-AEC1-DFA8B3C21DF3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F4712D3B-D0A6-4AAE-9DA3-3DD6CC668821}.Debug|Any CPU.ActiveCfg = Debug
-		{F4712D3B-D0A6-4AAE-9DA3-3DD6CC668821}.Release|Any CPU.ActiveCfg = Release
+		{D914552B-65E0-438B-B9ED-4A211E4FDF7C}.Debug|Any CPU.ActiveCfg = Debug
+		{D914552B-65E0-438B-B9ED-4A211E4FDF7C}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
