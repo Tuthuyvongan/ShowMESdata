@@ -15,6 +15,12 @@
     {
         "Entry"
         {
+        "MsmKey" = "8:_001D7C9E4B724A159124691A4D304041"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_095D47DF35BB3602EEEAC8D1ABD96185"
         "OwnerKey" = "8:_4B8884DB442749278466ADE1C41EDF6D"
         "MsmSig" = "8:_UNDEFINED"
@@ -155,12 +161,6 @@
         {
         "MsmKey" = "8:_CE1838BA8C3FD5AB7B67EF2D33513C6B"
         "OwnerKey" = "8:_F298288339EDCBAE661A301D8BB008AC"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_D84B177A82884DB19A8037C1D1FC96D0"
-        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -358,6 +358,26 @@
         }
         "File"
         {
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_001D7C9E4B724A159124691A4D304041"
+            {
+            "SourcePath" = "8:..\\SMESData\\Resources\\Temp.xlsx"
+            "TargetName" = "8:Temp.xlsx"
+            "Tag" = "8:"
+            "Folder" = "8:_44784AE63D0E4836827C999505D251BE"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_095D47DF35BB3602EEEAC8D1ABD96185"
             {
             "AssemblyRegister" = "3:1"
@@ -750,26 +770,6 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D84B177A82884DB19A8037C1D1FC96D0"
-            {
-            "SourcePath" = "8:..\\SMESData\\AnhThu\\Temp.xlsx"
-            "TargetName" = "8:Temp.xlsx"
-            "Tag" = "8:"
-            "Folder" = "8:_44784AE63D0E4836827C999505D251BE"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_ED277FD24ECA0917D34E627ECCE9794F"
             {
             "AssemblyRegister" = "3:1"
@@ -920,7 +920,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Setup_ShowMES"
         "ProductCode" = "8:{ACDD825C-5EA0-42C1-B95A-E84681E43D00}"
-        "PackageCode" = "8:{6495E502-468B-46D8-9DDF-434C7C583E05}"
+        "PackageCode" = "8:{0CD5F364-ACA2-4334-BCB3-A3F9DF3F55BD}"
         "UpgradeCode" = "8:{E5EEB59E-06B8-484D-B160-45B75B871F82}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
