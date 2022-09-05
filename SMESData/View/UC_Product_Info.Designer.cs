@@ -34,7 +34,6 @@ namespace WindowsFormsApplication1
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Product_Info));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.dtgv_MQC_PD = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -62,6 +61,7 @@ namespace WindowsFormsApplication1
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.btStart = new XanderUI.XUIButton();
             this.btStop = new XanderUI.XUIButton();
+            this.btExport = new XanderUI.XUIButton();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tbpnInfo = new System.Windows.Forms.TableLayoutPanel();
             this.lb8 = new System.Windows.Forms.Label();
@@ -89,7 +89,6 @@ namespace WindowsFormsApplication1
             this.tbSearch = new System.Windows.Forms.TextBox();
             this.btSearch1 = new XanderUI.XUIButton();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.btExport = new XanderUI.XUIButton();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_MQC_PD)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
@@ -580,6 +579,32 @@ namespace WindowsFormsApplication1
             this.btStop.Vertical_Alignment = System.Drawing.StringAlignment.Center;
             this.btStop.Click += new System.EventHandler(this.btStop_Click);
             // 
+            // btExport
+            // 
+            this.btExport.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btExport.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btExport.ButtonImage = global::SMESData.Properties.Resources.excel;
+            this.btExport.ButtonStyle = XanderUI.XUIButton.Style.MaterialRounded;
+            this.btExport.ButtonText = "Export Excel";
+            this.btExport.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
+            this.btExport.ClickTextColor = System.Drawing.Color.DodgerBlue;
+            this.btExport.CornerRadius = 5;
+            this.btExport.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold);
+            this.btExport.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
+            this.btExport.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
+            this.btExport.HoverTextColor = System.Drawing.Color.DodgerBlue;
+            this.btExport.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
+            this.btExport.Location = new System.Drawing.Point(15, 158);
+            this.btExport.Margin = new System.Windows.Forms.Padding(15, 5, 15, 5);
+            this.btExport.Name = "btExport";
+            this.btExport.Size = new System.Drawing.Size(163, 68);
+            this.btExport.TabIndex = 86;
+            this.btExport.TextColor = System.Drawing.Color.DodgerBlue;
+            this.btExport.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            this.btExport.Click += new System.EventHandler(this.btExport_Click);
+            // 
             // tableLayoutPanel4
             // 
             this.tableLayoutPanel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -996,32 +1021,6 @@ namespace WindowsFormsApplication1
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // btExport
-            // 
-            this.btExport.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btExport.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btExport.ButtonImage = ((System.Drawing.Image)(resources.GetObject("btExport.ButtonImage")));
-            this.btExport.ButtonStyle = XanderUI.XUIButton.Style.MaterialRounded;
-            this.btExport.ButtonText = "Export Excel";
-            this.btExport.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
-            this.btExport.ClickTextColor = System.Drawing.Color.DodgerBlue;
-            this.btExport.CornerRadius = 5;
-            this.btExport.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold);
-            this.btExport.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
-            this.btExport.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
-            this.btExport.HoverTextColor = System.Drawing.Color.DodgerBlue;
-            this.btExport.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
-            this.btExport.Location = new System.Drawing.Point(15, 158);
-            this.btExport.Margin = new System.Windows.Forms.Padding(15, 5, 15, 5);
-            this.btExport.Name = "btExport";
-            this.btExport.Size = new System.Drawing.Size(163, 68);
-            this.btExport.TabIndex = 86;
-            this.btExport.TextColor = System.Drawing.Color.DodgerBlue;
-            this.btExport.Vertical_Alignment = System.Drawing.StringAlignment.Center;
-            this.btExport.Click += new System.EventHandler(this.btExport_Click);
             // 
             // UC_Product_Info
             // 

@@ -260,6 +260,7 @@
     <None Include="Resources\analytics.png" />
     <Content Include="combo-256.ico" />
     <Content Include="Resources\combo-256.ico" />
+    <None Include="Resources\excel.png" />
     <Content Include="Resources\logo.png" />
   </ItemGroup>
   <ItemGroup>
