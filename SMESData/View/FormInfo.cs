@@ -48,8 +48,10 @@ namespace WindowsFormsApplication1
                 dtgv_Info.Columns["Model"].FillWeight = 4;
                 dtgv_Info.Columns["Line"].FillWeight = 1;
                 dtgv_Info.Columns["Date"].FillWeight = 4;
+                dtgv_Info.Columns["OUTPUT"].HeaderText = "OK";
                 dtgv_Info.Columns["OUTPUT"].FillWeight = 2;
                 dtgv_Info.Columns["NOGOOD"].FillWeight = 2;
+                dtgv_Info.Columns["NOGOOD"].HeaderText = "NG";
                 dtgv_Info.Columns["Total"].FillWeight = 2;
             }       
         }
