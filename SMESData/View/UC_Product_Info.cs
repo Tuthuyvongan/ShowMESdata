@@ -580,9 +580,11 @@ namespace WindowsFormsApplication1
                 dtgv_MQC_PD.Columns["DailyTarget"].HeaderText = "DAILY TARGET";
                 dtgv_MQC_PD.Columns["DailyTarget"].FillWeight = 2;
             }
-            dtgv_MQC_PD.Columns["NG_rate_realtime"].HeaderText = "NG_realtime(%)";
+            dtgv_MQC_PD.Columns["NG_rate_realtime"].HeaderText = "NG(%)";
             dtgv_MQC_PD.Columns["NG_rate_allow"].HeaderText = "NG_allow(%)";
-            dtgv_MQC_PD.Columns["Model"].HeaderText = "MODEL";
+            dtgv_MQC_PD.Columns["NOGOOD"].HeaderText = "NG";
+            dtgv_MQC_PD.Columns["OUTPUT"].HeaderText = "OK";
+            dtgv_MQC_PD.Columns["Model"].HeaderText = "PRODUCT CODE";
             dtgv_MQC_PD.Columns["Date"].HeaderText = "DATE";
             dtgv_MQC_PD.Columns["Line"].HeaderText = "LINE";
             dtgv_MQC_PD.Columns["Total"].HeaderText = "TOTAL";            

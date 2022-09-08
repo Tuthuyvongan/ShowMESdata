@@ -340,7 +340,7 @@ namespace WindowsFormsApplication1
                 if (rs.Length > 0)
                 {
                     rsMQC = rs.CopyToDataTable();
-                    rsMQC.DefaultView.Sort = "NG_rate_realtime DESC";
+                    rsMQC.DefaultView.Sort = "Line";
                     rsMQC = rsMQC.DefaultView.ToTable();
                     SaveData.checknull = false;
                     return rsMQC;
