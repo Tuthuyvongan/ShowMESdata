@@ -202,12 +202,6 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_B4852A65E725C62A6B408929FCA9359F"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_4B8884DB442749278466ADE1C41EDF6D"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -295,6 +289,12 @@
         "OwnerKey" = "8:_21F92E1B9BC20AB450BF12DD98796712"
         "MsmSig" = "8:_UNDEFINED"
         }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_B4852A65E725C62A6B408929FCA9359F"
+        "MsmSig" = "8:_UNDEFINED"
+        }
     }
     "Configurations"
     {
@@ -313,6 +313,22 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
+            }
         }
         "Release"
         {
@@ -329,6 +345,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -920,7 +944,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Setup_ShowMES"
         "ProductCode" = "8:{ACDD825C-5EA0-42C1-B95A-E84681E43D00}"
-        "PackageCode" = "8:{0CD5F364-ACA2-4334-BCB3-A3F9DF3F55BD}"
+        "PackageCode" = "8:{E9D4B4CF-6A77-4CB2-96BE-752CAB52D539}"
         "UpgradeCode" = "8:{E5EEB59E-06B8-484D-B160-45B75B871F82}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
