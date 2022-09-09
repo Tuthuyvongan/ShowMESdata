@@ -183,9 +183,9 @@ namespace WindowsFormsApplication1
                 lbOP1.BackColor = Color.DodgerBlue;
                 lbRW1.BackColor = Color.Orange;
                 lbNG1.BackColor = Color.Red;
-                lbOP1.Text = "OUTPUT: " + dataMQC[0].ToString() + "%";
+                lbOP1.Text = "OK: " + dataMQC[0].ToString() + "%";
                 lbRW1.Text = "REWORK: " + dataMQC[1].ToString() + "%";
-                lbNG1.Text = "NO GOOD: " + dataMQC[2].ToString() + "%";
+                lbNG1.Text = "NG: " + dataMQC[2].ToString() + "%";
                 lbOP1.Font = new Font("Times New Roman", 13, FontStyle.Bold);
                 lbRW1.Font = new Font("Times New Roman", 13, FontStyle.Bold);
                 lbNG1.Font = new Font("Times New Roman", 13, FontStyle.Bold);      

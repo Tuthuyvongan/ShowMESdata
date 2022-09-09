@@ -30,10 +30,10 @@ namespace WindowsFormsApplication1
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.dtgv_MQC_PD = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -138,36 +138,36 @@ namespace WindowsFormsApplication1
             this.dtgv_MQC_PD.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dtgv_MQC_PD.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dtgv_MQC_PD.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 8.25F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgv_MQC_PD.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Times New Roman", 8.25F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgv_MQC_PD.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dtgv_MQC_PD.ColumnHeadersHeight = 60;
             this.dtgv_MQC_PD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 8.25F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgv_MQC_PD.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Times New Roman", 8.25F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgv_MQC_PD.DefaultCellStyle = dataGridViewCellStyle6;
             this.dtgv_MQC_PD.EnableHeadersVisualStyles = false;
             this.dtgv_MQC_PD.Location = new System.Drawing.Point(0, 540);
             this.dtgv_MQC_PD.Margin = new System.Windows.Forms.Padding(0);
             this.dtgv_MQC_PD.Name = "dtgv_MQC_PD";
             this.dtgv_MQC_PD.ReadOnly = true;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 8.25F);
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgv_MQC_PD.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Times New Roman", 8.25F);
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgv_MQC_PD.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dtgv_MQC_PD.RowHeadersVisible = false;
             this.dtgv_MQC_PD.RowHeadersWidth = 51;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtgv_MQC_PD.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtgv_MQC_PD.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dtgv_MQC_PD.RowTemplate.Height = 50;
             this.dtgv_MQC_PD.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dtgv_MQC_PD.Size = new System.Drawing.Size(1785, 540);
@@ -313,7 +313,7 @@ namespace WindowsFormsApplication1
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.linePCanvas1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linePCanvas1.Location = new System.Drawing.Point(-2, 63);
+            this.linePCanvas1.Location = new System.Drawing.Point(0, 63);
             this.linePCanvas1.Margin = new System.Windows.Forms.Padding(4);
             this.linePCanvas1.Name = "linePCanvas1";
             this.linePCanvas1.Size = new System.Drawing.Size(474, 474);
@@ -683,36 +683,36 @@ namespace WindowsFormsApplication1
             this.lb1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lb1.AutoSize = true;
             this.lb1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb1.Location = new System.Drawing.Point(53, 102);
+            this.lb1.Location = new System.Drawing.Point(111, 102);
             this.lb1.Name = "lb1";
             this.lb1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lb1.Size = new System.Drawing.Size(122, 26);
+            this.lb1.Size = new System.Drawing.Size(64, 26);
             this.lb1.TabIndex = 62;
-            this.lb1.Text = "OUTPUT: ";
+            this.lb1.Text = "OK: ";
             // 
             // lb2
             // 
             this.lb2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lb2.AutoSize = true;
             this.lb2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb2.Location = new System.Drawing.Point(32, 179);
+            this.lb2.Location = new System.Drawing.Point(38, 179);
             this.lb2.Name = "lb2";
             this.lb2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lb2.Size = new System.Drawing.Size(143, 26);
+            this.lb2.Size = new System.Drawing.Size(137, 26);
             this.lb2.TabIndex = 64;
-            this.lb2.Text = "RE WORK: ";
+            this.lb2.Text = "REWORK: ";
             // 
             // lb3
             // 
             this.lb3.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lb3.AutoSize = true;
             this.lb3.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb3.Location = new System.Drawing.Point(34, 256);
+            this.lb3.Location = new System.Drawing.Point(114, 256);
             this.lb3.Name = "lb3";
             this.lb3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lb3.Size = new System.Drawing.Size(141, 26);
+            this.lb3.Size = new System.Drawing.Size(61, 26);
             this.lb3.TabIndex = 65;
-            this.lb3.Text = "NO GOOD: ";
+            this.lb3.Text = "NG: ";
             // 
             // lb4
             // 
@@ -756,12 +756,12 @@ namespace WindowsFormsApplication1
             this.lb7.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lb7.AutoSize = true;
             this.lb7.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb7.Location = new System.Drawing.Point(347, 256);
+            this.lb7.Location = new System.Drawing.Point(341, 256);
             this.lb7.Name = "lb7";
             this.lb7.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lb7.Size = new System.Drawing.Size(137, 26);
+            this.lb7.Size = new System.Drawing.Size(143, 26);
             this.lb7.TabIndex = 70;
-            this.lb7.Text = "%NG Allow";
+            this.lb7.Text = "% NG Allow";
             // 
             // lbLine
             // 
