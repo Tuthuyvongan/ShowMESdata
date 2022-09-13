@@ -98,7 +98,7 @@ namespace WindowsFormsApplication1
             btMQCPD.BackgroundColor = System.Drawing.Color.Black;
             addUserControl(uc_MQC_PieChart);
             updateChartMQC();
-            if (SaveData.Date == DateTime.Today.ToString("yyyy-MM-dd"))
+            if (SaveData.Date == DateTime.Today.ToString("yyyy-MM-dd") || Convert.ToDateTime(SaveData.Date) > Convert.ToDateTime(SaveData.DateMQC))
             { 
                 uc_MQC_PieChart.UpdateTime();
             }       
@@ -115,7 +115,7 @@ namespace WindowsFormsApplication1
             btMQCPD.BackgroundColor = System.Drawing.Color.Black;
             addUserControl(uc_PQC_PieChart);
             updateChartPQC();
-            if (SaveData.Date == DateTime.Today.ToString("yyyy-MM-dd"))
+            if (SaveData.Date == DateTime.Today.ToString("yyyy-MM-dd") || Convert.ToDateTime(SaveData.Date) > Convert.ToDateTime(SaveData.DatePQC))
             {
                 uc_PQC_PieChart.UpdateTime();
             }           
@@ -132,7 +132,7 @@ namespace WindowsFormsApplication1
             btMQCPD.BackgroundColor = System.Drawing.Color.SteelBlue;
             addUserControl(uc_PI);
             updateChartPI();
-            if (SaveData.Date == DateTime.Today.ToString("yyyy-MM-dd"))
+            if (SaveData.Date == DateTime.Today.ToString("yyyy-MM-dd") || Convert.ToDateTime(SaveData.Date) > Convert.ToDateTime(SaveData.DatePI))
             {
                 uc_PI.UpdateTime();
             }    

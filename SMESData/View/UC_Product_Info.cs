@@ -27,6 +27,7 @@ namespace WindowsFormsApplication1
             dtpChart.Enabled = false;
             SaveData.Date = DateTime.Today.ToString("yyyy-MM-dd");
             dtpChart.ValueChanged += new EventHandler(dtpChart_ValueChanged);
+            SaveData.DatePI = dtpChart.Value.ToString("yyyy-MM-dd");
             //
             SaveData.line = "";
             SaveData.dtTemp3 = new DataTable();
@@ -322,6 +323,7 @@ namespace WindowsFormsApplication1
                 SaveData.check = true;
                 dtpChart.Visible = false;
                 SaveData.Date = dtpChart.Value.ToString("yyyy-MM-dd");
+                SaveData.DatePI = dtpChart.Value.ToString("yyyy-MM-dd");
                 UpdateDTGV();
             }  
         }

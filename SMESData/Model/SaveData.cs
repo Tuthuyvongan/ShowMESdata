@@ -20,6 +20,9 @@ namespace WindowsFormsApplication1
         public static bool MQC { get; set; }
         public static bool PQC { get; set; }
         public static string Date { get; set; }
+        public static string DateMQC { get; set; }
+        public static string DatePQC { get; set; }
+        public static string DatePI { get; set; }
         //List MQC Date
         public static string Date1 { get; set; }
         public static string Date2 { get; set; }

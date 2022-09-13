@@ -24,6 +24,7 @@ namespace WindowsFormsApplication1
             dtpChart.Format = DateTimePickerFormat.Custom;
             dtpChart.Enabled = false;
             dtpChart.ValueChanged += new EventHandler(dtpChart_ValueChanged);
+            SaveData.DatePQC = dtpChart.Value.ToString("yyyy-MM-dd");
             renderPiechart();
             //
             lblTime.Font = new Font("Times New Roman", 14, FontStyle.Bold);
@@ -451,7 +452,9 @@ namespace WindowsFormsApplication1
         private void dtpChart_ValueChanged(object sender, EventArgs e)
         {
             SaveData.check = true;
-            dtpChart.Visible = false;            
+            dtpChart.Visible = false;
+            SaveData.Date = dtpChart.Value.ToString("yyyy-MM-dd");
+            SaveData.DatePQC = dtpChart.Value.ToString("yyyy-MM-dd");
             renderPiechart();
         }        
         public void UpdateTime()
