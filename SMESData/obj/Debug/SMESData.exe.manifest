@@ -80,13 +80,13 @@
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MiniExcel.dll" size="164352">
-      <assemblyIdentity name="MiniExcel" version="1.26.6.0" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="MiniExcel" version="1.26.7.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>zdOZXAXXL5SFwj6YCvjn7+PCZ2t2fHJUhBCzgh3GJXo=</dsig:DigestValue>
+        <dsig:DigestValue>N51y6+x6ONS3CQ+NgumDBXZk62zQYVz1g8tNP14emGc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -110,7 +110,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>aojGF/XizCQlriYAqyAb/dJIAF2CIoG+cqkccPUEd0I=</dsig:DigestValue>
+        <dsig:DigestValue>UZ2dA0lW473ye1yQ4qhPFHIFLj/3K3fit9KO9kHL7zc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

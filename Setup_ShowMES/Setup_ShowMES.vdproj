@@ -63,6 +63,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_3934EC28612E571ED37CB84CF19F7364"
+        "OwnerKey" = "8:_4B8884DB442749278466ADE1C41EDF6D"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_3DD6CA900148EA4B787C7CE91765CC81"
         "OwnerKey" = "8:_4B8884DB442749278466ADE1C41EDF6D"
         "MsmSig" = "8:_UNDEFINED"
@@ -160,7 +166,7 @@
         "Entry"
         {
         "MsmKey" = "8:_CE1838BA8C3FD5AB7B67EF2D33513C6B"
-        "OwnerKey" = "8:_F298288339EDCBAE661A301D8BB008AC"
+        "OwnerKey" = "8:_3934EC28612E571ED37CB84CF19F7364"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -177,14 +183,14 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_F298288339EDCBAE661A301D8BB008AC"
-        "OwnerKey" = "8:_4B8884DB442749278466ADE1C41EDF6D"
+        "MsmKey" = "8:_F786ED3F4ABD42678362B22C5893A233"
+        "OwnerKey" = "8:_2A426DBA7FCF97E624D340E6E2A14E17"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_F786ED3F4ABD42678362B22C5893A233"
-        "OwnerKey" = "8:_2A426DBA7FCF97E624D340E6E2A14E17"
+        "OwnerKey" = "8:_3934EC28612E571ED37CB84CF19F7364"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -203,6 +209,18 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_4B8884DB442749278466ADE1C41EDF6D"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_3934EC28612E571ED37CB84CF19F7364"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_CE1838BA8C3FD5AB7B67EF2D33513C6B"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -251,18 +269,6 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_B8A4A72FDE8844F7FC396BB6604AA133"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_F298288339EDCBAE661A301D8BB008AC"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_CE1838BA8C3FD5AB7B67EF2D33513C6B"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -352,6 +358,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
             }
         }
     }
@@ -540,6 +554,37 @@
                     }
                 }
             "SourcePath" = "8:XanderUI.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_44784AE63D0E4836827C999505D251BE"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_3934EC28612E571ED37CB84CF19F7364"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:MiniExcel, Version=1.26.7.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_3934EC28612E571ED37CB84CF19F7364"
+                    {
+                    "Name" = "8:MiniExcel.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:MiniExcel.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_44784AE63D0E4836827C999505D251BE"
@@ -825,37 +870,6 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_F298288339EDCBAE661A301D8BB008AC"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:MiniExcel, Version=1.26.6.0, Culture=neutral, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_F298288339EDCBAE661A301D8BB008AC"
-                    {
-                    "Name" = "8:MiniExcel.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:MiniExcel.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_44784AE63D0E4836827C999505D251BE"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_F786ED3F4ABD42678362B22C5893A233"
             {
             "AssemblyRegister" = "3:1"
@@ -944,7 +958,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Setup_ShowMES"
         "ProductCode" = "8:{ACDD825C-5EA0-42C1-B95A-E84681E43D00}"
-        "PackageCode" = "8:{95F1B4C2-477C-4A43-9056-25A29153F8EB}"
+        "PackageCode" = "8:{953104A3-B9D8-4275-BE86-1794BFF6B6B7}"
         "UpgradeCode" = "8:{E5EEB59E-06B8-484D-B160-45B75B871F82}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
