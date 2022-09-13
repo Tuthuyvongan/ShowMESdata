@@ -212,13 +212,15 @@ namespace WindowsFormsApplication1
         }
         public void UpdateDTGVByLine()
         {
-            btMQCD.BackgroundColor = Color.DodgerBlue;
-            btPQCD.BackgroundColor = Color.DodgerBlue;
+            
+           
             dtpChart.Value = Convert.ToDateTime(SaveData.Date);
             string date = SaveData.Date;
             string line = SaveData.line;
             if (SaveData.MQC == true)
             {
+                btMQCD.BackgroundColor = Color.FromArgb(40, 96, 144);
+                btPQCD.BackgroundColor = Color.DodgerBlue;
                 dataMQC.Clear();
                 if (date != SaveData.Date1 || date != SaveData.Date2)
                 {
@@ -232,11 +234,23 @@ namespace WindowsFormsApplication1
             }
             else
             {
+                btMQCD.BackgroundColor = Color.DodgerBlue;
+                btPQCD.BackgroundColor = Color.FromArgb(40, 96, 144);
                 dataPQC.Clear();
                 dtgv_MQC_PD.DataSource = GetSOFTdata.GetListPQC(date, line);
             }
             if (SaveData.Date != DateTime.Today.ToString("yyyy-MM-dd"))
             {
+                if (SaveData.MQC == true)
+                {
+                    btMQCD.BackgroundColor = Color.FromArgb(40, 96, 144);
+                    btPQCD.BackgroundColor = Color.DodgerBlue;
+                }   
+                else
+                {
+                    btMQCD.BackgroundColor = Color.DodgerBlue;
+                    btPQCD.BackgroundColor = Color.FromArgb(40, 96, 144);
+                }    
                 btStart.Enabled = true;
                 btStart.BackgroundColor = Color.DodgerBlue;
                 btStop.Enabled = false;
