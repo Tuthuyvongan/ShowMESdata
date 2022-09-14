@@ -466,9 +466,9 @@ namespace WindowsFormsApplication1
             btStop.BackgroundColor = Color.Orange;
             dtpChart.Enabled = false;
             pnTimeControl.Enabled = false;
+            SaveData.Date = dtpChart.Value.ToString("yyyy-MM-dd");
             timer1.Start();
             startTime = DateTime.Now;
-            SaveData.Date = dtpChart.Value.ToString("yyyy-MM-dd");
             SaveData.check = false;
         }
         public void ChangeUpdateTime()
