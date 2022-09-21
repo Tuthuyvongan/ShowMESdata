@@ -116,8 +116,8 @@ namespace WindowsFormsApplication1
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel2.ColumnCount = 4;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.71264F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.2027F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.97973F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.85135F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.70946F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.25287F));
             this.tableLayoutPanel2.Controls.Add(this.label1, 0, 0);
@@ -137,7 +137,7 @@ namespace WindowsFormsApplication1
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(19, 6);
+            this.label1.Location = new System.Drawing.Point(27, 6);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -176,7 +176,7 @@ namespace WindowsFormsApplication1
             this.lbNGA.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbNGA.AutoSize = true;
             this.lbNGA.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
-            this.lbNGA.Location = new System.Drawing.Point(209, 6);
+            this.lbNGA.Location = new System.Drawing.Point(217, 6);
             this.lbNGA.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbNGA.Name = "lbNGA";
             this.lbNGA.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -190,8 +190,8 @@ namespace WindowsFormsApplication1
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel4.ColumnCount = 2;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.62838F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65.37162F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.14865F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 63.85135F));
             this.tableLayoutPanel4.Controls.Add(this.lbMdl, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.lbModel, 1, 0);
             this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 47);
@@ -208,13 +208,13 @@ namespace WindowsFormsApplication1
             this.lbMdl.AutoSize = true;
             this.lbMdl.Cursor = System.Windows.Forms.Cursors.Default;
             this.lbMdl.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
-            this.lbMdl.Location = new System.Drawing.Point(95, 6);
+            this.lbMdl.Location = new System.Drawing.Point(8, 6);
             this.lbMdl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbMdl.Name = "lbMdl";
             this.lbMdl.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbMdl.Size = new System.Drawing.Size(106, 35);
+            this.lbMdl.Size = new System.Drawing.Size(201, 35);
             this.lbMdl.TabIndex = 68;
-            this.lbMdl.Text = "Model:";
+            this.lbMdl.Text = "Product Code:";
             // 
             // lbModel
             // 
@@ -222,7 +222,7 @@ namespace WindowsFormsApplication1
             this.lbModel.AutoSize = true;
             this.lbModel.Cursor = System.Windows.Forms.Cursors.Default;
             this.lbModel.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
-            this.lbModel.Location = new System.Drawing.Point(209, 6);
+            this.lbModel.Location = new System.Drawing.Point(217, 6);
             this.lbModel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbModel.Name = "lbModel";
             this.lbModel.RightToLeft = System.Windows.Forms.RightToLeft.No;
