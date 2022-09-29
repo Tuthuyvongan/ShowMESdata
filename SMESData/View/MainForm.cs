@@ -1,13 +1,20 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-    public partial class MainForm : Form
+    public partial class MainForm : Form, IMessageFilter
     {
         public MainForm()
         {
-            InitializeComponent();           
+            InitializeComponent();
+            Application.AddMessageFilter(this);
+
+            controlsToMove.Add(this);
+            controlsToMove.Add(pbLogo);
+            controlsToMove.Add(pnMenu);
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -162,6 +169,29 @@ namespace WindowsFormsApplication1
         private void btMin_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
+        }
+
+        public const int WM_NCLBUTTONDOWN = 0xA1;
+        public const int HT_CAPTION = 0x2;
+        public const int WM_LBUTTONDOWN = 0x0201;
+
+        [DllImportAttribute("user32.dll")]
+        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+        [DllImportAttribute("user32.dll")]
+        public static extern bool ReleaseCapture();
+
+        private HashSet<Control> controlsToMove = new HashSet<Control>();
+
+        public bool PreFilterMessage(ref Message m)
+        {
+            if (m.Msg == WM_LBUTTONDOWN &&
+                 controlsToMove.Contains(Control.FromHandle(m.HWnd)))
+            {
+                ReleaseCapture();
+                SendMessage(this.Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+                return true;
+            }
+            return false;
         }
     }
 }

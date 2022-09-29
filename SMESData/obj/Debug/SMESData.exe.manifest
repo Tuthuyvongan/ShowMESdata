@@ -103,14 +103,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SMESData.exe" size="1911264">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SMESData.exe" size="1925600">
       <assemblyIdentity name="SMESData" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>tH73UMFkxhjbCBmjnnJf8fD4m7XeM8ENsIYu/iatoTY=</dsig:DigestValue>
+        <dsig:DigestValue>cfuLaAS/82Usn3YZ4E4indQnxp8IKtEdTyOBjNX4vSI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
