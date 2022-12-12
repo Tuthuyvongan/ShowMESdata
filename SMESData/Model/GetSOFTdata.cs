@@ -61,9 +61,8 @@ namespace WindowsFormsApplication1
             StringBuilder sqlGetData = new StringBuilder();
             sqlGetData.Append("SELECT DISTINCT c.uuid as UUID, a.product_no as Model, a.send_quantity as Total, a.pass_qty as OUTPUT, a.failed_qty as NOGOOD, a.send_time as Date ");
             sqlGetData.Append("FROM mes_quality_control.quality_control_order AS a, mes_planning_excution.job_move AS b, mes_planning_excution.job_order_record AS c ");
-            sqlGetData.Append("WHERE a.job_move_uuid = b.uuid AND b.job_order_uuid = c.job_order_uuid AND b.product_lot_no = c.product_lot_no ");
-            sqlGetData.Append("AND TIMESTAMPDIFF(SECOND, c.update_date, b.create_date) < 5 AND TIMESTAMPDIFF(SECOND, c.update_date, b.create_date) >= 0 ");
-            sqlGetData.Append("AND a.send_quantity = c.actual_finish_qty AND b.create_by = c.create_by AND a.delete_flag = 0 AND b.delete_flag = 0 AND c.delete_flag = 0 ");
+            sqlGetData.Append("WHERE a.job_move_uuid = b.uuid AND b.job_order_uuid = c.job_order_uuid ");
+            sqlGetData.Append("AND a.delete_flag = 0 AND b.delete_flag = 0 AND c.delete_flag = 0 ");
             sqlGetData.Append("AND a.send_time LIKE '%" + date + "%' AND a.operation_no = 'OP10' AND a.send_quantity IS NOT NULL ");
             sqlGetData.Append("ORDER BY a.product_no ");
             sqlMESCon.sqlDataAdapterFillDatatable(sqlGetData.ToString(), ref dt1);
@@ -399,9 +398,8 @@ namespace WindowsFormsApplication1
             StringBuilder sqlGetData = new StringBuilder();
             sqlGetData.Append("SELECT DISTINCT c.uuid as UUID, a.product_no as Model, a.send_quantity as Total, a.pass_qty as OUTPUT, a.failed_qty as NOGOOD, a.send_time as Date ");
             sqlGetData.Append("FROM mes_quality_control.quality_control_order AS a, mes_planning_excution.job_move AS b, mes_planning_excution.job_order_record AS c ");
-            sqlGetData.Append("WHERE a.job_move_uuid = b.uuid AND b.job_order_uuid = c.job_order_uuid AND b.product_lot_no = c.product_lot_no ");
-            sqlGetData.Append("AND TIMESTAMPDIFF(SECOND, c.update_date, b.create_date) < 5 AND TIMESTAMPDIFF(SECOND, c.update_date, b.create_date) >= 0 ");
-            sqlGetData.Append("AND a.send_quantity = c.actual_finish_qty AND b.create_by = c.create_by AND a.delete_flag = 0 AND b.delete_flag = 0 AND c.delete_flag = 0 ");
+            sqlGetData.Append("WHERE a.job_move_uuid = b.uuid AND b.job_order_uuid = c.job_order_uuid ");
+            sqlGetData.Append("AND a.send_quantity = c.actual_finish_qty AND a.delete_flag = 0 AND b.delete_flag = 0 AND c.delete_flag = 0 ");
             sqlGetData.Append("AND a.send_time LIKE '%" + date + "%' AND a.operation_no = 'OP14' AND a.send_quantity IS NOT NULL ");
             sqlGetData.Append("ORDER BY a.product_no ");
             sqlMESCon.sqlDataAdapterFillDatatable(sqlGetData.ToString(), ref dt1);
